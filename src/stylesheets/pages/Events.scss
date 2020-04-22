@@ -1,0 +1,87 @@
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+}
+
+.events-list {
+  display: flex;
+  margin-top: 60px;
+  width: 90vw;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.event-card {
+	width: 320px;
+	border: 1px solid #CFCFCF;
+	border-radius: 9px;
+	background-color: #FFFFFF;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  margin: 10px;
+}
+
+.event-card--cost {
+  background: transparentize($color: #fff, $amount: 0.2);
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  padding: 5px 12px;
+	color: #151515;
+	font-size: 13px;
+	line-height: 18px;
+	text-align: center;
+  text-transform: uppercase;
+}
+
+.event-card--image {
+  width: 400px;
+  height: 200px;
+}
+
+.event-card--details {
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 auto;
+}
+
+.event-card--details--date {
+  text-transform: uppercase;
+  color: #484848;
+  font-size: 15px;
+}
+
+.event-card h4 {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #1d1d1d;
+}
+
+.event-card--details--description {
+  margin-top: 15px;
+}
+
+.event-card--details small {
+  display: block;
+  margin-top: 30px;
+}
+
+.events--past {
+  margin-top: 60px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.event-link {
+  text-decoration: none;
+  color: inherit;
+}

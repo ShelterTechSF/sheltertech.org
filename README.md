@@ -14,6 +14,15 @@ npm start
 ```
 Then you can access it at [http://localhost:8000](http://localhost:8000).
 
+## Build this project as a static site
+
+Run the following commands:
+
+``` bash
+npm run build
+```
+Then you can access project at public/
+
 
 ## Change content in Site
 

@@ -1,0 +1,35 @@
+{
+  "name": "sheltertech.org",
+  "version": "1.0.0",
+  "description": "Sheltertech Info Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShelterTechSF/sheltertech.org.git"
+  },
+  "author": "Sheltertech.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShelterTechSF/sheltertech.org/issues"
+  },
+  "homepage": "https://github.com/ShelterTechSF/sheltertech.org#readme",
+  "dependencies": {
+    "gatsby": "^2.20.36",
+    "gatsby-plugin-intercom-spa": "^0.2.0",
+    "gatsby-plugin-manifest": "^2.3.7",
+    "gatsby-plugin-react-helmet": "^3.2.5",
+    "gatsby-plugin-sass": "^2.2.4",
+    "gatsby-plugin-sharp": "^2.5.7",
+    "gatsby-source-filesystem": "^2.2.5",
+    "gatsby-transformer-sharp": "^2.4.7",
+    "node-sass": "^4.14.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0"
+  }
+}

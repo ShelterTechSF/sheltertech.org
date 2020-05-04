@@ -1,38 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: `ShelterTech - Technology for the underserved`,
-    description: `Blog example for Gatsby & Prismic`,
-    author: `Sheltertech`,
+    title: 'ShelterTech - Technology for the underserved',
+    description: 'ShelterTech is solving the biggest technology challenges faced by those experiencing homelessness',
+    author: 'ShelterTech',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-intercom-spa',
       options: {
         app_id: 'w50oz3tb',
         include_in_development: true,
-        delay_timeout: 1000
-      }
-    },
-    `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        // icon: `src/images/favicon.ico`, // This path is relative to the root of the site.
+        delay_timeout: 1000,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-plugin-sass',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
@@ -40,4 +28,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};

@@ -21,7 +21,7 @@ Run the following commands:
 ``` bash
 npm run build
 ```
-Then you can access project at public/
+Then you can access the static files in the `public/` directory.
 
 
 ## Change content in Site

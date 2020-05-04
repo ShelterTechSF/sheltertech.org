@@ -12,11 +12,9 @@ before_script:
 
 install:
   - npm run build
-  # - npm install -g yarn
-  # - yarn install
 
 script:
-  - npm run deploy:dev
+  - npm run start
+  - npm run build
 
-after_success:
-  - npm run codecov
+

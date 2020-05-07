@@ -8,9 +8,10 @@ cache:
     - node_modules
 
 install:
-  - npm install gatsby@2.20.36
+  - npm install
 
 script:
   - npm run build
+  - npm run lint
 
 

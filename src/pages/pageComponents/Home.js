@@ -1,18 +1,18 @@
 import React from 'react';
 import '../../stylesheets/Home.scss';
 
-import ImageShelterConnectRound from '../../images/shelterconnect-round.png'
-import ImageAskDarcelRound from '../../images/askdarcel-round.png'
-import ImageCaseyRound from '../../images/casey-round.png'
-import ImageShelterconnectFeature from '../../images/shelterconnect-feature.png'
-import ImageShelterconnectLogo from '../../images/shelterconnect-logo.png'
-import ImageKQED from '../../images/kqed-logo.png'
-import ImageChronicle from '../../images/chronicle-logo.png'
-import ImageAskDarcelFeature from '../../images/askdarcel-feature.png'
-import ImageAskDarcelLogo from '../../images/askdarcel-logo.png'
-import ImageCitylab from '../../images/citylab-logo.png'
-import ImageCaseyFeature from '../../images/casey-feature.png'
-import ImageCaseyLogo from '../../images/casey-logo.png'
+import ImageShelterConnectRound from '../../images/shelterconnect-round.png';
+import ImageAskDarcelRound from '../../images/askdarcel-round.png';
+import ImageCaseyRound from '../../images/casey-round.png';
+import ImageShelterconnectFeature from '../../images/shelterconnect-feature.png';
+import ImageShelterconnectLogo from '../../images/shelterconnect-logo.png';
+import ImageKQED from '../../images/kqed-logo.png';
+import ImageChronicle from '../../images/chronicle-logo.png';
+import ImageAskDarcelFeature from '../../images/askdarcel-feature.png';
+import ImageAskDarcelLogo from '../../images/askdarcel-logo.png';
+import ImageCitylab from '../../images/citylab-logo.png';
+import ImageCaseyFeature from '../../images/casey-feature.png';
+import ImageCaseyLogo from '../../images/casey-logo.png';
 
 const Home = () => (
   <div className="home">
@@ -24,7 +24,7 @@ const Home = () => (
           technology, too
         </h1>
         <h3>
-          ShelterTech is solving the biggest technology challenges 
+          ShelterTech is solving the biggest technology challenges
           faced by those experiencing homelessness.
         </h3>
       </div>
@@ -36,7 +36,7 @@ const Home = () => (
       <h2>Our Programs</h2>
       <ul className="home--cards">
         <li className="home--cards--card">
-          <img src={ImageShelterConnectRound} alt="shelterconnect-logo"/>
+          <img src={ImageShelterConnectRound} alt="shelterconnect-logo" />
           <a href="/#shelterconnect"><h4>ShelterConnect</h4></a>
           <p>
             Free Wifi access in shelters
@@ -45,7 +45,7 @@ const Home = () => (
           </p>
         </li>
         <li className="home--cards--card">
-          <a href="https://askdarcel.org/" target="_blank" rel="noopener noreferrer"><img src={ImageAskDarcelRound} alt="askdarcel-logo"/></a>
+          <a href="https://askdarcel.org/" target="_blank" rel="noopener noreferrer"><img src={ImageAskDarcelRound} alt="askdarcel-logo" /></a>
           <h4><a href="https://askdarcel.org/" target="_blank" rel="noopener noreferrer">AskDarcel</a></h4>
           <p>Find housing and human services you&apos;re eligibile for</p>
         </li>
@@ -204,7 +204,7 @@ const Home = () => (
           <div className="home--programs--program--text">
             <img
               src={ImageCaseyLogo}
-              className="home--programs--program--text--logo casey-logo" 
+              className="home--programs--program--text--logo casey-logo"
               alt="casey-feature"
             />
             <h3>Casey — Self Service Case Management</h3>

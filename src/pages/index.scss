@@ -1,0 +1,245 @@
+@import '../stylesheets/utils/all';
+
+.home {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home--hero {
+  align-items: center;
+  background-image: url('../images/home/hero.jpg');
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: center;
+  max-height: 680px;
+  width: 100vw;
+  @include r_max($screen-sm) {
+    background-image: none;
+  }
+}
+
+.home--hero--text {
+  max-width: 1200px;
+  width: 90%;
+  @include r_max($screen-sm) {
+    text-align: center;
+  }
+}
+
+.home--hero--text h1 {
+  font-weight: 300;
+}
+
+.home--hero--text h3 {
+  font-weight: 300;
+  margin-top: 20px;
+  max-width: 550px;
+}
+
+.home--cards {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 60px;
+  @include r_max($screen-sm) {
+    display: none;
+  }
+}
+
+.home--cards--card {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 15px;
+  padding: 40px;
+  text-align: center;
+  @include r_max($screen-md) {
+    margin: 0 10px;
+    padding: 20px;
+  }
+}
+
+.home--cards--card img {
+  height: 180px;
+  width: 180px;
+  @include r_max($screen-md) {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+.home--cards--card h4 {
+  margin-top: 15px;
+}
+
+.home--cards--card p {
+  margin-top: 8px;
+  width: 210px;
+  @include r_max($screen-md) {
+    width: 180px;
+  }
+}
+
+.home--founder {
+  background-color: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  display: flex;
+  height: 512px;
+  max-width: 1024px;
+  width: 90vw;
+}
+
+.home--founder--image {
+  background-image: url('../images/home/darcel-story.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 50%;
+  @include r_max($screen-sm) {
+    display: none;
+  }
+}
+
+.home--founder--text {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8%;
+  width: 50%;
+  @include r_max($screen-sm) {
+    padding: 0 15%;
+    width: 100%;
+  }
+}
+
+.home--founder--text h5 {
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.home--founder--text h2 {
+  margin-bottom: 15px;
+}
+
+.home--programs {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.home--programs--program {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.home--programs--program .max-width {
+  align-items: stretch;
+  display: flex;
+  justify-content: center;
+  max-width: 1340px;
+  min-height: 670px;
+  width: 100vw;
+}
+
+.home--programs--program:nth-of-type(even) {
+  background: #f3f5f7;
+}
+
+.home--programs--program--image {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  width: 50%;
+  @include r_max($screen-sm) {
+    display: none;
+  }
+}
+
+.home--programs--program--image img {
+  display: block;
+  height: auto;
+  width: 80%;
+}
+
+.home--programs--program--image .casey-feature {
+  height: 402px;
+  width: 291px;
+}
+
+.home--programs--program--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px;
+  width: 50vw;
+  @include r_max($screen-sm) {
+    width: 480px;
+  }
+}
+
+.home--programs--program--text--logo {
+  height: 105px;
+  width: 140px;
+}
+
+.home--programs--program--text--logo.casey-logo {
+  height: 120px;
+  width: 120px;
+}
+
+.home--programs--program--text h3 {
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 15px;
+  margin-top: 30px;
+  max-width: 480px;
+}
+
+.home--programs--program--text p {
+  max-width: 480px;
+}
+
+.home--programs--program--text--further-reading {
+  display: block;
+  margin-top: 30px;
+}
+
+.home--programs--program--text--further-reading h5 {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.home--programs--program--text--kqed-image {
+  height: 36px;
+  margin-left: 25px;
+  margin-top: 10px;
+  width: 121px;
+}
+
+.home--programs--program--text--chronicle-image {
+  height: 40px;
+  margin-top: 8px;
+  width: 80px;
+}
+
+.home--programs--program--text--citylab-image {
+  height: 20px;
+  margin-top: 10px;
+  width: 130px;
+}

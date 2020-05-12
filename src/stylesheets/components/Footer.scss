@@ -1,0 +1,91 @@
+@import '../utils/all';
+
+.site--footer {
+  height: 320px;
+  background: #F3F5F7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  @include r_max($screen-md) {
+    height: 320px;
+  }
+}
+
+.site--footer--nav {
+  width: 780px;
+  @include r_max($screen-md) {
+    display: none;
+  }
+}
+
+.site--footer--nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.site--footer--nav ul li a {
+  display: inline-block;
+  color: $color-brand;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.site--footer--nav .donate-button {
+  margin: 20px 15px;
+  padding: 10px 15px;
+  background: $color-brand;
+  color: #fff;
+}
+
+.site--footer--legal {
+  border-top: 1px solid #CFCFCF;
+  width: 780px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  @include r_max($screen-md) {
+    border-top: 0;
+    width: 100vw;
+  }
+}
+
+.site--footer--legal ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  color: #666;
+  @include r_max($screen-md) {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+
+.site--footer--legal li,
+.site--footer--legal li a {
+  font-size: 12px;
+  padding-right: 10px;
+  @include r_max($screen-md) {
+    padding: 10px;
+  }
+}
+
+.site--footer--legal li:after {
+  content: "•";
+  padding-left: 10px;
+  @include r_max($screen-md) {
+    content: '';
+    padding-left: 0;
+  }
+}
+
+.site--footer--legal li:last-of-type:after {
+  content: "";
+}

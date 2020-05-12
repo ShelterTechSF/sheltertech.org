@@ -1,0 +1,79 @@
+@import 'utils/all';
+
+// Some best-practice CSS that's useful for most apps
+// Just remove them if they're not what you want
+html {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-top: 120px;
+  @include r_max($screen-sm) {
+    padding-top: 80px;
+  }
+}
+
+.app .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0;
+  flex: 0 0 auto;
+  width: 100vw;
+}
+
+.app .content--header {
+  position: relative;
+  width: 90vw;
+  max-width: 910px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  &:nth-of-type(2) {
+    margin-top: 0;
+  }
+  @include r_max($screen-sm) {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.app .content--header h3 {
+  font-weight: 300;
+  font-style: italic;
+  width: 80vw;
+  max-width: 550px;
+  @include r_max($screen-sm) {
+    margin-top: 20px;
+  }
+}
+
+.app .content-bg {
+  background: url("../images/content-bg.svg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 720px;
+  z-index: -1;
+}

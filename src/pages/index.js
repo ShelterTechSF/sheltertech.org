@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.scss";
 
 import ImageChronicle from "../images/home/press/chronicle-logo.png";
 import ImageCitylab from "../images/home/press/citylab-logo.png";
@@ -13,6 +12,9 @@ import ImageCaseyRound from "../images/home/programs/casey-round.png";
 import ImageShelterconnectFeature from "../images/home/programs/shelterconnect-feature.png";
 import ImageShelterconnectLogo from "../images/home/programs/shelterconnect-logo.png";
 import ImageShelterConnectRound from "../images/home/programs/shelterconnect-round.png";
+import Layout from "../layouts/Layout";
+
+import "./index.scss";
 
 const Home = () => (
   <div className="home">
@@ -252,4 +254,8 @@ const Home = () => (
   </div>
 );
 
-export default () => <Home />;
+export default () => (
+  <Layout>
+    <Home />
+  </Layout>
+);

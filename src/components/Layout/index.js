@@ -25,12 +25,10 @@ export default (props) => (
 );
 
 
-const Layout = (props) => {
+const Layout = ({ data, children}) => {
   // Define the meta title and description
-  const { data } = props;
-  const { title } = data.site.siteMetadata;
-  const { description } = data.site.siteMetadata;
-  const { children } = props;
+  const { title, description } = data.site.siteMetadata;
+
   return (
     <>
       <Helmet>

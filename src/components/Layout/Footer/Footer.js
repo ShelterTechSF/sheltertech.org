@@ -20,7 +20,7 @@ const Footer = () => (
         <li>ShelterTech is a 501 (c)(3)</li>
         <li>ein: 38-3984099</li>
         <li>made in san francisco</li>
-        <li>© 2018 All Rights Reserved</li>
+        <li>© 2020 All Rights Reserved</li>
         <li><a href="https://www.facebook.com/ShelterTechOrg/">facebook</a></li>
       </ul>
     </div>

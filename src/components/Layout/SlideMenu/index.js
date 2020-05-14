@@ -1,3 +1,1 @@
-import SlideMenu from './SlideMenu';
-
-export default SlideMenu;
+export { default } from './SlideMenu';

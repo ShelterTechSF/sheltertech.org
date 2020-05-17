@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import '../../../stylesheets/components/Footer.scss';
+import '../../stylesheets/components/Footer.scss';
 
 const Footer = () => (
   <footer className="site--footer">

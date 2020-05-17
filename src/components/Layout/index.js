@@ -25,7 +25,7 @@ export default (props) => (
 );
 
 
-const Layout = ({ data, children}) => {
+const Layout = ({ data, children }) => {
   // Define the meta title and description
   const { title, description } = data.site.siteMetadata;
 
@@ -33,7 +33,7 @@ const Layout = ({ data, children}) => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
 
         <title>{ title }</title>
         <meta name="description" content={description} />

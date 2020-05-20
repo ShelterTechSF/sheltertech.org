@@ -1,0 +1,284 @@
+@import '../utils/all';
+
+// Header styles
+.site--header {
+  height: 120px;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+  z-index: 999;
+  @include r_max($screen-sm) {
+    position: absolute;
+    height: 80px;
+  }
+}
+
+.site--header--wrapper {
+  width: 100%;
+  max-width: 1340px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site--header--logo {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.site--header--logo a{
+	background: url("../../images/sheltertech-logo.svg");
+	width: 107px;
+	height: 80px;
+  display: inline-block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 0 0 0 60px;
+  @include r_max($screen-md) {
+    margin: 0 0 0 20px;
+  }
+  @include r_max($screen-sm) {
+    width: 80px;
+  	height: 60px;
+  }
+}
+
+.site--header--nav {
+  position: relative;
+}
+
+.site--header--nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 120px;
+  margin-right: 10px;
+  @include r_max($screen-md) {
+    display: none;
+  }
+}
+
+.site--header--nav ul a {
+  display: inline-block;
+  color: $color-brand;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.site--header--nav .donate-button {
+  margin: 20px 15px;
+  padding: 10px 15px;
+  background: $color-brand;
+  color: #fff;
+}
+
+.site--header--legal {
+  border-top: 1px solid #CFCFCF;
+  width: 780px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+
+.site--header--legal ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site--header--legal li,
+.site--header--legal li a {
+  font-size: 12px;
+  color: #666;
+  padding-right: 10px;
+}
+
+.site--header--legal li:after {
+  content: "•";
+  padding-left: 10px;
+}
+
+.site--header--legal li:last-of-type:after {
+  content: "";
+}
+
+// SlideMenu styles
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  display: none;
+  @include r_max($screen-md) {
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 20px;
+    right: 36px;
+    top: -10px;
+  }
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: $color-brand;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  padding: 20px;
+  top: 12px;
+  right: 12px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #fff;
+  padding: 2.5em 1.5em 0;
+}
+
+.bm-menu .donate-form-button {
+  margin: 0 !important;
+}
+
+.bm-menu-wrap {
+  top: 0;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #484848;
+  padding: 0;
+}
+
+.bm-item-list a {
+  display: block;
+  padding: 15px 20px;
+  color: $color-brand;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+// Footer styles
+
+.site--footer {
+  height: 320px;
+  background: #F3F5F7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  @include r_max($screen-md) {
+    height: 320px;
+  }
+}
+
+.site--footer--nav {
+  width: 780px;
+  @include r_max($screen-md) {
+    display: none;
+  }
+}
+
+.site--footer--nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.site--footer--nav ul a {
+  display: inline-block;
+  color: $color-brand;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.site--footer--nav .donate-button {
+  margin: 20px 15px;
+  padding: 10px 15px;
+  background: $color-brand;
+  color: #fff;
+}
+
+.site--footer--legal {
+  border-top: 1px solid #CFCFCF;
+  width: 780px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  @include r_max($screen-md) {
+    border-top: 0;
+    width: 100vw;
+  }
+}
+
+.site--footer--legal ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  color: #666;
+  @include r_max($screen-md) {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+
+.site--footer--legal li,
+.site--footer--legal li a {
+  font-size: 12px;
+  padding-right: 10px;
+  @include r_max($screen-md) {
+    padding: 10px;
+  }
+}
+
+.site--footer--legal li:after {
+  content: "•";
+  padding-left: 10px;
+  @include r_max($screen-md) {
+    content: '';
+    padding-left: 0;
+  }
+}
+
+.site--footer--legal li:last-of-type:after {
+  content: "";
+}
+
+

@@ -22,6 +22,18 @@ const Layout = ({ data, children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="icon" href={favicon} />
+        {/* Global site tag (gtag.js) - Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-116318550-4"
+        />
+        <script>{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-116318550-4');
+        `}</script>
       </Helmet>
       <div className="app">
         <Header />

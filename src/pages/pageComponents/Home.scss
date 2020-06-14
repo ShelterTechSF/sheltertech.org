@@ -1,4 +1,4 @@
-@import './utils/all';
+@import '../../stylesheets/utils/all';
 
 .home {
   display: flex;
@@ -9,7 +9,7 @@
 }
 
 .home--hero {
-  background-image: url(../images/hero.jpg);
+  background-image: url("../../images/hero.jpg");
   background-size: cover;
   background-position: center center;
   height: 50vh;
@@ -102,7 +102,7 @@
 .home--founder--image {
   width: 50%;
   height: 100%;
-  background-image: url(../images/darcel-story.jpg);
+  background-image: url("../../images/darcel-story.jpg");
   background-position: center;
   background-size: cover;
   @include r_max($screen-sm) {

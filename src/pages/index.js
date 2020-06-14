@@ -1,9 +1,9 @@
 import React from 'react';
 import Home from './pageComponents/Home';
-import Navigation from '../components/Navigation';
+import Layout from '../layouts/Layout';
 
 export default () => (
-  <Navigation>
+  <Layout>
     <Home />
-  </Navigation>
+  </Layout>
 );

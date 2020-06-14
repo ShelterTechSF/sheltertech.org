@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../stylesheets/Home.scss';
+import './Home.scss';
 
 import ImageShelterConnectRound from '../../images/shelterconnect-round.png';
 import ImageAskDarcelRound from '../../images/askdarcel-round.png';

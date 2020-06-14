@@ -1,4 +1,4 @@
-@import '../utils/all';
+@import '../stylesheets/utils/all';
 
 // Header styles
 .site--header {
@@ -34,7 +34,7 @@
 }
 
 .site--header--logo a{
-	background: url("../../images/sheltertech-logo.svg");
+	background: url("../images/sheltertech-logo.svg");
 	width: 107px;
 	height: 80px;
   display: inline-block;
@@ -58,7 +58,7 @@
   position: relative;
 }
 
-.site--header--nav ul {
+.site--header--nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -69,7 +69,7 @@
   }
 }
 
-.site--header--nav ul a {
+.site--header--nav a {
   display: inline-block;
   color: $color-brand;
   font-weight: bold;
@@ -205,18 +205,15 @@
 }
 
 .site--footer--nav {
-  width: 780px;
-  @include r_max($screen-md) {
-    display: none;
-  }
-}
-
-.site--footer--nav ul {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   height: 120px;
   margin-bottom: 10px;
+  width: 780px;
+  @include r_max($screen-md) {
+    display: none;
+  }
 }
 
 .site--footer--nav ul a {

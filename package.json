@@ -1,0 +1,56 @@
+{
+  "name": "sheltertech.org",
+  "version": "1.0.0",
+  "description": "ShelterTech Info Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "lint": "npm run stylelint && npm run eslint",
+    "lint:fix": "npm run stylelint:fix && npm run eslint:fix",
+    "stylelint": "stylelint src/**/*.scss",
+    "stylelint:fix": "stylelint --fix src/**/*.scss",
+    "eslint": "eslint --ext=.js,.jsx .",
+    "eslint:fix": "eslint --fix --ext=.js,.jsx ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShelterTechSF/sheltertech.org.git"
+  },
+  "author": "Sheltertech.org",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ShelterTechSF/sheltertech.org/issues"
+  },
+  "homepage": "https://github.com/ShelterTechSF/sheltertech.org#readme",
+  "dependencies": {
+    "gatsby": "^2.24.47",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-burger-menu": "^2.6.13",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.5",
+    "gatsby-plugin-intercom-spa": "^0.2.0",
+    "gatsby-plugin-manifest": "^2.4.22",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sass": "^2.3.12",
+    "gatsby-plugin-sharp": "^2.6.25",
+    "gatsby-source-filesystem": "^2.3.24",
+    "gatsby-transformer-sharp": "^2.5.12",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "react-dom": "^16.13.1",
+    "stylelint": "^13.6.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}

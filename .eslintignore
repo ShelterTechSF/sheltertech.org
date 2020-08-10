@@ -1,5 +1,6 @@
-blueprints/**/files/**
-coverage/**
 node_modules/**
 dist/**
 src/index.html
+public/
+# Unignore any .js that start with a dot so that we lint config files themselves
+!.*.js

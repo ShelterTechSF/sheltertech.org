@@ -2,26 +2,55 @@
 
 > Created with [Gatsby](https://www.gatsbyjs.org/) with content managed in [Prismic](https://prismic.io)
 
+## Development Environment
 
+### Requirements
 
-## Launch this project in your local environment
+Docker Desktop
 
-Run the following commands:
+Follow the [Docker installation instructions](https://www.docker.com/get-started) for your OS.
 
-``` bash
-npm install
-npm start
+### Installing dependencies
+
+This only needs to be run once on first setup, and once any time the
+dependencies in package.json change.
+
+```sh
+$ docker-compose run --rm app npm install
 ```
-Then you can access it at [http://localhost:8000](http://localhost:8000).
 
-## Build this project as a static site
+### Start development web server
 
-Run the following commands:
-
-``` bash
-npm run build
+```sh
+$ docker-compose up
 ```
-Then you can access the static files in the `public/` directory.
+
+This will start the development web server at http://localhost:8000. The
+development server will automatically refresh your browser when any source file
+is modified.
+
+Press Ctrl + C to exit the development web server.
+
+
+### Run code lint checks
+
+```sh
+# Run this to automatically fix lint issues
+$ docker-compose run --rm app npm run lint:fix
+
+# Run this to just check for lint issues without fixing them
+$ docker-compose run --rm app npm run lint
+```
+
+### Build production site bundle
+
+```sh
+$ docker-compose run --rm app npm run build
+```
+
+This command will build a bundle of static files that can be deployed directly
+to a static web server host. The files will be located in the `./public`
+directory.
 
 
 ## Change content in Site

@@ -9,8 +9,8 @@
     "build": "gatsby build",
     "lint": "npm run stylelint && npm run eslint",
     "lint:fix": "npm run stylelint:fix && npm run eslint:fix",
-    "stylelint": "stylelint src/**/*.scss",
-    "stylelint:fix": "stylelint --fix src/**/*.scss",
+    "stylelint": "stylelint 'src/**/*.scss'",
+    "stylelint:fix": "stylelint --fix 'src/**/*.scss'",
     "eslint": "eslint --ext=.js,.jsx .",
     "eslint:fix": "eslint --fix --ext=.js,.jsx ."
   },

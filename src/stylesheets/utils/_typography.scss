@@ -8,20 +8,21 @@ $font-family-base: 'Lato', 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
 //////////////////////////////////////////////////////////////////////////////////////////
 // FONT STYLES
 
-html, body {
-  font-size: $font-size;
-  line-height: 1.25;
-  font-family: $font-family-base;
-  font-weight: 400;
-  word-wrap: break-word;
+html,
+body {
   color: $color-text;
+  font-family: $font-family-base;
+  font-size: $font-size;
+  font-weight: 400;
+  line-height: 1.25;
+  word-wrap: break-word;
 }
 
 h1 {
-  line-height: 1.1;
-  hyphens: auto;
-  font-size: calc-em(72px);
   color: $color-brand;
+  font-size: calc-em(72px);
+  hyphens: auto;
+  line-height: 1.1;
   @include r_min_max($screen-xs, $screen-md) {
     font-size: calc-em(60px);
   }
@@ -29,10 +30,11 @@ h1 {
     font-size: calc-em(48px);
   }
 }
+
 h2 {
   color: $color-brand;
-  font-weight: 300;
   font-size: calc-em(50px);
+  font-weight: 300;
   @include r_min_max($screen-xs, $screen-md) {
     font-size: calc-em(42px);
   }
@@ -40,6 +42,7 @@ h2 {
     font-size: calc-em(36px);
   }
 }
+
 h3 {
   font-size: calc-em(28px);
   @include r_min_max($screen-xs, $screen-md) {
@@ -49,6 +52,7 @@ h3 {
     font-size: calc-em(21px);
   }
 }
+
 h4 {
   color: $color-brand;
   font-size: calc-em(21px);
@@ -59,6 +63,7 @@ h4 {
     font-size: calc-em(15px);
   }
 }
+
 h5 {
   font-size: calc-em(15px);
   @include r_min_max($screen-xs, $screen-md) {
@@ -68,9 +73,10 @@ h5 {
     font-size: calc-em(13px);
   }
 }
+
 p {
-  margin-bottom: 10px;
   font-size: calc-em(15px);
+  margin-bottom: 10px;
   @include r_min_max($screen-xs, $screen-md) {
     font-size: calc-em(14px);
   }
@@ -78,6 +84,7 @@ p {
     font-size: calc-em(13px);
   }
 }
+
 small {
   font-size: calc-em(13px);
   @include r_min_max($screen-xs, $screen-md) {
@@ -89,36 +96,42 @@ small {
 }
 
 a {
+  @include transition(all 0.2s);
   color: $color-brand;
   cursor: pointer;
   text-decoration: none;
+
   &:hover {
     position: relative;
-    top:1px;
+    top: 1px;
   }
-  @include transition(all .2s);
 }
 
 em {
   font-style: italic;
 }
+
 strong {
   font-weight: 700;
 }
-button{
-  font-family: $font-family-base;
+
+button {
   cursor: pointer;
+  font-family: $font-family-base;
 }
-textarea, input{
+
+textarea,
+input {
   font-family: $font-family-base;
 }
 %hide-text {
   display: inline-block;
+  overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  overflow: hidden;
 }
+
 ::selection {
-  color: $color-white;
   background: transparentize($color-brand-light, 0.4);
+  color: $color-white;
 }

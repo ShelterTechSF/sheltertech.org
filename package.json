@@ -28,6 +28,7 @@
   "homepage": "https://github.com/ShelterTechSF/sheltertech.org#readme",
   "dependencies": {
     "gatsby": "^2.24.47",
+    "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-burger-menu": "^2.6.13",

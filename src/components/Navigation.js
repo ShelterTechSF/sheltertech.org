@@ -60,7 +60,7 @@ const Links = ({ withBlog }) => (
         Blog
       </a>
     )}
-    <Link className="donate-button" href="/donate">
+    <Link className="donate-button" to="/donate">
       Donate
     </Link>
   </>

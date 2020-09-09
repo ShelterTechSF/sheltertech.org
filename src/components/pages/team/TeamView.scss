@@ -1,0 +1,411 @@
+.team {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  max-width: 910px;
+  width: 90vw;
+}
+
+.team-list-header {
+  color: #484848;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.team-list--item {
+  background-color: #f9f9f9;
+  background-position: center;
+  background-size: cover;
+  height: 0;
+  margin: 2px;
+  padding-bottom: 19%;
+  position: relative;
+  width: 19%;
+  @media screen and (max-width:800px) {
+    padding-bottom: 32%;
+    width: 32%;
+  }
+  @media screen and (max-width:450px) {
+    padding-bottom: 48%;
+    width: 48%;
+  }
+}
+
+.team-list--item--details {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  bottom: 0;
+  color: #fff;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.team-list--item--name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.team-list--item--title {
+  font-size: 12px;
+}
+
+.team-list--item--details a {
+  color: #fff;
+}
+
+// PHOTOS //
+
+.team-list--item.placeholder {
+  background-image: url('assets/placeholder.png');
+}
+
+.team-list--item.darcel {
+  background-image: url('assets/darcel-headshot.jpg');
+}
+
+.team-list--item.hicham {
+  background-image: url('assets/hicham-press.jpg');
+}
+
+.team-list--item.derek {
+  background-image: url('assets/derek-fidler.jpg');
+}
+
+.team-list--item.alice {
+  background-image: url('assets/aliceHenry.jpg');
+}
+
+.team-list--item.joe {
+  background-image: url('assets/joeFreund.jpg');
+}
+
+.team-list--item.phil {
+  background-image: url('assets/phil-chu.jpg');
+}
+
+.team-list--item.sarah {
+  background-image: url('assets/sarah-freier-miller.jpg');
+}
+
+.team-list--item.richard {
+  background-image: url('assets/Richard-Xia.jpg');
+}
+
+.team-list--item.molly-c {
+  background-image: url('assets/molly-cohen.jpg');
+}
+
+.team-list--item.glasha {
+  background-image: url('assets/glasha-marcon.jpg');
+}
+
+.team-list--item.leland {
+  background-image: url('assets/lelandGarofalo.jpg');
+}
+
+.team-list--item.agathe {
+  background-image: url('assets/AgatheKempf.jpg');
+}
+
+.team-list--item.garance {
+  background-image: url('assets/garance-rey.jpg');
+}
+
+.team-list--item.chris {
+  background-image: url('assets/chris-keone.jpg');
+}
+
+.team-list--item.brad {
+  background-image: url('assets/brad-lawler.jpg');
+}
+
+.team-list--item.scott {
+  background-image: url('assets/scott-nelson.png');
+}
+
+.team-list--item.aaron {
+  background-image: url('assets/aaron-mendez.png');
+}
+
+.team-list--item.marilyn {
+  background-image: url('assets/marilyn-chan.png');
+}
+
+.team-list--item.dillon {
+  background-image: url('assets/dillon-cruz.jpg');
+}
+
+.team-list--item.kinsey {
+  background-image: url('assets/kinsey-hart.jpg');
+}
+
+.team-list--item.thomas {
+  background-image: url('assets/thomas-wolfe.jpg');
+}
+
+.team-list--item.alex-h {
+  background-image: url('assets/alex-holden.jpg');
+}
+
+.team-list--item.alexander {
+  background-image: url('assets/alexander-turinske.jpg');
+}
+
+.team-list--item.yuzhe {
+  background-image: url('assets/yuzhe-chen.jpg');
+}
+
+.team-list--item.eric {
+  background-image: url('assets/eric-petzel.jpg');
+}
+
+.team-list--item.rashmi {
+  background-image: url('assets/rashmi-balekundargir.jpg');
+}
+
+.team-list--item.zana {
+  background-image: url('assets/zana-jipsen.jpg');
+}
+
+.team-list--item.truc {
+  background-image: url('assets/truc-nguyen.jpg');
+}
+
+.team-list--item.amanda {
+  background-image: url('assets/amanda-wall.jpg');
+}
+
+.team-list--item.molly-a {
+  background-image: url('assets/molly-abrams.jpg');
+}
+
+.team-list--item.jill {
+  background-image: url('assets/jillpfund.jpg');
+}
+
+.team-list--item.nick {
+  background-image: url('assets/nick-platoff.jpg');
+}
+
+.team-list--item.bianca {
+  background-image: url('assets/bianca-st-louis.jpg');
+}
+
+.team-list--item.ali {
+  background-image: url('assets/ali-gustin.jpg');
+}
+
+.team-list--item.isabelle {
+  background-image: url('assets/isabelle-plesis.jpg');
+}
+
+.team-list--item.andrew-platt {
+  background-image: url('assets/andrew-platt.jpg');
+}
+
+.team-list--item.andrealiz {
+  background-image: url('assets/andrealiz-afable.jpg');
+}
+
+.team-list--item.marissa {
+  background-image: url('assets/marissa-kaufmann.jpg');
+}
+
+.team-list--item.benjamin {
+  background-image: url('assets/benjamin-maurice.jpg');
+}
+
+.team-list--item.vix {
+  background-image: url('assets/vix-jensen.jpg');
+}
+
+.team-list--item.vlad {
+  background-image: url('assets/vlad-metrik.jpg');
+}
+
+.team-list--item.ivan {
+  background-image: url('assets/ivan-hartanto.png');
+}
+
+.team-list--item.jess {
+  background-image: url('assets/jess-curry.jpg');
+}
+
+.team-list--item.vivien {
+  background-image: url('assets/vivien-ho.png');
+}
+
+.team-list--item.emily {
+  background-image: url('assets/emily-zhang.jpg');
+}
+
+.team-list--item.tiffany {
+  background-image: url('assets/tiddany-mckinley.png');
+}
+
+.team-list--item.nathan {
+  background-image: url('assets/nathan-spicer.jpg');
+}
+
+.team-list--item.paul {
+  background-image: url('assets/paul-metni.png');
+}
+
+.team-list--item.faraz {
+  background-image: url('assets/faraz-mujtaba.png');
+}
+
+.team-list--item.garret {
+  background-image: url('assets/garret-houghton.png');
+}
+
+.team-list--item.maris {
+  background-image: url('assets/maris-yanow.png');
+}
+
+.team-list--item.sharanya {
+  background-image: url('assets/sharanya-venkat.png');
+}
+
+.team-list--item.jasmine {
+  background-image: url('assets/jasmine-cheng.jpg');
+}
+
+.team-list--item.calvin {
+  background-image: url('assets/calvin-harjono.jpg');
+}
+
+.team-list--item.david {
+  background-image: url('assets/david-pindrys.png');
+}
+
+.team-list--item.ruochen {
+  background-image: url('assets/ruochen-huang.jpg');
+}
+
+.team-list--item.max {
+  background-image: url('assets/max-stuart.png');
+}
+
+.team-list--item.jr {
+  background-image: url('assets/jr-formanek.png');
+}
+
+.team-list--item.sarah-g {
+  background-image: url('assets/sarah-glanville.png');
+}
+
+.team-list--item.xander {
+  background-image: url('assets/xander-sung.png');
+}
+
+.team-list--item.anna {
+  background-image: url('assets/anna-kalkanis.png');
+}
+
+.team-list--item.brian {
+  background-image: url('assets/brian-schroer.jpg');
+}
+
+.team-list--item.avneet {
+  background-image: url('assets/avneet-chadha.jpg');
+}
+
+.team-list--item.cliff {
+  background-image: url('assets/cliff-crosland.png');
+}
+
+.team-list--item.michelle {
+  background-image: url('assets/michelle-carey.png');
+}
+
+.team-list--item.ariel {
+  background-image: url('assets/ariel-zhen.png');
+}
+
+.team-list--item.chris {
+  background-image: url('assets/chris-cortese.png');
+}
+
+.team-list--item.bill-soward {
+  background-image: url('assets/bill-soward.jpg');
+}
+
+.team-list--item.husam-najib {
+  background-image: url('assets/husam-najib.jpg');
+}
+
+.team-list--item.keith-weber {
+  background-image: url('assets/keith-weber.jpg');
+}
+
+.team-list--item.laura-barrera-vera {
+  background-image: url('assets/laura-barrera-vera.jpg');
+}
+
+.team-list--item.arielle-robles {
+  background-image: url('assets/arielle-robles.jpg');
+}
+
+.team-list--item.chris-yang {
+  background-image: url('assets/chris-yang.jpg');
+}
+
+.team-list--item.stephen-soward {
+  background-image: url('assets/stephen-soward.png');
+}
+
+.team-list--item.jacob-frank {
+  background-image: url('assets/jacob-frank.jpg');
+}
+
+.team-list--item.fred-ciaramaglia {
+  background-image: url('assets/fred-ciaramaglia.jpg');
+}
+
+.team-list--item.rachel-poonsiriwong {
+  background-image: url('assets/rachel-poonsiriwong.jpg');
+}
+
+.team-list--item.ada-lau {
+  background-image: url('assets/ada-lau.jpg');
+}
+
+.team-list--item.amanda-liu {
+  background-image: url('assets/amanda-liu.jpg');
+}
+
+.team-list--item.ryan-rodriguez {
+  background-image: url('assets/ryan-rodriguez.png');
+}
+
+.team-list--item.isaac-chao {
+  background-image: url('assets/isaac-chao.jpg');
+}
+
+.team-list--item.jan-barnes {
+  background-image: url('assets/jan-barnes.jpg');
+}
+
+.team-list--item.lissa-dotty {
+  background-image: url('assets/lissa-dotty.jpg');
+}
+
+.team-list--item.jason-cheng {
+  background-image: url('assets/jason-cheng.jpg');
+}

@@ -11,3 +11,12 @@ services:
     volumes:
       - .:/usr/src/app:delegated
     working_dir: /usr/src/app
+
+  storybook:
+    command: npm run storybook
+    image: node:14-alpine
+    ports:
+      - 6006:6006
+    volumes:
+      - .:/usr/src/app:delegated
+    working_dir: /usr/src/app

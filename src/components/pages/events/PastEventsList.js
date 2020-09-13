@@ -7,8 +7,8 @@ import PAST_EVENTS from "./data/PastEventsList";
 const EVENTS_LIST = PAST_EVENTS.filter((n) => n && n.show);
 
 const EventsItem = ({ event: n }) => (
-  <li className="event-card">
-    <a href={n.link} target="_blank" rel="noreferrer">
+  <a className="event-card-link" href={n.link} target="_blank" rel="noreferrer">
+    <div className="event-card">
       <p className="event-card--cost">{n.cost}</p>
       <img className="event-card--image" src={n.img} alt={n.description} />
       <div className="event-card--details">
@@ -19,8 +19,8 @@ const EventsItem = ({ event: n }) => (
         </div>
         <small>{n.location}</small>
       </div>
-    </a>
-  </li>
+    </div>
+  </a>
 );
 
 EventsItem.propTypes = {
@@ -37,7 +37,9 @@ EventsItem.propTypes = {
 const PastEventsList = () => (
   <ul className="events-list">
     {EVENTS_LIST.filter((n) => n && n.show).map((n) => (
-      <EventsItem key={n.id} event={n} />
+      <li className="events-list-item">
+        <EventsItem key={n.id} event={n} />
+      </li>
     ))}
   </ul>
 );

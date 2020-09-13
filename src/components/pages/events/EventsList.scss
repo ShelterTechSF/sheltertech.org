@@ -6,6 +6,25 @@
   width: 90vw;
 }
 
+.events-list-item {
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 320px;
+}
+
+/* Unset styles applied globally to the <a> tag that do not make sense when the
+ * <a> tag wraps other elements and not just text.
+ */
+.event-card-link {
+  color: inherit;
+
+  &:hover {
+    position: initial;
+    top: initial;
+  }
+}
+
 .event-card {
   background-color: #fff;
   border: 1px solid #cfcfcf;
@@ -14,10 +33,6 @@
   display: flex;
   flex: 0 0 auto;
   flex-direction: column;
-  margin: 10px;
-  overflow: hidden;
-  position: relative;
-  width: 320px;
 }
 
 .event-card--cost {

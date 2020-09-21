@@ -201,7 +201,7 @@ const AnnualReportView = () => (
           <img src={ImgCaseyLogo} alt="Casey" />
           <p className="annual-report--text">
             Casey&apos;s goal is to create step-by-step guides for the most
-            issues faced by people experiencing homelessness.
+            common issues faced by people experiencing homelessness.
           </p>
           <p className="annual-report--text">
             In order to understand the needs of individuals experiencing

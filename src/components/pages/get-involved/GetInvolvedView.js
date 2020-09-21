@@ -37,7 +37,7 @@ const GetInvolvedView = () => (
         <h2>Paid Opportunities</h2>
         <h3>
           Are you experiencing homelessness and looking for part-time job
-          opportunities in San Francisco? We
+          opportunities in San Francisco? We{" "}
           <strong>hire members of the homeless community</strong> to help us
           improve our products. To learn more, fill out the form below.
         </h3>

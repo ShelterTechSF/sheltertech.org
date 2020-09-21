@@ -133,7 +133,7 @@ const Home = () => (
               Francisco, providing free wifi to over 3000 people in need.
             </p>
             <p>
-              Learn more about
+              Learn more about{" "}
               <a
                 href="http://sheltertech.org/shelterconnect-flyer.pdf"
                 target="_blank"
@@ -184,7 +184,7 @@ const Home = () => (
             <h3>Find Human Services that are Right For You</h3>
             <p>
               In November 2017, ShelterTech began collaborating with the SF Bar
-              Association&quot;s Homeless Advocacy Project to build the most
+              Association&apos;s Homeless Advocacy Project to build the most
               robust housing and human services directory in San Francisco.
             </p>
             <p>

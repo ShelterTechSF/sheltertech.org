@@ -1,0 +1,56 @@
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  width: 95%;
+  @media screen and (max-width: 860px) {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
+.content-left {
+  flex: 1 1 auto;
+  margin-right: 20px;
+}
+
+.content-left h2 {
+  color: #000;
+  font-size: 28px;
+  font-weight: 300;
+  margin: 30px 0 15px;
+  max-width: 600px;
+}
+
+.content-left p {
+  font-size: 15px;
+  line-height: 130%;
+  margin: 0 0 15px;
+  max-width: 600px;
+}
+
+.content-left ul {
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-bottom: 15px;
+}
+
+.content-left ul li {
+  margin-bottom: 10px;
+}
+
+/* Not worth fixing this for legacy page */
+/* stylelint-disable selector-class-pattern */
+.GivingTuesday--photo {
+  height: auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+.content-right {
+  flex: 0 0 460px;
+}
+
+.giveLivelyEmbed {
+  height: 100%;
+  min-height: 1800px;
+}

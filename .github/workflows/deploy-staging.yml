@@ -1,8 +1,8 @@
-name: Deploy
+name: Deploy Staging
 on:
   push:
     branches:
-      - new-master
+      - main
   workflow_dispatch:
 jobs:
   deploy:
@@ -33,7 +33,7 @@ jobs:
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
-          AWS_S3_BUCKET: staging.gatsby.sheltertech.org
+          AWS_S3_BUCKET: staging.sheltertech.org
           AWS_ACCESS_KEY_ID: AKIASEI57EDUBSIVCZJX
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'us-east-1'

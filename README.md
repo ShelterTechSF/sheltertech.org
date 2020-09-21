@@ -2,7 +2,8 @@
 
 > Created with [Gatsby](https://www.gatsbyjs.org/) with content managed in [Prismic](https://prismic.io)
 
-## Development Environment
+
+## Development Environment Setup
 
 ### Requirements
 
@@ -19,10 +20,16 @@ dependencies in package.json change.
 $ docker-compose run --rm app npm install
 ```
 
-### Start development web server
+
+## Gatsby Commands
+
+Gatsby is a React-based framework for generating static websites. The following
+are common commands you will use while developing the website.
+
+### Start Gatsby development web server
 
 ```sh
-$ docker-compose up
+$ docker-compose up app
 ```
 
 This will start the development web server at http://localhost:8000. The
@@ -30,17 +37,6 @@ development server will automatically refresh your browser when any source file
 is modified.
 
 Press Ctrl + C to exit the development web server.
-
-
-### Run code lint checks
-
-```sh
-# Run this to automatically fix lint issues
-$ docker-compose run --rm app npm run lint:fix
-
-# Run this to just check for lint issues without fixing them
-$ docker-compose run --rm app npm run lint
-```
 
 ### Build production site bundle
 
@@ -51,6 +47,37 @@ $ docker-compose run --rm app npm run build
 This command will build a bundle of static files that can be deployed directly
 to a static web server host. The files will be located in the `./public`
 directory.
+
+
+## Storybook Commands
+
+[Storybook](https://storybook.js.org/) is a tool for developing reusable UI
+components. When developing a new component, it is recommended to first develop
+it in Storybook in order to encourage building it as a modular, isolated component
+before including it in the Gatsby-based site.
+
+### Start Storybook development web server
+
+```sh
+$ docker-compose up storybook
+```
+
+This will start the development web server at http://localhost:6006. The
+development server will automatically refresh your browser when any source file
+is modified.
+
+
+## General Commands
+
+### Run code lint checks
+
+```sh
+# Run this to automatically fix lint issues
+$ docker-compose run --rm app npm run lint:fix
+
+# Run this to just check for lint issues without fixing them
+$ docker-compose run --rm app npm run lint
+```
 
 
 ## Deployments

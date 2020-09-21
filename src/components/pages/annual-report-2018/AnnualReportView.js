@@ -48,7 +48,7 @@ const AnnualReportView = () => (
               </li>
               <li>
                 <span className="goal-number">7</span>
-                <p>AskDarcel Releases</p>
+                <p>SF Service Guide Releases</p>
               </li>
               <li>
                 <span className="goal-number">26</span>
@@ -123,12 +123,12 @@ const AnnualReportView = () => (
 
       <div className="annual-report--askdarcel">
         <div className="wrapper">
-          <img src={ImgAskDarcelLogo} alt="AskDarcel" />
+          <img src={ImgAskDarcelLogo} alt="SF Service Guide" />
           <p className="annual-report--text">
-            AskDarcel is a robust and continously updated online directory for
-            case managers, city employees, social workers, and people in the
-            homeless, low/no income, at risk, and supportive communities to find
-            housing and human services in San Francisco.
+            SF Service Guide is a robust and continously updated online
+            directory for case managers, city employees, social workers, and
+            people in the homeless, low/no income, at risk, and supportive
+            communities to find housing and human services in San Francisco.
           </p>
           <p className="annual-report--text">
             In 2018, we released an Alpha of the product but decided to hold off
@@ -139,7 +139,7 @@ const AnnualReportView = () => (
           </p>
           <h3>
             In 2018, over <span className="white">2,000</span> hours were spent
-            on the development of AskDarcel.
+            on the development of SF Service Guide.
           </h3>
           <h3>
             The tech team shipped <span className="white">7 releases</span>{" "}
@@ -291,10 +291,10 @@ const AnnualReportView = () => (
           </p>
           <ul className="annual-report--2019-goals">
             <li>
-              <p>Public launch of AskDarcel</p>
+              <p>Public launch of SF Service Guide</p>
             </li>
             <li>
-              <p>2000 AskDarcel users by year end</p>
+              <p>2000 SF Service Guide users by year end</p>
             </li>
             <li>
               <p>Host 45 Datathons</p>

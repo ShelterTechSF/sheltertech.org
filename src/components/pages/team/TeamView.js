@@ -58,13 +58,19 @@ const TeamView = () => (
           img="laura-barrera-vera"
           email="laura"
           name="Laura Barrera-Vera"
-          title="AskDarcel/SFSG Lead"
+          title="SFSG Lead"
         />
         <TeamListItem
           img="derek"
           email="derek"
           name="Derek Fidler"
           title="Co-Founder & Design Lead"
+        />
+        <TeamListItem
+          img="jacob-frank"
+          email="jacob"
+          name="Jacob Frank"
+          title="SFSG Design Lead & Exec. Team"
         />
         <TeamListItem
           img="arielle-robles"
@@ -147,12 +153,12 @@ const TeamView = () => (
       </ul>
 
       <ul className="team-list">
-        <h4 className="team-list-header">AskDarcel Team</h4>
+        <h4 className="team-list-header">SF Service Guide Team</h4>
         <TeamListItem
           img="laura-barrera-vera"
           email="laura"
           name="Laura Barrera-Vera"
-          title="AskDarcel Program Manager"
+          title="SFSG Program Manager"
         />
         <TeamListItem
           img="stephen-soward"
@@ -179,16 +185,10 @@ const TeamView = () => (
           title="Development Lead"
         />
         <TeamListItem
-          img="derek"
-          email="derek"
-          name="Derek Fidler"
-          title="Design Lead"
-        />
-        <TeamListItem
           img="jacob-frank"
           email="jacob"
           name="Jacob Frank"
-          title="Design Manager"
+          title="Design Lead"
         />
         <TeamListItem
           img="max"
@@ -451,6 +451,12 @@ const TeamView = () => (
 
       <ul className="team-list">
         <h4 className="team-list-header">ShelterTech Volunteers</h4>
+        <TeamListItem
+          img="jr"
+          email="jr"
+          name="JR Formanek"
+          title="Fundraising"
+        />
         <TeamListItem
           img="vlad"
           email="vlad"

@@ -50,7 +50,7 @@ const Home = () => (
         </li>
         <li className="home--cards--card">
           <a
-            href="https://askdarcel.org/"
+            href="https://sfserviceguide.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -58,11 +58,11 @@ const Home = () => (
           </a>
           <h4>
             <a
-              href="https://askdarcel.org/"
+              href="https://sfserviceguide.org/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              AskDarcel
+              SF Service Guide
             </a>
           </h4>
           <p>Find housing and human services you&apos;re eligibile for</p>
@@ -188,14 +188,14 @@ const Home = () => (
               robust housing and human services directory in San Francisco.
             </p>
             <p>
-              Through the AskDarcel website, case managers, city employees, and
-              people experiencing homelessness can find thousands of
-              homelessness, housing, health, job, education, and other human
+              Through the SF Service Guide website, case managers, city
+              employees, and people experiencing homelessness can find thousands
+              of homelessness, housing, health, job, education, and other human
               services nearby and learn how to access them.
             </p>
             <p>
               Visit&nbsp;
-              <a href="http://askdarcel.org">AskDarcel.org</a>
+              <a href="http://sfserviceguide.org">sfserviceguide.org</a>
               &nbsp;for more info.
             </p>
             <a
@@ -237,9 +237,10 @@ const Home = () => (
             />
             <h3>Casey — Self Service Case Management</h3>
             <p>
-              Utilizing data from AskDarcel and hundreds of research hours,
-              Casey provides step by step guides for many of the most common
-              problems faced by people at risk of or experiencing homelessness.
+              Utilizing data from SF Service Guide and hundreds of research
+              hours, Casey provides step by step guides for many of the most
+              common problems faced by people at risk of or experiencing
+              homelessness.
             </p>
             <p>
               Casey guides are delivered where they&apos;re needed most; paper

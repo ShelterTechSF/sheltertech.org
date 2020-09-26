@@ -1,4 +1,4 @@
-# ShelterTech Non-Profit Informational Site
+# ShelterTech.org Website ![Test Status](https://github.com/ShelterTechSF/sheltertech.org/workflows/Test/badge.svg)
 
 > Created with [Gatsby](https://www.gatsbyjs.org/) with content managed in [Prismic](https://prismic.io)
 

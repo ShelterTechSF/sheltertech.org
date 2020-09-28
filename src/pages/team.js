@@ -1,5 +1,5 @@
 import React from "react";
-import TeamView from "../components/pages/team/TeamView";
+import TeamView from "../legacy/components/pages/team/TeamView";
 import Layout from "../layouts/Layout";
 
 export default () => (

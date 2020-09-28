@@ -1,6 +1,6 @@
 import React from "react";
 
-import Layout from "../layouts/Layout";
+import Layout from "../legacy/layouts/Layout";
 
 const Page = () => (
   <div className="content">

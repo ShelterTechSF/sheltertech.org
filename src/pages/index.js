@@ -1,18 +1,18 @@
 import React from "react";
 
-import ImageChronicle from "../images/home/press/chronicle-logo.png";
-import ImageCitylab from "../images/home/press/citylab-logo.png";
-import ImageKQED from "../images/home/press/kqed-logo.png";
-import ImageAskDarcelFeature from "../images/home/programs/askdarcel-feature.png";
-import ImageAskDarcelLogo from "../images/home/programs/askdarcel-logo.png";
-import ImageAskDarcelRound from "../images/home/programs/askdarcel-round.png";
-import ImageCaseyFeature from "../images/home/programs/casey-feature.png";
-import ImageCaseyLogo from "../images/home/programs/casey-logo.png";
-import ImageCaseyRound from "../images/home/programs/casey-round.png";
-import ImageShelterconnectFeature from "../images/home/programs/shelterconnect-feature.png";
-import ImageShelterconnectLogo from "../images/home/programs/shelterconnect-logo.png";
-import ImageShelterConnectRound from "../images/home/programs/shelterconnect-round.png";
-import Layout from "../layouts/Layout";
+import ImageChronicle from "../legacy/images/home/press/chronicle-logo.png";
+import ImageCitylab from "../legacy/images/home/press/citylab-logo.png";
+import ImageKQED from "../legacy/images/home/press/kqed-logo.png";
+import ImageAskDarcelFeature from "../legacy/images/home/programs/askdarcel-feature.png";
+import ImageAskDarcelLogo from "../legacy/images/home/programs/askdarcel-logo.png";
+import ImageAskDarcelRound from "../legacy/images/home/programs/askdarcel-round.png";
+import ImageCaseyFeature from "../legacy/images/home/programs/casey-feature.png";
+import ImageCaseyLogo from "../legacy/images/home/programs/casey-logo.png";
+import ImageCaseyRound from "../legacy/images/home/programs/casey-round.png";
+import ImageShelterconnectFeature from "../legacy/images/home/programs/shelterconnect-feature.png";
+import ImageShelterconnectLogo from "../legacy/images/home/programs/shelterconnect-logo.png";
+import ImageShelterConnectRound from "../legacy/images/home/programs/shelterconnect-round.png";
+import Layout from "../legacy/layouts/Layout";
 
 import "./index.scss";
 

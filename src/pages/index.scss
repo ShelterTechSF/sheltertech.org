@@ -1,4 +1,4 @@
-@import '../stylesheets/utils/all';
+@import '../legacy/stylesheets/utils/all';
 
 .home {
   align-items: center;
@@ -10,7 +10,7 @@
 
 .home--hero {
   align-items: center;
-  background-image: url('../images/home/hero.jpg');
+  background-image: url('../legacy/images/home/hero.jpg');
   background-position: center center;
   background-size: cover;
   display: flex;
@@ -100,7 +100,7 @@
 }
 
 .home--founder--image {
-  background-image: url('../images/home/darcel-story.jpg');
+  background-image: url('../legacy/images/home/darcel-story.jpg');
   background-position: center;
   background-size: cover;
   height: 100%;

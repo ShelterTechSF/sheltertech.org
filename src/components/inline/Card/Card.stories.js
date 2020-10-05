@@ -1,6 +1,6 @@
 import React from "react";
-import img from "../../../images/home/hero.jpg";
 import Card from "./Card";
+import img from "./sample.jpg";
 
 export default {
   title: "Inline/Card",

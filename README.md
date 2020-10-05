@@ -8,8 +8,10 @@ For more specific documentation, visit one of the pages below:
 
 - [Getting Started Guide][]
 - [Command-Line Quick Reference][]
+- [Component Design System][]
 - [How To Deploy][]
 
 [Getting Started Guide]: ./docs/getting-started.md
 [Command-Line Quick Reference]: ./docs/command-line-quick-reference.md
+[Component Design System]: ./docs/component-design-system.md
 [How To Deploy]: ./docs/how-to-deploy.md

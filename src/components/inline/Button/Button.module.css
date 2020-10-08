@@ -1,6 +1,6 @@
 .button {
-  background-color: var(--color-sheltertech);
-  border: 1px solid var(--color-sheltertech);
+  background-color: var(--color-sheltertech-blue);
+  border: 1px solid var(--color-sheltertech-blue);
   color: var(--color-white);
   cursor: pointer;
   font-family: var(--font-family-body);

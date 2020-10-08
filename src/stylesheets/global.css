@@ -1,15 +1,69 @@
 /* Global settings and variables */
 
 @import '~normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 :root {
   /* Colors */
-  --color-brand: #0025e4;
+  /* Interface Colors */
   --color-white: #fff;
+  --color-gray-300: #f9f9f9;
+  --color-gray-400: #e0e0e0;
+  --color-gray-500: #9e9e9e;
+  --color-gray-600: #888;
+  --color-gray-700: #666;
+  --color-gray-800: #484848;
+  --color-gray-900: #212121;
+  --color-black: #202020;
+
+  /* Message Colors */
+  --color-alert: #eb0000;
+  --color-warn: #ffbc00;
+  --color-success: #2bcf59;
+
+  /* Brand Colors */
+  --color-brand-base: #276ce5;
+  --color-sheltertech: #0025e4;
 
   /* Fonts */
+  --font-family-hero: 'Merriweather', serif;
+  --font-family-headline: 'Merriweather', serif;
   --font-family-title: 'Merriweather', serif;
+  --font-family-subtitle: 'Lato', sans-serif;
+  --font-family-caption: 'Lato', sans-serif;
+  --font-family-action: 'Lato', sans-serif;
   --font-family-body: 'Lato', sans-serif;
+
+  /* Font Weights */
+  --font-weight-hero: 300;
+  --font-weight-headline: 300;
+  --font-weight-title: 300;
+  --font-weight-subtitle: 700;
+  --font-weight-caption: 700;
+  --font-weight-action: 800;
+  --font-weight-body: 400;
+
+  /* Font Sizes */
+  /* Web */
+  --font-size-hero-w: 67px;
+  --font-size-headline-w: 50px;
+  --font-size-title-w: 30px;
+  --font-size-subtitle-w: 24px;
+  --font-size-caption-w: 18px;
+  --font-size-action-w: 14px;
+  --font-size-body-large-w: 30px;
+  --font-size-body-medium-w: 20px;
+  --font-size-body-small-w: 16px;
+
+  /* Mobile */
+  --font-size-hero-m: 40px;
+  --font-size-headline-m: 30px;
+  --font-size-title-m: 20px;
+  --font-size-subtitle-m: 18px;
+  --font-size-caption-m: 16px;
+  --font-size-action-m: 14px;
+  --font-size-body-large-m: 24px;
+  --font-size-body-medium-m: 16px;
+  --font-size-body-small-m: 14px;
 }

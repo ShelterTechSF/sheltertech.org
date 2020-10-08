@@ -23,8 +23,10 @@
   --color-success: #2bcf59;
 
   /* Brand Colors */
-  --color-brand-base: #276ce5;
-  --color-sheltertech: #0025e4;
+  --color-askdarcel-blue: #276ce5;
+  --color-sheltertech-blue: #0025e4;
+  --color-deep-blue: #202953;
+  --color-midnight-blue: #0F1428;
 
   /* Fonts */
   --font-family-hero: 'Merriweather', serif;

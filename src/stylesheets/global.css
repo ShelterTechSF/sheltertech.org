@@ -2,7 +2,7 @@
 
 @import '~normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://use.typekit.net/ahq6oby.css");
 
 :root {
   /* Colors */
@@ -49,7 +49,7 @@
   --font-title: 300 var(--font-size-title)/1.3 var(--font-family-merriweather);
   --font-subtitle: 700 var(--font-size-subtitle)/1.3 var(--font-family-lato);
   --font-caption: 700 var(--font-size-caption)/1.3 var(--font-family-lato);
-  --font-action: 800 var(--font-size-action)/1.3 var(--font-family-lato); /* 800 doesn't exist */
+  --font-action: 800 var(--font-size-action)/1.3 var(--font-family-lato);
   --font-body-large: 400 var(--font-size-body-large)/1.3 var(--font-family-lato);
   --font-body-medium: 400 var(--font-size-body-medium)/1.3 var(--font-family-lato);
   --font-body-small: 400 var(--font-size-body-small)/1.3 var(--font-family-lato);

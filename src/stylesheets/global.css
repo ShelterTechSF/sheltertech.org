@@ -28,7 +28,7 @@
   --color-deep-blue: #202953;
   --color-midnight-blue: #0f1428;
 
-  /* Fonts */
+  /* Font Families */
   --font-family-hero: 'Merriweather', serif;
   --font-family-headline: 'Merriweather', serif;
   --font-family-title: 'Merriweather', serif;
@@ -47,7 +47,7 @@
   --font-weight-body: 400;
 
   /* Font Sizes */
-  /* Web */
+  /* Web Type Scale */
   --font-size-hero-w: 67px;
   --font-size-headline-w: 50px;
   --font-size-title-w: 30px;
@@ -58,7 +58,7 @@
   --font-size-body-medium-w: 20px;
   --font-size-body-small-w: 16px;
 
-  /* Mobile */
+  /* Mobile Type Scale */
   --font-size-hero-m: 40px;
   --font-size-headline-m: 30px;
   --font-size-title-m: 20px;

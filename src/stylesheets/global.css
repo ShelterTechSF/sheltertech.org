@@ -29,43 +29,42 @@
   --color-midnight-blue: #0f1428;
 
   /* Font Families */
-  --font-family-hero: 'Merriweather', serif;
-  --font-family-headline: 'Merriweather', serif;
-  --font-family-title: 'Merriweather', serif;
-  --font-family-subtitle: 'Lato', sans-serif;
-  --font-family-caption: 'Lato', sans-serif;
-  --font-family-action: 'Lato', sans-serif;
-  --font-family-body: 'Lato', sans-serif;
-
-  /* Font Weights */
-  --font-weight-hero: 300;
-  --font-weight-headline: 300;
-  --font-weight-title: 300;
-  --font-weight-subtitle: 700;
-  --font-weight-caption: 700;
-  --font-weight-action: 800;
-  --font-weight-body: 400;
+  --font-family-merriweather: 'Merriweather', 'Georgia', serif;
+  --font-family-lato: 'Lato', 'Arial', sans-serif;
 
   /* Font Sizes */
-  /* Web Type Scale */
-  --font-size-hero-w: 67px;
-  --font-size-headline-w: 50px;
-  --font-size-title-w: 30px;
-  --font-size-subtitle-w: 24px;
-  --font-size-caption-w: 18px;
-  --font-size-action-w: 14px;
-  --font-size-body-large-w: 30px;
-  --font-size-body-medium-w: 20px;
-  --font-size-body-small-w: 16px;
+  --font-size-hero: 67px;
+  --font-size-headline: 50px;
+  --font-size-title: 30px;
+  --font-size-subtitle: 24px;
+  --font-size-caption: 18px;
+  --font-size-action: 14px;
+  --font-size-body-large: 30px;
+  --font-size-body-medium: 20px;
+  --font-size-body-small: 16px;
 
-  /* Mobile Type Scale */
-  --font-size-hero-m: 40px;
-  --font-size-headline-m: 30px;
-  --font-size-title-m: 20px;
-  --font-size-subtitle-m: 18px;
-  --font-size-caption-m: 16px;
-  --font-size-action-m: 14px;
-  --font-size-body-large-m: 24px;
-  --font-size-body-medium-m: 16px;
-  --font-size-body-small-m: 14px;
+  /* Typographys */
+  --font-hero: 300 var(--font-size-hero)/1.3 var(--font-family-merriweather);
+  --font-headline: 300 var(--font-size-headline)/1.3 var(--font-family-merriweather);
+  --font-title: 300 var(--font-size-title)/1.3 var(--font-family-merriweather);
+  --font-subtitle: 700 var(--font-size-subtitle)/1.3 var(--font-family-lato);
+  --font-caption: 700 var(--font-size-caption)/1.3 var(--font-family-lato);
+  --font-action: 800 var(--font-size-action)/1.3 var(--font-family-lato); /* 800 doesn't exist */
+  --font-body-large: 400 var(--font-size-body-large)/1.3 var(--font-family-lato);
+  --font-body-medium: 400 var(--font-size-body-medium)/1.3 var(--font-family-lato);
+  --font-body-small: 400 var(--font-size-body-small)/1.3 var(--font-family-lato);
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --font-size-hero: 40px;
+    --font-size-headline: 30px;
+    --font-size-title: 20px;
+    --font-size-subtitle: 18px;
+    --font-size-caption: 16px;
+    --font-size-action: 14px;
+    --font-size-body-large: 24px;
+    --font-size-body-medium: 16px;
+    --font-size-body-small: 14px;
+  }
 }

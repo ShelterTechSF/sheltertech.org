@@ -1,0 +1,70 @@
+.rectangle39 {
+  background-image: url('./blackbackground.jpg');
+  height: 240px;
+  position: absolute;
+  width: 240px;
+}
+
+.frame20 {
+  align-items: flex-start;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  height: 72px;
+  position: absolute;
+  width: 240px;
+}
+
+.rectangle271 {
+  align-self: flex-end;
+  background: #0025e4;
+  height: 72px;
+  position: static;
+  right: 96.67%;
+  width: 8px;
+}
+
+.space {
+  align-self: flex-end;
+  background: #000;
+  height: 72px;
+  position: static;
+  right: 96.67%;
+  width: 12px;
+}
+
+.hotelname {
+  align-items: flex-end;
+  align-self: center;
+  bottom: 56.34%;
+  color: var(--color-white);
+  display: flex;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 130%;
+  margin: 0 1px;
+  position: static;
+}
+
+.numberofpeople {
+  align-self: center;
+  color: var(--color-white);
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  height: 39px;
+  line-height: 120%;
+  margin: 0 1px;
+  order: 1;
+  position: static;
+  top: 45.07%;
+  top: 32px;
+  width: 220px;
+}
+
+.rightbox {
+  flex-direction: column;
+}

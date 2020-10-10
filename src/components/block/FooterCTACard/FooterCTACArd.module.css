@@ -16,7 +16,7 @@
 
 .container {
   height: 400px;
-  width: 480px;
+  width: inherit;
 }
 
 .subTitle {

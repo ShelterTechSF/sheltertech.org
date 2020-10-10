@@ -7,7 +7,7 @@ export default {
 };
 
 const Template = (args) => (
-  <div style={{ backgroundColor: "black", maxWidth: "480px" }}>
+  <div style={{ backgroundColor: "black", width: "480px" }}>
     <FooterCTACArd
       subTitle={args.subTitle}
       body={args.body}

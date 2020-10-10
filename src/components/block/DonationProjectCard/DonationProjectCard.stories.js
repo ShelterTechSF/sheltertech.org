@@ -16,8 +16,8 @@ const Template = (args) => (
     }}
   >
     <DonationProjectCard
-      title={args.data.title}
-      subtitle={args.data.subtitle}
+      title={args.title}
+      subtitle={args.subtitle}
     />
   </div>
 );
@@ -25,8 +25,6 @@ const Template = (args) => (
 export const DefaultDonationProjectCard = Template.bind({});
 
 DefaultDonationProjectCard.args = {
-  data: {
     title: "Star Hotel SRO",
     subtitle: "280 People",
-  },
 };

@@ -1,1 +1,1 @@
-export { default } from "./FooterCTACArd";
+export { default } from "./FooterCTACard";

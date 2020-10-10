@@ -1,22 +1,22 @@
 import React from "react";
-import FooterCTACArd from "./FooterCTACArd";
+import FooterCTACard from "./FooterCTACard";
 
 export default {
-  title: "Block/FooterCTACArd",
-  component: FooterCTACArd,
+  title: "Block/FooterCTACard",
+  component: FooterCTACard,
 };
 
 const Template = (args) => (
   <div style={{ backgroundColor: "black", width: "480px" }}>
-    <FooterCTACArd
+    <FooterCTACard
       subTitle={args.subTitle}
       body={args.body}
       buttonText={args.buttonText}
     />
   </div>
 );
-export const DefaultFooterCTACArd = Template.bind({});
-DefaultFooterCTACArd.args = {
+export const DefaultFooterCTACard = Template.bind({});
+DefaultFooterCTACard.args = {
   subTitle: "Get Involved",
   body: "Volunteer with us and put your professional skills to good use.",
   buttonText: "JOIN US",

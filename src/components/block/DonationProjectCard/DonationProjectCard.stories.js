@@ -15,16 +15,13 @@ const Template = (args) => (
       backgroundRepeat: "no-repeat",
     }}
   >
-    <DonationProjectCard
-      title={args.title}
-      subtitle={args.subtitle}
-    />
+    <DonationProjectCard title={args.title} subtitle={args.subtitle} />
   </div>
 );
 
 export const DefaultDonationProjectCard = Template.bind({});
 
 DefaultDonationProjectCard.args = {
-    title: "Star Hotel SRO",
-    subtitle: "280 People",
+  title: "Star Hotel SRO",
+  subtitle: "280 People",
 };

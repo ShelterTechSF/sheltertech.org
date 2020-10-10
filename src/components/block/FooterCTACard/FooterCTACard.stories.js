@@ -9,7 +9,7 @@ export default {
 const Template = (args) => (
   <div style={{ backgroundColor: "black", width: "480px" }}>
     <FooterCTACard
-      subTitle={args.subTitle}
+      subTitle={args.subtitle}
       body={args.body}
       buttonText={args.buttonText}
     />
@@ -17,7 +17,7 @@ const Template = (args) => (
 );
 export const DefaultFooterCTACard = Template.bind({});
 DefaultFooterCTACard.args = {
-  subTitle: "Get Involved",
+  subtitle: "Get Involved",
   body: "Volunteer with us and put your professional skills to good use.",
   buttonText: "JOIN US",
 };

@@ -1,10 +1,9 @@
 import React from "react";
-
-import HomeView from "../legacy/components/pages/home/HomeView";
+import TeamView from "../legacy/components/pages/team/TeamView";
 import Layout from "../legacy/layouts/Layout";
 
 export default () => (
   <Layout>
-    <HomeView />
+    <TeamView />
   </Layout>
 );

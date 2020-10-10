@@ -1,10 +1,9 @@
 import React from "react";
-
-import HomeView from "../legacy/components/pages/home/HomeView";
+import GivingTuesdayView from "../legacy/components/pages/givingtuesday/GivingTuesdayView";
 import Layout from "../legacy/layouts/Layout";
 
 export default () => (
   <Layout>
-    <HomeView />
+    <GivingTuesdayView />
   </Layout>
 );

@@ -1,0 +1,28 @@
+.subTitle {
+  padding-top: 109.5px;
+  font: var(--font-subtitle);
+  text-align: center;
+  color: var(--color-white);
+  line-height: 1.3;
+}
+
+.body {
+  margin-top: 15px;
+  max-width: 350px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font: var(--font-body-medium);
+  color: var(--color-white);
+  line-height: 1.3;
+}
+
+.button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.container {
+  height: 400px;
+  width: 480px;
+}

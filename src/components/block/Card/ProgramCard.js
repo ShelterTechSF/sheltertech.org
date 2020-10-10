@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
-import s from "./Card.module.css";
+import s from "./ProgramCard.module.css";
 
-const Card = ({ photo, title, description }) => (
+const ProgramCard = ({ photo, title, description }) => (
   <div className={s["card-container"]}>
     <div className={s["img-container"]}>
       <img className={s.img} src={photo} alt="" />
@@ -18,16 +18,16 @@ const Card = ({ photo, title, description }) => (
   </div>
 );
 
-Card.propTypes = {
+ProgramCard.propTypes = {
   photo: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
 };
 
-Card.defaultProps = {
+ProgramCard.defaultProps = {
   photo: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
 };
 
-export default Card;
+export default ProgramCard;

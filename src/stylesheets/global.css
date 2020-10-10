@@ -1,13 +1,70 @@
 /* Global settings and variables */
 
 @import '~normalize.css';
-@import url('https://fonts.googleapis.com/css?family=Lato:300i,300,400,700');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 :root {
   /* Colors */
-  --color-brand: #0025e4;
+  /* Interface Colors */
   --color-white: #fff;
+  --color-gray-300: #f9f9f9;
+  --color-gray-400: #e0e0e0;
+  --color-gray-500: #9e9e9e;
+  --color-gray-600: #888;
+  --color-gray-700: #666;
+  --color-gray-800: #484848;
+  --color-gray-900: #212121;
+  --color-black: #202020;
 
-  /* Fonts */
-  --font-family-base: 'Lato', 'Arial', sans-serif;
+  /* Message Colors */
+  --color-alert: #eb0000;
+  --color-warn: #ffbc00;
+  --color-success: #2bcf59;
+
+  /* Brand Colors */
+  --color-askdarcel-blue: #276ce5;
+  --color-sheltertech-blue: #0025e4;
+  --color-deep-blue: #202953;
+  --color-midnight-blue: #0f1428;
+
+  /* Font Families */
+  --font-family-merriweather: 'Merriweather', 'Georgia', serif;
+  --font-family-lato: 'Lato', 'Arial', sans-serif;
+
+  /* Font Sizes */
+  --font-size-hero: 67px;
+  --font-size-headline: 50px;
+  --font-size-title: 30px;
+  --font-size-subtitle: 24px;
+  --font-size-caption: 18px;
+  --font-size-action: 14px;
+  --font-size-body-large: 30px;
+  --font-size-body-medium: 20px;
+  --font-size-body-small: 16px;
+
+  /* Typographys */
+  --font-hero: 300 var(--font-size-hero)/1.3 var(--font-family-merriweather);
+  --font-headline: 300 var(--font-size-headline)/1.3 var(--font-family-merriweather);
+  --font-title: 300 var(--font-size-title)/1.3 var(--font-family-merriweather);
+  --font-subtitle: 700 var(--font-size-subtitle)/1.3 var(--font-family-lato);
+  --font-caption: 700 var(--font-size-caption)/1.3 var(--font-family-lato);
+  --font-action: 700 var(--font-size-action)/1.3 var(--font-family-lato);
+  --font-body-large: 400 var(--font-size-body-large)/1.3 var(--font-family-lato);
+  --font-body-medium: 400 var(--font-size-body-medium)/1.3 var(--font-family-lato);
+  --font-body-small: 400 var(--font-size-body-small)/1.3 var(--font-family-lato);
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --font-size-hero: 40px;
+    --font-size-headline: 30px;
+    --font-size-title: 20px;
+    --font-size-subtitle: 18px;
+    --font-size-caption: 16px;
+    --font-size-action: 14px;
+    --font-size-body-large: 24px;
+    --font-size-body-medium: 16px;
+    --font-size-body-small: 14px;
+  }
 }

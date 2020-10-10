@@ -4,13 +4,12 @@ import React from "react";
 import s from "./DonationProjectCard.module.css";
 
 const DonationProjectCard = ({ title, subtitle }) => (
-  <div className={s.rectangle39}>
-    <div className={s.frame20}>
-      <div className={s.rectangle271} />
-      <div className={s.space} />
-      <div className={s.rightbox}>
-        <div className={s.hotelname}>{title}</div>
-        <div className={s.numberofpeople}>{subtitle}</div>
+  <div className={s.container}>
+    <div className={s.bottombox}>
+      <div className={s.bar} />
+      <div>
+        <div className={s.title}>{title}</div>
+        <div className={s.subtitle}>{subtitle}</div>
       </div>
     </div>
   </div>

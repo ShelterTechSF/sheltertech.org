@@ -8,14 +8,12 @@ export default {
 };
 
 const Template = ({ image, alt, title, description }) => (
-  <div style={{ width: "410px" }}>
-    <ProgramCard
-      image={image}
-      alt={alt}
-      title={title}
-      description={description}
-    />
-  </div>
+  <ProgramCard
+    image={image}
+    alt={alt}
+    title={title}
+    description={description}
+  />
 );
 
 export const DefaultProgramCard = Template.bind({});

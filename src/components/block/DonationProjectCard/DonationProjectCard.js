@@ -21,8 +21,8 @@ DonationProjectCard.propTypes = {
 };
 
 DonationProjectCard.defaultProps = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
+  title: null,
+  subtitle: null
 };
 
 export default DonationProjectCard;

@@ -7,7 +7,7 @@ export default {
   component: DonationProjectCard,
 };
 
-const Template = (args) => (
+const Template = ({ title, subtitle }) => (
   <div
     style={{
       backgroundImage: `url(${background})`,
@@ -15,7 +15,7 @@ const Template = (args) => (
       backgroundRepeat: "no-repeat",
     }}
   >
-    <DonationProjectCard title={args.title} subtitle={args.subtitle} />
+    <DonationProjectCard title={title} subtitle={subtitle} />
   </div>
 );
 

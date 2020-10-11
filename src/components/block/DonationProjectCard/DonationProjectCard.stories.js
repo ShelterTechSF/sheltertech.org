@@ -1,6 +1,6 @@
 import React from "react";
 import DonationProjectCard from "./DonationProjectCard";
-import background from "./coralreef.jpg";
+import background from "./SampleImg.png";
 
 export default {
   title: "Block/DonationProjectCard",
@@ -11,7 +11,7 @@ const Template = ({ title, subtitle }) => (
   <div
     style={{
       backgroundImage: `url(${background})`,
-      backgroundSize: "240px 240px",
+      width: "240px",
       backgroundRepeat: "no-repeat",
     }}
   >

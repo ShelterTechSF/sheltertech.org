@@ -2,32 +2,28 @@ import PropTypes from "prop-types";
 import React from "react";
 import s from "./ProgramCard.module.css";
 
-const ProgramCard = ({ photo, title, description }) => (
-  <div className={s["card-container"]}>
-    <div className={s["img-container"]}>
-      <img className={s.img} src={photo} alt="" />
-    </div>
+const ProgramCard = ({ image, alt, title, description }) => (
+  <div className={s.programCardContainer}>
     <div>
-      <div className={s["title-container"]}>
-        <div className={s.title}>{title}</div>
-      </div>
-      <div className={s["description-container"]}>
-        <div className={s.description}>{description}</div>
-      </div>
+      <img className={s.img} src={image} alt={alt} />
     </div>
+    <div className={s.title}>{title}</div>
+    <div className={s.description}>{description}</div>
   </div>
 );
 
 ProgramCard.propTypes = {
-  photo: PropTypes.string,
+  image: PropTypes.string,
+  alt: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
 };
 
 ProgramCard.defaultProps = {
-  photo: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
+  image: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default ProgramCard;

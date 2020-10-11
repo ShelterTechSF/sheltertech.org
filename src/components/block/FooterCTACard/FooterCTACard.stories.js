@@ -6,13 +6,9 @@ export default {
   component: FooterCTACard,
 };
 
-const Template = (args) => (
+const Template = ({ subtitle, body, buttonText }) => (
   <div style={{ backgroundColor: "black", width: "480px" }}>
-    <FooterCTACard
-      subTitle={args.subtitle}
-      body={args.body}
-      buttonText={args.buttonText}
-    />
+    <FooterCTACard subTitle={subtitle} body={body} buttonText={buttonText} />
   </div>
 );
 export const DefaultFooterCTACard = Template.bind({});

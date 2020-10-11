@@ -1,3 +1,7 @@
+.programCardContainer {
+  width: 410px;
+}
+
 .img {
   height: 250px;
   object-fit: cover;

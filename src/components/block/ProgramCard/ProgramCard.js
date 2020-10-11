@@ -3,7 +3,7 @@ import React from "react";
 import s from "./ProgramCard.module.css";
 
 const ProgramCard = ({ image, alt, title, description }) => (
-  <div>
+  <div className={s.programCardContainer}>
     <div>
       <img className={s.img} src={image} alt={alt} />
     </div>

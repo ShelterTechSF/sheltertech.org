@@ -7,13 +7,13 @@ export default {
   component: ProgramCard,
 };
 
-const Template = (args) => (
+const Template = ({ image, alt, title, description }) => (
   <div style={{ width: "410px" }}>
     <ProgramCard
-      image={args.image}
-      alt={args.alt}
-      title={args.title}
-      description={args.description}
+      image={image}
+      alt={alt}
+      title={title}
+      description={description}
     />
   </div>
 );

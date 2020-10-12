@@ -1,6 +1,7 @@
 .container {
   height: 240px;
   display: flex;
+  background-size: cover;
 }
 
 .bottombox {

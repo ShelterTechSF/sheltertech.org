@@ -3,8 +3,8 @@ import React from "react";
 
 import s from "./DonationProjectCard.module.css";
 
-const DonationProjectCard = ({ title, subtitle }) => (
-  <div className={s.container}>
+const DonationProjectCard = ({ title, subtitle, background }) => (
+  <div className={s.container} style= {{ backgroundImage:`url('${background}')` }}> 
     <div className={s.bottombox}>
       <div className={s.bar} />
       <div>
@@ -16,13 +16,13 @@ const DonationProjectCard = ({ title, subtitle }) => (
 );
 
 DonationProjectCard.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  background: PropTypes.string.isRequired
 };
 
 DonationProjectCard.defaultProps = {
-  title: null,
-  subtitle: null
+
 };
 
 export default DonationProjectCard;

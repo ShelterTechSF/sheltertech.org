@@ -13,13 +13,6 @@ const ProgramCard = ({ image, alt, title, description }) => (
 );
 
 ProgramCard.propTypes = {
-  image: PropTypes.string,
-  alt: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-};
-
-ProgramCard.defaultProps = {
   image: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

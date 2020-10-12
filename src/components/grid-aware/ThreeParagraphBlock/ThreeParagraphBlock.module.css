@@ -41,6 +41,18 @@
 .bleedMainContent {
   grid-column: 2;
   grid-row: 1;
+  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    grid-template-columns: 40px 1fr 40px;
+  }
+
+  .bleedBackground {
+    grid-column: 1 / span 3;
+  }
 }
 
 
@@ -54,6 +66,19 @@
   padding-bottom: 100px;
   padding-top: 100px;
   row-gap: 50px;
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.gridParent > * {
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    display: block;
+    padding-bottom: 80px;
+    padding-top: 40px;
+  }
 }
 
 
@@ -114,6 +139,34 @@
   margin-top: 70px;
 }
 
+@media (--tablet-and-down) {
+  .paragraph1Wrapper {
+    margin-top: 30px;
+  }
+
+  .paragraph2Wrapper {
+    margin-top: 30px;
+  }
+
+  .ctaTitleBlock {
+    margin-top: 40px;
+    max-width: 100%;
+  }
+
+  .image1Wrapper {
+    display: none;
+  }
+
+  .image2Wrapper {
+    display: none;
+  }
+
+  .image3Wrapper {
+    margin-top: 40px;
+    overflow: hidden;
+  }
+}
+
 
 /* Title block */
 
@@ -134,6 +187,12 @@
   margin-top: 25px;
 }
 
+@media (--tablet-and-down) {
+  .paragraphDescription {
+    margin-top: 10px;
+  }
+}
+
 
 /* CTA block */
 
@@ -149,4 +208,16 @@
 
 .ctaButtonRowItem:not(:last-child) {
   margin-right: 40px;
+}
+
+@media (--tablet-and-down) {
+  .ctaButtonRow {
+    flex-flow: column;
+    margin-top: 20px;
+  }
+
+  .ctaButtonRowItem:not(:last-child) {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
 }

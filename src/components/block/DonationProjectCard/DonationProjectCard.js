@@ -4,7 +4,10 @@ import React from "react";
 import s from "./DonationProjectCard.module.css";
 
 const DonationProjectCard = ({ title, subtitle, background }) => (
-  <div className={s.container} style= {{ backgroundImage:`url('${background}')` }}> 
+  <div
+    className={s.container}
+    style={{ backgroundImage: `url('${background}')` }}
+  >
     <div className={s.bottombox}>
       <div className={s.bar} />
       <div>
@@ -18,11 +21,7 @@ const DonationProjectCard = ({ title, subtitle, background }) => (
 DonationProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  background: PropTypes.string.isRequired
-};
-
-DonationProjectCard.defaultProps = {
-
+  background: PropTypes.string.isRequired,
 };
 
 export default DonationProjectCard;

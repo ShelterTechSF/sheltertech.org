@@ -1,3 +1,5 @@
+const postcssCustomMedia = require("postcss-custom-media");
+
 module.exports = {
   siteMetadata: {
     title: "ShelterTech - Technology for the underserved",
@@ -18,6 +20,12 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-postcss",
+      options: {
+        postCssPlugins: [postcssCustomMedia],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',

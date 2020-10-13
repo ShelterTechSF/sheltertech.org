@@ -11,6 +11,16 @@ module.exports = {
   },
   overrides: [
     {
+      // Gatsby configuration files
+      files: ["gatsby-config.js"],
+      rules: {
+        "import/no-extraneous-dependencies": [
+          "error",
+          { devDependencies: true },
+        ],
+      },
+    },
+    {
       // Storybook configuration files
       files: [".storybook/**"],
       rules: {

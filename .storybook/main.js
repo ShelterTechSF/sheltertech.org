@@ -1,15 +1,5 @@
 const path = require("path");
-
-/** Common CSS loader configurations */
-const getCSSLoaders = ({ useModules }) => [
-  "style-loader",
-  {
-    loader: "css-loader",
-    options: {
-      modules: useModules,
-    },
-  },
-];
+const postcssCustomMedia = require("postcss-custom-media");
 
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
@@ -48,13 +38,45 @@ module.exports = {
     );
     config.module.rules.push({
       test: /\.module\.css$/,
-      use: getCSSLoaders({ useModules: true }),
+      use: [
+        "style-loader",
+        {
+          loader: "css-loader",
+          options: {
+            importLoaders: 1,
+            modules: true,
+          },
+        },
+        {
+          loader: "postcss-loader",
+          options: {
+            ident: "css-modules-postcss",
+            plugins: [postcssCustomMedia],
+          },
+        },
+      ],
       include: path.resolve(__dirname, "../"),
     });
     config.module.rules.push({
       test: (filePath) =>
         filePath.endsWith(".css") && !filePath.endsWith(".module.css"),
-      use: getCSSLoaders({ useModules: false }),
+      use: [
+        "style-loader",
+        {
+          loader: "css-loader",
+          options: {
+            importLoaders: 1,
+            modules: false,
+          },
+        },
+        {
+          loader: "postcss-loader",
+          options: {
+            ident: "css-no-modules-postcss",
+            plugins: [postcssCustomMedia],
+          },
+        },
+      ],
       include: path.resolve(__dirname, "../"),
     });
 

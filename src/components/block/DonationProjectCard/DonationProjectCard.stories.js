@@ -7,13 +7,13 @@ export default {
   component: DonationProjectCard,
 };
 
-const Template = ({ title, subtitle, background }) => (
-  <div
-    style={{
-      width: "240px",
-    }}
-  >
-    <DonationProjectCard title={title} subtitle={subtitle} background={background} />
+const Template = ({ title, subtitle }) => (
+  <div style={{ width: "240px" }}>
+    <DonationProjectCard
+      title={title}
+      subtitle={subtitle}
+      background={background}
+    />
   </div>
 );
 
@@ -22,5 +22,4 @@ export const DefaultDonationProjectCard = Template.bind({});
 DefaultDonationProjectCard.args = {
   title: "Star Hotel SRO",
   subtitle: "280 People",
-  background: background
 };

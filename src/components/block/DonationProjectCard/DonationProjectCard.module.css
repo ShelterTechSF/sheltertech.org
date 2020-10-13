@@ -1,14 +1,17 @@
 .container {
-  height: 240px;
-  display: flex;
   background-size: cover;
+  color: var(--color-white);
+  display: flex;
+  height: 240px;
 }
 
 .bottombox {
+  align-self: flex-end;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
   height: 72px;
-  align-self: flex-end;
 }
 
 .bar {
@@ -19,12 +22,10 @@
 }
 
 .title {
-  color: var(--color-white);
   font: var(--font-subtitle);
 }
 
 .subtitle {
-  color: var(--color-white);
   font: var(--font-body-small);
 }
 

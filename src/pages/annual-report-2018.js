@@ -1,10 +1,9 @@
 import React from "react";
-
-import HomeView from "../legacy/components/pages/home/HomeView";
+import AnnualReportView from "../legacy/components/pages/annual-report-2018/AnnualReportView";
 import Layout from "../legacy/layouts/Layout";
 
 export default () => (
   <Layout>
-    <HomeView />
+    <AnnualReportView />
   </Layout>
 );

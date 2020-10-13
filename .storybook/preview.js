@@ -30,4 +30,6 @@ window.___navigate = (pathname) => {
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  // If this is left to its default value of 'padded', then it interferes with the mobile views.
+  layout: "fullscreen",
 };

@@ -1,0 +1,27 @@
+.programCardContainer {
+  max-width: 410px;
+}
+
+.light {
+  color: var(--color-black);
+}
+
+.dark {
+  color: var(--color-white);
+}
+
+.img {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.title {
+  font: var(--font-title);
+  margin-top: 20px;
+}
+
+.description {
+  font: var(--font-body-small);
+  margin-top: 10px;
+}

@@ -1,0 +1,8 @@
+.text {
+  font-style: var(--font-family-merriweather);
+  text-align: center;
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 130%;
+  width: 1060px;
+}

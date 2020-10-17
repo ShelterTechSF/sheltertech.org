@@ -18,14 +18,14 @@
 }
 
 .gridAreaLeft {
-  grid-column: 1 / span 6;
   align-content: center;
+  grid-column: 1 / span 6;
 }
 
 .gridAreaRight {
   align-self: center;
-  text-align: center;
   grid-column: 9 / span 1;
+  text-align: center;
 }
 
 .bleedMainContent {
@@ -67,8 +67,8 @@
 /* Play Button block */
 
 .playButton {
-  width: 35px;
   height: 45px;
+  width: 35px;
 }
 
 .playButton:hover {

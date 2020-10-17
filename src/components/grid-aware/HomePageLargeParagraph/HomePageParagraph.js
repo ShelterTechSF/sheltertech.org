@@ -4,28 +4,23 @@ import React from "react";
 import s from "./HomePageParagraph.module.css";
 
 const HomePageParagraphPropType = PropTypes.shape({
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 });
 
 const HomePageParagraphBlock = ({ text }) => (
   <div>
     <p className={s.text}>{text}</p>
   </div>
-)
+);
 
 HomePageParagraphBlock.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-const HomePageParagraph = ({
-  text
-}) => {
-
+const HomePageParagraph = ({ text }) => {
   const GridAreaMiddle = () => (
     <div className={s.gridAreaMiddle}>
-        <HomePageParagraphBlock
-          text={text}
-        />
+      <HomePageParagraphBlock text={text} />
     </div>
   );
 
@@ -45,4 +40,3 @@ HomePageParagraph.propTypes = {
 };
 
 export default HomePageParagraph;
-

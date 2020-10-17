@@ -1,0 +1,76 @@
+/* Background bleed */
+
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+/* Main grid */
+
+.gridParent {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  padding-bottom: 150px;
+  padding-top: 150px;
+}
+
+.gridAreaLeft {
+  grid-column: 1 / span 6;
+  align-content: center;
+}
+
+.gridAreaRight {
+  align-self: center;
+  text-align: center;
+  grid-column: 9 / span 1;
+}
+
+.bleedMainContent {
+  grid-column: 2;
+  grid-row: 1;
+  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+  min-width: 0;
+}
+
+/* Title and Description container */
+
+.textContainer {
+  align-content: center;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title block */
+
+.title {
+  font: var(--font-title);
+  margin: 0;
+}
+
+/* Description block */
+
+.description {
+  font: var(--font-body-medium);
+  margin-top: 25px;
+}
+
+/* Call To Action Buttons block */
+
+.ctaButtonBlock {
+  margin-top: 40px;
+}
+
+/* Play Button block */
+
+.playButton {
+  width: 35px;
+  height: 45px;
+}
+
+.playButton:hover {
+  cursor: pointer;
+}

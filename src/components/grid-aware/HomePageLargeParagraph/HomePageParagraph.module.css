@@ -1,0 +1,10 @@
+.text {
+  font-size: 50px;
+  font-style: var(--font-family-merriweather);
+  font-weight: 300;
+  line-height: 130%;
+  text-align: center;
+  width: 1060px;
+}
+
+

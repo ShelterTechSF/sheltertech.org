@@ -10,12 +10,12 @@
 
 .annual-report h2 {
   color: $color-black;
-  font-size: 3.2rem;
+  font-size: calc-em(3.2 * 15px);
   font-weight: 700;
   line-height: 1.2;
   max-width: 800px;
   @media screen and (max-width: 600px) {
-    font-size: 2.4rem;
+    font-size: calc-em(2.4 * 15px);
     line-height: 1.2;
   }
 }
@@ -40,10 +40,10 @@
   color: $color-brand;
   font-size: 12vw;
   @media screen and (min-width: 1400px) {
-    font-size: 12rem;
+    font-size: calc-em(12 * 15px);
   }
   @media screen and (max-width: 500px) {
-    font-size: 6rem;
+    font-size: calc-em(6 * 15px);
     line-height: 1.2;
   }
 }
@@ -57,11 +57,11 @@
   max-width: 620px;
   width: 90%;
   @media screen and (min-width: 1400px) {
-    font-size: 6rem;
-    line-height: 6.875rem;
+    font-size: calc-em(6 * 15px);
+    line-height: calc-em(6.875 * 15px);
   }
   @media screen and (max-width: 500px) {
-    font-size: 3rem;
+    font-size: calc-em(3 * 15px);
     line-height: 1.2;
   }
 }
@@ -124,24 +124,24 @@
   }
 
   > p {
-    font-size: 1.75rem;
+    font-size: calc-em(1.75 * 15px);
     font-weight: 700;
     @media screen and (max-width: 600px) {
-      font-size: 1.2rem;
+      font-size: calc-em(1.2 * 15px);
       line-height: 1.2;
     }
   }
 
   .goal-number {
     color: $color-brand;
-    font-size: 5.75rem;
+    font-size: calc-em(5.75 * 15px);
     font-weight: 700;
     left: 20px;
     opacity: 0.3;
     position: absolute;
     top: 8px;
     @media screen and (max-width: 600px) {
-      font-size: 4.5rem;
+      font-size: calc-em(4.5 * 15px);
       left: 0;
     }
   }
@@ -202,9 +202,9 @@
 
   .goal-number {
     color: $color-white;
-    font-size: 3.5rem;
+    font-size: calc-em(3.5 * 15px);
     @media screen and (max-width: 600px) {
-      font-size: 3rem;
+      font-size: calc-em(3 * 15px);
     }
   }
 
@@ -240,12 +240,12 @@
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: calc-em(2 * 15px);
     font-weight: 700;
     margin-top: 50px;
     max-width: 700px;
     @media screen and (max-width: 600px) {
-      font-size: 1.75rem;
+      font-size: calc-em(1.75 * 15px);
     }
   }
 }
@@ -283,7 +283,7 @@
 .annual-report--askdarcel-stats li {
   .goal-number {
     color: $color-white;
-    font-size: 2rem;
+    font-size: calc-em(2 * 15px);
     font-weight: 700;
   }
 
@@ -375,10 +375,10 @@
 .annual-report--casey-stats li {
   .goal-number {
     color: $color-white;
-    font-size: 2rem;
+    font-size: calc-em(2 * 15px);
     font-weight: 700;
     @media screen and (max-width: 600px) {
-      font-size: 1.75rem;
+      font-size: calc-em(1.75 * 15px);
     }
   }
 
@@ -397,10 +397,10 @@
     margin-top: 100px;
     width: 50%;
     @media screen and (min-width: 1400px) {
-      font-size: 6rem;
+      font-size: calc-em(6 * 15px);
     }
     @media screen and (max-width: 500px) {
-      font-size: 3rem;
+      font-size: calc-em(3 * 15px);
       line-height: 1.2;
       width: 90%;
     }
@@ -444,10 +444,10 @@
 
   > p {
     color: $color-black;
-    font-size: 1.75rem;
+    font-size: calc-em(1.75 * 15px);
     font-weight: 700;
     @media screen and (max-width: 600px) {
-      font-size: 1.2rem;
+      font-size: calc-em(1.2 * 15px);
     }
   }
 }

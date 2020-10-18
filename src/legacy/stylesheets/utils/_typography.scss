@@ -8,8 +8,7 @@ $font-family-base: 'Lato', 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
 //////////////////////////////////////////////////////////////////////////////////////////
 // FONT STYLES
 
-html,
-body {
+.app {
   color: $color-text;
   font-family: $font-family-base;
   font-size: $font-size;

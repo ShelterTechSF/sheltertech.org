@@ -1,71 +1,80 @@
-.positions h3 {
-  color: #484848;
-  font-weight: bold;
-  margin-top: 80px;
-}
+@import '../../../stylesheets/utils/all';
 
-.positions-list {
-  display: table;
-  flex-direction: column;
-  max-width: 910px;
-  width: 90vw;
-}
+// Disable this because we need to temporarily add extra specificity to all
+// legacy styles in the middle of the site transition. All the legacy styles and
+// code will go away soon.
+/* stylelint-disable max-nesting-depth */
 
-.positions-list--legend {
-  display: table-header-group;
-}
+.app {
+  .positions h3 {
+    color: #484848;
+    font-weight: bold;
+    margin-top: 80px;
+  }
 
-.positions-list--legend p {
-  color: #666;
-  display: table-cell;
-  font-size: 13px;
-  padding: 40px 0 30px;
+  .positions-list {
+    display: table;
+    flex-direction: column;
+    max-width: 910px;
+    width: 90vw;
+  }
 
-  &:first-of-type {
+  .positions-list--legend {
+    display: table-header-group;
+  }
+
+  .positions-list--legend p {
+    color: #666;
+    display: table-cell;
+    font-size: 13px;
+    padding: 40px 0 30px;
+
+    &:first-of-type {
+      width: 33%;
+    }
+  }
+
+  .positions-list--item {
+
+    display: table-row;
+    justify-content: flex-start;
+    margin: 0;
+    width: 100%;
+
+  }
+
+  .positions-list--item--title {
+    border-top: 1px solid #d8d8d8;
+    color: #0025e4;
+    display: table-cell;
+    flex: 0 1 auto;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 40px 30px 35px 0;
     width: 33%;
+
+    &:hover {
+      top: 0;
+    }
   }
-}
 
-.positions-list--item {
+  .positions-list--item--desc {
+    border-top: 1px solid #d8d8d8;
+    color: #666;
+    display: table-cell;
+    flex: 2 1 auto;
+    font-size: 15px;
+    padding: 40px 0 35px;
+    width: 67%;
 
-  display: table-row;
-  justify-content: flex-start;
-  margin: 0;
-  width: 100%;
-
-}
-
-.positions-list--item--title {
-  border-top: 1px solid #d8d8d8;
-  color: #0025e4;
-  display: table-cell;
-  flex: 0 1 auto;
-  font-size: 21px;
-  font-weight: bold;
-  padding: 40px 30px 35px 0;
-  width: 33%;
-
-  &:hover {
-    top: 0;
+    &:hover {
+      top: 0;
+    }
   }
-}
 
-.positions-list--item--desc {
-  border-top: 1px solid #d8d8d8;
-  color: #666;
-  display: table-cell;
-  flex: 2 1 auto;
-  font-size: 15px;
-  padding: 40px 0 35px;
-  width: 67%;
-
-  &:hover {
-    top: 0;
+  .volunteer--contact {
+    margin-top: 40px;
+    max-width: 550px;
+    width: 90vw;
   }
-}
-
-.volunteer--contact {
-  margin-top: 40px;
-  max-width: 550px;
-  width: 90vw;
 }

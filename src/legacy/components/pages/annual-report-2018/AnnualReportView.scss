@@ -1,453 +1,461 @@
 @import '../../../stylesheets/utils/all';
 
-.annual-report {
-  align-items: center;
-  display: flex;
-  flex: 0 0 auto;
-  flex-direction: column;
-  justify-content: space-between;
-}
+// Disable this because we need to temporarily add extra specificity to all
+// legacy styles in the middle of the site transition. All the legacy styles and
+// code will go away soon.
+/* stylelint-disable max-nesting-depth */
+/* stylelint-disable selector-max-compound-selectors */
 
-.annual-report h2 {
-  color: $color-black;
-  font-size: calc-em(3.2 * 15px);
-  font-weight: 700;
-  line-height: 1.2;
-  max-width: 800px;
-  @media screen and (max-width: 600px) {
-    font-size: calc-em(2.4 * 15px);
-    line-height: 1.2;
-  }
-}
-
-.annual-report .blue {
-  color: $color-brand;
-}
-
-.annual-report--overview {
-  padding-bottom: 150px;
-  width: 100%;
-}
-
-.annual-report .wrapper {
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 1200px;
-  width: 90%;
-}
-
-.annual-report--year {
-  color: $color-brand;
-  font-size: 12vw;
-  @media screen and (min-width: 1400px) {
-    font-size: calc-em(12 * 15px);
-  }
-  @media screen and (max-width: 500px) {
-    font-size: calc-em(6 * 15px);
-    line-height: 1.2;
-  }
-}
-
-.annual-report--hero {
-  color: $color-black;
-  font-size: 6vw;
-  letter-spacing: -2px;
-  line-height: 6.875vw;
-  margin-bottom: 50px;
-  max-width: 620px;
-  width: 90%;
-  @media screen and (min-width: 1400px) {
-    font-size: calc-em(6 * 15px);
-    line-height: calc-em(6.875 * 15px);
-  }
-  @media screen and (max-width: 500px) {
-    font-size: calc-em(3 * 15px);
-    line-height: 1.2;
-  }
-}
-
-.annual-report--text {
-  font-size: 18px;
-  line-height: 26px;
-  max-width: 600px;
-  width: 100%;
-}
-
-.annual-report--growth {
-  background-image: url('./assets/team-growth.png');
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 0;
-  margin-top: 60px;
-  padding-bottom: 45%;
-  width: 100%;
-  @media screen and (max-width: 1000px) {
-    padding-bottom: 60%;
-  }
-  @media screen and (max-width: 500px) {
-    padding-bottom: 80%;
-  }
-}
-
-.annual-report--goals {
-  margin-top: 100px;
-  max-width: 950px;
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 60px;
-  }
-}
-
-.annual-report--goals ul {
-  li {
+.app {
+  .annual-report {
     align-items: center;
-    border-top: 1px solid $color-brand;
     display: flex;
-    height: 130px;
-    padding: 0 50px;
-    position: relative;
-    width: 45%;
-    @media screen and (max-width: 600px) {
-      height: 100px;
-      padding: 10px 0 0 20px;
-    }
-  }
-}
-
-.annual-report--goals li {
-  &:nth-last-of-type(-n+2) {
-    border-bottom: 1px solid $color-brand;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  > p {
-    font-size: calc-em(1.75 * 15px);
+  .annual-report h2 {
+    color: $color-black;
+    font-size: calc-em(3.2 * 15px);
     font-weight: 700;
+    line-height: 1.2;
+    max-width: 800px;
     @media screen and (max-width: 600px) {
-      font-size: calc-em(1.2 * 15px);
+      font-size: calc-em(2.4 * 15px);
       line-height: 1.2;
     }
   }
 
-  .goal-number {
+  .annual-report .blue {
     color: $color-brand;
-    font-size: calc-em(5.75 * 15px);
-    font-weight: 700;
-    left: 20px;
-    opacity: 0.3;
-    position: absolute;
-    top: 8px;
-    @media screen and (max-width: 600px) {
-      font-size: calc-em(4.5 * 15px);
-      left: 0;
-    }
-  }
-}
-
-.annual-report--shelterconnect {
-  background: $color-brand;
-  padding: 100px 0;
-  width: 100%;
-
-  img {
-    margin-bottom: 60px;
-    max-width: 400px;
-    width: 90%;
   }
 
-  h2 {
-    margin-top: 60px;
-  }
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 60px;
-    width: 50%;
-    @media screen and (max-width: 600px) {
-      width: 100%;
-    }
-  }
-
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    color: $color-white;
-  }
-}
-
-.annual-report--shelterconnect ul {
-  li {
-    border-top: 1px solid $color-white;
-    display: flex;
-    flex-direction: column;
-    height: 130px;
-    justify-content: center;
-    position: relative;
-    width: 45%;
-  }
-}
-
-.annual-report--shelterconnect li {
-  &:nth-last-of-type(-n+2) {
-    border-bottom: 1px solid $color-white;
-  }
-
-  .goal-number {
-    color: $color-white;
-    font-size: calc-em(3.5 * 15px);
-    @media screen and (max-width: 600px) {
-      font-size: calc-em(3 * 15px);
-    }
-  }
-
-  > p {
-    font-size: 13px;
-    line-height: 1.3;
-  }
-}
-
-.annual-report--askdarcel {
-  background-color: #276ce5;
-  background-image: url('./assets/askdarcel-bg.svg');
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 100px 0;
-  width: 100%;
-
-  img {
-    margin-bottom: 60px;
-    max-width: 300px;
-    width: 90%;
-  }
-
-  p,
-  .white {
-    color: $color-white;
-  }
-
-  h2,
-  h3 {
-    color: rgba(255, 255, 255, 0.6);
-  }
-
-  h3 {
-    font-size: calc-em(2 * 15px);
-    font-weight: 700;
-    margin-top: 50px;
-    max-width: 700px;
-    @media screen and (max-width: 600px) {
-      font-size: calc-em(1.75 * 15px);
-    }
-  }
-}
-
-.annual-report--askdarcel-stats {
-  margin-top: 100px;
-
-  > p {
-    margin-top: 30px;
-  }
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-    width: 40%;
-    @media screen and (max-width: 600px) {
-      width: 100%;
-    }
-  }
-}
-
-.annual-report--askdarcel-stats ul {
-  li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 20px;
-    position: relative;
-    width: 50%;
-  }
-}
-
-.annual-report--askdarcel-stats li {
-  .goal-number {
-    color: $color-white;
-    font-size: calc-em(2 * 15px);
-    font-weight: 700;
-  }
-
-  > p {
-    font-size: 13px;
-    line-height: 1.3;
-  }
-}
-
-.annual-report--casey {
-  background: #008fff;
-  padding: 100px 0;
-  width: 100%;
-  @media screen and (max-width: 600px) {
-    padding: 100px 0 50px;
-  }
-
-  img {
-    margin-bottom: 60px;
-    max-width: 330px;
-    width: 90%;
-  }
-
-  p,
-  h1,
-  h2,
-  h4,
-  h5,
-  .white {
-    color: $color-white;
-  }
-
-  h3 {
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 700;
-    max-width: 480px;
-  }
-
-  h4 {
-    font-weight: 700;
-    margin-top: 50px;
-  }
-
-  .mobile-hide {
-    @media screen and (max-width: 600px) {
-      display: none;
-    }
-  }
-}
-
-.annual-report--casey-stats {
-  margin-top: 50px;
-
-  > p {
-    margin-top: 30px;
-  }
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 10px;
-    width: 70%;
-    @media screen and (max-width: 600px) {
-      width: 100%;
-    }
-  }
-
-  .casey-graph {
-    margin-top: 50px;
-    max-width: 1000px;
+  .annual-report--overview {
+    padding-bottom: 150px;
     width: 100%;
   }
-}
 
-.annual-report--casey-stats ul {
-  li {
-    border-bottom: 1px solid $color-white;
-    display: flex;
+  .annual-report .wrapper {
     flex-direction: column;
-    justify-content: center;
-    margin-top: 20px;
-    padding: 0 0 10px;
-    position: relative;
-    width: 28%;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
   }
-}
 
-.annual-report--casey-stats li {
-  .goal-number {
-    color: $color-white;
-    font-size: calc-em(2 * 15px);
-    font-weight: 700;
-    @media screen and (max-width: 600px) {
-      font-size: calc-em(1.75 * 15px);
+  .annual-report--year {
+    color: $color-brand;
+    font-size: 12vw;
+    @media screen and (min-width: 1400px) {
+      font-size: calc-em(12 * 15px);
+    }
+    @media screen and (max-width: 500px) {
+      font-size: calc-em(6 * 15px);
+      line-height: 1.2;
     }
   }
 
-  > p {
-    font-size: 13px;
-    line-height: 1.3;
-  }
-}
-
-.annual-report--2019 {
-  width: 100%;
-
-  h1 {
-    color: $color-brand;
+  .annual-report--hero {
+    color: $color-black;
     font-size: 6vw;
-    margin-top: 100px;
-    width: 50%;
+    letter-spacing: -2px;
+    line-height: 6.875vw;
+    margin-bottom: 50px;
+    max-width: 620px;
+    width: 90%;
     @media screen and (min-width: 1400px) {
       font-size: calc-em(6 * 15px);
+      line-height: calc-em(6.875 * 15px);
     }
     @media screen and (max-width: 500px) {
       font-size: calc-em(3 * 15px);
       line-height: 1.2;
-      width: 90%;
     }
   }
 
   .annual-report--text {
-    margin-top: 30px;
-  }
-}
-
-
-.annual-report--2019-goals {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 60px;
-  width: 80%;
-  @media screen and (max-width: 600px) {
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 600px;
     width: 100%;
   }
 
-  li {
-    align-items: center;
-    border-top: 1px solid $color-brand;
-    display: flex;
-    height: 130px;
-    padding: 0 15% 0 0;
-    position: relative;
-    width: 45%;
-  }
-}
-
-.annual-report--2019-goals li {
-  @media screen and (max-width: 600px) {
-    padding: 10px 0;
-  }
-
-  &:nth-last-of-type(-n+2) {
-    border-bottom: 1px solid $color-brand;
+  .annual-report--growth {
+    background-image: url('./assets/team-growth.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 0;
+    margin-top: 60px;
+    padding-bottom: 45%;
+    width: 100%;
+    @media screen and (max-width: 1000px) {
+      padding-bottom: 60%;
+    }
+    @media screen and (max-width: 500px) {
+      padding-bottom: 80%;
+    }
   }
 
-  > p {
-    color: $color-black;
-    font-size: calc-em(1.75 * 15px);
-    font-weight: 700;
+  .annual-report--goals {
+    margin-top: 100px;
+    max-width: 950px;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 60px;
+    }
+  }
+
+  .annual-report--goals ul {
+    li {
+      align-items: center;
+      border-top: 1px solid $color-brand;
+      display: flex;
+      height: 130px;
+      padding: 0 50px;
+      position: relative;
+      width: 45%;
+      @media screen and (max-width: 600px) {
+        height: 100px;
+        padding: 10px 0 0 20px;
+      }
+    }
+  }
+
+  .annual-report--goals li {
+    &:nth-last-of-type(-n+2) {
+      border-bottom: 1px solid $color-brand;
+    }
+
+    > p {
+      font-size: calc-em(1.75 * 15px);
+      font-weight: 700;
+      @media screen and (max-width: 600px) {
+        font-size: calc-em(1.2 * 15px);
+        line-height: 1.2;
+      }
+    }
+
+    .goal-number {
+      color: $color-brand;
+      font-size: calc-em(5.75 * 15px);
+      font-weight: 700;
+      left: 20px;
+      opacity: 0.3;
+      position: absolute;
+      top: 8px;
+      @media screen and (max-width: 600px) {
+        font-size: calc-em(4.5 * 15px);
+        left: 0;
+      }
+    }
+  }
+
+  .annual-report--shelterconnect {
+    background: $color-brand;
+    padding: 100px 0;
+    width: 100%;
+
+    img {
+      margin-bottom: 60px;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h2 {
+      margin-top: 60px;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 60px;
+      width: 50%;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $color-white;
+    }
+  }
+
+  .annual-report--shelterconnect ul {
+    li {
+      border-top: 1px solid $color-white;
+      display: flex;
+      flex-direction: column;
+      height: 130px;
+      justify-content: center;
+      position: relative;
+      width: 45%;
+    }
+  }
+
+  .annual-report--shelterconnect li {
+    &:nth-last-of-type(-n+2) {
+      border-bottom: 1px solid $color-white;
+    }
+
+    .goal-number {
+      color: $color-white;
+      font-size: calc-em(3.5 * 15px);
+      @media screen and (max-width: 600px) {
+        font-size: calc-em(3 * 15px);
+      }
+    }
+
+    > p {
+      font-size: 13px;
+      line-height: 1.3;
+    }
+  }
+
+  .annual-report--askdarcel {
+    background-color: #276ce5;
+    background-image: url('./assets/askdarcel-bg.svg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 100px 0;
+    width: 100%;
+
+    img {
+      margin-bottom: 60px;
+      max-width: 300px;
+      width: 90%;
+    }
+
+    p,
+    .white {
+      color: $color-white;
+    }
+
+    h2,
+    h3 {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    h3 {
+      font-size: calc-em(2 * 15px);
+      font-weight: 700;
+      margin-top: 50px;
+      max-width: 700px;
+      @media screen and (max-width: 600px) {
+        font-size: calc-em(1.75 * 15px);
+      }
+    }
+  }
+
+  .annual-report--askdarcel-stats {
+    margin-top: 100px;
+
+    > p {
+      margin-top: 30px;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 20px;
+      width: 40%;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .annual-report--askdarcel-stats ul {
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 20px;
+      position: relative;
+      width: 50%;
+    }
+  }
+
+  .annual-report--askdarcel-stats li {
+    .goal-number {
+      color: $color-white;
+      font-size: calc-em(2 * 15px);
+      font-weight: 700;
+    }
+
+    > p {
+      font-size: 13px;
+      line-height: 1.3;
+    }
+  }
+
+  .annual-report--casey {
+    background: #008fff;
+    padding: 100px 0;
+    width: 100%;
     @media screen and (max-width: 600px) {
-      font-size: calc-em(1.2 * 15px);
+      padding: 100px 0 50px;
+    }
+
+    img {
+      margin-bottom: 60px;
+      max-width: 330px;
+      width: 90%;
+    }
+
+    p,
+    h1,
+    h2,
+    h4,
+    h5,
+    .white {
+      color: $color-white;
+    }
+
+    h3 {
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 700;
+      max-width: 480px;
+    }
+
+    h4 {
+      font-weight: 700;
+      margin-top: 50px;
+    }
+
+    .mobile-hide {
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+    }
+  }
+
+  .annual-report--casey-stats {
+    margin-top: 50px;
+
+    > p {
+      margin-top: 30px;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 10px;
+      width: 70%;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+
+    .casey-graph {
+      margin-top: 50px;
+      max-width: 1000px;
+      width: 100%;
+    }
+  }
+
+  .annual-report--casey-stats ul {
+    li {
+      border-bottom: 1px solid $color-white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 20px;
+      padding: 0 0 10px;
+      position: relative;
+      width: 28%;
+    }
+  }
+
+  .annual-report--casey-stats li {
+    .goal-number {
+      color: $color-white;
+      font-size: calc-em(2 * 15px);
+      font-weight: 700;
+      @media screen and (max-width: 600px) {
+        font-size: calc-em(1.75 * 15px);
+      }
+    }
+
+    > p {
+      font-size: 13px;
+      line-height: 1.3;
+    }
+  }
+
+  .annual-report--2019 {
+    width: 100%;
+
+    h1 {
+      color: $color-brand;
+      font-size: 6vw;
+      margin-top: 100px;
+      width: 50%;
+      @media screen and (min-width: 1400px) {
+        font-size: calc-em(6 * 15px);
+      }
+      @media screen and (max-width: 500px) {
+        font-size: calc-em(3 * 15px);
+        line-height: 1.2;
+        width: 90%;
+      }
+    }
+
+    .annual-report--text {
+      margin-top: 30px;
+    }
+  }
+
+
+  .annual-report--2019-goals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+    width: 80%;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+
+    li {
+      align-items: center;
+      border-top: 1px solid $color-brand;
+      display: flex;
+      height: 130px;
+      padding: 0 15% 0 0;
+      position: relative;
+      width: 45%;
+    }
+  }
+
+  .annual-report--2019-goals li {
+    @media screen and (max-width: 600px) {
+      padding: 10px 0;
+    }
+
+    &:nth-last-of-type(-n+2) {
+      border-bottom: 1px solid $color-brand;
+    }
+
+    > p {
+      color: $color-black;
+      font-size: calc-em(1.75 * 15px);
+      font-weight: 700;
+      @media screen and (max-width: 600px) {
+        font-size: calc-em(1.2 * 15px);
+      }
     }
   }
 }

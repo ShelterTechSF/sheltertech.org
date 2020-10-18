@@ -1,6 +1,11 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 // TYPEFACES
 
+// Disable this because we need to temporarily add extra specificity to all
+// legacy styles in the middle of the site transition. All the legacy styles and
+// code will go away soon.
+/* stylelint-disable max-nesting-depth */
+
 @import url('https://fonts.googleapis.com/css?family=Lato:300i,300,400,700');
 
 $font-family-base: 'Lato', 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
@@ -17,120 +22,122 @@ $font-family-base: 'Lato', 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
   word-wrap: break-word;
 }
 
-h1 {
-  color: $color-brand;
-  font-size: calc-em(72px);
-  hyphens: auto;
-  line-height: 1.1;
-  @include r_min_max($screen-xs, $screen-md) {
-    font-size: calc-em(60px);
+.app {
+  h1 {
+    color: $color-brand;
+    font-size: calc-em(72px);
+    hyphens: auto;
+    line-height: 1.1;
+    @include r_min_max($screen-xs, $screen-md) {
+      font-size: calc-em(60px);
+    }
+    @include r_max($screen-xs) {
+      font-size: calc-em(48px);
+    }
   }
-  @include r_max($screen-xs) {
-    font-size: calc-em(48px);
-  }
-}
 
-h2 {
-  color: $color-brand;
-  font-size: calc-em(50px);
-  font-weight: 300;
-  @include r_min_max($screen-xs, $screen-md) {
-    font-size: calc-em(42px);
+  h2 {
+    color: $color-brand;
+    font-size: calc-em(50px);
+    font-weight: 300;
+    @include r_min_max($screen-xs, $screen-md) {
+      font-size: calc-em(42px);
+    }
+    @include r_max($screen-xs) {
+      font-size: calc-em(36px);
+    }
   }
-  @include r_max($screen-xs) {
-    font-size: calc-em(36px);
-  }
-}
 
-h3 {
-  font-size: calc-em(28px);
-  @include r_min_max($screen-xs, $screen-md) {
-    font-size: calc-em(24px);
+  h3 {
+    font-size: calc-em(28px);
+    @include r_min_max($screen-xs, $screen-md) {
+      font-size: calc-em(24px);
+    }
+    @include r_max($screen-xs) {
+      font-size: calc-em(21px);
+    }
   }
-  @include r_max($screen-xs) {
+
+  h4 {
+    color: $color-brand;
     font-size: calc-em(21px);
+    @include r_min_max($screen-xs, $screen-md) {
+      font-size: calc-em(16px);
+    }
+    @include r_max($screen-xs) {
+      font-size: calc-em(15px);
+    }
   }
-}
 
-h4 {
-  color: $color-brand;
-  font-size: calc-em(21px);
-  @include r_min_max($screen-xs, $screen-md) {
-    font-size: calc-em(16px);
-  }
-  @include r_max($screen-xs) {
+  h5 {
     font-size: calc-em(15px);
+    @include r_min_max($screen-xs, $screen-md) {
+      font-size: calc-em(14px);
+    }
+    @include r_max($screen-xs) {
+      font-size: calc-em(13px);
+    }
   }
-}
 
-h5 {
-  font-size: calc-em(15px);
-  @include r_min_max($screen-xs, $screen-md) {
-    font-size: calc-em(14px);
+  p {
+    font-size: calc-em(15px);
+    margin-bottom: 10px;
+    @include r_min_max($screen-xs, $screen-md) {
+      font-size: calc-em(14px);
+    }
+    @include r_max($screen-xs) {
+      font-size: calc-em(13px);
+    }
   }
-  @include r_max($screen-xs) {
+
+  small {
     font-size: calc-em(13px);
+    @include r_min_max($screen-xs, $screen-md) {
+      font-size: calc-em(12px);
+    }
+    @include r_max($screen-xs) {
+      font-size: calc-em(12px);
+    }
   }
-}
 
-p {
-  font-size: calc-em(15px);
-  margin-bottom: 10px;
-  @include r_min_max($screen-xs, $screen-md) {
-    font-size: calc-em(14px);
+  a {
+    @include transition(all 0.2s);
+    color: $color-brand;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      position: relative;
+      top: 1px;
+    }
   }
-  @include r_max($screen-xs) {
-    font-size: calc-em(13px);
+
+  em {
+    font-style: italic;
   }
-}
 
-small {
-  font-size: calc-em(13px);
-  @include r_min_max($screen-xs, $screen-md) {
-    font-size: calc-em(12px);
+  strong {
+    font-weight: 700;
   }
-  @include r_max($screen-xs) {
-    font-size: calc-em(12px);
+
+  button {
+    cursor: pointer;
+    font-family: $font-family-base;
   }
-}
 
-a {
-  @include transition(all 0.2s);
-  color: $color-brand;
-  cursor: pointer;
-  text-decoration: none;
-
-  &:hover {
-    position: relative;
-    top: 1px;
+  textarea,
+  input {
+    font-family: $font-family-base;
   }
-}
+  %hide-text {
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+  }
 
-em {
-  font-style: italic;
-}
-
-strong {
-  font-weight: 700;
-}
-
-button {
-  cursor: pointer;
-  font-family: $font-family-base;
-}
-
-textarea,
-input {
-  font-family: $font-family-base;
-}
-%hide-text {
-  display: inline-block;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-}
-
-::selection {
-  background: transparentize($color-brand-light, 0.4);
-  color: $color-white;
+  ::selection {
+    background: transparentize($color-brand-light, 0.4);
+    color: $color-white;
+  }
 }

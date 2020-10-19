@@ -15,7 +15,7 @@ export default {
   component: Button,
 };
 
-const Template = ({ text, externalLink, internalLink, onClick}) => (
+const Template = ({ text, externalLink, internalLink, onClick }) => (
   <div style={demoStyling}>
     <Button
       text={text}

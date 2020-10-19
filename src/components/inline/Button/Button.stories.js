@@ -15,37 +15,36 @@ export default {
   component: Button,
 };
 
-const Template = ({ button }) => (
+const Template = ({ text, externalLink, internalLink, onClick}) => (
   <div style={demoStyling}>
-    <Button button={button} />
+    <Button
+      text={text}
+      externalLink={externalLink}
+      internalLink={internalLink}
+      onClick={onClick}
+    />
   </div>
 );
 
 export const ExternalLink = Template.bind({});
 ExternalLink.args = {
-  button: {
-    text: "External Link",
-    externalLink: "https://www.google.com",
-  },
+  text: "External Link",
+  externalLink: "https://www.google.com",
 };
 
 export const InternalLink = Template.bind({});
 InternalLink.args = {
-  button: {
-    text: "Internal Link",
-    internalLink: "/",
-  },
+  text: "Internal Link",
+  internalLink: "/",
 };
 
 export const OnClickButton = Template.bind({});
 OnClickButton.args = {
-  button: {
-    text: "On Click",
-    onClick: (event) => {
-      // eslint-disable-next-line no-console
-      console.log("Modal, Dialogue or Popup");
-      // eslint-disable-next-line no-console
-      console.log(`event is ${event}`);
-    },
+  text: "On Click",
+  onClick: (event) => {
+    // eslint-disable-next-line no-console
+    console.log("Modal, Dialogue or Popup");
+    // eslint-disable-next-line no-console
+    console.log(`event is ${event}`);
   },
 };

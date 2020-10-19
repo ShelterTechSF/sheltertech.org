@@ -4,14 +4,14 @@
 }
 
 .bleedWrapper {
-  display: grid;
   align-items: center;
+  display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   grid-template-rows: auto 0;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
-  padding-top: 120px;
   padding-bottom: 120px;
+  padding-top: 120px;
 }
 
 .bleedMainContent {

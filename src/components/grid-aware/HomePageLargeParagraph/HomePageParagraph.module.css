@@ -1,50 +1,17 @@
 .text {
-  font-size: 50px;
-  font-style: var(--font-family-merriweather);
-  font-weight: 300;
-  line-height: 130%;
+  font: var(--font-headline);
   text-align: center;
-  width: 1060px;
 }
-
-/** Three-Paragraph Block
- *
- * This component makes use of a few advanced techniques to achieve a
- * magazine-style layout that involves sections that break out of grid as well
- * as backgrounds that can bleed out of the grid to either side.
- *
- * It consists of two, unaligned layers of grids, where the outer grid is solely
- * used for the background bleed and the inner grid is aligned to the main,
- * 12-column grid of the site.
- *
- * The background bleed is accomplished by manually positioning a background div
- * and the inner grid content such that they are overlapping, but where the
- * backgrid div spans the left margin area and the center area while the inner
- * grid content only spans the center area.
- *
- * The inner grid is set up with our standard 12-column grid, where elements are
- * placed along the grid, but the image elements are relatively positioned to
- * break out of the grid.
- *
- * https://en.wikipedia.org/wiki/Bleed_(printing)
- * https://mastery.games/post/overlapping-grid-items/
- */
-
-
-/* Background bleed */
 
 .bleedWrapper {
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   grid-template-rows: auto 0;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
-}
-
-.bleedBackground {
-  background: var(--color-gray-300);
-  grid-column: 1 / span 2;
-  grid-row: 1 / -1;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .bleedMainContent {
@@ -58,163 +25,10 @@
   .bleedWrapper {
     grid-template-columns: 40px 1fr 40px;
   }
-
-  .bleedBackground {
-    grid-column: 1 / span 3;
-  }
 }
-
-
-/* Main grid */
-
-.gridParent {
-  column-gap: var(--grid-column-gap);
-  display: grid;
-  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
-  grid-template-rows: repeat(2, auto);
-  padding-bottom: 100px;
-  padding-top: 100px;
-  row-gap: 50px;
-}
-
-/* Override grid item default of auto so that item contents cannot stretch the grid itself */
-.gridParent > * {
-  min-width: 0;
-}
-
-@media (--tablet-and-down) {
-  .gridParent {
-    display: block;
-    padding-bottom: 80px;
-    padding-top: 40px;
-  }
-}
-
 
 /* Main grid areas */
 
-.gridAreaLeft {
-  grid-column: 1 / span 4;
-  grid-row: 1 / -1;
-}
-
 .gridAreaMiddle {
-  grid-column: 5 / span 3;
-  grid-row: 1;
-}
-
-.gridAreaRight {
-  grid-column: 9 / span 3;
-  grid-row: 1;
-}
-
-.gridAreaBottom {
-  grid-column: 5 / span 8;
-  grid-row: 2;
-}
-
-
-/* Component wrappers */
-
-.paragraph1Wrapper {
-  margin-top: 25px;
-}
-
-.paragraph2Wrapper {
-  margin-top: 50px;
-}
-
-.paragraph3Wrapper {
-  margin-top: 25px;
-}
-
-.ctaTitleBlock {
-  max-width: 425px;
-}
-
-.image1Wrapper {
-  margin-top: 135px;
-  position: relative;
-  right: 75px;
-}
-
-.image2Wrapper {
-  left: 30px;
-  margin-top: 40px;
-  position: relative;
-}
-
-.image3Wrapper {
-  margin-top: 70px;
-}
-
-@media (--tablet-and-down) {
-  .paragraph1Wrapper {
-    margin-top: 30px;
-  }
-
-  .paragraph2Wrapper {
-    margin-top: 30px;
-  }
-
-  .ctaTitleBlock {
-    margin-top: 40px;
-    max-width: 100%;
-  }
-
-  .image1Wrapper {
-    display: none;
-  }
-
-  .image2Wrapper {
-    display: none;
-  }
-
-  .image3Wrapper {
-    margin-top: 40px;
-    overflow: hidden;
-  }
-}
-
-
-/* Title block */
-
-.title {
-  font: var(--font-headline);
-  margin: 0;
-}
-
-
-/* Paragraph block */
-
-.paragraphTitle {
-  font: var(--font-subtitle);
-}
-
-.paragraphDescription {
-  font: var(--font-body-medium);
-  margin-top: 25px;
-}
-
-@media (--tablet-and-down) {
-  .paragraphDescription {
-    margin-top: 10px;
-  }
-}
-
-
-/* CTA block */
-
-.ctaTitle {
-  font: var(--font-title);
-}
-
-.ctaButtonRow {
-  margin-top: 40px;
-}
-
-@media (--tablet-and-down) {
-  .ctaButtonRow {
-    margin-top: 20px;
-  }
+  grid-column: 2;
 }

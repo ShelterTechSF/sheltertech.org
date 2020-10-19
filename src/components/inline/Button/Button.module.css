@@ -4,9 +4,11 @@
   color: var(--color-white);
   cursor: pointer;
   font: var(--font-action);
+  display: inline-block;
   line-height: 1.5;
   outline: none;
   padding: 16px 40px;
+  text-decoration: none;
   text-transform: uppercase;
 }
 

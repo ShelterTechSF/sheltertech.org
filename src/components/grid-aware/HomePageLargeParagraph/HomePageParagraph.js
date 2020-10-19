@@ -3,7 +3,6 @@ import React from "react";
 
 import s from "./HomePageParagraph.module.css";
 
-
 const HomePageParagraph = ({ text }) => {
   const GridAreaMiddle = () => (
     <div className={s.gridAreaMiddle}>

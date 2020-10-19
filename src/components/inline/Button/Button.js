@@ -4,36 +4,36 @@ import React from "react";
 
 import s from "./Button.module.css";
 
-const Button = ({ button }) => {
-  if (button.externalLink) {
+const Button = ({ text, externalLink, internalLink, onClick }) => {
+  if (externalLink) {
     return (
       <a
         rel="noreferrer"
         target="_blank"
-        href={button.externalLink}
+        href={externalLink}
         className={s.button}
       >
-        {button.text}
+        {text}
       </a>
     );
   }
-  if (button.internalLink) {
+  if (internalLink) {
     return (
-      <Link to={button.internalLink} className={s.button}>
-        {button.text}
+      <Link to={internalLink} className={s.button}>
+        {text}
       </Link>
     );
   }
-  if (button.onClick) {
+  if (onClick) {
     return (
       <button
         type="button"
         className={s.button}
         onClick={(event) => {
-          button.onClick(event);
+          onClick(event);
         }}
       >
-        {button.text}
+        {text}
       </button>
     );
   }

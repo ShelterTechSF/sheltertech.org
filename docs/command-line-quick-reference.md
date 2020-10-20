@@ -68,3 +68,16 @@ specific. The commands are:
 - `stylelint` - Check, but do not fix, CSS lint issues
 - `eslint:fix` - Automatically fix JavaScript lint issues
 - `eslint` - Check, but do not fix, JavaScript lint issues
+
+### Run tests
+
+```sh
+$ npm run test
+```
+
+This command will currently run the
+[Storybook StoryShots](https://storybook.js.org/docs/react/workflows/snapshot-testing)
+tests in
+[render-only mode](https://github.com/storybookjs/storybook/blob/v6.0.26/addons/storyshots/storyshots-core/README.md#renderonly).
+We do this just to get basic testing for things like prop-types checking for all
+Storybook stories than using the actual snapshot testing functionality.

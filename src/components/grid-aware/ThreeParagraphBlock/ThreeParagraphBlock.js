@@ -19,6 +19,7 @@ const ImagePropType = PropTypes.shape({
 
 const CTAButtonPropType = PropTypes.shape({
   text: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
 });
 
 /* Subcomponents */
@@ -42,8 +43,8 @@ const CTABlock = ({ title, buttons }) => (
     </div>
     <div className={s.ctaButtonRow}>
       {buttons.map((button) => (
-        <div className={s.ctaButtonRowItem}>
-          <Button key={button.text}>{button.text}</Button>
+        <div className={s.ctaButtonRowItem} key={button.text}>
+          <Button text={button.text} internalLink={button.link} />
         </div>
       ))}
     </div>

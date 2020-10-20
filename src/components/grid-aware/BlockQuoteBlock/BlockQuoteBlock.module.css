@@ -1,33 +1,34 @@
 .bleedWrapper {
-  display: grid;
   background: var(--color-gray-300);
+  display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   grid-template-rows: auto 0;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
   padding-bottom: 120px;
   padding-top: 120px;
-  }
-  .bleedMainContent {
+}
+
+.bleedMainContent {
   grid-column: 2;
   grid-row: 1;
   /* Override grid item default of auto so that item contents cannot stretch the grid itself */
   min-width: 0;
-  }
-  @media (--tablet-and-down) {
+}
+@media (--tablet-and-down) {
   .bleedWrapper {
-  grid-template-columns: 40px 1fr 40px;
+    grid-template-columns: 40px 1fr 40px;
   }
-  }
-  /* Main grid areas */
-  .gridAreaMiddle {
+}
+/* Main grid areas */
+.gridAreaMiddle {
   grid-column: 2;
-  }
-  .quote {
+}
+
+.quote {
   font: var(--font-body-medium);
-  }
-  .author {
+}
+
+.author {
   font: var(--font-caption);
-  }
-  
-  
+}

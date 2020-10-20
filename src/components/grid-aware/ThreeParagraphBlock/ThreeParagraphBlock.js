@@ -42,8 +42,8 @@ const CTABlock = ({ title, buttons }) => (
     </div>
     <div className={s.ctaButtonRow}>
       {buttons.map((button) => (
-        <div className={s.ctaButtonRowItem}>
-          <Button key={button.text}>{button.text}</Button>
+        <div key={button.text} className={s.ctaButtonRowItem}>
+          <Button>{button.text}</Button>
         </div>
       ))}
     </div>

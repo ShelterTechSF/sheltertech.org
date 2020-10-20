@@ -39,5 +39,19 @@ module.exports = {
         "react/prop-types": ["error", { skipUndeclared: true }],
       },
     },
+    {
+      // Jest
+      files: ["__mocks__/**", "jest/**"],
+      rules: {
+        "import/no-extraneous-dependencies": [
+          "error",
+          { devDependencies: true },
+        ],
+      },
+      env: {
+        // Jest injects itself as a varibable in test files
+        jest: true,
+      },
+    },
   ],
 };

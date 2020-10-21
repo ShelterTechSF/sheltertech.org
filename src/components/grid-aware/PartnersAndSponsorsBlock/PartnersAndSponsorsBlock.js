@@ -3,22 +3,34 @@ import React from "react";
 
 import s from "./PartnersAndSponsorsBlock.module.css";
 
-const ImagePropType = PropTypes.shape({
+/* PropType shapes */
+
+const LogoPropType = PropTypes.shape({
   url: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
 });
 
-const PartnersAndSponsorsBlock = ({
-  title,
-  mohcdLogo,
-  justiceAndDiversityCenterLogo,
-  benetechLogo,
-  larkinStreetLogo,
-  sfFamiliesLogo,
-  ciscoLogo,
-  pagerdutyLogo,
-  uberLogo,
-}) => {
+/* Subcomponent */
+
+const LogosBlock = ({ logoImages }) => (
+  <div>
+    <div className={s.logoImagesRow}>
+      {logoImages.map((logo) => (
+        <div className={s.logoImagesRowItem}>
+          <img key={1} src={logo.url} alt={logo.alt} />
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+LogosBlock.propTypes = {
+  logoImages: PropTypes.arrayOf(LogoPropType).isRequired,
+};
+
+/* Main component */
+
+const PartnersAndSponsorsBlock = ({ title, partnersAndSponsors }) => {
   const GridAreaLeft = () => (
     <div className={s.gridAreaLeft}>
       <h1 className={s.title}>{title}</h1>
@@ -27,19 +39,7 @@ const PartnersAndSponsorsBlock = ({
 
   const GridAreaRight = () => (
     <div className={s.gridAreaRight}>
-      <div>
-        <img src={mohcdLogo.url} alt={mohcdLogo.alt} />
-        <img
-          src={justiceAndDiversityCenterLogo.url}
-          alt={justiceAndDiversityCenterLogo.alt}
-        />
-        <img src={benetechLogo.url} alt={benetechLogo.alt} />
-        <img src={larkinStreetLogo.url} alt={larkinStreetLogo.alt} />
-        <img src={sfFamiliesLogo.url} alt={sfFamiliesLogo.alt} />
-        <img src={ciscoLogo.url} alt={ciscoLogo.alt} />
-        <img src={pagerdutyLogo.url} alt={pagerdutyLogo.alt} />
-        <img src={uberLogo.url} alt={uberLogo.alt} />
-      </div>
+      <LogosBlock logoImages={partnersAndSponsors} />
     </div>
   );
 
@@ -55,14 +55,7 @@ const PartnersAndSponsorsBlock = ({
 
 PartnersAndSponsorsBlock.propTypes = {
   title: PropTypes.string.isRequired,
-  mohcdLogo: ImagePropType.isRequired,
-  justiceAndDiversityCenterLogo: ImagePropType.isRequired,
-  benetechLogo: ImagePropType.isRequired,
-  larkinStreetLogo: ImagePropType.isRequired,
-  sfFamiliesLogo: ImagePropType.isRequired,
-  ciscoLogo: ImagePropType.isRequired,
-  pagerdutyLogo: ImagePropType.isRequired,
-  uberLogo: ImagePropType.isRequired,
+  partnersAndSponsors: PropTypes.arrayOf(LogoPropType).isRequired,
 };
 
 export default PartnersAndSponsorsBlock;

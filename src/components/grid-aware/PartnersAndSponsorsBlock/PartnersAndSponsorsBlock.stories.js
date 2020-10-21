@@ -39,7 +39,7 @@ DefaultPartnersAndSponsorsBlock.args = {
       alt: "Justice and Diversity Center logo.",
     },
     { id: 3, url: benetechLogo, alt: "Benetech logo." },
-    { id: 4, url: larkinStreetLogo, alt: "Larkin Street logo." },
+    { id: 4, url: larkinStreetLogo, alt: "Larkin Street Youth Services logo." },
     { id: 5, url: sfFamiliesLogo, alt: "SF Families logo." },
     { id: 6, url: ciscoLogo, alt: "Cisco logo." },
     { id: 7, url: pagerdutyLogo, alt: "PagerDuty logo." },

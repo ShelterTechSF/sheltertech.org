@@ -20,13 +20,8 @@ const PartnersAndSponsorsBlock = ({ title, partnersAndSponsors }) => {
     <div className={s.gridAreaRight}>
       <div className={s.logosWrapper}>
         {partnersAndSponsors.map((logo) => (
-          <div className={s.logoContainer}>
-            <img
-              className={s.logo}
-              key={logo.key}
-              src={logo.url}
-              alt={logo.alt}
-            />
+          <div className={s.logoContainer} key={logo.key}>
+            <img className={s.logo} src={logo.url} alt={logo.alt} />
           </div>
         ))}
       </div>

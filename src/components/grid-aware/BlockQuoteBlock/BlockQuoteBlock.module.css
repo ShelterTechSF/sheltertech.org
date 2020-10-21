@@ -15,12 +15,15 @@
   /* Override grid item default of auto so that item contents cannot stretch the grid itself */
   min-width: 0;
 }
+
 @media (--tablet-and-down) {
   .bleedWrapper {
     grid-template-columns: 40px 1fr 40px;
   }
 }
+
 /* Main grid areas */
+  
 .gridAreaMiddle {
   grid-column: 2;
 }
@@ -32,3 +35,5 @@
 .author {
   font: var(--font-caption);
 }
+  
+

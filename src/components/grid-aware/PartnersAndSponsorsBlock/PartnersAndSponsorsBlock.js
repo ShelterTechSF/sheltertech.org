@@ -4,7 +4,7 @@ import React from "react";
 import s from "./PartnersAndSponsorsBlock.module.css";
 
 const LogoPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
+  key: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
 });
@@ -23,7 +23,7 @@ const PartnersAndSponsorsBlock = ({ title, partnersAndSponsors }) => {
           <div className={s.logoContainer}>
             <img
               className={s.logo}
-              key={logo.id}
+              key={logo.key}
               src={logo.url}
               alt={logo.alt}
             />

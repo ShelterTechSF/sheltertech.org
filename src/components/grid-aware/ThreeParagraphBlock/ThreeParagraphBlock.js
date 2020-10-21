@@ -17,11 +17,6 @@ const ImagePropType = PropTypes.shape({
   alt: PropTypes.string.isRequired,
 });
 
-const CTAButtonPropType = PropTypes.shape({
-  text: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
-});
-
 /* Subcomponents */
 
 const ParagraphBlock = ({ title, description }) => (
@@ -42,9 +37,9 @@ const CTABlock = ({ title, buttons }) => (
       <div className={s.ctaTitle}>{title}</div>
     </div>
     <div className={s.ctaButtonRow}>
-      {buttons.map((button) => (
-        <div className={s.ctaButtonRowItem} key={button.text}>
-          <Button text={button.text} internalLink={button.link} />
+      {buttons.map(({ text, internalLink, externalLink, onClick }) => (
+        <div className={s.ctaButtonRowItem} key={text}>
+          <Button {...{ text, internalLink, externalLink, onClick }} />
         </div>
       ))}
     </div>
@@ -53,7 +48,7 @@ const CTABlock = ({ title, buttons }) => (
 
 CTABlock.propTypes = {
   title: PropTypes.string.isRequired,
-  buttons: PropTypes.arrayOf(CTAButtonPropType).isRequired,
+  buttons: PropTypes.arrayOf(Button.propTypes).isRequired,
 };
 
 /* Main component */
@@ -142,7 +137,7 @@ ThreeParagraphBlock.propTypes = {
   image2: ImagePropType.isRequired,
   image3: ImagePropType.isRequired,
   ctaTitle: PropTypes.string.isRequired,
-  ctaButtons: PropTypes.arrayOf(CTAButtonPropType).isRequired,
+  ctaButtons: PropTypes.arrayOf(Button.propTypes).isRequired,
 };
 
 export default ThreeParagraphBlock;

@@ -32,35 +32,39 @@ DefaultPartnersAndSponsorsBlock.args = {
       id: 1,
       url: mohcdLogo,
       alt:
-        "Mayor's Office of Housing and Community Development organization logo.",
+        "Logo of Mayor's Office of Housing and Community Development organization.",
     },
     {
       id: 2,
       url: justiceAndDiversityCenterLogo,
       alt:
-        "Justice and Diversity Center of The Bar Association of San Francisco organization logo.",
+        "Logo of Justice and Diversity Center of The Bar Association of San Francisco organization.",
     },
-    { id: 3, url: benetechLogo, alt: "Benetech nonprofit organization logo." },
+    {
+      id: 3,
+      url: benetechLogo,
+      alt: "Logo of Benetech nonprofit organization.",
+    },
     {
       id: 4,
       url: larkinStreetLogo,
-      alt: "Larkin Street Youth Services nonprofit organization logo.",
+      alt: "Logo of Larkin Street Youth Services nonprofit organization.",
     },
     {
       id: 5,
       url: sfFamiliesLogo,
-      alt: "SF Families online public service directory organization logo.",
+      alt: "Logo of SF Families online public service directory organization.",
     },
     {
       id: 6,
       url: ciscoLogo,
-      alt: "Cisco Systems networking hardware company logo.",
+      alt: "Logo of Cisco Systems networking hardware company.",
     },
     {
       id: 7,
       url: pagerdutyLogo,
-      alt: "PagerDuty computer software company logo.",
+      alt: "Logo of PagerDuty computer software company.",
     },
-    { id: 8, url: uberLogo, alt: "Uber Technologies Inc company logo." },
+    { id: 8, url: uberLogo, alt: "Logo of Uber Technologies Inc company." },
   ],
 };

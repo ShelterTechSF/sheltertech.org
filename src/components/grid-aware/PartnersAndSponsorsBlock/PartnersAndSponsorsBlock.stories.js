@@ -15,42 +15,11 @@ export default {
   component: PartnersAndSponsorsBlock,
 };
 
-const Template = ({ title }) => (
+const Template = ({ title, partnersAndSponsors }) => (
   <div>
     <PartnersAndSponsorsBlock
       title={title}
-      mohcdLogo={{
-        url: mohcdLogo,
-        alt: "Mayor's Office of Housing and Community Development logo.",
-      }}
-      justiceAndDiversityCenterLogo={{
-        url: justiceAndDiversityCenterLogo,
-        alt: "Justice and Diversity Center logo.",
-      }}
-      benetechLogo={{
-        url: benetechLogo,
-        alt: "Benetech logo.",
-      }}
-      larkinStreetLogo={{
-        url: larkinStreetLogo,
-        alt: "Larkin Street logo.",
-      }}
-      sfFamiliesLogo={{
-        url: sfFamiliesLogo,
-        alt: "SF Families logo.",
-      }}
-      ciscoLogo={{
-        url: ciscoLogo,
-        alt: "Cisco logo.",
-      }}
-      pagerdutyLogo={{
-        url: pagerdutyLogo,
-        alt: "PagerDuty logo.",
-      }}
-      uberLogo={{
-        url: uberLogo,
-        alt: "Uber logo.",
-      }}
+      partnersAndSponsors={partnersAndSponsors}
     />
   </div>
 );
@@ -58,4 +27,22 @@ const Template = ({ title }) => (
 export const DefaultPartnersAndSponsorsBlock = Template.bind({});
 DefaultPartnersAndSponsorsBlock.args = {
   title: "Partners and sponsors",
+  partnersAndSponsors: [
+    {
+      id: 1,
+      url: mohcdLogo,
+      alt: "Mayor's Office of Housing and Community Development logo.",
+    },
+    {
+      id: 2,
+      url: justiceAndDiversityCenterLogo,
+      alt: "Justice and Diversity Center logo.",
+    },
+    { id: 3, url: benetechLogo, alt: "Benetech logo." },
+    { id: 4, url: larkinStreetLogo, alt: "Larkin Street logo." },
+    { id: 5, url: sfFamiliesLogo, alt: "SF Families logo." },
+    { id: 6, url: ciscoLogo, alt: "Cisco logo." },
+    { id: 7, url: pagerdutyLogo, alt: "PagerDuty logo." },
+    { id: 8, url: uberLogo, alt: "Uber logo." },
+  ],
 };

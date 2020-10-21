@@ -6,6 +6,7 @@ import s from "./PartnersAndSponsorsBlock.module.css";
 /* PropType shapes */
 
 const LogoPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
 });
@@ -14,10 +15,10 @@ const LogoPropType = PropTypes.shape({
 
 const LogosBlock = ({ logoImages }) => (
   <div>
-    <div className={s.logoImagesRow}>
+    <div className={s.logosWrapper}>
       {logoImages.map((logo) => (
-        <div className={s.logoImagesRowItem}>
-          <img key={1} src={logo.url} alt={logo.alt} />
+        <div className={s.logoContainer}>
+          <img className={s.logo} key={logo.id} src={logo.url} alt={logo.alt} />
         </div>
       ))}
     </div>

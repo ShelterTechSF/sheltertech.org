@@ -29,42 +29,38 @@ DefaultPartnersAndSponsorsBlock.args = {
   title: "Partners and sponsors",
   partnersAndSponsors: [
     {
-      key: 1,
       url: mohcdLogo,
       alt:
         "Logo of Mayor's Office of Housing and Community Development organization.",
     },
     {
-      key: 2,
       url: justiceAndDiversityCenterLogo,
       alt:
         "Logo of Justice and Diversity Center of The Bar Association of San Francisco organization.",
     },
     {
-      key: 3,
       url: benetechLogo,
       alt: "Logo of Benetech nonprofit organization.",
     },
     {
-      key: 4,
       url: larkinStreetLogo,
       alt: "Logo of Larkin Street Youth Services nonprofit organization.",
     },
     {
-      key: 5,
       url: sfFamiliesLogo,
       alt: "Logo of SF Families online public service directory organization.",
     },
     {
-      key: 6,
       url: ciscoLogo,
       alt: "Logo of Cisco Systems networking hardware company.",
     },
     {
-      key: 7,
       url: pagerdutyLogo,
       alt: "Logo of PagerDuty computer software company.",
     },
-    { key: 8, url: uberLogo, alt: "Logo of Uber Technologies Inc company." },
+    {
+      url: uberLogo,
+      alt: "Logo of Uber Technologies Inc company."
+    },
   ],
 };

@@ -4,7 +4,6 @@ import React from "react";
 import s from "./PartnersAndSponsorsBlock.module.css";
 
 const LogoPropType = PropTypes.shape({
-  key: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
 });
@@ -20,7 +19,7 @@ const PartnersAndSponsorsBlock = ({ title, partnersAndSponsors }) => {
     <div className={s.gridAreaRight}>
       <div className={s.logosWrapper}>
         {partnersAndSponsors.map((logo) => (
-          <div className={s.logoContainer} key={logo.key}>
+          <div className={s.logoContainer} key={logo.url}>
             <img className={s.logo} src={logo.url} alt={logo.alt} />
           </div>
         ))}

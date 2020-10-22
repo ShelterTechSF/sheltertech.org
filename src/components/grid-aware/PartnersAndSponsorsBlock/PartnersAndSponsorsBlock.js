@@ -28,12 +28,10 @@ const PartnersAndSponsorsBlock = ({ title, partnersAndSponsors }) => {
   );
 
   return (
-    <div>
-      <section className={s.gridParent}>
-        <GridAreaLeft />
-        <GridAreaRight />
-      </section>
-    </div>
+    <section className={s.gridParent}>
+      <GridAreaLeft />
+      <GridAreaRight />
+    </section>
   );
 };
 

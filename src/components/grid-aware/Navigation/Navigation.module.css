@@ -1,3 +1,5 @@
+/* Bleed Wrapper */
+
 .bleedWrapper {
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
@@ -10,6 +12,15 @@
   min-width: 0;
 }
 
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    grid-template-columns: 20px 1fr 20px;
+  }
+}
+
+
+/* Main component */
+
 .container {
   align-items: center;
   display: flex;
@@ -20,51 +31,55 @@
   padding-right: 30px;
 }
 
+@media (--tablet-and-down) {
+  .container {
+    height: 90px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+/* Wrappers for the mobile and full navigation elements */
+
+@media (--tablet-and-down) {
+  .fullNavWrapper {
+    display: none;
+  }
+}
+
+@media (--laptop-and-up) {
+  .mobileNavWrapper {
+    display: none;
+  }
+}
+
+
+/* Subcomponents */
+
 .logo {
   height: 50px;
 }
 
-.navList {
-  font: var(--font-caption);
-  margin: 0;
+@media (--tablet-and-down) {
+  .logo {
+    height: 36px;
+  }
+}
+
+.burgerButton {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  line-height: 0;
   padding: 0;
 }
 
-.navListItem {
-  display: inline-block;
-}
-
-.navLink {
-  color: var(--color-gray-700);
-  display: inline-block;
-  padding: 10px 20px;
-  text-decoration: none;
-}
-
-.navLink:hover {
-  background-color: var(--color-gray-300);
-  color: var(--color-black);
-}
-
-.navLink.currentPage {
-  color: var(--color-sheltertech-blue);
-}
-
-.navLink.button {
-  background-color: var(--color-sheltertech-blue);
-  color: var(--color-white);
-  margin-left: 20px;
-  padding: 10px 20px;
-  text-decoration: none;
-}
-
-.navLink.button:hover {
-  background-color: var(--color-sheltertech-blue);
-  color: var(--color-white);
-  position: relative;
-  top: 1px;
-}
-
-.navLink.button.currentPage {
-  color: var(--color-white);
+.burgerIcon {
+  /* Work around issue with outlines and buttons that wrap inline-block
+   * elements, such as images.
+   *
+   * https://bugzilla.mozilla.org/show_bug.cgi?id=687311#c23
+   */
+  vertical-align: middle;
 }

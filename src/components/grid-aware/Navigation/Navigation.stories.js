@@ -8,8 +8,9 @@ import {
   // here, either. Therefore, we're waiving this lint error.
   // eslint-disable-next-line import/no-extraneous-dependencies
 } from "@reach/router";
-import React from "react";
+import React, { useState } from "react";
 
+import BurgerMenu from "./BurgerMenu";
 import Navigation from "./Navigation";
 
 export default {
@@ -22,10 +23,29 @@ const Template = ({ homeURL, navigationItems }) => {
   // links to the current page.
   const source = createMemorySource("/volunteer");
   const history = createHistory(source);
+  const pageWrapperID = "page-wrapper";
+  const outerContainerID = "outer-container";
+  const [burgerMenuIsOpen, setBurgerMenuIsOpen] = useState(false);
   return (
-    <LocationProvider history={history}>
-      <Navigation homeURL={homeURL} navigationItems={navigationItems} />
-    </LocationProvider>
+    <div id={outerContainerID}>
+      <LocationProvider history={history}>
+        <BurgerMenu
+          isOpen={burgerMenuIsOpen}
+          setIsOpen={setBurgerMenuIsOpen}
+          navigationItems={navigationItems}
+          pageWrapperID={pageWrapperID}
+          outerContainerID={outerContainerID}
+        />
+
+        <div id={pageWrapperID}>
+          <Navigation
+            homeURL={homeURL}
+            navigationItems={navigationItems}
+            toggleBurgerMenu={() => setBurgerMenuIsOpen(!burgerMenuIsOpen)}
+          />
+        </div>
+      </LocationProvider>
+    </div>
   );
 };
 

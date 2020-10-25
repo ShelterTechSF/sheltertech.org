@@ -16,12 +16,10 @@ export default {
 };
 
 const Template = ({ title, partnersAndSponsors }) => (
-  <div>
-    <PartnersAndSponsorsBlock
-      title={title}
-      partnersAndSponsors={partnersAndSponsors}
-    />
-  </div>
+  <PartnersAndSponsorsBlock
+    title={title}
+    partnersAndSponsors={partnersAndSponsors}
+  />
 );
 
 export const DefaultPartnersAndSponsorsBlock = Template.bind({});

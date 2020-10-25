@@ -2,7 +2,6 @@
   align-items: center;
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
-  grid-template-rows: auto 0;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
   padding-bottom: 120px;
@@ -20,12 +19,6 @@
   .bleedWrapper {
     grid-template-columns: 40px 1fr 40px;
   }
-}
-
-/* Main grid areas */
-
-.gridAreaMiddle {
-  grid-column: 2;
 }
 
 .text {

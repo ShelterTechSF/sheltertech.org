@@ -4,11 +4,7 @@ import React from "react";
 import s from "./HomePageParagraph.module.css";
 
 const HomePageParagraph = ({ text }) => {
-  const GridAreaMiddle = () => (
-    <div className={s.gridAreaMiddle}>
-      <div className={s.text}>{text}</div>
-    </div>
-  );
+  const GridAreaMiddle = () => <div className={s.text}>{text}</div>;
 
   return (
     <div className={s.bleedWrapper}>

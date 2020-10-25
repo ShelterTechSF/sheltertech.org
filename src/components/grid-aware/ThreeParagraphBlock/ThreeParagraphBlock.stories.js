@@ -68,7 +68,7 @@ Gray.args = {
     "A monthly donation helps change the lives of those in need. Whether it’s providing free internet access to someone for the night or connecting a brand new shelter to the internet, your support will have a sustaining impact.",
   ctaTitle: "Volunteer, donate, or reach out to our partnerships team",
   ctaButtons: [
-    { text: "Become a Volunteer", link: "/foo" },
-    { text: "Donate", link: "/bar" },
+    { text: "Become a Volunteer", internalLink: "/foo" },
+    { text: "Donate", internalLink: "/bar" },
   ],
 };

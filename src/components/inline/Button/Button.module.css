@@ -3,10 +3,12 @@
   border: 1px solid var(--color-sheltertech-blue);
   color: var(--color-white);
   cursor: pointer;
+  display: inline-block;
   font: var(--font-action);
   line-height: 1.5;
   outline: none;
   padding: 16px 40px;
+  text-decoration: none;
   text-transform: uppercase;
 }
 

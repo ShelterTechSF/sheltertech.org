@@ -1,90 +1,99 @@
-.events-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 60px;
-  width: 90vw;
-}
+@import '../../../stylesheets/utils/all';
 
-.events-list-item {
-  margin: 10px;
-  position: relative;
-  width: 320px;
-}
+// Disable this because we need to temporarily add extra specificity to all
+// legacy styles in the middle of the site transition. All the legacy styles and
+// code will go away soon.
+/* stylelint-disable max-nesting-depth */
 
-/* Unset styles applied globally to the <a> tag that do not make sense when the
+.app {
+  .events-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+    width: 90vw;
+  }
+
+  .events-list-item {
+    margin: 10px;
+    position: relative;
+    width: 320px;
+  }
+
+  /* Unset styles applied globally to the <a> tag that do not make sense when the
  * <a> tag wraps other elements and not just text.
  */
-.event-card-link {
-  color: inherit;
+  .event-card-link {
+    color: inherit;
 
-  &:hover {
-    position: initial;
-    top: initial;
+    &:hover {
+      position: initial;
+      top: initial;
+    }
   }
-}
 
-.event-card {
-  background-color: #fff;
-  border: 1px solid #cfcfcf;
-  border-radius: 9px;
-  cursor: pointer;
-  display: flex;
-  flex: 0 0 auto;
-  flex-direction: column;
-  height: 100%;
-  overflow: hidden;
-}
+  .event-card {
+    background-color: #fff;
+    border: 1px solid #cfcfcf;
+    border-radius: 9px;
+    cursor: pointer;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
 
-.event-card--cost {
-  background: transparentize($color: #fff, $amount: 0.2);
-  color: #151515;
-  font-size: 13px;
-  line-height: 18px;
-  padding: 5px 12px;
-  position: absolute;
-  right: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  top: 17px;
-}
+  .event-card--cost {
+    background: transparentize($color: #fff, $amount: 0.2);
+    color: #151515;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 5px 12px;
+    position: absolute;
+    right: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    top: 17px;
+  }
 
-.event-card--image {
-  height: 200px;
-  width: 400px;
-}
+  .event-card--image {
+    height: 200px;
+    width: 400px;
+  }
 
-.event-card--details {
-  display: flex;
-  flex: 1 0 auto;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px 25px;
-}
+  .event-card--details {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 25px;
+  }
 
-.event-card--details--date {
-  color: #484848;
-  font-size: 15px;
-  text-transform: uppercase;
-}
+  .event-card--details--date {
+    color: #484848;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
 
-.event-card h4 {
-  color: #1d1d1d;
-  font-weight: bold;
-  margin-top: 8px;
-}
+  .event-card h4 {
+    color: #1d1d1d;
+    font-weight: bold;
+    margin-top: 8px;
+  }
 
-.event-card--details--description {
-  margin-top: 15px;
-}
+  .event-card--details--description {
+    margin-top: 15px;
+  }
 
-.event-card--details small {
-  display: block;
-  margin-top: 30px;
-}
+  .event-card--details small {
+    display: block;
+    margin-top: 30px;
+  }
 
-.events--past {
-  font-style: italic;
-  font-weight: 300;
-  margin-top: 60px;
+  .events--past {
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 60px;
+  }
 }

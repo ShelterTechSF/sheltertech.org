@@ -39,5 +39,24 @@ module.exports = {
         "react/prop-types": ["error", { skipUndeclared: true }],
       },
     },
+    {
+      // Jest
+      files: ["__mocks__/**", "jest/**", "**/*.test.js"],
+      rules: {
+        "import/no-extraneous-dependencies": [
+          "error",
+          { devDependencies: true },
+        ],
+        // Airbnb disallows certain syntax because they may be expensive to run
+        // in a browser when transpiling to older versions of JavaScript. This
+        // is not a concern for our test code that runs on Node.js, since this
+        // newer syntax is natively supported.
+        "no-restricted-syntax": "off",
+      },
+      env: {
+        // Jest injects itself as a varibable in test files
+        jest: true,
+      },
+    },
   ],
 };

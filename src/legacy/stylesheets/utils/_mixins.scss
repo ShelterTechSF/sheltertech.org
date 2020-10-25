@@ -1,7 +1,11 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 // CALCULATE EMS
 
-@function calc-em($target-px, $context:$font-size) {
+// The default value for $context is set to the default font size on most
+// browsers.
+// Note: that this file is going away soon, so please ignore how this is bad for
+// accessibility reasons.
+@function calc-em($target-px, $context: 16px) {
   @return ($target-px / $context) * 1rem;
 }
 

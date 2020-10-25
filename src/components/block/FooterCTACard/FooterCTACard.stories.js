@@ -6,13 +6,9 @@ export default {
   component: FooterCTACard,
 };
 
-const Template = ({ title, description, buttonText }) => (
+const Template = ({ title, description, button }) => (
   <div style={{ backgroundColor: "black", width: "480px" }}>
-    <FooterCTACard
-      title={title}
-      description={description}
-      buttonText={buttonText}
-    />
+    <FooterCTACard title={title} description={description} button={button} />
   </div>
 );
 
@@ -22,5 +18,5 @@ DefaultFooterCTACard.args = {
   title: "Get Involved",
   description:
     "Volunteer with us and put your professional skills to good use.",
-  buttonText: "Join Us",
+  button: { text: "Join Us", link: "/foo" },
 };

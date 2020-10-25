@@ -37,20 +37,17 @@
 /* Logos block */
 
 .logosWrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .logoContainer {
-  height: 96.08px;
-  width: 215.14px;
+  height: auto;
+  padding: 21px 5px;
 }
 
 .logo {
-  height: auto;
   max-width: 100%;
-  padding: 21px 5px;
 }
 
 

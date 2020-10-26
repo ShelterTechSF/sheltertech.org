@@ -7,10 +7,12 @@ export default {
   component: HomePageParagraph,
 };
 
-const Template = ({ text }) => <HomePageParagraph text={text} />;
+const Template = ({ title, description }) => <HomePageParagraph title={title} description={description} />;
 
 export const DefaultHomePageParagraph = Template.bind({});
 DefaultHomePageParagraph.args = {
-  text:
-    "We believe digital equity is a human right. Access to the internet and technology makes it possible for people to find their next job, home, meal, and contact family and friends.",
+  title:
+    "We believe digital equity is a human right.",
+  description: 
+    "Access to the internet and technology makes it possible for people to find their next job, home, meal, and contact family and friends."
 };

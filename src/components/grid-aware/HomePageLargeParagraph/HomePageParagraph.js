@@ -3,8 +3,12 @@ import React from "react";
 
 import s from "./HomePageParagraph.module.css";
 
-const HomePageParagraph = ({ text }) => {
-  const GridAreaMiddle = () => <div className={s.text}>{text}</div>;
+const HomePageParagraph = ({ title, description }) => {
+  const GridAreaMiddle = () => 
+    <div>
+      <p className={s.title}>{title}</p>
+      <p className={s.description}>{description}</p>
+    </div>
 
   return (
     <div className={s.bleedWrapper}>
@@ -16,7 +20,8 @@ const HomePageParagraph = ({ text }) => {
 };
 
 HomePageParagraph.propTypes = {
-  text: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default HomePageParagraph;

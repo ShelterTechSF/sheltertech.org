@@ -10,7 +10,7 @@ export default {
 
 
 const Template = ({ quote, author }) => (
-  <Carousel>
+  <Carousel renderCenterLeftControls={false} renderCenterRightControls={false}>
     <BlockQuoteBlock quote={quote} author={author} /> 
     <BlockQuoteBlock quote={quote} author={author} /> 
     <BlockQuoteBlock quote={quote} author={author} /> 

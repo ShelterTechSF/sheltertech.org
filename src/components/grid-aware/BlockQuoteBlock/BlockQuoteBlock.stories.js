@@ -1,24 +1,20 @@
+import Carousel from "nuka-carousel";
 import React from "react";
 import BlockQuoteBlock from "./BlockQuoteBlock";
-import Carousel from 'nuka-carousel';
-
 
 export default {
   title: "Grid-Aware/BlockQuoteBlock",
   component: BlockQuoteBlock,
 };
 
-
 const Template = ({ quote, author }) => (
   <Carousel renderCenterLeftControls={false} renderCenterRightControls={false}>
-    <BlockQuoteBlock quote={quote} author={author} /> 
-    <BlockQuoteBlock quote={quote} author={author} /> 
-    <BlockQuoteBlock quote={quote} author={author} /> 
-    <BlockQuoteBlock quote={quote} author={author} /> 
-    <BlockQuoteBlock quote={quote} author={author} /> 
+    <BlockQuoteBlock quote={quote} author={author} />
+    <BlockQuoteBlock quote={quote} author={author} />
+    <BlockQuoteBlock quote={quote} author={author} />
+    <BlockQuoteBlock quote={quote} author={author} />
+    <BlockQuoteBlock quote={quote} author={author} />
   </Carousel>
-
-
 );
 
 export const DefaultBlockQuoteBlock = Template.bind({});

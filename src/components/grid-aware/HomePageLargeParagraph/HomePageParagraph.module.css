@@ -1,5 +1,5 @@
 .bleedWrapper {
-  align-items: center;
+  justify-items: center;
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   margin: auto;
@@ -21,8 +21,15 @@
   }
 }
 
-.text {
+.title {
   font: var(--font-headline);
+  margin-bottom: 40px;
+}
+
+
+.description {
+  font: var(--font-title);
   text-align: center;
+  width: 1020px;
 }
 

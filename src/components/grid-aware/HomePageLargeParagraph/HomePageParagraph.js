@@ -4,7 +4,6 @@ import React from "react";
 import s from "./HomePageParagraph.module.css";
 
 const HomePageParagraph = ({ title, description }) => {
-
   return (
     <div className={s.bleedWrapper}>
       <div className={s.bleedMainContent}>

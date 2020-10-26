@@ -58,7 +58,7 @@ DefaultPartnersAndSponsorsBlock.args = {
     },
     {
       url: uberLogo,
-      alt: "Logo of Uber Technologies Inc company.",
+      alt: "Logo of Uber Technologies Inc. company.",
     },
   ],
 };

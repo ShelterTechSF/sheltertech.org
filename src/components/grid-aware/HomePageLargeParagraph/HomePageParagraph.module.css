@@ -1,7 +1,7 @@
 .bleedWrapper {
-  justify-items: center;
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  justify-items: center;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
   padding-bottom: 120px;
@@ -9,6 +9,7 @@
 }
 
 .bleedMainContent {
+  text-align: center;
   grid-column: 2;
   grid-row: 1;
   /* Override grid item default of auto so that item contents cannot stretch the grid itself */
@@ -26,10 +27,7 @@
   margin-bottom: 40px;
 }
 
-
 .description {
   font: var(--font-title);
-  text-align: center;
-  width: 1020px;
 }
 

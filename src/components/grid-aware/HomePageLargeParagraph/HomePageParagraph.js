@@ -7,8 +7,12 @@ const HomePageParagraph = ({ title, description }) => {
   return (
     <div className={s.bleedWrapper}>
       <div className={s.bleedMainContent}>
-        <p className={s.title}>{title}</p>
-        <p className={s.description}>{description}</p>
+        <div className={s.gridParent}>
+          <div className={s.textWrapper}>
+            <p className={s.title}>{title}</p>
+            <p className={s.description}>{description}</p>
+          </div>
+        </div>
       </div>
     </div>
   );

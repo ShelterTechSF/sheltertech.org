@@ -9,6 +9,10 @@ import mohcdLogo from "../../components/grid-aware/PartnersAndSponsorsBlock/stor
 import pagerdutyLogo from "../../components/grid-aware/PartnersAndSponsorsBlock/stories/pagerduty-logo.png";
 import sfFamiliesLogo from "../../components/grid-aware/PartnersAndSponsorsBlock/stories/sf-families-logo.png";
 import uberLogo from "../../components/grid-aware/PartnersAndSponsorsBlock/stories/uber-logo.png";
+import ProgramsBlock from "../../components/grid-aware/ProgramsBlock";
+import communityDevelopmentImg from "../../components/grid-aware/ProgramsBlock/stories/community-development.jpg";
+import sfServiceGuideImg from "../../components/grid-aware/ProgramsBlock/stories/sf-service-guide.jpg";
+import shelterConnectImg from "../../components/grid-aware/ProgramsBlock/stories/shelter-connect.jpg";
 import ThreeParagraphBlock from "../../components/grid-aware/ThreeParagraphBlock";
 import image1 from "../../components/grid-aware/ThreeParagraphBlock/stories/image1.png";
 import image2 from "../../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
@@ -51,6 +55,36 @@ export default () => (
         { text: "Volunteer", internalLink: "/new/volunteer" },
         { text: "Donate", internalLink: "/new/donate" },
         { text: "Work with us", onClick: () => {} },
+      ]}
+    />
+    <ProgramsBlock
+      title="Our programs"
+      programs={[
+        {
+          theme: "light",
+          image: shelterConnectImg,
+          imageAlt: "Image of ShelterTech booth with 4 volunteers smiling.",
+          title: "ShelterConnect",
+          description:
+            "Every year, our ShelterConnect program provides 3XXX homeless and housing insecure people with free and unlimited internet access and we plan to provide every homeless individual with the digital infrastructure that meets their needs by 2024.",
+        },
+        {
+          theme: "light",
+          image: sfServiceGuideImg,
+          imageAlt:
+            "Image of the back of two people sitting where the woman on the left is pointing to the monitor of a Macbook as the man observes.",
+          title: "SF Service Guide",
+          description:
+            "Anyone with access to a smartphone, tablet, or computer can utilize this online directory of human services provided in San Francisco.",
+        },
+        {
+          theme: "light",
+          image: communityDevelopmentImg,
+          imageAlt: "Image of ShelterTech community member smiling.",
+          title: "Community Development",
+          description:
+            "We depend on Community Representatives to inform our work from their lived experiences and rely on volunteers to continuously updated the resources we develop.",
+        },
       ]}
     />
     <PartnersAndSponsorsBlock

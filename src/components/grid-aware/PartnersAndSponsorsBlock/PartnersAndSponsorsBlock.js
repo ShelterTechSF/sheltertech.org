@@ -19,7 +19,7 @@ const PartnersAndSponsorsBlock = ({ title, partnersAndSponsors }) => {
     <div className={s.gridAreaRight}>
       <div className={s.logosWrapper}>
         {partnersAndSponsors.map((logo) => (
-          <div className={s.logoContainer} key={logo.url}>
+          <div className={s.logoContainer} key={logo.alt}>
             <img className={s.logo} src={logo.url} alt={logo.alt} />
           </div>
         ))}

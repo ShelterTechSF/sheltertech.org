@@ -10,8 +10,8 @@
 .gridParent {
   column-gap: var(--grid-column-gap);
   display: grid;
-  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
   grid-column-start: 2;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
   padding-bottom: 100px;
   padding-top: 100px;
   row-gap: 50px;

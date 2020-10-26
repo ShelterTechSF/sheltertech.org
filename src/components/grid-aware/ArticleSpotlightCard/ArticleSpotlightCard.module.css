@@ -1,0 +1,68 @@
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  grid-template-rows: 600px;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+.bleedBackground {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+
+.bleedMainContent {
+  grid-column: 2;
+  grid-row: 1;
+  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+  min-width: 0;
+}
+
+.gridParent {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  height: 100%;
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.gridParent > * {
+  min-width: 0;
+}
+
+.gridAreaCard {
+  grid-column: 1 / span 6;
+  position: relative;
+}
+
+.textCardWrapper {
+  bottom: -50px;
+  position: absolute;
+  width: 100%;
+}
+
+.textCard {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 70px;
+}
+
+.eyebrow {
+  color: var(--color-gray-600);
+  font: var(--font-action);
+  text-transform: uppercase;
+}
+
+.title {
+  font: var(--font-title);
+  margin-top: 20px;
+}
+
+.description {
+  font: var(--font-body-medium);
+  margin-top: 15px;
+}
+
+.actionRow {
+  margin-top: 30px;
+}

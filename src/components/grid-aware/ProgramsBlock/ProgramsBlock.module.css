@@ -1,0 +1,72 @@
+/* Outter Grid */
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    grid-template-columns: 40px 1fr 40px;
+  }
+}
+
+
+/* Main grid */
+
+.gridParent {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-column-start: 2;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  padding: 100px 0;
+  row-gap: 50px;
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.gridParent > * {
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    display: block;
+    padding-bottom: 80px;
+    padding-top: 40px;
+  }
+}
+
+
+/* Main grid areas */
+
+.gridAreaTop {
+  grid-column: 1 / span 10;
+}
+
+.gridAreaBottom {
+  grid-column: 1 / span 12;
+}
+
+
+/* Programs block */
+
+.title {
+  font: var(--font-headline);
+  margin: 0;
+}
+
+
+/* Program card block */
+
+.programsWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+@media (--tablet-and-down) {
+  .programsWrapper {
+    justify-content: center;
+  }
+}

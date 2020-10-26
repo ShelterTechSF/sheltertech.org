@@ -20,7 +20,7 @@
   display: grid;
   grid-column-start: 2;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
-  padding: 100px 0px;
+  padding: 100px 0;
   row-gap: 50px;
 }
 

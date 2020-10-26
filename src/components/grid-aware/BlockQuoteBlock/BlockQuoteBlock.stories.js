@@ -1,32 +1,24 @@
 import React from "react";
-import Slider from "react-slick";
 import BlockQuoteBlock from "./BlockQuoteBlock";
-/* eslint-disable react/jsx-props-no-spreading */
+import Carousel from 'nuka-carousel';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export default {
   title: "Grid-Aware/BlockQuoteBlock",
   component: BlockQuoteBlock,
 };
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
 
 const Template = ({ quote, author }) => (
-  <Slider {...settings}>
-    <BlockQuoteBlock quote={quote} author={author} />
-    <BlockQuoteBlock quote={quote} author={author} />
-    <BlockQuoteBlock quote={quote} author={author} />
-    <BlockQuoteBlock quote={quote} author={author} />
-    <BlockQuoteBlock quote={quote} author={author} />
-  </Slider>
+  <Carousel>
+    <BlockQuoteBlock quote={quote} author={author} /> 
+    <BlockQuoteBlock quote={quote} author={author} /> 
+    <BlockQuoteBlock quote={quote} author={author} /> 
+    <BlockQuoteBlock quote={quote} author={author} /> 
+    <BlockQuoteBlock quote={quote} author={author} /> 
+  </Carousel>
+
+
 );
 
 export const DefaultBlockQuoteBlock = Template.bind({});

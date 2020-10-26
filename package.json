@@ -29,12 +29,11 @@
   "dependencies": {
     "gatsby": "^2.24.47",
     "normalize.css": "^8.0.1",
+    "nuka-carousel": "^4.7.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-burger-menu": "^2.6.13",
-    "react-helmet": "^6.1.0",
-    "react-slick": "^0.27.12",
-    "slick-carousel": "^1.8.1"
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

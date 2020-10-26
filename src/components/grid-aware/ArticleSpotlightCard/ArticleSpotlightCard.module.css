@@ -18,6 +18,16 @@
   min-width: 0;
 }
 
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    display: block;
+  }
+
+  .bleedBackground {
+    height: 250px;
+  }
+}
+
 .gridParent {
   column-gap: var(--grid-column-gap);
   display: grid;
@@ -30,15 +40,23 @@
   min-width: 0;
 }
 
-.gridAreaCard {
-  grid-column: 1 / span 6;
-  position: relative;
+@media (--tablet-and-down) {
+  .gridParent {
+    display: block;
+  }
 }
 
-.textCardWrapper {
-  bottom: -50px;
-  position: absolute;
-  width: 100%;
+@media (--laptop-and-up) {
+  .gridAreaCard {
+    grid-column: 1 / span 6;
+    position: relative;
+  }
+
+  .textCardWrapper {
+    bottom: -50px;
+    position: absolute;
+    width: 100%;
+  }
 }
 
 .textCard {
@@ -65,4 +83,14 @@
 
 .actionRow {
   margin-top: 30px;
+}
+
+@media (--tablet-and-down) {
+  .textCard {
+    padding: 30px;
+  }
+
+  .title {
+    margin-top: 15px;
+  }
 }

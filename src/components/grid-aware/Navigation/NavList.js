@@ -2,6 +2,8 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 
+const HOME_URL = "/new";
+
 /** An internal, external, or button link. */
 export const NavLink = ({
   text,
@@ -12,11 +14,19 @@ export const NavLink = ({
 }) => {
   const className = `${theme.navLink} ${isButton ? theme.button : ""}`;
   if (internalLink) {
+    // Enable the "active" style for any nested pages, except for the home page,
+    // which would be a parent page for any page. This is also used to get
+    // around some annoying behavior where a URL will not be considered the
+    // "current" page even if it is off by a trailing slash (e.g. "/about" !===
+    // "/about/" when it comes to computing "activeness").
+    // https://github.com/reach/router/issues/231
+    const isPartiallyActive = internalLink.replace(/\/$/, "") !== HOME_URL;
     return (
       <Link
         className={className}
         activeClassName={theme.currentPage}
         to={internalLink}
+        partiallyActive={isPartiallyActive}
       >
         {text}
       </Link>

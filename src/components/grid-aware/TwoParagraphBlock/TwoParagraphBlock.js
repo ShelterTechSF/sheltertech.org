@@ -71,7 +71,7 @@ const TwoParagraphBlock = ({
 TwoParagraphBlock.propTypes = {
   title: PropTypes.string.isRequired,
   paragraph1: PropTypes.string.isRequired,
-  paragraph2: PropTypes.string.isRequired,
+  paragraph2: PropTypes.node.isRequired,
   image: ImagePropType.isRequired,
   ctaButton: Button.propTypes.isRequired,
 };

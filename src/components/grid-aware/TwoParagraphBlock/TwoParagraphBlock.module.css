@@ -81,13 +81,13 @@
 /* Component wrappers */
 
 .paragraph1Wrapper {
-  margin-top: 0px;
   font: var(--font-body-large);
+  margin-top: 0;
 }
 
 .paragraph2Wrapper {
-  margin-top: 0;
   font: var(--font-body-small);
+  margin-top: 0;
 }
 
 .image1Wrapper {
@@ -97,18 +97,18 @@
 
 @media (--tablet-and-down) {
   .paragraph1Wrapper {
-    margin-top: 40px;
     margin-right: 40px;
+    margin-top: 40px;
   }
 
   .paragraph2Wrapper {
-    margin-top: 40px;
     margin-right: 40px;
+    margin-top: 40px;
   }
 
   .image1Wrapper {
-    margin-top: 40px;
     margin-left: 40px;
+    margin-top: 40px;
     position: static;
   }
 }
@@ -125,8 +125,8 @@
 /* Image block */
 
 .image1 {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 

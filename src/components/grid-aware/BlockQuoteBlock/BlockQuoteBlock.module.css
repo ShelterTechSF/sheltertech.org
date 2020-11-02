@@ -30,10 +30,13 @@
 
 .quote {
   font: var(--font-body-medium);
+  margin: 0;
+  margin-bottom: 22px;
 }
 
-.author {
+.attribution {
   font: var(--font-caption);
 }
   
+
 

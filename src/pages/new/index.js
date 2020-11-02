@@ -13,10 +13,26 @@ import ThreeParagraphBlock from "../../components/grid-aware/ThreeParagraphBlock
 import image1 from "../../components/grid-aware/ThreeParagraphBlock/stories/image1.png";
 import image2 from "../../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
 import image3 from "../../components/grid-aware/ThreeParagraphBlock/stories/image3.png";
+import VideoHeader from "../../components/grid-aware/VideoHeader/VideoHeader";
+import videoHeaderImage from "../../components/grid-aware/VideoHeader/stories/VideoHeader.png";
 import Layout from "../../components/layout";
 
 export default () => (
   <Layout>
+    <VideoHeader
+      text={{
+        title:
+          "X in 10 people experiencing homelessness lack access to the internet and essential digital services",
+        description:
+          "ShelterTech is a nonprofit organization dedicated to supporting people who are experiencing homelessness or housing insecurity by leveraging technology and connectivity.",
+      }}
+      image={videoHeaderImage}
+      ctaButtons={[
+        { text: "Donate", link: "/foo" },
+        { text: "Volunteer", link: "/bar" },
+      ]}
+      link="https://www.youtube.com/watch?v=KCduRWJ1hQo"
+    />
     <ThreeParagraphBlock
       title="Get involved"
       paragraph1={{

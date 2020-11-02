@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   max-width: var(--grid-bleed-max-width);
+  margin: auto;
 }
 
 .bleedBackground {
@@ -47,13 +48,13 @@
   padding: 150px 0;
 }
 
-.gridAreaLeft {
+.gridTextArea {
   align-content: center;
   grid-column: 1 / span 6;
   grid-row: 1;
 }
 
-.gridAreaRight {
+.gridPlayButton {
   align-self: center;
   grid-column: 9 / span 2;
   text-align: center;
@@ -72,12 +73,13 @@
     padding: 0;
   }
 
-  .gridAreaLeft {
+  .gridTextArea {
     grid-column: 1 / span 12;
     margin-top: -14.5px;
+    grid-row: 2;
   }
 
-  .gridAreaRight {
+  .gridPlayButton {
     grid-column: 6 / span 2;
   }
 }

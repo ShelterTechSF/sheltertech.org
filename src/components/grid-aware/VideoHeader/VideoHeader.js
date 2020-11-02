@@ -51,8 +51,8 @@ PlayButton.propTypes = {
 /* Main component */
 
 const VideoHeader = ({ ctaButtons, image, link, text }) => {
-  const GridAreaRight = () => (
-    <div className={s.gridAreaRight}>
+  const GridPlayButton = () => (
+    <div className={s.gridPlayButton}>
       <PlayButton link={link} />
     </div>
   );
@@ -67,8 +67,8 @@ const VideoHeader = ({ ctaButtons, image, link, text }) => {
       />
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
-          <GridAreaRight />
-          <div className={s.gridAreaLeft}>
+          <GridPlayButton />
+          <div className={s.gridTextArea}>
             <VideoHeaderText text={text} />
             <CTAButtons buttons={ctaButtons} />
           </div>

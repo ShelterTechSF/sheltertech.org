@@ -1,10 +1,10 @@
 /* Outter Grid */
 .bleedWrapper {
+  background: var(--color-black);
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
-  background: var(--color-black);
 }
 
 @media (--tablet-and-down) {
@@ -53,8 +53,8 @@
 /* Programs block */
 
 .title {
-  font: var(--font-headline);
   color: var(--color-white);
+  font: var(--font-headline);
   margin: 0;
 }
 
@@ -68,9 +68,9 @@
 
 @media (--tablet-and-down) {
   .programsWrapper {
+    grid-row-gap: 30px;
     grid-template-columns: 1fr;
     justify-items: center;
-    grid-row-gap: 30px;
     margin-top: 30px;
   }
 }

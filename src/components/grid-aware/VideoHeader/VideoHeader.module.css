@@ -3,32 +3,32 @@
 .bleedWrapper {
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
-  max-width: var(--grid-bleed-max-width);
   margin: auto;
+  max-width: var(--grid-bleed-max-width);
 }
 
 .bleedBackground {
+  background-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%), var(--background-image);
+  background-size: cover;
   grid-column: 1/ span 3;
   grid-row: 1;
   /* Override grid item default of auto so that item contents cannot stretch the grid itself */
   min-width: 0;
-  background-size: cover;
-  background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%), var(--background-image);
 }
 
 @media (--tablet-and-down) {
-  .bleedWrapper{
+  .bleedWrapper {
+    background-color: var(--color-black);
     display: grid;
-    background-color: black;
-    grid-template-rows: 214px auto;
     grid-template-columns: 40px 1fr 40px;
+    grid-template-rows: 214px auto;
     max-width: var(--grid-bleed-max-width);
     padding-bottom: 55.5px;
   }
 
   .bleedBackground {
+    background-image: linear-gradient(360deg, #000 0%, rgba(0, 0, 0, 0) 100%), var(--background-image);
     grid-row: 1;
-    background-image: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%), var(--background-image);
   }
 }
 
@@ -57,8 +57,8 @@
 .gridPlayButton {
   align-self: center;
   grid-column: 9 / span 2;
-  text-align: center;
   grid-row: 1;
+  text-align: center;
 }
 
 @media (--tablet-and-down) {
@@ -67,16 +67,16 @@
   }
 
   .gridParent {
+    column-gap: 0;
     display: grid;
     grid-template-rows: 214px auto;
-    column-gap: 0;
     padding: 0;
   }
 
   .gridTextArea {
     grid-column: 1 / span 12;
-    margin-top: -14.5px;
     grid-row: 2;
+    margin-top: -14.5px;
   }
 
   .gridPlayButton {
@@ -125,8 +125,8 @@
 
 /* PlayIcon svg */
 .playIcon {
-  width: 35px;
   height: 45px;
+  width: 35px;
 }
 
 @media (--tablet-and-down) {
@@ -139,7 +139,7 @@
   }
 
   .playIcon {
-    width: 25.67px;
     height: 33px;
+    width: 25.67px;
   }
 }

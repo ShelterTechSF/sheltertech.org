@@ -3,9 +3,32 @@
 .bleedWrapper {
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
-  margin: auto;
   max-width: var(--grid-bleed-max-width);
+}
+
+.bleedBackground {
+  grid-column: 1/ span 3;
+  grid-row: 1;
+  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+  min-width: 0;
+  background-size: cover;
   background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%), var(--background-image);
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper{
+    display: grid;
+    background-color: black;
+    grid-template-rows: 214px auto;
+    grid-template-columns: 40px 1fr 40px;
+    max-width: var(--grid-bleed-max-width);
+    padding-bottom: 55.5px;
+  }
+
+  .bleedBackground {
+    grid-row: 1;
+    background-image: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%), var(--background-image);
+  }
 }
 
 /* Main grid */
@@ -27,12 +50,36 @@
 .gridAreaLeft {
   align-content: center;
   grid-column: 1 / span 6;
+  grid-row: 1;
 }
 
 .gridAreaRight {
   align-self: center;
   grid-column: 9 / span 2;
   text-align: center;
+  grid-row: 1;
+}
+
+@media (--tablet-and-down) {
+  .bleedMainContent {
+    grid-row: 1 /span 2;
+  }
+
+  .gridParent {
+    display: grid;
+    grid-template-rows: 214px auto;
+    column-gap: 0;
+    padding: 0;
+  }
+
+  .gridAreaLeft {
+    grid-column: 1 / span 12;
+    margin-top: -14.5px;
+  }
+
+  .gridAreaRight {
+    grid-column: 6 / span 2;
+  }
 }
 
 /* Title and Description container */
@@ -72,4 +119,25 @@
 
 .ctaButtonRowItem:not(:last-child) {
   margin-right: 24px;
+}
+
+/* PlayIcon svg */
+.playIcon {
+  width: 35px;
+  height: 45px;
+}
+
+@media (--tablet-and-down) {
+  .ctaButtonRow {
+    margin-top: 20px;
+  }
+
+  .ctaButtonRowItem {
+    margin-top: 20px;
+  }
+
+  .playIcon {
+    width: 25.67px;
+    height: 33px;
+  }
 }

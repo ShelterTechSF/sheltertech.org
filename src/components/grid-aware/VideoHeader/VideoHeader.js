@@ -1,10 +1,9 @@
 import PropTypes from "prop-types";
 import React from "react";
 import Button from "../../inline/Button";
-import playButton from "./PlayButton.svg";
+import playIcon from "./PlayIcon.svg";
 import s from "./VideoHeader.module.css";
 
-const style = {};
 /* PropType shapes */
 
 const VideoHeaderPropType = PropTypes.shape({
@@ -41,7 +40,7 @@ VideoHeaderText.propTypes = {
 
 const PlayButton = ({ link }) => (
   <a rel="noreferrer" href={link} target="_blank">
-    <img src={playButton} alt="Play Video" />
+    <img src={playIcon} alt="Play Video" className={s.playIcon} />
   </a>
 );
 
@@ -59,19 +58,20 @@ const VideoHeader = ({ ctaButtons, image, link, text }) => {
   );
 
   return (
-    <div
-      className={s.bleedWrapper}
-      style={{
-        "--background-image": `url(${image})`,
-      }}
-    >
+    <div className={s.bleedWrapper}>
+      <div
+        className={s.bleedBackground}
+        style={{
+          "--background-image": `url(${image})`,
+        }}
+      />
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
+          <GridAreaRight />
           <div className={s.gridAreaLeft}>
             <VideoHeaderText text={text} />
             <CTAButtons buttons={ctaButtons} />
           </div>
-          <GridAreaRight />
         </section>
       </div>
     </div>

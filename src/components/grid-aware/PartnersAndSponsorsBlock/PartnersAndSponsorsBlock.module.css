@@ -1,4 +1,4 @@
-/* Outter Grid */
+/* Outer Grid */
 .bleedWrapper {
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;

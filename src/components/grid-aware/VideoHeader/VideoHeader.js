@@ -17,14 +17,19 @@ const CTAButtons = ({ buttons }) => (
   <div className={s.ctaButtonRow}>
     {buttons.map((button) => (
       <div className={s.ctaButtonRowItem} key={button.text}>
-        <Button text={button.text} internalLink={button.link} />
+        <Button
+          text={button.text}
+          internalLink={button.internalLink}
+          externalLink={button.externalLink}
+          onClick={button.onClick}
+        />
       </div>
     ))}
   </div>
 );
 
 CTAButtons.propTypes = {
-  buttons: Button.propTypes.isRequired,
+  buttons: PropTypes.arrayOf(Button.propTypes).isRequired,
 };
 
 const VideoHeaderText = ({ text }) => (
@@ -50,10 +55,10 @@ PlayButton.propTypes = {
 
 /* Main component */
 
-const VideoHeader = ({ ctaButtons, image, link, text }) => {
+const VideoHeader = ({ ctaButtons, image, playButtonLink, text }) => {
   const GridPlayButton = () => (
     <div className={s.gridPlayButton}>
-      <PlayButton link={link} />
+      <PlayButton link={playButtonLink} />
     </div>
   );
 
@@ -79,9 +84,9 @@ const VideoHeader = ({ ctaButtons, image, link, text }) => {
 };
 
 VideoHeader.propTypes = {
-  ctaButtons: PropTypes.arrayOf(CTAButtons).isRequired,
+  ctaButtons: PropTypes.arrayOf(Button.propTypes).isRequired,
   image: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  playButtonLink: PropTypes.string.isRequired,
   text: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,

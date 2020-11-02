@@ -8,7 +8,7 @@ export default {
   component: VideoHeader,
 };
 
-const Template = ({ title, description, ctaButtons, link }) => (
+const Template = ({ title, description, ctaButtons, playButtonLink }) => (
   <VideoHeader
     text={{
       title,
@@ -16,7 +16,7 @@ const Template = ({ title, description, ctaButtons, link }) => (
     }}
     image={videoHeaderImage}
     ctaButtons={ctaButtons}
-    link={link}
+    playButtonLink={playButtonLink}
   />
 );
 
@@ -27,8 +27,8 @@ DefaultVideoHeader.args = {
   description:
     "ShelterTech is a nonprofit organization dedicated to supporting people who are experiencing homelessness or housing insecurity by leveraging technology and connectivity.",
   ctaButtons: [
-    { text: "Donate", link: "/foo" },
-    { text: "Volunteer", link: "/bar" },
+    { text: "Donate", internalLink: "/foo" },
+    { text: "Volunteer", internalLink: "/bar" },
   ],
-  link: "https://www.youtube.com/watch?v=KCduRWJ1hQo", // SF Service Guide Beta Launch Webinar
+  playButtonLink: "https://www.youtube.com/watch?v=KCduRWJ1hQo", // SF Service Guide Beta Launch Webinar
 };

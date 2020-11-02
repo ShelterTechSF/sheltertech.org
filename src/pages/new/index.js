@@ -28,10 +28,10 @@ export default () => (
       }}
       image={videoHeaderImage}
       ctaButtons={[
-        { text: "Donate", link: "/foo" },
-        { text: "Volunteer", link: "/bar" },
+        { text: "Donate", internalLink: "/foo" },
+        { text: "Volunteer", internalLink: "/bar" },
       ]}
-      link="https://www.youtube.com/watch?v=KCduRWJ1hQo"
+      playButtonLink="https://www.youtube.com/watch?v=KCduRWJ1hQo"
     />
     <ThreeParagraphBlock
       title="Get involved"

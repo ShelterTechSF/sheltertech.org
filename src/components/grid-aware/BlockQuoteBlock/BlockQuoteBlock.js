@@ -31,7 +31,9 @@ const BlockQuoteBlock = ({ quote, attribution }) => {
         <div className={s.bleedMainContent}>
           <div className={s.gridAreaMiddle}>
             <figure>
-              <blockquote className={s.quote}>&quot;{quotes[0].quote}&quot;</blockquote>
+              <blockquote className={s.quote}>
+                &quot;{quotes[0].quote}&quot;
+              </blockquote>
               <figcaption className={s.attribution}>
                 &mdash;{quotes[0].attribution}
               </figcaption>
@@ -43,7 +45,9 @@ const BlockQuoteBlock = ({ quote, attribution }) => {
         <div className={s.bleedMainContent}>
           <div className={s.gridAreaMiddle}>
             <figure>
-              <blockquote className={s.quote}>&quot;{quotes[1].quote}&quot;</blockquote>
+              <blockquote className={s.quote}>
+                &quot;{quotes[1].quote}&quot;
+              </blockquote>
               <figcaption className={s.attribution}>
                 &mdash;{quotes[1].attribution}
               </figcaption>
@@ -55,7 +59,9 @@ const BlockQuoteBlock = ({ quote, attribution }) => {
         <div className={s.bleedMainContent}>
           <div className={s.gridAreaMiddle}>
             <figure>
-              <blockquote className={s.quote}>&quot;{quotes[2].quote}&quot;</blockquote>
+              <blockquote className={s.quote}>
+                &quot;{quotes[2].quote}&quot;
+              </blockquote>
               <figcaption className={s.attribution}>
                 &mdash;{quotes[2].attribution}
               </figcaption>

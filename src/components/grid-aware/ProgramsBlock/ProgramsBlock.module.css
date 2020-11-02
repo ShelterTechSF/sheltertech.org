@@ -62,13 +62,15 @@
 /* Program card block */
 
 .programsWrapper {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 @media (--tablet-and-down) {
   .programsWrapper {
-    justify-content: center;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-row-gap: 30px;
+    margin-top: 30px;
   }
 }

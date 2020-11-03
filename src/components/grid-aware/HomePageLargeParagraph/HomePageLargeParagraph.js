@@ -9,7 +9,7 @@ const HomePageLargeParagraph = ({ title, description }) => {
       <div className={s.bleedMainContent}>
         <div className={s.gridParent}>
           <div className={s.textWrapper}>
-            <p className={s.title}>{title}</p>
+            <div className={s.title}>{title}</div>
             <div className={s.description}>{description}</div>
           </div>
         </div>

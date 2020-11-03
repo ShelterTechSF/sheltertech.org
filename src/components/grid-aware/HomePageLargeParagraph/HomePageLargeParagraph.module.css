@@ -56,10 +56,4 @@
 .description {
   font: var(--font-title);
   margin-top: 40px;
-
-}
-
-div p {
-  margin-top: 0;
-  padding: 0;
 }

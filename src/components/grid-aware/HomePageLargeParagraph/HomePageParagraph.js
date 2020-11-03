@@ -10,7 +10,7 @@ const HomePageParagraph = ({ title, description }) => {
         <div className={s.gridParent}>
           <div className={s.textWrapper}>
             <p className={s.title}>{title}</p>
-            <p className={s.description}>{description}</p>
+            <div className={s.description}>{description}</div>
           </div>
         </div>
       </div>

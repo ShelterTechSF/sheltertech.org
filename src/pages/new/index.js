@@ -13,8 +13,6 @@ import ThreeParagraphBlock from "../../components/grid-aware/ThreeParagraphBlock
 import image1 from "../../components/grid-aware/ThreeParagraphBlock/stories/image1.png";
 import image2 from "../../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
 import image3 from "../../components/grid-aware/ThreeParagraphBlock/stories/image3.png";
-import TwoParagraphBlock from "../../components/grid-aware/TwoParagraphBlock";
-import darcelHeadshot from "../../components/grid-aware/TwoParagraphBlock/stories/darcel-jackson-headshot.png";
 import Layout from "../../components/layout";
 
 export default () => (

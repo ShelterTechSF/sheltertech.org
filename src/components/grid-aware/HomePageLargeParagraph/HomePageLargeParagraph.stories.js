@@ -1,18 +1,18 @@
 import React from "react";
 
-import HomePageParagraph from "./HomePageParagraph";
+import HomePageLargeParagraph from "./HomePageLargeParagraph";
 
 export default {
-  title: "Grid-Aware/HomePageParagraph",
-  component: HomePageParagraph,
+  title: "Grid-Aware/HomePageLargeParagraph",
+  component: HomePageLargeParagraph,
 };
 
 const Template = ({ title, description }) => (
-  <HomePageParagraph title={title} description={description} />
+  <HomePageLargeParagraph title={title} description={description} />
 );
 
-export const DefaultHomePageParagraph = Template.bind({});
-DefaultHomePageParagraph.args = {
+export const DefaultHomePageLargeParagraph = Template.bind({});
+DefaultHomePageLargeParagraph.args = {
   title: "We believe connectivity is a human right.",
   description:
     "Access to the internet and technology makes it possible for people to find a job, human services, and contact family and friends.",

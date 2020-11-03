@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import s from "./HomePageParagraph.module.css";
+import s from "./HomePageLargeParagraph.module.css";
 
-const HomePageParagraph = ({ title, description }) => {
+const HomePageLargeParagraph = ({ title, description }) => {
   return (
     <div className={s.bleedWrapper}>
       <div className={s.bleedMainContent}>
@@ -18,9 +18,9 @@ const HomePageParagraph = ({ title, description }) => {
   );
 };
 
-HomePageParagraph.propTypes = {
+HomePageLargeParagraph.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
 
-export default HomePageParagraph;
+export default HomePageLargeParagraph;

@@ -38,6 +38,9 @@
   .gridParent {
     display: block;
   }
+  .description {
+    margin-top: 40px;
+  }
 }
 
 .textWrapper {
@@ -51,6 +54,8 @@
 
 .description {
   font: var(--font-title);
+  margin-top: 40px;
+
 }
 
 div p {

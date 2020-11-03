@@ -27,7 +27,6 @@
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
   grid-template-rows: repeat(2, auto);
-  row-gap: 40px;
 }
 
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */

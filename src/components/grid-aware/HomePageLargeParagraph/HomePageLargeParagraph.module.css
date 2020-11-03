@@ -7,6 +7,7 @@
   padding-bottom: 120px;
   padding-top: 120px;
 }
+
 .bleedMainContent {
   grid-column: 2;
   grid-row: 1;
@@ -21,6 +22,7 @@
     padding-top: 80px;
   }
 }
+
 .gridParent {
   column-gap: var(--grid-column-gap);
   display: grid;
@@ -36,13 +38,16 @@
     display: block;
   }
 }
+
 .textWrapper {
   grid-column-end: 12;
   grid-column-start: 2;
 }
+
 .title {
   font: var(--font-headline);
 }
+
 .description {
   font: var(--font-title);
   margin-top: 40px;

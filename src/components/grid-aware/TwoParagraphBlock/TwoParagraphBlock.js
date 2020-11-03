@@ -12,6 +12,8 @@ const ImagePropType = PropTypes.shape({
   alt: PropTypes.string.isRequired,
 });
 
+/* Main component */
+
 const TwoParagraphBlock = ({
   title,
   paragraph1,
@@ -35,12 +37,16 @@ const TwoParagraphBlock = ({
     <div className={s.gridAreaBottomLeft}>
       <div className={s.paragraph2Wrapper}>{paragraph2}</div>
       <div className={s.ctaButton}>
-        <Button
-          text={ctaButton.text}
-          internalLink={ctaButton.internalLink}
-          externalLink={ctaButton.externalLink}
-          onClick={ctaButton.onClick}
-        />
+        {ctaButton.map((button) => (
+          <div key={button.text}>
+            <Button
+              text={button.text}
+              internalLink={button.internalLink}
+              externalLink={button.externalLink}
+              onClick={button.onClick}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -73,7 +79,7 @@ TwoParagraphBlock.propTypes = {
   paragraph1: PropTypes.string.isRequired,
   paragraph2: PropTypes.node.isRequired,
   image: ImagePropType.isRequired,
-  ctaButton: Button.propTypes.isRequired,
+  ctaButton: PropTypes.arrayOf(Button.propTypes).isRequired,
 };
 
 export default TwoParagraphBlock;

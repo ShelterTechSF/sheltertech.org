@@ -27,7 +27,7 @@ Gray.args = {
     "ShelterTech was founded in 2016 by Darcel Jackson, who experienced homelessness first hand. Darcel envisioned a Bay Area where technology serves everyone, and those who were most vulnerable had the digital infrastructure and tools they need to get back on their feet.",
   paragraph2: (
     <>
-      <p style={{ marginTop: "0" }}>
+      <p>
         Our all volunteer team is paving the way for a new kind of community
         organisation, one where expertise is shared across income boundaries and
         life experiences. From day one, we’ve worked side-by-side with those
@@ -43,7 +43,7 @@ Gray.args = {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-      <p style={{ marginBottom: "0" }}>
+      <p>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
         inventore veritatis et quasi architecto beatae vitae dicta sunt

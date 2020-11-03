@@ -1,5 +1,7 @@
 import React from "react";
 
+import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
+import articleSpotlightImage from "../../components/grid-aware/ArticleSpotlightCard/stories/background.png";
 import HomePageLargeParagraph from "../../components/grid-aware/HomePageLargeParagraph";
 import PartnersAndSponsorsBlock from "../../components/grid-aware/PartnersAndSponsorsBlock";
 import benetechLogo from "../../components/grid-aware/PartnersAndSponsorsBlock/stories/benetech-logo.png";
@@ -97,6 +99,13 @@ export default () => (
           alt: "Logo of Uber Technologies Inc. company.",
         },
       ]}
+    />
+    <ArticleSpotlightCard
+      eyebrowText="Partnership Spotlight"
+      title="Digital Equity Team of San Francisco"
+      description="Free Fiber Initiative summary we're working together to find new and different ways of building lasting infrastructure"
+      button={{ text: "Read more", internalLink: "/foo" }}
+      backgroundImage={articleSpotlightImage}
     />
   </Layout>
 );

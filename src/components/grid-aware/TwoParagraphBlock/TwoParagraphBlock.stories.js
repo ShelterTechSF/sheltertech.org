@@ -57,8 +57,10 @@ Gray.args = {
     url: image,
     alt: "Darcel Jackson head shot wearing a heather gray hoodie.",
   },
-  ctaButton: {
-    text: "More About us",
-    internalLink: "/foo",
-  },
+  ctaButton: [
+    {
+      text: "More About us",
+      internalLink: "/foo",
+    },
+  ],
 };

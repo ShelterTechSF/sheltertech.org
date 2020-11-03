@@ -18,8 +18,8 @@ import Layout from "../../components/layout";
 
 export default () => (
   <Layout>
-    <HomePageLargeParagraph 
-      title= "We believe connectivity is a human right."
+    <HomePageLargeParagraph
+      title="We believe connectivity is a human right."
       description="Access to the internet and technology makes it possible for people to find a job, human services, and contact family and friends."
     />
     <ThreeParagraphBlock

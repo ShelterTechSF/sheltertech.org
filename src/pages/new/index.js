@@ -90,10 +90,12 @@ export default () => (
         url: darcelHeadshot,
         alt: "Darcel Jackson head shot wearing a heather gray hoodie.",
       }}
-      ctaButton={{
-        text: "More About us",
-        internalLink: "/foo",
-      }}
+      ctaButton={[
+        {
+          text: "More About us",
+          internalLink: "/foo",
+        },
+      ]}
     />
     <PartnersAndSponsorsBlock
       title="Partners and sponsors"

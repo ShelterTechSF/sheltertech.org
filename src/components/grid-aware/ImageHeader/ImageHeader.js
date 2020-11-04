@@ -38,24 +38,22 @@ const ImageHeader = ({
     </div>
   );
 
-  const GridAreaRight = () => (
-    <div className={s.gridAreaRight}>
-      <div className={s.image1Wrapper}>
-        <img src={image1.url} alt={image1.alt} />
-      </div>
-      <div className={s.image2Wrapper}>
-        <img src={image2.url} alt={image2.alt} />
-      </div>
-    </div>
-  );
-
   return (
     <div className={s.bleedWrapper}>
       <div className={s.bleedBackground} />
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
+          <div className={s.gridAreaRight}>
+            <div className={s.image1Wrapper}>
+              <img src={image1.url} alt={image1.alt} />
+            </div>
+          </div>
           <GridAreaLeft />
-          <GridAreaRight />
+          <div className={s.gridAreaRight}>
+            <div className={s.image2Wrapper}>
+              <img src={image2.url} alt={image2.alt} />
+            </div>
+          </div>
         </section>
       </div>
     </div>

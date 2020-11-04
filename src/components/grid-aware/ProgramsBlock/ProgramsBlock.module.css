@@ -9,7 +9,7 @@
 
 @media (--tablet-and-down) {
   .bleedWrapper {
-    grid-template-columns: 40px 1fr 40px;
+    grid-template-columns: 20px 1fr 20px;
   }
 }
 
@@ -63,12 +63,13 @@
 
 .programsWrapper {
   display: grid;
+  grid-column-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
 }
 
 @media (--tablet-and-down) {
   .programsWrapper {
-    grid-row-gap: 30px;
+    grid-row-gap: 40px;
     grid-template-columns: 1fr;
     justify-items: center;
     margin-top: 30px;

@@ -1,1 +1,1 @@
-export { default } from "./ImageHeader.js";
+export { default } from "./ImageHeader";

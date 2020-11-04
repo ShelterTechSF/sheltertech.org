@@ -13,11 +13,11 @@
   min-width: 0;
 }
 
-@media (--tablet-and-down) {
+/* @media (--tablet-and-down) {
   .bleedWrapper {
     grid-template-columns: 40px 1fr 40px;
   }
-}
+} */
 
 
 /* Main grid */
@@ -36,8 +36,6 @@
 @media (--tablet-and-down) {
   .gridParent {
     display: block;
-    padding-bottom: 80px;
-    padding-top: 30px;
   }
 }
 
@@ -81,6 +79,16 @@
 /* Right grid area*/
 
 .image1Wrapper {
+  position: static;
+}
+
+.image2Wrapper {
+  position: static;
+  margin-top: 38px;
+}
+
+@media (--laptop-and-up) {
+.image1Wrapper {
   margin-top: 50px;
   position: relative;
   z-index: 1;
@@ -94,15 +102,4 @@
   z-index: 2;
   margin-bottom: 80px;
 }
-
-@media (--tablet-and-down) {
-  .image1Wrapper {
-    margin-top: 0;
-    position: static;
-  }
-
-  .image2Wrapper {
-    position: absolute;
-
-  }
 }

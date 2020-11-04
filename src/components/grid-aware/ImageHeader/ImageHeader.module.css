@@ -74,6 +74,7 @@
 
 .ctaButtonWrapper {
   margin-top: 30px;
+  margin-bottom: 96px;
 }
 
 
@@ -82,13 +83,16 @@
 .image1Wrapper {
   margin-top: 50px;
   position: relative;
+  z-index: 1;
 }
 
 .image2Wrapper {
-  bottom: 80px;
+  top: 271px;
   float: right;
   position: relative;
   left: 75px;
+  z-index: 2;
+  margin-bottom: 80px;
 }
 
 @media (--tablet-and-down) {

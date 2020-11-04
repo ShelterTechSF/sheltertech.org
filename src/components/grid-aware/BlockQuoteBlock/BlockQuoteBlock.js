@@ -4,14 +4,14 @@ import React from "react";
 import s from "./BlockQuoteBlock.module.css";
 
 const BlockQuoteBlock = ({ quotes }) => {
-  const quote = quotes.map(quote =>  
+  const quote = quotes.map( quote =>  
     <div className={s.bleedWrapper}>
     <div className={s.bleedMainContent}>
       <div className={s.gridAreaMiddle}>
-        <figure>
-          <blockquote >{quote.quote}</blockquote>
+        <figure className={s.figure}>
+          <blockquote className={s.blockQuote}>{quote.quote}</blockquote>
           <figcaption >
-            &mdash;{quote.attribution}
+            &mdash; {quote.attribution}
           </figcaption>
         </figure>
       </div>
@@ -22,6 +22,7 @@ const BlockQuoteBlock = ({ quotes }) => {
     <Carousel
       renderCenterLeftControls={null}
       renderCenterRightControls={null}
+      // renderBottomCenterControls={null}
     >
     {quote}
     </Carousel>

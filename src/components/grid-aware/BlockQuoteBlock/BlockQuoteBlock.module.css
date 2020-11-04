@@ -5,8 +5,8 @@
   grid-template-rows: auto 0;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
-  padding-bottom: 120px;
-  padding-top: 120px;
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
 
 .bleedMainContent {
@@ -30,13 +30,17 @@
 
 .quote {
   font: var(--font-body-medium);
-  margin: 0;
-  margin-bottom: 22px;
 }
 
 .attribution {
   font: var(--font-caption);
 }
   
+.figure {
+  margin: 0;
+}
 
-
+.blockQuote {
+  margin: 0;
+  margin-bottom: 22px;
+}

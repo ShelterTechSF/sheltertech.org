@@ -20,10 +20,10 @@ const ImageHeader = ({
 }) => {
   const GridAreaLeft = () => (
     <div className={s.gridAreaLeft}>
-      <h1 className={s.title}>{title}</h1>
-      <div className={s.subtitle}>{subtitle}</div>
-      <div className={s.description}>{description}</div>
-      <div className={s.ctaButton}>
+      <h1 className={s.titleWrapper}>{title}</h1>
+      <div className={s.subtitleWrapper}>{subtitle}</div>
+      <div className={s.descriptionWrapper}>{description}</div>
+      <div className={s.ctaButtonWrapper}>
         {ctaButton.map((button) => (
           <div key={button.text}>
             <Button
@@ -51,10 +51,13 @@ const ImageHeader = ({
 
   return (
     <div className={s.bleedWrapper}>
-      <section className={s.gridParent}>
-        <GridAreaLeft />
-        <GridAreaRight />
-      </section>
+      <div className={s.bleedBackground} />
+      <div className={s.bleedMainContent}>
+        <section className={s.gridParent}>
+          <GridAreaLeft />
+          <GridAreaRight />
+        </section>
+      </div>
     </div>
   );
 };

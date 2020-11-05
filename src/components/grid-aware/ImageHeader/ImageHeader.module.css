@@ -115,9 +115,7 @@
 
   .image2Wrapper {
     left: 40px;
-    margin-bottom: 40px;
-    margin-left: 85px;
-    margin-top: 38px;
+    margin: 38px 0 40px 85px;
     top: 0%;
   }
 }

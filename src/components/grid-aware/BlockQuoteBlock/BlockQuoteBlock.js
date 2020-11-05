@@ -1,31 +1,44 @@
-import Carousel from "nuka-carousel";
 import PropTypes from "prop-types";
 import React from "react";
+
+import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 import s from "./BlockQuoteBlock.module.css";
 
 const BlockQuoteBlock = ({ quotes }) => {
-  const quote = quotes.map( quote =>  
+
+  const Carousel =  () => (
+    <CarouselProvider
+    totalSlides={quotes.length}
+    isIntrinsicHeight={true}
+  >
+    <Slider>
+      { quotes.map((dataObj,index) => (
+        <Slide index={index} key={dataObj.quote}>
+          <figure className={s.innerWrapper}>
+            <blockquote 
+              className={s.quote} >&ldquo;{dataObj.quote}&rdquo;
+            </blockquote>
+            <figcaption className={s.attribution}>
+              &mdash;{dataObj.attribution}
+            </figcaption>
+          </figure>
+        </Slide>
+      )
+    )}
+    </Slider>
+    <DotGroup/>
+  </CarouselProvider>
+  )
+
+  return (
     <div className={s.bleedWrapper}>
     <div className={s.bleedMainContent}>
       <div className={s.gridAreaMiddle}>
-        <figure className={s.figure}>
-          <blockquote className={s.blockQuote}>{quote.quote}</blockquote>
-          <figcaption >
-            &mdash; {quote.attribution}
-          </figcaption>
-        </figure>
+        <Carousel/>
       </div>
     </div>
   </div>   
-)
-  return (
-    <Carousel
-      renderCenterLeftControls={null}
-      renderCenterRightControls={null}
-      // renderBottomCenterControls={null}
-    >
-    {quote}
-    </Carousel>
   );
 };
 

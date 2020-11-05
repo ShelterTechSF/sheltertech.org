@@ -1,5 +1,4 @@
 .bleedWrapper {
-  background: var(--color-gray-300);
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   grid-template-rows: auto 0;
@@ -7,6 +6,8 @@
   max-width: var(--grid-bleed-max-width);
   padding-bottom: 60px;
   padding-top: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .bleedMainContent {
@@ -28,19 +29,19 @@
   grid-column: 2;
 }
 
+.innerWrapper {
+  background: gray;
+  height: 100%;
+  margin: 0;
+  padding: 60px 50px;
+}
+
 .quote {
+  margin: 0;
   font: var(--font-body-medium);
 }
 
 .attribution {
   font: var(--font-caption);
-}
-  
-.figure {
-  margin: 0;
-}
-
-.blockQuote {
-  margin: 0;
-  margin-bottom: 22px;
+  margin-top: 22px;
 }

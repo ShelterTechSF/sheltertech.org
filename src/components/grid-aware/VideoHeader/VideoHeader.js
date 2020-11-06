@@ -56,12 +56,6 @@ const VideoHeader = ({
   title,
   description,
 }) => {
-  const GridPlayButton = () => (
-    <div className={s.gridPlayButton}>
-      <PlayButton link={playButtonLink} />
-    </div>
-  );
-
   return (
     <div className={s.bleedWrapper}>
       <div
@@ -72,7 +66,9 @@ const VideoHeader = ({
       />
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
-          <GridPlayButton />
+          <div className={s.gridPlayButtonArea}>
+            <PlayButton link={playButtonLink} />
+          </div>
           <div className={s.gridTextArea}>
             <VideoHeaderText title={title} description={description} />
             <CTAButtons buttons={ctaButtons} />

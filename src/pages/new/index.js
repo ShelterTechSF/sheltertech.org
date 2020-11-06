@@ -29,7 +29,7 @@ export default () => (
     <VideoHeader
       text={{
         title:
-          "X in 10 people experiencing homelessness lack access to the internet and essential digital services",
+          "Less than half of nearly 10,000 people experiencing homelessness in the Bay Area have reliable access to the internet.",
         description:
           "ShelterTech is a nonprofit organization dedicated to supporting people who are experiencing homelessness or housing insecurity by leveraging technology and connectivity.",
       }}

@@ -4,6 +4,7 @@ import ReactModal from "react-modal";
 
 import "../stylesheets/global.css";
 import { BurgerMenu, Navigation } from "./grid-aware/Navigation";
+import Footer from "./grid-aware/Footer";
 
 const navigationItems = [
   { text: "Programs", internalLink: "/new" },
@@ -35,6 +36,7 @@ const Layout = ({ children }) => {
         />
         {children}
       </div>
+      <Footer />
     </div>
   );
 };

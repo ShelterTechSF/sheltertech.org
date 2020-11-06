@@ -1,47 +1,101 @@
+/* Outter Grid */
 .bleedWrapper {
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
-  grid-template-rows: auto 0;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
-  padding-bottom: 60px;
-  padding-top: 60px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-.bleedMainContent {
-  grid-column: 2;
-  grid-row: 1;
-  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
-  min-width: 0;
 }
 
 @media (--tablet-and-down) {
   .bleedWrapper {
-    grid-template-columns: 40px 1fr 40px;
+    grid-template-columns: 30px 1fr 30px;
+    grid-template-rows: auto;
   }
 }
 
-/* Main grid areas */
-  
-.gridAreaMiddle {
-  grid-column: 2;
+@media (--tablet-and-down) {
+  .bleedBackground {
+    grid-row: 1;
+    grid-template-rows: auto;
+  }
 }
 
+/* Main grid */
+
+.gridParent {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-column-start: 2;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  padding: 100px 0;
+  row-gap: 50px;
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.gridParent > * {
+  min-width: 0;
+}
+
+.gridAreaMiddle {
+  grid-column: 1 / span 12;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    column-gap: 10px;
+    grid-column: 1/ span 13;
+    grid-template-columns: repeat(13, minmax(0, 1fr));
+    padding: 0;
+  }
+
+  .gridAreaMiddle {
+    grid-column: 1 / span 13;
+  }
+}
+
+
 .innerWrapper {
-  background: gray;
+  background: var(--color-gray-300);
   height: 100%;
   margin: 0;
   padding: 60px 50px;
 }
+ 
+@media (--tablet-and-down) {
+  .innerWrapper {
+    grid-column: 1 /span 13;
+    grid-row: 1;
+  }
+} 
 
 .quote {
-  margin: 0;
   font: var(--font-body-medium);
+  margin: 0;
 }
 
 .attribution {
   font: var(--font-caption);
   margin-top: 22px;
 }
+
+.dots {
+  padding-top: 19px;
+  text-align: center;
+}
+
+.dots button {
+  border-radius: 50%;
+  border-width: 0;
+  height: 6px;
+  margin: 10px;
+  padding: 6px;
+}
+
+button:disabled {
+  background-color: var(--color-sheltertech-blue);
+}
+
+button:not(:disabled) {
+  background-color: var(--color-gray-400);
+}
+

@@ -1,0 +1,175 @@
+/* Background bleed */
+
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 0;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+/* Main grid */
+
+.gridParent {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-template-rows: 120px 380px 78px;
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.gridParent > * {
+  min-width: 0;
+}
+
+/* Top Row */
+
+.gridTopRow {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--color-black);
+  grid-row: 1;
+  grid-column: 1 / span 12;
+}
+
+.subscribeContainer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: baseline;
+}
+
+.subscribeMessage {
+  padding-right: 20px;
+  width: 340px;
+  color: var(--color-white);
+  font: var(--font-subtitle);
+}
+
+.gridTopRow a {
+  padding: 14px 40px;
+  border: 0;
+  height: 21px;
+  width: 59px;
+}
+
+.gridTopRow a:hover {
+  top: 0;
+}
+
+.formInput {
+  display: flex;
+}
+
+input {
+  width: 291px;
+}
+
+input[type=text] {
+  height:19px;
+  border: 0;
+  padding: 16px 0 15px 17px;
+  font: var(--font-body-small);
+  color: var(--color-black);
+}
+
+
+/* Middle Row */
+
+.gridMiddleRow {
+  grid-row: 2;
+  grid-column: 1 / span 12;
+  background-color: var(--color-deep-blue);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 60px 75px 0;
+}
+
+.gridMiddleLeftContainer {
+  text-align: left;
+}
+
+.gridMiddleRightContainer {
+  text-align: right;
+}
+
+.footerLinksContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.footerLinksColumn {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.footerLinksColumn:not(:last-child) {
+  margin-right: 70px;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  color: var(--color-white);
+  font: var(--font-body-small);
+}
+
+.footerLinks a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footerLinks a:not(:first-child) {
+  margin-top: 15px;
+}
+
+.footerLinksTitle {
+  font: var(--font-caption);
+  color: var(--color-white);
+}
+
+.sealsContainer {
+  margin-top: 60px;
+}
+
+.sealsContainer img:not(:last-child) {
+  margin-right: 39px;
+}
+
+.socialMediaLinks {
+  margin-top: 40px;
+}
+
+.socialMediaLinks a:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* Bottom Row */
+
+.gridBottomRow {
+  grid-row: 3;
+  background-color: var(--color-midnight-blue);
+  grid-column: 1 / span 12;
+  font-size: 14px;
+  font-family: var(--font-family-lato);
+  line-height: 16.8px;
+  color: var(--color-gray-300);
+  display: grid;
+  font-weight: 300;
+  padding: 0 60px;
+}
+
+.organizationInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+

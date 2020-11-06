@@ -17,16 +17,16 @@ const GridMiddleLeft = () => (
   <div className={s.gridMiddleLeftContainer}>
     <img src={shelterTechLogoWhite} alt="White ShelterTech Logo" />
     <div className={s.socialMediaLinks}>
-      <a href="/facebook">
+      <a href="https://www.facebook.com/ShelterTechOrg/">
         <img src={facebookLogo} alt="Facebook Logo" />
       </a>
-      <a href="/twitter">
+      <a href="https://twitter.com/sheltertechorg">
         <img src={twitterLogo} alt="Twitter Logo" />
       </a>
-      <a href="/instagram">
+      <a href="https://www.instagram.com/shelter_tech">
         <img src={instagramLogo} alt="Instagram Logo" />
       </a>
-      <a href="/github">
+      <a href="https://github.com/ShelterTechSF">
         <img src={githubLogo} alt="Github Logo" />
       </a>
     </div>

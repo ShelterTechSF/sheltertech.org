@@ -29,7 +29,7 @@
   .gridParent {
     column-gap: var(--grid-column-gap);
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 190px auto auto;
   }
 }
 
@@ -59,10 +59,7 @@
 }
 
 .gridTopRow a {
-  border: 0;
-  height: 21px;
   padding: 14px 40px;
-  width: 59px;
 }
 
 .gridTopRow a:hover {
@@ -78,7 +75,6 @@
   border: 0;
   color: var(--color-black);
   font: var(--font-body-small);
-  height: 19px;
   padding: 16px 0 15px 17px;
   width: 291px;
 }
@@ -108,12 +104,6 @@
 
   .formInput input {
     width: 155px;
-  }
-
-  .gridTopRow a {
-    border: 1px solid var(--color-sheltertech-blue);
-    height: 20px;
-    width: 51px;
   }
 }
 

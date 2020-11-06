@@ -39,7 +39,6 @@
   grid-column-start: 2;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
   padding: 140px 0;
-  row-gap: 50px;
 }
 
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */
@@ -93,19 +92,22 @@
 }
 
 
-/* Job block */
+/* Jobs block */
 
-.jobItem {
-  margin-bottom: 25px;
+.jobs {
+  color: var(--color-white);
 }
 
-.jobTitle {
-  color: var(--color-white);
+.jobs div:nth-child(odd) {
   font: var(--font-subtitle);
+  margin-top: 25px;
 }
 
-.jobDescription {
-  color: var(--color-white);
+.jobs div:nth-child(even) {
   font: var(--font-body-medium);
   margin-top: 25px;
+}
+
+.jobs div:first-child {
+  margin-top: 0;
 }

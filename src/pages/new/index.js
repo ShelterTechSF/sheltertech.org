@@ -35,10 +35,11 @@ export default () => (
       }}
       image={videoHeaderImage}
       ctaButtons={[
-        { text: "Donate", internalLink: "/foo" },
-        { text: "Volunteer", internalLink: "/bar" },
+        { text: "Donate", internalLink: "/new/donate" },
+        { text: "Volunteer", internalLink: "/new/volunteer" },
       ]}
       playButtonLink="https://www.youtube.com/watch?v=KCduRWJ1hQo"
+    />
     <HomePageLargeParagraph
       title="We believe connectivity is a human right."
       description="Access to the internet and technology makes it possible for people to find a job, human services, and contact family and friends."

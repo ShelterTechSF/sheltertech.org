@@ -8,31 +8,14 @@
 }
 
 .bleedBackground {
-  background-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%), var(--background-image);
-  background-size: cover;
+  background:
+    linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%),
+    center / cover var(--background-image);
   grid-column: 1/ span 3;
   grid-row: 1;
   /* Override grid item default of auto so that item contents cannot stretch the grid itself */
   min-width: 0;
 }
-
-@media (--tablet-and-down) {
-  .bleedWrapper {
-    background-color: var(--color-black);
-    display: grid;
-    grid-template-columns: 40px 1fr 40px;
-    grid-template-rows: 214px auto;
-    max-width: var(--grid-bleed-max-width);
-    padding-bottom: 55.5px;
-  }
-
-  .bleedBackground {
-    background-image: linear-gradient(360deg, #000 0%, rgba(0, 0, 0, 0) 100%), var(--background-image);
-    grid-row: 1;
-  }
-}
-
-/* Main grid */
 
 .bleedMainContent {
   grid-column: 2;
@@ -41,6 +24,27 @@
   min-width: 0;
 }
 
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    background-color: var(--color-black);
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-rows: 214px auto;
+    padding-bottom: 55.5px;
+  }
+
+  .bleedBackground {
+    background-image: linear-gradient(360deg, #000 0%, rgba(0, 0, 0, 0) 100%), var(--background-image);
+    grid-row: 1;
+  }
+
+  .bleedMainContent {
+    grid-row: 1 / span 2;
+  }
+}
+
+/* Main grid */
 .gridParent {
   column-gap: var(--grid-column-gap);
   display: grid;
@@ -62,10 +66,6 @@
 }
 
 @media (--tablet-and-down) {
-  .bleedMainContent {
-    grid-row: 1 /span 2;
-  }
-
   .gridParent {
     column-gap: 0;
     display: grid;
@@ -123,12 +123,6 @@
   margin-right: 24px;
 }
 
-/* PlayIcon svg */
-.playIcon {
-  height: 45px;
-  width: 35px;
-}
-
 @media (--tablet-and-down) {
   .ctaButtonRow {
     margin-top: 20px;
@@ -137,7 +131,15 @@
   .ctaButtonRowItem {
     margin-top: 20px;
   }
+}
 
+/* PlayIcon svg */
+.playIcon {
+  height: 45px;
+  width: 35px;
+}
+
+@media (--tablet-and-down) {
   .playIcon {
     height: 33px;
     width: 25.67px;

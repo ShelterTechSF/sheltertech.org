@@ -4,13 +4,6 @@ import Button from "../../inline/Button";
 import playIcon from "./PlayIcon.svg";
 import s from "./VideoHeader.module.css";
 
-/* PropType shapes */
-
-const VideoHeaderPropType = PropTypes.shape({
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-});
-
 /* Subcomponents */
 
 const CTAButtons = ({ buttons }) => (
@@ -32,20 +25,21 @@ CTAButtons.propTypes = {
   buttons: PropTypes.arrayOf(Button.propTypes).isRequired,
 };
 
-const VideoHeaderText = ({ text }) => (
+const VideoHeaderText = ({ title, description }) => (
   <div className={s.textContainer}>
-    <div className={s.title}>{text.title}</div>
-    <div className={s.description}>{text.description}</div>
+    <div className={s.title}>{title}</div>
+    <div className={s.description}>{description}</div>
   </div>
 );
 
 VideoHeaderText.propTypes = {
-  text: VideoHeaderPropType.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 const PlayButton = ({ link }) => (
   <a rel="noreferrer" href={link} target="_blank">
-    <img src={playIcon} alt="Play Video" className={s.playIcon} />
+    <img className={s.playIcon} src={playIcon} alt="Play Video" />
   </a>
 );
 
@@ -55,7 +49,13 @@ PlayButton.propTypes = {
 
 /* Main component */
 
-const VideoHeader = ({ ctaButtons, image, playButtonLink, text }) => {
+const VideoHeader = ({
+  ctaButtons,
+  image,
+  playButtonLink,
+  title,
+  description,
+}) => {
   const GridPlayButton = () => (
     <div className={s.gridPlayButton}>
       <PlayButton link={playButtonLink} />
@@ -74,7 +74,7 @@ const VideoHeader = ({ ctaButtons, image, playButtonLink, text }) => {
         <section className={s.gridParent}>
           <GridPlayButton />
           <div className={s.gridTextArea}>
-            <VideoHeaderText text={text} />
+            <VideoHeaderText title={title} description={description} />
             <CTAButtons buttons={ctaButtons} />
           </div>
         </section>
@@ -87,10 +87,8 @@ VideoHeader.propTypes = {
   ctaButtons: PropTypes.arrayOf(Button.propTypes).isRequired,
   image: PropTypes.string.isRequired,
   playButtonLink: PropTypes.string.isRequired,
-  text: PropTypes.shape({
-    title: PropTypes.string,
-    description: PropTypes.string,
-  }).isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default VideoHeader;

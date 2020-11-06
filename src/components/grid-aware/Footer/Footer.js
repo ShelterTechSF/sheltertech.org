@@ -46,8 +46,8 @@ const FooterLinks = () => (
     <div className={s.footerLinksColumn}>
       <div className={s.footerLinksTitle}>What You Can Do</div>
       <div className={s.footerLinks}>
-        <a href="/volunteer">Volunteer</a>
-        <a href="/donate">Donate</a>
+        <a href="/new/volunteer">Volunteer</a>
+        <a href="/new/donate">Donate</a>
         <a href="/partnerships">Partnerships</a>
       </div>
     </div>

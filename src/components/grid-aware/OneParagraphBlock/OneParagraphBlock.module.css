@@ -1,0 +1,111 @@
+/* Outer grid */
+
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+.bleedBackground {
+  background: var(--color-black);
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+
+.bleedMainContent {
+  grid-column: 2;
+  grid-row: 1;
+  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    grid-template-columns: 40px 1fr 40px;
+  }
+
+  .bleedBackground {
+    grid-column: 1 / span 3;
+  }
+}
+
+
+/* Main grid */
+
+.gridParent {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-column-start: 2;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  padding: 140px 0;
+  row-gap: 50px;
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.gridParent > * {
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    display: block;
+    padding-bottom: 80px;
+    padding-top: 50px;
+  }
+}
+
+
+/* Main grid areas */
+
+.gridAreaLeft {
+  grid-column: 2 / span 4;
+}
+
+.gridAreaRight {
+  grid-column: 7 / span 5;
+}
+
+
+/* Component wrappers */
+
+.jobsWrapper {
+  margin-top: 0;
+}
+
+.ctaButtonWrapper {
+  margin-top: 40px;
+}
+
+
+@media (--tablet-and-down) {
+  .jobsWrapper {
+    margin-top: 40px;
+  }
+}
+
+
+/* Title block */
+
+.title {
+  color: var(--color-white);
+  font: var(--font-headline);
+}
+
+
+/* Job block */
+
+.jobItem {
+  margin-bottom: 25px;
+}
+
+.jobTitle {
+  color: var(--color-white);
+  font: var(--font-subtitle);
+}
+
+.jobDescription {
+  color: var(--color-white);
+  font: var(--font-body-medium);
+  margin-top: 25px;
+}

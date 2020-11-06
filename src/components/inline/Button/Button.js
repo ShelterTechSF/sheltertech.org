@@ -37,7 +37,9 @@ const Button = ({ text, externalLink, internalLink, onClick }) => {
       </button>
     );
   }
-  throw new Error("PropTypes are invalid");
+  throw new Error(
+    "Missing required prop. Must specify one of: externalLink, internalLink, or onClick."
+  );
 };
 
 Button.propTypes = PropTypes.oneOfType([

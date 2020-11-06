@@ -82,7 +82,7 @@ const Footer = () => {
       <div className={s.subscribeContainer}>
         <div className={s.subscribeMessage}>Subscribe to get updates</div>
         <div className={s.formInput}>
-          <input type="text" placeholder="email address" autoComplete="off" />
+          <input type="text" placeholder="email address" />
           <Button text="submit" internalLink="/mailchimp" />
         </div>
       </div>

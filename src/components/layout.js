@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import ReactModal from "react-modal";
 
 import "../stylesheets/global.css";
-import { BurgerMenu, Navigation } from "./grid-aware/Navigation";
 import Footer from "./grid-aware/Footer";
+import { BurgerMenu, Navigation } from "./grid-aware/Navigation";
 
 const navigationItems = [
   { text: "Programs", internalLink: "/new" },

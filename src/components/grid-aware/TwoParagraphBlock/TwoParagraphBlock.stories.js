@@ -8,14 +8,14 @@ export default {
   component: TwoParagraphBlock,
 };
 
-const Template = ({ title, paragraph1, paragraph2, image1, ctaButton }) => (
+const Template = ({ title, paragraph1, paragraph2, image1, ctaButtons }) => (
   <div style={{ border: "1px dashed rebeccapurple" }}>
     <TwoParagraphBlock
       title={title}
       paragraph1={paragraph1}
       paragraph2={paragraph2}
       image={image1}
-      ctaButton={ctaButton}
+      ctaButtons={ctaButtons}
     />
   </div>
 );
@@ -57,7 +57,7 @@ Gray.args = {
     url: image,
     alt: "Darcel Jackson head shot wearing a heather gray hoodie.",
   },
-  ctaButton: [
+  ctaButtons: [
     {
       text: "More About us",
       internalLink: "/foo",

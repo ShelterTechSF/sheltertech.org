@@ -140,12 +140,12 @@
 
 /* CTA block */
 
-.ctaButton {
+.ctaButtons {
   margin-top: 60px;
 }
 
 @media (--tablet-and-down) {
-  .ctaButton {
+  .ctaButtons {
     margin-top: 40px;
   }
 }

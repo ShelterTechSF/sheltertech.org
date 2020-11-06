@@ -19,7 +19,7 @@ const TwoParagraphBlock = ({
   paragraph1,
   paragraph2,
   image,
-  ctaButton,
+  ctaButtons,
 }) => {
   const GridAreaTopLeft = () => (
     <div className={s.gridAreaTopLeft}>
@@ -36,8 +36,8 @@ const TwoParagraphBlock = ({
   const GridAreaBottomLeft = () => (
     <div className={s.gridAreaBottomLeft}>
       <div className={s.paragraph2Wrapper}>{paragraph2}</div>
-      <div className={s.ctaButton}>
-        {ctaButton.map((button) => (
+      <div className={s.ctaButtons}>
+        {ctaButtons.map((button) => (
           <div key={button.text}>
             <Button
               text={button.text}
@@ -79,7 +79,7 @@ TwoParagraphBlock.propTypes = {
   paragraph1: PropTypes.string.isRequired,
   paragraph2: PropTypes.node.isRequired,
   image: ImagePropType.isRequired,
-  ctaButton: PropTypes.arrayOf(Button.propTypes).isRequired,
+  ctaButtons: PropTypes.arrayOf(Button.propTypes).isRequired,
 };
 
 export default TwoParagraphBlock;

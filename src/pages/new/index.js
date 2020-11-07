@@ -1,5 +1,8 @@
 import React from "react";
 
+import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
+import articleSpotlightImage from "../../components/grid-aware/ArticleSpotlightCard/stories/background.png";
+import HomePageLargeParagraph from "../../components/grid-aware/HomePageLargeParagraph";
 import PartnersAndSponsorsBlock from "../../components/grid-aware/PartnersAndSponsorsBlock";
 import benetechLogo from "../../components/grid-aware/PartnersAndSponsorsBlock/stories/benetech-logo.png";
 import ciscoLogo from "../../components/grid-aware/PartnersAndSponsorsBlock/stories/cisco-logo.png";
@@ -21,6 +24,10 @@ import Layout from "../../components/layout";
 
 export default () => (
   <Layout>
+    <HomePageLargeParagraph
+      title="We believe connectivity is a human right."
+      description="Access to the internet and technology makes it possible for people to find a job, human services, and contact family and friends."
+    />
     <ThreeParagraphBlock
       title="Get involved"
       paragraph1={{
@@ -126,6 +133,13 @@ export default () => (
           alt: "Logo of Uber Technologies Inc. company.",
         },
       ]}
+    />
+    <ArticleSpotlightCard
+      eyebrowText="Partnership Spotlight"
+      title="Digital Equity Team of San Francisco"
+      description="Free Fiber Initiative summary we're working together to find new and different ways of building lasting infrastructure"
+      button={{ text: "Read more", internalLink: "/foo" }}
+      backgroundImage={articleSpotlightImage}
     />
   </Layout>
 );

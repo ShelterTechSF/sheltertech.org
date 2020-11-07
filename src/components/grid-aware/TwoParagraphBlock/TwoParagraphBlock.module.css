@@ -3,7 +3,6 @@
 .bleedWrapper {
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
-  grid-template-rows: auto 0;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
 }
@@ -38,7 +37,7 @@
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
   grid-template-rows: auto 590px;
-  padding-top: 122px;
+  padding-top: 140px;
   row-gap: 84px;
 }
 
@@ -90,6 +89,10 @@
   margin-top: 0;
 }
 
+.paragraph2Wrapper p {
+  margin-top: 25px;
+}
+
 .paragraph2Wrapper p:first-child {
   margin-top: 0;
 }
@@ -107,6 +110,7 @@
   .paragraph1Wrapper {
     margin-right: 40px;
     margin-top: 40px;
+    font-size: 16px;
   }
 
   .paragraph2Wrapper {
@@ -115,7 +119,6 @@
   }
 
   .image1Wrapper {
-    margin-left: 40px;
     margin-top: 40px;
     position: static;
   }

@@ -1,10 +1,5 @@
 import PropTypes from "prop-types";
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  DotGroup,
-} from "pure-react-carousel";
+import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel";
 import React from "react";
 
 import "pure-react-carousel/dist/react-carousel.es.css";
@@ -27,7 +22,7 @@ const BlockQuoteBlock = ({ quotes }) => {
           </Slide>
         ))}
       </Slider>
-      <DotGroup className={s.dots}/>
+      <DotGroup className={s.dots} />
     </CarouselProvider>
   );
 

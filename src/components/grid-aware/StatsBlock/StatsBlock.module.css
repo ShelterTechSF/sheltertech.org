@@ -1,0 +1,97 @@
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  grid-template-rows: auto 0;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+.bleedMainContent {
+  grid-column: 2;
+  grid-row: 1;
+  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    grid-template-columns: 40px 1fr 40px;
+    background-color: var(--color-black)
+  }
+}
+
+/* Main grid */
+
+.gridParent {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  grid-template-rows: repeat(2, auto);
+  padding-bottom: 150px;
+  padding-top: 100px;
+  padding-left: 75px;
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.gridParent > * {
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    display: block;
+    padding-bottom: 78px;
+    padding-top: 50px;
+    padding-left: 0;
+  }
+}
+
+.allTextWrap {
+  grid-column-start: 2;
+  grid-column-end: 11;
+}
+
+.gridAreaBottom {
+  display: flex;
+  flex-direction: row;
+  grid-row: 2;
+}
+
+@media (--tablet-and-down) {
+  .gridAreaBottom {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.title {
+  font: var(--font-title);
+  margin: 0;
+  padding-bottom: 54px;
+}
+
+.percent {
+  margin-right: 110px;
+  font-size: 72px;
+  width: 250px;
+  height: 94px;
+  margin-bottom: 5px;
+}
+
+.statement {
+  margin-right: 110px;
+  font: var(--font-body-medium);
+  height: 52px;
+}
+
+@media (--tablet-and-down) {
+  .statement {
+    margin: 0;
+    font: var(--font-body-medium);
+    height: 52px;
+    margin-right: 85px;
+    margin-bottom: 40px;
+  }
+}

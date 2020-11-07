@@ -15,8 +15,8 @@
 
 @media (--tablet-and-down) {
   .bleedWrapper {
+    background-color: var(--color-black);
     grid-template-columns: 40px 1fr 40px;
-    background-color: var(--color-black)
   }
 }
 
@@ -30,8 +30,8 @@
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
   grid-template-rows: repeat(2, auto);
   padding-bottom: 150px;
-  padding-top: 100px;
   padding-left: 75px;
+  padding-top: 100px;
 }
 
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */
@@ -43,14 +43,14 @@
   .gridParent {
     display: block;
     padding-bottom: 78px;
-    padding-top: 50px;
     padding-left: 0;
+    padding-top: 50px;
   }
 }
 
 .allTextWrap {
-  grid-column-start: 2;
   grid-column-end: 11;
+  grid-column-start: 2;
 }
 
 .gridAreaBottom {
@@ -73,25 +73,25 @@
 }
 
 .percent {
-  margin-right: 110px;
   font-size: 72px;
-  width: 250px;
   height: 94px;
   margin-bottom: 5px;
+  margin-right: 110px;
+  width: 250px;
 }
 
 .statement {
-  margin-right: 110px;
   font: var(--font-body-medium);
   height: 52px;
+  margin-right: 110px;
 }
 
 @media (--tablet-and-down) {
   .statement {
-    margin: 0;
     font: var(--font-body-medium);
     height: 52px;
-    margin-right: 85px;
+    margin: 0;
     margin-bottom: 40px;
+    margin-right: 85px;
   }
 }

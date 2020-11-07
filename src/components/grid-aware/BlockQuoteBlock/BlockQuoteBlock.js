@@ -4,7 +4,6 @@ import {
   Slider,
   Slide,
   DotGroup,
-  Dot,
 } from "pure-react-carousel";
 import React from "react";
 
@@ -28,7 +27,7 @@ const BlockQuoteBlock = ({ quotes }) => {
           </Slide>
         ))}
       </Slider>
-      <DotGroup className={s.dots} />
+      <DotGroup className={s.dots}/>
     </CarouselProvider>
   );
 

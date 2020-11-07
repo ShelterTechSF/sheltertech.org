@@ -9,7 +9,7 @@ const StatsBlock = ({ title, numberAndStatement }) => {
   const NumberAndStatement = () => (
     <div className={s.gridAreaBottom}>
       {numberAndStatement.map((obj) => (
-        <div>
+        <div key={obj.number}>
           <div className={s.number}>{obj.number}</div>
           <div className={s.statement}>{obj.statement}</div>
         </div>

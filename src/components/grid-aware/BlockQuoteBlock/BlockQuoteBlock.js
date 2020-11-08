@@ -28,11 +28,8 @@ const BlockQuoteBlock = ({ quotes }) => {
 
   return (
     <div className={s.bleedWrapper}>
-      <div className={s.bleedBackground} />
       <div className={s.gridParent}>
-        <div className={s.gridAreaMiddle}>
           <Carousel />
-        </div>
       </div>
     </div>
   );

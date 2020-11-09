@@ -1,0 +1,43 @@
+/* Background bleed */
+
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  margin: auto;
+}
+
+.infoBlock {
+  background-color: var(--color-midnight-blue);
+  color: var(--color-gray-300);
+  display: grid;
+  font-family: var(--font-family-lato);
+  font-size: 14px;
+  font-weight: 300;
+  grid-column: 1 / span 12;
+  line-height: 16.8px;
+  padding: 30px 60px;
+}
+
+.organizationInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    grid-template-columns: none;
+  }
+
+  .infoBlock {
+    margin: 0;
+  }
+
+  .organizationInfo {
+    flex-direction: column;
+  }
+
+  .organizationInfo address {
+    margin-top: 15px;
+  }
+}
+

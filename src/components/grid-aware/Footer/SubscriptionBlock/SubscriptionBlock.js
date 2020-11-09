@@ -12,7 +12,9 @@ const SubscriptionBlock = ({ inputPlaceHolderText }) => {
         <div className={s.subscribeContainer}>
           <div className={s.subscribeMessage}>Subscribe to get updates</div>
           <form className={s.formInput}>
-            <InputText placeholderText={inputPlaceHolderText} />
+            <div className={s.inputText}>
+              <InputText placeholderText={inputPlaceHolderText} />
+            </div>
             <Button text="submit" internalLink="/mailchimp" />
           </form>
         </div>

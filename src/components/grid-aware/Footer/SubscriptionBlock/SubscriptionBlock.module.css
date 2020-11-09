@@ -42,11 +42,7 @@
   flex-direction: row;
 }
 
-.formInput input {
-  border-color: #e0e0e0;
-  color: var(--color-black);
-  font: var(--font-body-small);
-  padding: 16px 16px 15px 17px;
+.inputText {
   width: 291px;
 }
 
@@ -62,7 +58,7 @@
   }
 
   .subscribeContainer {
-    align-items: normal;
+    align-items: center;
     display: flex;
     flex-direction: column;
   }
@@ -71,11 +67,11 @@
     margin-right: 0;
   }
 
-  .formInput {
-    display: unset;
+  .inputText {
+    display: inline;
   }
 
-  .formInput input {
+  .inputText {
     width: 155px;
   }
 }

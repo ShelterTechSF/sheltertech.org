@@ -3,7 +3,7 @@ import React from "react";
 import s from "./Navigation.module.css";
 
 /* PropType shapes */
-const FooterNavigationObjectsPropType = PropTypes.shape({
+const FooterNavigationPropType = PropTypes.shape({
   title: PropTypes.string.isRequired,
   links: PropTypes.arrayOf(
     PropTypes.shape({
@@ -65,7 +65,7 @@ const FooterLinks = ({ footerNavigation }) => (
 );
 
 FooterLinks.propTypes = {
-  footerNavigation: PropTypes.arrayOf(FooterNavigationObjectsPropType)
+  footerNavigation: PropTypes.arrayOf(FooterNavigationPropType)
     .isRequired,
 };
 const Seals = ({ seals }) => (
@@ -88,7 +88,7 @@ const NavigationRightArea = ({ footerNavigation, seals }) => (
 );
 
 NavigationRightArea.propTypes = {
-  footerNavigation: PropTypes.arrayOf(FooterNavigationObjectsPropType)
+  footerNavigation: PropTypes.arrayOf(FooterNavigationPropType)
     .isRequired,
   seals: PropTypes.arrayOf(SealsPropType).isRequired,
 };
@@ -116,8 +116,7 @@ const Navigation = ({
 };
 
 Navigation.propTypes = {
-  footerNavigation: PropTypes.arrayOf(FooterNavigationObjectsPropType)
-    .isRequired,
+  footerNavigation: PropTypes.arrayOf(FooterNavigationPropType).isRequired,
   seals: PropTypes.arrayOf(SealsPropType).isRequired,
   shelterTechLogo: ShelterTechLogoPropType.isRequired,
   socialMediaLinks: PropTypes.arrayOf(SocialMediaLinksPropType).isRequired,

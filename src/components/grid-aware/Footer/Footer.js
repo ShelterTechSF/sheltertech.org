@@ -6,7 +6,7 @@ import Navigation from "./NavigationBlock/NavigationBlock";
 import SubscriptionBlock from "./SubscriptionBlock/SubscriptionBlock";
 
 /* PropType shapes */
-const FooterNavigationObjectsPropType = PropTypes.shape({
+const FooterNavigationPropType = PropTypes.shape({
   title: PropTypes.string.isRequired,
   links: PropTypes.arrayOf(
     PropTypes.shape({
@@ -57,8 +57,7 @@ const Footer = ({
 
 Footer.propTypes = {
   inputPlaceHolderText: PropTypes.string.isRequired,
-  footerNavigation: PropTypes.arrayOf(FooterNavigationObjectsPropType)
-    .isRequired,
+  footerNavigation: PropTypes.arrayOf(FooterNavigationPropType).isRequired,
   seals: PropTypes.arrayOf(SealsPropType).isRequired,
   shelterTechLogo: ShelterTechLogoPropType.isRequired,
   socialMediaLinks: PropTypes.arrayOf(SocialMediaLinksPropType).isRequired,

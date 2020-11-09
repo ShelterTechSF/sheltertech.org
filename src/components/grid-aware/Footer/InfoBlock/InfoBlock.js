@@ -1,6 +1,6 @@
+import PropTypes from "prop-types";
 import React from "react";
 import s from "./InfoBlock.module.css";
-import PropTypes from "prop-types";
 
 function getYear() {
   return new Date().getFullYear();

@@ -1,11 +1,5 @@
 import PropTypes from "prop-types";
 import React from "react";
-import shelterTechLogoWhite from "../sheltertech-logo-white.svg";
-import facebookLogo from "../stories/facebook.svg";
-import githubLogo from "../stories/github.svg";
-import instagramLogo from "../stories/instagram.svg";
-import sealOfTransparency from "../stories/seal-of-transparency.svg";
-import twitterLogo from "../stories/twitter.svg";
 import s from "./Navigation.module.css";
 
 /* PropType shapes */

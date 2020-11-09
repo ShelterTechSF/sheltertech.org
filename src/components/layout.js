@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import ReactModal from "react-modal";
 
 import "../stylesheets/global.css";
-import shelterTechLogoWhite from "./grid-aware/Footer/sheltertech-logo-white.svg";
 import Footer from "./grid-aware/Footer";
+import shelterTechLogoWhite from "./grid-aware/Footer/sheltertech-logo-white.svg";
 import facebookLogo from "./grid-aware/Footer/stories/facebook.svg";
 import githubLogo from "./grid-aware/Footer/stories/github.svg";
 import instagramLogo from "./grid-aware/Footer/stories/instagram.svg";

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import shelterTechLogoWhite from "../sheltertech-logo-white.svg";
 import facebookLogo from "../stories/facebook.svg";
@@ -7,79 +8,125 @@ import sealOfTransparency from "../stories/seal-of-transparency.svg";
 import twitterLogo from "../stories/twitter.svg";
 import s from "./Navigation.module.css";
 
-const NavigationLeftArea = () => (
+/* PropType shapes */
+const FooterNavigationObjectsPropType = PropTypes.shape({
+  title: PropTypes.string.isRequired,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    })
+  ),
+});
+
+const SealsPropType = PropTypes.shape({
+  logo: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+});
+
+const ShelterTechLogoPropType = PropTypes.shape({
+  logo: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+});
+
+const SocialMediaLinksPropType = PropTypes.shape({
+  url: PropTypes.string.isRequired,
+  logo: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+});
+
+const NavigationLeftArea = ({ shelterTechLogo, socialMediaLinks }) => (
   <div>
-    <img src={shelterTechLogoWhite} alt="ShelterTech Logo" />
+    <img src={shelterTechLogo.logo} alt={shelterTechLogo.alt} />
     <div className={s.socialMediaLinks}>
-      <a href="https://www.facebook.com/ShelterTechOrg/">
-        <img src={facebookLogo} alt="Facebook Logo" />
-      </a>
-      <a href="https://twitter.com/sheltertechorg">
-        <img src={twitterLogo} alt="Twitter Logo" />
-      </a>
-      <a href="https://www.instagram.com/shelter_tech">
-        <img src={instagramLogo} alt="Instagram Logo" />
-      </a>
-      <a href="https://github.com/ShelterTechSF">
-        <img src={githubLogo} alt="GitHub Logo" />
-      </a>
+      {socialMediaLinks.map((socialMediaLink) => (
+        <a href={socialMediaLink.url} key={socialMediaLink.url}>
+          <img src={socialMediaLink.logo} alt={socialMediaLink.alt} />
+        </a>
+      ))}
     </div>
   </div>
 );
 
-const FooterLinks = () => (
+NavigationLeftArea.propTypes = {
+  shelterTechLogo: ShelterTechLogoPropType.isRequired,
+  socialMediaLinks: PropTypes.arrayOf(SocialMediaLinksPropType).isRequired,
+};
+
+const FooterLinks = ({ footerNavigation }) => (
   <nav className={s.footerLinksContainer}>
-    <div className={s.footerLinksColumn}>
-      <div className={s.footerLinksTitle}>Our Work</div>
-      <div className={s.footerLinks}>
-        <a href="/shelterconnect">ShelterConnect</a>
-        <a href="/sfserviceguide">SF Service Guide</a>
-        <a href="/communityreps">Community Reps</a>
+    {footerNavigation.map((navigation) => (
+      <div className={s.footerLinksColumn} key={navigation.title}>
+        <div className={s.footerLinksTitle}>{navigation.title}</div>
+        <div className={s.footerLinks}>
+          {navigation.links.map((link) => (
+            <a href={link.url} key={link.name}>
+              {link.name}
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
-    <div className={s.footerLinksColumn}>
-      <div className={s.footerLinksTitle}>What You Can Do</div>
-      <div className={s.footerLinks}>
-        <a href="/new/volunteer">Volunteer</a>
-        <a href="/new/donate">Donate</a>
-        <a href="/partnerships">Partnerships</a>
-      </div>
-    </div>
-    <div className={s.footerLinksColumn}>
-      <div className={s.footerLinksTitle}>About Us</div>
-      <div className={s.footerLinks}>
-        <a href="/ourstory">Our Story</a>
-        <a href="/record">Record</a>
-        <a href="/newsroom">Newsroom</a>
-      </div>
-    </div>
+    ))}
   </nav>
 );
 
-const Seals = () => (
+FooterLinks.propTypes = {
+  footerNavigation: PropTypes.arrayOf(FooterNavigationObjectsPropType)
+    .isRequired,
+};
+const Seals = ({ seals }) => (
   <div className={s.seals}>
-    <img src={sealOfTransparency} alt="Seal of Transparency" />
+    {seals.map((seal) => (
+      <img src={seal.logo} alt={seal.alt} key={seal} />
+    ))}
   </div>
 );
 
-const NavigationRightArea = () => (
+Seals.propTypes = {
+  seals: PropTypes.arrayOf(SealsPropType).isRequired,
+};
+
+const NavigationRightArea = ({ footerNavigation, seals }) => (
   <div className={s.navigationRightArea}>
-    <FooterLinks />
-    <Seals />
+    <FooterLinks footerNavigation={footerNavigation} />
+    <Seals seals={seals} />
   </div>
 );
 
-const Navigation = () => {
+NavigationRightArea.propTypes = {
+  footerNavigation: PropTypes.arrayOf(FooterNavigationObjectsPropType)
+    .isRequired,
+  seals: PropTypes.arrayOf(SealsPropType).isRequired,
+};
+
+const Navigation = ({
+  footerNavigation,
+  seals,
+  shelterTechLogo,
+  socialMediaLinks,
+}) => {
   return (
     <div className={s.bleedWrapper}>
       <div className={s.navigation}>
-        <NavigationLeftArea />
-        <NavigationRightArea />
+        <NavigationLeftArea
+          shelterTechLogo={shelterTechLogo}
+          socialMediaLinks={socialMediaLinks}
+        />
+        <NavigationRightArea
+          footerNavigation={footerNavigation}
+          seals={seals}
+        />
       </div>
     </div>
   );
 };
 
-Navigation.propTypes = {};
+Navigation.propTypes = {
+  footerNavigation: PropTypes.arrayOf(FooterNavigationObjectsPropType)
+    .isRequired,
+  seals: PropTypes.arrayOf(SealsPropType).isRequired,
+  shelterTechLogo: ShelterTechLogoPropType.isRequired,
+  socialMediaLinks: PropTypes.arrayOf(SocialMediaLinksPropType).isRequired,
+};
 
 export default Navigation;

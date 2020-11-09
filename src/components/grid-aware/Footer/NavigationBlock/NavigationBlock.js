@@ -65,8 +65,7 @@ const FooterLinks = ({ footerNavigation }) => (
 );
 
 FooterLinks.propTypes = {
-  footerNavigation: PropTypes.arrayOf(FooterNavigationPropType)
-    .isRequired,
+  footerNavigation: PropTypes.arrayOf(FooterNavigationPropType).isRequired,
 };
 const Seals = ({ seals }) => (
   <div className={s.seals}>
@@ -88,8 +87,7 @@ const NavigationRightArea = ({ footerNavigation, seals }) => (
 );
 
 NavigationRightArea.propTypes = {
-  footerNavigation: PropTypes.arrayOf(FooterNavigationPropType)
-    .isRequired,
+  footerNavigation: PropTypes.arrayOf(FooterNavigationPropType).isRequired,
   seals: PropTypes.arrayOf(SealsPropType).isRequired,
 };
 

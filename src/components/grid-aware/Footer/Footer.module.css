@@ -1,29 +1,6 @@
-/* Background bleed */
-
-.bleedWrapper {
-  margin: auto;
-}
-
-/* Main grid */
-
-.gridParent {
-  column-gap: var(--grid-column-gap);
-  display: grid;
-}
-
-/* Override grid item default of auto so that item contents cannot stretch the grid itself */
-.gridParent > * {
-  min-width: 0;
-}
-
 @media (--tablet-and-down) {
   .bleedWrapper {
     text-align: center;
-  }
-
-  .gridParent {
-    column-gap: var(--grid-column-gap);
-    display: grid;
   }
 }
 

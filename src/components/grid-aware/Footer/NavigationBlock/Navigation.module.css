@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   margin: auto;
+  max-width: var(--grid-bleed-max-width);
 }
 
 .navigation {

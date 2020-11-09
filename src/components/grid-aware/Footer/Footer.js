@@ -42,18 +42,16 @@ const Footer = ({
   ein,
 }) => {
   return (
-    <div className={s.bleedWrapper}>
-      <footer className={s.gridParent}>
-        <SubscriptionBlock inputPlaceHolderText={inputPlaceHolderText} />
-        <Navigation
-          footerNavigation={footerNavigation}
-          seals={seals}
-          shelterTechLogo={shelterTechLogo}
-          socialMediaLinks={socialMediaLinks}
-        />
-        <InfoBlock ein={ein} address={address} />
-      </footer>
-    </div>
+    <footer className={s.bleedWrapper}>
+      <SubscriptionBlock inputPlaceHolderText={inputPlaceHolderText} />
+      <Navigation
+        footerNavigation={footerNavigation}
+        seals={seals}
+        shelterTechLogo={shelterTechLogo}
+        socialMediaLinks={socialMediaLinks}
+      />
+      <InfoBlock ein={ein} address={address} />
+    </footer>
   );
 };
 

@@ -13,7 +13,7 @@
   flex-direction: row;
   grid-column: 1 / span 12;
   justify-content: space-between;
-  padding: 60px 75px 60px;
+  padding: 60px 75px;
 }
 
 .navigationRightArea {

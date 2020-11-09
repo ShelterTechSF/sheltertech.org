@@ -62,9 +62,9 @@
   }
 
   .subscribeContainer {
+    align-items: normal;
     display: flex;
     flex-direction: column;
-    align-items: normal;
   }
 
   .subscribeMessage {

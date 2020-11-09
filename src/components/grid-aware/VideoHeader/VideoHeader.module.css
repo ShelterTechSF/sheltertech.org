@@ -8,6 +8,7 @@
 }
 
 .bleedBackground {
+  /* The --background-image CSS variable should be set as an inline style on the element */
   background:
     linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%),
     center / cover var(--background-image);
@@ -52,7 +53,6 @@
 }
 
 .gridTextArea {
-  align-content: center;
   grid-column: 1 / span 6;
   grid-row: 1;
 }
@@ -78,14 +78,14 @@
     margin-top: -14.5px;
   }
 
-  .gridPlayButton {
+  .gridPlayButtonArea {
     grid-column: 6 / span 2;
   }
 }
 
 /* Title and Description container */
 
-.textContainer {
+.videoHeaderText {
   color: var(--color-white);
 }
 
@@ -104,22 +104,22 @@
 
 /* Call To Action Buttons block */
 
-.ctaButtonRow {
+.ctaButtons {
   display: flex;
   flex-flow: row wrap;
   margin-top: 40px;
 }
 
-.ctaButtonRowItem:not(:last-child) {
-  margin-right: 24px;
+.ctaButton:not(:last-child) {
+  margin-right: 42px;
 }
 
 @media (--tablet-and-down) {
-  .ctaButtonRow {
+  .ctaButtons {
     margin-top: 20px;
   }
 
-  .ctaButtonRowItem {
+  .ctaButton {
     margin-top: 20px;
   }
 }

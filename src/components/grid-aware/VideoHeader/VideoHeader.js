@@ -7,9 +7,9 @@ import s from "./VideoHeader.module.css";
 /* Subcomponents */
 
 const CTAButtons = ({ buttons }) => (
-  <div className={s.ctaButtonRow}>
+  <div className={s.ctaButtons}>
     {buttons.map((button) => (
-      <div className={s.ctaButtonRowItem} key={button.text}>
+      <div className={s.ctaButton} key={button.text}>
         <Button
           text={button.text}
           internalLink={button.internalLink}
@@ -26,7 +26,7 @@ CTAButtons.propTypes = {
 };
 
 const VideoHeaderText = ({ title, description }) => (
-  <div className={s.textContainer}>
+  <div className={s.videoHeaderText}>
     <div className={s.title}>{title}</div>
     <div className={s.description}>{description}</div>
   </div>

@@ -1,0 +1,109 @@
+.bleedWrapper {
+  background-color: var(--color-black);
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  grid-template-rows: 465px;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+.bleedMainContent {
+  grid-column: 2;
+  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bleedBackground {
+    height: 250px;
+  }
+}
+
+.gridParent {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.gridParent > * {
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    display: block;
+  }
+}
+
+.textCardWrapper {
+  text-align: center;
+}
+
+@media (--laptop-and-up) {
+  .gridAreaImage {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+  }
+
+  .gridAreaCard {
+    grid-column: 8 / span 5;
+    position: relative;
+  }
+
+  .textCardWrapper {
+    padding-top: 87px;
+  }
+}
+
+.playButton {
+  position: absolute;
+}
+
+.textCard {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 70px 60px;
+}
+
+.eyebrow {
+  color: var(--color-gray-600);
+  font: var(--font-action);
+  text-transform: uppercase;
+}
+
+.description {
+  font: var(--font-body-large);
+  margin-top: 15px;
+}
+
+.actionRow {
+  margin-top: 30px;
+}
+
+@media (--tablet-and-down) {
+  .gridAreaImage {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .textCard {
+    padding: 30px;
+  }
+
+  .title {
+    margin-top: 15px;
+  }
+
+  .image {
+    width: 100%;
+  }
+}

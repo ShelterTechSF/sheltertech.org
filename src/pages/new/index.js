@@ -22,6 +22,8 @@ import image2 from "../../components/grid-aware/ThreeParagraphBlock/stories/imag
 import image3 from "../../components/grid-aware/ThreeParagraphBlock/stories/image3.png";
 import VideoHeader from "../../components/grid-aware/VideoHeader/VideoHeader";
 import videoHeaderImage from "../../components/grid-aware/VideoHeader/stories/VideoHeader.png";
+import VideoSpotlightBlock from "../../components/grid-aware/VideoSpotlightBlock";
+import videoSpotlightBlockImage from "../../components/grid-aware/VideoSpotlightBlock/stories/VideoSpotlightBlock.svg";
 import Layout from "../../components/layout";
 
 export default () => (
@@ -105,6 +107,16 @@ export default () => (
             "We depend on Community Representatives to inform our work from their lived experiences and rely on volunteers to continuously updated the resources we develop.",
         },
       ]}
+    />
+    <VideoSpotlightBlock
+      eyebrowText="Our Impact"
+      description="Over 3,000 people have daily internet access in local shelters and resource centers."
+      button={{ text: "View Annual Report", internalLink: "/foo" }}
+      image={{
+        url: videoSpotlightBlockImage,
+        alt: "Video spotlight of man speaking.",
+      }}
+      playButtonLink="/foo"
     />
     <PartnersAndSponsorsBlock
       title="Partners and sponsors"

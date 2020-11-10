@@ -1,7 +1,6 @@
 .bleedWrapper {
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
-  grid-template-rows: auto 0;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
 }
@@ -28,9 +27,7 @@
   column-gap: var(--grid-column-gap);
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
-  grid-template-rows: repeat(2, auto);
   padding-bottom: 150px;
-  padding-left: 75px;
   padding-top: 100px;
 }
 

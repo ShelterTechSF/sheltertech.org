@@ -5,42 +5,42 @@ import React from "react";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import s from "./BlockQuoteBlock.module.css";
 
-const BlockQuoteBlock = ({ quotes }) => {
-  const Carousel = () => (
-    <CarouselProvider totalSlides={quotes.length} isIntrinsicHeight>
-      <Slider>
-        {quotes.map((dataObj, index) => (
-          <Slide index={index} key={dataObj.quote}>
-            <figure className={s.innerWrapper}>
-              <blockquote className={s.quote}>
-                &ldquo;{dataObj.quote}&rdquo;
-              </blockquote>
-              <figcaption className={s.attribution}>
-                &mdash;{dataObj.attribution}
-              </figcaption>
-            </figure>
-          </Slide>
-        ))}
-      </Slider>
-      <DotGroup className={s.dots} />
-    </CarouselProvider>
-  );
-
-  return (
-    <div className={s.bleedWrapper}>
-      <div className={s.gridParent}>
-          <Carousel />
-      </div>
-    </div>
-  );
-};
-
-const carouselData = PropTypes.shape({
+const CarouselPropType = PropTypes.shape({
   quote: PropTypes.string.isRequired,
   attribution: PropTypes.string.isRequired,
 });
+
+const SlideQuote = ({ quote, attribution }) => (
+  <figure className={s.slideQuote}>
+    <blockquote className={s.quote}>&ldquo;{quote}&rdquo;</blockquote>
+    <figcaption className={s.attribution}>&mdash;{attribution}</figcaption>
+  </figure>
+);
+
+SlideQuote.propTypes = {
+  quote: PropTypes.string.isRequired,
+  attribution: PropTypes.string.isRequired,
+};
+
+const BlockQuoteBlock = ({ quotes }) => (
+  <div className={s.bleedWrapper}>
+    <div className={s.carouselWrapper}>
+      <CarouselProvider totalSlides={quotes.length} isIntrinsicHeight>
+        <Slider>
+          {quotes.map(({ quote, attribution }, index) => (
+            <Slide index={index} key={quote}>
+              <SlideQuote quote={quote} attribution={attribution} />
+            </Slide>
+          ))}
+        </Slider>
+        <DotGroup className={s.dots} />
+      </CarouselProvider>
+    </div>
+  </div>
+);
+
 BlockQuoteBlock.propTypes = {
-  quotes: PropTypes.arrayOf(carouselData).isRequired,
+  quotes: PropTypes.arrayOf(CarouselPropType).isRequired,
 };
 
 export default BlockQuoteBlock;

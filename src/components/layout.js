@@ -1,12 +1,39 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 
 import "../stylesheets/global.css";
+import { BurgerMenu, Navigation } from "./grid-aware/Navigation";
 
-// TODO: This component should eventually have anything that is common to all
-// pages, such as the header and footers, but for now, we are mostly using this
-// to ensure that the global CSS file gets imported by all pages.
-const Layout = ({ children }) => <div>{children}</div>;
+const navigationItems = [
+  { text: "Programs", internalLink: "/new" },
+  { text: "Volunteer", internalLink: "/new/volunteer" },
+  { text: "Donate", internalLink: "/new/donate", isButton: true },
+];
+
+const Layout = ({ children }) => {
+  const pageWrapperID = "page-wrapper";
+  const outerContainerID = "outer-container";
+  const [burgerMenuIsOpen, setBurgerMenuIsOpen] = useState(false);
+  return (
+    <div id={outerContainerID}>
+      <BurgerMenu
+        isOpen={burgerMenuIsOpen}
+        setIsOpen={setBurgerMenuIsOpen}
+        navigationItems={navigationItems}
+        pageWrapperID={pageWrapperID}
+        outerContainerID={outerContainerID}
+      />
+      <div id={pageWrapperID}>
+        <Navigation
+          homeURL="/new"
+          navigationItems={navigationItems}
+          toggleBurgerMenu={() => setBurgerMenuIsOpen(!burgerMenuIsOpen)}
+        />
+        {children}
+      </div>
+    </div>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node,

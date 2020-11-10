@@ -162,6 +162,7 @@ export default () => (
           },
         ])
       }
+    />
     <PartnersAndSponsorsBlock
       title="Partners and sponsors"
       partnersAndSponsors={[

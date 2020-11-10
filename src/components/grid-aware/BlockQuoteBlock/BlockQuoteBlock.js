@@ -25,7 +25,7 @@ SlideQuote.propTypes = {
 const BlockQuoteBlock = ({ quotes }) => (
   <div className={s.bleedWrapper}>
     <div className={s.carouselWrapper}>
-      <CarouselProvider totalSlides={quotes.length} isIntrinsicHeight>
+      <CarouselProvider totalSlides={quotes.length} isIntrinsicHeight isPlaying={true} interval="10000">
         <Slider>
           {quotes.map(({ quote, attribution }, index) => (
             <Slide index={index} key={quote}>
@@ -40,7 +40,7 @@ const BlockQuoteBlock = ({ quotes }) => (
 );
 
 BlockQuoteBlock.propTypes = {
-  quotes: PropTypes.arrayOf(CarouselPropType).isRequired,
+  quotes: PropTypes.arrayOf(PropTypes.shape(SlideQuote.propTypes)).isRequired,
 };
 
 export default BlockQuoteBlock;

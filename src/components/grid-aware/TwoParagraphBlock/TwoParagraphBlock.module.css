@@ -94,7 +94,7 @@
   font: var(--font-body-small);
 }
 
-.paragraph2Wrapper * {
+.paragraph2Wrapper :first-child {
   margin: 0;
 }
 
@@ -109,9 +109,9 @@
 
 @media (--tablet-and-down) {
   .paragraph1Wrapper {
-    font-size: 16px;
     margin-right: 40px;
     margin-top: 40px;
+    font-size: 16px;
   }
 
   .paragraph2Wrapper {

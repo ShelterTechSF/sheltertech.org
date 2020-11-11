@@ -115,7 +115,7 @@ export default () => (
       button={{ text: "View Annual Report", internalLink: "/foo" }}
       image={{
         url: videoSpotlightBlockImage,
-        alt: "Video spotlight of man speaking.",
+        alt: "Video spotlight of Aaron speaking.",
       }}
       playButtonLink="/foo"
     />

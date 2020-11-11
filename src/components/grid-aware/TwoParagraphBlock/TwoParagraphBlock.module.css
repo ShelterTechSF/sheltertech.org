@@ -76,6 +76,12 @@
   grid-row: 2;
 }
 
+@media (--tablet-and-down) {
+  .gridAreaBottomRight {
+    text-align: right;
+  }
+}
+
 
 /* Component wrappers */
 
@@ -136,19 +142,29 @@
 /* Image block */
 
 .image1 {
-  height: auto;
   max-width: 100%;
 }
 
 
 /* CTA block */
 
-.ctaButtons {
-  margin-top: 60px;
+.ctaButtonRow {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 40px;
+}
+
+.ctaButtonItem:not(:last-child) {
+  margin-right: 40px;
 }
 
 @media (--tablet-and-down) {
-  .ctaButtons {
-    margin-top: 40px;
+  .ctaButtonRow {
+    flex-flow: column;
+  }
+
+  .ctaButtonItem:not(:last-child) {
+    margin-bottom: 20px;
+    margin-right: 0;
   }
 }

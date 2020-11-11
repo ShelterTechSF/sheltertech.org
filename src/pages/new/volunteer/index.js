@@ -22,7 +22,7 @@ export default () => (
       }}
       ctaButtons={[
         {
-          text: "APPLY",
+          text: "Apply",
           internalLink: "/foo",
         },
       ]}

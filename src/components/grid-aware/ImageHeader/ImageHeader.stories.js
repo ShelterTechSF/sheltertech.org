@@ -46,7 +46,7 @@ DefaultImageHeader.args = {
   },
   ctaButtons: [
     {
-      text: "APPLY",
+      text: "Apply",
       internalLink: "/foo",
     },
   ],

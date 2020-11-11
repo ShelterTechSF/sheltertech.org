@@ -25,7 +25,7 @@ const ImageHeader = ({
       <div className={s.description}>{description}</div>
       <div className={s.ctaButtonRow}>
         {ctaButtons.map((button) => (
-          <div key={button.text}>
+          <div className={s.ctaButtonRowItem} key={button.text}>
             <Button
               text={button.text}
               internalLink={button.internalLink}

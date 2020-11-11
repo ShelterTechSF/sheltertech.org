@@ -16,7 +16,7 @@ const Template = ({
   description,
   image1,
   image2,
-  ctaButton,
+  ctaButtons,
 }) => (
   <ImageHeader
     title={title}
@@ -24,7 +24,7 @@ const Template = ({
     description={description}
     image1={image1}
     image2={image2}
-    ctaButton={ctaButton}
+    ctaButtons={ctaButtons}
   />
 );
 
@@ -44,7 +44,7 @@ DefaultImageHeader.args = {
     alt:
       "Team members collaborating together by looking and pointing at whiteboard covered with sticky notes full of ideas.",
   },
-  ctaButton: [
+  ctaButtons: [
     {
       text: "APPLY",
       internalLink: "/foo",

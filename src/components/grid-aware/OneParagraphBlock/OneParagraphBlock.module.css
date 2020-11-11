@@ -16,7 +16,6 @@
 .bleedMainContent {
   grid-column: 2;
   grid-row: 1;
-  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
   min-width: 0;
 }
 
@@ -38,7 +37,7 @@
   display: grid;
   grid-column-start: 2;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
-  padding: 140px 0;
+  padding: 140px 0 93px;
 }
 
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */
@@ -49,8 +48,7 @@
 @media (--tablet-and-down) {
   .gridParent {
     display: block;
-    padding-bottom: 80px;
-    padding-top: 50px;
+    padding: 50px 0 80px;
   }
 }
 

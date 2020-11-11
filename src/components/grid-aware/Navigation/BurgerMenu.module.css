@@ -1,0 +1,28 @@
+/* Styles for react-burger-menu's custom CSS classes.
+ *
+ * https://github.com/negomi/react-burger-menu/tree/v2.9.0#custom-id-andor-classnames
+ */
+.burgerButton {
+  display: none;
+}
+
+.crossButton {
+  display: none;
+}
+
+.menu {
+  background: var(--color-white);
+  color: var(--color-gray-700);
+  padding-top: 20px;
+}
+
+.menuWrap {
+  border-left: 1px solid var(--color-gray-400);
+  top: 0;
+}
+
+.overlay {
+  background-color: transparent !important;  /* Override inline style */
+  left: 0;
+  top: 0;
+}

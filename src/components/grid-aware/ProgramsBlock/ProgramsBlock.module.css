@@ -69,7 +69,7 @@
 
 @media (--tablet-and-down) {
   .programsWrapper {
-    grid-row-gap: 40px;
+    grid-row-gap: 30px;
     grid-template-columns: 1fr;
     justify-items: center;
     margin-top: 30px;

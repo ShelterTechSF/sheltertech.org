@@ -1,0 +1,138 @@
+/* Background bleed */
+
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+.bleedBackground {
+  /* The --background-image CSS variable should be set as an inline style on the element */
+  background:
+    linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%),
+    center / cover var(--background-image);
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+  min-width: 0;
+}
+
+.bleedMainContent {
+  grid-column: 2;
+  grid-row: 1;
+  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+  min-width: 0;
+}
+
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    background-color: var(--color-black);
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-rows: 214px auto;
+    padding-bottom: 55.5px;
+  }
+
+  .bleedBackground {
+    background-image: linear-gradient(360deg, #000 0%, rgba(0, 0, 0, 0) 100%), var(--background-image);
+    grid-row: 1;
+  }
+
+  .bleedMainContent {
+    grid-row: 1 / span 2;
+  }
+}
+
+/* Main grid */
+.gridParent {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  padding: 150px 0;
+}
+
+.gridTextArea {
+  grid-column: 1 / span 6;
+  grid-row: 1;
+}
+
+.gridPlayButtonArea {
+  align-self: center;
+  grid-column: 9 / span 2;
+  grid-row: 1;
+  text-align: center;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    column-gap: 0;
+    display: grid;
+    grid-template-rows: 214px auto;
+    padding: 0;
+  }
+
+  .gridTextArea {
+    grid-column: 1 / span 12;
+    grid-row: 2;
+    margin-top: -14.5px;
+  }
+
+  .gridPlayButtonArea {
+    grid-column: 6 / span 2;
+  }
+}
+
+/* Title and Description container */
+
+.videoHeaderText {
+  color: var(--color-white);
+}
+
+/* Title block */
+
+.title {
+  font: var(--font-title);
+}
+
+/* Description block */
+
+.description {
+  font: var(--font-body-medium);
+  margin-top: 20px;
+}
+
+/* Call To Action Buttons block */
+
+.ctaButtons {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 40px;
+}
+
+.ctaButton:not(:last-child) {
+  margin-right: 42px;
+}
+
+@media (--tablet-and-down) {
+  .ctaButtons {
+    margin-top: 20px;
+  }
+
+  .ctaButton {
+    margin-top: 20px;
+  }
+}
+
+/* PlayIcon svg */
+.playIcon {
+  height: 45px;
+  width: 35px;
+}
+
+@media (--tablet-and-down) {
+  .playIcon {
+    height: 33px;
+    width: 25.67px;
+  }
+}

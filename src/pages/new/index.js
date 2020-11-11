@@ -1,5 +1,9 @@
 import React from "react";
 
+import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
+import articleSpotlightImage from "../../components/grid-aware/ArticleSpotlightCard/stories/background.png";
+import BlockQuoteBlock from "../../components/grid-aware/BlockQuoteBlock/BlockQuoteBlock";
+import HomePageLargeParagraph from "../../components/grid-aware/HomePageLargeParagraph";
 import PartnersAndSponsorsBlock from "../../components/grid-aware/PartnersAndSponsorsBlock";
 import benetechLogo from "../../components/grid-aware/PartnersAndSponsorsBlock/stories/benetech-logo.png";
 import ciscoLogo from "../../components/grid-aware/PartnersAndSponsorsBlock/stories/cisco-logo.png";
@@ -9,14 +13,34 @@ import mohcdLogo from "../../components/grid-aware/PartnersAndSponsorsBlock/stor
 import pagerdutyLogo from "../../components/grid-aware/PartnersAndSponsorsBlock/stories/pagerduty-logo.png";
 import sfFamiliesLogo from "../../components/grid-aware/PartnersAndSponsorsBlock/stories/sf-families-logo.png";
 import uberLogo from "../../components/grid-aware/PartnersAndSponsorsBlock/stories/uber-logo.png";
+import ProgramsBlock from "../../components/grid-aware/ProgramsBlock";
+import communityDevelopmentImg from "../../components/grid-aware/ProgramsBlock/stories/community-development.jpg";
+import sfServiceGuideImg from "../../components/grid-aware/ProgramsBlock/stories/sf-service-guide.jpg";
+import shelterConnectImg from "../../components/grid-aware/ProgramsBlock/stories/shelter-connect.jpg";
 import ThreeParagraphBlock from "../../components/grid-aware/ThreeParagraphBlock";
 import image1 from "../../components/grid-aware/ThreeParagraphBlock/stories/image1.png";
 import image2 from "../../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
 import image3 from "../../components/grid-aware/ThreeParagraphBlock/stories/image3.png";
+import VideoHeader from "../../components/grid-aware/VideoHeader/VideoHeader";
+import videoHeaderImage from "../../components/grid-aware/VideoHeader/stories/VideoHeader.png";
 import Layout from "../../components/layout";
 
 export default () => (
   <Layout>
+    <VideoHeader
+      title="Less than half of nearly 10,000 people experiencing homelessness in the Bay Area have reliable access to the internet."
+      description="ShelterTech is a nonprofit organization dedicated to supporting people who are experiencing homelessness or housing insecurity by leveraging technology and connectivity."
+      image={videoHeaderImage}
+      ctaButtons={[
+        { text: "Donate", internalLink: "/new/donate" },
+        { text: "Volunteer", internalLink: "/new/volunteer" },
+      ]}
+      playButtonLink="https://www.youtube.com/watch?v=KCduRWJ1hQo"
+    />
+    <HomePageLargeParagraph
+      title="We believe connectivity is a human right."
+      description="Access to the internet and technology makes it possible for people to find a job, human services, and contact family and friends."
+    />
     <ThreeParagraphBlock
       title="Get involved"
       paragraph1={{
@@ -51,6 +75,58 @@ export default () => (
         { text: "Volunteer", internalLink: "/new/volunteer" },
         { text: "Donate", internalLink: "/new/donate" },
         { text: "Work with us", onClick: () => {} },
+      ]}
+    />
+    <ProgramsBlock
+      title="Our programs"
+      programs={[
+        {
+          theme: "dark",
+          image: shelterConnectImg,
+          imageAlt: "Image of ShelterTech booth with 4 volunteers smiling.",
+          title: "ShelterConnect",
+          description:
+            "Every year, our ShelterConnect program provides 3XXX homeless and housing insecure people with free and unlimited internet access and we plan to provide every homeless individual with the digital infrastructure that meets their needs by 2024.",
+        },
+        {
+          theme: "dark",
+          image: sfServiceGuideImg,
+          imageAlt:
+            "Image of the back of two people sitting where the woman on the left is pointing to the monitor of a Macbook as the man observes.",
+          title: "SF Service Guide",
+          description:
+            "Anyone with access to a smartphone, tablet, or computer can utilize this online directory of human services provided in San Francisco.",
+        },
+        {
+          theme: "dark",
+          image: communityDevelopmentImg,
+          imageAlt: "Image of ShelterTech community member smiling.",
+          title: "Community Development",
+          description:
+            "We depend on Community Representatives to inform our work from their lived experiences and rely on volunteers to continuously updated the resources we develop.",
+        },
+      ]}
+    />
+    <BlockQuoteBlock
+      quotes={[
+        {
+          quote:
+            "We've heard from San Franciscans, including as part of our recent strategic planning community outreach that it's hard to know where to go when you're looking for supportive services. It's hard to know where to start, and hard to navigate different resources to find accurate information. We're glad to be supporting ShelterTech and the broader community to build SF Service Guide - a one-stop, reliable place to help connect residents to the services they need.",
+          attribution:
+            "Barry Roeder, Mayor's Office of Housing and Community Development",
+        },
+        {
+          quote:
+            "Wi-fi has been a top request among young people here at Larkin Street. Now that we have it with ShelterTech we are seeing more young people come in and stay around and get the things they need so that they can move past homelessness, permanently.",
+          attribution:
+            "Veronica Pastore, Director of Communications, Larkin Street Youth Services",
+        },
+        {
+          quote:
+            "There’s an overwhelming number of resources for the vulnerable populations that live here and it’s important to have a place where they can go where they know all the information is accurate, up-to-date, and consistent with what their understanding has been of that particular resource. And if there are any changes that need to be made those will be reflected.",
+          attribution:
+            "Julie Rosenthal, Director of Social Services, Homeless Advocacy Project",
+        },
       ]}
     />
     <PartnersAndSponsorsBlock
@@ -92,6 +168,13 @@ export default () => (
           alt: "Logo of Uber Technologies Inc. company.",
         },
       ]}
+    />
+    <ArticleSpotlightCard
+      eyebrowText="Partnership Spotlight"
+      title="Digital Equity Team of San Francisco"
+      description="Free Fiber Initiative summary we're working together to find new and different ways of building lasting infrastructure"
+      button={{ text: "Read more", internalLink: "/foo" }}
+      backgroundImage={articleSpotlightImage}
     />
   </Layout>
 );

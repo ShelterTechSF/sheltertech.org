@@ -1,7 +1,7 @@
 import React from "react";
 
 import VideoSpotlightBlock from "./VideoSpotlightBlock";
-import videoSpotlightBlockImage from "./stories/VideoSpotlightBlock.svg";
+import videoSpotlightBlockImage from "./stories/VideoSpotlightBlock.png";
 
 export default {
   title: "Grid-Aware/VideoSpotlightBlock",
@@ -32,7 +32,7 @@ VideoSpotlightBlockDefault.args = {
   button: { text: "View Annual Report", internalLink: "/foo" },
   image: {
     url: videoSpotlightBlockImage,
-    alt: "Video spotlight of man speaking.",
+    alt: "Video spotlight of Aaron speaking.",
   },
   playButtonLink: "/foo",
 };

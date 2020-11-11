@@ -24,7 +24,7 @@ import image3 from "../../components/grid-aware/ThreeParagraphBlock/stories/imag
 import VideoHeader from "../../components/grid-aware/VideoHeader/VideoHeader";
 import videoHeaderImage from "../../components/grid-aware/VideoHeader/stories/VideoHeader.png";
 import VideoSpotlightBlock from "../../components/grid-aware/VideoSpotlightBlock";
-import videoSpotlightBlockImage from "../../components/grid-aware/VideoSpotlightBlock/stories/VideoSpotlightBlock.svg";
+import videoSpotlightBlockImage from "../../components/grid-aware/VideoSpotlightBlock/stories/VideoSpotlightBlock.png";
 import Layout from "../../components/layout";
 
 export default () => (

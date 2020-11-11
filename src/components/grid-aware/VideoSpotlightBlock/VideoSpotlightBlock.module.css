@@ -1,5 +1,4 @@
 .bleedWrapper {
-  background-color: var(--color-black);
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   grid-template-rows: 465px;
@@ -15,12 +14,7 @@
 
 @media (--tablet-and-down) {
   .bleedWrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .bleedBackground {
-    height: 250px;
+    display: block;
   }
 }
 
@@ -46,25 +40,30 @@
 }
 
 @media (--laptop-and-up) {
-  .gridAreaImage {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+  .bleedImage {
     position: absolute;
   }
 
   .gridAreaCard {
     grid-column: 8 / span 5;
-    position: relative;
+    z-index: 1
   }
 
   .textCardWrapper {
-    padding-top: 87px;
+    margin-top: 87px;
+  }
+
+  .playIcon {
+    height: 92px;
+    width: 92px;
   }
 }
 
 .playButton {
+  left: 50%;
   position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .textCard {
@@ -89,7 +88,7 @@
 }
 
 @media (--tablet-and-down) {
-  .gridAreaImage {
+  .bleedImage {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -105,5 +104,10 @@
 
   .image {
     width: 100%;
+  }
+
+  .playButton {
+    top: initial;
+    transform: initial;
   }
 }

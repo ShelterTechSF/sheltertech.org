@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import Button from "../../inline/Button";
-import playIcon from "../VideoHeader/PlayIcon.svg";
+import playIcon from "./PlayIcon.svg";
 import s from "./VideoSpotlightBlock.module.css";
 
 /* PropType shapes */
@@ -40,10 +40,10 @@ const VideoSpotlightBlock = ({
   playButtonLink,
 }) => (
   <div className={s.bleedWrapper}>
-    <div className={s.gridAreaImage}>
+    <div className={s.bleedImage}>
       <div className={s.playButton}>
         <a rel="noreferrer" href={playButtonLink} target="_blank">
-          <img src={playIcon} alt="Play Video" />
+          <img className={s.playIcon} src={playIcon} alt="Play Video" />
         </a>
       </div>
       <img className={s.image} src={image.url} alt={image.alt} />

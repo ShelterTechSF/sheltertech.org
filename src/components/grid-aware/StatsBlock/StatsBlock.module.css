@@ -39,20 +39,15 @@
 @media (--tablet-and-down) {
   .gridParent {
     display: block;
-    padding-bottom: 78px;
-    padding-left: 0;
+    padding-bottom: 38px;
     padding-top: 50px;
   }
-}
-
-.allTextWrap {
-  grid-column-end: 11;
-  grid-column-start: 2;
 }
 
 .gridAreaBottom {
   display: flex;
   flex-direction: row;
+  grid-column-start: 2;
   grid-row: 2;
 }
 
@@ -65,30 +60,33 @@
 
 .title {
   font: var(--font-title);
-  margin: 0;
-  padding-bottom: 54px;
+  grid-column-end: 11;
+  grid-column-start: 2;
+  margin-bottom: 54px;
+}
+
+.statCard {
+  margin-right: 85px;
 }
 
 .number {
+  font: var(--font-family-lato);
   font-size: 72px;
-  height: 94px;
   margin-bottom: 5px;
-  margin-right: 110px;
   width: 250px;
 }
 
 .statement {
   font: var(--font-body-medium);
-  height: 52px;
-  margin-right: 110px;
 }
 
 @media (--tablet-and-down) {
   .statement {
-    font: var(--font-body-medium);
-    height: 52px;
-    margin: 0;
     margin-bottom: 40px;
-    margin-right: 85px;
+  }
+
+  .number {
+    font-weight: bold;
+    line-height: 65px;
   }
 }

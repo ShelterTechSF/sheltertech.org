@@ -3,7 +3,7 @@ import React from "react";
 
 import s from "./StatsBlock.module.css";
 
-const StatCards = PropTypes.shape({
+const StatCardsPropType = PropTypes.shape({
   number: PropTypes.string.isRequired,
   statement: PropTypes.string.isRequired,
 });
@@ -37,7 +37,8 @@ const StatsBlock = ({ title, statCards }) => (
 
 StatsBlock.propTypes = {
   title: PropTypes.string.isRequired,
-  statCards: PropTypes.arrayOf(PropTypes.shape(StatCards.propTypes)).isRequired,
+  statCards: PropTypes.arrayOf(PropTypes.shape(StatCardsPropType.propTypes))
+    .isRequired,
 };
 
 export default StatsBlock;

@@ -6,15 +6,15 @@ export default {
   component: StatsBlock,
 };
 
-const Template = ({ title, numberAndStatement }) => (
-  <StatsBlock title={title} numberAndStatement={numberAndStatement} />
+const Template = ({ title, statCards }) => (
+  <StatsBlock title={title} statCards={statCards} />
 );
 
 export const DefaultStatsBlock = Template.bind({});
 
 DefaultStatsBlock.args = {
   title: "See what our volunteers have accomplished together.",
-  numberAndStatement: [
+  statCards: [
     {
       number: "9,000",
       statement:

@@ -91,24 +91,19 @@
 }
 
 @media (--tablet-and-down) {
+  .title {
+    margin-top: 30px;
+  }
+
   .ctaButtonRow {
     flex-flow: column;
+    margin-bottom: 30px;
     margin-top: 20px;
   }
 
   .ctaButtonRowItem:not(:last-child) {
     margin-bottom: 20px;
     margin-right: 0;
-  }
-}
-
-@media (--tablet-and-down) {
-  .title {
-    margin-top: 30px;
-  }
-
-  .ctaButtonRow {
-    margin-bottom: 30px;
   }
 }
 

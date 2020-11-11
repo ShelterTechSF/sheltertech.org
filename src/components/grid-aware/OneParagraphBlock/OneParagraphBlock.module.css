@@ -64,24 +64,6 @@
 }
 
 
-/* Component wrappers */
-
-.jobsWrapper {
-  margin-top: 0;
-}
-
-.ctaButtonWrapper {
-  margin-top: 40px;
-}
-
-
-@media (--tablet-and-down) {
-  .jobsWrapper {
-    margin-top: 40px;
-  }
-}
-
-
 /* Title block */
 
 .title {
@@ -91,6 +73,17 @@
 
 
 /* Jobs block */
+
+.jobsWrapper {
+  margin-top: 0;
+}
+
+@media (--tablet-and-down) {
+  .jobsWrapper {
+    margin-top: 40px;
+  }
+}
+
 
 .jobs {
   color: var(--color-white);
@@ -110,4 +103,28 @@
 
 .jobs *:nth-child(even) {
   font: var(--font-body-medium);
+}
+
+
+/* CTA block */
+
+.ctaButtonRow {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 40px;
+}
+
+.ctaButtonItem:not(:last-child) {
+  margin-right: 40px;
+}
+
+@media (--tablet-and-down) {
+  .ctaButtonRow {
+    flex-flow: column;
+  }
+
+  .ctaButtonItem:not(:last-child) {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
 }

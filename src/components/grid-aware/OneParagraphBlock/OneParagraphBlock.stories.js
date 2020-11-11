@@ -7,9 +7,9 @@ export default {
   component: OneParagraphBlock,
 };
 
-const Template = ({ title, jobs, ctaButton }) => (
+const Template = ({ title, jobs, ctaButtons }) => (
   <div>
-    <OneParagraphBlock title={title} jobs={jobs} ctaButton={ctaButton} />
+    <OneParagraphBlock title={title} jobs={jobs} ctaButtons={ctaButtons} />
   </div>
 );
 
@@ -43,5 +43,5 @@ DefaultOneParagraphBlock.args = {
       </p>
     </>
   ),
-  ctaButton: [{ text: "Apply", internalLink: "/foo" }],
+  ctaButtons: [{ text: "Apply", internalLink: "/foo" }],
 };

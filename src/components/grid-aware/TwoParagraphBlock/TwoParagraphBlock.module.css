@@ -92,19 +92,14 @@
 
 .paragraph2Wrapper {
   font: var(--font-body-small);
-  margin-top: 0;
 }
 
-.paragraph2Wrapper p {
+.paragraph2Wrapper * {
+  margin: 0;
+}
+
+.paragraph2Wrapper *:not(:first-child) {
   margin-top: 15px;
-}
-
-.paragraph2Wrapper p:first-child {
-  margin-top: 0;
-}
-
-.paragraph2Wrapper p:last-child {
-  margin-bottom: 0;
 }
 
 .image1Wrapper {
@@ -114,9 +109,9 @@
 
 @media (--tablet-and-down) {
   .paragraph1Wrapper {
+    font-size: 16px;
     margin-right: 40px;
     margin-top: 40px;
-    font-size: 16px;
   }
 
   .paragraph2Wrapper {

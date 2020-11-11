@@ -1,0 +1,35 @@
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+  padding: 60px 60px;
+  background-color:var(--color-gray-300);
+}
+
+.bleedMainContent {
+  grid-column: 2;
+  grid-row: 1;
+  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+  min-width: 0;
+}
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    grid-template-columns: 20px 1fr 20px;
+    padding: 50px 40px;
+  }
+}
+
+.textWrapper {
+  grid-column-end: 13;
+  grid-column-start: 2;
+}
+
+.title {
+  font: var(--font-title);
+}
+
+.description {
+  font: var(--font-body-medium);
+  margin-top: 20px;
+}

@@ -65,7 +65,7 @@ ImageHeader.propTypes = {
   description: PropTypes.string.isRequired,
   image1: ImagePropType.isRequired,
   image2: ImagePropType.isRequired,
-  ctaButtons: PropTypes.arrayOf(Button.propTypes).isRequired,
+  ctaButtons: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)).isRequired,
 };
 
 export default ImageHeader;

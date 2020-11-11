@@ -26,10 +26,8 @@ const StatsBlock = ({ title, statCards }) => (
       <section className={s.gridParent}>
         <h1 className={s.title}>{title}</h1>
         <div className={s.gridAreaBottom}>
-          {statCards.map((obj) => (
-            <div key={obj.number}>
-              <StatCard number={obj.number} statement={obj.statement} />
-            </div>
+          {statCards.map(({ number, statement }) => (
+            <StatCard key={number} number={number} statement={statement} />
           ))}
         </div>
       </section>
@@ -39,7 +37,7 @@ const StatsBlock = ({ title, statCards }) => (
 
 StatsBlock.propTypes = {
   title: PropTypes.string.isRequired,
-  statCards: PropTypes.arrayOf(StatCards).isRequired,
+  statCards: PropTypes.arrayOf(PropTypes.shape(StatCards.propTypes)).isRequired,
 };
 
 export default StatsBlock;

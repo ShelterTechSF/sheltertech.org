@@ -72,10 +72,10 @@
 }
 
 .statCard {
-  margin-right: 85px;
   font-family: var(--font-family-lato);
   font-size: 72px;
   margin-bottom: 5px;
+  margin-right: 85px;
   width: 250px;
 }
 
@@ -96,8 +96,8 @@
 
 @media (--tablet-and-down) {
   .number {
+    font-size: 50px;
     font-weight: bold;
     line-height: 65px;
-    font-size: 50px;
   }
 }

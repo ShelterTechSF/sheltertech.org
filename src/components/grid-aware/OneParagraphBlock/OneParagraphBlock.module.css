@@ -98,16 +98,18 @@
   color: var(--color-white);
 }
 
-.jobs div:nth-child(odd) {
+.jobs :first-child {
+  margin: 0;
+}
+
+.jobs *:not(:first-child) {
+  margin-top: 20px;
+}
+
+.jobs *:nth-child(odd) {
   font: var(--font-subtitle);
-  margin-top: 25px;
 }
 
-.jobs div:nth-child(even) {
+.jobs *:nth-child(even) {
   font: var(--font-body-medium);
-  margin-top: 25px;
-}
-
-.jobs div:first-child {
-  margin-top: 0;
 }

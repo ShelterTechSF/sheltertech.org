@@ -36,9 +36,9 @@ const TwoParagraphBlock = ({
   const GridAreaBottomLeft = () => (
     <div className={s.gridAreaBottomLeft}>
       <div className={s.paragraph2Wrapper}>{paragraph2}</div>
-      <div className={s.ctaButtons}>
+      <div className={s.ctaButtonRow}>
         {ctaButtons.map((button) => (
-          <div key={button.text}>
+          <div className={s.ctaButtonItem} key={button.text}>
             <Button
               text={button.text}
               internalLink={button.internalLink}
@@ -79,7 +79,7 @@ TwoParagraphBlock.propTypes = {
   paragraph1: PropTypes.string.isRequired,
   paragraph2: PropTypes.node.isRequired,
   image: ImagePropType.isRequired,
-  ctaButtons: PropTypes.arrayOf(Button.propTypes).isRequired,
+  ctaButtons: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)).isRequired,
 };
 
 export default TwoParagraphBlock;

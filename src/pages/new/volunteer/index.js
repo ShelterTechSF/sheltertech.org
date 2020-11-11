@@ -20,7 +20,7 @@ export default () => (
         alt:
           "Team members collaborating together by looking and pointing at whiteboard covered with sticky notes full of ideas.",
       }}
-      ctaButton={[
+      ctaButtons={[
         {
           text: "APPLY",
           internalLink: "/foo",

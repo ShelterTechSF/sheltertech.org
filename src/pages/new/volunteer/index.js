@@ -35,7 +35,7 @@ export default () => (
           </p>
         </>
       }
-      ctaButton={[{ text: "Apply", internalLink: "/foo" }]}
+      ctaButtons={[{ text: "Apply", internalLink: "/foo" }]}
     />
   </Layout>
 );

@@ -47,24 +47,25 @@
   flex-direction: row;
   grid-column: 2 / span 11;
   grid-row: 2;
+  margin-top: 54px;
 }
 
 @media (--tablet-and-down) {
   .gridAreaBottom {
     display: flex;
     flex-direction: column;
+    margin-top: 0;
   }
 }
 
 .title {
   font: var(--font-title);
   grid-column: 2 / span 8;
-  margin: 0 0 54px;
 }
 
 @media (--tablet-and-down) {
-  .title {
-    margin-bottom: 40px;
+  .statCard:first-child {
+    margin-top: 40px;
   }
 }
 
@@ -96,3 +97,4 @@
     line-height: 1.3;
   }
 }
+

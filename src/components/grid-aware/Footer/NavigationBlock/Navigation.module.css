@@ -21,9 +21,9 @@
 }
 
 .footerLinksContainer {
+  color: var(--color-white);
   display: flex;
   flex-direction: row;
-  color: var(--color-white);
   font: var(--font-caption);
 }
 

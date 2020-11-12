@@ -2,15 +2,15 @@ import PropTypes from "prop-types";
 import React from "react";
 import { InputTextPropType } from "../../inline/InputText";
 import s from "./Footer.module.css";
-import InfoBlock from "./InfoBlock/InfoBlock";
+import InfoBlock from "./InfoBlock";
 import {
   Navigation,
   FooterNavigationPropType,
   SealsPropType,
   ShelterTechLogoPropType,
   SocialMediaLinksPropType,
-} from "./NavigationBlock/NavigationBlock";
-import SubscriptionBlock from "./SubscriptionBlock/SubscriptionBlock";
+} from "./NavigationBlock";
+import SubscriptionBlock from "./SubscriptionBlock";
 
 const Footer = ({
   inputText,

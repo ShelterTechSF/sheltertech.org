@@ -2,7 +2,8 @@
 
 .bleedWrapper {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  grid-template-rows: auto 0;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
 }
@@ -36,9 +37,9 @@
   column-gap: var(--grid-column-gap);
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
-  grid-template-rows: auto 590px;
+  grid-template-rows: auto minmax(590px, auto);
   padding-top: 140px;
-  row-gap: 84px;
+  row-gap: 70px;
 }
 
 .gridParent > * {
@@ -91,31 +92,36 @@
 
 .paragraph2Wrapper {
   font: var(--font-body-small);
-  margin-top: 75px;
 }
 
 .paragraph2Wrapper :first-child {
   margin: 0;
 }
 
-.paragraph2Wrapper *:not(:first-child) {
+.paragraph2Wrapper :not(:first-child) {
   margin-top: 15px;
 }
 
 .image1Wrapper {
   position: relative;
-  top: 35px;
+  top: -55px;
 }
 
 @media (--tablet-and-down) {
   .paragraph1Wrapper {
-    font-size: 16px;
+    font: var(--font-body-medium);
+    margin-top: 40px;
+  }
+
+  .paragraph2Wrapper {
+    font: var(--font-body-medium);
     margin-top: 40px;
   }
 
   .image1Wrapper {
     left: 40px;
-    margin-top: 5px;
+    margin-top: 40px;
+    top: 0;
   }
 }
 

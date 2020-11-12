@@ -29,18 +29,17 @@
   width: 340px;
 }
 
-.subscriptionBlock a {
-  margin-left: 38px;
-  padding: 14px 40px;
-}
-
-.subscriptionBlock a:hover {
-  top: 0;
-}
-
 .formInput {
   display: flex;
   flex-direction: row;
+}
+
+.buttonWrapper {
+  margin-left: 38px;
+}
+
+.buttonWrapper > a:hover {
+  top: 0;
 }
 
 .inputText {

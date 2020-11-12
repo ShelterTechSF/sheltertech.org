@@ -14,7 +14,9 @@ const SubscriptionBlock = ({ inputText }) => {
             <div className={s.inputText}>
               <InputText inputText={inputText} />
             </div>
-            <Button text="submit" internalLink="/mailchimp" />
+            <div className={s.buttonWrapper}>
+              <Button text="submit" internalLink="/mailchimp" />
+            </div>
           </form>
         </div>
       </div>

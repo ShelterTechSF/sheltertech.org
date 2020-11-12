@@ -44,6 +44,8 @@
 .gridAreaText {
   grid-column: 2 / span 6;
   grid-row: 1;
+  margin-bottom: 96px;
+  margin-top: 103px;
 }
 
 .gridAreaImage1 {
@@ -57,6 +59,10 @@
 }
 
 @media (--tablet-and-down) {
+  .gridAreaText {
+    margin: 30px 0;
+  }
+
   .gridAreaImage2 {
     text-align: right;
   }
@@ -67,7 +73,7 @@
 
 .title {
   font: var(--font-headline);
-  margin-top: 90px;
+  margin: 0;
 }
 
 .subtitle {
@@ -91,14 +97,9 @@
 }
 
 @media (--tablet-and-down) {
-  .title {
-    margin-top: 30px;
-  }
-
   .ctaButtonRow {
     flex-flow: column;
     margin-bottom: 30px;
-    margin-top: 20px;
   }
 
   .ctaButtonRowItem:not(:last-child) {
@@ -126,6 +127,7 @@
 
 @media (--laptop-and-up) {
   .image2Wrapper {
+    margin-bottom: 88px;
     top: 271px;
   }
 }

@@ -32,8 +32,7 @@ const StatsBlock = ({ title, statCards }) => (
 
 StatsBlock.propTypes = {
   title: PropTypes.string.isRequired,
-  statCards: PropTypes.arrayOf(PropTypes.shape(StatCard.propTypes))
-    .isRequired,
+  statCards: PropTypes.arrayOf(PropTypes.shape(StatCard.propTypes)).isRequired,
 };
 
 export default StatsBlock;

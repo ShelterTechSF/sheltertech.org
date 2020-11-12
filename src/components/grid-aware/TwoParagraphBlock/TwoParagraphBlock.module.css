@@ -36,7 +36,7 @@
   column-gap: var(--grid-column-gap);
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
-  grid-template-rows: auto minmax(222px, auto);
+  grid-template-rows: auto minmax(590px, auto);
   padding-top: 140px;
 }
 

@@ -3,11 +3,6 @@ import React from "react";
 
 import s from "./StatsBlock.module.css";
 
-const StatCardsPropType = PropTypes.shape({
-  number: PropTypes.string.isRequired,
-  statement: PropTypes.string.isRequired,
-});
-
 const StatCard = ({ number, statement }) => (
   <div className={s.statCard}>
     <div className={s.number}>{number}</div>
@@ -27,7 +22,7 @@ const StatsBlock = ({ title, statCards }) => (
         <h1 className={s.title}>{title}</h1>
         <div className={s.gridAreaBottom}>
           {statCards.map(({ number, statement }) => (
-            <StatCard key={number} number={number} statement={statement} />
+            <StatCard key={statement} number={number} statement={statement} />
           ))}
         </div>
       </section>
@@ -37,7 +32,7 @@ const StatsBlock = ({ title, statCards }) => (
 
 StatsBlock.propTypes = {
   title: PropTypes.string.isRequired,
-  statCards: PropTypes.arrayOf(PropTypes.shape(StatCardsPropType.propTypes))
+  statCards: PropTypes.arrayOf(PropTypes.shape(StatCard.propTypes))
     .isRequired,
 };
 

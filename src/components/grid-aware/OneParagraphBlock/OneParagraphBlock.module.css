@@ -33,6 +33,7 @@
 /* Main grid */
 
 .gridParent {
+  color: var(--color-white);
   column-gap: var(--grid-column-gap);
   display: grid;
   grid-column-start: 2;
@@ -67,7 +68,6 @@
 /* Title block */
 
 .title {
-  color: var(--color-white);
   font: var(--font-headline);
 }
 
@@ -84,12 +84,7 @@
   }
 }
 
-
-.jobs {
-  color: var(--color-white);
-}
-
-.jobs :first-child {
+.jobs *:first-child {
   margin: 0;
 }
 

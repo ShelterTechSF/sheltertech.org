@@ -21,20 +21,20 @@ const TwoParagraphBlock = ({
   image,
   ctaButtons,
 }) => {
-  const GridAreaTopLeft = () => (
-    <div className={s.gridAreaTopLeft}>
+  const GridAreaTitle = () => (
+    <div className={s.gridAreaTitle}>
       <h1 className={s.title}>{title}</h1>
     </div>
   );
 
-  const GridAreaTopRight = () => (
-    <div className={s.gridAreaTopRight}>
+  const GridAreaParagraph1 = () => (
+    <div className={s.gridAreaParagraph1}>
       <div className={s.paragraph1Wrapper}>{paragraph1}</div>
     </div>
   );
 
-  const GridAreaBottomLeft = () => (
-    <div className={s.gridAreaBottomLeft}>
+  const GridAreaParagraph2 = () => (
+    <div className={s.gridAreaParagraph2}>
       <div className={s.paragraph2Wrapper}>{paragraph2}</div>
       <div className={s.ctaButtonRow}>
         {ctaButtons.map((button) => (
@@ -51,8 +51,8 @@ const TwoParagraphBlock = ({
     </div>
   );
 
-  const GridAreaBottomRight = () => (
-    <div className={s.gridAreaBottomRight}>
+  const GridAreaImage = () => (
+    <div className={s.gridAreaImage}>
       <div className={s.image1Wrapper}>
         <img className={s.image1} src={image.url} alt={image.alt} />
       </div>
@@ -64,10 +64,10 @@ const TwoParagraphBlock = ({
       <div className={s.bleedBackground} />
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
-          <GridAreaTopLeft />
-          <GridAreaTopRight />
-          <GridAreaBottomRight />
-          <GridAreaBottomLeft />
+          <GridAreaTitle />
+          <GridAreaParagraph1 />
+          <GridAreaImage />
+          <GridAreaParagraph2 />
         </section>
       </div>
     </div>

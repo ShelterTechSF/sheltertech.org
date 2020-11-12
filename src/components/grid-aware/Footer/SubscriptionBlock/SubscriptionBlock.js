@@ -1,11 +1,10 @@
-import PropTypes from "prop-types";
 import React from "react";
 import Button from "../../../inline/Button";
-import InputText from "../../../inline/Form/InputText";
+import { InputText, InputTextPropType } from "../../../inline/InputText";
 
 import s from "./SubscriptionBlock.module.css";
 
-const SubscriptionBlock = ({ inputPlaceHolderText }) => {
+const SubscriptionBlock = ({ inputText }) => {
   return (
     <div className={s.bleedWrapper}>
       <div className={s.subscriptionBlock}>
@@ -13,7 +12,7 @@ const SubscriptionBlock = ({ inputPlaceHolderText }) => {
           <div className={s.subscribeMessage}>Subscribe to get updates</div>
           <form className={s.formInput}>
             <div className={s.inputText}>
-              <InputText placeholderText={inputPlaceHolderText} />
+              <InputText inputText={inputText} />
             </div>
             <Button text="submit" internalLink="/mailchimp" />
           </form>
@@ -24,7 +23,7 @@ const SubscriptionBlock = ({ inputPlaceHolderText }) => {
 };
 
 SubscriptionBlock.propTypes = {
-  inputPlaceHolderText: PropTypes.string.isRequired,
+  inputText: InputTextPropType.isRequired,
 };
 
 export default SubscriptionBlock;

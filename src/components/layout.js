@@ -43,32 +43,15 @@ const Layout = ({ children }) => {
         {children}
       </div>
       <Footer
-        inputPlaceHolderText="email address"
+        inputText={{
+          placeholderText: "email address",
+          widthDesktop: "291px",
+          widthMobile: "155px",
+        }}
         footerNavigation={[
-          {
-            title: "Our Work",
-            links: [
-              { name: "ShelterConnect", url: "/shelterconnect" },
-              { name: "SF Services Guide", url: "/sfservicesguide" },
-              { name: "Community Reps", url: "/communityreps" },
-            ],
-          },
-          {
-            title: "What You Can Do",
-            links: [
-              { name: "Volunteer", url: "/new/volunteer" },
-              { name: "Donate", url: "/new/donate" },
-              { name: "Partnerships", url: "/partnerships" },
-            ],
-          },
-          {
-            title: "About Us",
-            links: [
-              { name: "Our Story", url: "/ourstory" },
-              { name: "Record", url: "/record" },
-              { name: "Newsroom", url: "/newsroom" },
-            ],
-          },
+          { name: "Programs", url: "/programs" },
+          { name: "Volunteer", url: "/new/volunteer" },
+          { name: "Donate", url: "/new/donate" },
         ]}
         seals={[{ logo: sealOfTransparency, alt: "Seal of Transparency" }]}
         shelterTechLogo={{
@@ -98,7 +81,7 @@ const Layout = ({ children }) => {
           },
         ]}
         address="268 Bush Street #4302, San Francisco CA, 94104 USA"
-        ein="• ein: 38-3984099"
+        employeeIdentificationNumber="ein: 38-3984099"
       />
     </div>
   );

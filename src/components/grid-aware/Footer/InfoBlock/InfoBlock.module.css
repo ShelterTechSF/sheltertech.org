@@ -1,44 +1,33 @@
 /* Background bleed */
 
 .bleedWrapper {
-  display: grid;
-  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
-}
-
-.infoBlock {
   background-color: var(--color-midnight-blue);
-  color: var(--color-gray-300);
-  display: grid;
+  color: var(--color-gray-400);
   font-family: var(--font-family-lato);
   font-size: 14px;
-  font-weight: 300;
-  grid-column: 1 / span 12;
-  line-height: 16.8px;
-  padding: 30px 60px;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 .organizationInfo {
+  padding: 30px 60px;
   display: flex;
   justify-content: space-between;
 }
 
+.address {
+  font-style: inherit;
+}
+
 @media (--tablet-and-down) {
-  .bleedWrapper {
-    grid-template-columns: none;
-  }
-
-  .infoBlock {
-    margin: 0;
-  }
-
   .organizationInfo {
     flex-direction: column;
+    padding: 30px 0;
   }
 
-  .organizationInfo address {
+  .address {
     margin-top: 15px;
   }
 }
-

@@ -1,0 +1,12 @@
+.inputText {
+  border: 2px solid var(--color-gray-400);
+  font: var(--font-body-small);
+  padding: 16px 16px 15px 17px;
+  width: var(--input-text-desktop);
+}
+
+@media (--tablet-and-down) {
+  .inputText {
+    width: var(--input-text-mobile);
+  }
+}

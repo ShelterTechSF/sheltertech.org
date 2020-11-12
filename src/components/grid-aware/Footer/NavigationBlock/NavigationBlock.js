@@ -3,27 +3,22 @@ import React from "react";
 import s from "./Navigation.module.css";
 
 /* PropType shapes */
-const FooterNavigationPropType = PropTypes.shape({
-  title: PropTypes.string.isRequired,
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-    })
-  ),
+export const FooterNavigationPropType = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 });
 
-const SealsPropType = PropTypes.shape({
+export const SealsPropType = PropTypes.shape({
   logo: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
 });
 
-const ShelterTechLogoPropType = PropTypes.shape({
+export const ShelterTechLogoPropType = PropTypes.shape({
   logo: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
 });
 
-const SocialMediaLinksPropType = PropTypes.shape({
+export const SocialMediaLinksPropType = PropTypes.shape({
   url: PropTypes.string.isRequired,
   logo: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
@@ -49,17 +44,10 @@ NavigationLeftArea.propTypes = {
 
 const FooterLinks = ({ footerNavigation }) => (
   <nav className={s.footerLinksContainer}>
-    {footerNavigation.map((navigation) => (
-      <div className={s.footerLinksColumn} key={navigation.title}>
-        <div className={s.footerLinksTitle}>{navigation.title}</div>
-        <div className={s.footerLinks}>
-          {navigation.links.map((link) => (
-            <a href={link.url} key={link.name}>
-              {link.name}
-            </a>
-          ))}
-        </div>
-      </div>
+    {footerNavigation.map((link) => (
+      <a className={s.link} href={link.url} key={link.name}>
+        {link.name}
+      </a>
     ))}
   </nav>
 );
@@ -91,7 +79,7 @@ NavigationRightArea.propTypes = {
   seals: PropTypes.arrayOf(SealsPropType).isRequired,
 };
 
-const Navigation = ({
+export const Navigation = ({
   footerNavigation,
   seals,
   shelterTechLogo,
@@ -119,5 +107,3 @@ Navigation.propTypes = {
   shelterTechLogo: ShelterTechLogoPropType.isRequired,
   socialMediaLinks: PropTypes.arrayOf(SocialMediaLinksPropType).isRequired,
 };
-
-export default Navigation;

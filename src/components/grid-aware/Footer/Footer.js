@@ -1,67 +1,50 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { InputTextPropType } from "../../inline/InputText";
 import s from "./Footer.module.css";
 import InfoBlock from "./InfoBlock/InfoBlock";
-import Navigation from "./NavigationBlock/NavigationBlock";
+import {
+  Navigation,
+  FooterNavigationPropType,
+  SealsPropType,
+  ShelterTechLogoPropType,
+  SocialMediaLinksPropType,
+} from "./NavigationBlock/NavigationBlock";
 import SubscriptionBlock from "./SubscriptionBlock/SubscriptionBlock";
 
-/* PropType shapes */
-const FooterNavigationPropType = PropTypes.shape({
-  title: PropTypes.string.isRequired,
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-    })
-  ),
-});
-
-const SealsPropType = PropTypes.shape({
-  logo: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-});
-
-const ShelterTechLogoPropType = PropTypes.shape({
-  logo: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-});
-
-const SocialMediaLinksPropType = PropTypes.shape({
-  url: PropTypes.string.isRequired,
-  logo: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-});
-
 const Footer = ({
-  inputPlaceHolderText,
+  inputText,
   footerNavigation,
   seals,
   shelterTechLogo,
   socialMediaLinks,
   address,
-  ein,
+  employeeIdentificationNumber,
 }) => {
   return (
-    <footer className={s.bleedWrapper}>
-      <SubscriptionBlock inputPlaceHolderText={inputPlaceHolderText} />
+    <footer className={s.footer}>
+      <SubscriptionBlock inputText={inputText} />
       <Navigation
         footerNavigation={footerNavigation}
         seals={seals}
         shelterTechLogo={shelterTechLogo}
         socialMediaLinks={socialMediaLinks}
       />
-      <InfoBlock ein={ein} address={address} />
+      <InfoBlock
+        employeeIdentificationNumber={employeeIdentificationNumber}
+        address={address}
+      />
     </footer>
   );
 };
 
 Footer.propTypes = {
-  inputPlaceHolderText: PropTypes.string.isRequired,
+  inputText: InputTextPropType.isRequired,
   footerNavigation: PropTypes.arrayOf(FooterNavigationPropType).isRequired,
   seals: PropTypes.arrayOf(SealsPropType).isRequired,
   shelterTechLogo: ShelterTechLogoPropType.isRequired,
   socialMediaLinks: PropTypes.arrayOf(SocialMediaLinksPropType).isRequired,
-  ein: PropTypes.string.isRequired,
+  employeeIdentificationNumber: PropTypes.string.isRequired,
   address: PropTypes.string.isRequired,
 };
 

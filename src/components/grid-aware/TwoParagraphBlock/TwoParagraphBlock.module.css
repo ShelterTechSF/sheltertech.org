@@ -98,7 +98,7 @@
   margin: 0;
 }
 
-.paragraph2Wrapper *:not(:first-child) {
+.paragraph2Wrapper :not(:first-child) {
   margin-top: 15px;
 }
 

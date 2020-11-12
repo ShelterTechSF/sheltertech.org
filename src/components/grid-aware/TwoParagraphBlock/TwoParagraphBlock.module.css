@@ -109,13 +109,13 @@
 
 @media (--tablet-and-down) {
   .paragraph1Wrapper {
-    margin-top: 40px;
     font-size: 16px;
+    margin-top: 40px;
   }
 
   .image1Wrapper {
-    margin-top: 5px;
     left: 40px;
+    margin-top: 5px;
   }
 }
 

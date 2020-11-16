@@ -24,6 +24,7 @@ import image3 from "../../components/grid-aware/ThreeParagraphBlock/stories/imag
 import VideoHeader from "../../components/grid-aware/VideoHeader/VideoHeader";
 import videoHeaderImage from "../../components/grid-aware/VideoHeader/stories/VideoHeader.png";
 import Layout from "../../components/layout";
+import TitleBlock from "../../components/grid-aware/TitleBlock";
 
 export default () => (
   <Layout>
@@ -107,6 +108,9 @@ export default () => (
         },
       ]}
     />
+    <TitleBlock 
+      title= "Voices from the community"
+      />
     <BlockQuoteBlock
       quotes={[
         {

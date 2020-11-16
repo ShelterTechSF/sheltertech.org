@@ -12,12 +12,6 @@
   min-width: 0;
 }
 
-@media (--tablet-and-down) {
-  .bleedWrapper {
-    display: block;
-  }
-}
-
 .gridParent {
   column-gap: var(--grid-column-gap);
   display: grid;
@@ -30,27 +24,27 @@
 }
 
 @media (--tablet-and-down) {
+  .bleedWrapper {
+    display: block;
+  }
+
   .gridParent {
     display: block;
   }
 }
 
-.textCardWrapper {
-  text-align: center;
+
+/* Relating to .bleedImage */
+.playButton {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (--laptop-and-up) {
   .bleedImage {
     position: absolute;
-  }
-
-  .gridAreaCard {
-    grid-column: 8 / span 5;
-    z-index: 1;
-  }
-
-  .textCardWrapper {
-    margin-top: 87px;
   }
 
   .playIcon {
@@ -59,11 +53,20 @@
   }
 }
 
-.playButton {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+@media (--tablet-and-down) {
+  .bleedImage {
+    position: relative;
+  }
+
+  .image {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+/* Relating to .bleedMainContent */
+.textCardWrapper {
+  text-align: center;
 }
 
 .textCard {
@@ -72,7 +75,7 @@
   padding: 70px 60px;
 }
 
-.eyebrow {
+.eyebrowText {
   color: var(--color-gray-600);
   font: var(--font-action);
   text-transform: uppercase;
@@ -87,27 +90,19 @@
   margin-top: 30px;
 }
 
-@media (--tablet-and-down) {
-  .bleedImage {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+@media (--laptop-and-up) {
+  .gridAreaCard {
+    grid-column: 8 / span 5;
+    z-index: 1;
   }
 
+  .textCardWrapper {
+    margin-top: 87px;
+  }
+}
+
+@media (--tablet-and-down) {
   .textCard {
     padding: 30px;
-  }
-
-  .title {
-    margin-top: 15px;
-  }
-
-  .image {
-    width: 100%;
-  }
-
-  .playButton {
-    top: initial;
-    transform: initial;
   }
 }

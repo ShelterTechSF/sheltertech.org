@@ -13,7 +13,7 @@ const ImagePropType = PropTypes.shape({
 
 const TextCard = ({ eyebrowText, description, button }) => (
   <div className={s.textCard}>
-    <div className={s.eyebrow}>{eyebrowText}</div>
+    <div className={s.eyebrowText}>{eyebrowText}</div>
     <div className={s.description}>{description}</div>
     <div className={s.actionRow}>
       <Button

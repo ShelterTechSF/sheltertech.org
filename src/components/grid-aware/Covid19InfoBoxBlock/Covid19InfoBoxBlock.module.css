@@ -23,11 +23,21 @@
 
 .title {
   font: var(--font-title);
-  font-size: 30px;
+}
+
+@media (--tablet-and-down) {
+  .title {
+    font: var(--font-headline);
+  }
 }
 
 .description {
   font: var(--font-body-medium);
-  font-size: 20px;
   margin-top: 20px;
+}
+
+@media (--tablet-and-down) {
+  .description {
+    font-size: 20px;
+  }
 }

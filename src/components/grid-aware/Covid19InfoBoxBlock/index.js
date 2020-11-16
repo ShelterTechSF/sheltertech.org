@@ -1,1 +1,1 @@
-export { default } from "./Covid19InfoBoxBlock";
+export { default } from "./COVID19InfoBoxBlock";

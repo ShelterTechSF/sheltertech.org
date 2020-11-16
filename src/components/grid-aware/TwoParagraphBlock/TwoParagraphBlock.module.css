@@ -82,8 +82,8 @@
   }
 
   .gridAreaImage {
+    margin-right: -40px;
     margin-top: 40px;
-    text-align: right;
   }
 }
 
@@ -123,7 +123,6 @@
   }
 
   .image1Wrapper {
-    left: 40px;
     margin-bottom: 0;
     position: relative;
   }

@@ -19,36 +19,18 @@ const ImagePropType = PropTypes.shape({
 
 /* Subcomponents */
 
-const ParagraphBlock = ({ title, description }) => (
+const ParagraphBlock = ({ title, description, button }) => (
   <div>
     <div className={s.paragraphTitle}>{title}</div>
     <div className={s.paragraphDescription}>{description}</div>
+    <div className={s.ctaButtonRow}>{button}</div>
   </div>
 );
 
 ParagraphBlock.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-};
-
-const CTABlock = ({ title, buttons }) => (
-  <div>
-    <div className={s.ctaTitleBlock}>
-      <div className={s.ctaTitle}>{title}</div>
-    </div>
-    <div className={s.ctaButtonRow}>
-      {buttons.map(({ text, internalLink, externalLink, onClick }) => (
-        <div className={s.ctaButtonRowItem} key={text}>
-          <Button {...{ text, internalLink, externalLink, onClick }} />
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
-CTABlock.propTypes = {
-  title: PropTypes.string.isRequired,
-  buttons: PropTypes.arrayOf(Button.propTypes).isRequired,
+  button: PropTypes.shape(Button.propTypes).isRequired,
 };
 
 /* Main component */
@@ -60,18 +42,21 @@ const ThreeParagraphBlock = ({
   paragraph3,
   image1,
   image2,
-  image3,
-  ctaTitle,
   ctaButtons,
 }) => {
+  const Buttons = ctaButtons.map(
+    ({ text, internalLink, externalLink, onClick }) => (
+      <div className={s.ctaButtonRowItem} key={text}>
+        <Button {...{ text, internalLink, externalLink, onClick }} />
+      </div>
+    )
+  );
+
   const GridAreaLeft = () => (
     <div className={s.gridAreaLeft}>
       <h1 className={s.title}>{title}</h1>
       <div className={s.image1Wrapper}>
-        <img src={image1.url} alt={image1.alt} />
-      </div>
-      <div className={s.image2Wrapper}>
-        <img src={image2.url} alt={image2.alt} />
+        <img className={s.image} src={image1.url} alt={image1.alt} />
       </div>
     </div>
   );
@@ -82,12 +67,14 @@ const ThreeParagraphBlock = ({
         <ParagraphBlock
           title={paragraph1.title}
           description={paragraph1.description}
+          button={Buttons[0]}
         />
       </div>
       <div className={s.paragraph2Wrapper}>
         <ParagraphBlock
           title={paragraph2.title}
           description={paragraph2.description}
+          button={Buttons[1]}
         />
       </div>
     </div>
@@ -99,17 +86,12 @@ const ThreeParagraphBlock = ({
         <ParagraphBlock
           title={paragraph3.title}
           description={paragraph3.description}
+          button={Buttons[2]}
         />
       </div>
-      <div className={s.image3Wrapper}>
-        <img src={image3.url} alt={image3.alt} />
+      <div className={s.image2Wrapper}>
+        <img className={s.image} src={image2.url} alt={image2.alt} />
       </div>
-    </div>
-  );
-
-  const GridAreaBottom = () => (
-    <div className={s.gridAreaBottom}>
-      <CTABlock title={ctaTitle} buttons={ctaButtons} />
     </div>
   );
 
@@ -121,7 +103,6 @@ const ThreeParagraphBlock = ({
           <GridAreaLeft />
           <GridAreaMiddle />
           <GridAreaRight />
-          <GridAreaBottom />
         </section>
       </div>
     </div>
@@ -135,7 +116,6 @@ ThreeParagraphBlock.propTypes = {
   paragraph3: ParagraphPropType.isRequired,
   image1: ImagePropType.isRequired,
   image2: ImagePropType.isRequired,
-  image3: ImagePropType.isRequired,
   ctaTitle: PropTypes.string.isRequired,
   ctaButtons: PropTypes.arrayOf(Button.propTypes).isRequired,
 };

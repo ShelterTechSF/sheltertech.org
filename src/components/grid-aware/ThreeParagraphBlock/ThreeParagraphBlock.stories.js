@@ -1,9 +1,8 @@
 import React from "react";
 
 import ThreeParagraphBlock from "./ThreeParagraphBlock";
-import image1 from "./stories/image1.png";
-import image2 from "./stories/image2.png";
-import image3 from "./stories/image3.png";
+import image1 from "./stories/image2.png";
+import image2 from "./stories/image3.png";
 
 export default {
   title: "Grid-Aware/ThreeParagraphBlock",
@@ -38,14 +37,10 @@ const Template = ({
       }}
       image1={{
         url: image1,
-        alt: "Two volunteers working on a laptop together at a datathon.",
+        alt: "Team posing for a photo after a design workshop.",
       }}
       image2={{
         url: image2,
-        alt: "Team posing for a photo after a design workshop.",
-      }}
-      image3={{
-        url: image3,
         alt: "Multiple volunteers working at a datathon.",
       }}
       ctaTitle={ctaTitle}
@@ -57,18 +52,19 @@ const Template = ({
 export const Gray = Template.bind({});
 Gray.args = {
   title: "Get involved",
-  paragraph1Title: "Volunteer your talents",
+  paragraph1Title: "Volunteer",
   paragraph1Description:
-    "Our strength is rooted in our growing community of volunteers who have been mobilized to help the most vulnerable among us-the elderly, the children, domestic abuse survivors, single mothers and others struggling with homelessness who are not getting their basic digital needs met.",
-  paragraph2Title: "Empower your organization",
+    "Volunteers make our work possible. There are several ways to support our mission. Learn more and get involved.",
+  paragraph2Title: "Partnership",
   paragraph2Description:
-    "We work with government agencies and nonprofits to empower their programs and build better connections between agencies. We build alongside your teams, so everyone is trained and prepared for handoff. We build alongside your teams, so everyone is trained and prepared for handoff.",
-  paragraph3Title: "Donate to end the digital divide",
+    "We work with companies, nonprofits, and local governments to empower the community. Reach out to us.",
+  paragraph3Title: "Donate",
   paragraph3Description:
-    "A monthly donation helps change the lives of those in need. Whether it’s providing free internet access to someone for the night or connecting a brand new shelter to the internet, your support will have a sustaining impact.",
+    "Our programs are largely funded by donations from people who care about bridging the digital divide. Support ShelterTech today.",
   ctaTitle: "Volunteer, donate, or reach out to our partnerships team",
   ctaButtons: [
     { text: "Become a Volunteer", internalLink: "/foo" },
-    { text: "Donate", internalLink: "/bar" },
+    { text: "Work With Us", internalLink: "/bar" },
+    { text: "Donate", internalLink: "/fooBar" },
   ],
 };

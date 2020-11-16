@@ -21,10 +21,10 @@ import ThreeParagraphBlock from "../../components/grid-aware/ThreeParagraphBlock
 import image1 from "../../components/grid-aware/ThreeParagraphBlock/stories/image1.png";
 import image2 from "../../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
 import image3 from "../../components/grid-aware/ThreeParagraphBlock/stories/image3.png";
+import TitleBlock from "../../components/grid-aware/TitleBlock";
 import VideoHeader from "../../components/grid-aware/VideoHeader/VideoHeader";
 import videoHeaderImage from "../../components/grid-aware/VideoHeader/stories/VideoHeader.png";
 import Layout from "../../components/layout";
-import TitleBlock from "../../components/grid-aware/TitleBlock";
 
 export default () => (
   <Layout>
@@ -108,9 +108,7 @@ export default () => (
         },
       ]}
     />
-    <TitleBlock 
-      title= "Voices from the community"
-      />
+    <TitleBlock title="Voices from the community" />
     <BlockQuoteBlock
       quotes={[
         {

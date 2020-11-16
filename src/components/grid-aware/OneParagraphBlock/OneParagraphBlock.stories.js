@@ -7,16 +7,20 @@ export default {
   component: OneParagraphBlock,
 };
 
-const Template = ({ title, jobs, ctaButtons }) => (
+const Template = ({ title, descriptions, ctaButtons }) => (
   <div>
-    <OneParagraphBlock title={title} jobs={jobs} ctaButtons={ctaButtons} />
+    <OneParagraphBlock
+      title={title}
+      descriptions={descriptions}
+      ctaButtons={ctaButtons}
+    />
   </div>
 );
 
 export const DefaultOneParagraphBlock = Template.bind({});
 DefaultOneParagraphBlock.args = {
   title: "This is where we could use your expertise",
-  jobs: (
+  descriptions: (
     <>
       <p>Product</p>
       <p>

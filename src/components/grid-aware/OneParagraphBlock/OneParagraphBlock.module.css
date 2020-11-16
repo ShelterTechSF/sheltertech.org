@@ -72,31 +72,31 @@
 }
 
 
-/* Jobs block */
+/* Descriptions block */
 
-.jobsWrapper {
+.descriptionsWrapper {
   margin-top: 0;
 }
 
 @media (--tablet-and-down) {
-  .jobsWrapper {
+  .descriptionsWrapper {
     margin-top: 40px;
   }
 }
 
-.jobs *:first-child {
+.descriptions *:first-child {
   margin: 0;
 }
 
-.jobs *:not(:first-child) {
+.descriptions *:not(:first-child) {
   margin-top: 20px;
 }
 
-.jobs *:nth-child(odd) {
+.descriptions *:nth-child(odd) {
   font: var(--font-subtitle);
 }
 
-.jobs *:nth-child(even) {
+.descriptions *:nth-child(even) {
   font: var(--font-body-medium);
 }
 

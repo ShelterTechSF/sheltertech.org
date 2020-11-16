@@ -13,7 +13,7 @@ export default () => (
   <Layout>
     <OneParagraphBlock
       title="This is where we could use your expertise"
-      jobs={
+      descriptions={
         <>
           <p>Product</p>
           <p>

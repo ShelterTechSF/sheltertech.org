@@ -5,7 +5,7 @@ import Button from "../../inline/Button";
 
 import s from "./OneParagraphBlock.module.css";
 
-const OneParagraphBlock = ({ title, jobs, ctaButtons }) => {
+const OneParagraphBlock = ({ title, descriptions, ctaButtons }) => {
   const GridAreaLeft = () => (
     <div className={s.gridAreaLeft}>
       <div className={s.title}>{title}</div>
@@ -14,8 +14,8 @@ const OneParagraphBlock = ({ title, jobs, ctaButtons }) => {
 
   const GridAreaRight = () => (
     <div className={s.gridAreaRight}>
-      <div className={s.jobsWrapper}>
-        <div className={s.jobs}>{jobs}</div>
+      <div className={s.descriptionsWrapper}>
+        <div className={s.descriptions}>{descriptions}</div>
         <div className={s.ctaButtonRow}>
           {ctaButtons.map((button) => (
             <div className={s.ctaButtonItem} key={button.text}>
@@ -47,7 +47,7 @@ const OneParagraphBlock = ({ title, jobs, ctaButtons }) => {
 
 OneParagraphBlock.propTypes = {
   title: PropTypes.string.isRequired,
-  jobs: PropTypes.node.isRequired,
+  descriptions: PropTypes.node.isRequired,
   ctaButtons: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)).isRequired,
 };
 

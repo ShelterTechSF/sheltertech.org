@@ -72,7 +72,7 @@ export default () => (
       }}
       ctaTitle="Volunteer, donate, or reach out to our partnerships team"
       ctaButtons={[
-        { text: "Volunteer", internalLink: "/new/volunteer" },
+        { text: "Become a Volunteer", internalLink: "/new/volunteer" },
         { text: "Donate", internalLink: "/new/donate" },
         { text: "Work with us", onClick: () => {} },
       ]}

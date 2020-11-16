@@ -70,16 +70,16 @@
     padding: 40px 0 60px;
   }
 
-  .navigation {
-    align-items: center;
-    flex-direction: column;
-  }
-
   .navigationRightArea {
     margin-top: 60px;
     text-align: center;
   }
 
+  .navigation {
+    align-items: center;
+    flex-direction: column;
+  }
+  
   .footerNavLink:not(:last-child) {
     margin-right: 0;
   }

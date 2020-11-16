@@ -1,21 +1,13 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+import {
+  ImagePropType,
+  TitleDescriptionPropType,
+} from "../../../PropTypeShapes";
 import Button from "../../inline/Button";
 
 import s from "./ThreeParagraphBlock.module.css";
-
-/* PropType shapes */
-
-const ParagraphPropType = PropTypes.shape({
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-});
-
-const ImagePropType = PropTypes.shape({
-  url: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-});
 
 /* Subcomponents */
 
@@ -130,9 +122,9 @@ const ThreeParagraphBlock = ({
 
 ThreeParagraphBlock.propTypes = {
   title: PropTypes.string.isRequired,
-  paragraph1: ParagraphPropType.isRequired,
-  paragraph2: ParagraphPropType.isRequired,
-  paragraph3: ParagraphPropType.isRequired,
+  paragraph1: TitleDescriptionPropType.isRequired,
+  paragraph2: TitleDescriptionPropType.isRequired,
+  paragraph3: TitleDescriptionPropType.isRequired,
   image1: ImagePropType.isRequired,
   image2: ImagePropType.isRequired,
   image3: ImagePropType.isRequired,

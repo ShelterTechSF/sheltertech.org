@@ -1,12 +1,9 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import s from "./PartnersAndSponsorsBlock.module.css";
+import { ImagePropType } from "../../../PropTypeShapes";
 
-const LogoPropType = PropTypes.shape({
-  url: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-});
+import s from "./PartnersAndSponsorsBlock.module.css";
 
 const PartnersAndSponsorsBlock = ({ title, partnersAndSponsors }) => {
   const GridAreaLeft = () => (
@@ -39,7 +36,7 @@ const PartnersAndSponsorsBlock = ({ title, partnersAndSponsors }) => {
 
 PartnersAndSponsorsBlock.propTypes = {
   title: PropTypes.string.isRequired,
-  partnersAndSponsors: PropTypes.arrayOf(LogoPropType).isRequired,
+  partnersAndSponsors: PropTypes.arrayOf(ImagePropType).isRequired,
 };
 
 export default PartnersAndSponsorsBlock;

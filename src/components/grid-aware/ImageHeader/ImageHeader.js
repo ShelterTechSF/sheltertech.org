@@ -1,14 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+import { ImagePropType } from "../../../PropTypeShapes";
 import Button from "../../inline/Button";
 
 import s from "./ImageHeader.module.css";
-
-const ImagePropType = PropTypes.shape({
-  url: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-});
 
 const ImageHeader = ({
   title,

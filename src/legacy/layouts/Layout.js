@@ -1,5 +1,5 @@
 import { StaticQuery, graphql } from "gatsby";
-import PropTypes from "prop-types";
+import PropTypes, { TitleDescriptionPropType } from "prop-types";
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Header, Footer } from "../components/Navigation";
@@ -47,10 +47,7 @@ const Layout = ({ data, children }) => {
 Layout.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-      }).isRequired,
+      siteMetadata: TitleDescriptionPropType.isRequired,
     }).isRequired,
   }).isRequired,
   children: PropTypes.element.isRequired,

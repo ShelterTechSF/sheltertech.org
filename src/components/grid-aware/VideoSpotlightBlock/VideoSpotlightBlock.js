@@ -1,15 +1,11 @@
 import PropTypes from "prop-types";
 import React from "react";
+
+import { ImagePropType } from "../../../PropTypeShapes";
 import Button from "../../inline/Button";
 import playIcon from "./PlayIcon.svg";
+
 import s from "./VideoSpotlightBlock.module.css";
-
-/* PropType shapes */
-
-const ImagePropType = PropTypes.shape({
-  url: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-});
 
 const TextCard = ({ eyebrowText, description, button }) => (
   <div className={s.textCard}>

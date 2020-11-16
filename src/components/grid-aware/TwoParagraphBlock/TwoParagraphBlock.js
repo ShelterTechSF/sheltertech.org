@@ -1,16 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+import { ImagePropType } from "../../../PropTypeShapes";
 import Button from "../../inline/Button";
 
 import s from "./TwoParagraphBlock.module.css";
-
-/* PropType shapes */
-
-const ImagePropType = PropTypes.shape({
-  url: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-});
 
 /* Main component */
 

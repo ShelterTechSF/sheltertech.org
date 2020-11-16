@@ -22,7 +22,7 @@ export const FooterNavigationLinkPropType = PropTypes.oneOfType([
 export const SealsPropType = PropTypes.shape({
   logo: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  externalLink: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
 });
 
 export const ShelterTechLogoPropType = PropTypes.shape({
@@ -31,9 +31,9 @@ export const ShelterTechLogoPropType = PropTypes.shape({
 });
 
 export const SocialMediaLinkPropType = PropTypes.shape({
-  url: PropTypes.string.isRequired,
   logo: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
 });
 
 const NavigationLeftArea = ({ shelterTechLogo, socialMediaLinks }) => (
@@ -45,8 +45,8 @@ const NavigationLeftArea = ({ shelterTechLogo, socialMediaLinks }) => (
           className={s.socialMediaLink}
           rel="noreferrer"
           target="_blank"
-          href={socialMediaLink.url}
-          key={socialMediaLink.url}
+          href={socialMediaLink.link}
+          key={socialMediaLink.link}
         >
           <img src={socialMediaLink.logo} alt={socialMediaLink.alt} />
         </a>
@@ -116,7 +116,7 @@ const Seals = ({ seals }) => (
     {seals.map((seal) => (
       <a
         className={s.seal}
-        href={seal.externalLink}
+        href={seal.link}
         rel="noreferrer"
         target="_blank"
         key={seal.logo}

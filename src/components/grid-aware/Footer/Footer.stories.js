@@ -45,7 +45,7 @@ DefaultFooter.args = {
   ],
   seals: [
     {
-      externalLink: "https://www.guidestar.org/profile/38-3984099",
+      link: "https://www.guidestar.org/profile/38-3984099",
       logo: sealOfTransparency,
       alt: "GuideStar Seal of Transparency",
     },
@@ -53,22 +53,22 @@ DefaultFooter.args = {
   shelterTechLogo: { url: shelterTechLogoWhite, alt: "ShelterTech Logo" },
   socialMediaLinks: [
     {
-      url: "https://www.facebook.com/ShelterTechOrg/",
+      link: "https://www.facebook.com/ShelterTechOrg/",
       logo: facebookLogo,
       alt: "Facebook Logo",
     },
     {
-      url: "https://twitter.com/sheltertechorg",
+      link: "https://twitter.com/sheltertechorg",
       logo: twitterLogo,
       alt: "Twitter Logo",
     },
     {
-      url: "https://www.instagram.com/shelter_tech",
+      link: "https://www.instagram.com/shelter_tech",
       logo: instagramLogo,
       alt: "Instagram Logo",
     },
     {
-      url: "https://github.com/ShelterTechSF",
+      link: "https://github.com/ShelterTechSF",
       logo: githubLogo,
       alt: "GitHub Logo",
     },

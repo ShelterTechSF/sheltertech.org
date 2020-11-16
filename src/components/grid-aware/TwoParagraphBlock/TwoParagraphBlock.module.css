@@ -1,0 +1,169 @@
+/* Background bleed */
+
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+.bleedBackground {
+  background: var(--color-gray-300);
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.bleedMainContent {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    grid-template-columns: 40px 1fr 40px;
+  }
+
+  .bleedBackground {
+    grid-column: 1 / span 3;
+  }
+}
+
+
+/* Main grid */
+
+.gridParent {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  grid-template-rows: auto minmax(590px, auto);
+  padding-top: 140px;
+}
+
+.gridParent > * {
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    display: block;
+    padding: 50px 0 80px;
+  }
+}
+
+
+/* Main grid areas */
+
+.gridAreaTitle {
+  grid-column: 2 / span 4;
+  grid-row: 1;
+}
+
+.gridAreaParagraph1 {
+  grid-column: 6 / span 6;
+  grid-row: 1;
+}
+
+.gridAreaParagraph2 {
+  grid-column: 2 / span 5;
+  grid-row: 2;
+  margin-top: 70px;
+}
+
+.gridAreaImage {
+  grid-column: 8 / span 4;
+  grid-row: 2;
+  margin-top: 15px;
+}
+
+@media (--tablet-and-down) {
+  .gridAreaParagraph2 {
+    margin-top: 40px;
+  }
+
+  .gridAreaImage {
+    margin-top: 40px;
+    text-align: right;
+  }
+}
+
+
+/* Component wrappers */
+
+.paragraph1Wrapper {
+  font: var(--font-body-large);
+  margin-top: 0;
+}
+
+.paragraph2Wrapper {
+  font: var(--font-body-small);
+}
+
+.paragraph2Wrapper :first-child {
+  margin: 0;
+}
+
+.paragraph2Wrapper :not(:first-child) {
+  margin-top: 15px;
+}
+
+.image1Wrapper {
+  margin-bottom: -70px;
+}
+
+@media (--tablet-and-down) {
+  .paragraph1Wrapper {
+    font: var(--font-body-medium);
+    margin-top: 40px;
+  }
+
+  .paragraph2Wrapper {
+    font: var(--font-body-medium);
+    margin-top: 40px;
+  }
+
+  .image1Wrapper {
+    left: 40px;
+    margin-bottom: 0;
+    position: relative;
+  }
+}
+
+
+/* Title block */
+
+.title {
+  font: var(--font-headline);
+  margin: 0;
+}
+
+
+/* Image block */
+
+.image1 {
+  max-width: 100%;
+}
+
+
+/* CTA block */
+
+.ctaButtonRow {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 40px;
+}
+
+.ctaButtonItem:not(:last-child) {
+  margin-right: 40px;
+}
+
+@media (--tablet-and-down) {
+  .ctaButtonRow {
+    flex-flow: column;
+  }
+
+  .ctaButtonItem:not(:last-child) {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}

@@ -119,8 +119,9 @@ const Seals = ({ seals }) => (
         href={seal.externalLink}
         rel="noreferrer"
         target="_blank"
+        key={seal.logo}
       >
-        <img src={seal.logo} alt={seal.alt} key={seal} />
+        <img src={seal.logo} alt={seal.alt} />
       </a>
     ))}
   </div>

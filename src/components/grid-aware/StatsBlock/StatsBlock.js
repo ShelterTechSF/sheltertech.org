@@ -17,6 +17,7 @@ StatCard.propTypes = {
 
 const StatsBlock = ({ title, statCards }) => (
   <div className={s.bleedWrapper}>
+    <div className={s.bleedBackground} />
     <div className={s.bleedMainContent}>
       <section className={s.gridParent}>
         <h1 className={s.title}>{title}</h1>

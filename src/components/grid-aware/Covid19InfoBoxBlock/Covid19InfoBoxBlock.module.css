@@ -1,21 +1,24 @@
 .bleedWrapper {
-  background: var(--color-gray-300);
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
+}
+
+.bleedMainContent {
+  background: var(--color-gray-300);
+  grid-column: 2;
   padding: 60px;
 }
 
 @media (--tablet-and-down) {
   .bleedWrapper {
     display: block;
+  }
+
+  .bleedMainContent {
     padding: 50px 40px;
   }
-}
-
-.bleedMainContent {
-  grid-column: 2;
 }
 
 .title {

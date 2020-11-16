@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
         {children}
       </div>
       <Footer
-        placeholderText={"email address"}
+        placeholderText="email address"
         type="text"
         footerNavigation={[
           { text: "Programs", internalLink: "/new" },

@@ -1,7 +1,7 @@
+import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import s from "./NavigationBlock.module.css";
-import {Link} from "gatsby";
 
 /* PropType shapes */
 export const FooterNavigationLinkPropType = PropTypes.oneOfType([

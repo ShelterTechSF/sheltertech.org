@@ -69,14 +69,11 @@
 
 .title {
   font: var(--font-headline);
+  margin: 0;
 }
 
 
 /* Descriptions block */
-
-.descriptionsWrapper {
-  margin-top: 0;
-}
 
 @media (--tablet-and-down) {
   .descriptionsWrapper {
@@ -84,19 +81,24 @@
   }
 }
 
-.descriptions *:first-child {
+.descriptions * {
   margin: 0;
 }
 
-.descriptions *:not(:first-child) {
+.descriptions >:not(:first-child) {
   margin-top: 20px;
 }
 
-.descriptions *:nth-child(odd) {
+.descriptions h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font: var(--font-subtitle);
 }
 
-.descriptions *:nth-child(even) {
+.descriptions p {
   font: var(--font-body-medium);
 }
 

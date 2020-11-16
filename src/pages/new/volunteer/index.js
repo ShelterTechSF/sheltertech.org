@@ -3,6 +3,7 @@ import React from "react";
 import ImageHeader from "../../../components/grid-aware/ImageHeader";
 import classroom from "../../../components/grid-aware/ImageHeader/stories/classroom.png";
 import whiteboard from "../../../components/grid-aware/ImageHeader/stories/whiteboard-sticky-notes.png";
+import StatsBlock from "../../../components/grid-aware/StatsBlock";
 import TwoParagraphBlock from "../../../components/grid-aware/TwoParagraphBlock";
 import volunteers from "../../../components/grid-aware/TwoParagraphBlock/stories/volunteers.png";
 import Layout from "../../../components/layout";
@@ -26,6 +27,26 @@ export default () => (
         {
           text: "Apply",
           internalLink: "/foo",
+        },
+      ]}
+    />
+    <StatsBlock
+      title="See what our volunteers have accomplished together."
+      statCards={[
+        {
+          number: "9,000",
+          statement:
+            "At-risk community members can now access services and amenities",
+        },
+        {
+          number: "560",
+          statement:
+            "Bay Area volunteers have contributed to our cause since our founding in 2016",
+        },
+        {
+          number: "$2M",
+          statement:
+            "Worth of work provided by volunteers has been put towards our programs",
         },
       ]}
     />

@@ -1,0 +1,105 @@
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+.bleedBackground {
+  background-color: var(--color-black);
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+
+.bleedMainContent {
+  grid-column: 2;
+  grid-row: 1;
+  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    background-color: var(--color-black);
+    grid-template-columns: 40px 1fr 40px;
+  }
+}
+
+/* Main grid */
+
+.gridParent {
+  color: var(--color-white);
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  padding: 100px 0 150px;
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.gridParent > * {
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    display: block;
+    padding: 50px 0 38px;
+  }
+}
+
+.gridAreaBottom {
+  display: flex;
+  flex-direction: row;
+  grid-column: 2 / span 10;
+  grid-row: 2;
+  margin-top: 54px;
+}
+
+@media (--tablet-and-down) {
+  .gridAreaBottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+
+.title {
+  font: var(--font-title);
+  grid-column: 2 / span 8;
+  margin: 0;
+}
+
+.statCard {
+  margin-right: 110px;
+  width: 250px;
+}
+
+@media (--tablet-and-down) {
+  .statCard {
+    margin-bottom: 40px;
+  }
+
+  .statCard:first-child {
+    margin-top: 40px;
+  }
+}
+
+.number {
+  font-family: var(--font-family-lato);
+  font-size: 72px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.statement {
+  font: var(--font-body-medium);
+  margin-top: 5px;
+}
+
+@media (--tablet-and-down) {
+  .number {
+    font-size: 50px;
+    line-height: 1.3;
+  }
+}
+

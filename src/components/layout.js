@@ -43,19 +43,22 @@ const Layout = ({ children }) => {
         {children}
       </div>
       <Footer
-        inputText={{
-          placeholderText: "email address",
-          widthDesktop: "291px",
-          widthMobile: "155px",
-        }}
+        placeholderText={"email address"}
+        type="text"
         footerNavigation={[
-          { name: "Programs", url: "/programs" },
-          { name: "Volunteer", url: "/new/volunteer" },
-          { name: "Donate", url: "/new/donate" },
+          { text: "Programs", internalLink: "/new" },
+          { text: "Volunteer", internalLink: "/new/volunteer" },
+          { text: "Donate", internalLink: "/new/donate" },
         ]}
-        seals={[{ logo: sealOfTransparency, alt: "Seal of Transparency" }]}
+        seals={[
+          {
+            externalLink: "https://www.guidestar.org/profile/38-3984099",
+            logo: sealOfTransparency,
+            alt: "GuideStar Seal of Transparency",
+          },
+        ]}
         shelterTechLogo={{
-          logo: shelterTechLogoWhite,
+          url: shelterTechLogoWhite,
           alt: "ShelterTech Logo",
         }}
         socialMediaLinks={[
@@ -81,7 +84,7 @@ const Layout = ({ children }) => {
           },
         ]}
         address="268 Bush Street #4302, San Francisco CA, 94104 USA"
-        employeeIdentificationNumber="ein: 38-3984099"
+        employerIdentificationNumber="ein: 38-3984099"
       />
     </div>
   );

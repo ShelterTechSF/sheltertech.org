@@ -3,30 +3,29 @@ import React from "react";
 
 import s from "./InputText.module.css";
 
-export const InputTextPropType = PropTypes.shape({
-  placeholderText: PropTypes.string,
-  widthDesktop: PropTypes.string.isRequired,
-  widthMobile: PropTypes.string.isRequired,
-  onChange: PropTypes.func,
-  value: PropTypes.string,
-});
-
-export const InputText = ({ inputText }) => {
+const InputText = ({ placeholderText, onChange, value, type }) => {
   return (
     <input
       className={s.inputText}
-      style={{
-        "--input-text-desktop": `${inputText.widthDesktop}`,
-        "--input-text-mobile": `${inputText.widthMobile}`,
-      }}
-      type="text"
-      placeholder={inputText.placeholderText}
-      onChange={inputText.onChange}
-      value={inputText.value}
+      type={type}
+      placeholder={placeholderText}
+      onChange={onChange}
+      value={value}
     />
   );
 };
 
 InputText.propTypes = {
-  inputText: InputTextPropType.isRequired,
+  placeholderText: PropTypes.string,
+  onChange: PropTypes.func,
+  value: PropTypes.string,
+  type: PropTypes.string.isRequired,
 };
+
+InputText.defaultProps = {
+  placeholderText: undefined,
+  onChange: undefined,
+  value: undefined,
+};
+
+export default InputText;

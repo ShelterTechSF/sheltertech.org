@@ -1,8 +1,6 @@
 /* Background bleed */
 
 .bleedWrapper {
-  display: grid;
-  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
 }
@@ -12,7 +10,6 @@
 .subscriptionBlock {
   background-color: var(--color-black);
   display: flex;
-  grid-column: 1 / span 12;
   justify-content: center;
   padding: 35px;
 }
@@ -22,24 +19,15 @@
   display: flex;
 }
 
-.subscribeMessage {
+.title {
   color: var(--color-white);
   font: var(--font-subtitle);
-  margin-right: 20px;
-  width: 340px;
+  margin-right: 97px;
+  width: 263px;
 }
 
 .formInput {
   display: flex;
-  flex-direction: row;
-}
-
-.buttonWrapper {
-  margin-left: 38px;
-}
-
-.buttonWrapper > a:hover {
-  top: 0;
 }
 
 .inputText {
@@ -49,8 +37,6 @@
 @media (--tablet-and-down) {
   .bleedWrapper {
     display: block;
-    grid-template-columns: 1fr;
-    margin: 0;
   }
 
   .subscribeContainer {
@@ -59,16 +45,12 @@
     flex-direction: column;
   }
 
-  .subscribeMessage {
+  .title {
     margin-right: 0;
   }
 
   .formInput {
     margin-top: 22px;
-  }
-
-  .inputText {
-    display: inline;
   }
 
   .inputText {

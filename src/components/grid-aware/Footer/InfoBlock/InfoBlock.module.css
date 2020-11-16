@@ -3,10 +3,7 @@
 .bleedWrapper {
   background-color: var(--color-midnight-blue);
   color: var(--color-gray-400);
-  font-family: var(--font-family-lato);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.2;
+  font: var(--font-body-medium);
   margin: auto;
   max-width: var(--grid-bleed-max-width);
 }
@@ -15,6 +12,7 @@
   display: flex;
   justify-content: space-between;
   padding: 30px 60px;
+  white-space: pre-wrap;
 }
 
 .address {
@@ -23,8 +21,8 @@
 
 @media (--tablet-and-down) {
   .organizationInfo {
-    flex-direction: column;
-    padding: 30px 0;
+    display: block;
+    padding: 30px 20px;
   }
 
   .address {

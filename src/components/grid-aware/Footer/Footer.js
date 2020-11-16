@@ -1,29 +1,29 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { InputTextPropType } from "../../inline/InputText";
 import s from "./Footer.module.css";
 import InfoBlock from "./InfoBlock";
 import {
   Navigation,
-  FooterNavigationPropType,
+  FooterNavigationLinkPropType,
   SealsPropType,
   ShelterTechLogoPropType,
-  SocialMediaLinksPropType,
+  SocialMediaLinkPropType,
 } from "./NavigationBlock";
 import SubscriptionBlock from "./SubscriptionBlock";
 
 const Footer = ({
-  inputText,
+  placeholderText,
+  type,
   footerNavigation,
   seals,
   shelterTechLogo,
   socialMediaLinks,
   address,
-  employeeIdentificationNumber,
+  employerIdentificationNumber,
 }) => {
   return (
     <footer className={s.footer}>
-      <SubscriptionBlock inputText={inputText} />
+      <SubscriptionBlock placeholderText={placeholderText} type={type} />
       <Navigation
         footerNavigation={footerNavigation}
         seals={seals}
@@ -31,7 +31,7 @@ const Footer = ({
         socialMediaLinks={socialMediaLinks}
       />
       <InfoBlock
-        employeeIdentificationNumber={employeeIdentificationNumber}
+        employerIdentificationNumber={employerIdentificationNumber}
         address={address}
       />
     </footer>
@@ -39,13 +39,18 @@ const Footer = ({
 };
 
 Footer.propTypes = {
-  inputText: InputTextPropType.isRequired,
-  footerNavigation: PropTypes.arrayOf(FooterNavigationPropType).isRequired,
+  placeholderText: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  footerNavigation: PropTypes.arrayOf(FooterNavigationLinkPropType).isRequired,
   seals: PropTypes.arrayOf(SealsPropType).isRequired,
   shelterTechLogo: ShelterTechLogoPropType.isRequired,
-  socialMediaLinks: PropTypes.arrayOf(SocialMediaLinksPropType).isRequired,
-  employeeIdentificationNumber: PropTypes.string.isRequired,
+  socialMediaLinks: PropTypes.arrayOf(SocialMediaLinkPropType).isRequired,
+  employerIdentificationNumber: PropTypes.string.isRequired,
   address: PropTypes.string.isRequired,
+};
+
+Footer.defaultProps = {
+  placeholderText: undefined,
 };
 
 export default Footer;

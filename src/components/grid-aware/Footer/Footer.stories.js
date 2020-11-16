@@ -13,39 +13,44 @@ export default {
 };
 
 const Template = ({
-  inputText,
+  placeholderText,
+  type,
   footerNavigation,
   seals,
   shelterTechLogo,
   socialMediaLinks,
   address,
-  employeeIdentificationNumber,
+  employerIdentificationNumber,
 }) => (
   <Footer
-    inputText={inputText}
+    placeholderText={placeholderText}
+    type={type}
     footerNavigation={footerNavigation}
     seals={seals}
     shelterTechLogo={shelterTechLogo}
     socialMediaLinks={socialMediaLinks}
     address={address}
-    employeeIdentificationNumber={employeeIdentificationNumber}
+    employerIdentificationNumber={employerIdentificationNumber}
   />
 );
 
 export const DefaultFooter = Template.bind({});
 DefaultFooter.args = {
-  inputText: {
-    placeholderText: "email address",
-    widthDesktop: "291px",
-    widthMobile: "155px",
-  },
+  placeholderText: "email address",
+  type: "text",
   footerNavigation: [
-    { name: "Programs", url: "/programs" },
-    { name: "Volunteer", url: "/new/volunteer" },
-    { name: "Donate", url: "/new/donate" },
+    { text: "Programs", internalLink: "/new" },
+    { text: "Volunteer", internalLink: "/new/volunteer" },
+    { text: "Donate", internalLink: "/new/donate" },
   ],
-  seals: [{ logo: sealOfTransparency, alt: "Seal of Transparency" }],
-  shelterTechLogo: { logo: shelterTechLogoWhite, alt: "ShelterTech Logo" },
+  seals: [
+    {
+      externalLink: "https://www.guidestar.org/profile/38-3984099",
+      logo: sealOfTransparency,
+      alt: "GuideStar Seal of Transparency",
+    },
+  ],
+  shelterTechLogo: { url: shelterTechLogoWhite, alt: "ShelterTech Logo" },
   socialMediaLinks: [
     {
       url: "https://www.facebook.com/ShelterTechOrg/",
@@ -69,5 +74,5 @@ DefaultFooter.args = {
     },
   ],
   address: "268 Bush Street #4302, San Francisco CA, 94104 USA",
-  employeeIdentificationNumber: "ein: 38-3984099",
+  employerIdentificationNumber: "ein: 38-3984099",
 };

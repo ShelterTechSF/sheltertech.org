@@ -1,7 +1,1 @@
-export {
-  Navigation,
-  FooterNavigationPropType,
-  SealsPropType,
-  ShelterTechLogoPropType,
-  SocialMediaLinksPropType,
-} from "./NavigationBlock";
+export * from "./NavigationBlock";

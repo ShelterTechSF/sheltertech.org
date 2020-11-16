@@ -18,9 +18,8 @@ import communityDevelopmentImg from "../../components/grid-aware/ProgramsBlock/s
 import sfServiceGuideImg from "../../components/grid-aware/ProgramsBlock/stories/sf-service-guide.jpg";
 import shelterConnectImg from "../../components/grid-aware/ProgramsBlock/stories/shelter-connect.jpg";
 import ThreeParagraphBlock from "../../components/grid-aware/ThreeParagraphBlock";
-import image1 from "../../components/grid-aware/ThreeParagraphBlock/stories/image1.png";
-import image2 from "../../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
-import image3 from "../../components/grid-aware/ThreeParagraphBlock/stories/image3.png";
+import image1 from "../../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
+import image2 from "../../components/grid-aware/ThreeParagraphBlock/stories/image3.png";
 import VideoHeader from "../../components/grid-aware/VideoHeader/VideoHeader";
 import videoHeaderImage from "../../components/grid-aware/VideoHeader/stories/VideoHeader.png";
 import VideoSpotlightBlock from "../../components/grid-aware/VideoSpotlightBlock";
@@ -51,7 +50,7 @@ export default () => (
           "Volunteers make our work possible. There are several ways to support our mission. Learn more and get involved.",
       }}
       paragraph2={{
-        title: "Partnerships",
+        title: "Partnership",
         description:
           "We work with companies, nonprofits, and local governments to empower the community. Reach out to us.",
       }}
@@ -62,21 +61,17 @@ export default () => (
       }}
       image1={{
         url: image1,
-        alt: "Two volunteers working on a laptop together at a datathon.",
+        alt: "Team posing for a photo after a design workshop.",
       }}
       image2={{
         url: image2,
-        alt: "Team posing for a photo after a design workshop.",
-      }}
-      image3={{
-        url: image3,
         alt: "Multiple volunteers working at a datathon.",
       }}
       ctaTitle="Volunteer, donate, or reach out to our partnerships team"
       ctaButtons={[
-        { text: "Volunteer", internalLink: "/new/volunteer" },
+        { text: "Become A Volunteer", internalLink: "/new/volunteer" },
+        { text: "Work With Us", onClick: () => {} },
         { text: "Donate", internalLink: "/new/donate" },
-        { text: "Work with us", onClick: () => {} },
       ]}
     />
     <ProgramsBlock

@@ -1,7 +1,7 @@
 import { StaticQuery, graphql } from "gatsby";
-import PropTypes, { TitleDescriptionPropType } from "prop-types";
 import React from "react";
 import { Helmet } from "react-helmet";
+import { TitleDescriptionPropType } from "../../PropTypeShapes";
 import { Header, Footer } from "../components/Navigation";
 import favicon from "../images/favicon.ico";
 import "./app.scss";

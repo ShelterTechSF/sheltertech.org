@@ -1,4 +1,5 @@
 .bleedWrapper {
+  background-color: var(--color-deep-blue);
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   margin: auto;
@@ -6,12 +7,11 @@
 }
 
 .gridParent {
-  background-color: var(--color-deep-blue);
   display: flex;
   flex-direction: row;
-  grid-column: 1 / span 3;
+  grid-column: 2;
   justify-content: space-between;
-  padding: 60px 75px;
+  padding: 60px 0;
 }
 
 .socialMediaLinks {
@@ -79,7 +79,7 @@
     align-items: center;
     flex-direction: column;
   }
-  
+
   .footerNavLink:not(:last-child) {
     margin-right: 0;
   }

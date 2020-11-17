@@ -21,19 +21,6 @@
   }
 }
 
-.textWrapper {
-  grid-column-end: 12;
-  grid-column-start: 1;
-}
-
 .title {
   font: var(--font-headline);
-  font-size: 50px;
-}
-
-
-@media (--tablet-and-down) {
-  .title {
-    font-size: 30px;
-  }
 }

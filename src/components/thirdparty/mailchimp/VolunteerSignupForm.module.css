@@ -1,0 +1,11 @@
+.title {
+  font: var(--font-headline);
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.description {
+  font: var(--font-body-medium);
+  margin-bottom: 40px;
+  margin-top: 0;
+}

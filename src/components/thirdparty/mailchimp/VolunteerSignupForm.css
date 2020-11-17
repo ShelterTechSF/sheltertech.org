@@ -1,0 +1,34 @@
+/* This file contains global styles because we are overriding the default styles
+ * that come from Mailchimp. */
+/* stylelint-disable selector-max-id */
+
+#mc_embed_signup form {
+  padding: 0 !important;
+}
+
+#mc_embed_signup .mc-field-group {
+  margin-bottom: 39px;
+  padding-bottom: 0 !important;
+}
+
+#mc_embed_signup .mc-field-group label {
+  font: var(--font-caption);
+  margin-bottom: 10px !important;
+}
+
+#mc_embed_signup .mc-field-group input {
+  border: 1px solid var(--color-gray-400);
+  border-radius: 0;
+  font: var(--font-body-small);
+  padding: 16px 17px 15px !important;
+}
+
+#mc_embed_signup .button {
+  background-color: var(--color-sheltertech-blue) !important;
+  border-radius: 0 !important;
+  color: var(--color-white) !important;
+  font: var(--font-action) !important;
+  height: auto !important;
+  padding: 16px 40px !important;
+  text-transform: uppercase;
+}

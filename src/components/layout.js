@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import ReactModal from "react-modal";
 
 import "../stylesheets/global.css";
 import { BurgerMenu, Navigation } from "./grid-aware/Navigation";
@@ -14,6 +15,9 @@ const Layout = ({ children }) => {
   const pageWrapperID = "page-wrapper";
   const outerContainerID = "outer-container";
   const [burgerMenuIsOpen, setBurgerMenuIsOpen] = useState(false);
+  useEffect(() => {
+    ReactModal.setAppElement(`#${outerContainerID}`);
+  }, []);
   return (
     <div id={outerContainerID}>
       <BurgerMenu

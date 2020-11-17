@@ -18,4 +18,3 @@ TitleBlock.propTypes = {
 };
 
 export default TitleBlock;
-

@@ -110,9 +110,6 @@ export default () => (
         },
       ]}
     />
-<<<<<<< HEAD
-    <TitleBlock title="Voices from the community" />
-=======
     <VideoSpotlightBlock
       eyebrowText="Our Impact"
       description="Over 3,000 people have daily internet access in local shelters and resource centers."
@@ -123,7 +120,7 @@ export default () => (
       }}
       playButtonLink="/foo"
     />
->>>>>>> origin/main
+    <TitleBlock title="Voices from the community" />
     <BlockQuoteBlock
       quotes={[
         {

@@ -1,0 +1,43 @@
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+.bleedMainContent {
+  background: var(--color-gray-300);
+  grid-column: 2;
+  padding: 60px;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    display: block;
+  }
+
+  .bleedMainContent {
+    padding: 50px 40px;
+  }
+}
+
+.title {
+  font: var(--font-title);
+}
+
+@media (--tablet-and-down) {
+  .title {
+    font: var(--font-headline);
+  }
+}
+
+.description {
+  font: var(--font-body-medium);
+  margin-top: 20px;
+}
+
+@media (--tablet-and-down) {
+  .description {
+    font-size: 20px;
+  }
+}

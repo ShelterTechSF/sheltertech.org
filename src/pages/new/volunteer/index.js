@@ -1,5 +1,6 @@
 import React from "react";
 
+import COVID19infoBoxBlock from "../../../components/grid-aware/COVID19InfoBoxBlock";
 import ImageHeader from "../../../components/grid-aware/ImageHeader";
 import classroom from "../../../components/grid-aware/ImageHeader/stories/classroom.png";
 import whiteboard from "../../../components/grid-aware/ImageHeader/stories/whiteboard-sticky-notes.png";
@@ -29,6 +30,10 @@ export default () => (
           internalLink: "/foo",
         },
       ]}
+    />
+    <COVID19infoBoxBlock
+      title="Volunteering during COVID-19"
+      description="Our programs have shifted to remote alternatives. While our means of coming together are different, our research and Datathon events will be conducted online. Simply put, our goal is still the same: to connect this community with resources that can help them address their challenges, become permanently housed, and on track to live happy and productive lives."
     />
     <StatsBlock
       title="See what our volunteers have accomplished together."

@@ -29,6 +29,7 @@ import VideoSpotlightBlock from "../../components/grid-aware/VideoSpotlightBlock
 import videoSpotlightBlockImage from "../../components/grid-aware/VideoSpotlightBlock/stories/VideoSpotlightBlock.png";
 import Layout from "../../components/layout";
 import VolunteerSignupForm from "../../components/thirdparty/mailchimp/VolunteerSignupForm";
+import Spacer from "../../components/grid-aware/Spacer";
 
 export default () => {
   const [volunteerFormIsOpen, setVolunteerFormIsOpen] = useState(false);
@@ -121,6 +122,7 @@ export default () => {
           },
         ]}
       />
+      <Spacer heightDesktop="91px" heightMobile="19px" color="#000" />
       <VideoSpotlightBlock
         eyebrowText="Our Impact"
         description="Over 3,000 people have daily internet access in local shelters and resource centers."
@@ -131,6 +133,7 @@ export default () => {
         }}
         playButtonLink="/foo"
       />
+      <Spacer heightDesktop="42px" heightMobile="0" />
       <TitleBlock title="Voices from the community" />
       <BlockQuoteBlock
         quotes={[
@@ -154,6 +157,7 @@ export default () => {
           },
         ]}
       />
+      <Spacer heightDesktop="20px" heightMobile="0" />
       <PartnersAndSponsorsBlock
         title="Partners and sponsors"
         partnersAndSponsors={[
@@ -201,6 +205,7 @@ export default () => {
         button={{ text: "Read more", internalLink: "/foo" }}
         backgroundImage={articleSpotlightImage}
       />
+      <Spacer heightDesktop="170px" heightMobile="80px" />
     </Layout>
   );
 };

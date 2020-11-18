@@ -1,0 +1,12 @@
+.spacer {
+  background-color: var(--spacer-color);
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+  height: var(--spacer-height-desktop);
+}
+
+@media (--tablet-and-down) {
+  .spacer {
+    height: var(--spacer-height-mobile);
+  }
+}

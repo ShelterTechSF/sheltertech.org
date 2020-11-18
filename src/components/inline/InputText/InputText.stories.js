@@ -15,13 +15,9 @@ export default {
   component: InputText,
 };
 
-// Variables declared here so that DefaultInputText.args can interact with useState
-let text;
-let setValue;
+const [text, setValue] = useState("");
 
 const Template = ({ placeholderText, value, type }) => {
-  [text, setValue] = useState("");
-
   const handleChange = (e) => {
     setValue(e.target.value);
   };

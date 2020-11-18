@@ -5,15 +5,22 @@ import InputText from "../../../inline/InputText";
 
 import s from "./SubscriptionBlock.module.css";
 
-const SubscriptionBlock = ({ placeholderText, email, text }) => {
+const SubscriptionBlock = ({
+  formInputPlaceholder,
+  formInputValue,
+  formDescription,
+}) => {
   return (
     <div className={s.bleedWrapper}>
       <div className={s.subscriptionBlock}>
         <div className={s.subscribeContainer}>
-          <div className={s.title}>{text}</div>
+          <div className={s.title}>{formDescription}</div>
           <form className={s.form}>
             <span className={s.inputText}>
-              <InputText placeholderText={placeholderText} type={email} />
+              <InputText
+                formInputPlaceholder={formInputPlaceholder}
+                type={formInputValue}
+              />
             </span>
             <Button text="submit" internalLink="/mailchimp" noHover />
           </form>
@@ -24,14 +31,14 @@ const SubscriptionBlock = ({ placeholderText, email, text }) => {
 };
 
 SubscriptionBlock.propTypes = {
-  placeholderText: PropTypes.string,
-  email: PropTypes.string.isRequired,
-  text: PropTypes.string,
+  formInputPlaceholder: PropTypes.string,
+  formInputValue: PropTypes.string.isRequired,
+  formDescription: PropTypes.string,
 };
 
 SubscriptionBlock.defaultProps = {
-  placeholderText: undefined,
-  text: undefined,
+  formInputPlaceholder: undefined,
+  formDescription: undefined,
 };
 
 export default SubscriptionBlock;

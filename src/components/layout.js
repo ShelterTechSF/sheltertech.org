@@ -43,9 +43,9 @@ const Layout = ({ children }) => {
         {children}
       </div>
       <Footer
-        placeholderText="email address"
-        email="email"
-        text="Subscribe to get updates"
+        formInputPlaceholder="email address"
+        formInputValue="email"
+        formDescription="Subscribe to get updates"
         footerNavigation={[
           { text: "Programs", internalLink: "/new" },
           { text: "Volunteer", internalLink: "/new/volunteer" },

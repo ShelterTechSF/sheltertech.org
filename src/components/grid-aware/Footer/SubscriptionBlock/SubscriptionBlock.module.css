@@ -33,10 +33,6 @@
   width: 291px;
 }
 
-.button:hover {
-  top: 0;
-}
-
 @media (--tablet-and-down) {
   .bleedWrapper {
     display: block;
@@ -53,6 +49,7 @@
   }
 
   .title {
+    font: var(--font-body-large);
     margin-right: 0;
   }
 

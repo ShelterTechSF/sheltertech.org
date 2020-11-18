@@ -12,9 +12,9 @@ import {
 import SubscriptionBlock from "./SubscriptionBlock";
 
 const Footer = ({
-  placeholderText,
-  email,
-  text,
+  formInputPlaceholder,
+  formInputValue,
+  formDescription,
   footerNavigation,
   seals,
   shelterTechLogo,
@@ -25,9 +25,9 @@ const Footer = ({
   return (
     <footer className={s.footer}>
       <SubscriptionBlock
-        placeholderText={placeholderText}
-        email={email}
-        text={text}
+        formInputPlaceholder={formInputPlaceholder}
+        formInputValue={formInputValue}
+        formDescription={formDescription}
       />
       <Navigation
         footerNavigation={footerNavigation}
@@ -44,9 +44,9 @@ const Footer = ({
 };
 
 Footer.propTypes = {
-  placeholderText: PropTypes.string,
-  email: PropTypes.string.isRequired,
-  text: PropTypes.string,
+  formInputPlaceholder: PropTypes.string,
+  formInputValue: PropTypes.string.isRequired,
+  formDescription: PropTypes.string,
   footerNavigation: PropTypes.arrayOf(FooterNavigationLinkPropType).isRequired,
   seals: PropTypes.arrayOf(SealPropType).isRequired,
   shelterTechLogo: ShelterTechLogoPropType.isRequired,
@@ -56,8 +56,8 @@ Footer.propTypes = {
 };
 
 Footer.defaultProps = {
-  placeholderText: undefined,
-  text: undefined,
+  formInputPlaceholder: undefined,
+  formDescription: undefined,
 };
 
 export default Footer;

@@ -13,9 +13,9 @@ export default {
 };
 
 const Template = ({
-  placeholderText,
-  email,
-  text,
+  formInputPlaceholder,
+  formInputValue,
+  formDescription,
   footerNavigation,
   seals,
   shelterTechLogo,
@@ -24,9 +24,9 @@ const Template = ({
   employerIdentificationNumber,
 }) => (
   <Footer
-    placeholderText={placeholderText}
-    email={email}
-    text={text}
+    formInputPlaceholder={formInputPlaceholder}
+    formInputValue={formInputValue}
+    formDescription={formDescription}
     footerNavigation={footerNavigation}
     seals={seals}
     shelterTechLogo={shelterTechLogo}
@@ -38,9 +38,9 @@ const Template = ({
 
 export const DefaultFooter = Template.bind({});
 DefaultFooter.args = {
-  placeholderText: "email address",
-  email: "email",
-  text: "Subscribe to get updates",
+  formInputPlaceholder: "email address",
+  formInputValue: "email",
+  formDescription: "Subscribe to get updates",
   footerNavigation: [
     { text: "Programs", internalLink: "/new" },
     { text: "Volunteer", internalLink: "/new/volunteer" },

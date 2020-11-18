@@ -8,7 +8,7 @@ import shelterTechLogoWhite from "./grid-aware/Footer/sheltertech-logo-white.svg
 import facebookLogo from "./grid-aware/Footer/stories/facebook.svg";
 import githubLogo from "./grid-aware/Footer/stories/github.svg";
 import instagramLogo from "./grid-aware/Footer/stories/instagram.svg";
-import sealOfTransparency from "./grid-aware/Footer/stories/seal-of-transparency.svg";
+import sealOfTransparency from "./grid-aware/Footer/stories/guidestar-seal-of-transparency.svg";
 import twitterLogo from "./grid-aware/Footer/stories/twitter.svg";
 import { BurgerMenu, Navigation } from "./grid-aware/Navigation";
 
@@ -44,7 +44,8 @@ const Layout = ({ children }) => {
       </div>
       <Footer
         placeholderText="email address"
-        type="text"
+        email="email"
+        text="Subscribe to get updates"
         footerNavigation={[
           { text: "Programs", internalLink: "/new" },
           { text: "Volunteer", internalLink: "/new/volunteer" },

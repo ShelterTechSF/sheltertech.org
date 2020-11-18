@@ -3,7 +3,7 @@
 .bleedWrapper {
   background-color: var(--color-midnight-blue);
   color: var(--color-gray-400);
-  font: var(--font-body-medium);
+  font: var(--font-body-small);
   margin: auto;
   max-width: var(--grid-bleed-max-width);
 }

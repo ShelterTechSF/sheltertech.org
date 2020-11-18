@@ -19,7 +19,7 @@ export const FooterNavigationLinkPropType = PropTypes.oneOfType([
   }),
 ]).isRequired;
 
-export const SealsPropType = PropTypes.shape({
+export const SealPropType = PropTypes.shape({
   logo: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
@@ -111,6 +111,7 @@ const FooterLinks = ({ footerNavigation }) => (
 FooterLinks.propTypes = {
   footerNavigation: PropTypes.arrayOf(FooterNavigationLinkPropType).isRequired,
 };
+
 const Seals = ({ seals }) => (
   <div className={s.seals}>
     {seals.map((seal) => (
@@ -121,14 +122,14 @@ const Seals = ({ seals }) => (
         target="_blank"
         key={seal.logo}
       >
-        <img src={seal.logo} alt={seal.alt} />
+        <img className={s.sealImage} src={seal.logo} alt={seal.alt} />
       </a>
     ))}
   </div>
 );
 
 Seals.propTypes = {
-  seals: PropTypes.arrayOf(SealsPropType).isRequired,
+  seals: PropTypes.arrayOf(SealPropType).isRequired,
 };
 
 const NavigationRightArea = ({ footerNavigation, seals }) => (
@@ -140,7 +141,7 @@ const NavigationRightArea = ({ footerNavigation, seals }) => (
 
 NavigationRightArea.propTypes = {
   footerNavigation: PropTypes.arrayOf(FooterNavigationLinkPropType).isRequired,
-  seals: PropTypes.arrayOf(SealsPropType).isRequired,
+  seals: PropTypes.arrayOf(SealPropType).isRequired,
 };
 
 export const Navigation = ({
@@ -167,7 +168,7 @@ export const Navigation = ({
 
 Navigation.propTypes = {
   footerNavigation: PropTypes.arrayOf(FooterNavigationLinkPropType).isRequired,
-  seals: PropTypes.arrayOf(SealsPropType).isRequired,
+  seals: PropTypes.arrayOf(SealPropType).isRequired,
   shelterTechLogo: ShelterTechLogoPropType.isRequired,
   socialMediaLinks: PropTypes.arrayOf(SocialMediaLinkPropType).isRequired,
 };

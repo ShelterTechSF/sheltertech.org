@@ -5,7 +5,7 @@ import InfoBlock from "./InfoBlock";
 import {
   Navigation,
   FooterNavigationLinkPropType,
-  SealsPropType,
+  SealPropType,
   ShelterTechLogoPropType,
   SocialMediaLinkPropType,
 } from "./NavigationBlock";
@@ -13,7 +13,8 @@ import SubscriptionBlock from "./SubscriptionBlock";
 
 const Footer = ({
   placeholderText,
-  type,
+  email,
+  text,
   footerNavigation,
   seals,
   shelterTechLogo,
@@ -23,7 +24,11 @@ const Footer = ({
 }) => {
   return (
     <footer className={s.footer}>
-      <SubscriptionBlock placeholderText={placeholderText} type={type} />
+      <SubscriptionBlock
+        placeholderText={placeholderText}
+        email={email}
+        text={text}
+      />
       <Navigation
         footerNavigation={footerNavigation}
         seals={seals}
@@ -40,9 +45,10 @@ const Footer = ({
 
 Footer.propTypes = {
   placeholderText: PropTypes.string,
-  type: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  text: PropTypes.string,
   footerNavigation: PropTypes.arrayOf(FooterNavigationLinkPropType).isRequired,
-  seals: PropTypes.arrayOf(SealsPropType).isRequired,
+  seals: PropTypes.arrayOf(SealPropType).isRequired,
   shelterTechLogo: ShelterTechLogoPropType.isRequired,
   socialMediaLinks: PropTypes.arrayOf(SocialMediaLinkPropType).isRequired,
   employerIdentificationNumber: PropTypes.string.isRequired,
@@ -51,6 +57,7 @@ Footer.propTypes = {
 
 Footer.defaultProps = {
   placeholderText: undefined,
+  text: undefined,
 };
 
 export default Footer;

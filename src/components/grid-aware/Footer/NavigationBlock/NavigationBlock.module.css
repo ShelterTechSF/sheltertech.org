@@ -11,7 +11,7 @@
   flex-direction: row;
   grid-column: 2;
   justify-content: space-between;
-  padding: 60px 0;
+  padding: 60px 0 80px;
 }
 
 .socialMediaLinks {
@@ -28,8 +28,6 @@
 
 .navigation {
   color: var(--color-white);
-  display: flex;
-  flex-direction: row;
   font: var(--font-caption);
 }
 
@@ -50,14 +48,16 @@
 }
 
 .seals {
-  display: inline-block;
-  height: 60px;
   margin-top: 78px;
-  width: 60px;
 }
 
 .seal:not(:last-child) {
   margin-right: 39px;
+}
+
+.sealImage {
+  height: 60px;
+  width: 60px;
 }
 
 @media (--tablet-and-down) {
@@ -77,6 +77,7 @@
 
   .navigation {
     align-items: center;
+    display: flex;
     flex-direction: column;
   }
 
@@ -86,13 +87,5 @@
 
   .footerNavLink:not(:first-child) {
     margin-top: 40px;
-  }
-
-  .footerNavLink {
-    text-align: center;
-  }
-
-  .seals {
-    text-align: center;
   }
 }

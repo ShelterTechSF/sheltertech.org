@@ -23,10 +23,9 @@
   color: var(--color-white);
   font: var(--font-subtitle);
   margin-right: 97px;
-  width: 263px;
 }
 
-.formInput {
+.form {
   display: flex;
 }
 
@@ -34,9 +33,17 @@
   width: 291px;
 }
 
+.button:hover {
+  top: 0;
+}
+
 @media (--tablet-and-down) {
   .bleedWrapper {
     display: block;
+  }
+
+  .subscriptionBlock {
+    padding: 44px 42px 43px;
   }
 
   .subscribeContainer {
@@ -49,11 +56,13 @@
     margin-right: 0;
   }
 
-  .formInput {
+  .form {
+    align-items: baseline;
     margin-top: 22px;
   }
 
   .inputText {
-    width: 155px;
+    min-width: 155px;
+    width: auto;
   }
 }

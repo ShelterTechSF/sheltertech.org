@@ -4,7 +4,7 @@ import shelterTechLogoWhite from "./sheltertech-logo-white.svg";
 import facebookLogo from "./stories/facebook.svg";
 import githubLogo from "./stories/github.svg";
 import instagramLogo from "./stories/instagram.svg";
-import sealOfTransparency from "./stories/seal-of-transparency.svg";
+import sealOfTransparency from "./stories/guidestar-seal-of-transparency.svg";
 import twitterLogo from "./stories/twitter.svg";
 
 export default {
@@ -14,7 +14,8 @@ export default {
 
 const Template = ({
   placeholderText,
-  type,
+  email,
+  text,
   footerNavigation,
   seals,
   shelterTechLogo,
@@ -24,7 +25,8 @@ const Template = ({
 }) => (
   <Footer
     placeholderText={placeholderText}
-    type={type}
+    email={email}
+    text={text}
     footerNavigation={footerNavigation}
     seals={seals}
     shelterTechLogo={shelterTechLogo}
@@ -37,7 +39,8 @@ const Template = ({
 export const DefaultFooter = Template.bind({});
 DefaultFooter.args = {
   placeholderText: "email address",
-  type: "text",
+  email: "email",
+  text: "Subscribe to get updates",
   footerNavigation: [
     { text: "Programs", internalLink: "/new" },
     { text: "Volunteer", internalLink: "/new/volunteer" },

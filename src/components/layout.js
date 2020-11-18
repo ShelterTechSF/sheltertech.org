@@ -4,6 +4,7 @@ import ReactModal from "react-modal";
 
 import "../stylesheets/global.css";
 import { BurgerMenu, Navigation } from "./grid-aware/Navigation";
+import Spacer from "./grid-aware/Spacer";
 
 const navigationItems = [
   { text: "Programs", internalLink: "/new" },
@@ -35,6 +36,7 @@ const Layout = ({ children }) => {
         />
         {children}
       </div>
+      <Spacer heightDesktop="170px" heightMobile="80px" />
     </div>
   );
 };

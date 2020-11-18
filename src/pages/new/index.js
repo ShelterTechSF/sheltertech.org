@@ -205,7 +205,6 @@ export default () => {
         button={{ text: "Read more", internalLink: "/foo" }}
         backgroundImage={articleSpotlightImage}
       />
-      <Spacer heightDesktop="170px" heightMobile="80px" />
     </Layout>
   );
 };

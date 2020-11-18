@@ -18,7 +18,7 @@ const SubscriptionBlock = ({
           <form className={s.form}>
             <span className={s.inputText}>
               <InputText
-                formInputPlaceholder={formInputPlaceholder}
+                placeholderText={formInputPlaceholder}
                 type={formInputValue}
               />
             </span>

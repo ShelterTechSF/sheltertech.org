@@ -21,6 +21,7 @@ const Template = ({
     button={button}
     image={image}
     playButtonLink={playButtonLink}
+    blackBackground
   />
 );
 

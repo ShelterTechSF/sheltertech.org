@@ -61,35 +61,28 @@ export default () => {
           title: "Volunteer",
           description:
             "Volunteers make our work possible. There are several ways to support our mission. Learn more and get involved.",
+          button: { text: "Become a Volunteer", internalLink: "/foo" },
         }}
         paragraph2={{
           title: "Partnerships",
           description:
             "We work with companies, nonprofits, and local governments to empower the community. Reach out to us.",
+          button: { text: "Work With Us", internalLink: "/bar" },
         }}
         paragraph3={{
           title: "Donate",
           description:
             "Our programs are largely funded by donations from people who care about bridging the digital divide. Support ShelterTech today.",
+          button: { text: "Donate", internalLink: "/fooBar" },
         }}
-        image1={{
-          url: image1,
-          alt: "Two volunteers working on a laptop together at a datathon.",
-        }}
-        image2={{
+        leftBottomImage={{
           url: image2,
           alt: "Team posing for a photo after a design workshop.",
         }}
-        image3={{
+        rightImage={{
           url: image3,
           alt: "Multiple volunteers working at a datathon.",
         }}
-        ctaTitle="Volunteer, donate, or reach out to our partnerships team"
-        ctaButtons={[
-          { text: "Become a Volunteer", internalLink: "/new/volunteer" },
-          { text: "Donate", internalLink: "/new/donate" },
-          { text: "Work with us", onClick: () => setVolunteerFormIsOpen(true) },
-        ]}
       />
       <ProgramsBlock
         title="Our programs"

@@ -78,30 +78,37 @@ const ThreeParagraphBlock = ({
   paragraph1,
   paragraph2,
   paragraph3,
-  image1,
-  image2,
-  image3 = {
+  leftTopImage = {
     url: "",
     alt: "",
   },
+  leftBottomImage,
+  rightImage,
   ctaTitle,
   ctaButtons,
 }) => {
   let thirdImage;
+  let leftBottomImageWrapper = s.leftBottomImageWrapper2;
 
-  if (Object.keys(image3).length && image3.constructor === Object) {
+  if (Object.keys(leftTopImage).length && leftTopImage.constructor === Object) {
     thirdImage = (
-      <div className={s.image3Wrapper}>
-        <img src={image3.url} alt={image3.alt} />
+      <div className={s.leftTopImageWrapper}>
+        <img src={leftTopImage.url} alt={leftTopImage.alt} />
       </div>
     );
+
+    leftBottomImageWrapper = s.leftBottomImageWrapper;
   }
 
   const GridAreaLeft = () => (
     <div className={s.gridAreaLeft}>
       <h1 className={s.title}>{title}</h1>
-      <div className={s.image1Wrapper}>
-        <img className={s.image} src={image1.url} alt={image1.alt} />
+      <div className={leftBottomImageWrapper}>
+        <img
+          className={s.image}
+          src={leftBottomImage.url}
+          alt={leftBottomImage.alt}
+        />
       </div>
       {thirdImage}
     </div>
@@ -135,8 +142,8 @@ const ThreeParagraphBlock = ({
           button={paragraph3.button}
         />
       </div>
-      <div className={s.image2Wrapper}>
-        <img className={s.image} src={image2.url} alt={image2.alt} />
+      <div className={s.rightImageWrapper}>
+        <img className={s.image} src={rightImage.url} alt={rightImage.alt} />
       </div>
     </div>
   );
@@ -170,7 +177,7 @@ const ThreeParagraphBlock = ({
 };
 
 ThreeParagraphBlock.defaultProps = {
-  image3: {
+  leftTopImage: {
     url: "",
     alt: "",
   },
@@ -181,9 +188,9 @@ ThreeParagraphBlock.propTypes = {
   paragraph1: ParagraphPropType.isRequired,
   paragraph2: ParagraphPropType.isRequired,
   paragraph3: ParagraphPropType.isRequired,
-  image1: ImagePropType.isRequired,
-  image2: ImagePropType.isRequired,
-  image3: PropTypes.shape({
+  leftBottomImage: ImagePropType.isRequired,
+  rightImage: ImagePropType.isRequired,
+  leftTopImage: PropTypes.shape({
     url: PropTypes.string,
     alt: PropTypes.string,
   }),

@@ -1,8 +1,8 @@
 import React from "react";
 
 import ThreeParagraphBlock from "./ThreeParagraphBlock";
-import image1 from "./stories/image2.png";
-import image2 from "./stories/image3.png";
+import leftBottomImage from "./stories/image2.png";
+import rightImage from "./stories/image3.png";
 
 export default {
   title: "Grid-Aware/ThreeParagraphBlock",
@@ -38,15 +38,15 @@ const Template = ({
         description: paragraph3Description,
         button: { text: "Donate", internalLink: "/fooBar" },
       }}
-      image1={{
-        url: image1,
+      leftTopImage={{}}
+      leftBottomImage={{
+        url: leftBottomImage,
         alt: "Team posing for a photo after a design workshop.",
       }}
-      image2={{
-        url: image2,
+      rightImage={{
+        url: rightImage,
         alt: "Multiple volunteers working at a datathon.",
       }}
-      image3={{}}
       ctaTitle={ctaTitle}
       ctaButtons={ctaButtons}
     />

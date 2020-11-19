@@ -33,6 +33,13 @@
   width: 291px;
 }
 
+/* This appears to be a field that comes with the Mailchimp embed code to trick
+ * bots into filling it out, allowing them to differentiate bots from real
+ * users, who won't see this. */
+.antiBotInput {
+  display: none;
+}
+
 @media (--tablet-and-down) {
   .bleedWrapper {
     display: block;

@@ -1,13 +1,15 @@
 import PropTypes from "prop-types";
 import React from "react";
-import Button from "../../../inline/Button";
+import { SubmitButton } from "../../../inline/Button";
 import InputText from "../../../inline/InputText";
 
 import s from "./SubscriptionBlock.module.css";
 
 const SubscriptionBlock = ({
+  formAction,
   formInputPlaceholder,
-  formInputValue,
+  formInputName,
+  formAntiBotInputName, // This is displayed as a text field but hidden from humans in order to trick bots into filling it out
   formDescription,
 }) => {
   return (
@@ -15,14 +17,26 @@ const SubscriptionBlock = ({
       <div className={s.subscriptionBlock}>
         <div className={s.subscribeContainer}>
           <div className={s.title}>{formDescription}</div>
-          <form className={s.form}>
+          <form
+            className={s.form}
+            action={formAction}
+            method="post"
+            target="_blank"
+          >
             <span className={s.inputText}>
               <InputText
+                name={formInputName}
                 placeholderText={formInputPlaceholder}
-                type={formInputValue}
+                type="email"
               />
             </span>
-            <Button text="submit" internalLink="/mailchimp" noHover />
+            <input
+              className={s.antiBotInput}
+              type="text"
+              aria-hidden
+              name={formAntiBotInputName}
+            />
+            <SubmitButton value="Subscribe" name="subscribe" noHover />
           </form>
         </div>
       </div>
@@ -31,14 +45,11 @@ const SubscriptionBlock = ({
 };
 
 SubscriptionBlock.propTypes = {
-  formInputPlaceholder: PropTypes.string,
-  formInputValue: PropTypes.string.isRequired,
-  formDescription: PropTypes.string,
-};
-
-SubscriptionBlock.defaultProps = {
-  formInputPlaceholder: undefined,
-  formDescription: undefined,
+  formAction: PropTypes.string.isRequired,
+  formInputName: PropTypes.string.isRequired,
+  formInputPlaceholder: PropTypes.string.isRequired,
+  formAntiBotInputName: PropTypes.string.isRequired,
+  formDescription: PropTypes.string.isRequired,
 };
 
 export default SubscriptionBlock;

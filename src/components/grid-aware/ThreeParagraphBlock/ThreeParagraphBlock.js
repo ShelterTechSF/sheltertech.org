@@ -170,7 +170,6 @@ ThreeParagraphBlock.propTypes = {
   paragraph3: ParagraphPropType.isRequired,
   image1: ImagePropType.isRequired,
   image2: ImagePropType.isRequired,
-  image3: ImagePropType.isRequired,
   ctaTitle: PropTypes.string.isRequired,
   ctaButtons: PropTypes.arrayOf(Button.propTypes).isRequired,
 };

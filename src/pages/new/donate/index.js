@@ -1,8 +1,8 @@
 import React from "react";
 
 import DonationBlock from "../../../components/grid-aware/DonationBlock";
-import Layout from "../../../components/layout";
 import Spacer from "../../../components/grid-aware/Spacer";
+import Layout from "../../../components/layout";
 
 export default () => (
   <Layout>

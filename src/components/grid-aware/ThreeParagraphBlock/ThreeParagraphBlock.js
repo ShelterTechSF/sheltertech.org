@@ -20,20 +20,30 @@ const ImagePropType = PropTypes.shape({
 
 /* Subcomponents */
 
-const ParagraphBlock = ({ title, description, button }) => (
-  <div>
-    <div className={s.paragraphTitle}>{title}</div>
-    <div className={s.paragraphDescription}>{description}</div>
-    <div className={s.ctaButton}>
-      <Button
-        text={button.text}
-        internalLink={button.internalLink}
-        externalLink={button.externalLink}
-        onClick={button.onClick}
-      />
+const ParagraphBlock = ({ title, description, button }) => {
+  let hasButton;
+
+  if (button) {
+    hasButton = (
+      <div className={s.ctaButton}>
+        <Button
+          text={button.text}
+          internalLink={button.internalLink}
+          externalLink={button.externalLink}
+          onClick={button.onClick}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <div className={s.paragraphTitle}>{title}</div>
+      <div className={s.paragraphDescription}>{description}</div>
+      {hasButton}
     </div>
-  </div>
-);
+  );
+};
 
 ParagraphBlock.propTypes = {
   title: PropTypes.string.isRequired,

@@ -1,0 +1,26 @@
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+  padding-bottom: 40px;
+  padding-top: 120px;
+}
+
+.bleedMainContent {
+  grid-column: 2;
+  grid-row: 1;
+  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+  min-width: 0;
+}
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    grid-template-columns: 20px 1fr 20px;
+    padding-bottom: 30px;
+    padding-top: 80px;
+  }
+}
+
+.title {
+  font: var(--font-headline);
+}

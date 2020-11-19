@@ -19,9 +19,8 @@ import communityDevelopmentImg from "../../components/grid-aware/ProgramsBlock/s
 import sfServiceGuideImg from "../../components/grid-aware/ProgramsBlock/stories/sf-service-guide.jpg";
 import shelterConnectImg from "../../components/grid-aware/ProgramsBlock/stories/shelter-connect.jpg";
 import ThreeParagraphBlock from "../../components/grid-aware/ThreeParagraphBlock";
-import image1 from "../../components/grid-aware/ThreeParagraphBlock/stories/image1.png";
-import image2 from "../../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
-import image3 from "../../components/grid-aware/ThreeParagraphBlock/stories/image3.png";
+import teamDesignWorkshopImage from "../../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
+import datathonClassroomImage from "../../components/grid-aware/ThreeParagraphBlock/stories/image3.png";
 import TitleBlock from "../../components/grid-aware/TitleBlock";
 import VideoHeader from "../../components/grid-aware/VideoHeader/VideoHeader";
 import videoHeaderImage from "../../components/grid-aware/VideoHeader/stories/VideoHeader.png";
@@ -76,11 +75,11 @@ export default () => {
           button: { text: "Donate", internalLink: "/fooBar" },
         }}
         leftBottomImage={{
-          url: image2,
+          url: teamDesignWorkshopImage,
           alt: "Team posing for a photo after a design workshop.",
         }}
         rightImage={{
-          url: image3,
+          url: datathonClassroomImage,
           alt: "Multiple volunteers working at a datathon.",
         }}
       />

@@ -8,7 +8,7 @@ const Spacer = ({ heightDesktop, heightMobile, color }) => (
     style={{
       "--spacer-height-desktop": heightDesktop,
       "--spacer-height-mobile": heightMobile,
-      "--spacer-color": `${color}`,
+      "--spacer-color": color,
     }}
     className={s.spacer}
   />

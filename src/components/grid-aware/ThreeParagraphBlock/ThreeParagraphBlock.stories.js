@@ -59,7 +59,7 @@ Gray.args = {
   paragraph1Title: "Volunteer",
   paragraph1Description:
     "Volunteers make our work possible. There are several ways to support our mission. Learn more and get involved.",
-  paragraph2Title: "Partnership",
+  paragraph2Title: "Partnerships",
   paragraph2Description:
     "We work with companies, nonprofits, and local governments to empower the community. Reach out to us.",
   paragraph3Title: "Donate",

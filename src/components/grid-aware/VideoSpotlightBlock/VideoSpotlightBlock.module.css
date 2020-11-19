@@ -7,7 +7,7 @@
 }
 
 .blackBackground {
-  background-color: black;
+  background-color: var(--color-black);
 }
 
 .bleedMainContent {

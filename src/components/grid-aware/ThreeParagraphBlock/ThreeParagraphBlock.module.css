@@ -135,7 +135,7 @@
 }
 
 .leftTopImageWrapper {
-  margin-top: 135px;
+  margin-top: 70px;
   position: relative;
   right: 75px;
 }
@@ -174,21 +174,21 @@
     max-width: 100%;
   }
 
+  .leftTopImageWrapper {
+    display: none;
+  }
+
   .leftBottomImageWrapper {
+    display: none;
+  }
+
+  .leftBottomImageWrapper2 {
     display: none;
   }
 
   .rightImageWrapper {
     margin-right: -40px;
     margin-top: 40px;
-  }
-
-  .leftTopImageWrapper {
-    display: none;
-  }
-
-  .leftBottomImageWrapper2 {
-    display: none;
   }
 }
 

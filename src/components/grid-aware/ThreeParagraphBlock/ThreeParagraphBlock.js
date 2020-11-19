@@ -10,7 +10,22 @@ import s from "./ThreeParagraphBlock.module.css";
 const ParagraphPropType = PropTypes.shape({
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  button: PropTypes.shape(Button.propTypes).isRequired,
+  button: PropTypes.shape(
+    PropTypes.oneOfType([
+      PropTypes.exact({
+        text: PropTypes.string,
+        externalLink: PropTypes.string,
+      }),
+      PropTypes.exact({
+        text: PropTypes.string,
+        internalLink: PropTypes.string,
+      }),
+      PropTypes.exact({
+        text: PropTypes.string,
+        onClick: PropTypes.func,
+      }),
+    ])
+  ).isRequired,
 });
 
 const ImagePropType = PropTypes.shape({
@@ -87,11 +102,11 @@ const ThreeParagraphBlock = ({
   ctaTitle,
   ctaButtons,
 }) => {
-  let thirdImage;
+  let optionalLeftTopImage;
   let leftBottomImageWrapper = s.leftBottomImageWrapper2;
 
   if (Object.keys(leftTopImage).length && leftTopImage.constructor === Object) {
-    thirdImage = (
+    optionalLeftTopImage = (
       <div className={s.leftTopImageWrapper}>
         <img src={leftTopImage.url} alt={leftTopImage.alt} />
       </div>
@@ -103,6 +118,7 @@ const ThreeParagraphBlock = ({
   const GridAreaLeft = () => (
     <div className={s.gridAreaLeft}>
       <h1 className={s.title}>{title}</h1>
+      {optionalLeftTopImage}
       <div className={leftBottomImageWrapper}>
         <img
           className={s.image}
@@ -110,7 +126,6 @@ const ThreeParagraphBlock = ({
           alt={leftBottomImage.alt}
         />
       </div>
-      {thirdImage}
     </div>
   );
 

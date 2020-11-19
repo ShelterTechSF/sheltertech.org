@@ -107,7 +107,11 @@ const ThreeParagraphBlock = ({
   if (leftTopImage) {
     optionalLeftTopImage = (
       <div className={s.leftTopImageWrapper}>
-        <img src={leftTopImage.url} alt={leftTopImage.alt} />
+        <img
+          className={s.image}
+          src={leftTopImage.url}
+          alt={leftTopImage.alt}
+        />
       </div>
     );
 
@@ -174,7 +178,7 @@ const ThreeParagraphBlock = ({
       </div>
     );
 
-    gridParentClassName += `${s.v2}`;
+    gridParentClassName += ` ${s.v2}`;
   }
 
   return (

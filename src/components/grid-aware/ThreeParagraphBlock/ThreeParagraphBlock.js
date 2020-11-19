@@ -99,8 +99,8 @@ const ThreeParagraphBlock = ({
   },
   leftBottomImage,
   rightImage,
-  ctaTitle,
-  ctaButtons,
+  ctaTitle = "",
+  ctaButtons = [],
 }) => {
   let optionalLeftTopImage;
   let leftBottomImageWrapper = s.leftBottomImageWrapper2;

@@ -161,7 +161,7 @@
   margin-top: 25px;
 }
 
-.ctaButtonRow {
+.ctaButton {
   display: flex;
   flex-flow: row wrap;
   margin-top: 25px;
@@ -172,7 +172,7 @@
     margin-top: 10px;
   }
 
-  .ctaButtonRow {
+  .ctaButton {
     flex-flow: column;
     margin-top: 10px;
   }

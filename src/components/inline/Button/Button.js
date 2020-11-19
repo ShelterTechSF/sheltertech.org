@@ -21,10 +21,7 @@ const Button = ({ text, externalLink, internalLink, onClick, noHover }) => {
   }
   if (internalLink) {
     return (
-      <Link
-        className={button}
-        to={internalLink}
-      >
+      <Link className={button} to={internalLink}>
         {text}
       </Link>
     );

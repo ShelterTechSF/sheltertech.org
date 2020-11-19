@@ -62,7 +62,7 @@
   column-gap: var(--grid-column-gap);
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
-  padding: 100px 0 98px;
+  padding: 100px 0 100px;
 }
 
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */
@@ -135,7 +135,6 @@
   }
 
   .image2Wrapper {
-    /* overflow: hidden; */
     margin-right: -40px;
     margin-top: 40px;
 

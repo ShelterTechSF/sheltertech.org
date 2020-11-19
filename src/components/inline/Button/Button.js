@@ -23,7 +23,6 @@ const Button = ({ text, externalLink, internalLink, onClick, noHover }) => {
     return (
       <Link
         className={button}
-        style={noHover ? { top: "0" } : {}}
         to={internalLink}
       >
         {text}

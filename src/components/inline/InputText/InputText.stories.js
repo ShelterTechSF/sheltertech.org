@@ -15,9 +15,9 @@ export default {
   component: InputText,
 };
 
-const [text, setValue] = useState("");
+const Template = ({ placeholderText, type }) => {
+  const [value, setValue] = useState("");
 
-const Template = ({ placeholderText, value, type }) => {
   const handleChange = (e) => {
     setValue(e.target.value);
   };
@@ -37,6 +37,5 @@ const Template = ({ placeholderText, value, type }) => {
 export const DefaultInputText = Template.bind({});
 DefaultInputText.args = {
   placeholderText: "email address",
-  value: text,
   type: "email",
 };

@@ -80,13 +80,16 @@ const ThreeParagraphBlock = ({
   paragraph3,
   image1,
   image2,
-  image3,
+  image3 = {
+    url: "",
+    alt: "",
+  },
   ctaTitle,
   ctaButtons,
 }) => {
   let thirdImage;
 
-  if (image3) {
+  if (Object.keys(image3).length && image3.constructor === Object) {
     thirdImage = (
       <div className={s.image3Wrapper}>
         <img src={image3.url} alt={image3.alt} />
@@ -139,20 +142,23 @@ const ThreeParagraphBlock = ({
   );
 
   let GridAreaBottom;
+  let { gridParent } = s;
 
-  if (ctaButtons) {
+  if (ctaTitle.length && ctaButtons.length) {
     GridAreaBottom = (
       <div className={s.gridAreaBottom}>
         <CTABlock title={ctaTitle} buttons={ctaButtons} />
       </div>
     );
+
+    gridParent = s.gridParent2;
   }
 
   return (
     <div className={s.bleedWrapper}>
       <div className={s.bleedBackground} />
       <div className={s.bleedMainContent}>
-        <section className={s.gridParent}>
+        <section className={gridParent}>
           <GridAreaLeft />
           <GridAreaMiddle />
           <GridAreaRight />
@@ -163,6 +169,13 @@ const ThreeParagraphBlock = ({
   );
 };
 
+ThreeParagraphBlock.defaultProps = {
+  image3: {
+    url: "",
+    alt: "",
+  },
+};
+
 ThreeParagraphBlock.propTypes = {
   title: PropTypes.string.isRequired,
   paragraph1: ParagraphPropType.isRequired,
@@ -170,6 +183,10 @@ ThreeParagraphBlock.propTypes = {
   paragraph3: ParagraphPropType.isRequired,
   image1: ImagePropType.isRequired,
   image2: ImagePropType.isRequired,
+  image3: PropTypes.shape({
+    url: PropTypes.string,
+    alt: PropTypes.string,
+  }),
   ctaTitle: PropTypes.string.isRequired,
   ctaButtons: PropTypes.arrayOf(Button.propTypes).isRequired,
 };

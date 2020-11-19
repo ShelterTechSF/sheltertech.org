@@ -26,14 +26,17 @@ const Template = ({
       paragraph1={{
         title: paragraph1Title,
         description: paragraph1Description,
+        button: { text: "Become a Volunteer", internalLink: "/foo" },
       }}
       paragraph2={{
         title: paragraph2Title,
         description: paragraph2Description,
+        button: { text: "Work With Us", internalLink: "/bar" },
       }}
       paragraph3={{
         title: paragraph3Title,
         description: paragraph3Description,
+        button: { text: "Donate", internalLink: "/fooBar" },
       }}
       image1={{
         url: image1,
@@ -43,6 +46,7 @@ const Template = ({
         url: image2,
         alt: "Multiple volunteers working at a datathon.",
       }}
+      image3={{}}
       ctaTitle={ctaTitle}
       ctaButtons={ctaButtons}
     />
@@ -61,10 +65,6 @@ Gray.args = {
   paragraph3Title: "Donate",
   paragraph3Description:
     "Our programs are largely funded by donations from people who care about bridging the digital divide. Support ShelterTech today.",
-  ctaTitle: "Volunteer, donate, or reach out to our partnerships team",
-  ctaButtons: [
-    { text: "Become a Volunteer", internalLink: "/foo" },
-    { text: "Work With Us", internalLink: "/bar" },
-    { text: "Donate", internalLink: "/fooBar" },
-  ],
+  ctaTitle: "",
+  ctaButtons: [],
 };

@@ -4,14 +4,16 @@ import React from "react";
 
 import s from "./Button.module.css";
 
-const Button = ({ text, externalLink, internalLink, onClick }) => {
+const Button = ({ text, externalLink, internalLink, onClick, noHover }) => {
+  const button = `${s.button} ${noHover} ? ${s.noHover}: ""}`;
+
   if (externalLink) {
     return (
       <a
         rel="noreferrer"
         target="_blank"
         href={externalLink}
-        className={s.button}
+        className={button}
       >
         {text}
       </a>
@@ -19,7 +21,7 @@ const Button = ({ text, externalLink, internalLink, onClick }) => {
   }
   if (internalLink) {
     return (
-      <Link to={internalLink} className={s.button}>
+      <Link className={button} to={internalLink}>
         {text}
       </Link>
     );
@@ -28,7 +30,7 @@ const Button = ({ text, externalLink, internalLink, onClick }) => {
     return (
       <button
         type="button"
-        className={s.button}
+        className={button}
         onClick={(event) => {
           onClick(event);
         }}

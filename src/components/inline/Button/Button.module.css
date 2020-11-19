@@ -16,3 +16,8 @@
   position: relative;
   top: 1px;
 }
+
+.noHover:hover {
+  position: initial;
+  top: 0;
+}

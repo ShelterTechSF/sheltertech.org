@@ -1,0 +1,7 @@
+.inputText {
+  border: 1px solid var(--color-gray-400);
+  box-sizing: border-box;
+  font: var(--font-body-small);
+  padding: 16px 16px 15px 17px;
+  width: 100%;
+}

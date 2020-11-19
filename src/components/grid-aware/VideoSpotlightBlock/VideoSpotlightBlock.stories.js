@@ -14,7 +14,7 @@ const Template = ({
   button,
   image,
   playButtonLink,
-  blackBackground
+  blackBackground,
 }) => (
   <VideoSpotlightBlock
     eyebrowText={eyebrowText}

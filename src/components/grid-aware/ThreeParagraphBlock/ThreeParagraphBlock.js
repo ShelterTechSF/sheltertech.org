@@ -88,7 +88,7 @@ const ThreeParagraphBlock = ({
 
   if (image3) {
     thirdImage = (
-      <div className={s.image2Wrapper}>
+      <div className={s.image3Wrapper}>
         <img src={image3.url} alt={image3.alt} />
       </div>
     );

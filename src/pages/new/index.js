@@ -136,7 +136,7 @@ export default () => {
         quotes={[
           {
             quote:
-              "We’ve heard from San Franciscans, including as part of our recent strategic planning community outreach that It’s hard to know where to go when you’re looking for supportive services. It’s hard to know where to start, and hard to navigate different resources to find accurate information. We’re glad to be supporting ShelterTech and the broader community to build SF Service Guide – a one-stop, reliable place to help connect residents to the services they need.",
+              "We’ve heard from San Franciscans, including as part of our recent strategic planning community outreach that it’s hard to know where to go when you’re looking for supportive services. It’s hard to know where to start, and hard to navigate different resources to find accurate information. We’re glad to be supporting ShelterTech and the broader community to build SF Service Guide – a one-stop, reliable place to help connect residents to the services they need.",
             attribution:
               "Barry Roeder, Mayor’s Office of Housing and Community Development",
           },
@@ -197,7 +197,7 @@ export default () => {
       <ArticleSpotlightCard
         eyebrowText="Partnership Spotlight"
         title="Digital Equity Team of San Francisco"
-        description="Free Fiber Initiative summary we're working together to find new and different ways of building lasting infrastructure"
+        description="Free Fiber Initiative summary we’re working together to find new and different ways of building lasting infrastructure."
         button={{ text: "Read more", internalLink: "/foo" }}
         backgroundImage={articleSpotlightImage}
       />

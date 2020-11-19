@@ -10,6 +10,7 @@ import s from "./ThreeParagraphBlock.module.css";
 const ParagraphPropType = PropTypes.shape({
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  button: PropTypes.shape(Button.propTypes).isRequired,
 });
 
 const ImagePropType = PropTypes.shape({
@@ -23,7 +24,14 @@ const ParagraphBlock = ({ title, description, button }) => (
   <div>
     <div className={s.paragraphTitle}>{title}</div>
     <div className={s.paragraphDescription}>{description}</div>
-    <div className={s.ctaButtonRow}>{button}</div>
+    <div className={s.ctaButton}>
+      <Button
+        text={button.text}
+        internalLink={button.internalLink}
+        externalLink={button.externalLink}
+        onClick={button.onClick}
+      />
+    </div>
   </div>
 );
 
@@ -31,6 +39,26 @@ ParagraphBlock.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   button: PropTypes.shape(Button.propTypes).isRequired,
+};
+
+const CTABlock = ({ title, buttons }) => (
+  <div>
+    <div className={s.ctaTitleBlock}>
+      <div className={s.ctaTitle}>{title}</div>
+    </div>
+    <div className={s.ctaButtonRow}>
+      {buttons.map(({ text, internalLink, externalLink, onClick }) => (
+        <div className={s.ctaButtonRowItem} key={text}>
+          <Button {...{ text, internalLink, externalLink, onClick }} />
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+CTABlock.propTypes = {
+  title: PropTypes.string.isRequired,
+  buttons: PropTypes.arrayOf(Button.propTypes).isRequired,
 };
 
 /* Main component */
@@ -42,15 +70,19 @@ const ThreeParagraphBlock = ({
   paragraph3,
   image1,
   image2,
+  image3,
+  ctaTitle,
   ctaButtons,
 }) => {
-  const Buttons = ctaButtons.map(
-    ({ text, internalLink, externalLink, onClick }) => (
-      <div className={s.ctaButtonRowItem} key={text}>
-        <Button {...{ text, internalLink, externalLink, onClick }} />
+  let thirdImage;
+
+  if (image3) {
+    thirdImage = (
+      <div className={s.image2Wrapper}>
+        <img src={image3.url} alt={image3.alt} />
       </div>
-    )
-  );
+    );
+  }
 
   const GridAreaLeft = () => (
     <div className={s.gridAreaLeft}>
@@ -58,6 +90,7 @@ const ThreeParagraphBlock = ({
       <div className={s.image1Wrapper}>
         <img className={s.image} src={image1.url} alt={image1.alt} />
       </div>
+      {thirdImage}
     </div>
   );
 
@@ -67,14 +100,14 @@ const ThreeParagraphBlock = ({
         <ParagraphBlock
           title={paragraph1.title}
           description={paragraph1.description}
-          button={Buttons[0]}
+          button={paragraph1.button}
         />
       </div>
       <div className={s.paragraph2Wrapper}>
         <ParagraphBlock
           title={paragraph2.title}
           description={paragraph2.description}
-          button={Buttons[1]}
+          button={paragraph2.button}
         />
       </div>
     </div>
@@ -86,7 +119,7 @@ const ThreeParagraphBlock = ({
         <ParagraphBlock
           title={paragraph3.title}
           description={paragraph3.description}
-          button={Buttons[2]}
+          button={paragraph3.button}
         />
       </div>
       <div className={s.image2Wrapper}>
@@ -94,6 +127,16 @@ const ThreeParagraphBlock = ({
       </div>
     </div>
   );
+
+  let GridAreaBottom;
+
+  if (ctaButtons) {
+    GridAreaBottom = (
+      <div className={s.gridAreaBottom}>
+        <CTABlock title={ctaTitle} buttons={ctaButtons} />
+      </div>
+    );
+  }
 
   return (
     <div className={s.bleedWrapper}>
@@ -103,6 +146,7 @@ const ThreeParagraphBlock = ({
           <GridAreaLeft />
           <GridAreaMiddle />
           <GridAreaRight />
+          {GridAreaBottom}
         </section>
       </div>
     </div>
@@ -116,6 +160,7 @@ ThreeParagraphBlock.propTypes = {
   paragraph3: ParagraphPropType.isRequired,
   image1: ImagePropType.isRequired,
   image2: ImagePropType.isRequired,
+  image3: ImagePropType.isRequired,
   ctaTitle: PropTypes.string.isRequired,
   ctaButtons: PropTypes.arrayOf(Button.propTypes).isRequired,
 };

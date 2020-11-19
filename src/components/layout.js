@@ -11,7 +11,6 @@ import sealOfTransparency from "./grid-aware/Footer/stories/guidestar-seal-of-tr
 import instagramLogo from "./grid-aware/Footer/stories/instagram.svg";
 import twitterLogo from "./grid-aware/Footer/stories/twitter.svg";
 import { BurgerMenu, Navigation } from "./grid-aware/Navigation";
-import Spacer from "./grid-aware/Spacer";
 
 const navigationItems = [
   { text: "Programs", internalLink: "/new" },

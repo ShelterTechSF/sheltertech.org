@@ -43,7 +43,7 @@ export default () => {
       </Modal>
       <VideoHeader
         title="Less than half of nearly 10,000 people experiencing homelessness in the Bay Area have reliable access to the internet."
-        description="ShelterTech is a nonprofit organization dedicated to supporting people who are experiencing homelessness or housing insecurity by leveraging technology and connectivity."
+        description="ShelterTech is a technology-focused nonprofit organization making it easier for this community to connect with  resources that can help them address their challenges."
         image={videoHeaderImage}
         ctaButtons={[
           { text: "Donate", internalLink: "/new/donate" },
@@ -86,7 +86,7 @@ export default () => {
         }}
         ctaTitle="Volunteer, donate, or reach out to our partnerships team"
         ctaButtons={[
-          { text: "Volunteer", internalLink: "/new/volunteer" },
+          { text: "Become a Volunteer", internalLink: "/new/volunteer" },
           { text: "Donate", internalLink: "/new/donate" },
           { text: "Work with us", onClick: () => setVolunteerFormIsOpen(true) },
         ]}
@@ -100,7 +100,7 @@ export default () => {
             imageAlt: "Image of ShelterTech booth with 4 volunteers smiling.",
             title: "ShelterConnect",
             description:
-              "Every year, our ShelterConnect program provides 3XXX homeless and housing insecure people with free and unlimited internet access and we plan to provide every homeless individual with the digital infrastructure that meets their needs by 2024.",
+              "Through partnerships with the City of San Francisco and Cisco, residents can use free wifi and hardware at shelters and transitional housing facilities.",
           },
           {
             theme: "dark",
@@ -136,9 +136,9 @@ export default () => {
         quotes={[
           {
             quote:
-              "We've heard from San Franciscans, including as part of our recent strategic planning community outreach that it's hard to know where to go when you're looking for supportive services. It's hard to know where to start, and hard to navigate different resources to find accurate information. We're glad to be supporting ShelterTech and the broader community to build SF Service Guide - a one-stop, reliable place to help connect residents to the services they need.",
+              "We’ve heard from San Franciscans, including as part of our recent strategic planning community outreach that it’s hard to know where to go when you’re looking for supportive services. It’s hard to know where to start, and hard to navigate different resources to find accurate information. We’re glad to be supporting ShelterTech and the broader community to build SF Service Guide – a one-stop, reliable place to help connect residents to the services they need.",
             attribution:
-              "Barry Roeder, Mayor's Office of Housing and Community Development",
+              "Barry Roeder, Mayor’s Office of Housing and Community Development",
           },
           {
             quote:

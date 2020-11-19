@@ -1,7 +1,7 @@
 import React from "react";
 
 import ArticleSpotlightCard from "./ArticleSpotlightCard";
-import background from "./stories/background.png";
+import background from "./stories/background.jpeg";
 
 export default {
   title: "Grid-Aware/ArticleSpotlightCard",
@@ -26,10 +26,14 @@ const Template = ({
 
 export const Default = Template.bind({});
 Default.args = {
-  eyebrowText: "Partnership Spotlight",
-  title: "Digital Equity Team of San Francisco",
+  eyebrowText: "ShelterConnect Spotlight",
+  title: "Mission Hotel",
   description:
-    "Free Fiber Initiative summary we're working together to find new and different ways of building lasting infrastructure.",
-  button: { text: "Read More", internalLink: "/foo" },
+    "We recently reached a major milestone. The biggest SRO in San Francisco now provides free wifi and hardware to hundreds of people.",
+  button: {
+    text: "Read More",
+    externalLink:
+      "https://medium.com/shelter-tech/the-mission-hotel-san-franciscos-largest-sro-now-provides-free-internet-to-hundreds-of-at-risk-f72761c62c2e",
+  },
   backgroundImage: background,
 };

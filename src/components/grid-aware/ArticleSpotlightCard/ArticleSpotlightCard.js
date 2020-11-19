@@ -39,7 +39,7 @@ const ArticleSpotlightCard = ({
     <div
       className={s.bleedBackground}
       style={{
-        background: `center / cover no-repeat url("${backgroundImage}")`,
+        background: `bottom / cover no-repeat url("${backgroundImage}")`,
       }}
     />
     <div className={s.bleedMainContent}>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
-import articleSpotlightImage from "../../components/grid-aware/ArticleSpotlightCard/stories/background.png";
+import articleSpotlightImage from "../../components/grid-aware/ArticleSpotlightCard/stories/background.jpeg";
 import BlockQuoteBlock from "../../components/grid-aware/BlockQuoteBlock/BlockQuoteBlock";
 import HomePageLargeParagraph from "../../components/grid-aware/HomePageLargeParagraph";
 import Modal from "../../components/grid-aware/Modal";
@@ -195,10 +195,14 @@ export default () => {
         ]}
       />
       <ArticleSpotlightCard
-        eyebrowText="Partnership Spotlight"
-        title="Digital Equity Team of San Francisco"
-        description="Free Fiber Initiative summary we're working together to find new and different ways of building lasting infrastructure"
-        button={{ text: "Read more", internalLink: "/foo" }}
+        eyebrowText="ShelterConnect Spotlight"
+        title="Mission Hotel"
+        description="We recently reached a major milestone. The biggest SRO in San Francisco now provides free wifi and hardware to hundreds of people."
+        button={{
+          text: "Read More",
+          externalLink:
+            "https://medium.com/shelter-tech/the-mission-hotel-san-franciscos-largest-sro-now-provides-free-internet-to-hundreds-of-at-risk-f72761c62c2e",
+        }}
         backgroundImage={articleSpotlightImage}
       />
     </Layout>

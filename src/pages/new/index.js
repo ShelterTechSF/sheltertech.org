@@ -122,7 +122,11 @@ export default () => {
           },
         ]}
       />
-      <Spacer heightDesktop="53px" heightMobile="19px" color="#000" />
+      <Spacer
+        heightDesktop="91px"
+        heightMobile="19px"
+        color="var(--color-black)"
+      />
       <VideoSpotlightBlock
         eyebrowText="Our Impact"
         description="Over 3,000 people have daily internet access in local shelters and resource centers."
@@ -205,6 +209,7 @@ export default () => {
         button={{ text: "Read more", internalLink: "/foo" }}
         backgroundImage={articleSpotlightImage}
       />
+      <Spacer heightDesktop="170px" heightMobile="80px" />
     </Layout>
   );
 };

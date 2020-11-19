@@ -88,7 +88,6 @@ const Layout = ({ children }) => {
           employerIdentificationNumber="ein: 38-3984099"
         />
       </div>
-      <Spacer heightDesktop="170px" heightMobile="80px" />
     </div>
   );
 };

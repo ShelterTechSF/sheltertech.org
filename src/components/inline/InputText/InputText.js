@@ -24,11 +24,12 @@ import s from "./InputText.module.css";
  *
  */
 
-const InputText = ({ placeholderText, onChange, value, type }) => {
+const InputText = ({ name, placeholderText, onChange, value, type }) => {
   return (
     <input
       className={s.inputText}
       type={type}
+      name={name}
       placeholder={placeholderText}
       onChange={onChange}
       value={value}
@@ -37,6 +38,7 @@ const InputText = ({ placeholderText, onChange, value, type }) => {
 };
 
 InputText.propTypes = {
+  name: PropTypes.string,
   placeholderText: PropTypes.string,
   onChange: PropTypes.func,
   value: PropTypes.string,
@@ -44,6 +46,7 @@ InputText.propTypes = {
 };
 
 InputText.defaultProps = {
+  name: undefined,
   placeholderText: undefined,
   onChange: undefined,
   value: undefined,

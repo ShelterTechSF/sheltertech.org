@@ -1,0 +1,91 @@
+.bleedWrapper {
+  background-color: var(--color-deep-blue);
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+.gridParent {
+  display: flex;
+  flex-direction: row;
+  grid-column: 2;
+  justify-content: space-between;
+  padding: 60px 0 80px;
+}
+
+.socialMediaLinks {
+  margin-top: 40px;
+}
+
+.socialMediaLink:not(:last-child) {
+  margin-right: 20px;
+}
+
+.navigationRightArea {
+  text-align: right;
+}
+
+.navigation {
+  color: var(--color-white);
+  font: var(--font-caption);
+}
+
+/* button properties are reset in this class */
+.footerNavLink {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.footerNavLink:not(:last-child) {
+  margin-right: 70px;
+}
+
+.seals {
+  margin-top: 78px;
+}
+
+.seal:not(:last-child) {
+  margin-right: 39px;
+}
+
+.sealImage {
+  height: 60px;
+  width: 60px;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    display: block;
+  }
+
+  .gridParent {
+    display: block;
+    padding: 40px 0 60px;
+  }
+
+  .navigationRightArea {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .navigation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerNavLink:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .footerNavLink:not(:first-child) {
+    margin-top: 40px;
+  }
+}

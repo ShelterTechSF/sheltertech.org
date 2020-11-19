@@ -5,7 +5,7 @@ import React from "react";
 import s from "./Button.module.css";
 
 const Button = ({ text, externalLink, internalLink, onClick, noHover }) => {
-  const button = `${s.button} ${noHover} ? ${s.noHover}: ""}`;
+  const button = `${s.button} ${noHover ? s.noHover : ""}`;
 
   if (externalLink) {
     return (

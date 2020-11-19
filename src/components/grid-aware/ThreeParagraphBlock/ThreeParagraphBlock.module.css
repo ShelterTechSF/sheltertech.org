@@ -65,13 +65,9 @@
   padding: 100px 0;
 }
 
-/* gridParent for optional ctaButtons row */
-.gridParent2 {
-  column-gap: var(--grid-column-gap);
-  display: grid;
-  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+/* Grid parent for optional ctaButtons block */
+.gridParent.v2 {
   grid-template-rows: repeat(2, auto);
-  padding: 100px 0;
   row-gap: 50px;
 }
 
@@ -86,8 +82,7 @@
     padding: 50px 0 80px;
   }
 
-  .gridParent2 {
-    display: block;
+  .gridParent.v2 {
     padding: 40px 0 80px;
   }
 }
@@ -142,14 +137,16 @@
 
 .leftBottomImageWrapper {
   left: 30px;
-  margin-top: 40px;
   position: relative;
 }
 
-.leftBottomImageWrapper2 {
-  left: 30px;
+.leftBottomImageWrapper.v1 {
+  margin-top: 40px;
+}
+
+/* Image wrapper if rendering only one image on the left */
+.leftBottomImageWrapper.v2 {
   margin-top: 135px;
-  position: relative;
 }
 
 .rightImageWrapper {
@@ -179,10 +176,6 @@
   }
 
   .leftBottomImageWrapper {
-    display: none;
-  }
-
-  .leftBottomImageWrapper2 {
     display: none;
   }
 

@@ -10,22 +10,20 @@ import s from "./ThreeParagraphBlock.module.css";
 const ParagraphPropType = PropTypes.shape({
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  button: PropTypes.shape(
-    PropTypes.oneOfType([
-      PropTypes.exact({
-        text: PropTypes.string,
-        externalLink: PropTypes.string,
-      }),
-      PropTypes.exact({
-        text: PropTypes.string,
-        internalLink: PropTypes.string,
-      }),
-      PropTypes.exact({
-        text: PropTypes.string,
-        onClick: PropTypes.func,
-      }),
-    ])
-  ).isRequired,
+  button: PropTypes.oneOfType([
+    PropTypes.exact({
+      text: PropTypes.string,
+      externalLink: PropTypes.string,
+    }),
+    PropTypes.exact({
+      text: PropTypes.string,
+      internalLink: PropTypes.string,
+    }),
+    PropTypes.exact({
+      text: PropTypes.string,
+      onClick: PropTypes.func,
+    }),
+  ]),
 });
 
 const ImagePropType = PropTypes.shape({
@@ -35,7 +33,7 @@ const ImagePropType = PropTypes.shape({
 
 /* Subcomponents */
 
-const ParagraphBlock = ({ title, description, button }) => {
+const ParagraphBlock = ({ title, description, button = {} }) => {
   let hasButton;
 
   if (button) {
@@ -93,33 +91,32 @@ const ThreeParagraphBlock = ({
   paragraph1,
   paragraph2,
   paragraph3,
-  leftTopImage = {
-    url: "",
-    alt: "",
-  },
+  leftTopImage,
   leftBottomImage,
   rightImage,
-  ctaTitle = "",
-  ctaButtons = [],
+  ctaTitle,
+  ctaButtons,
 }) => {
   let optionalLeftTopImage;
-  let leftBottomImageWrapper = s.leftBottomImageWrapper2;
+  let leftBottomImageWrapperClassName = s.leftBottomImageWrapper;
 
-  if (Object.keys(leftTopImage).length && leftTopImage.constructor === Object) {
+  if (leftTopImage) {
     optionalLeftTopImage = (
       <div className={s.leftTopImageWrapper}>
         <img src={leftTopImage.url} alt={leftTopImage.alt} />
       </div>
     );
 
-    leftBottomImageWrapper = s.leftBottomImageWrapper;
+    leftBottomImageWrapperClassName += ` ${s.v1}`;
+  } else {
+    leftBottomImageWrapperClassName += ` ${s.v2}`;
   }
 
   const GridAreaLeft = () => (
     <div className={s.gridAreaLeft}>
       <h1 className={s.title}>{title}</h1>
       {optionalLeftTopImage}
-      <div className={leftBottomImageWrapper}>
+      <div className={leftBottomImageWrapperClassName}>
         <img
           className={s.image}
           src={leftBottomImage.url}
@@ -164,23 +161,23 @@ const ThreeParagraphBlock = ({
   );
 
   let GridAreaBottom;
-  let { gridParent } = s;
+  let gridParentClassName = s.gridParent;
 
-  if (ctaTitle.length && ctaButtons.length) {
+  if (ctaTitle && ctaButtons) {
     GridAreaBottom = (
       <div className={s.gridAreaBottom}>
         <CTABlock title={ctaTitle} buttons={ctaButtons} />
       </div>
     );
 
-    gridParent = s.gridParent2;
+    gridParentClassName += `${s.v2}`;
   }
 
   return (
     <div className={s.bleedWrapper}>
       <div className={s.bleedBackground} />
       <div className={s.bleedMainContent}>
-        <section className={gridParent}>
+        <section className={gridParentClassName}>
           <GridAreaLeft />
           <GridAreaMiddle />
           <GridAreaRight />
@@ -189,13 +186,6 @@ const ThreeParagraphBlock = ({
       </div>
     </div>
   );
-};
-
-ThreeParagraphBlock.defaultProps = {
-  leftTopImage: {
-    url: "",
-    alt: "",
-  },
 };
 
 ThreeParagraphBlock.propTypes = {
@@ -209,8 +199,14 @@ ThreeParagraphBlock.propTypes = {
     url: PropTypes.string,
     alt: PropTypes.string,
   }),
-  ctaTitle: PropTypes.string.isRequired,
-  ctaButtons: PropTypes.arrayOf(Button.propTypes).isRequired,
+  ctaTitle: PropTypes.string,
+  ctaButtons: PropTypes.arrayOf(Button.propTypes),
+};
+
+ThreeParagraphBlock.defaultProps = {
+  leftTopImage: null,
+  ctaTitle: null,
+  ctaButtons: null,
 };
 
 export default ThreeParagraphBlock;

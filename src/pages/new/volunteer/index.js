@@ -5,6 +5,10 @@ import ImageHeader from "../../../components/grid-aware/ImageHeader";
 import classroom from "../../../components/grid-aware/ImageHeader/stories/classroom.png";
 import whiteboard from "../../../components/grid-aware/ImageHeader/stories/whiteboard-sticky-notes.png";
 import StatsBlock from "../../../components/grid-aware/StatsBlock";
+import ThreeParagraphBlock from "../../../components/grid-aware/ThreeParagraphBlock";
+import teamActivityImage from "../../../components/grid-aware/ThreeParagraphBlock/stories/image4.png";
+import pairProgrammingImage from "../../../components/grid-aware/ThreeParagraphBlock/stories/image5.png";
+import teamSnackingImage from "../../../components/grid-aware/ThreeParagraphBlock/stories/image6.png";
 import TwoParagraphBlock from "../../../components/grid-aware/TwoParagraphBlock";
 import volunteers from "../../../components/grid-aware/TwoParagraphBlock/stories/volunteers.png";
 import Layout from "../../../components/layout";
@@ -54,6 +58,38 @@ export default () => (
             "Worth of work provided by volunteers has been put towards our programs",
         },
       ]}
+    />
+    <ThreeParagraphBlock
+      title="Let’s work together"
+      paragraph1={{
+        title: "Technology",
+        description:
+          "Being based out of San Francisco, tech professionals comprise the bulk of our volunteer base and work together to improve the digital infrastructure powering the services designated for underserved residents.",
+      }}
+      paragraph2={{
+        title: "Partnerships & Communications",
+        description:
+          "We work with government agencies, nonprofits, and local businesses to strengthen the city’s social services ecosystem. via discourse and knowledge sharing between organizations that align with our mission.",
+      }}
+      paragraph3={{
+        title: "Research & Community Development",
+        description:
+          "To better understand the specific experiences people have endured with housing insecurity, our research team works alongside Community Representatives to better understand how best to serve these challenges.",
+      }}
+      leftTopImage={{
+        url: pairProgrammingImage,
+        alt: "Multiple volunteers working at a datathon.",
+      }}
+      leftBottomImage={{
+        url: teamActivityImage,
+        alt: "Team posing for a photo after a design workshop.",
+      }}
+      rightImage={{
+        url: teamSnackingImage,
+        alt: "Multiple volunteers working at a datathon.",
+      }}
+      ctaTitle="We know that digital equity can be achieved with people like you."
+      ctaButtons={[{ text: "Apply", internalLink: "/bar" }]}
     />
     <TwoParagraphBlock
       title="What it’s like to volunteer at ShelterTech"

@@ -33,7 +33,7 @@ const ImagePropType = PropTypes.shape({
 
 /* Subcomponents */
 
-const ParagraphBlock = ({ title, description, button = {} }) => {
+const ParagraphBlock = ({ title, description, button }) => {
   let hasButton;
 
   if (button) {
@@ -61,7 +61,11 @@ const ParagraphBlock = ({ title, description, button = {} }) => {
 ParagraphBlock.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  button: PropTypes.shape(Button.propTypes).isRequired,
+  button: PropTypes.shape(Button.propTypes),
+};
+
+ParagraphBlock.defaultProps = {
+  button: null,
 };
 
 const CTABlock = ({ title, buttons }) => (

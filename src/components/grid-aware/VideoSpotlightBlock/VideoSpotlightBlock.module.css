@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
   grid-template-rows: 465px;
-  margin: auto auto 42px;
+  margin: 0 auto 42px;
   max-width: var(--grid-bleed-max-width);
 }
 

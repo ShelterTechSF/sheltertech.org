@@ -82,6 +82,7 @@
 }
 
 .descriptions * {
+  font: var(--font-body-medium);
   margin: 0;
 }
 
@@ -90,16 +91,12 @@
 }
 
 .descriptions h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.descriptions h2,
+.descriptions h3,
+.descriptions h4,
+.descriptions h5,
+.descriptions h6 {
   font: var(--font-subtitle);
-}
-
-.descriptions p {
-  font: var(--font-body-medium);
 }
 
 

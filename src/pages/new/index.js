@@ -18,6 +18,7 @@ import ProgramsBlock from "../../components/grid-aware/ProgramsBlock";
 import communityDevelopmentImg from "../../components/grid-aware/ProgramsBlock/stories/community-development.jpg";
 import sfServiceGuideImg from "../../components/grid-aware/ProgramsBlock/stories/sf-service-guide.jpg";
 import shelterConnectImg from "../../components/grid-aware/ProgramsBlock/stories/shelter-connect.jpg";
+import Spacer from "../../components/grid-aware/Spacer";
 import ThreeParagraphBlock from "../../components/grid-aware/ThreeParagraphBlock";
 import image1 from "../../components/grid-aware/ThreeParagraphBlock/stories/image1.png";
 import image2 from "../../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
@@ -29,6 +30,7 @@ import VideoSpotlightBlock from "../../components/grid-aware/VideoSpotlightBlock
 import videoSpotlightBlockImage from "../../components/grid-aware/VideoSpotlightBlock/stories/VideoSpotlightBlock.png";
 import Layout from "../../components/layout";
 import VolunteerSignupForm from "../../components/thirdparty/mailchimp/VolunteerSignupForm";
+import annualReportPDF from "./ShelterTech-Annual-Report-2018.pdf";
 
 export default () => {
   const [volunteerFormIsOpen, setVolunteerFormIsOpen] = useState(false);
@@ -121,16 +123,23 @@ export default () => {
           },
         ]}
       />
+      <Spacer
+        heightDesktop="91px"
+        heightMobile="19px"
+        color="var(--color-black)"
+      />
       <VideoSpotlightBlock
         eyebrowText="Our Impact"
         description="Over 3,000 people have daily internet access in local shelters and resource centers."
-        button={{ text: "View Annual Report", internalLink: "/foo" }}
+        button={{ text: "View Annual Report", externalLink: annualReportPDF }}
         image={{
           url: videoSpotlightBlockImage,
           alt: "Video spotlight of Aaron speaking.",
         }}
         playButtonLink="/foo"
+        blackBackground
       />
+      <Spacer heightDesktop="42px" heightMobile="0" />
       <TitleBlock title="Voices from the community" />
       <BlockQuoteBlock
         quotes={[
@@ -154,6 +163,7 @@ export default () => {
           },
         ]}
       />
+      <Spacer heightDesktop="20px" heightMobile="0" />
       <PartnersAndSponsorsBlock
         title="Partners and sponsors"
         partnersAndSponsors={[
@@ -205,6 +215,7 @@ export default () => {
         }}
         backgroundImage={articleSpotlightImage}
       />
+      <Spacer heightDesktop="170px" heightMobile="80px" />
     </Layout>
   );
 };

@@ -15,7 +15,7 @@ export default {
   component: InputText,
 };
 
-const Template = ({ placeholderText, type }) => {
+const Template = ({ placeholderText, type, name }) => {
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {
@@ -26,6 +26,7 @@ const Template = ({ placeholderText, type }) => {
     <span style={demoStyling}>
       <InputText
         type={type}
+        name={name}
         placeholderText={placeholderText}
         onChange={handleChange}
         value={value}
@@ -38,4 +39,5 @@ export const DefaultInputText = Template.bind({});
 DefaultInputText.args = {
   placeholderText: "email address",
   type: "email",
+  name: "foo",
 };

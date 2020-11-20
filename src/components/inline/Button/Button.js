@@ -60,3 +60,21 @@ Button.propTypes = PropTypes.oneOfType([
 ]).isRequired;
 
 export default Button;
+
+/** A version of the Button specifically to be used with forms as the submit button. */
+export const SubmitButton = ({ value, noHover, name }) => {
+  const className = `${s.button} ${noHover ? s.noHover : ""}`;
+  return (
+    <input className={className} type="submit" name={name} value={value} />
+  );
+};
+
+SubmitButton.propTypes = {
+  value: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  noHover: PropTypes.bool,
+};
+
+SubmitButton.defaultProps = {
+  noHover: false,
+};

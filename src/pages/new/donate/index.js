@@ -3,6 +3,7 @@ import React from "react";
 import ArticleSpotlightCard from "../../../components/grid-aware/ArticleSpotlightCard";
 import articleSpotlightImage from "../../../components/grid-aware/ArticleSpotlightCard/mission-hotel.jpeg";
 import DonationBlock from "../../../components/grid-aware/DonationBlock";
+import Spacer from "../../../components/grid-aware/Spacer";
 import Layout from "../../../components/layout";
 
 export default () => (
@@ -38,5 +39,6 @@ export default () => (
       }}
       backgroundImage={articleSpotlightImage}
     />
+    <Spacer heightDesktop="170px" heightMobile="80px" />
   </Layout>
 );

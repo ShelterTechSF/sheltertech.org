@@ -78,7 +78,7 @@
 
 .subtitle {
   color: var(--color-gray-600);
-  font: var(--font-body-medium);
+  font: var(--font-subtitle);
 }
 
 .description {

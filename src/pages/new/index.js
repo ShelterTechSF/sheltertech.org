@@ -73,7 +73,7 @@ export default () => {
             "We work with companies, nonprofits, and local governments to empower the community. Reach out to us.",
           button: {
             text: "Work With Us",
-            internalLink: { onClick: () => setVolunteerFormIsOpen(true) },
+            onClick: () => setVolunteerFormIsOpen(true),
           },
         }}
         paragraph3={{

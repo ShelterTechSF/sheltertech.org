@@ -30,6 +30,7 @@ import VideoSpotlightBlock from "../../components/grid-aware/VideoSpotlightBlock
 import videoSpotlightBlockImage from "../../components/grid-aware/VideoSpotlightBlock/stories/VideoSpotlightBlock.png";
 import Layout from "../../components/layout";
 import VolunteerSignupForm from "../../components/thirdparty/mailchimp/VolunteerSignupForm";
+import annualReportPDF from "./ShelterTech-Annual-Report-2018.pdf";
 
 export default () => {
   const [volunteerFormIsOpen, setVolunteerFormIsOpen] = useState(false);
@@ -130,7 +131,7 @@ export default () => {
       <VideoSpotlightBlock
         eyebrowText="Our Impact"
         description="Over 3,000 people have daily internet access in local shelters and resource centers."
-        button={{ text: "View Annual Report", internalLink: "/foo" }}
+        button={{ text: "View Annual Report", externalLink: annualReportPDF }}
         image={{
           url: videoSpotlightBlockImage,
           alt: "Video spotlight of Aaron speaking.",

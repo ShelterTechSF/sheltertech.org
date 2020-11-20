@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
-import articleSpotlightImage from "./mission-hotel.jpeg";
 import BlockQuoteBlock from "../../components/grid-aware/BlockQuoteBlock/BlockQuoteBlock";
 import HomePageLargeParagraph from "../../components/grid-aware/HomePageLargeParagraph";
 import Modal from "../../components/grid-aware/Modal";
@@ -31,6 +30,7 @@ import videoSpotlightBlockImage from "../../components/grid-aware/VideoSpotlight
 import Layout from "../../components/layout";
 import VolunteerSignupForm from "../../components/thirdparty/mailchimp/VolunteerSignupForm";
 import annualReportPDF from "./ShelterTech-Annual-Report-2018.pdf";
+import articleSpotlightImage from "./mission-hotel.jpeg";
 
 export default () => {
   const [volunteerFormIsOpen, setVolunteerFormIsOpen] = useState(false);

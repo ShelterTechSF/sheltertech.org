@@ -1,6 +1,6 @@
 import React from "react";
 
-import Button from "./Button";
+import Button, { SubmitButton } from "./Button";
 
 const demoStyling = {
   display: "flex",
@@ -47,4 +47,17 @@ OnClickButton.args = {
     // eslint-disable-next-line no-console
     console.log(`event is ${event}`);
   },
+};
+
+const SubmitTemplate = ({ name, value, noHover }) => (
+  <div style={demoStyling}>
+    <SubmitButton name={name} value={value} noHover={noHover} />
+  </div>
+);
+
+export const SubmitButtonStory = SubmitTemplate.bind({});
+SubmitButtonStory.args = {
+  name: "subscribe",
+  value: "Subscribe",
+  noHover: false,
 };

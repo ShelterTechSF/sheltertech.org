@@ -30,6 +30,7 @@
   grid-template-rows: auto 0;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
+  overflow-x: hidden;
 }
 
 .bleedBackground {
@@ -63,9 +64,7 @@
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
   grid-template-rows: repeat(2, auto);
-  padding-bottom: 100px;
-  padding-top: 100px;
-  row-gap: 50px;
+  padding: 100px 0;
 }
 
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */
@@ -76,8 +75,7 @@
 @media (--tablet-and-down) {
   .gridParent {
     display: block;
-    padding-bottom: 80px;
-    padding-top: 40px;
+    padding: 50px 0 80px;
   }
 }
 
@@ -102,6 +100,7 @@
 .gridAreaBottom {
   grid-column: 5 / span 8;
   grid-row: 2;
+  margin-top: 50px;
 }
 
 
@@ -123,19 +122,29 @@
   max-width: 425px;
 }
 
-.image1Wrapper {
-  margin-top: 135px;
+.leftTopImageWrapper {
+  margin-top: 70px;
   position: relative;
   right: 75px;
 }
 
-.image2Wrapper {
+.leftBottomImageWrapper {
   left: 30px;
-  margin-top: 40px;
   position: relative;
 }
 
-.image3Wrapper {
+.leftBottomImageWrapper.solo {
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+/* Image wrapper if rendering only one image on the left */
+.leftBottomImageWrapper.paired {
+  margin-top: 135px;
+}
+
+.rightImageWrapper {
+  margin-right: -170px;
   margin-top: 70px;
 }
 
@@ -148,22 +157,26 @@
     margin-top: 30px;
   }
 
+  .paragraph3Wrapper {
+    margin-top: 30px;
+  }
+
   .ctaTitleBlock {
     margin-top: 40px;
     max-width: 100%;
   }
 
-  .image1Wrapper {
+  .leftTopImageWrapper {
     display: none;
   }
 
-  .image2Wrapper {
+  .leftBottomImageWrapper {
     display: none;
   }
 
-  .image3Wrapper {
+  .rightImageWrapper {
+    margin-right: -40px;
     margin-top: 40px;
-    overflow: hidden;
   }
 }
 
@@ -187,10 +200,25 @@
   margin-top: 25px;
 }
 
+.paragraphCTAButton {
+  margin-top: 25px;
+}
+
 @media (--tablet-and-down) {
   .paragraphDescription {
     margin-top: 10px;
   }
+
+  .paragraphCTAButton {
+    margin-top: 10px;
+  }
+}
+
+
+/* Image Block */
+
+.image {
+  max-width: 100%;
 }
 
 

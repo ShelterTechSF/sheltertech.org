@@ -1,4 +1,5 @@
 import { action } from "@storybook/addon-actions";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 import "../src/stylesheets/global.css";
 
@@ -32,4 +33,8 @@ export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   // If this is left to its default value of 'padded', then it interferes with the mobile views.
   layout: "fullscreen",
+  viewport: {
+    // Add more viewports based on real devices.
+    viewports: INITIAL_VIEWPORTS,
+  },
 };

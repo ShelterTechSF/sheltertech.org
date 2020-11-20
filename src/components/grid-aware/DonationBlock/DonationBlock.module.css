@@ -1,0 +1,131 @@
+/* Bleed wrapper */
+
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  margin: 60px auto 120px;
+  max-width: var(--grid-bleed-max-width);
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    display: block;
+    margin: 50px auto 80px;
+  }
+}
+
+/* Main grid */
+
+.gridParent {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  grid-template-rows: max-content auto; /* TODO: Richard doesn't understand why this works */
+}
+
+.gridAreaHeadline {
+  grid-column: 1 / span 6;
+  grid-row: 1;
+}
+
+.gridAreaForm {
+  grid-column: 7 / span 6;
+  grid-row: 1 / span 2;
+}
+
+.gridAreaDescription {
+  grid-column: 1 / span 6;
+  grid-row: 2;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    column-gap: 0;
+    grid-template-columns: 20px 1fr 20px;
+  }
+
+  .gridAreaHeadline {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .gridAreaForm {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+  }
+
+  .gridAreaDescription {
+    grid-column: 2;
+    grid-row: 3;
+  }
+}
+
+/* Subcomponents */
+
+.mainTitle {
+  font: var(--font-headline);
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.mainDescription {
+  font: var(--font-subtitle);
+  margin-top: 15px;
+}
+
+.whyDonateTitle {
+  font: var(--font-subtitle);
+  margin-bottom: 0;
+  margin-top: 40px;
+}
+
+.impactTitle {
+  font: var(--font-headline);
+  margin-bottom: 0;
+  margin-top: 80px;
+}
+
+.list {
+  font: var(--font-body-medium);
+  list-style: url('./list-marker.svg');
+  margin-bottom: 0;
+  margin-top: 40px;
+  padding-left: 40px;
+}
+
+.listItem {
+  /* Used to manually horizontally center list marker. Note that Firefox and
+   * Chrome have subtly different ways of laying out the marker, so it's not
+   * possible to perfectly center this in all browsers. */
+  padding-left: 10px;
+}
+
+.listItem:not(:first-child) {
+  margin-top: 1em;
+}
+
+.formWrapper {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  padding: 30px 0;
+}
+
+@media (--tablet-and-down) {
+  .mainTitle {
+    margin-top: 0;
+  }
+
+  .impactTitle {
+    margin-top: 50px;
+  }
+
+  .list {
+    margin-top: 25px;
+    padding-left: 25px;
+  }
+
+  .formWrapper {
+    box-shadow: 0 7.14286px 19.0476px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+  }
+}

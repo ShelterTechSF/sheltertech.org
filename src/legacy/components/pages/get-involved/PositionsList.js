@@ -13,21 +13,6 @@ export const PositionsList = () => (
       <li className="positions-list--item">
         <a
           className="positions-list--item--title"
-          href="mailto:jasmine@sheltertech.org?subject=Product Management Volunteer"
-        >
-          Product Management
-        </a>
-        <a
-          href="mailto:jasmine@sheltertech.org?subject=Product Management Volunteer"
-          className="positions-list--item--desc"
-        >
-          Lead cross-functional teams of researchers, designers, and developers
-          to improve our products and make lasting impact for our users
-        </a>
-      </li>
-      <li className="positions-list--item">
-        <a
-          className="positions-list--item--title"
           href="mailto:jasmine@sheltertech.org?subject=Growth Volunteer"
         >
           Growth & Marketing
@@ -53,21 +38,6 @@ export const PositionsList = () => (
         >
           Full stack, Front End, and Dev Ops opportunities (React or Ruby on
           Rails preferred)
-        </a>
-      </li>
-      <li className="positions-list--item">
-        <a
-          className="positions-list--item--title"
-          href="mailto:jasmine@sheltertech.org?subject=Design Volunteer"
-        >
-          Product Design
-        </a>
-        <a
-          href="mailto:jasmine@sheltertech.org?subject=Design Volunteer"
-          className="positions-list--item--desc"
-        >
-          Work with research, product, and dev teams to create products with
-          real impact
         </a>
       </li>
       <li className="positions-list--item">

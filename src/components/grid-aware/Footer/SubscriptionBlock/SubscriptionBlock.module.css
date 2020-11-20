@@ -1,0 +1,72 @@
+/* Background bleed */
+
+.bleedWrapper {
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+/* Top Row */
+
+.subscriptionBlock {
+  background-color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  padding: 35px;
+}
+
+.subscribeContainer {
+  align-items: baseline;
+  display: flex;
+}
+
+.title {
+  color: var(--color-white);
+  font: var(--font-subtitle);
+  margin-right: 97px;
+}
+
+.form {
+  display: flex;
+}
+
+.inputText {
+  width: 291px;
+}
+
+/* This appears to be a field that comes with the Mailchimp embed code to trick
+ * bots into filling it out, allowing them to differentiate bots from real
+ * users, who won't see this. */
+.antiBotInput {
+  display: none;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    display: block;
+  }
+
+  .subscriptionBlock {
+    padding: 44px 42px 43px;
+  }
+
+  .subscribeContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    font: var(--font-body-large);
+    margin-right: 0;
+  }
+
+  .form {
+    align-items: baseline;
+    margin-top: 22px;
+  }
+
+  .inputText {
+    min-width: 155px;
+    width: auto;
+  }
+}

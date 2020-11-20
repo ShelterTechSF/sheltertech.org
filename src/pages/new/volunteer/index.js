@@ -92,7 +92,7 @@ export default () => (
         },
       ]}
     />
-    <Spacer heightDesktop="120px" heightMobile="80px" />
+    <Spacer heightDesktop="190px" heightMobile="80px" />
     <ArticleSpotlightCard
       eyebrowText="Volunteer Spotlight"
       title="Laura Barrera-Vera"

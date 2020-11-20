@@ -27,20 +27,20 @@ import videoHeaderImage from "../../components/grid-aware/VideoHeader/stories/Vi
 import VideoSpotlightBlock from "../../components/grid-aware/VideoSpotlightBlock";
 import videoSpotlightBlockImage from "../../components/grid-aware/VideoSpotlightBlock/stories/VideoSpotlightBlock.png";
 import Layout from "../../components/layout";
-import VolunteerSignupForm from "../../components/thirdparty/mailchimp/VolunteerSignupForm";
+import PartnershipSignupForm from "../../components/thirdparty/mailchimp/PartnershipSignupForm";
 import annualReportPDF from "./ShelterTech-Annual-Report-2018.pdf";
 import articleSpotlightImage from "./mission-hotel.jpeg";
 
 export default () => {
-  const [volunteerFormIsOpen, setVolunteerFormIsOpen] = useState(false);
+  const [partnershipFormIsOpen, setPartnershipFormIsOpen] = useState(false);
   return (
     <Layout>
       <Modal
-        isOpen={volunteerFormIsOpen}
-        setIsOpen={setVolunteerFormIsOpen}
-        contentLabel="Volunteer"
+        isOpen={partnershipFormIsOpen}
+        setIsOpen={setPartnershipFormIsOpen}
+        contentLabel="Partnership"
       >
-        <VolunteerSignupForm />
+        <PartnershipSignupForm />
       </Modal>
       <VideoHeader
         title="Less than half of nearly 10,000 people experiencing homelessness in the Bay Area have reliable access to the internet."
@@ -73,7 +73,7 @@ export default () => {
             "We work with companies, nonprofits, and local governments to empower the community. Reach out to us.",
           button: {
             text: "Work With Us",
-            onClick: () => setVolunteerFormIsOpen(true),
+            onClick: () => setPartnershipFormIsOpen(true),
           },
         }}
         paragraph3={{

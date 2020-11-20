@@ -15,9 +15,9 @@ import twitterLogo from "./grid-aware/Footer/stories/twitter.svg";
 import { BurgerMenu, Navigation } from "./grid-aware/Navigation";
 
 const navigationItems = [
-  { text: "Programs", internalLink: "/new" },
-  { text: "Volunteer", internalLink: "/new/volunteer" },
-  { text: "Donate", internalLink: "/new/donate", isButton: true },
+  { text: "Programs", internalLink: "/" },
+  { text: "Volunteer", internalLink: "/volunteer" },
+  { text: "Donate", internalLink: "/donate", isButton: true },
 ];
 
 const Layout = ({ children }) => {
@@ -64,7 +64,7 @@ const Layout = ({ children }) => {
       />
       <div id={pageWrapperID}>
         <Navigation
-          homeURL="/new"
+          homeURL="/"
           navigationItems={navigationItems}
           toggleBurgerMenu={() => setBurgerMenuIsOpen(!burgerMenuIsOpen)}
         />
@@ -76,9 +76,9 @@ const Layout = ({ children }) => {
           formAntiBotInputName="b_c47829732a0bea5c8e8a94604_08f60e42ef"
           formDescription="Subscribe to get updates"
           footerNavigation={[
-            { text: "Programs", internalLink: "/new" },
-            { text: "Volunteer", internalLink: "/new/volunteer" },
-            { text: "Donate", internalLink: "/new/donate" },
+            { text: "Programs", internalLink: "/" },
+            { text: "Volunteer", internalLink: "/volunteer" },
+            { text: "Donate", internalLink: "/donate" },
           ]}
           seals={[
             {

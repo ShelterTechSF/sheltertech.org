@@ -1,10 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import ArticleSpotlightCard from "../../../components/grid-aware/ArticleSpotlightCard";
-import DonationBlock from "../../../components/grid-aware/DonationBlock";
-import Spacer from "../../../components/grid-aware/Spacer";
-import Layout from "../../../components/layout";
+import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
+import DonationBlock from "../../components/grid-aware/DonationBlock";
+import Spacer from "../../components/grid-aware/Spacer";
+import Layout from "../../components/layout";
 import articleSpotlightImage from "./mission-hotel.jpeg";
 
 export default () => (

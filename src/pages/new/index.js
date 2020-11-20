@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
-import articleSpotlightImage from "../../components/grid-aware/ArticleSpotlightCard/stories/background.jpeg";
+import articleSpotlightImage from "../../components/grid-aware/ArticleSpotlightCard/mission-hotel.jpeg";
 import BlockQuoteBlock from "../../components/grid-aware/BlockQuoteBlock/BlockQuoteBlock";
 import HomePageLargeParagraph from "../../components/grid-aware/HomePageLargeParagraph";
 import Modal from "../../components/grid-aware/Modal";

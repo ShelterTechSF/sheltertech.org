@@ -5,10 +5,11 @@ import Button from "../../inline/Button";
 
 import s from "./ArticleSpotlightCard.module.css";
 
-const TextCard = ({ eyebrowText, title, description, button }) => (
+const TextCard = ({ eyebrowText, title, subtitle, description, button }) => (
   <div className={s.textCard}>
     <div className={s.eyebrow}>{eyebrowText}</div>
     <div className={s.title}>{title}</div>
+    <div className={s.subtitle}>{subtitle}</div>
     <div className={s.description}>{description}</div>
     <div className={s.actionRow}>
       <Button
@@ -24,13 +25,19 @@ const TextCard = ({ eyebrowText, title, description, button }) => (
 TextCard.propTypes = {
   eyebrowText: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   description: PropTypes.string.isRequired,
   button: PropTypes.shape(Button.propTypes).isRequired,
+};
+
+TextCard.defaultProps = {
+  subtitle: null,
 };
 
 const ArticleSpotlightCard = ({
   eyebrowText,
   title,
+  subtitle,
   description,
   button,
   backgroundImage,
@@ -39,7 +46,7 @@ const ArticleSpotlightCard = ({
     <div
       className={s.bleedBackground}
       style={{
-        background: `bottom / cover no-repeat url("${backgroundImage}")`,
+        background: `center / cover no-repeat url("${backgroundImage}")`,
       }}
     />
     <div className={s.bleedMainContent}>
@@ -49,6 +56,7 @@ const ArticleSpotlightCard = ({
             <TextCard
               eyebrowText={eyebrowText}
               title={title}
+              subtitle={subtitle}
               description={description}
               button={button}
             />
@@ -62,9 +70,14 @@ const ArticleSpotlightCard = ({
 ArticleSpotlightCard.propTypes = {
   eyebrowText: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   description: PropTypes.string.isRequired,
   button: PropTypes.shape(Button.propTypes).isRequired,
   backgroundImage: PropTypes.string.isRequired,
+};
+
+ArticleSpotlightCard.defaultProps = {
+  subtitle: null,
 };
 
 export default ArticleSpotlightCard;

@@ -1,5 +1,7 @@
 import React from "react";
 
+import ArticleSpotlightCard from "../../../components/grid-aware/ArticleSpotlightCard";
+import articleSpotlightImage from "../../../components/grid-aware/ArticleSpotlightCard/mission-hotel.jpeg";
 import DonationBlock from "../../../components/grid-aware/DonationBlock";
 import Layout from "../../../components/layout";
 
@@ -24,6 +26,17 @@ export default () => (
         "$500 covers hosting an entire Datathon, which provides food for all volunteers and Community Representatives.",
         "Depending on the size, about $2,000 to $2,500 can wire an entire shelter.",
       ]}
+    />
+    <ArticleSpotlightCard
+      eyebrowText="ShelterConnect Spotlight"
+      title="Mission Hotel"
+      description="We recently reached a major milestone. The biggest SRO in San Francisco now provides free wifi and hardware to hundreds of people."
+      button={{
+        text: "Read More",
+        externalLink:
+          "https://medium.com/shelter-tech/the-mission-hotel-san-franciscos-largest-sro-now-provides-free-internet-to-hundreds-of-at-risk-f72761c62c2e",
+      }}
+      backgroundImage={articleSpotlightImage}
     />
   </Layout>
 );

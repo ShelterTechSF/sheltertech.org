@@ -14,6 +14,7 @@ const Template = ({
   button,
   image,
   playButtonLink,
+  blackBackground,
 }) => (
   <VideoSpotlightBlock
     eyebrowText={eyebrowText}
@@ -21,6 +22,7 @@ const Template = ({
     button={button}
     image={image}
     playButtonLink={playButtonLink}
+    blackBackground={blackBackground}
   />
 );
 
@@ -35,4 +37,18 @@ VideoSpotlightBlockDefault.args = {
     alt: "Video spotlight of Aaron speaking.",
   },
   playButtonLink: "/foo",
+};
+
+export const VideoSpotlightBlockBlackBackground = Template.bind({});
+VideoSpotlightBlockBlackBackground.args = {
+  eyebrowText: "Our Impact",
+  description:
+    "Over 3,000 people have daily internet access in local shelters and resource centers.",
+  button: { text: "View Annual Report", internalLink: "/foo" },
+  image: {
+    url: videoSpotlightBlockImage,
+    alt: "Video spotlight of Aaron speaking.",
+  },
+  playButtonLink: "/foo",
+  blackBackground: true,
 };

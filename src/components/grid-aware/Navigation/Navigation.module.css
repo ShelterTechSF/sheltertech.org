@@ -14,6 +14,7 @@
 
 @media (--tablet-and-down) {
   .bleedWrapper {
+    border-bottom: 1px solid var(--color-gray-400);
     grid-template-columns: 20px 1fr 20px;
   }
 }
@@ -23,6 +24,7 @@
 
 .container {
   align-items: center;
+  border-bottom: 1px solid var(--color-gray-400);
   display: flex;
   grid-column: 2;
   height: 130px;
@@ -33,6 +35,7 @@
 
 @media (--tablet-and-down) {
   .container {
+    border-bottom: 0;
     height: 90px;
     padding-left: 0;
     padding-right: 0;

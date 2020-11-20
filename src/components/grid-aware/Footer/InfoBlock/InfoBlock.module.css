@@ -1,0 +1,31 @@
+/* Background bleed */
+
+.bleedWrapper {
+  background-color: var(--color-midnight-blue);
+  color: var(--color-gray-400);
+  font: var(--font-body-small);
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+.organizationInfo {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 60px;
+  white-space: pre-wrap;
+}
+
+.address {
+  font-style: inherit;
+}
+
+@media (--tablet-and-down) {
+  .organizationInfo {
+    display: block;
+    padding: 30px 20px;
+  }
+
+  .address {
+    margin-top: 15px;
+  }
+}

@@ -76,6 +76,11 @@
   margin-top: 20px;
 }
 
+.subtitle {
+  color: var(--color-gray-600);
+  font: var(--font-subtitle);
+}
+
 .description {
   font: var(--font-body-medium);
   margin-top: 15px;

@@ -1,0 +1,124 @@
+/* Outer grid */
+
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  margin: auto;
+  max-width: var(--grid-bleed-max-width);
+}
+
+.bleedBackground {
+  background: var(--color-black);
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+
+.bleedMainContent {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    grid-template-columns: 40px 1fr 40px;
+  }
+
+  .bleedBackground {
+    grid-column: 1 / span 3;
+  }
+}
+
+
+/* Main grid */
+
+.gridParent {
+  color: var(--color-white);
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-column-start: 2;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  padding: 140px 0 93px;
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.gridParent > * {
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    display: block;
+    padding: 50px 0 80px;
+  }
+}
+
+
+/* Main grid areas */
+
+.gridAreaLeft {
+  grid-column: 2 / span 4;
+}
+
+.gridAreaRight {
+  grid-column: 7 / span 5;
+}
+
+
+/* Title block */
+
+.title {
+  font: var(--font-headline);
+  margin: 0;
+}
+
+
+/* Descriptions block */
+
+@media (--tablet-and-down) {
+  .descriptionsWrapper {
+    margin-top: 40px;
+  }
+}
+
+.descriptions * {
+  font: var(--font-body-medium);
+  margin: 0;
+}
+
+.descriptions >:not(:first-child) {
+  margin-top: 20px;
+}
+
+.descriptions h1,
+.descriptions h2,
+.descriptions h3,
+.descriptions h4,
+.descriptions h5,
+.descriptions h6 {
+  font: var(--font-subtitle);
+}
+
+
+/* CTA block */
+
+.ctaButtonRow {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 40px;
+}
+
+.ctaButtonItem:not(:last-child) {
+  margin-right: 40px;
+}
+
+@media (--tablet-and-down) {
+  .ctaButtonRow {
+    flex-flow: column;
+  }
+
+  .ctaButtonItem:not(:last-child) {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}

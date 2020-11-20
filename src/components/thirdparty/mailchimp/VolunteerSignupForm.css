@@ -12,6 +12,7 @@
 }
 
 #mc_embed_signup .mc-field-group label {
+  display: block;
   font: var(--font-caption);
   margin-bottom: 10px !important;
 }
@@ -19,12 +20,16 @@
 #mc_embed_signup .mc-field-group input {
   border: 1px solid var(--color-gray-400);
   border-radius: 0;
+  box-sizing: border-box;
+  display: block;
   font: var(--font-body-small);
   padding: 16px 17px 15px !important;
+  width: 100%;
 }
 
 #mc_embed_signup .button {
   background-color: var(--color-sheltertech-blue) !important;
+  border: 0;
   border-radius: 0 !important;
   color: var(--color-white) !important;
   font: var(--font-action) !important;

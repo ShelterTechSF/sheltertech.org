@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import ReactModal from "react-modal";
 
 import "../stylesheets/global.css";
+import favicon from "./favicon.ico";
 import Footer from "./grid-aware/Footer";
 import shelterTechLogoWhite from "./grid-aware/Footer/sheltertech-logo-white.svg";
 import facebookLogo from "./grid-aware/Footer/stories/facebook.svg";
@@ -27,6 +29,32 @@ const Layout = ({ children }) => {
   }, []);
   return (
     <div id={outerContainerID}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+        />
+
+        <title>ShelterTech - Technology for the underserved</title>
+        <meta
+          name="description"
+          content="ShelterTech is solving the biggest technology challenges faced by those experiencing homelessness"
+        />
+        <link rel="icon" href={favicon} />
+        {/* Global site tag (gtag.js) - Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-116318550-4"
+        />
+        <script>{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-116318550-4');
+        `}</script>
+      </Helmet>
       <BurgerMenu
         isOpen={burgerMenuIsOpen}
         setIsOpen={setBurgerMenuIsOpen}

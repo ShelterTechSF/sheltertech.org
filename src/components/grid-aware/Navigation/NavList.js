@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 
-const HOME_URL = "/new";
+const HOME_URL = "";
 
 /** An internal, external, or button link. */
 export const NavLink = ({

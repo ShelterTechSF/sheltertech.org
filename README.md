@@ -18,10 +18,5 @@ For more specific documentation, visit one of the pages below:
 
 ## Staging website
 
-We're currently in the process of developing a redesign of the sheltertech.org
-website! Until we are done and ready to flip the switch to the new design, we
-will be placing the new site pages under the `/new` URL path so that they can be
-easily previewed before we roll them out to the main site page routing.
-
-To view the current state of the new design on the staging website, please visit
-https://staging.sheltertech.org/new.
+To view the current state of any new features the staging website, please visit
+https://staging.sheltertech.org/.

@@ -1,5 +1,6 @@
 import React from "react";
 
+import ArticleSpotlightCard from "../../../components/grid-aware/ArticleSpotlightCard";
 import COVID19infoBoxBlock from "../../../components/grid-aware/COVID19InfoBoxBlock";
 import ImageHeader from "../../../components/grid-aware/ImageHeader";
 import classroom from "../../../components/grid-aware/ImageHeader/stories/classroom.png";
@@ -13,6 +14,7 @@ import Layout from "../../../components/layout";
 import teamActivityImage from "./image4.png";
 import pairProgrammingImage from "./image5.png";
 import teamSnackingImage from "./image6.png";
+import articleSpotlightImage from "./laura-barerra-vera.png";
 
 export default () => (
   <Layout>
@@ -125,6 +127,17 @@ export default () => (
           internalLink: "/foo",
         },
       ]}
+    />
+    <ArticleSpotlightCard
+      eyebrowText="Volunteer Spotlight"
+      title="Laura Barrera-Vera"
+      subtitle="Program Manager, SF Service Guide"
+      description="I moved to San Francisco in 2019 and immediately decided to join ShelterTech as I felt compelled to take action to address the worsening homelessness crisis. As Product Lead, I have focused on managing product development and on improving collaboration across all key teams to ensure we build an impactful product."
+      button={{
+        text: "Read More",
+        externalLink: "/foo",
+      }}
+      backgroundImage={articleSpotlightImage}
     />
     <Spacer heightDesktop="170px" heightMobile="80px" />
   </Layout>

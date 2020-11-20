@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
-import articleSpotlightImage from "../../components/grid-aware/ArticleSpotlightCard/stories/background.png";
 import BlockQuoteBlock from "../../components/grid-aware/BlockQuoteBlock/BlockQuoteBlock";
 import HomePageLargeParagraph from "../../components/grid-aware/HomePageLargeParagraph";
 import Modal from "../../components/grid-aware/Modal";
@@ -29,6 +28,8 @@ import VideoSpotlightBlock from "../../components/grid-aware/VideoSpotlightBlock
 import videoSpotlightBlockImage from "../../components/grid-aware/VideoSpotlightBlock/stories/VideoSpotlightBlock.png";
 import Layout from "../../components/layout";
 import VolunteerSignupForm from "../../components/thirdparty/mailchimp/VolunteerSignupForm";
+import annualReportPDF from "./ShelterTech-Annual-Report-2018.pdf";
+import articleSpotlightImage from "./mission-hotel.jpeg";
 
 export default () => {
   const [volunteerFormIsOpen, setVolunteerFormIsOpen] = useState(false);
@@ -122,7 +123,7 @@ export default () => {
       <VideoSpotlightBlock
         eyebrowText="Our Impact"
         description="Over 3,000 people have daily internet access in local shelters and resource centers."
-        button={{ text: "View Annual Report", internalLink: "/foo" }}
+        button={{ text: "View Annual Report", externalLink: annualReportPDF }}
         image={{
           url: videoSpotlightBlockImage,
           alt: "Video spotlight of Aaron speaking.",
@@ -196,10 +197,14 @@ export default () => {
         ]}
       />
       <ArticleSpotlightCard
-        eyebrowText="Partnership Spotlight"
-        title="Digital Equity Team of San Francisco"
-        description="Free Fiber Initiative summary we’re working together to find new and different ways of building lasting infrastructure."
-        button={{ text: "Read more", internalLink: "/foo" }}
+        eyebrowText="ShelterConnect Spotlight"
+        title="Mission Hotel"
+        description="We recently reached a major milestone. The biggest SRO in San Francisco now provides free wifi and hardware to hundreds of people."
+        button={{
+          text: "Read More",
+          externalLink:
+            "https://medium.com/shelter-tech/the-mission-hotel-san-franciscos-largest-sro-now-provides-free-internet-to-hundreds-of-at-risk-f72761c62c2e",
+        }}
         backgroundImage={articleSpotlightImage}
       />
       <Spacer heightDesktop="170px" heightMobile="80px" />

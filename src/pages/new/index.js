@@ -51,7 +51,7 @@ export default () => {
           { text: "Donate", internalLink: "/new/donate" },
           { text: "Volunteer", internalLink: "/new/volunteer" },
         ]}
-        playButtonLink="https://www.youtube.com/watch?v=KCduRWJ1hQo"
+        playButtonLink="https://www.youtube.com/watch?v=2aLyGwaRufY&t=2s"
       />
       <HomePageLargeParagraph
         title="We believe connectivity is a human right."

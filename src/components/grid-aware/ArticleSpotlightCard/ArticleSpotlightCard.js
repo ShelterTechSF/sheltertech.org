@@ -9,7 +9,7 @@ const TextCard = ({ eyebrowText, title, subtitle, description, button }) => (
   <div className={s.textCard}>
     <div className={s.eyebrow}>{eyebrowText}</div>
     <div className={s.title}>{title}</div>
-    <div className={s.subtitle}>{subtitle}</div>
+    {subtitle && <div className={s.subtitle}>{subtitle}</div>}
     <div className={s.description}>{description}</div>
     <div className={s.actionRow}>
       <Button

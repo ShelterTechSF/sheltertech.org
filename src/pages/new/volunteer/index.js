@@ -1,7 +1,7 @@
 import React from "react";
 
 import ArticleSpotlightCard from "../../../components/grid-aware/ArticleSpotlightCard";
-import articleSpotlightImage from "../../../components/grid-aware/ArticleSpotlightCard/laura-barerra-vera.png";
+import articleSpotlightImage from "./laura-barerra-vera.png";
 import COVID19infoBoxBlock from "../../../components/grid-aware/COVID19InfoBoxBlock";
 import ImageHeader from "../../../components/grid-aware/ImageHeader";
 import classroom from "../../../components/grid-aware/ImageHeader/stories/classroom.png";

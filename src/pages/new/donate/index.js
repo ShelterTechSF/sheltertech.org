@@ -1,10 +1,10 @@
 import React from "react";
 
 import ArticleSpotlightCard from "../../../components/grid-aware/ArticleSpotlightCard";
-import articleSpotlightImage from "../../../components/grid-aware/ArticleSpotlightCard/mission-hotel.jpeg";
 import DonationBlock from "../../../components/grid-aware/DonationBlock";
 import Spacer from "../../../components/grid-aware/Spacer";
 import Layout from "../../../components/layout";
+import articleSpotlightImage from "./mission-hotel.jpeg";
 
 export default () => (
   <Layout>

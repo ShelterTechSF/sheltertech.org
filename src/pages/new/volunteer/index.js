@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import COVID19infoBoxBlock from "../../../components/grid-aware/COVID19InfoBoxBlock";
 import ImageHeader from "../../../components/grid-aware/ImageHeader";
@@ -12,6 +13,9 @@ import Layout from "../../../components/layout";
 
 export default () => (
   <Layout>
+    <Helmet>
+      <title>Volunteer | ShelterTech</title>
+    </Helmet>
     <ImageHeader
       title="Volunteering"
       subtitle="We rely on hundreds of volunteers to bridge the digital divide that our most vulnerable neighbors face."

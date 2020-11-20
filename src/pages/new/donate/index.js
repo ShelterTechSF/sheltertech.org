@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import DonationBlock from "../../../components/grid-aware/DonationBlock";
 import Spacer from "../../../components/grid-aware/Spacer";
@@ -6,6 +7,9 @@ import Layout from "../../../components/layout";
 
 export default () => (
   <Layout>
+    <Helmet>
+      <title>Donate | ShelterTech</title>
+    </Helmet>
     <DonationBlock
       mainTitle="Donate today"
       mainDescription="Your support will address digital inequity for an underserved community that does not have access to the internet and essential digital services."

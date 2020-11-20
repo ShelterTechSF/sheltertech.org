@@ -4,6 +4,7 @@ import COVID19infoBoxBlock from "../../../components/grid-aware/COVID19InfoBoxBl
 import ImageHeader from "../../../components/grid-aware/ImageHeader";
 import classroom from "../../../components/grid-aware/ImageHeader/stories/classroom.png";
 import whiteboard from "../../../components/grid-aware/ImageHeader/stories/whiteboard-sticky-notes.png";
+import Spacer from "../../../components/grid-aware/Spacer";
 import StatsBlock from "../../../components/grid-aware/StatsBlock";
 import ThreeParagraphBlock from "../../../components/grid-aware/ThreeParagraphBlock";
 import teamActivityImage from "../../../components/grid-aware/ThreeParagraphBlock/stories/image4.png";
@@ -39,6 +40,7 @@ export default () => (
       title="Volunteering during COVID-19"
       description="Our programs have shifted to remote alternatives. While our means of coming together are different, our research and Datathon events will be conducted online. Simply put, our goal is still the same: to connect this community with resources that can help them address their challenges, become permanently housed, and on track to live happy and productive lives."
     />
+    <Spacer heightDesktop="100px" heightMobile="80px" />
     <StatsBlock
       title="See what our volunteers have accomplished together."
       statCards={[
@@ -91,6 +93,7 @@ export default () => (
       ctaTitle="We know that digital equity can be achieved with people like you."
       ctaButtons={[{ text: "Apply", internalLink: "/bar" }]}
     />
+    <Spacer heightDesktop="120px" heightMobile="0" />
     <TwoParagraphBlock
       title="What it’s like to volunteer at ShelterTech"
       paragraph1="No matter what role you play, the essential attitude you need is a deep belief in digital equity for all people."
@@ -123,5 +126,6 @@ export default () => (
         },
       ]}
     />
+    <Spacer heightDesktop="170px" heightMobile="80px" />
   </Layout>
 );

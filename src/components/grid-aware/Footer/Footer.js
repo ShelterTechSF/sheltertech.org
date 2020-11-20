@@ -12,8 +12,10 @@ import {
 import SubscriptionBlock from "./SubscriptionBlock";
 
 const Footer = ({
+  formAction,
+  formInputName,
   formInputPlaceholder,
-  formInputValue,
+  formAntiBotInputName,
   formDescription,
   footerNavigation,
   seals,
@@ -25,8 +27,10 @@ const Footer = ({
   return (
     <footer className={s.footer}>
       <SubscriptionBlock
+        formAction={formAction}
+        formInputName={formInputName}
         formInputPlaceholder={formInputPlaceholder}
-        formInputValue={formInputValue}
+        formAntiBotInputName={formAntiBotInputName}
         formDescription={formDescription}
       />
       <Navigation
@@ -44,20 +48,17 @@ const Footer = ({
 };
 
 Footer.propTypes = {
-  formInputPlaceholder: PropTypes.string,
-  formInputValue: PropTypes.string.isRequired,
-  formDescription: PropTypes.string,
+  formAction: PropTypes.string.isRequired,
+  formInputName: PropTypes.string.isRequired,
+  formInputPlaceholder: PropTypes.string.isRequired,
+  formAntiBotInputName: PropTypes.string.isRequired,
+  formDescription: PropTypes.string.isRequired,
   footerNavigation: PropTypes.arrayOf(FooterNavigationLinkPropType).isRequired,
   seals: PropTypes.arrayOf(SealPropType).isRequired,
   shelterTechLogo: ShelterTechLogoPropType.isRequired,
   socialMediaLinks: PropTypes.arrayOf(SocialMediaLinkPropType).isRequired,
   employerIdentificationNumber: PropTypes.string.isRequired,
   address: PropTypes.string.isRequired,
-};
-
-Footer.defaultProps = {
-  formInputPlaceholder: undefined,
-  formDescription: undefined,
 };
 
 export default Footer;

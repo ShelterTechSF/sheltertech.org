@@ -18,6 +18,7 @@ import ProgramsBlock from "../../components/grid-aware/ProgramsBlock";
 import communityDevelopmentImg from "../../components/grid-aware/ProgramsBlock/stories/community-development.jpg";
 import sfServiceGuideImg from "../../components/grid-aware/ProgramsBlock/stories/sf-service-guide.jpg";
 import shelterConnectImg from "../../components/grid-aware/ProgramsBlock/stories/shelter-connect.jpg";
+import Spacer from "../../components/grid-aware/Spacer";
 import ThreeParagraphBlock from "../../components/grid-aware/ThreeParagraphBlock";
 import teamDesignWorkshopImage from "../../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
 import datathonClassroomImage from "../../components/grid-aware/ThreeParagraphBlock/stories/image3.png";
@@ -113,6 +114,11 @@ export default () => {
           },
         ]}
       />
+      <Spacer
+        heightDesktop="91px"
+        heightMobile="19px"
+        color="var(--color-black)"
+      />
       <VideoSpotlightBlock
         eyebrowText="Our Impact"
         description="Over 3,000 people have daily internet access in local shelters and resource centers."
@@ -122,7 +128,9 @@ export default () => {
           alt: "Video spotlight of Aaron speaking.",
         }}
         playButtonLink="/foo"
+        blackBackground
       />
+      <Spacer heightDesktop="42px" heightMobile="0" />
       <TitleBlock title="Voices from the community" />
       <BlockQuoteBlock
         quotes={[
@@ -146,6 +154,7 @@ export default () => {
           },
         ]}
       />
+      <Spacer heightDesktop="20px" heightMobile="0" />
       <PartnersAndSponsorsBlock
         title="Partners and sponsors"
         partnersAndSponsors={[
@@ -193,6 +202,7 @@ export default () => {
         button={{ text: "Read more", internalLink: "/foo" }}
         backgroundImage={articleSpotlightImage}
       />
+      <Spacer heightDesktop="170px" heightMobile="80px" />
     </Layout>
   );
 };

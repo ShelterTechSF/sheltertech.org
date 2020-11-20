@@ -1,6 +1,7 @@
 import React from "react";
 
 import DonationBlock from "../../../components/grid-aware/DonationBlock";
+import Spacer from "../../../components/grid-aware/Spacer";
 import Layout from "../../../components/layout";
 
 export default () => (
@@ -25,5 +26,6 @@ export default () => (
         "Depending on the size, about $2,000 to $2,500 can wire an entire shelter.",
       ]}
     />
+    <Spacer heightDesktop="170px" heightMobile="80px" />
   </Layout>
 );

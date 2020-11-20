@@ -38,31 +38,38 @@ const VideoSpotlightBlock = ({
   button,
   image,
   playButtonLink,
-}) => (
-  <div className={s.bleedWrapper}>
-    <div className={s.bleedImage}>
-      <div className={s.playButton}>
-        <a rel="noreferrer" href={playButtonLink} target="_blank">
-          <img className={s.playIcon} src={playIcon} alt="Play Video" />
-        </a>
+  blackBackground,
+}) => {
+  const bleedBackgroundWrapper = `${s.bleedWrapper} ${
+    blackBackground ? s.blackBackground : ""
+  }`;
+
+  return (
+    <div className={bleedBackgroundWrapper}>
+      <div className={s.bleedImage}>
+        <div className={s.playButton}>
+          <a rel="noreferrer" href={playButtonLink} target="_blank">
+            <img className={s.playIcon} src={playIcon} alt="Play Video" />
+          </a>
+        </div>
+        <img className={s.image} src={image.url} alt={image.alt} />
       </div>
-      <img className={s.image} src={image.url} alt={image.alt} />
-    </div>
-    <div className={s.bleedMainContent}>
-      <div className={s.gridParent}>
-        <div className={s.gridAreaCard}>
-          <div className={s.textCardWrapper}>
-            <TextCard
-              eyebrowText={eyebrowText}
-              description={description}
-              button={button}
-            />
+      <div className={s.bleedMainContent}>
+        <div className={s.gridParent}>
+          <div className={s.gridAreaCard}>
+            <div className={s.textCardWrapper}>
+              <TextCard
+                eyebrowText={eyebrowText}
+                description={description}
+                button={button}
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 VideoSpotlightBlock.propTypes = {
   eyebrowText: PropTypes.string.isRequired,
@@ -70,6 +77,11 @@ VideoSpotlightBlock.propTypes = {
   button: PropTypes.shape(Button.propTypes).isRequired,
   image: ImagePropType.isRequired,
   playButtonLink: PropTypes.string.isRequired,
+  blackBackground: PropTypes.bool,
+};
+
+VideoSpotlightBlock.defaultProps = {
+  blackBackground: false,
 };
 
 export default VideoSpotlightBlock;

@@ -13,8 +13,10 @@ export default {
 };
 
 const Template = ({
+  formAction,
   formInputPlaceholder,
-  formInputValue,
+  formInputName,
+  formAntiBotInputName,
   formDescription,
   footerNavigation,
   seals,
@@ -24,8 +26,10 @@ const Template = ({
   employerIdentificationNumber,
 }) => (
   <Footer
+    formAction={formAction}
     formInputPlaceholder={formInputPlaceholder}
-    formInputValue={formInputValue}
+    formInputName={formInputName}
+    formAntiBotInputName={formAntiBotInputName}
     formDescription={formDescription}
     footerNavigation={footerNavigation}
     seals={seals}
@@ -38,8 +42,11 @@ const Template = ({
 
 export const DefaultFooter = Template.bind({});
 DefaultFooter.args = {
+  formAction:
+    "https://sheltertech.us19.list-manage.com/subscribe/post?u=c47829732a0bea5c8e8a94604&amp;id=08f60e42ef",
   formInputPlaceholder: "email address",
-  formInputValue: "email",
+  formInputName: "EMAIL",
+  formAntiBotInputName: "b_c47829732a0bea5c8e8a94604_08f60e42ef",
   formDescription: "Subscribe to get updates",
   footerNavigation: [
     { text: "Programs", internalLink: "/new" },

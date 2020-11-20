@@ -1,7 +1,6 @@
 import React from "react";
 
 import ArticleSpotlightCard from "../../../components/grid-aware/ArticleSpotlightCard";
-import articleSpotlightImage from "./laura-barerra-vera.png";
 import COVID19infoBoxBlock from "../../../components/grid-aware/COVID19InfoBoxBlock";
 import ImageHeader from "../../../components/grid-aware/ImageHeader";
 import classroom from "../../../components/grid-aware/ImageHeader/stories/classroom.png";
@@ -11,6 +10,7 @@ import StatsBlock from "../../../components/grid-aware/StatsBlock";
 import TwoParagraphBlock from "../../../components/grid-aware/TwoParagraphBlock";
 import volunteers from "../../../components/grid-aware/TwoParagraphBlock/stories/volunteers.png";
 import Layout from "../../../components/layout";
+import articleSpotlightImage from "./laura-barerra-vera.png";
 
 export default () => (
   <Layout>

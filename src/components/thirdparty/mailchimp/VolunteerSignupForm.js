@@ -1,13 +1,8 @@
 import React from "react";
 
-import "./VolunteerSignupForm.css";
-import s from "./VolunteerSignupForm.module.css";
+import BaseForm from "./BaseForm";
 
-/* eslint-disable react/no-danger */
-// This entire file is just about embedding an external form
-
-const rawInnerHtml = {
-  __html: `
+const rawFormHTML = `
 <!-- Begin Mailchimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
@@ -46,17 +41,13 @@ const rawInnerHtml = {
 </div>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='MMERGE6';ftypes[6]='text';fnames[7]='MMERGE7';ftypes[7]='number';fnames[8]='MMERGE8';ftypes[8]='date';fnames[9]='MMERGE9';ftypes[9]='text';fnames[10]='LGL_SAL';ftypes[10]='text';fnames[11]='LGL_ID';ftypes[11]='text';fnames[12]='MMERGE12';ftypes[12]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->
-`,
-};
+`;
 
 const VolunteerSignupForm = () => (
-  <div>
-    <h1 className={s.title}>Work With Us</h1>
-    <p className={s.description}>
-      Thank you for your interest in partnering with ShelterTech! Enter your
-      contact information below and we&apos;ll get back to you shortly.
-    </p>
-    <div dangerouslySetInnerHTML={rawInnerHtml} />
-  </div>
+  <BaseForm
+    title="Work With Us"
+    description="Thank you for your interest in partnering with ShelterTech! Enter your contact information below and we'll get back to you shortly."
+    rawFormHTML={rawFormHTML}
+  />
 );
 export default VolunteerSignupForm;

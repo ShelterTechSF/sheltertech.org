@@ -3,8 +3,7 @@ import React from "react";
 import VolunteerSignupForm from "./VolunteerSignupForm";
 
 export default {
-  title: "Third Party/Mailchimp/VolunteerSignupForm",
-  component: VolunteerSignupForm,
+  title: "Third Party/Mailchimp/Forms",
 };
 
 const Template = () => (
@@ -23,5 +22,6 @@ const Template = () => (
   </div>
 );
 
-export const Default = Template.bind({});
-Default.args = {};
+export const VolunteerSignupFormStory = Template.bind({});
+VolunteerSignupFormStory.storyName = "VolunteerSignupForm";
+VolunteerSignupFormStory.args = {};

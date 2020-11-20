@@ -62,19 +62,25 @@ export default () => {
           title: "Volunteer",
           description:
             "Volunteers make our work possible. There are several ways to support our mission. Learn more and get involved.",
-          button: { text: "Become a Volunteer", internalLink: "/foo" },
+          button: {
+            text: "Become a Volunteer",
+            internalLink: "/new/volunteer",
+          },
         }}
         paragraph2={{
           title: "Partnerships",
           description:
             "We work with companies, nonprofits, and local governments to empower the community. Reach out to us.",
-          button: { text: "Work With Us", internalLink: "/bar" },
+          button: {
+            text: "Work With Us",
+            internalLink: { onClick: () => setVolunteerFormIsOpen(true) },
+          },
         }}
         paragraph3={{
           title: "Donate",
           description:
             "Our programs are largely funded by donations from people who care about bridging the digital divide. Support ShelterTech today.",
-          button: { text: "Donate", internalLink: "/fooBar" },
+          button: { text: "Donate", internalLink: "/new/donate" },
         }}
         leftBottomImage={{
           url: teamDesignWorkshopImage,

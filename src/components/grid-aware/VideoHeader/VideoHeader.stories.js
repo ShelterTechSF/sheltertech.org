@@ -28,5 +28,5 @@ DefaultVideoHeader.args = {
     { text: "Donate", internalLink: "/new/donate" },
     { text: "Volunteer", internalLink: "/new/volunteer" },
   ],
-  playButtonLink: "https://www.youtube.com/watch?v=2aLyGwaRufY&t=2s",
+  playButtonLink: "https://www.youtube.com/watch?v=2aLyGwaRufY",
 };

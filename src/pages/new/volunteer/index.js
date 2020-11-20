@@ -7,12 +7,12 @@ import whiteboard from "../../../components/grid-aware/ImageHeader/stories/white
 import Spacer from "../../../components/grid-aware/Spacer";
 import StatsBlock from "../../../components/grid-aware/StatsBlock";
 import ThreeParagraphBlock from "../../../components/grid-aware/ThreeParagraphBlock";
-import teamActivityImage from "../../../components/grid-aware/ThreeParagraphBlock/stories/image4.png";
-import pairProgrammingImage from "../../../components/grid-aware/ThreeParagraphBlock/stories/image5.png";
-import teamSnackingImage from "../../../components/grid-aware/ThreeParagraphBlock/stories/image6.png";
 import TwoParagraphBlock from "../../../components/grid-aware/TwoParagraphBlock";
 import volunteers from "../../../components/grid-aware/TwoParagraphBlock/stories/volunteers.png";
 import Layout from "../../../components/layout";
+import teamActivityImage from "./image4.png";
+import pairProgrammingImage from "./image5.png";
+import teamSnackingImage from "./image6.png";
 
 export default () => (
   <Layout>
@@ -79,16 +79,16 @@ export default () => (
           "To better understand the specific experiences people have endured with housing insecurity, our research team works alongside Community Representatives to better understand how best to serve these challenges.",
       }}
       leftTopImage={{
-        url: pairProgrammingImage,
-        alt: "Multiple volunteers working at a datathon.",
+        url: teamSnackingImage,
+        alt: "Team smiling into camera while snacking on food.",
       }}
       leftBottomImage={{
         url: teamActivityImage,
-        alt: "Team posing for a photo after a design workshop.",
+        alt: "Team bonding activity night.",
       }}
       rightImage={{
-        url: teamSnackingImage,
-        alt: "Multiple volunteers working at a datathon.",
+        url: pairProgrammingImage,
+        alt: "Two volunteers pair programming.",
       }}
       ctaTitle="We know that digital equity can be achieved with people like you."
       ctaButtons={[{ text: "Apply", internalLink: "/bar" }]}

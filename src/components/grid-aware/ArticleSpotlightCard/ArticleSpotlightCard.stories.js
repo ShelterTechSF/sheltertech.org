@@ -30,7 +30,6 @@ Default.args = {
   title: "Digital Equity Team of San Francisco",
   description:
     "Free Fiber Initiative summary we're working together to find new and different ways of building lasting infrastructure.",
-  text: "Read More",
   button: { text: "Read More", internalLink: "/foo" },
   backgroundImage: background,
 };

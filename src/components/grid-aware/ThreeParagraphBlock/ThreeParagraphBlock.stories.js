@@ -38,7 +38,6 @@ const Template = ({
         description: paragraph3Description,
         button: { text: "Donate", internalLink: "/fooBar" },
       }}
-      leftTopImage={{}}
       leftBottomImage={{
         url: leftBottomImage,
         alt: "Team posing for a photo after a design workshop.",

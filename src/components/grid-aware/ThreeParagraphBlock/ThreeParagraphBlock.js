@@ -34,11 +34,11 @@ const ImagePropType = PropTypes.shape({
 /* Subcomponents */
 
 const ParagraphBlock = ({ title, description, button }) => {
-  let hasButton;
+  let buttonWrapper;
 
   if (button) {
-    hasButton = (
-      <div className={s.ctaButton}>
+    buttonWrapper = (
+      <div className={s.paragraphCTAButton}>
         <Button
           text={button.text}
           internalLink={button.internalLink}
@@ -53,7 +53,7 @@ const ParagraphBlock = ({ title, description, button }) => {
     <div>
       <div className={s.paragraphTitle}>{title}</div>
       <div className={s.paragraphDescription}>{description}</div>
-      {hasButton}
+      {buttonWrapper}
     </div>
   );
 };
@@ -115,9 +115,9 @@ const ThreeParagraphBlock = ({
       </div>
     );
 
-    leftBottomImageWrapperClassName += ` ${s.v1}`;
+    leftBottomImageWrapperClassName += ` ${s.solo}`;
   } else {
-    leftBottomImageWrapperClassName += ` ${s.v2}`;
+    leftBottomImageWrapperClassName += ` ${s.paired}`;
   }
 
   const GridAreaLeft = () => (
@@ -168,28 +168,27 @@ const ThreeParagraphBlock = ({
     </div>
   );
 
-  let GridAreaBottom;
-  let gridParentClassName = s.gridParent;
+  const GridAreaBottom = () => {
+    if (!ctaTitle || !ctaButtons) {
+      return null;
+    }
 
-  if (ctaTitle && ctaButtons) {
-    GridAreaBottom = (
+    return (
       <div className={s.gridAreaBottom}>
         <CTABlock title={ctaTitle} buttons={ctaButtons} />
       </div>
     );
-
-    gridParentClassName += ` ${s.v2}`;
-  }
+  };
 
   return (
     <div className={s.bleedWrapper}>
       <div className={s.bleedBackground} />
       <div className={s.bleedMainContent}>
-        <section className={gridParentClassName}>
+        <section className={s.gridParent}>
           <GridAreaLeft />
           <GridAreaMiddle />
           <GridAreaRight />
-          {GridAreaBottom}
+          <GridAreaBottom />
         </section>
       </div>
     </div>

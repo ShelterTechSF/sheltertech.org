@@ -30,6 +30,7 @@
   grid-template-rows: auto 0;
   margin: auto;
   max-width: var(--grid-bleed-max-width);
+  overflow-x: hidden;
 }
 
 .bleedBackground {
@@ -62,13 +63,8 @@
   column-gap: var(--grid-column-gap);
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
-  padding: 100px 0;
-}
-
-/* Grid parent for optional ctaButtons block */
-.gridParent.v2 {
   grid-template-rows: repeat(2, auto);
-  row-gap: 50px;
+  padding: 100px 0;
 }
 
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */
@@ -80,10 +76,6 @@
   .gridParent {
     display: block;
     padding: 50px 0 80px;
-  }
-
-  .gridParent.v2 {
-    padding: 40px 0 80px;
   }
 }
 
@@ -108,6 +100,7 @@
 .gridAreaBottom {
   grid-column: 5 / span 8;
   grid-row: 2;
+  margin-top: 50px;
 }
 
 
@@ -140,12 +133,13 @@
   position: relative;
 }
 
-.leftBottomImageWrapper.v1 {
+.leftBottomImageWrapper.solo {
   margin-top: 40px;
+  overflow: hidden;
 }
 
 /* Image wrapper if rendering only one image on the left */
-.leftBottomImageWrapper.v2 {
+.leftBottomImageWrapper.paired {
   margin-top: 135px;
 }
 
@@ -205,7 +199,7 @@
   margin-top: 25px;
 }
 
-.ctaButton {
+.paragraphCTAButton {
   margin-top: 25px;
 }
 
@@ -214,7 +208,7 @@
     margin-top: 10px;
   }
 
-  .ctaButton {
+  .paragraphCTAButton {
     margin-top: 10px;
   }
 }
@@ -222,10 +216,8 @@
 
 /* Image Block */
 
-@media (--tablet-and-down) {
-  .image {
-    max-width: 100%;
-  }
+.image {
+  max-width: 100%;
 }
 
 

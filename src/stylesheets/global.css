@@ -64,9 +64,10 @@
   /* Grid */
   --grid-column-count: 12;
   --grid-column-gap: 30px;
-  --grid-bleed-max-width: 1440px;
   --grid-content-max-width: 1290px;
   --grid-content-min-width: 1024px;
+  --bleed-max-width: 1440px;
+  --bleed-grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
 }
 
 @media (--phone-and-down) {

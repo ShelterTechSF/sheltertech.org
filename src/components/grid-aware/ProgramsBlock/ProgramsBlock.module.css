@@ -2,9 +2,9 @@
 .bleedWrapper {
   background: var(--color-black);
   display: grid;
-  grid-template-columns: 1fr minmax(var(--grid-content-min-width), var(--grid-content-max-width)) 1fr;
+  grid-template-columns: var(--bleed-grid-template-columns);
   margin: auto;
-  max-width: var(--grid-bleed-max-width);
+  max-width: var(--bleed-max-width);
 }
 
 @media (--tablet-and-down) {

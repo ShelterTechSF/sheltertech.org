@@ -2,7 +2,7 @@
 
 .bleedWrapper {
   margin: auto;
-  max-width: var(--grid-bleed-max-width);
+  max-width: var(--bleed-max-width);
 }
 
 /* Top Row */

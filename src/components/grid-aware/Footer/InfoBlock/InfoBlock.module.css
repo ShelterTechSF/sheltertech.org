@@ -5,7 +5,7 @@
   color: var(--color-gray-400);
   font: var(--font-body-small);
   margin: auto;
-  max-width: var(--grid-bleed-max-width);
+  max-width: var(--bleed-max-width);
 }
 
 .organizationInfo {

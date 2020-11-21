@@ -1,10 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import {
-  ImagePropType,
-  TitleDescriptionPropType,
-} from "../../../PropTypeShapes";
+import { ImagePropType, TitleDescriptionPropType } from "../../../prop-types";
 import Button from "../../inline/Button";
 
 import s from "./ThreeParagraphBlock.module.css";
@@ -12,8 +9,7 @@ import s from "./ThreeParagraphBlock.module.css";
 /* PropType shapes */
 
 const ParagraphPropType = PropTypes.shape({
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  ...TitleDescriptionPropType,
   button: PropTypes.oneOfType([
     PropTypes.exact({
       text: PropTypes.string,
@@ -28,11 +24,6 @@ const ParagraphPropType = PropTypes.shape({
       onClick: PropTypes.func,
     }),
   ]),
-});
-
-const ImagePropType = PropTypes.shape({
-  url: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
 });
 
 /* Subcomponents */
@@ -63,8 +54,7 @@ const ParagraphBlock = ({ title, description, button }) => {
 };
 
 ParagraphBlock.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  ...TitleDescriptionPropType,
   button: PropTypes.shape(Button.propTypes),
 };
 
@@ -204,14 +194,14 @@ ThreeParagraphBlock.propTypes = {
   paragraph1: ParagraphPropType.isRequired,
   paragraph2: ParagraphPropType.isRequired,
   paragraph3: ParagraphPropType.isRequired,
-  leftBottomImage: ImagePropType.isRequired,
-  rightImage: ImagePropType.isRequired,
+  leftBottomImage: PropTypes.shape(ImagePropType).isRequired,
+  rightImage: PropTypes.shape(ImagePropType).isRequired,
   leftTopImage: PropTypes.shape({
     url: PropTypes.string,
     alt: PropTypes.string,
   }),
   ctaTitle: PropTypes.string,
-  ctaButtons: PropTypes.arrayOf(Button.propTypes),
+  ctaButtons: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)),
 };
 
 ThreeParagraphBlock.defaultProps = {

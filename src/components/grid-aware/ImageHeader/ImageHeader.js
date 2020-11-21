@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { ImagePropType } from "../../../PropTypeShapes";
+import { ImagePropType } from "../../../prop-types";
 import Button from "../../inline/Button";
 
 import s from "./ImageHeader.module.css";
@@ -59,8 +59,8 @@ ImageHeader.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image1: ImagePropType.isRequired,
-  image2: ImagePropType.isRequired,
+  image1: PropTypes.shape(ImagePropType).isRequired,
+  image2: PropTypes.shape(ImagePropType).isRequired,
   ctaButtons: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)).isRequired,
 };
 

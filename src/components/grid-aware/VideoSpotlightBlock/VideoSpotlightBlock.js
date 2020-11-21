@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { ImagePropType } from "../../../PropTypeShapes";
+import { ImagePropType } from "../../../prop-types";
 import Button from "../../inline/Button";
 import playIcon from "./PlayIcon.svg";
 
@@ -71,7 +71,7 @@ VideoSpotlightBlock.propTypes = {
   eyebrowText: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   button: PropTypes.shape(Button.propTypes).isRequired,
-  image: ImagePropType.isRequired,
+  image: PropTypes.shape(ImagePropType).isRequired,
   playButtonLink: PropTypes.string.isRequired,
   blackBackground: PropTypes.bool,
 };

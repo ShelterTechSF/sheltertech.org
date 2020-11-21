@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { ImagePropType } from "../../../PropTypeShapes";
+import { ImagePropType } from "../../../prop-types";
 import Button from "../../inline/Button";
 
 import s from "./TwoParagraphBlock.module.css";
@@ -72,7 +72,7 @@ TwoParagraphBlock.propTypes = {
   title: PropTypes.string.isRequired,
   paragraph1: PropTypes.string.isRequired,
   paragraph2: PropTypes.node.isRequired,
-  image: ImagePropType.isRequired,
+  image: PropTypes.shape(ImagePropType).isRequired,
   ctaButtons: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)).isRequired,
 };
 

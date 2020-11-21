@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { ImagePropType } from "../../../PropTypeShapes";
+import { ImagePropType } from "../../../prop-types";
 
 import s from "./PartnersAndSponsorsBlock.module.css";
 
@@ -36,7 +36,8 @@ const PartnersAndSponsorsBlock = ({ title, partnersAndSponsors }) => {
 
 PartnersAndSponsorsBlock.propTypes = {
   title: PropTypes.string.isRequired,
-  partnersAndSponsors: PropTypes.arrayOf(ImagePropType).isRequired,
+  partnersAndSponsors: PropTypes.arrayOf(PropTypes.shape(ImagePropType))
+    .isRequired,
 };
 
 export default PartnersAndSponsorsBlock;

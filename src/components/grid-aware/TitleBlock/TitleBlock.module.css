@@ -7,11 +7,14 @@
   padding-top: 120px;
 }
 
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.bleedWrapper > * {
+  min-width: 0;
+}
+
 .bleedMainContent {
   grid-column: 2;
   grid-row: 1;
-  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
-  min-width: 0;
 }
 @media (--tablet-and-down) {
   .bleedWrapper {

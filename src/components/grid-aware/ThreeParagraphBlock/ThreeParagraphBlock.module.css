@@ -33,6 +33,11 @@
   overflow-x: hidden;
 }
 
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.bleedWrapper > * {
+  min-width: 0;
+}
+
 .bleedBackground {
   background: var(--color-gray-300);
   grid-column: 1 / span 2;
@@ -42,8 +47,6 @@
 .bleedMainContent {
   grid-column: 2;
   grid-row: 1;
-  /* Override grid item default of auto so that item contents cannot stretch the grid itself */
-  min-width: 0;
 }
 
 @media (--tablet-and-down) {

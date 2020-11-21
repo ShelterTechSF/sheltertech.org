@@ -5,6 +5,11 @@
   max-width: var(--bleed-max-width);
 }
 
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.bleedWrapper > * {
+  min-width: 0;
+}
+
 .bleedMainContent {
   background: var(--color-gray-300);
   grid-column: 2;

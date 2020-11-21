@@ -8,6 +8,11 @@
   max-width: var(--bleed-max-width);
 }
 
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.bleedWrapper > * {
+  min-width: 0;
+}
+
 .organizationInfo {
   display: flex;
   justify-content: space-between;

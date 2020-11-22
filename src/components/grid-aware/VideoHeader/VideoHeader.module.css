@@ -125,6 +125,13 @@
   }
 }
 
+.playButton {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
 /* PlayIcon svg */
 .playIcon {
   height: 45px;

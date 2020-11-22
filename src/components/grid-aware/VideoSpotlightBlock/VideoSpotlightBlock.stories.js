@@ -13,7 +13,6 @@ const Template = ({
   description,
   button,
   imageURL,
-  playButtonLink,
   blackBackground,
 }) => (
   <VideoSpotlightBlock
@@ -21,7 +20,7 @@ const Template = ({
     description={description}
     button={button}
     imageURL={imageURL}
-    playButtonLink={playButtonLink}
+    playButtonOnClick={() => {}}
     blackBackground={blackBackground}
   />
 );
@@ -33,7 +32,6 @@ VideoSpotlightBlockDefault.args = {
     "Over 3,000 people have daily internet access in local shelters and resource centers.",
   button: { text: "View Annual Report", internalLink: "/foo" },
   imageURL: videoSpotlightBlockImage,
-  playButtonLink: "/foo",
 };
 
 export const VideoSpotlightBlockBlackBackground = Template.bind({});

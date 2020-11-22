@@ -41,16 +41,19 @@
 }
 
 /* Relating to .bleedImage */
-.playButton {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.bleedImage {
+  align-items: center;
+  background: center / contain no-repeat var(--background-image);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 }
 
 @media (--laptop-and-up) {
-  .bleedImage {
-    position: absolute;
+  .bleedImageWrapper {
+    height: 505px;
+    width: 900px;
   }
 
   .playIcon {
@@ -60,13 +63,19 @@
 }
 
 @media (--tablet-and-down) {
-  .bleedImage {
+  /* Use a trick with bottom padding to allow for responsive elements that
+   * preserve  aspect ratio.
+   *
+   * https://fettblog.eu/blog/2013/06/16/preserving-aspect-ratio-for-embedded-iframes/
+   */
+  .bleedImageWrapper {
+    max-width: 100%;
+    padding-bottom: 56.25%; /* 9/16 for a 16:9 aspect ratio */
     position: relative;
   }
 
-  .image {
-    display: block;
-    max-width: 100%;
+  .bleedImage {
+    position: absolute;
   }
 }
 
@@ -99,7 +108,6 @@
 @media (--laptop-and-up) {
   .gridAreaCard {
     grid-column: 8 / span 5;
-    z-index: 1;
   }
 
   .textCardWrapper {

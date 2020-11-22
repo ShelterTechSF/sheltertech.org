@@ -4,13 +4,6 @@ import Button from "../../inline/Button";
 import playIcon from "./PlayIcon.svg";
 import s from "./VideoSpotlightBlock.module.css";
 
-/* PropType shapes */
-
-const ImagePropType = PropTypes.shape({
-  url: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-});
-
 const TextCard = ({ eyebrowText, description, button }) => (
   <div className={s.textCard}>
     <div className={s.eyebrowText}>{eyebrowText}</div>
@@ -36,7 +29,7 @@ const VideoSpotlightBlock = ({
   eyebrowText,
   description,
   button,
-  image,
+  imageURL,
   playButtonLink,
   blackBackground,
 }) => {
@@ -46,13 +39,17 @@ const VideoSpotlightBlock = ({
 
   return (
     <div className={bleedBackgroundWrapper}>
-      <div className={s.bleedImage}>
-        <div className={s.playButton}>
-          <a rel="noreferrer" href={playButtonLink} target="_blank">
-            <img className={s.playIcon} src={playIcon} alt="Play Video" />
-          </a>
+      <div className={s.bleedImageWrapper}>
+        <div
+          className={s.bleedImage}
+          style={{ "--background-image": `url(${imageURL})` }}
+        >
+          <div className={s.playButton}>
+            <a rel="noreferrer" href={playButtonLink} target="_blank">
+              <img className={s.playIcon} src={playIcon} alt="Play Video" />
+            </a>
+          </div>
         </div>
-        <img className={s.image} src={image.url} alt={image.alt} />
       </div>
       <div className={s.bleedMainContent}>
         <div className={s.gridParent}>
@@ -75,7 +72,7 @@ VideoSpotlightBlock.propTypes = {
   eyebrowText: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   button: PropTypes.shape(Button.propTypes).isRequired,
-  image: ImagePropType.isRequired,
+  imageURL: PropTypes.string.isRequired,
   playButtonLink: PropTypes.string.isRequired,
   blackBackground: PropTypes.bool,
 };

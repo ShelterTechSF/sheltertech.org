@@ -130,10 +130,7 @@ export default () => {
         eyebrowText="Our Impact"
         description="Over 3,000 people have daily internet access in local shelters and resource centers."
         button={{ text: "View Annual Report", externalLink: annualReportPDF }}
-        image={{
-          url: videoSpotlightBlockImage,
-          alt: "Video spotlight of Aaron speaking.",
-        }}
+        imageURL={videoSpotlightBlockImage}
         playButtonLink="https://www.youtube.com/watch?v=2aLyGwaRufY"
         blackBackground
       />

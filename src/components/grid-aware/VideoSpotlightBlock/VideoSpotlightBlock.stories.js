@@ -12,7 +12,7 @@ const Template = ({
   eyebrowText,
   description,
   button,
-  image,
+  imageURL,
   playButtonLink,
   blackBackground,
 }) => (
@@ -20,7 +20,7 @@ const Template = ({
     eyebrowText={eyebrowText}
     description={description}
     button={button}
-    image={image}
+    imageURL={imageURL}
     playButtonLink={playButtonLink}
     blackBackground={blackBackground}
   />
@@ -32,10 +32,7 @@ VideoSpotlightBlockDefault.args = {
   description:
     "Over 3,000 people have daily internet access in local shelters and resource centers.",
   button: { text: "View Annual Report", internalLink: "/foo" },
-  image: {
-    url: videoSpotlightBlockImage,
-    alt: "Video spotlight of Aaron speaking.",
-  },
+  imageURL: videoSpotlightBlockImage,
   playButtonLink: "/foo",
 };
 
@@ -45,10 +42,7 @@ VideoSpotlightBlockBlackBackground.args = {
   description:
     "Over 3,000 people have daily internet access in local shelters and resource centers.",
   button: { text: "View Annual Report", internalLink: "/foo" },
-  image: {
-    url: videoSpotlightBlockImage,
-    alt: "Video spotlight of Aaron speaking.",
-  },
+  imageURL: videoSpotlightBlockImage,
   playButtonLink: "/foo",
   blackBackground: true,
 };

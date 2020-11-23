@@ -74,6 +74,18 @@
   margin-top: 5px;
 }
 
+.mainTitleImage {
+  height: auto;
+  margin-bottom: 0;
+  margin-top: 5px;
+  max-width: 100%;
+}
+
+.givingTuesdayParagraph {
+  font: var(--font-body-medium);
+  margin-top: 40px;
+}
+
 .mainDescription {
   font: var(--font-subtitle);
   margin-top: 15px;

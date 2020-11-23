@@ -22,50 +22,96 @@ const LGLForm = () => (
 
 const DonationBlock = ({
   mainTitle,
+  givingTuesdayImage,
+  givingTuesdayParagraph,
   mainDescription,
   whyDonateTitle,
   whyDonateList,
   impactTitle,
   impactList,
-}) => (
-  <div className={s.bleedWrapper}>
-    <div className={s.gridParent}>
-      <div className={s.gridAreaHeadline}>
-        <h1 className={s.mainTitle}>{mainTitle}</h1>
-        <div className={s.mainDescription}>{mainDescription}</div>
-      </div>
-      <div className={s.gridAreaForm}>
-        <LGLForm />
-      </div>
-      <div className={s.gridAreaDescription}>
-        <h2 className={s.whyDonateTitle}>{whyDonateTitle}</h2>
-        <ul className={s.list}>
-          {whyDonateList.map((reason) => (
-            <li className={s.listItem} key={reason}>
-              {reason}
-            </li>
-          ))}
-        </ul>
-        <h2 className={s.impactTitle}>{impactTitle}</h2>
-        <ul className={s.list}>
-          {impactList.map((reason) => (
-            <li className={s.listItem} key={reason}>
-              {reason}
-            </li>
-          ))}
-        </ul>
+}) => {
+  let title;
+
+  if (mainTitle && !givingTuesdayImage) {
+    title = <h1 className={s.mainTitle}>{mainTitle}</h1>;
+  } else if (givingTuesdayImage && !mainTitle) {
+    title = (
+      <img
+        className={s.mainTitleImage}
+        src={givingTuesdayImage.url}
+        alt={givingTuesdayImage.alt}
+      />
+    );
+  } else {
+    throw Error("Please specify only a mainTitle or mainTitleImage prop.");
+  }
+
+  return (
+    <div className={s.bleedWrapper}>
+      <div className={s.gridParent}>
+        <div className={s.gridAreaHeadline}>
+          {title}
+          <div className={s.mainDescription}>{mainDescription}</div>
+          {givingTuesdayParagraph &&
+            givingTuesdayParagraph.map((paragraph, index) => (
+              <div
+                className={s.givingTuesdayParagraph}
+                key={`${paragraph + index}`}
+              >
+                {paragraph}
+              </div>
+            ))}
+        </div>
+        <div className={s.gridAreaForm}>
+          <LGLForm />
+        </div>
+        {mainTitle && (
+          <div className={s.gridAreaDescription}>
+            <h2 className={s.whyDonateTitle}>{whyDonateTitle}</h2>
+            <ul className={s.list}>
+              {whyDonateList.map((reason) => (
+                <li className={s.listItem} key={reason}>
+                  {reason}
+                </li>
+              ))}
+            </ul>
+            <h2 className={s.impactTitle}>{impactTitle}</h2>
+            <ul className={s.list}>
+              {impactList.map((reason) => (
+                <li className={s.listItem} key={reason}>
+                  {reason}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 DonationBlock.propTypes = {
-  mainTitle: PropTypes.string.isRequired,
+  mainTitle: PropTypes.string,
+  givingTuesdayImage: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+  }),
+  givingTuesdayParagraph: PropTypes.arrayOf(PropTypes.node),
   mainDescription: PropTypes.string.isRequired,
-  whyDonateTitle: PropTypes.string.isRequired,
-  whyDonateList: PropTypes.arrayOf(PropTypes.string).isRequired,
-  impactTitle: PropTypes.string.isRequired,
-  impactList: PropTypes.arrayOf(PropTypes.string).isRequired,
+  whyDonateTitle: PropTypes.string,
+  whyDonateList: PropTypes.arrayOf(PropTypes.string),
+  impactTitle: PropTypes.string,
+  impactList: PropTypes.arrayOf(PropTypes.string),
+};
+
+DonationBlock.defaultProps = {
+  mainTitle: null,
+  givingTuesdayImage: null,
+  givingTuesdayParagraph: null,
+  whyDonateTitle: null,
+  whyDonateList: null,
+  impactTitle: null,
+  impactList: null,
 };
 
 export default DonationBlock;

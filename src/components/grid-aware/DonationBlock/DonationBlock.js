@@ -43,7 +43,7 @@ const DonationBlock = ({
       />
     );
   } else {
-    throw Error("Please specify only a mainTitle or mainTitleImage prop.");
+    throw Error("Please specify only a mainTitle or givingTuesdayImage prop.");
   }
 
   return (

@@ -148,7 +148,7 @@ export default () => {
             quote:
               "Wi-fi has been a top request among young people here at Larkin Street. Now that we have it with ShelterTech we are seeing more young people come in and stay around and get the things they need so that they can move past homelessness, permanently.",
             attribution:
-              "Veronica Pastore, Director of Communications, Larkin Street Youth Services",
+              "Gayle Roberts, Chief Development Officer, Larkin Street Youth Services",
           },
           {
             quote:

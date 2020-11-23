@@ -40,7 +40,7 @@ DefaultOneParagraphBlock.args = {
         ShelterConnect installations that provide free wifi and hardware for
         local housing shelters.
       </p>
-      <h2>Fundraising & Partnerships</h2>
+      <h2>Software Development</h2>
       <p>
         To create user-friendly websites, we need front- and back-end developers
         and dev ops professionals who know React or Ruby on Rails.

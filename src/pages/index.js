@@ -28,7 +28,7 @@ import VideoSpotlightBlock from "../components/grid-aware/VideoSpotlightBlock";
 import videoSpotlightBlockImage from "../components/grid-aware/VideoSpotlightBlock/stories/VideoSpotlightBlock.png";
 import Layout from "../components/layout";
 import PartnershipSignupForm from "../components/thirdparty/mailchimp/PartnershipSignupForm";
-import annualReportPDF from "./ShelterTech-Annual-Report-2018.pdf";
+import annualReportPDF from "./ShelterTech-Annual-Report-2019-Q1.pdf";
 import articleSpotlightImage from "./mission-hotel.jpeg";
 
 export default () => {

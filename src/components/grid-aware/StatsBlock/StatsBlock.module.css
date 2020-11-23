@@ -73,8 +73,13 @@
 }
 
 .statCard {
+  flex: 1 1 0;
   margin-right: 110px;
   width: 250px;
+}
+
+.statCard:last-child {
+  margin-right: 0;
 }
 
 @media (--tablet-and-down) {
@@ -92,6 +97,7 @@
   font-size: 72px;
   font-weight: bold;
   line-height: 1.3;
+  min-width: 100px;
 }
 
 .statement {

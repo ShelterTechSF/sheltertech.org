@@ -1,6 +1,5 @@
 import React from "react";
 import DonationBlock from "./DonationBlock";
-import image from "./stories/giving-tuesday-logo.png";
 
 export default {
   title: "Grid-Aware/DonationBlock",
@@ -9,9 +8,7 @@ export default {
 
 const Template = ({
   mainTitle,
-  mainTitleImage,
   mainDescription,
-  mobileTopParagraphs,
   whyDonateTitle,
   whyDonateList,
   impactTitle,
@@ -19,9 +16,7 @@ const Template = ({
 }) => (
   <DonationBlock
     mainTitle={mainTitle}
-    mainTitleImage={mainTitleImage}
     mainDescription={mainDescription}
-    mobileTopParagraphs={mobileTopParagraphs}
     whyDonateTitle={whyDonateTitle}
     whyDonateList={whyDonateList}
     impactTitle={impactTitle}
@@ -51,49 +46,4 @@ Default.args = {
     "$500 covers hosting an entire Datathon, which provides food for all volunteers and Community Representatives.",
     "Depending on the size, about $2,000 to $2,500 can wire an entire shelter.",
   ],
-};
-
-export const GivingTuesday = Template.bind({});
-
-GivingTuesday.args = {
-  mainTitleImage: {
-    url: image,
-    alt: "Giving Tuesday",
-  },
-  mainDescription:
-    "For 2020, ShelterTech has a $20,000 fundraising goal to cover the installation costs for WiFi for the next SF building on our list. We have already raised half of that goal, and ask your support to raise the remaining $10,000.",
-  mobileTopParagraphs: (
-    <>
-      <p>
-        On this #GivingTuesday, we ask that you reflect on how important
-        internet access is in your daily life. As we’ve shifted to a
-        socially-distanced reality dependent on WiFi, many of us have been able
-        to conduct Zoom calls to talk to our loved ones and coworkers, purchase
-        deliverable groceries and take-out, and stream our favorite shows and
-        movies. People experiencing homelessness often do not have internet
-        access, making it harder to do all of these things.
-      </p>
-      <p>
-        At ShelterTech, we believe connectivity is a right, not a privilege, and
-        through our ShelterConnect program, we have installed free WiFi at a
-        number of San Francisco-based shelters to help bridge this digital
-        divide. You can learn more about ShelterConnect by watching our video{" "}
-        <a href="https://www.youtube.com/watch?v=2aLyGwaRufY">here</a>.
-      </p>
-      <p>
-        Last year, <em>you</em> and other supporters gave contributions which
-        enabled ShelterTech to provide WiFi internet connectivity to hundreds of
-        individuals experiencing homelessness and housing insecurity in San
-        Francisco. With our partners, the City of San Francisco and Cisco,
-        providing at no cost the broadband and network equipment, respectively,
-        ShelterTech funded installation costs to costs to outfit two shelters,
-        the{" "}
-        <a href="https://medium.com/shelter-tech/the-mission-hotel-san-franciscos-largest-sro-now-provides-free-internet-to-hundreds-of-at-risk-f72761c62c2e">
-          Mission Hotel
-        </a>{" "}
-        and MSC-South, with WiFi that collectively serves 640 people on a on on
-        a daily basis.
-      </p>
-    </>
-  ),
 };

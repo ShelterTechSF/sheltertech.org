@@ -91,6 +91,11 @@
   margin-top: 40px;
 }
 
+.gridAreaHeadline em {
+  font-style: italic;
+}
+
+
 .whyDonateTitle {
   font: var(--font-subtitle);
   margin-bottom: 0;

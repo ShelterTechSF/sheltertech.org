@@ -39,14 +39,13 @@ export default () => (
             <a href="https://www.youtube.com/watch?v=2aLyGwaRufY">here</a>.
           </p>
           <p>
-            Last year, <span style={{ fontStyle: "italic" }}>you</span> and
-            other supporters gave contributions which enabled ShelterTech to
-            provide WiFi internet connectivity to hundreds of individuals
-            experiencing homelessness and housing insecurity in San Francisco.
-            With our partners, the City of San Francisco and Cisco, providing at
-            no cost the broadband and network equipment, respectively,
-            ShelterTech funded installation costs to costs to outfit two
-            shelters, the{" "}
+            Last year, <em>you</em> and other supporters gave contributions
+            which enabled ShelterTech to provide WiFi internet connectivity to
+            hundreds of individuals experiencing homelessness and housing
+            insecurity in San Francisco. With our partners, the City of San
+            Francisco and Cisco, providing at no cost the broadband and network
+            equipment, respectively, ShelterTech funded installation costs to
+            costs to outfit two shelters, the{" "}
             <a href="https://medium.com/shelter-tech/the-mission-hotel-san-franciscos-largest-sro-now-provides-free-internet-to-hundreds-of-at-risk-f72761c62c2e">
               Mission Hotel
             </a>{" "}

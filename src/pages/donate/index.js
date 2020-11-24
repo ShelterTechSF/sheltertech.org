@@ -35,21 +35,22 @@ export default () => (
             and through our ShelterConnect program, we have installed free WiFi
             at a number of San Francisco-based shelters to help bridge this
             digital divide. You can learn more about ShelterConnect by watching
-            our video&nbsp;
-            <a href="https://www.youtube.com/embed/2aLyGwaRufY">here</a>.
+            our video{" "}
+            <a href="https://www.youtube.com/watch?v=2aLyGwaRufY">here</a>.
           </p>
           <p>
-            Last year,&nbsp;<em>you</em>&nbsp; and other supporters gave
-            contributions which enabled ShelterTech to provide WiFi internet
-            connectivity to hundreds of individuals experiencing homelessness
-            and housing insecurity in San Francisco. With our partners, the City
-            of San Francisco and Cisco, providing at no cost the broadband and
-            network equipment, respectively, ShelterTech funded installation
-            costs to outfit two shelters, the &nbsp;
+            Last year, <span style={{ fontStyle: "italic" }}>you</span> and
+            other supporters gave contributions which enabled ShelterTech to
+            provide WiFi internet connectivity to hundreds of individuals
+            experiencing homelessness and housing insecurity in San Francisco.
+            With our partners, the City of San Francisco and Cisco, providing at
+            no cost the broadband and network equipment, respectively,
+            ShelterTech funded installation costs to costs to outfit two
+            shelters, the{" "}
             <a href="https://medium.com/shelter-tech/the-mission-hotel-san-franciscos-largest-sro-now-provides-free-internet-to-hundreds-of-at-risk-f72761c62c2e">
               Mission Hotel
-            </a>
-            &nbsp; and MSC-South, with WiFi that collectively serves 640 people
+            </a>{" "}
+            and MSC-South, with WiFi that collectively serves 640 people on a on
             on a daily basis.
           </p>
         </>

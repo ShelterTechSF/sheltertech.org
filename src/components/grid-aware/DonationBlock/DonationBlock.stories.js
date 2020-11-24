@@ -79,7 +79,7 @@ GivingTuesday.args = {
         number of San Francisco-based shelters to help bridge this digital
         divide. You can learn more about ShelterConnect by watching our
         video&nbsp;
-        <a href="https://www.youtube.com/embed/2aLyGwaRufY">here</a>.
+        <a href="https://www.youtube.com/watch?v=2aLyGwaRufY">here</a>.
       </p>
       <p>
         Last year,&nbsp;<em>you</em>&nbsp; and other supporters gave

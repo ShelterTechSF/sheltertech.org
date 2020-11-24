@@ -11,7 +11,7 @@ const rawLGLForm = {
   // - Scrolling has been enabled, since in a worst-case situation, we don't
   //   want the submit button to be cut off and unable to be scrolled to.
   __html: `
-<iframe onload="window.parent.scrollTo(0,0)" height="1040" allowTransparency="true" frameborder="0" scrolling="yes" style="width:100%;border:none"  src="https://secure.lglforms.com/form_engine/s/0wDrXsUXwzxrT32_RHQGrw"><a href="https://secure.lglforms.com/form_engine/s/0wDrXsUXwzxrT32_RHQGrw">Fill out my LGL Form!</a></iframe>
+<iframe onload="window.parent.scrollTo(0,0)" height="1053" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://secure.lglforms.com/form_engine/s/0wDrXsUXwzxrT32_RHQGrw"><a href="https://secure.lglforms.com/form_engine/s/0wDrXsUXwzxrT32_RHQGrw">Fill out my LGL Form!</a></iframe>
 `,
 };
 
@@ -22,9 +22,9 @@ const LGLForm = () => (
 
 const DonationBlock = ({
   mainTitle,
-  givingTuesdayImage,
-  givingTuesdayParagraph,
+  mainTitleImage,
   mainDescription,
+  mobileTopParagraphs,
   whyDonateTitle,
   whyDonateList,
   impactTitle,
@@ -32,18 +32,18 @@ const DonationBlock = ({
 }) => {
   let title;
 
-  if (mainTitle && !givingTuesdayImage) {
+  if (mainTitle && !mainTitleImage) {
     title = <h1 className={s.mainTitle}>{mainTitle}</h1>;
-  } else if (givingTuesdayImage && !mainTitle) {
+  } else if (mainTitleImage && !mainTitle) {
     title = (
       <img
         className={s.mainTitleImage}
-        src={givingTuesdayImage.url}
-        alt={givingTuesdayImage.alt}
+        src={mainTitleImage.url}
+        alt={mainTitleImage.alt}
       />
     );
   } else {
-    throw Error("Please specify only a mainTitle or givingTuesdayImage prop.");
+    throw Error("Please specify only a mainTitle or mainTitleImage prop.");
   }
 
   return (
@@ -52,15 +52,7 @@ const DonationBlock = ({
         <div className={s.gridAreaHeadline}>
           {title}
           <div className={s.mainDescription}>{mainDescription}</div>
-          {givingTuesdayParagraph &&
-            givingTuesdayParagraph.map((paragraph, index) => (
-              <div
-                className={s.givingTuesdayParagraph}
-                key={`${paragraph + index}`}
-              >
-                {paragraph}
-              </div>
-            ))}
+          {mobileTopParagraphs}
         </div>
         <div className={s.gridAreaForm}>
           <LGLForm />
@@ -92,11 +84,11 @@ const DonationBlock = ({
 
 DonationBlock.propTypes = {
   mainTitle: PropTypes.string,
-  givingTuesdayImage: PropTypes.shape({
+  mainTitleImage: PropTypes.shape({
     url: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
   }),
-  givingTuesdayParagraph: PropTypes.arrayOf(PropTypes.node),
+  mobileTopParagraphs: PropTypes.node,
   mainDescription: PropTypes.string.isRequired,
   whyDonateTitle: PropTypes.string,
   whyDonateList: PropTypes.arrayOf(PropTypes.string),
@@ -106,8 +98,8 @@ DonationBlock.propTypes = {
 
 DonationBlock.defaultProps = {
   mainTitle: null,
-  givingTuesdayImage: null,
-  givingTuesdayParagraph: null,
+  mainTitleImage: null,
+  mobileTopParagraphs: null,
   whyDonateTitle: null,
   whyDonateList: null,
   impactTitle: null,

@@ -30,7 +30,7 @@
 }
 
 .gridAreaHeadline {
-  grid-column: 1 / span 6;
+  grid-column: 1 / span 5;
   grid-row: 1;
 }
 
@@ -76,19 +76,19 @@
 
 .mainTitleImage {
   height: auto;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   margin-top: 5px;
   max-width: 100%;
-}
-
-.givingTuesdayParagraph {
-  font: var(--font-body-medium);
-  margin-top: 40px;
 }
 
 .mainDescription {
   font: var(--font-subtitle);
   margin-top: 15px;
+}
+
+.gridAreaHeadline p {
+  font: var(--font-body-medium);
+  margin-top: 40px;
 }
 
 .whyDonateTitle {
@@ -130,6 +130,10 @@
 @media (--tablet-and-down) {
   .mainTitle {
     margin-top: 0;
+  }
+
+  .gridAreaHeadline p {
+    margin-top: 15px;
   }
 
   .impactTitle {

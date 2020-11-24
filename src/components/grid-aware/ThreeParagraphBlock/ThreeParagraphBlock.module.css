@@ -133,6 +133,7 @@
 
 .leftBottomImageWrapper {
   left: 30px;
+  margin-right: 60px; /* Ensure minimum spacing from the middle grid area. */
   position: relative;
 }
 

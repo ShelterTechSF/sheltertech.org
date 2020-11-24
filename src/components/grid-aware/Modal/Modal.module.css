@@ -9,15 +9,18 @@
 }
 
 .content {
-  background: var(--color-white);
-  border-radius: 16px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   margin: 80px auto 40px;
   max-width: 850px;
   outline: none;
-  padding: 50px;
   position: relative;
+}
+
+.content.withBezel {
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 50px;
 }
 
 .closeButton {
@@ -31,10 +34,17 @@
   top: 30px;
 }
 
+.closeButton.noBezel {
+  display: none;
+}
+
 @media (--tablet-and-down) {
   .content {
     margin-left: 20px;
     margin-right: 20px;
+  }
+
+  .content.withBezel {
     padding: 35px 25px;
   }
 

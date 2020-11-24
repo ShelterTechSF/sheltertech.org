@@ -30,7 +30,7 @@ const VideoSpotlightBlock = ({
   description,
   button,
   imageURL,
-  playButtonLink,
+  playButtonOnClick,
   blackBackground,
 }) => {
   const bleedBackgroundWrapper = `${s.bleedWrapper} ${
@@ -44,11 +44,13 @@ const VideoSpotlightBlock = ({
           className={s.bleedImage}
           style={{ "--background-image": `url(${imageURL})` }}
         >
-          <div className={s.playButton}>
-            <a rel="noreferrer" href={playButtonLink} target="_blank">
-              <img className={s.playIcon} src={playIcon} alt="Play Video" />
-            </a>
-          </div>
+          <button
+            className={s.playButton}
+            onClick={playButtonOnClick}
+            type="button"
+          >
+            <img className={s.playIcon} src={playIcon} alt="Play Video" />
+          </button>
         </div>
       </div>
       <div className={s.bleedMainContent}>
@@ -73,7 +75,7 @@ VideoSpotlightBlock.propTypes = {
   description: PropTypes.string.isRequired,
   button: PropTypes.shape(Button.propTypes).isRequired,
   imageURL: PropTypes.string.isRequired,
-  playButtonLink: PropTypes.string.isRequired,
+  playButtonOnClick: PropTypes.func.isRequired,
   blackBackground: PropTypes.bool,
 };
 

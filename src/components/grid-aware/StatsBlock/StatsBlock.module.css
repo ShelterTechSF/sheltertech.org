@@ -73,8 +73,13 @@
 }
 
 .statCard {
+  flex: 1 1 0;
   margin-right: 110px;
   width: 250px;
+}
+
+.statCard:last-child {
+  margin-right: 0;
 }
 
 @media (--tablet-and-down) {
@@ -105,4 +110,3 @@
     line-height: 1.3;
   }
 }
-

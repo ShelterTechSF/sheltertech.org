@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import YouTubeEmbed from "../components/block/YouTubeEmbed";
 import ArticleSpotlightCard from "../components/grid-aware/ArticleSpotlightCard";
 import BlockQuoteBlock from "../components/grid-aware/BlockQuoteBlock/BlockQuoteBlock";
 import HomePageLargeParagraph from "../components/grid-aware/HomePageLargeParagraph";
@@ -33,6 +34,7 @@ import articleSpotlightImage from "./mission-hotel.jpeg";
 
 export default () => {
   const [partnershipFormIsOpen, setPartnershipFormIsOpen] = useState(false);
+  const [videoHeaderModalIsOpen, setVideoHeaderModalIsOpen] = useState(false);
   return (
     <Layout>
       <Modal
@@ -42,6 +44,17 @@ export default () => {
       >
         <PartnershipSignupForm />
       </Modal>
+      <Modal
+        isOpen={videoHeaderModalIsOpen}
+        setIsOpen={setVideoHeaderModalIsOpen}
+        contentLabel="Video"
+        noBezel
+      >
+        <YouTubeEmbed
+          url="https://www.youtube.com/embed/2aLyGwaRufY"
+          title="Why Internet - Learn about the digital divide and how you can help"
+        />
+      </Modal>
       <VideoHeader
         title="Less than half of nearly 28,000 people experiencing homelessness in the Bay Area have reliable access to the internet."
         description="ShelterTech is a technology-focused nonprofit organization making it easier for this community to connect with  resources that can help them address their challenges."
@@ -50,7 +63,7 @@ export default () => {
           { text: "Donate", internalLink: "/donate" },
           { text: "Volunteer", internalLink: "/volunteer" },
         ]}
-        playButtonLink="https://www.youtube.com/watch?v=2aLyGwaRufY"
+        playButtonOnClick={() => setVideoHeaderModalIsOpen(true)}
       />
       <HomePageLargeParagraph
         title="We believe connectivity is a human right."
@@ -131,7 +144,7 @@ export default () => {
         description="Over 1,600 people have daily internet access in local shelters and resource centers."
         button={{ text: "View Annual Report", externalLink: annualReportPDF }}
         imageURL={videoSpotlightBlockImage}
-        playButtonLink="https://www.youtube.com/watch?v=2aLyGwaRufY"
+        playButtonOnClick={() => setVideoHeaderModalIsOpen(true)}
         blackBackground
       />
       <Spacer heightDesktop="42px" heightMobile="0" />
@@ -148,7 +161,7 @@ export default () => {
             quote:
               "Wi-fi has been a top request among young people here at Larkin Street. Now that we have it with ShelterTech we are seeing more young people come in and stay around and get the things they need so that they can move past homelessness, permanently.",
             attribution:
-              "Veronica Pastore, Director of Communications, Larkin Street Youth Services",
+              "Gayle Roberts, Chief Development Officer, Larkin Street Youth Services",
           },
           {
             quote:

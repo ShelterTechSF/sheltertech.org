@@ -37,14 +37,14 @@ VideoHeaderText.propTypes = {
   description: PropTypes.string.isRequired,
 };
 
-const PlayButton = ({ link }) => (
-  <a rel="noreferrer" href={link} target="_blank">
+const PlayButton = ({ onClick }) => (
+  <button className={s.playButton} type="button" onClick={onClick}>
     <img className={s.playIcon} src={playIcon} alt="Play Video" />
-  </a>
+  </button>
 );
 
 PlayButton.propTypes = {
-  link: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 /* Main component */
@@ -52,7 +52,7 @@ PlayButton.propTypes = {
 const VideoHeader = ({
   ctaButtons,
   image,
-  playButtonLink,
+  playButtonOnClick,
   title,
   description,
 }) => {
@@ -67,7 +67,7 @@ const VideoHeader = ({
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
           <div className={s.gridPlayButtonArea}>
-            <PlayButton link={playButtonLink} />
+            <PlayButton onClick={playButtonOnClick} />
           </div>
           <div className={s.gridTextArea}>
             <VideoHeaderText title={title} description={description} />
@@ -82,7 +82,7 @@ const VideoHeader = ({
 VideoHeader.propTypes = {
   ctaButtons: PropTypes.arrayOf(Button.propTypes).isRequired,
   image: PropTypes.string.isRequired,
-  playButtonLink: PropTypes.string.isRequired,
+  playButtonOnClick: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };

@@ -8,13 +8,13 @@ export default {
   component: VideoHeader,
 };
 
-const Template = ({ title, description, ctaButtons, playButtonLink }) => (
+const Template = ({ title, description, ctaButtons }) => (
   <VideoHeader
     title={title}
     description={description}
     image={videoHeaderImage}
     ctaButtons={ctaButtons}
-    playButtonLink={playButtonLink}
+    playButtonOnClick={() => {}}
   />
 );
 
@@ -28,5 +28,4 @@ DefaultVideoHeader.args = {
     { text: "Donate", internalLink: "/new/donate" },
     { text: "Volunteer", internalLink: "/new/volunteer" },
   ],
-  playButtonLink: "https://www.youtube.com/watch?v=2aLyGwaRufY",
 };

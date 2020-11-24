@@ -55,7 +55,7 @@ export default () => {
         noBezel
       >
         <YouTubeEmbed
-          url="https://www.youtube.com/watch?v=V1u2l_8C75k"
+          url="https://www.youtube.com/embed/V1u2l_8C75k"
           title="Accelerating digital inclusion for people experiencing homelessness"
         />
       </Modal>
@@ -66,7 +66,7 @@ export default () => {
         noBezel
       >
         <YouTubeEmbed
-          url="https://www.youtube.com/watch?v=AUAGqr8Uf_o"
+          url="https://www.youtube.com/embed/AUAGqr8Uf_o"
           title="ShelterTech in 2020"
         />
       </Modal>

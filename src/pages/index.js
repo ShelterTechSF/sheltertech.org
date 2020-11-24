@@ -35,6 +35,7 @@ import articleSpotlightImage from "./mission-hotel.jpeg";
 export default () => {
   const [partnershipFormIsOpen, setPartnershipFormIsOpen] = useState(false);
   const [videoHeaderModalIsOpen, setVideoHeaderModalIsOpen] = useState(false);
+  const [videoSpotlightBlockModalIsOpen, setVideoSpotlightBlockModalIsOpen] = useState(false);
   return (
     <Layout>
       <Modal
@@ -51,8 +52,19 @@ export default () => {
         noBezel
       >
         <YouTubeEmbed
-          url="https://www.youtube.com/embed/2aLyGwaRufY"
-          title="Why Internet - Learn about the digital divide and how you can help"
+          url="https://www.youtube.com/watch?v=V1u2l_8C75k"
+          title="Accelerating digital inclusion for people experiencing homelessness"
+        />
+      </Modal>
+      <Modal
+        isOpen={videoSpotlightBlockModalIsOpen}
+        setIsOpen={setVideoSpotlightBlockModalIsOpen}
+        contentLabel="Video"
+        noBezel
+      >
+        <YouTubeEmbed
+          url="https://www.youtube.com/watch?v=AUAGqr8Uf_o"
+          title="ShelterTech in 2020"
         />
       </Modal>
       <VideoHeader
@@ -144,7 +156,7 @@ export default () => {
         description="Over 3,000 people have daily internet access in local shelters and resource centers."
         button={{ text: "View Annual Report", externalLink: annualReportPDF }}
         imageURL={videoSpotlightBlockImage}
-        playButtonOnClick={() => setVideoHeaderModalIsOpen(true)}
+        playButtonOnClick={() => setVideoSpotlightBlockModalIsOpen(true)}
         blackBackground
       />
       <Spacer heightDesktop="42px" heightMobile="0" />

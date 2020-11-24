@@ -11,7 +11,7 @@ const rawLGLForm = {
   // - Scrolling has been enabled, since in a worst-case situation, we don't
   //   want the submit button to be cut off and unable to be scrolled to.
   __html: `
-<iframe onload="window.parent.scrollTo(0,0)" height="1040" allowTransparency="true" frameborder="0" scrolling="yes" style="width:100%;border:none"  src="https://secure.lglforms.com/form_engine/s/0wDrXsUXwzxrT32_RHQGrw"><a href="https://secure.lglforms.com/form_engine/s/0wDrXsUXwzxrT32_RHQGrw">Fill out my LGL Form!</a></iframe>
+<iframe onload="window.parent.scrollTo(0,0)" height="1470" allowTransparency="true" frameborder="0" scrolling="yes" style="width:100%;border:none"  src="https://secure.lglforms.com/form_engine/s/0wDrXsUXwzxrT32_RHQGrw"><a href="https://secure.lglforms.com/form_engine/s/0wDrXsUXwzxrT32_RHQGrw">Fill out my LGL Form!</a></iframe>
 `,
 };
 

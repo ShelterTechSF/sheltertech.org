@@ -84,5 +84,5 @@ DefaultFooter.args = {
     },
   ],
   address: "268 Bush Street #4302, San Francisco CA, 94104 USA",
-  employerIdentificationNumber: "ein: 38-3984099",
+  employerIdentificationNumber: "EIN: 38-3984099",
 };

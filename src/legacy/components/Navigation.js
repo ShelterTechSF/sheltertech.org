@@ -31,7 +31,7 @@ const Footer = () => (
     <div className="site--footer--legal">
       <ul>
         <li>ShelterTech is a 501 (c)(3)</li>
-        <li>ein: 38-3984099</li>
+        <li>EIN: 38-3984099</li>
         <li>268 Bush Street #4302, San Francisco CA, 94104 USA</li>
         <li>© 2020 All Rights Reserved</li>
         <li>

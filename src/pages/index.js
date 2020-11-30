@@ -98,7 +98,7 @@ export default () => {
         paragraph2={{
           title: "Partnerships",
           description:
-            "We work with companies, nonprofits, and local governments to empower the community. Reach out to us.",
+            "We work with companies, nonprofits, and local governments to connect the community. Reach out to us.",
           button: {
             text: "Work With Us",
             onClick: () => setPartnershipFormIsOpen(true),
@@ -180,7 +180,7 @@ export default () => {
           },
           {
             quote:
-              "There’s an overwhelming number of resources for the vulnerable populations that live here and it’s important to have a place where they can go where they know all the information is accurate, up-to-date, and consistent with what their understanding has been of that particular resource. And if there are any changes that need to be made those will be reflected.",
+              "There’s an overwhelming number of resources for the [at-risk] populations that live here and it’s important to have a place where they can go where they know all the information is accurate, up-to-date, and consistent with what their understanding has been of that particular resource. And if there are any changes that need to be made those will be reflected.",
             attribution:
               "Julie Rosenthal, Director of Social Services, Homeless Advocacy Project",
           },

@@ -36,7 +36,7 @@ export default () => {
       </Modal>
       <ImageHeader
         title="Volunteering"
-        subtitle="We rely on hundreds of volunteers to bridge the digital divide that our most vulnerable neighbors face."
+        subtitle="We rely on hundreds of volunteers to bridge the digital divide that our most at-risk neighbors face."
         description="If you share our belief that digital equity is a human right, we encourage you to apply and work with us."
         image1={{
           url: classroom,
@@ -84,7 +84,7 @@ export default () => {
         paragraph1={{
           title: "Technology",
           description:
-            "Being based out of San Francisco, tech professionals comprise the bulk of our volunteer base and work together to improve the digital infrastructure powering the services designated for underserved residents.",
+            "Being based out of San Francisco, tech professionals comprise the bulk of our volunteer base and work together to improve the digital infrastructure powering the services designated for under-resourced residents.",
         }}
         paragraph2={{
           title: "Partnerships & Communications",

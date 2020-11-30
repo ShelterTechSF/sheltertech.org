@@ -14,7 +14,7 @@ export default () => (
     </Helmet>
     <DonationBlock
       mainTitle="Donate today"
-      mainDescription="Your support will address digital inequity for an underserved community that does not have access to the internet and essential digital services."
+      mainDescription="Your support will address digital inequity for an under-resourced community that does not have access to the internet and essential digital services."
       whyDonateTitle="Why give to ShelterTech?"
       whyDonateList={[
         "Our work depends on regular contributions from donors like you.",

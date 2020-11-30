@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
           content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
         />
 
-        <title>ShelterTech - Technology for the underserved</title>
+        <title>ShelterTech - Technology for the under-resourced</title>
         <meta
           name="description"
           content="ShelterTech is solving the biggest technology challenges faced by those experiencing homelessness"

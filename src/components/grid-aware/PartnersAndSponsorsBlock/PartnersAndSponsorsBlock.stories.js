@@ -1,7 +1,7 @@
 import React from "react";
 
+import partnersAndSponsorsLogos from "../../../data/partnersAndSponsorsLogos";
 import PartnersAndSponsorsBlock from "./PartnersAndSponsorsBlock";
-import partnersAndSponsorsLogos from "./stories/partnersAndSponsorsLogos";
 
 export default {
   title: "Grid-Aware/PartnersAndSponsorsBlock",

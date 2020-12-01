@@ -6,7 +6,6 @@ import BlockQuoteBlock from "../components/grid-aware/BlockQuoteBlock/BlockQuote
 import HomePageLargeParagraph from "../components/grid-aware/HomePageLargeParagraph";
 import Modal from "../components/grid-aware/Modal";
 import PartnersAndSponsorsBlock from "../components/grid-aware/PartnersAndSponsorsBlock";
-import partnersAndSponsorsLogos from "../components/grid-aware/PartnersAndSponsorsBlock/stories/partnersAndSponsorsLogos";
 import ProgramsBlock from "../components/grid-aware/ProgramsBlock";
 import communityDevelopmentImg from "../components/grid-aware/ProgramsBlock/stories/community-development.jpg";
 import sfServiceGuideImg from "../components/grid-aware/ProgramsBlock/stories/sf-service-guide.jpg";
@@ -22,6 +21,7 @@ import VideoSpotlightBlock from "../components/grid-aware/VideoSpotlightBlock";
 import videoSpotlightBlockImage from "../components/grid-aware/VideoSpotlightBlock/stories/VideoSpotlightBlock.png";
 import Layout from "../components/layout";
 import PartnershipSignupForm from "../components/thirdparty/mailchimp/PartnershipSignupForm";
+import partnersAndSponsorsLogos from "../data/partnersAndSponsorsLogos";
 import annualReportPDF from "./ShelterTech-Annual-Report-2019-Q1.pdf";
 import articleSpotlightImage from "./mission-hotel.jpeg";
 

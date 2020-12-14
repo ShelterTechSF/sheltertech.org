@@ -1,3 +1,4 @@
+import classNames from "classnames/bind";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
@@ -12,7 +13,11 @@ export const NavLink = ({
   isButton,
   theme,
 }) => {
-  const className = `${theme.navLink} ${isButton ? theme.button : ""}`;
+  const { navLink, button } = theme;
+  const className = classNames({
+    [navLink]: true,
+    [button]: isButton,
+  });
   if (internalLink) {
     // Enable the "active" style for any nested pages, except for the home page,
     // which would be a parent page for any page. This is also used to get

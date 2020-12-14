@@ -1,3 +1,4 @@
+import classNames from "classnames/bind";
 import PropTypes from "prop-types";
 import React from "react";
 import ReactModal from "react-modal";
@@ -13,10 +14,18 @@ const Modal = ({
   contentLabel,
   noBezel,
 }) => {
-  const modalClassName = `${s.content} ${noBezel ? s.noBezel : s.withBezel}`;
-  const buttonClassName = `${s.closeButton} ${
-    noBezel ? s.noBezel : s.withBezel
-  }`;
+  const classStyle = classNames.bind(s);
+  const modalClassName = classStyle({
+    content: true,
+    noBezel,
+    withBezel: !noBezel,
+  });
+  const buttonClassName = classStyle({
+    closeButton: true,
+    noBezel,
+    withBezel: !noBezel,
+  });
+
   return (
     <ReactModal
       className={modalClassName}

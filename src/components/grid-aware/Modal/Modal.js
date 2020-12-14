@@ -14,13 +14,13 @@ const Modal = ({
   contentLabel,
   noBezel,
 }) => {
-  const classStyle = classNames.bind(s);
-  const modalClassName = classStyle({
+  const classStyles = classNames.bind(s);
+  const modalClassName = classStyles({
     content: true,
     noBezel,
     withBezel: !noBezel,
   });
-  const buttonClassName = classStyle({
+  const buttonClassName = classStyles({
     closeButton: true,
     noBezel,
     withBezel: !noBezel,

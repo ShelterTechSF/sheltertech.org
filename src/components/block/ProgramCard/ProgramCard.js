@@ -5,8 +5,8 @@ import React from "react";
 import s from "./ProgramCard.module.css";
 
 const ProgramCard = ({ theme, image, imageAlt, title, description }) => {
-  const classStyle = classNames.bind(s);
-  const backgroundTheme = classStyle({
+  const classStyles = classNames.bind(s);
+  const backgroundTheme = classStyles({
     programCardContainer: true,
     light: theme === "light",
     dark: theme === "dark",

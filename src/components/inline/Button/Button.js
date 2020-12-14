@@ -6,8 +6,8 @@ import React from "react";
 import s from "./Button.module.css";
 
 const Button = ({ text, externalLink, internalLink, onClick, noHover }) => {
-  const classStyle = classNames.bind(s);
-  const button = classStyle({
+  const classStyles = classNames.bind(s);
+  const button = classStyles({
     button: true,
     noHover,
   });
@@ -68,8 +68,8 @@ export default Button;
 
 /** A version of the Button specifically to be used with forms as the submit button. */
 export const SubmitButton = ({ value, noHover, name }) => {
-  const classStyle = classNames.bind(s);
-  const className = classStyle({
+  const classStyles = classNames.bind(s);
+  const className = classStyles({
     button: true,
     noHover,
   });

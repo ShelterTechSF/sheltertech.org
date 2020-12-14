@@ -35,8 +35,8 @@ const VideoSpotlightBlock = ({
   playButtonOnClick,
   blackBackground,
 }) => {
-  const classStyle = classNames.bind(s);
-  const bleedBackgroundWrapper = classStyle({
+  const classStyles = classNames.bind(s);
+  const bleedBackgroundWrapper = classStyles({
     bleedWrapper: true,
     blackBackground,
   });

@@ -38,4 +38,4 @@ jobs:
         run: |
           git add storybook-static
           git commit -m "Build Storybook (auto-generated commit)"
-          git push --set-upstream origin gh-pages --force
+          git push origin gh-pages --force

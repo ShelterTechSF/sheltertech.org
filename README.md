@@ -20,3 +20,7 @@ For more specific documentation, visit one of the pages below:
 
 To view the current state of any new features the staging website, please visit
 https://staging.sheltertech.org/.
+
+## Storybook component library
+
+We use GitHub pages to host a live version of [Storybook](https://storybook.js.org/), our component library. Using GitHub Actions, it is automatically kept in sync with the `main` branch. It can be found at http://sheltertechsf.github.io/sheltertech.org/storybook-static.

@@ -15,9 +15,6 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Checkout GitHub Pages branch
         run: |
           git config user.name "GitHub Actions"

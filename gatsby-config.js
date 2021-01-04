@@ -9,6 +9,8 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-ts-checker",
+    "gatsby-plugin-typescript",
     {
       resolve: "gatsby-plugin-intercom-spa",
       options: {
@@ -29,5 +31,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
+    "gatsby-transformer-typescript-css-modules",
   ],
 };

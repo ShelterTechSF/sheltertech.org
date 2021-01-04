@@ -6,7 +6,10 @@ module.exports = {
     browser: true,
   },
   rules: {
-    "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [
+      "error",
+      { extensions: [".js", ".jsx", "tsx"] },
+    ],
     "import/order": ["error", { alphabetize: { order: "asc" } }],
   },
   overrides: [
@@ -32,7 +35,7 @@ module.exports = {
     },
     {
       // Storybook stories
-      files: ["src/**/*.stories.js"],
+      files: ["src/**/*.stories.js", "src/**/*.stories.tsx"],
       rules: {
         // Do not require PropTypes to be declared on ad hoc Storybook
         // React components.
@@ -54,7 +57,7 @@ module.exports = {
         "no-restricted-syntax": "off",
       },
       env: {
-        // Jest injects itself as a varibable in test files
+        // Jest injects itself as a variable in test files
         jest: true,
       },
     },

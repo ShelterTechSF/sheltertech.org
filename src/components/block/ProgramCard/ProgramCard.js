@@ -1,15 +1,13 @@
-import classNames from "classnames/bind";
+import classNames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
 
 import s from "./ProgramCard.module.css";
 
 const ProgramCard = ({ theme, image, imageAlt, title, description }) => {
-  const classStyles = classNames.bind(s);
-  const backgroundTheme = classStyles({
-    programCardContainer: true,
-    light: theme === "light",
-    dark: theme === "dark",
+  const backgroundTheme = classNames(s.programCardContainer, {
+    [s.light]: theme === "light",
+    [s.dark]: theme === "dark",
   });
 
   return (

@@ -1,4 +1,4 @@
-import classNames from "classnames/bind";
+import classNames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
 import Button from "../../inline/Button";
@@ -35,10 +35,8 @@ const VideoSpotlightBlock = ({
   playButtonOnClick,
   blackBackground,
 }) => {
-  const classStyles = classNames.bind(s);
-  const bleedBackgroundWrapper = classStyles({
-    bleedWrapper: true,
-    blackBackground,
+  const bleedBackgroundWrapper = classNames(s.bleedWrapper, {
+    [s.blackBackground]: blackBackground,
   });
 
   return (

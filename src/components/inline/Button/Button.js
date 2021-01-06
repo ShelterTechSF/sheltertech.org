@@ -1,4 +1,4 @@
-import classNames from "classnames/bind";
+import classNames from "classnames";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
@@ -6,10 +6,8 @@ import React from "react";
 import s from "./Button.module.css";
 
 const Button = ({ text, externalLink, internalLink, onClick, noHover }) => {
-  const classStyles = classNames.bind(s);
-  const button = classStyles({
-    button: true,
-    noHover,
+  const button = classNames(s.button, {
+    [s.noHover]: noHover,
   });
 
   if (externalLink) {
@@ -68,10 +66,8 @@ export default Button;
 
 /** A version of the Button specifically to be used with forms as the submit button. */
 export const SubmitButton = ({ value, noHover, name }) => {
-  const classStyles = classNames.bind(s);
-  const className = classStyles({
-    button: true,
-    noHover,
+  const className = classNames(s.button, {
+    [s.noHover]: noHover,
   });
   return (
     <input className={className} type="submit" name={name} value={value} />

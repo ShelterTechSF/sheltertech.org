@@ -1,4 +1,4 @@
-import classNames from "classnames/bind";
+import classNames from "classnames";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
@@ -14,8 +14,7 @@ export const NavLink = ({
   theme,
 }) => {
   const { navLink, button } = theme;
-  const className = classNames({
-    [navLink]: true,
+  const className = classNames(navLink, {
     [button]: isButton,
   });
   if (internalLink) {

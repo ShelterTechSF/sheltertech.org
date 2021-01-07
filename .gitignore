@@ -22,3 +22,6 @@ jspm_packages/
 # gatsby files
 .cache/
 public
+
+# Storybook files
+/storybook-static

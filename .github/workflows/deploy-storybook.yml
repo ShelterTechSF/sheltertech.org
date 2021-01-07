@@ -36,6 +36,8 @@ jobs:
 
       - name: Push Storybook to GitHub Pages branch
         run: |
-          git add storybook-static
+          # The --force is necessary because storybook-static is normally
+          # .gitignore'd
+          git add --force storybook-static
           git commit -m "Build Storybook (auto-generated commit)"
           git push origin gh-pages --force

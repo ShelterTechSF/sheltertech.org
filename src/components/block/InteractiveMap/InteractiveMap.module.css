@@ -6,10 +6,12 @@
 
 .mapTitle {
   font-family: var(--font-family-merriweather);
-  font-size: 18px;
+  font-size: 30px;
+  line-height: 39px;
 }
 
 .mapSubTitle {
   font-family: var(--font-family-lato);
-  font-size: 12px;
+  font-size: 20px;
+  line-height: 26px;
 }

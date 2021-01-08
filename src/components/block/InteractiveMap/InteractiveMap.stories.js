@@ -7,7 +7,7 @@ export default {
 };
 
 const Template = ({ center, zoom, title, subtitle }) => (
-  <div style={{ height: "475px", width: "100%" }}>
+  <div style={{ height: "600px", width: "100%" }}>
     <InteractiveMap
       center={center}
       zoom={zoom}

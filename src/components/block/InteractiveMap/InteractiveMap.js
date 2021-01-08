@@ -4,24 +4,6 @@ import React from "react";
 
 import s from "./InteractiveMap.module.css";
 
-// Callback used by google-map-react library to allow access to additional configuration options.
-// https://github.com/google-map-react/google-map-react/blob/master/API.md#options-funcobject
-const createMapOptions = () => {
-  return {
-    zoomControl: false,
-    fullscreenControl: false,
-    restriction: {
-      latLngBounds: {
-        north: 37.82,
-        south: 37.7,
-        west: -122.53,
-        east: -122.37,
-      },
-      strictBounds: false,
-    },
-  };
-};
-
 // ----------------------------- //
 //          Sub-Components
 // ---------------------------- //
@@ -47,6 +29,24 @@ TitleBlock.defaultProps = {
 // ---------------------------- //
 
 const InteractiveMap = ({ center, zoom, title, subtitle }) => {
+  // Callback used by google-map-react library to allow access to additional configuration options.
+  // https://github.com/google-map-react/google-map-react/blob/master/API.md#options-funcobject
+  const createMapOptions = () => {
+    return {
+      zoomControl: false,
+      fullscreenControl: false,
+      restriction: {
+        latLngBounds: {
+          north: 37.82,
+          south: 37.7,
+          west: -122.53,
+          east: -122.37,
+        },
+        strictBounds: false,
+      },
+    };
+  };
+
   return (
     <>
       <GoogleMapReact

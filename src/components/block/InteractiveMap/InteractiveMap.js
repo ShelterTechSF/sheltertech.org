@@ -28,7 +28,7 @@ TitleBlock.defaultProps = {
 //          Main Component
 // ---------------------------- //
 
-const InteractiveMap = ({ center, zoom, title, subtitle }) => {
+const InteractiveMap = ({ center, zoom, title, subtitle, latLngBounds }) => {
   // Callback used by google-map-react library to allow access to additional configuration options.
   // https://github.com/google-map-react/google-map-react/blob/master/API.md#options-funcobject
   const createMapOptions = () => {
@@ -36,12 +36,7 @@ const InteractiveMap = ({ center, zoom, title, subtitle }) => {
       zoomControl: false,
       fullscreenControl: false,
       restriction: {
-        latLngBounds: {
-          north: 37.82,
-          south: 37.7,
-          west: -122.53,
-          east: -122.37,
-        },
+        latLngBounds,
         strictBounds: false,
       },
     };
@@ -68,6 +63,12 @@ InteractiveMap.propTypes = {
   }).isRequired,
   title: string,
   subtitle: string,
+  latLngBounds: PropTypes.shape({
+    north: PropTypes.number.isRequired,
+    south: PropTypes.number,
+    west: PropTypes.number,
+    east: PropTypes.number,
+  }).isRequired,
 };
 
 InteractiveMap.defaultProps = {

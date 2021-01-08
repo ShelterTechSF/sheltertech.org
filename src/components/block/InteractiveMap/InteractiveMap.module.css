@@ -1,0 +1,15 @@
+.mapTitleWrapper {
+  left: 30px;
+  position: absolute;
+  top: 30px;
+}
+
+.mapTitle {
+  font-family: var(--font-family-merriweather);
+  font-size: 18px;
+}
+
+.mapSubTitle {
+  font-family: var(--font-family-lato);
+  font-size: 12px;
+}

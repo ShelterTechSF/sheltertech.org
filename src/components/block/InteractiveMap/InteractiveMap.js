@@ -1,6 +1,8 @@
 import GoogleMapReact from "google-map-react";
-import PropTypes from "prop-types";
+import PropTypes, { string } from "prop-types";
 import React from "react";
+
+import s from "./InteractiveMap.module.css";
 
 // Callback used by google-map-react library to allow access to additional configuration options.
 // https://github.com/google-map-react/google-map-react/blob/master/API.md#options-funcobject
@@ -11,7 +13,7 @@ const createMapOptions = () => {
     restriction: {
       latLngBounds: {
         north: 37.82,
-        south: 37.70,
+        south: 37.7,
         west: -122.53,
         east: -122.37,
       },
@@ -20,14 +22,41 @@ const createMapOptions = () => {
   };
 };
 
-const InteractiveMap = ({ center, zoom }) => {
+// ----------------------------- //
+//          Sub-Components
+// ---------------------------- //
+
+const TitleBlock = ({ title, subtitle }) => (
+  <div className={s.mapTitleWrapper}>
+    <div className={s.mapTitle}>{title}</div>
+    {subtitle && <div className={s.mapSubTitle}>{subtitle}</div>}
+  </div>
+);
+
+TitleBlock.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+};
+
+TitleBlock.defaultProps = {
+  subtitle: null,
+};
+
+// ----------------------------- //
+//          Main Component
+// ---------------------------- //
+
+const InteractiveMap = ({ center, zoom, title, subtitle }) => {
   return (
-    <GoogleMapReact
-      bootstrapURLKeys={{ key: process.env.GOOGLE_API_KEY }}
-      defaultCenter={center}
-      defaultZoom={zoom}
-      options={createMapOptions}
-    />
+    <>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: process.env.GOOGLE_API_KEY }}
+        defaultCenter={center}
+        defaultZoom={zoom}
+        options={createMapOptions}
+      />
+      {title && <TitleBlock title={title} subtitle={subtitle} />}
+    </>
   );
 };
 
@@ -37,6 +66,13 @@ InteractiveMap.propTypes = {
     lat: PropTypes.number,
     lng: PropTypes.number,
   }).isRequired,
+  title: string,
+  subtitle: string,
+};
+
+InteractiveMap.defaultProps = {
+  title: null,
+  subtitle: null,
 };
 
 export default InteractiveMap;

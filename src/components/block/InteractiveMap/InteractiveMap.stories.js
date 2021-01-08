@@ -6,9 +6,14 @@ export default {
   component: InteractiveMap,
 };
 
-const Template = ({ center, zoom }) => (
+const Template = ({ center, zoom, title, subtitle }) => (
   <div style={{ height: "475px", width: "100%" }}>
-    <InteractiveMap center={center} zoom={zoom} />
+    <InteractiveMap
+      center={center}
+      zoom={zoom}
+      title={title}
+      subtitle={subtitle}
+    />
   </div>
 );
 
@@ -20,4 +25,6 @@ DefaultInteractiveMap.args = {
     lng: -122.44,
   },
   zoom: 12.9,
+  title: "ShelterConnect Installations",
+  subtitle: "Interactive Map",
 };

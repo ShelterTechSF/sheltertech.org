@@ -9,6 +9,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-ts-checker",
     {
       resolve: "gatsby-plugin-intercom-spa",
       options: {

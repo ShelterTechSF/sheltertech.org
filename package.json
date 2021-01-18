@@ -7,10 +7,11 @@
     "test": "jest",
     "start": "gatsby develop",
     "build": "gatsby build",
-    "lint": "npm run stylelint && npm run eslint",
-    "lint:fix": "npm run stylelint:fix && npm run eslint:fix",
+    "lint": "npm run stylelint && npm run tsc && npm run eslint",
+    "lint:fix": "npm run stylelint:fix && npm run tsc && npm run eslint:fix",
     "stylelint": "stylelint 'src/**/*.{css,scss}' '.storybook/**/*.css'",
     "stylelint:fix": "stylelint --fix 'src/**/*.{css,scss}' '.storybook/**/*.css'",
+    "tsc": "tsc",
     "eslint": "eslint --ext=.js,.jsx . .storybook",
     "eslint:fix": "eslint --fix --ext=.js,.jsx . .storybook",
     "storybook": "start-storybook -p 6006",
@@ -44,6 +45,9 @@
     "@storybook/addon-storyshots": "^6.0.26",
     "@storybook/addon-viewport": "^6.0.21",
     "@storybook/react": "^6.0.21",
+    "@types/node": "^14.14.21",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "babel-jest": "^26.6.0",
     "babel-loader": "^8.1.0",
     "babel-preset-gatsby": "^0.5.14",
@@ -60,6 +64,7 @@
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.25",
+    "gatsby-plugin-ts-checker": "^1.1.0",
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-sharp": "^2.5.12",
     "identity-obj-proxy": "^3.0.0",
@@ -72,6 +77,7 @@
     "react-test-renderer": "^16.14.0",
     "stylelint": "^13.6.1",
     "stylelint-config-sass-guidelines": "^7.0.0",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint-config-standard": "^20.0.0",
+    "typescript": "^4.1.3"
   }
 }

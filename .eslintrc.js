@@ -54,7 +54,7 @@ module.exports = {
         "no-restricted-syntax": "off",
       },
       env: {
-        // Jest injects itself as a varibable in test files
+        // Jest injects itself as a variable in test files
         jest: true,
       },
     },

@@ -49,8 +49,8 @@ export default () => (
             <a href="https://medium.com/shelter-tech/the-mission-hotel-san-franciscos-largest-sro-now-provides-free-internet-to-hundreds-of-at-risk-f72761c62c2e">
               Mission Hotel
             </a>{" "}
-            and MSC-South, with WiFi that collectively serves 640 people on a
-            daily basis.
+            and MSC-South, with WiFi that collectively serves 640 people on a on
+            on a daily basis.
           </p>
         </>
       }

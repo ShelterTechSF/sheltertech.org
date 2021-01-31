@@ -3,6 +3,13 @@ import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import "./Navigation.scss";
 
+// The @typescript-eslint version of no-use-before-define is better at parsing
+// JSX than the regular no-use-before-define, so it's catching more cases in our
+// legacy non-TypeScript code. This is not worth fixing since we will eventually
+// delete all the code in src/legacy/.
+
+/* eslint-disable @typescript-eslint/no-use-before-define */
+
 const Header = () => (
   <header className="site--header">
     <div className="site--header--wrapper">

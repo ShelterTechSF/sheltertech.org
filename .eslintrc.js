@@ -1,15 +1,47 @@
 module.exports = {
-  extends: ["airbnb", "plugin:prettier/recommended", "prettier/react"],
+  extends: [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:prettier/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react",
+  ],
   env: {
     node: true,
     es6: true,
     browser: true,
   },
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: "./tsconfig.json",
+  },
+  plugins: ["@typescript-eslint", "react", "react-hooks"],
   rules: {
-    "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
     "import/order": ["error", { alphabetize: { order: "asc" } }],
+    "react/jsx-filename-extension": [
+      "error",
+      { extensions: [".js", ".jsx", ".tsx"] },
+    ],
   },
   overrides: [
+    {
+      // Non-TypeScript, JavaScript files
+      files: ["*.js", "*.jsx"],
+      rules: {
+        // Disable TypeScript-specific rules on regular JavaScript files.
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/require-await": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
+      },
+    },
     {
       // Gatsby configuration files
       files: ["gatsby-config.js"],

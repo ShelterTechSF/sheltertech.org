@@ -1,4 +1,3 @@
-import * as PropTypes from "prop-types";
 import * as React from "react";
 
 import s from "./InputText.module.css";
@@ -24,7 +23,20 @@ import s from "./InputText.module.css";
  *
  */
 
-const InputText = ({ name, placeholderText, onChange, value, type }) => {
+type InputTextProps = {
+  name?: string;
+  placeholderText?: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
+  type: string;
+};
+const InputText = ({
+  name,
+  placeholderText,
+  onChange,
+  value,
+  type,
+}: InputTextProps) => {
   return (
     <input
       className={s.inputText}
@@ -35,21 +47,6 @@ const InputText = ({ name, placeholderText, onChange, value, type }) => {
       value={value}
     />
   );
-};
-
-InputText.propTypes = {
-  name: PropTypes.string,
-  placeholderText: PropTypes.string,
-  onChange: PropTypes.func,
-  value: PropTypes.string,
-  type: PropTypes.string.isRequired,
-};
-
-InputText.defaultProps = {
-  name: undefined,
-  placeholderText: undefined,
-  onChange: undefined,
-  value: undefined,
 };
 
 export default InputText;

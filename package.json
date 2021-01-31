@@ -12,8 +12,8 @@
     "stylelint": "stylelint 'src/**/*.{css,scss}' '.storybook/**/*.css'",
     "stylelint:fix": "stylelint --fix 'src/**/*.{css,scss}' '.storybook/**/*.css'",
     "tsc": "tsc",
-    "eslint": "eslint --ext=.js,.jsx . .storybook",
-    "eslint:fix": "eslint --fix --ext=.js,.jsx . .storybook",
+    "eslint": "eslint --ext=.js,.jsx,.ts,.tsx . .storybook",
+    "eslint:fix": "eslint --fix --ext=.js,.jsx,.ts,.tsx . .storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

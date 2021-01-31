@@ -61,11 +61,12 @@ $ npm run lint:fix
 There are six variants of the command in case if you want to run something more
 specific. The commands are:
 
-- `lint:fix` - Automatically fix both CSS and JavaScript lint issues. Note that
-  if an error is encountered in CSS, it will not run the JavaScript lint check.
-- `lint` - Check, but do not fix, both CSS and JavaScript lint issues
+- `lint:fix` - Automatically fix CSS, TypeScript, and JavaScript lint issues. Note that
+  if an error is encountered in CSS, it will not run the TypeScript/JavaScript lint checks.
+- `lint` - Check, but do not fix, both CSS, TypeScript, and JavaScript lint issues
 - `stylelint:fix` - Automatically fix CSS lint issues
 - `stylelint` - Check, but do not fix, CSS lint issues
+- `tsc` - Run the TypeScript compiler (`tsc`) to check for type errors
 - `eslint:fix` - Automatically fix JavaScript lint issues
 - `eslint` - Check, but do not fix, JavaScript lint issues
 

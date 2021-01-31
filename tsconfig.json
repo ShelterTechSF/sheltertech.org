@@ -1,21 +1,19 @@
 {
   "compilerOptions": {
-    // Tells TypeScript to read JS files, as
-    // normally they are ignored as source files
-    "allowJs": true,
-    // Generate d.ts files
-    "declaration": true,
-    // This compiler run should
-    // only output d.ts files
-    "emitDeclarationOnly": true,
+    // Keep options grouped in the same order as
+    // https://www.typescriptlang.org/tsconfig
+
+    // Project Options
+    "allowJs": true, // Allow a mix of JS and TS until we fully migrate to TS.
     "jsx": "react",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    // Types should go into this directory.
-    // Removing this would place the .d.ts files
-    // next to the .js files
-    "outDir": "dist"
+    "noEmit": true, // No need to emit .d.ts files, since we're not publishing a package.
+
+    // Strict Checks
+    "strict": true,
+
+    // Advanced
+    "skipLibCheck": true // Don't type check .d.ts files, which mostly come from third party libraries.
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/legacy"]
+  "include": ["**/*", ".storybook/*", ".eslintrc.js"],
+  "exclude": ["node_modules"]
 }

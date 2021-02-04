@@ -1,21 +1,25 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
 import s from "./StatsBlock.module.css";
 
-const StatCard = ({ number, statement }) => (
+type StatCardProps = {
+  number: string;
+  statement: string;
+}
+
+const StatCard = ({ number, statement }: StatCardProps) => (
   <div className={s.statCard}>
     <div className={s.number}>{number}</div>
     <div className={s.statement}>{statement}</div>
   </div>
 );
 
-StatCard.propTypes = {
-  number: PropTypes.string.isRequired,
-  statement: PropTypes.string.isRequired,
-};
+type StatsBlockProps = {
+  title: string;
+  statCards: StatCardProps[];
+}
 
-const StatsBlock = ({ title, statCards }) => (
+const StatsBlock = ({ title, statCards }: StatsBlockProps) => (
   <div className={s.bleedWrapper}>
     <div className={s.bleedBackground} />
     <div className={s.bleedMainContent}>
@@ -30,10 +34,5 @@ const StatsBlock = ({ title, statCards }) => (
     </div>
   </div>
 );
-
-StatsBlock.propTypes = {
-  title: PropTypes.string.isRequired,
-  statCards: PropTypes.arrayOf(PropTypes.shape(StatCard.propTypes)).isRequired,
-};
 
 export default StatsBlock;

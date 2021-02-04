@@ -5,7 +5,7 @@ import s from "./StatsBlock.module.css";
 type StatCardProps = {
   number: string;
   statement: string;
-}
+};
 
 const StatCard = ({ number, statement }: StatCardProps) => (
   <div className={s.statCard}>
@@ -17,7 +17,7 @@ const StatCard = ({ number, statement }: StatCardProps) => (
 type StatsBlockProps = {
   title: string;
   statCards: StatCardProps[];
-}
+};
 
 const StatsBlock = ({ title, statCards }: StatsBlockProps) => (
   <div className={s.bleedWrapper}>

@@ -7,15 +7,20 @@ type ButtonProps = {
   text: string;
   externalLink: string;
   internalLink: string;
-  onClick:(e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   noHover: boolean;
-}
+};
 
-const Button = ({ text, externalLink, internalLink, onClick, noHover }: ButtonProps) => {
+const Button = ({
+  text,
+  externalLink,
+  internalLink,
+  onClick,
+  noHover,
+}: ButtonProps) => {
   const button = `${s.button} ${noHover ? s.noHover : ""}`;
 
   if (externalLink) {
-
     return (
       <a
         rel="noreferrer"
@@ -56,19 +61,15 @@ export default Button;
 
 /** A version of the Button specifically to be used with forms as the submit button. */
 
-type SubmitButton = {
+type SubmitButtonProps = {
   value: string;
   noHover: boolean;
   name: string;
-}
+};
 
-export const SubmitButton = ({ value, noHover, name }: SubmitButton) => {
+export const SubmitButton = ({ value, noHover, name }: SubmitButtonProps) => {
   const className = `${s.button} ${noHover ? s.noHover : ""}`;
   return (
     <input className={className} type="submit" name={name} value={value} />
   );
-};
-
-SubmitButton.defaultProps = {
-  noHover: false,
 };

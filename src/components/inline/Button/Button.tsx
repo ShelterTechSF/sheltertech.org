@@ -1,13 +1,21 @@
 import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
 import s from "./Button.module.css";
 
-const Button = ({ text, externalLink, internalLink, onClick, noHover }) => {
+type ButtonProps = {
+  text: string;
+  externalLink: string;
+  internalLink: string;
+  onClick:(e: React.MouseEvent<HTMLButtonElement>) => void;
+  noHover: boolean;
+}
+
+const Button = ({ text, externalLink, internalLink, onClick, noHover }: ButtonProps) => {
   const button = `${s.button} ${noHover ? s.noHover : ""}`;
 
   if (externalLink) {
+
     return (
       <a
         rel="noreferrer"
@@ -44,35 +52,21 @@ const Button = ({ text, externalLink, internalLink, onClick, noHover }) => {
   );
 };
 
-Button.propTypes = PropTypes.oneOfType([
-  PropTypes.exact({
-    text: PropTypes.string,
-    externalLink: PropTypes.string,
-  }),
-  PropTypes.exact({
-    text: PropTypes.string,
-    internalLink: PropTypes.string,
-  }),
-  PropTypes.exact({
-    text: PropTypes.string,
-    onClick: PropTypes.func,
-  }),
-]).isRequired;
-
 export default Button;
 
 /** A version of the Button specifically to be used with forms as the submit button. */
-export const SubmitButton = ({ value, noHover, name }) => {
+
+type SubmitButton = {
+  value: string;
+  noHover: boolean;
+  name: string;
+}
+
+export const SubmitButton = ({ value, noHover, name }: SubmitButton) => {
   const className = `${s.button} ${noHover ? s.noHover : ""}`;
   return (
     <input className={className} type="submit" name={name} value={value} />
   );
-};
-
-SubmitButton.propTypes = {
-  value: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  noHover: PropTypes.bool,
 };
 
 SubmitButton.defaultProps = {

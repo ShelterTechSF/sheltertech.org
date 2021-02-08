@@ -11,6 +11,9 @@
     // Strict Checks
     "strict": true,
 
+    // Module resolution
+    "esModuleInterop": true, // Allows us to use default imports with CommonJS modules (which some third-party packages use)
+
     // Advanced
     "skipLibCheck": true // Don't type check .d.ts files, which mostly come from third party libraries.
   },

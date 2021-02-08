@@ -1,5 +1,5 @@
 import GoogleMapReact from "google-map-react";
-import React from "react";
+import * as React from "react";
 
 import s from "./InteractiveMap.module.css";
 
@@ -8,9 +8,9 @@ import s from "./InteractiveMap.module.css";
 // ---------------------------- //
 
 type TitleBlockProps = {
-  title: string,
-  subtitle?: string
-}
+  title: string;
+  subtitle?: string;
+};
 
 const TitleBlock = ({ title, subtitle }: TitleBlockProps) => (
   <div className={s.mapTitleWrapper}>
@@ -24,22 +24,28 @@ const TitleBlock = ({ title, subtitle }: TitleBlockProps) => (
 // ---------------------------- //
 
 type InteractiveMapProps = {
-  zoom: number,
+  zoom: number;
   center: {
-    lat: number,
-    lng: number
-  }
-  title: string,
-  subtitle: string,
+    lat: number;
+    lng: number;
+  };
+  title: string;
+  subtitle: string;
   latLngBounds: {
-    north: number,
-    south: number,
-    west: number,
-    east: number
-  }
-}
+    north: number;
+    south: number;
+    west: number;
+    east: number;
+  };
+};
 
-const InteractiveMap = ({ center, zoom, title, subtitle, latLngBounds }: InteractiveMapProps) => {
+const InteractiveMap = ({
+  center,
+  zoom,
+  title,
+  subtitle,
+  latLngBounds,
+}: InteractiveMapProps) => {
   // Callback used by google-map-react library to allow access to additional configuration options.
   // https://github.com/google-map-react/google-map-react/blob/master/API.md#options-funcobject
   const createMapOptions = () => {
@@ -56,7 +62,7 @@ const InteractiveMap = ({ center, zoom, title, subtitle, latLngBounds }: Interac
   return (
     <>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.GOOGLE_API_KEY }}
+        bootstrapURLKeys={{ key: process.env.GOOGLE_API_KEY || "" }}
         defaultCenter={center}
         defaultZoom={zoom}
         options={createMapOptions}

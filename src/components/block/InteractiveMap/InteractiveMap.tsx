@@ -55,8 +55,8 @@ type InteractiveMapProps = {
     lat: number;
     lng: number;
   };
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   latLngBounds: {
     north: number;
     south: number;

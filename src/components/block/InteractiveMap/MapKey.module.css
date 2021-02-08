@@ -1,0 +1,22 @@
+.mapKey {
+  background-color: #fff;
+  bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  left: 30px;
+  padding: 30px 35px 30px 30px;
+  position: absolute;
+}
+
+.mapKeyEntry {
+  align-items: center;
+  display: flex;
+}
+
+.mapKeyEntry:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.mapKeyText {
+  font-family: var(--font-family-lato);
+  padding-left: 28px;
+}

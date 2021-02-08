@@ -3,6 +3,32 @@ import * as React from "react";
 
 import s from "./InteractiveMap.module.css";
 
+import MapKey from "./MapKey";
+import CurrentInstallationMarker from "./currentInstallationMarker.svg";
+import PlannedInstallationMarker from "./plannedInstallationMarker.svg";
+
+// ----------------------------- //
+//          Data
+// ---------------------------- //
+
+export type MarkerType = {
+  name: string;
+  imgPath: string;
+};
+
+// This data could potentially come from a CMS as JSON, but since string
+// matching is important with the 'name' field, we will need careful error-handling
+const markerTypes: MarkerType[] = [
+  {
+    name: "Current Installation",
+    imgPath: CurrentInstallationMarker as string,
+  },
+  {
+    name: "Planned Installation",
+    imgPath: PlannedInstallationMarker as string,
+  },
+];
+
 // ----------------------------- //
 //          Sub-Components
 // ---------------------------- //
@@ -68,6 +94,7 @@ const InteractiveMap = ({
         options={createMapOptions}
       />
       {title && <TitleBlock title={title} subtitle={subtitle} />}
+      <MapKey markerTypes={markerTypes} />
     </>
   );
 };

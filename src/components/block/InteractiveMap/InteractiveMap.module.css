@@ -1,3 +1,8 @@
+.mapWrapper {
+  height: 600px;
+  position: relative;
+}
+
 .mapTitleWrapper {
   left: 30px;
   position: absolute;

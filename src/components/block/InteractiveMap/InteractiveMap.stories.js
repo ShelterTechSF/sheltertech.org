@@ -7,15 +7,13 @@ export default {
 };
 
 const Template = ({ center, zoom, title, subtitle, latLngBounds }) => (
-  <div style={{ height: "600px", width: "100%" }}>
-    <InteractiveMap
-      center={center}
-      zoom={zoom}
-      title={title}
-      subtitle={subtitle}
-      latLngBounds={latLngBounds}
-    />
-  </div>
+  <InteractiveMap
+    center={center}
+    zoom={zoom}
+    title={title}
+    subtitle={subtitle}
+    latLngBounds={latLngBounds}
+  />
 );
 
 export const DefaultInteractiveMap = Template.bind({});

@@ -86,7 +86,7 @@ const InteractiveMap = ({
   };
 
   return (
-    <>
+    <div className={s.mapWrapper}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.GOOGLE_API_KEY || "" }}
         defaultCenter={center}
@@ -95,7 +95,7 @@ const InteractiveMap = ({
       />
       {title && <TitleBlock title={title} subtitle={subtitle} />}
       <MapKey markerTypes={markerTypes} />
-    </>
+    </div>
   );
 };
 

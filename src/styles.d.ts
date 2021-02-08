@@ -12,3 +12,6 @@ declare module "*.module.css" {
   const classes: { [key: string]: string };
   export default classes;
 }
+
+// This prevents typescript from complaining when importing .svg files
+declare module "*.svg";

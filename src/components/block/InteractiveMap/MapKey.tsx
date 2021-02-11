@@ -29,7 +29,7 @@ type MapKeyProps = {
 const MapKey = ({ markerTypes }: MapKeyProps) => (
   <div className={s.mapKey}>
     {markerTypes.map((marker: MarkerType) => (
-      <MapKeyEntry marker={marker} />
+      <MapKeyEntry key={marker.name} marker={marker} />
     ))}
   </div>
 );

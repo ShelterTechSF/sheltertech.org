@@ -4,30 +4,18 @@ import * as React from "react";
 import s from "./InteractiveMap.module.css";
 
 import MapKey from "./MapKey";
-import CurrentInstallationMarker from "./currentInstallationMarker.svg";
-import PlannedInstallationMarker from "./plannedInstallationMarker.svg";
 
 // ----------------------------- //
 //          Data
 // ---------------------------- //
+// This data could potentially come from a CMS as JSON, but since string
+// matching is important with marker types, we will need careful error-handling
 
 export type MarkerType = {
   name: string;
   imgPath: string;
 };
 
-// This data could potentially come from a CMS as JSON, but since string
-// matching is important with the 'name' field, we will need careful error-handling
-const markerTypes: MarkerType[] = [
-  {
-    name: "Current Installation",
-    imgPath: CurrentInstallationMarker as string,
-  },
-  {
-    name: "Planned Installation",
-    imgPath: PlannedInstallationMarker as string,
-  },
-];
 
 // ----------------------------- //
 //          Sub-Components
@@ -63,6 +51,7 @@ type InteractiveMapProps = {
     west: number;
     east: number;
   };
+  markerTypes: MarkerType[];
 };
 
 const InteractiveMap = ({
@@ -71,6 +60,7 @@ const InteractiveMap = ({
   title,
   subtitle,
   latLngBounds,
+  markerTypes,
 }: InteractiveMapProps) => {
   // Callback used by google-map-react library to allow access to additional configuration options.
   // https://github.com/google-map-react/google-map-react/blob/master/API.md#options-funcobject

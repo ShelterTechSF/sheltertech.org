@@ -1,22 +1,55 @@
 import React from "react";
 import InteractiveMap from "./InteractiveMap";
+import CurrentInstallationMarker from "./currentInstallationMarker.svg";
+import PlannedInstallationMarker from "./plannedInstallationMarker.svg";
+
+// ----------------------------- //
+//          Dummy Data
+// ----------------------------- //
+
+const dummyMarkerTypes = [
+  {
+    name: "Current Installation",
+    imgPath: CurrentInstallationMarker,
+  },
+  {
+    name: "Planned Installation",
+    imgPath: PlannedInstallationMarker,
+  },
+];
+
+// ----------------------------- //
+//          Component
+// ----------------------------- //
 
 export default {
   title: "Block/InteractiveMap",
   component: InteractiveMap,
 };
 
-const Template = ({ center, zoom, title, subtitle, latLngBounds }) => (
+const Template = ({
+  center,
+  zoom,
+  title,
+  subtitle,
+  latLngBounds,
+  markerTypes,
+}) => (
   <InteractiveMap
     center={center}
     zoom={zoom}
     title={title}
     subtitle={subtitle}
     latLngBounds={latLngBounds}
+    markerTypes={markerTypes}
   />
 );
 
 export const DefaultInteractiveMap = Template.bind({});
+
+// ----------------------------- //
+//          Props
+// ----------------------------- //
 
 DefaultInteractiveMap.args = {
   center: {
@@ -32,4 +65,5 @@ DefaultInteractiveMap.args = {
     west: -122.53,
     east: -122.37,
   },
+  markerTypes: dummyMarkerTypes,
 };

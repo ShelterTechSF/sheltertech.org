@@ -1,0 +1,5 @@
+.mapMarker {
+  /* Positions the img such that the bottom center of it aligns with the given lng/lat */
+  position: absolute;
+  transform: translate(-50%, -100%);
+}

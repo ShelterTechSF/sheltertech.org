@@ -4,6 +4,7 @@ import * as React from "react";
 import s from "./InteractiveMap.module.css";
 
 import MapKey from "./MapKey";
+import MapMarker from "./MapMarker";
 
 // ----------------------------- //
 //          Data
@@ -16,6 +17,14 @@ export type MarkerType = {
   imgPath: string;
 };
 
+export type MapLocation = {
+  lat: number;
+  lng: number;
+  name: string;
+  subtitle: string;
+  fundingUrl: string;
+  markerType: string;
+};
 
 // ----------------------------- //
 //          Sub-Components
@@ -52,6 +61,7 @@ type InteractiveMapProps = {
     east: number;
   };
   markerTypes: MarkerType[];
+  locations: MapLocation[];
 };
 
 const InteractiveMap = ({
@@ -61,6 +71,7 @@ const InteractiveMap = ({
   subtitle,
   latLngBounds,
   markerTypes,
+  locations,
 }: InteractiveMapProps) => {
   // Callback used by google-map-react library to allow access to additional configuration options.
   // https://github.com/google-map-react/google-map-react/blob/master/API.md#options-funcobject
@@ -82,7 +93,18 @@ const InteractiveMap = ({
         defaultCenter={center}
         defaultZoom={zoom}
         options={createMapOptions}
-      />
+        hoverDistance={20}
+      >
+        {locations.map((location: MapLocation) => (
+          <MapMarker
+            key={location.name}
+            lat={location.lat}
+            lng={location.lng}
+            location={location}
+            markerTypes={markerTypes}
+          />
+        ))}
+      </GoogleMapReact>
       {title && <TitleBlock title={title} subtitle={subtitle} />}
       <MapKey markerTypes={markerTypes} />
     </div>

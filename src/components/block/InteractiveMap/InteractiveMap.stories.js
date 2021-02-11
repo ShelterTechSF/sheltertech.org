@@ -18,6 +18,49 @@ const dummyMarkerTypes = [
   },
 ];
 
+const dummyLocations = [
+  {
+    lat: 37.78697750331876,
+    lng: -122.40519564996274,
+    name: "Museum of Ice Cream",
+    subtitle: "320 people",
+    fundingUrl: "/",
+    markerType: "Current Installation",
+  },
+  {
+    lat: 37.77125701814453,
+    lng: -122.446282346944,
+    name: "Ben & Jerry's",
+    subtitle: "120 people",
+    fundingUrl: "/",
+    markerType: "Current Installation",
+  },
+  {
+    lat: 37.78061869726422,
+    lng: -122.47771010943731,
+    name: "Joe's Ice Cream",
+    subtitle: "4563 people",
+    fundingUrl: "/",
+    markerType: "Planned Installation",
+  },
+  {
+    lat: 37.78923780888709,
+    lng: -122.43414513279457,
+    name: "Smitten Ice Cream",
+    subtitle: ">10,000 people",
+    fundingUrl: "/",
+    markerType: "Planned Installation",
+  },
+  {
+    lat: 37.758684521153505,
+    lng: -122.42044428675193,
+    name: "Garden Creamery",
+    subtitle: "16 people",
+    fundingUrl: "/",
+    markerType: "Planned Installation",
+  },
+];
+
 // ----------------------------- //
 //          Component
 // ----------------------------- //
@@ -34,6 +77,7 @@ const Template = ({
   subtitle,
   latLngBounds,
   markerTypes,
+  locations,
 }) => (
   <InteractiveMap
     center={center}
@@ -42,6 +86,7 @@ const Template = ({
     subtitle={subtitle}
     latLngBounds={latLngBounds}
     markerTypes={markerTypes}
+    locations={locations}
   />
 );
 
@@ -66,4 +111,5 @@ DefaultInteractiveMap.args = {
     east: -122.37,
   },
   markerTypes: dummyMarkerTypes,
+  locations: dummyLocations,
 };

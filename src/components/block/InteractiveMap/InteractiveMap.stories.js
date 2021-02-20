@@ -9,11 +9,11 @@ import UpcomingInstallationMarker from "./upcomingInstallationMarker.svg";
 
 const dummyMarkerTypes = [
   {
-    name: "Live Installation",
+    name: "Live Installations",
     imgPath: LiveInstallationMarker,
   },
   {
-    name: "Upcoming Installation",
+    name: "Upcoming Installations",
     imgPath: UpcomingInstallationMarker,
   },
 ];
@@ -25,7 +25,7 @@ const dummyLocations = [
     name: "Museum of Ice Cream",
     subtitle: "320 people",
     fundingUrl: "/",
-    markerType: "Live Installation",
+    markerType: "Live Installations",
   },
   {
     lat: 37.77125701814453,
@@ -33,7 +33,7 @@ const dummyLocations = [
     name: "Ben & Jerry's",
     subtitle: "120 people",
     fundingUrl: "/",
-    markerType: "Live Installation",
+    markerType: "Live Installations",
   },
   {
     lat: 37.78061869726422,
@@ -41,7 +41,7 @@ const dummyLocations = [
     name: "Joe's Ice Cream",
     subtitle: "4563 people",
     fundingUrl: "/",
-    markerType: "Upcoming Installation",
+    markerType: "Upcoming Installations",
   },
   {
     lat: 37.78923780888709,
@@ -49,7 +49,7 @@ const dummyLocations = [
     name: "Smitten Ice Cream",
     subtitle: ">10,000 people",
     fundingUrl: "/",
-    markerType: "Upcoming Installation",
+    markerType: "Upcoming Installations",
   },
   {
     lat: 37.758684521153505,
@@ -57,7 +57,7 @@ const dummyLocations = [
     name: "Garden Creamery",
     subtitle: "16 people",
     fundingUrl: "/",
-    markerType: "Upcoming Installation",
+    markerType: "Upcoming Installations",
   },
 ];
 

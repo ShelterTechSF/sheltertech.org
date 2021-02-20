@@ -103,7 +103,6 @@ DefaultInteractiveMap.args = {
   },
   zoom: 12.9,
   title: "ShelterConnect Installations",
-  subtitle: "Interactive Map",
   latLngBounds: {
     north: 37.82,
     south: 37.7,

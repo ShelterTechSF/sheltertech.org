@@ -1,7 +1,7 @@
 import React from "react";
 import InteractiveMap from "./InteractiveMap";
-import CurrentInstallationMarker from "./currentInstallationMarker.svg";
-import PlannedInstallationMarker from "./plannedInstallationMarker.svg";
+import LiveInstallationMarker from "./liveInstallationMarker.svg";
+import UpcomingInstallationMarker from "./upcomingInstallationMarker.svg";
 
 // ----------------------------- //
 //          Dummy Data
@@ -9,12 +9,12 @@ import PlannedInstallationMarker from "./plannedInstallationMarker.svg";
 
 const dummyMarkerTypes = [
   {
-    name: "Current Installation",
-    imgPath: CurrentInstallationMarker,
+    name: "Live Installation",
+    imgPath: LiveInstallationMarker,
   },
   {
-    name: "Planned Installation",
-    imgPath: PlannedInstallationMarker,
+    name: "Upcoming Installation",
+    imgPath: UpcomingInstallationMarker,
   },
 ];
 
@@ -25,7 +25,7 @@ const dummyLocations = [
     name: "Museum of Ice Cream",
     subtitle: "320 people",
     fundingUrl: "/",
-    markerType: "Current Installation",
+    markerType: "Live Installation",
   },
   {
     lat: 37.77125701814453,
@@ -33,7 +33,7 @@ const dummyLocations = [
     name: "Ben & Jerry's",
     subtitle: "120 people",
     fundingUrl: "/",
-    markerType: "Current Installation",
+    markerType: "Live Installation",
   },
   {
     lat: 37.78061869726422,
@@ -41,7 +41,7 @@ const dummyLocations = [
     name: "Joe's Ice Cream",
     subtitle: "4563 people",
     fundingUrl: "/",
-    markerType: "Planned Installation",
+    markerType: "Upcoming Installation",
   },
   {
     lat: 37.78923780888709,
@@ -49,7 +49,7 @@ const dummyLocations = [
     name: "Smitten Ice Cream",
     subtitle: ">10,000 people",
     fundingUrl: "/",
-    markerType: "Planned Installation",
+    markerType: "Upcoming Installation",
   },
   {
     lat: 37.758684521153505,
@@ -57,7 +57,7 @@ const dummyLocations = [
     name: "Garden Creamery",
     subtitle: "16 people",
     fundingUrl: "/",
-    markerType: "Planned Installation",
+    markerType: "Upcoming Installation",
   },
 ];
 

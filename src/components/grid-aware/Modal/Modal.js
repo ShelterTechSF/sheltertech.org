@@ -14,14 +14,8 @@ const Modal = ({
   contentLabel,
   noBezel,
 }) => {
-  const modalClassName = classNames(s.content, {
-    [s.noBezel]: noBezel,
-    [s.withBezel]: !noBezel,
-  });
-  const buttonClassName = classNames(s.closeButton, {
-    [s.noBezel]: noBezel,
-    [s.withBezel]: !noBezel,
-  });
+  const modalClassName = classNames(s.content, noBezel ? s.noBezel : s.withBezel);
+  const buttonClassName = classNames(s.content, noBezel ? s.noBezel : s.withBezel);
 
   return (
     <ReactModal

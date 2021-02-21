@@ -5,10 +5,7 @@ import React from "react";
 import s from "./ProgramCard.module.css";
 
 const ProgramCard = ({ theme, image, imageAlt, title, description }) => {
-  const backgroundTheme = classNames(s.programCardContainer, {
-    [s.light]: theme === "light",
-    [s.dark]: theme === "dark",
-  });
+  const backgroundTheme = classNames(s.programCardContainer, s[theme]);
 
   return (
     <div className={backgroundTheme}>

@@ -68,6 +68,12 @@ const dummyLocations = [
 export default {
   title: "Block/InteractiveMap",
   component: InteractiveMap,
+  parameters: {
+    storyshots: { disable: true },
+    /* Jest is DISABLED for this story, because it cannot make sense
+    of Google Maps and will always fail, unless we provide our own
+    mock implementation of Google Maps */
+  },
 };
 
 const Template = ({

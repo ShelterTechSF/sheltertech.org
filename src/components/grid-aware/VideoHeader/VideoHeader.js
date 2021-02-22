@@ -22,7 +22,13 @@ const CTAButtons = ({ buttons }) => (
 );
 
 CTAButtons.propTypes = {
-  buttons: PropTypes.string.isRequired,
+  buttons: PropTypes.arrayOf({
+    text: PropTypes.string.isRequired,
+    noHover: PropTypes.bool,
+    externalLink: PropTypes.string.isRequired,
+    internalLink: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
 const VideoHeaderText = ({ title, description }) => (

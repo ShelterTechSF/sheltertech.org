@@ -79,13 +79,15 @@ TwoParagraphBlock.propTypes = {
   paragraph1: PropTypes.string.isRequired,
   paragraph2: PropTypes.node.isRequired,
   image: ImagePropType.isRequired,
-  ctaButtons: PropTypes.arrayOf({
-    text: PropTypes.string.isRequired,
-    noHover: PropTypes.bool,
-    externalLink: PropTypes.string.isRequired,
-    internalLink: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
-  }).isRequired,
+  ctaButtons: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      noHover: PropTypes.bool,
+      externalLink: PropTypes.string.isRequired,
+      internalLink: PropTypes.string.isRequired,
+      onClick: PropTypes.func.isRequired,
+    })
+  ).isRequired,
 };
 
 export default TwoParagraphBlock;

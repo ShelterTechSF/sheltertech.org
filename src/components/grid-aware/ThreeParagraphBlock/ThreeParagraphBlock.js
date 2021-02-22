@@ -61,7 +61,7 @@ const ParagraphBlock = ({ title, description, button }) => {
 ParagraphBlock.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  button: PropTypes.shape({
+  button: PropTypes.arrayOf({
     text: PropTypes.string.isRequired,
     noHover: PropTypes.bool,
     externalLink: PropTypes.string.isRequired,
@@ -93,7 +93,7 @@ CTABlock.propTypes = {
   title: PropTypes.string.isRequired,
   buttons: PropTypes.arrayOf({
     text: PropTypes.string.isRequired,
-    noHover: PropTypes.boolean,
+    noHover: PropTypes.bool,
     externalLink: PropTypes.string.isRequired,
     internalLink: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
@@ -221,7 +221,7 @@ ThreeParagraphBlock.propTypes = {
   ctaTitle: PropTypes.string,
   ctaButtons: PropTypes.arrayOf({
     text: PropTypes.string.isRequired,
-    noHover: PropTypes.boolean,
+    noHover: PropTypes.bool,
     externalLink: PropTypes.string.isRequired,
     internalLink: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,

@@ -82,7 +82,7 @@ const VideoHeader = ({
 VideoHeader.propTypes = {
   ctaButtons: PropTypes.arrayOf({
     text: PropTypes.string.isRequired,
-    noHover: PropTypes.boolean,
+    noHover: PropTypes.bool,
     externalLink: PropTypes.string.isRequired,
     internalLink: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,

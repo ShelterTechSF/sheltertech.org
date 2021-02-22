@@ -7,7 +7,6 @@
     "allowJs": true, // Allow a mix of JS and TS until we fully migrate to TS.
     "jsx": "react",
     "noEmit": true, // No need to emit .d.ts files, since we're not publishing a package.
-    "esModuleInterop": true,
 
     // Strict Checks
     "strict": true,

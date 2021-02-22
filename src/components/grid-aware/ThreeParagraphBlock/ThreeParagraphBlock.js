@@ -61,7 +61,13 @@ const ParagraphBlock = ({ title, description, button }) => {
 ParagraphBlock.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  button: PropTypes.shape(Button.propTypes),
+  button: PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    noHover: PropTypes.bool,
+    externalLink: PropTypes.string.isRequired,
+    internalLink: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
+  }),
 };
 
 ParagraphBlock.defaultProps = {
@@ -85,7 +91,13 @@ const CTABlock = ({ title, buttons }) => (
 
 CTABlock.propTypes = {
   title: PropTypes.string.isRequired,
-  buttons: PropTypes.arrayOf(Button.propTypes).isRequired,
+  buttons: PropTypes.arrayOf({
+    text: PropTypes.string.isRequired,
+    noHover: PropTypes.boolean,
+    externalLink: PropTypes.string.isRequired,
+    internalLink: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
 /* Main component */
@@ -207,7 +219,13 @@ ThreeParagraphBlock.propTypes = {
     alt: PropTypes.string,
   }),
   ctaTitle: PropTypes.string,
-  ctaButtons: PropTypes.arrayOf(Button.propTypes),
+  ctaButtons: PropTypes.arrayOf({
+    text: PropTypes.string.isRequired,
+    noHover: PropTypes.boolean,
+    externalLink: PropTypes.string.isRequired,
+    internalLink: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
+  }),
 };
 
 ThreeParagraphBlock.defaultProps = {

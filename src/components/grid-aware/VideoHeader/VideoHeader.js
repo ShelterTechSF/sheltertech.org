@@ -22,7 +22,7 @@ const CTAButtons = ({ buttons }) => (
 );
 
 CTAButtons.propTypes = {
-  buttons: PropTypes.arrayOf(Button.propTypes).isRequired,
+  buttons: PropTypes.string.isRequired,
 };
 
 const VideoHeaderText = ({ title, description }) => (
@@ -80,7 +80,13 @@ const VideoHeader = ({
 };
 
 VideoHeader.propTypes = {
-  ctaButtons: PropTypes.arrayOf(Button.propTypes).isRequired,
+  ctaButtons: PropTypes.arrayOf({
+    text: PropTypes.string.isRequired,
+    noHover: PropTypes.boolean,
+    externalLink: PropTypes.string.isRequired,
+    internalLink: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
+  }).isRequired,
   image: PropTypes.string.isRequired,
   playButtonOnClick: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,

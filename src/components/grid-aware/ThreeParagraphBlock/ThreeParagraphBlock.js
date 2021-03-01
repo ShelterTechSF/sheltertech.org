@@ -61,13 +61,20 @@ const ParagraphBlock = ({ title, description, button }) => {
 ParagraphBlock.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  button: PropTypes.shape({
-    text: PropTypes.string.isRequired,
-    noHover: PropTypes.bool,
-    externalLink: PropTypes.string.isRequired,
-    internalLink: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
-  }),
+  button: PropTypes.oneOfType([
+    PropTypes.exact({
+      text: PropTypes.string,
+      externalLink: PropTypes.string,
+    }),
+    PropTypes.exact({
+      text: PropTypes.string,
+      internalLink: PropTypes.string,
+    }),
+    PropTypes.exact({
+      text: PropTypes.string,
+      onClick: PropTypes.func,
+    }),
+  ]),
 };
 
 ParagraphBlock.defaultProps = {

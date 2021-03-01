@@ -1,9 +1,16 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
 import s from "./HomePageLargeParagraph.module.css";
 
-const HomePageLargeParagraph = ({ title, description }) => {
+type HomePageLargeParagraphProps = {
+  title: string;
+  description: string;
+};
+
+const HomePageLargeParagraph = ({
+  title,
+  description,
+}: HomePageLargeParagraphProps) => {
   return (
     <div className={s.bleedWrapper}>
       <div className={s.bleedMainContent}>
@@ -16,11 +23,6 @@ const HomePageLargeParagraph = ({ title, description }) => {
       </div>
     </div>
   );
-};
-
-HomePageLargeParagraph.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
 };
 
 export default HomePageLargeParagraph;

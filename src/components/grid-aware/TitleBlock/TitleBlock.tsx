@@ -1,9 +1,12 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
 import s from "./TitleBlock.module.css";
 
-const TitleBlock = ({ title }) => {
+type TitleBlockProps = {
+  title: string;
+};
+
+const TitleBlock = ({ title }: TitleBlockProps) => {
   return (
     <div className={s.bleedWrapper}>
       <div className={s.bleedMainContent}>
@@ -11,10 +14,6 @@ const TitleBlock = ({ title }) => {
       </div>
     </div>
   );
-};
-
-TitleBlock.propTypes = {
-  title: PropTypes.string.isRequired,
 };
 
 export default TitleBlock;

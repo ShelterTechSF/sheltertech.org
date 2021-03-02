@@ -1,9 +1,16 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
 import s from "./COVID19InfoBoxBlock.module.css";
 
-const COVID19InfoBoxBlock = ({ title, description }) => {
+type COVID19InfoBoxBlockProps = {
+  title: string;
+  description: string;
+};
+
+const COVID19InfoBoxBlock = ({
+  title,
+  description,
+}: COVID19InfoBoxBlockProps) => {
   return (
     <div className={s.bleedWrapper}>
       <div className={s.bleedMainContent}>
@@ -12,11 +19,6 @@ const COVID19InfoBoxBlock = ({ title, description }) => {
       </div>
     </div>
   );
-};
-
-COVID19InfoBoxBlock.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
 };
 
 export default COVID19InfoBoxBlock;

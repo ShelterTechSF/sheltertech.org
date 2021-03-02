@@ -22,13 +22,25 @@ const CTAButtons = ({ buttons }) => (
 );
 
 CTAButtons.propTypes = {
-  buttons: PropTypes.arrayOf({
-    text: PropTypes.string.isRequired,
-    noHover: PropTypes.bool,
-    externalLink: PropTypes.string.isRequired,
-    internalLink: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
-  }).isRequired,
+  buttons: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.exact({
+        text: PropTypes.string,
+        noHover: PropTypes.bool,
+        externalLink: PropTypes.string,
+      }),
+      PropTypes.exact({
+        text: PropTypes.string,
+        noHover: PropTypes.bool,
+        internalLink: PropTypes.string,
+      }),
+      PropTypes.exact({
+        text: PropTypes.string,
+        noHover: PropTypes.bool,
+        onClick: PropTypes.func,
+      }),
+    ])
+  ).isRequired,
 };
 
 const VideoHeaderText = ({ title, description }) => (
@@ -86,13 +98,25 @@ const VideoHeader = ({
 };
 
 VideoHeader.propTypes = {
-  ctaButtons: PropTypes.arrayOf({
-    text: PropTypes.string.isRequired,
-    noHover: PropTypes.bool,
-    externalLink: PropTypes.string.isRequired,
-    internalLink: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
-  }).isRequired,
+  ctaButtons: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.exact({
+        text: PropTypes.string,
+        noHover: PropTypes.bool,
+        externalLink: PropTypes.string,
+      }),
+      PropTypes.exact({
+        text: PropTypes.string,
+        noHover: PropTypes.bool,
+        internalLink: PropTypes.string,
+      }),
+      PropTypes.exact({
+        text: PropTypes.string,
+        noHover: PropTypes.bool,
+        onClick: PropTypes.func,
+      }),
+    ])
+  ).isRequired,
   image: PropTypes.string.isRequired,
   playButtonOnClick: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,

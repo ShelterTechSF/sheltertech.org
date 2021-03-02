@@ -226,7 +226,22 @@ ThreeParagraphBlock.propTypes = {
     alt: PropTypes.string,
   }),
   ctaTitle: PropTypes.string,
-  ctaButtons: PropTypes.arrayOf(Button.propTypes),
+  ctaButtons: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.exact({
+        text: PropTypes.string,
+        externalLink: PropTypes.string,
+      }),
+      PropTypes.exact({
+        text: PropTypes.string,
+        internalLink: PropTypes.string,
+      }),
+      PropTypes.exact({
+        text: PropTypes.string,
+        onClick: PropTypes.func,
+      }),
+    ])
+  ),
 };
 
 ThreeParagraphBlock.defaultProps = {

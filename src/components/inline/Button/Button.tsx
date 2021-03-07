@@ -27,7 +27,7 @@ const Button = (props: ButtonProps) => {
   const { text } = props;
   const className = `${s.button} ${props.noHover ? s.noHover : ""}`;
 
-  if ("externalLink" in props) {
+  if ("externalLink" in props && props.externalLink !== undefined) {
     const { externalLink } = props;
     return (
       <a
@@ -40,7 +40,7 @@ const Button = (props: ButtonProps) => {
       </a>
     );
   }
-  if ("internalLink" in props) {
+  if ("internalLink" in props && props.internalLink !== undefined) {
     const { internalLink } = props;
     return (
       <Link className={className} to={internalLink}>
@@ -48,7 +48,7 @@ const Button = (props: ButtonProps) => {
       </Link>
     );
   }
-  if ("onClick" in props) {
+  if ("onClick" in props && props.onClick !== undefined) {
     const { onClick } = props;
     return (
       <button

@@ -3,32 +3,24 @@ import * as React from "react";
 
 import s from "./Button.module.css";
 
-type CommonProps = {
+type ButtonProps = {
   text: string;
   noHover?: boolean;
+  externalLink?: string;
+  internalLink?: string;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-type ExternalButtonProps = {
-  externalLink: string;
-};
+const Button = ({
+  text,
+  noHover,
+  externalLink,
+  internalLink,
+  onClick,
+}: ButtonProps) => {
+  const className = `${s.button} ${noHover ? s.noHover : ""}`;
 
-type InternalButtonProps = {
-  internalLink: string;
-};
-
-type OnClickProps = {
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-};
-
-type ButtonProps = CommonProps &
-  (ExternalButtonProps | InternalButtonProps | OnClickProps);
-
-const Button = (props: ButtonProps) => {
-  const { text } = props;
-  const className = `${s.button} ${props.noHover ? s.noHover : ""}`;
-
-  if ("externalLink" in props && props.externalLink !== undefined) {
-    const { externalLink } = props;
+  if (externalLink !== undefined) {
     return (
       <a
         rel="noreferrer"
@@ -40,16 +32,14 @@ const Button = (props: ButtonProps) => {
       </a>
     );
   }
-  if ("internalLink" in props && props.internalLink !== undefined) {
-    const { internalLink } = props;
+  if (internalLink !== undefined) {
     return (
       <Link className={className} to={internalLink}>
         {text}
       </Link>
     );
   }
-  if ("onClick" in props && props.onClick !== undefined) {
-    const { onClick } = props;
+  if (onClick !== undefined) {
     return (
       <button
         type="button"

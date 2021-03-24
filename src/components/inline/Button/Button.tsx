@@ -3,7 +3,7 @@ import * as React from "react";
 
 import s from "./Button.module.css";
 
-type ButtonProps = {
+export type ButtonProps = {
   text: string;
   noHover?: boolean;
   externalLink?: string;

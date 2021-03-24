@@ -1,39 +1,22 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
-import Button from "../../inline/Button";
+import Button, { ButtonProps } from "../../inline/Button";
 
 import s from "./ThreeParagraphBlock.module.css";
 
-/* PropType shapes */
-
-const ParagraphPropType = PropTypes.shape({
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  button: PropTypes.oneOfType([
-    PropTypes.exact({
-      text: PropTypes.string,
-      externalLink: PropTypes.string,
-    }),
-    PropTypes.exact({
-      text: PropTypes.string,
-      internalLink: PropTypes.string,
-    }),
-    PropTypes.exact({
-      text: PropTypes.string,
-      onClick: PropTypes.func,
-    }),
-  ]),
-});
-
-const ImagePropType = PropTypes.shape({
-  url: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-});
-
 /* Subcomponents */
 
-const ParagraphBlock = ({ title, description, button }) => {
+type ParagraphBlockProps = {
+  title: string;
+  description: string;
+  button?: ButtonProps;
+};
+
+const ParagraphBlock = ({
+  title,
+  description,
+  button,
+}: ParagraphBlockProps) => {
   let buttonWrapper;
 
   if (button) {
@@ -58,30 +41,12 @@ const ParagraphBlock = ({ title, description, button }) => {
   );
 };
 
-ParagraphBlock.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  button: PropTypes.oneOfType([
-    PropTypes.exact({
-      text: PropTypes.string,
-      externalLink: PropTypes.string,
-    }),
-    PropTypes.exact({
-      text: PropTypes.string,
-      internalLink: PropTypes.string,
-    }),
-    PropTypes.exact({
-      text: PropTypes.string,
-      onClick: PropTypes.func,
-    }),
-  ]),
+type CTABlockProps = {
+  title: string;
+  buttons: ButtonProps[];
 };
 
-ParagraphBlock.defaultProps = {
-  button: null,
-};
-
-const CTABlock = ({ title, buttons }) => (
+const CTABlock = ({ title, buttons }: CTABlockProps) => (
   <div>
     <div className={s.ctaTitleBlock}>
       <div className={s.ctaTitle}>{title}</div>
@@ -96,18 +61,24 @@ const CTABlock = ({ title, buttons }) => (
   </div>
 );
 
-CTABlock.propTypes = {
-  title: PropTypes.string.isRequired,
-  buttons: PropTypes.arrayOf({
-    text: PropTypes.string.isRequired,
-    noHover: PropTypes.bool,
-    externalLink: PropTypes.string.isRequired,
-    internalLink: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
-  }).isRequired,
+/* Main component */
+
+type ImageProps = {
+  url: string;
+  alt: string;
 };
 
-/* Main component */
+type ThreeParagraphBlockProps = {
+  title: string;
+  paragraph1: ParagraphBlockProps;
+  paragraph2: ParagraphBlockProps;
+  paragraph3: ParagraphBlockProps;
+  leftBottomImage: ImageProps;
+  rightImage: ImageProps;
+  leftTopImage?: ImageProps;
+  ctaTitle?: string;
+  ctaButtons?: ButtonProps[];
+};
 
 const ThreeParagraphBlock = ({
   title,
@@ -119,8 +90,8 @@ const ThreeParagraphBlock = ({
   rightImage,
   ctaTitle,
   ctaButtons,
-}) => {
-  let optionalLeftTopImage;
+}: ThreeParagraphBlockProps) => {
+  let optionalLeftTopImage: JSX.Element;
   let leftBottomImageWrapperClassName = s.leftBottomImageWrapper;
 
   if (leftTopImage) {
@@ -212,42 +183,6 @@ const ThreeParagraphBlock = ({
       </div>
     </div>
   );
-};
-
-ThreeParagraphBlock.propTypes = {
-  title: PropTypes.string.isRequired,
-  paragraph1: ParagraphPropType.isRequired,
-  paragraph2: ParagraphPropType.isRequired,
-  paragraph3: ParagraphPropType.isRequired,
-  leftBottomImage: ImagePropType.isRequired,
-  rightImage: ImagePropType.isRequired,
-  leftTopImage: PropTypes.shape({
-    url: PropTypes.string,
-    alt: PropTypes.string,
-  }),
-  ctaTitle: PropTypes.string,
-  ctaButtons: PropTypes.arrayOf(
-    PropTypes.oneOfType([
-      PropTypes.exact({
-        text: PropTypes.string,
-        externalLink: PropTypes.string,
-      }),
-      PropTypes.exact({
-        text: PropTypes.string,
-        internalLink: PropTypes.string,
-      }),
-      PropTypes.exact({
-        text: PropTypes.string,
-        onClick: PropTypes.func,
-      }),
-    ])
-  ),
-};
-
-ThreeParagraphBlock.defaultProps = {
-  leftTopImage: null,
-  ctaTitle: null,
-  ctaButtons: null,
 };
 
 export default ThreeParagraphBlock;

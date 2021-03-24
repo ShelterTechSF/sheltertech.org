@@ -24,6 +24,8 @@ module.exports = {
       "error",
       { extensions: [".js", ".jsx", ".tsx"] },
     ],
+    // Disable prop-types check because they're redundant with TypeScript.
+    "react/prop-types": ["off"],
   },
   overrides: [
     {

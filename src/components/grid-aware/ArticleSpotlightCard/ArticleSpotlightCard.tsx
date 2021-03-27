@@ -1,11 +1,24 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
-import Button from "../../inline/Button";
+import Button, { ButtonProps } from "../../inline/Button";
 
 import s from "./ArticleSpotlightCard.module.css";
 
-const TextCard = ({ eyebrowText, title, subtitle, description, button }) => (
+type TextCardProps = {
+  eyebrowText: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  button: ButtonProps;
+};
+
+const TextCard = ({
+  eyebrowText,
+  title,
+  subtitle,
+  description,
+  button,
+}: TextCardProps) => (
   <div className={s.textCard}>
     <div className={s.eyebrow}>{eyebrowText}</div>
     <div className={s.title}>{title}</div>
@@ -22,16 +35,13 @@ const TextCard = ({ eyebrowText, title, subtitle, description, button }) => (
   </div>
 );
 
-TextCard.propTypes = {
-  eyebrowText: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string,
-  description: PropTypes.string.isRequired,
-  button: PropTypes.shape(Button.propTypes).isRequired,
-};
-
-TextCard.defaultProps = {
-  subtitle: null,
+type ArticleSpotlightCardProps = {
+  eyebrowText: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  button: ButtonProps;
+  backgroundImage: string;
 };
 
 const ArticleSpotlightCard = ({
@@ -41,7 +51,7 @@ const ArticleSpotlightCard = ({
   description,
   button,
   backgroundImage,
-}) => (
+}: ArticleSpotlightCardProps) => (
   <div className={s.bleedWrapper}>
     <div
       className={s.bleedBackground}
@@ -66,18 +76,5 @@ const ArticleSpotlightCard = ({
     </div>
   </div>
 );
-
-ArticleSpotlightCard.propTypes = {
-  eyebrowText: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string,
-  description: PropTypes.string.isRequired,
-  button: PropTypes.shape(Button.propTypes).isRequired,
-  backgroundImage: PropTypes.string.isRequired,
-};
-
-ArticleSpotlightCard.defaultProps = {
-  subtitle: null,
-};
 
 export default ArticleSpotlightCard;

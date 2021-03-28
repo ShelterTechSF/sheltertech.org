@@ -1,14 +1,21 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
 import s from "./PartnersAndSponsorsBlock.module.css";
 
-const LogoPropType = PropTypes.shape({
-  url: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-});
+type LogoPropType = {
+  url: string;
+  alt: string;
+};
 
-const PartnersAndSponsorsBlock = ({ title, partnersAndSponsors }) => {
+type PartnersAndSponsorsBlockProps = {
+  title: string;
+  partnersAndSponsors: LogoPropType[];
+};
+
+const PartnersAndSponsorsBlock = ({
+  title,
+  partnersAndSponsors,
+}: PartnersAndSponsorsBlockProps) => {
   const GridAreaLeft = () => (
     <div className={s.gridAreaLeft}>
       <h1 className={s.title}>{title}</h1>
@@ -35,11 +42,6 @@ const PartnersAndSponsorsBlock = ({ title, partnersAndSponsors }) => {
       </section>
     </div>
   );
-};
-
-PartnersAndSponsorsBlock.propTypes = {
-  title: PropTypes.string.isRequired,
-  partnersAndSponsors: PropTypes.arrayOf(LogoPropType).isRequired,
 };
 
 export default PartnersAndSponsorsBlock;

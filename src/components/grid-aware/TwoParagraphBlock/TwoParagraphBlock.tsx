@@ -1,18 +1,18 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
-import Button from "../../inline/Button";
+import Button, { ButtonProps } from "../../inline/Button";
 
 import s from "./TwoParagraphBlock.module.css";
 
-/* PropType shapes */
-
-const ImagePropType = PropTypes.shape({
-  url: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-});
-
 /* Main component */
+
+type TwoParagraphBlockProps = {
+  title: string;
+  paragraph1: string;
+  paragraph2: string;
+  image: { url: string; alt: string };
+  ctaButtons: ButtonProps[];
+};
 
 const TwoParagraphBlock = ({
   title,
@@ -20,7 +20,7 @@ const TwoParagraphBlock = ({
   paragraph2,
   image,
   ctaButtons,
-}) => {
+}: TwoParagraphBlockProps) => {
   const GridAreaTitle = () => (
     <div className={s.gridAreaTitle}>
       <h1 className={s.title}>{title}</h1>
@@ -72,32 +72,6 @@ const TwoParagraphBlock = ({
       </div>
     </div>
   );
-};
-
-TwoParagraphBlock.propTypes = {
-  title: PropTypes.string.isRequired,
-  paragraph1: PropTypes.string.isRequired,
-  paragraph2: PropTypes.node.isRequired,
-  image: ImagePropType.isRequired,
-  ctaButtons: PropTypes.arrayOf(
-    PropTypes.oneOfType([
-      PropTypes.exact({
-        text: PropTypes.string,
-        noHover: PropTypes.bool,
-        externalLink: PropTypes.string,
-      }),
-      PropTypes.exact({
-        text: PropTypes.string,
-        noHover: PropTypes.bool,
-        internalLink: PropTypes.string,
-      }),
-      PropTypes.exact({
-        text: PropTypes.string,
-        noHover: PropTypes.bool,
-        onClick: PropTypes.func,
-      }),
-    ])
-  ).isRequired,
 };
 
 export default TwoParagraphBlock;

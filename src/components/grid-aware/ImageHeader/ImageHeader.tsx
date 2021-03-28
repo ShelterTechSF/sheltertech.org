@@ -1,14 +1,20 @@
-import PropTypes from "prop-types";
-import React from "react";
-
-import Button from "../../inline/Button";
-
+import * as React from "react";
+import Button, { ButtonProps } from "../../inline/Button";
 import s from "./ImageHeader.module.css";
 
-const ImagePropType = PropTypes.shape({
-  url: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-});
+type ImageProps = {
+  url: string;
+  alt: string;
+};
+
+type ImageHeaderProps = {
+  title: string;
+  subtitle: string;
+  description: string;
+  image1: ImageProps;
+  image2: ImageProps;
+  ctaButtons: ButtonProps[];
+};
 
 const ImageHeader = ({
   title,
@@ -17,7 +23,7 @@ const ImageHeader = ({
   image1,
   image2,
   ctaButtons,
-}) => {
+}: ImageHeaderProps) => {
   const GridAreaLeft = () => (
     <div className={s.gridAreaText}>
       <h1 className={s.title}>{title}</h1>
@@ -57,15 +63,6 @@ const ImageHeader = ({
       </div>
     </div>
   );
-};
-
-ImageHeader.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  image1: ImagePropType.isRequired,
-  image2: ImagePropType.isRequired,
-  ctaButtons: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)).isRequired,
 };
 
 export default ImageHeader;

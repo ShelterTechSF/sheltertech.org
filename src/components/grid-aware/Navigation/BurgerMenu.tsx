@@ -1,10 +1,17 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 import { push as Menu } from "react-burger-menu";
 
 import s from "./BurgerMenu.module.css";
-import { NavLink, NavList } from "./NavList";
+import { NavLinkProps, NavList, ThemeType } from "./NavList";
 import navListStyles from "./NavList.BurgerMenu.module.css";
+
+type BurgerMenuProps = {
+  pageWrapperID: string;
+  outerContainerID: string;
+  navigationItems: NavLinkProps[];
+  isOpen: boolean;
+  setIsOpen: (newValue: boolean) => void;
+};
 
 const BurgerMenu = ({
   pageWrapperID,
@@ -12,7 +19,7 @@ const BurgerMenu = ({
   isOpen,
   setIsOpen,
   navigationItems,
-}) => (
+}: BurgerMenuProps) => (
   <Menu
     burgerButtonClassName={s.burgerButton}
     className={s.menuWrap}
@@ -29,17 +36,9 @@ const BurgerMenu = ({
     right
     width="286px"
   >
-    <NavList items={navigationItems} theme={navListStyles} />
+    {/* Note: The type assertion as ThemeType is necessary because our CSS modules shim for TypeScript doesn't know about the specific keys that are accessible. */}
+    <NavList items={navigationItems} theme={navListStyles as ThemeType} />
   </Menu>
 );
-
-BurgerMenu.propTypes = {
-  pageWrapperID: PropTypes.string.isRequired,
-  outerContainerID: PropTypes.string.isRequired,
-  navigationItems: PropTypes.arrayOf(PropTypes.shape(NavLink.propTypes))
-    .isRequired,
-  isOpen: PropTypes.bool.isRequired,
-  setIsOpen: PropTypes.func.isRequired,
-};
 
 export default BurgerMenu;

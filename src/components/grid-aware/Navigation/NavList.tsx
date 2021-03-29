@@ -1,17 +1,32 @@
 import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
 const HOME_URL = "";
 
+export type ThemeType = {
+  button: string;
+  currentPage: string;
+  navLink: string;
+  navList: string;
+  navListItem: string;
+};
+
+export type NavLinkProps = {
+  text: string;
+  internalLink?: string;
+  externalLink?: string;
+  isButton?: boolean;
+  theme: ThemeType;
+};
+
 /** An internal, external, or button link. */
-export const NavLink = ({
+const NavLink = ({
   text,
   internalLink,
   externalLink,
-  isButton,
+  isButton = false,
   theme,
-}) => {
+}: NavLinkProps) => {
   const className = `${theme.navLink} ${isButton ? theme.button : ""}`;
   if (internalLink) {
     // Enable the "active" style for any nested pages, except for the home page,
@@ -47,19 +62,13 @@ export const NavLink = ({
   throw new Error("NavLink missing required link prop.");
 };
 
-NavLink.propTypes = {
-  text: PropTypes.string.isRequired,
-  internalLink: PropTypes.string,
-  externalLink: PropTypes.string,
-  isButton: PropTypes.bool,
-};
-
-NavLink.defaultProps = {
-  isButton: false,
+type NavListProps = {
+  items: NavLinkProps[];
+  theme: ThemeType;
 };
 
 /** List of navigation items. */
-export const NavList = ({ items, theme }) => (
+export const NavList = ({ items, theme }: NavListProps) => (
   <ul className={theme.navList}>
     {items.map(({ text, internalLink, externalLink, isButton }) => (
       <li key={text} className={theme.navListItem}>
@@ -74,8 +83,3 @@ export const NavList = ({ items, theme }) => (
     ))}
   </ul>
 );
-
-NavList.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.shape(NavLink.propTypes)).isRequired,
-  theme: PropTypes.objectOf(PropTypes.string).isRequired,
-};

@@ -11,7 +11,7 @@ type DonationProjectCardProps = {
 const DonationProjectCard = ({
   title,
   subtitle,
-  background
+  background,
 }: DonationProjectCardProps) => (
   <div
     className={s.container}

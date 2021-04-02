@@ -1,9 +1,13 @@
-
 import * as React from "react";
 import Button, { ButtonProps } from "../../inline/Button";
 
 import s from "./VideoSpotlightBlock.module.css";
-import playIcon from "./PlayIcon.svg";
+
+type TextCardProps = {
+  eyebrowText: string;
+  description: string;
+  button: ButtonProps;
+};
 
 const TextCard = ({ eyebrowText, description, button }: TextCardProps) => (
   <div className={s.textCard}>
@@ -20,10 +24,14 @@ const TextCard = ({ eyebrowText, description, button }: TextCardProps) => (
   </div>
 );
 
-type TextCardProps = {
-  eyebrowText: string,
-  description: string,
-  button: ButtonProps,
+type VideoSpotlightBlockProps = {
+  eyebrowText: string;
+  description: string;
+  button: ButtonProps;
+  imageURL: string;
+  playButtonOnClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  blackBackground?: boolean;
+  playIcon: string;
 };
 
 const VideoSpotlightBlock = ({
@@ -32,7 +40,8 @@ const VideoSpotlightBlock = ({
   button,
   imageURL,
   playButtonOnClick,
-  blackBackground,
+  blackBackground = false,
+  playIcon,
 }: VideoSpotlightBlockProps) => {
   const bleedBackgroundWrapper = `${s.bleedWrapper} ${
     blackBackground ? s.blackBackground : ""
@@ -43,7 +52,7 @@ const VideoSpotlightBlock = ({
       <div className={s.bleedImageWrapper}>
         <div
           className={s.bleedImage}
-          style={{ backgroundImage: `url(${imageURL})` }  }
+          style={{ backgroundImage: `url(${imageURL})` }}
         >
           <button
             className={s.playButton}
@@ -69,19 +78,6 @@ const VideoSpotlightBlock = ({
       </div>
     </div>
   );
-};
-
-type VideoSpotlightBlockProps = {
-  eyebrowText: string,
-  description: string,
-  button: ButtonProps,
-  imageURL: string,
-  playButtonOnClick: (e: React.MouseEvent<HTMLButtonElement>) => void,
-  blackBackground: boolean,
-};
-
-VideoSpotlightBlock.defaultProps = {
-  blackBackground: false,
 };
 
 export default VideoSpotlightBlock;

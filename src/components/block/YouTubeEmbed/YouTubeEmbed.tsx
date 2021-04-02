@@ -1,9 +1,13 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
 import s from "./YouTubeEmbed.module.css";
 
-const YouTubeEmbed = ({ url, title }) => (
+type YouTubeEmbedProps = {
+  url: string;
+  title: string;
+};
+
+const YouTubeEmbed = ({ url, title }: YouTubeEmbedProps) => (
   <div className={s.wrapper}>
     <iframe
       className={s.iframe}
@@ -15,10 +19,5 @@ const YouTubeEmbed = ({ url, title }) => (
     />
   </div>
 );
-
-YouTubeEmbed.propTypes = {
-  url: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-};
 
 export default YouTubeEmbed;

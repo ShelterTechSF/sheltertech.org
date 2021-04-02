@@ -8,7 +8,11 @@ type DonationProjectCardProps = {
   background: string;
 };
 
-const DonationProjectCard = ({ title, subtitle, background }: DonationProjectCardProps) => (
+const DonationProjectCard = ({
+  title,
+  subtitle,
+  background
+}: DonationProjectCardProps) => (
   <div
     className={s.container}
     style={{ backgroundImage: `url('${background}')` }}

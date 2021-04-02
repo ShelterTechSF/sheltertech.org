@@ -1,19 +1,23 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
 import ProgramCard from "../../block/ProgramCard";
 
 import s from "./ProgramsBlock.module.css";
 
-const ProgramsPropType = PropTypes.shape({
-  theme: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  imageAlt: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-});
+type ProgramsPropTypeProps = {
+  theme: string;
+  image: string;
+  imageAlt: string;
+  title: string;
+  description: string;
+};
 
-const ProgramsBlock = ({ title, programs }) => {
+type ProgramsBlockProps = {
+  title: string;
+  programs: ProgramsPropTypeProps[];
+};
+
+const ProgramsBlock = ({ title, programs }: ProgramsBlockProps) => {
   const GridAreaTop = () => (
     <div className={s.gridAreaTop}>
       <h1 className={s.title}>{title}</h1>
@@ -45,11 +49,6 @@ const ProgramsBlock = ({ title, programs }) => {
       </section>
     </div>
   );
-};
-
-ProgramsBlock.propTypes = {
-  title: PropTypes.string.isRequired,
-  programs: PropTypes.arrayOf(ProgramsPropType).isRequired,
 };
 
 export default ProgramsBlock;

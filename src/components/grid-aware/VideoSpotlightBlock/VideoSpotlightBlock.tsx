@@ -1,10 +1,11 @@
-import PropTypes from "prop-types";
-import React from "react";
-import Button from "../../inline/Button";
-import playIcon from "./PlayIcon.svg";
-import s from "./VideoSpotlightBlock.module.css";
 
-const TextCard = ({ eyebrowText, description, button }) => (
+import * as React from "react";
+import Button, { ButtonProps } from "../../inline/Button";
+
+import s from "./VideoSpotlightBlock.module.css";
+import playIcon from "./PlayIcon.svg";
+
+const TextCard = ({ eyebrowText, description, button }: TextCardProps) => (
   <div className={s.textCard}>
     <div className={s.eyebrowText}>{eyebrowText}</div>
     <div className={s.description}>{description}</div>
@@ -19,10 +20,10 @@ const TextCard = ({ eyebrowText, description, button }) => (
   </div>
 );
 
-TextCard.propTypes = {
-  eyebrowText: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  button: PropTypes.shape(Button.propTypes).isRequired,
+type TextCardProps = {
+  eyebrowText: string,
+  description: string,
+  button: ButtonProps,
 };
 
 const VideoSpotlightBlock = ({
@@ -32,7 +33,7 @@ const VideoSpotlightBlock = ({
   imageURL,
   playButtonOnClick,
   blackBackground,
-}) => {
+}: VideoSpotlightBlockProps) => {
   const bleedBackgroundWrapper = `${s.bleedWrapper} ${
     blackBackground ? s.blackBackground : ""
   }`;
@@ -42,7 +43,7 @@ const VideoSpotlightBlock = ({
       <div className={s.bleedImageWrapper}>
         <div
           className={s.bleedImage}
-          style={{ "--background-image": `url(${imageURL})` }}
+          style={{ backgroundImage: `url(${imageURL})` }  }
         >
           <button
             className={s.playButton}
@@ -70,13 +71,13 @@ const VideoSpotlightBlock = ({
   );
 };
 
-VideoSpotlightBlock.propTypes = {
-  eyebrowText: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  button: PropTypes.shape(Button.propTypes).isRequired,
-  imageURL: PropTypes.string.isRequired,
-  playButtonOnClick: PropTypes.func.isRequired,
-  blackBackground: PropTypes.bool,
+type VideoSpotlightBlockProps = {
+  eyebrowText: string,
+  description: string,
+  button: ButtonProps,
+  imageURL: string,
+  playButtonOnClick: (e: React.MouseEvent<HTMLButtonElement>) => void,
+  blackBackground: boolean,
 };
 
 VideoSpotlightBlock.defaultProps = {

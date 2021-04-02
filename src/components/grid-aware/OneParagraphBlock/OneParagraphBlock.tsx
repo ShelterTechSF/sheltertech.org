@@ -1,11 +1,22 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
-import Button from "../../inline/Button";
+import Button, { ButtonProps } from "../../inline/Button";
 
 import s from "./OneParagraphBlock.module.css";
 
-const OneParagraphBlock = ({ title, descriptions, ctaButtons }) => {
+/* Subcomponents */
+
+type OneParagraphBlockProps = {
+  title: string;
+  descriptions: string;
+  ctaButtons: ButtonProps[];
+};
+
+const OneParagraphBlock = ({
+  title,
+  descriptions,
+  ctaButtons,
+}: OneParagraphBlockProps) => {
   const GridAreaLeft = () => (
     <div className={s.gridAreaLeft}>
       <h1 className={s.title}>{title}</h1>
@@ -43,12 +54,6 @@ const OneParagraphBlock = ({ title, descriptions, ctaButtons }) => {
       </div>
     </div>
   );
-};
-
-OneParagraphBlock.propTypes = {
-  title: PropTypes.string.isRequired,
-  descriptions: PropTypes.node.isRequired,
-  ctaButtons: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)).isRequired,
 };
 
 export default OneParagraphBlock;

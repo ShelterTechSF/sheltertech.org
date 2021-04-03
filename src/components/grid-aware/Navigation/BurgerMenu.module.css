@@ -1,3 +1,32 @@
+.navList {
+  font: var(--font-subtitle);
+  margin: 0;
+  padding: 0;
+}
+
+.navListItem {
+  display: block;
+}
+
+.navLink {
+  color: var(--color-gray-700);
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navLink.currentPage {
+  color: var(--color-sheltertech-blue);
+}
+
+.navLink:hover,
+.navLink.currentPage:hover,
+.navLink:active,
+.navLink.currentPage:active {
+  background-color: var(--color-sheltertech-blue);
+  color: var(--color-white);
+}
+
 /* Styles for react-burger-menu's custom CSS classes.
  *
  * https://github.com/negomi/react-burger-menu/tree/v2.9.0#custom-id-andor-classnames

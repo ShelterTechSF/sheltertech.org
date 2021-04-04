@@ -4,7 +4,7 @@ import ProgramCard from "../../block/ProgramCard";
 
 import s from "./ProgramsBlock.module.css";
 
-type ProgramsPropTypeProps = {
+type ProgramType = {
   theme: string;
   image: string;
   imageAlt: string;
@@ -14,7 +14,7 @@ type ProgramsPropTypeProps = {
 
 type ProgramsBlockProps = {
   title: string;
-  programs: ProgramsPropTypeProps[];
+  programs: ProgramType[];
 };
 
 const ProgramsBlock = ({ title, programs }: ProgramsBlockProps) => {

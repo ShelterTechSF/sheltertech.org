@@ -28,8 +28,8 @@ const BlockQuoteBlock = ({ quotes }: BlockQuoteBlockProps) => (
         isIntrinsicHeight
         isPlaying
         interval={10000}
-        naturalSlideHeight={0}
-        naturalSlideWidth={0}
+        naturalSlideHeight={100}
+        naturalSlideWidth={100}
       >
         <Slider>
           {quotes.map(({ quote, attribution }, index) => (

@@ -31,7 +31,6 @@ type VideoSpotlightBlockProps = {
   imageURL: string;
   playButtonOnClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   blackBackground?: boolean;
-  playIcon: string;
 };
 
 const VideoSpotlightBlock = ({
@@ -41,7 +40,6 @@ const VideoSpotlightBlock = ({
   imageURL,
   playButtonOnClick,
   blackBackground = false,
-  playIcon,
 }: VideoSpotlightBlockProps) => {
   const bleedBackgroundWrapper = `${s.bleedWrapper} ${
     blackBackground ? s.blackBackground : ""
@@ -52,7 +50,7 @@ const VideoSpotlightBlock = ({
       <div className={s.bleedImageWrapper}>
         <div
           className={s.bleedImage}
-          style={{ backgroundImage: `url(${imageURL})` }}
+          style={{ "--background-image": `url(${imageURL})` }}
         >
           <button
             className={s.playButton}

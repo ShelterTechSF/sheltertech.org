@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import * as React from "react";
+import { useState } from "react";
 
 import YouTubeEmbed from "../components/block/YouTubeEmbed";
 import ArticleSpotlightCard from "../components/grid-aware/ArticleSpotlightCard";

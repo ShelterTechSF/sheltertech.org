@@ -1,7 +1,10 @@
 import * as React from "react";
 import Button, { ButtonProps } from "../../inline/Button";
+import playIcon from "./PlayIcon.svg";
 
 import s from "./VideoHeader.module.css";
+
+/* Subcomponents */
 
 type CTAButtonsProps = {
   buttons: ButtonProps[];
@@ -22,6 +25,11 @@ const CTAButtons = ({ buttons }: CTAButtonsProps) => (
   </div>
 );
 
+type VideoHeaderTextProps = {
+  title: string;
+  description: string;
+};
+
 const VideoHeaderText = ({ title, description }: VideoHeaderTextProps) => (
   <div className={s.videoHeaderText}>
     <div className={s.title}>{title}</div>
@@ -29,28 +37,25 @@ const VideoHeaderText = ({ title, description }: VideoHeaderTextProps) => (
   </div>
 );
 
-type VideoHeaderTextProps = {
-  title: string;
-  description: string;
+type PlayButtonProps = {
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-const PlayButton = ({ onClick, playIcon }: PlayButtonProps) => (
+const PlayButton = ({ onClick }: PlayButtonProps) => (
   <button className={s.playButton} type="button" onClick={onClick}>
     <img className={s.playIcon} src={playIcon.url} alt={playIcon.alt} />
   </button>
 );
 
-type ImageProps = {
-  url: string;
-  alt: string;
-};
-
-type PlayButtonProps = {
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  playIcon: ImageProps;
-};
-
 /* Main component */
+
+type VideoHeaderProps = {
+  ctaButtons: ButtonProps[];
+  image: string;
+  playButtonOnClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  title: string;
+  description: string;
+};
 
 const VideoHeader = ({
   ctaButtons,
@@ -58,7 +63,6 @@ const VideoHeader = ({
   playButtonOnClick,
   title,
   description,
-  playIcon,
 }: VideoHeaderProps) => {
   return (
     <div className={s.bleedWrapper}>
@@ -71,7 +75,7 @@ const VideoHeader = ({
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
           <div className={s.gridPlayButtonArea}>
-            <PlayButton onClick={playButtonOnClick} playIcon={playIcon} />
+            <PlayButton onClick={playButtonOnClick} />
           </div>
           <div className={s.gridTextArea}>
             <VideoHeaderText title={title} description={description} />
@@ -81,15 +85,6 @@ const VideoHeader = ({
       </div>
     </div>
   );
-};
-
-type VideoHeaderProps = {
-  ctaButtons: ButtonProps[];
-  image: string;
-  playButtonOnClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  title: string;
-  description: string;
-  playIcon: ImageProps;
 };
 
 export default VideoHeader;

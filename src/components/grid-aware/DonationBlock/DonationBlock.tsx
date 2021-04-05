@@ -1,5 +1,4 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
 import s from "./DonationBlock.module.css";
 
@@ -20,6 +19,15 @@ const LGLForm = () => (
   <div className={s.formWrapper} dangerouslySetInnerHTML={rawLGLForm} />
 );
 
+type DonationBlockProps = {
+  mainTitle: string;
+  mainDescription: string;
+  whyDonateTitle: string;
+  whyDonateList: string[];
+  impactTitle: string;
+  impactList: string[];
+};
+
 const DonationBlock = ({
   mainTitle,
   mainDescription,
@@ -27,7 +35,7 @@ const DonationBlock = ({
   whyDonateList,
   impactTitle,
   impactList,
-}) => (
+}: DonationBlockProps) => (
   <div className={s.bleedWrapper}>
     <div className={s.gridParent}>
       <div className={s.gridAreaHeadline}>
@@ -58,14 +66,5 @@ const DonationBlock = ({
     </div>
   </div>
 );
-
-DonationBlock.propTypes = {
-  mainTitle: PropTypes.string.isRequired,
-  mainDescription: PropTypes.string.isRequired,
-  whyDonateTitle: PropTypes.string.isRequired,
-  whyDonateList: PropTypes.arrayOf(PropTypes.string).isRequired,
-  impactTitle: PropTypes.string.isRequired,
-  impactList: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
 
 export default DonationBlock;

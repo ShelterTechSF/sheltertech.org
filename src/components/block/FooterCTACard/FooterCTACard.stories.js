@@ -18,5 +18,5 @@ DefaultFooterCTACard.args = {
   title: "Get Involved",
   description:
     "Volunteer with us and put your professional skills to good use.",
-  button: { text: "Join Us", link: "/foo" },
+  button: { text: "Join Us", internalLink: "/foo" },
 };

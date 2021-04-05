@@ -12,3 +12,12 @@ declare module "*.module.css" {
   const classes: { [key: string]: string };
   export default classes;
 }
+
+// Define the type of imported SVG files, which Webpack's url-loader/file-loader
+// will normally import as a string URL to the image or an embedded data: URL.
+//
+// https://webpack.js.org/guides/typescript/#importing-other-assets
+declare module "*.svg" {
+  const content: string;
+  export default content;
+}

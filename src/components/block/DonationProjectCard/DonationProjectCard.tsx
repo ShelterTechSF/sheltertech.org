@@ -1,9 +1,18 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 
 import s from "./DonationProjectCard.module.css";
 
-const DonationProjectCard = ({ title, subtitle, background }) => (
+type DonationProjectCardProps = {
+  title: string;
+  subtitle: string;
+  background: string;
+};
+
+const DonationProjectCard = ({
+  title,
+  subtitle,
+  background,
+}: DonationProjectCardProps) => (
   <div
     className={s.container}
     style={{ backgroundImage: `url('${background}')` }}
@@ -17,11 +26,4 @@ const DonationProjectCard = ({ title, subtitle, background }) => (
     </div>
   </div>
 );
-
-DonationProjectCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  background: PropTypes.string.isRequired,
-};
-
 export default DonationProjectCard;

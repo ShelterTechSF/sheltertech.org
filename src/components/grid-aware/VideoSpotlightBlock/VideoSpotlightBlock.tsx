@@ -1,8 +1,8 @@
 import * as React from "react";
 import Button, { ButtonProps } from "../../inline/Button";
 
-import s from "./VideoSpotlightBlock.module.css";
 import playIcon from "./PlayIcon.svg";
+import s from "./VideoSpotlightBlock.module.css";
 
 type TextCardProps = {
   eyebrowText: string;
@@ -51,7 +51,9 @@ const VideoSpotlightBlock = ({
       <div className={s.bleedImageWrapper}>
         <div
           className={s.bleedImage}
-          style={{ "--background-image": `url(${imageURL})` } as React.CSSProperties}
+          style={
+            { "--background-image": `url(${imageURL})` } as React.CSSProperties
+          }
         >
           <button
             className={s.playButton}

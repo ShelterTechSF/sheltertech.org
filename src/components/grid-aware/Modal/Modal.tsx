@@ -7,7 +7,7 @@ import closeIcon from "./close-icon.svg";
 type ModalProps = {
   children: React.ReactNode;
   isOpen: boolean;
-  setIsOpen: (x: boolean) => null;
+  setIsOpen: (x: boolean) => void;
   ariaHideApp?: boolean; // we only ever set this to false for storybook
   contentLabel: string;
   noBezel?: boolean; // If true, then eliminate the padding and close button

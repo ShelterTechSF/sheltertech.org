@@ -43,7 +43,7 @@ type PlayButtonProps = {
 
 const PlayButton = ({ onClick }: PlayButtonProps) => (
   <button className={s.playButton} type="button" onClick={onClick}>
-    <img className={s.playIcon} src={playIcon.url} alt={playIcon.alt} />
+    <img className={s.playIcon} src={playIcon} alt="Play Video" />
   </button>
 );
 

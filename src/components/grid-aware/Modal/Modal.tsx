@@ -17,7 +17,7 @@ const Modal = ({
   children,
   isOpen,
   setIsOpen,
-  ariaHideApp,
+  ariaHideApp = true,
   contentLabel,
   noBezel,
 }: ModalProps) => {
@@ -25,14 +25,13 @@ const Modal = ({
   const buttonClassName = `${s.closeButton} ${
     noBezel ? s.noBezel : s.withBezel
   }`;
-  const ariaHide = ariaHideApp === undefined ? true : ariaHideApp;
   return (
     <ReactModal
       className={modalClassName}
       overlayClassName={s.overlay}
       isOpen={isOpen}
       onRequestClose={() => setIsOpen(false)}
-      ariaHideApp={ariaHide}
+      ariaHideApp={ariaHideApp}
       contentLabel={contentLabel}
     >
       <button

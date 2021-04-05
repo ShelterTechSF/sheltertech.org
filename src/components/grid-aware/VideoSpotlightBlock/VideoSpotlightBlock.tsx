@@ -1,10 +1,16 @@
-import PropTypes from "prop-types";
-import React from "react";
-import Button from "../../inline/Button";
+import * as React from "react";
+import Button, { ButtonProps } from "../../inline/Button";
+
 import playIcon from "./PlayIcon.svg";
 import s from "./VideoSpotlightBlock.module.css";
 
-const TextCard = ({ eyebrowText, description, button }) => (
+type TextCardProps = {
+  eyebrowText: string;
+  description: string;
+  button: ButtonProps;
+};
+
+const TextCard = ({ eyebrowText, description, button }: TextCardProps) => (
   <div className={s.textCard}>
     <div className={s.eyebrowText}>{eyebrowText}</div>
     <div className={s.description}>{description}</div>
@@ -19,10 +25,13 @@ const TextCard = ({ eyebrowText, description, button }) => (
   </div>
 );
 
-TextCard.propTypes = {
-  eyebrowText: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  button: PropTypes.shape(Button.propTypes).isRequired,
+type VideoSpotlightBlockProps = {
+  eyebrowText: string;
+  description: string;
+  button: ButtonProps;
+  imageURL: string;
+  playButtonOnClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  blackBackground?: boolean;
 };
 
 const VideoSpotlightBlock = ({
@@ -31,8 +40,8 @@ const VideoSpotlightBlock = ({
   button,
   imageURL,
   playButtonOnClick,
-  blackBackground,
-}) => {
+  blackBackground = false,
+}: VideoSpotlightBlockProps) => {
   const bleedBackgroundWrapper = `${s.bleedWrapper} ${
     blackBackground ? s.blackBackground : ""
   }`;
@@ -42,7 +51,9 @@ const VideoSpotlightBlock = ({
       <div className={s.bleedImageWrapper}>
         <div
           className={s.bleedImage}
-          style={{ "--background-image": `url(${imageURL})` }}
+          style={
+            { "--background-image": `url(${imageURL})` } as React.CSSProperties
+          }
         >
           <button
             className={s.playButton}
@@ -68,19 +79,6 @@ const VideoSpotlightBlock = ({
       </div>
     </div>
   );
-};
-
-VideoSpotlightBlock.propTypes = {
-  eyebrowText: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  button: PropTypes.shape(Button.propTypes).isRequired,
-  imageURL: PropTypes.string.isRequired,
-  playButtonOnClick: PropTypes.func.isRequired,
-  blackBackground: PropTypes.bool,
-};
-
-VideoSpotlightBlock.defaultProps = {
-  blackBackground: false,
 };
 
 export default VideoSpotlightBlock;

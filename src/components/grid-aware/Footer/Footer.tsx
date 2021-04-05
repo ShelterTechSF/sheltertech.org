@@ -1,15 +1,28 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 import s from "./Footer.module.css";
 import InfoBlock from "./InfoBlock";
 import {
   Navigation,
-  FooterNavigationLinkPropType,
-  SealPropType,
-  ShelterTechLogoPropType,
-  SocialMediaLinkPropType,
+  FooterNavigationLinkProps,
+  SealProps,
+  ShelterTechLogoProps,
+  SocialMediaLinkProps,
 } from "./NavigationBlock";
 import SubscriptionBlock from "./SubscriptionBlock";
+
+type FooterProps = {
+  formAction: string;
+  formInputName: string;
+  formInputPlaceholder: string;
+  formAntiBotInputName: string;
+  formDescription: string;
+  footerNavigation: FooterNavigationLinkProps[];
+  seals: SealProps[];
+  shelterTechLogo: ShelterTechLogoProps;
+  socialMediaLinks: SocialMediaLinkProps[];
+  employerIdentificationNumber: string;
+  address: string;
+};
 
 const Footer = ({
   formAction,
@@ -23,7 +36,7 @@ const Footer = ({
   socialMediaLinks,
   address,
   employerIdentificationNumber,
-}) => {
+}: FooterProps) => {
   return (
     <footer className={s.footer}>
       <SubscriptionBlock
@@ -45,20 +58,6 @@ const Footer = ({
       />
     </footer>
   );
-};
-
-Footer.propTypes = {
-  formAction: PropTypes.string.isRequired,
-  formInputName: PropTypes.string.isRequired,
-  formInputPlaceholder: PropTypes.string.isRequired,
-  formAntiBotInputName: PropTypes.string.isRequired,
-  formDescription: PropTypes.string.isRequired,
-  footerNavigation: PropTypes.arrayOf(FooterNavigationLinkPropType).isRequired,
-  seals: PropTypes.arrayOf(SealPropType).isRequired,
-  shelterTechLogo: ShelterTechLogoPropType.isRequired,
-  socialMediaLinks: PropTypes.arrayOf(SocialMediaLinkPropType).isRequired,
-  employerIdentificationNumber: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
 };
 
 export default Footer;

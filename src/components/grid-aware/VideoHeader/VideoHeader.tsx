@@ -68,9 +68,11 @@ const VideoHeader = ({
     <div className={s.bleedWrapper}>
       <div
         className={s.bleedBackground}
-        style={{
-          "--background-image": `url(${image})`,
-        } as React.CSSProperties}
+        style={
+          {
+            "--background-image": `url(${image})`,
+          } as React.CSSProperties
+        }
       />
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>

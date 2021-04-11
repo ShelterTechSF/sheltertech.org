@@ -4,11 +4,9 @@ import Button, { ButtonProps } from "../../inline/Button";
 
 import s from "./OneParagraphBlock.module.css";
 
-/* Subcomponents */
-
 type OneParagraphBlockProps = {
   title: string;
-  descriptions: string;
+  descriptions: React.ReactNode;
   ctaButtons: ButtonProps[];
 };
 

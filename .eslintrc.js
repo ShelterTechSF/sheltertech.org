@@ -48,6 +48,8 @@ module.exports = {
       // Gatsby configuration files
       files: ["gatsby-config.js"],
       rules: {
+        // global-require is fine because this is a Node.js script.
+        "global-require": "off",
         "import/no-extraneous-dependencies": [
           "error",
           { devDependencies: true },

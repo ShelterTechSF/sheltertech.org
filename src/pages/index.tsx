@@ -1,3 +1,8 @@
+// TODO: Figure out how to get stricter types out of Gatsby GraphQL queries.
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+
+import { graphql } from "gatsby";
 import * as React from "react";
 import { useState } from "react";
 
@@ -26,15 +31,28 @@ import partnersAndSponsorsLogos from "../data/partnersAndSponsorsLogos";
 import annualReportPDF from "./ShelterTech-Annual-Report-2019-Q1.pdf";
 import articleSpotlightImage from "./mission-hotel.jpeg";
 
-export default () => {
+export const query = graphql`
+  query MyQuery {
+    prismicFooter {
+      data {
+        address {
+          text
+        }
+      }
+    }
+  }
+`;
+
+export default ({ data }: any) => {
   const [partnershipFormIsOpen, setPartnershipFormIsOpen] = useState(false);
   const [videoHeaderModalIsOpen, setVideoHeaderModalIsOpen] = useState(false);
   const [
     videoSpotlightBlockModalIsOpen,
     setVideoSpotlightBlockModalIsOpen,
   ] = useState(false);
+  const footerAddress = data.prismicFooter.data.address.text;
   return (
-    <Layout>
+    <Layout footerAddress={footerAddress}>
       <Modal
         isOpen={partnershipFormIsOpen}
         setIsOpen={setPartnershipFormIsOpen}

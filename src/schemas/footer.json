@@ -1,0 +1,12 @@
+{
+  "Main": {
+    "address": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Address",
+        "placeholder": "123 Fake St, San Francisco, California 94110"
+      }
+    }
+  }
+}

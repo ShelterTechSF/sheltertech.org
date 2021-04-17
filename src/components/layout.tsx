@@ -26,10 +26,11 @@ const navigationItems: NavItem[] = [
 ];
 
 type LayoutProps = {
+  footerAddress: string;
   children: React.ReactNode;
 };
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ footerAddress, children }: LayoutProps) => {
   const pageWrapperID = "page-wrapper";
   const outerContainerID = "outer-container";
   const [burgerMenuIsOpen, setBurgerMenuIsOpen] = useState(false);
@@ -122,7 +123,7 @@ const Layout = ({ children }: LayoutProps) => {
               alt: "GitHub Logo",
             },
           ]}
-          address="268 Bush Street #4302, San Francisco CA, 94104 USA"
+          address={footerAddress}
           employerIdentificationNumber="EIN: 38-3984099"
         />
       </div>

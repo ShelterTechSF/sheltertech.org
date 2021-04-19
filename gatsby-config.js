@@ -57,5 +57,6 @@ module.exports = {
         prismicToolbar: true,
       },
     },
+    "gatsby-plugin-typegen",
   ],
 };

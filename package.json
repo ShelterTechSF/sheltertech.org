@@ -71,6 +71,7 @@
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.25",
     "gatsby-plugin-ts-checker": "^1.1.0",
+    "gatsby-plugin-typegen": "^2.2.4",
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-sharp": "^2.5.12",
     "identity-obj-proxy": "^3.0.0",

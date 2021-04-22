@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
-import { graphql } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 import * as React from "react";
 import { useState } from "react";
 
@@ -32,7 +32,14 @@ import annualReportPDF from "./ShelterTech-Annual-Report-2019-Q1.pdf";
 import articleSpotlightImage from "./mission-hotel.jpeg";
 
 export const query = graphql`
-  query MyQuery {
+  query HomePage {
+    prismicHomePage {
+      data {
+        video_header_title {
+          text
+        }
+      }
+    }
     prismicFooter {
       data {
         address {
@@ -43,14 +50,14 @@ export const query = graphql`
   }
 `;
 
-export default ({ data }: any) => {
+export default ({ data }: PageProps<GatsbyTypes.HomePageQuery>) => {
   const [partnershipFormIsOpen, setPartnershipFormIsOpen] = useState(false);
   const [videoHeaderModalIsOpen, setVideoHeaderModalIsOpen] = useState(false);
   const [
     videoSpotlightBlockModalIsOpen,
     setVideoSpotlightBlockModalIsOpen,
   ] = useState(false);
-  const footerAddress = data.prismicFooter.data.address.text;
+  const footerAddress = data.prismicFooter?.data?.address?.text!;
   return (
     <Layout footerAddress={footerAddress}>
       <Modal
@@ -83,7 +90,7 @@ export default ({ data }: any) => {
         />
       </Modal>
       <VideoHeader
-        title="Less than half of nearly 28,000 people experiencing homelessness in the Bay Area have reliable access to the internet."
+        title={data.prismicHomePage?.data?.video_header_title?.text}
         description="ShelterTech is a technology-focused nonprofit organization making it easier for this community to connect with  resources that can help them address their challenges."
         image={videoHeaderImage}
         ctaButtons={[

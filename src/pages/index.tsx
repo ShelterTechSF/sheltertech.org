@@ -40,13 +40,6 @@ export const query = graphql`
         }
       }
     }
-    prismicFooter {
-      data {
-        address {
-          text
-        }
-      }
-    }
   }
 `;
 
@@ -57,9 +50,8 @@ export default ({ data }: PageProps<GatsbyTypes.HomePageQuery>) => {
     videoSpotlightBlockModalIsOpen,
     setVideoSpotlightBlockModalIsOpen,
   ] = useState(false);
-  const footerAddress = data.prismicFooter?.data?.address?.text!;
   return (
-    <Layout footerAddress={footerAddress}>
+    <Layout>
       <Modal
         isOpen={partnershipFormIsOpen}
         setIsOpen={setPartnershipFormIsOpen}

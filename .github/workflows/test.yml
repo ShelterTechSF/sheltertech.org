@@ -21,11 +21,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # This has to come before linting because we need to run the Gatsby build
+      # at least once in order to generate the GraphQL TypeScript definitions.
+      # The TypeScript type check lint check will otherwise fail.
+      - name: Check build
+        run: npm run build
+
       - name: Run lint checks
         run: npm run lint
 
       - name: Run tests
         run: npm run test
-
-      - name: Check build
-        run: npm run build

@@ -1,12 +1,19 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 import s from "./InfoBlock.module.css";
 
 function getYear() {
   return new Date().getFullYear();
 }
 
-const InfoBlock = ({ address, employerIdentificationNumber }) => {
+type InfoBlockProps = {
+  address: string;
+  employerIdentificationNumber: string;
+};
+
+const InfoBlock = ({
+  address,
+  employerIdentificationNumber,
+}: InfoBlockProps) => {
   return (
     <div className={s.bleedWrapper}>
       <div className={s.organizationInfo}>
@@ -18,11 +25,6 @@ const InfoBlock = ({ address, employerIdentificationNumber }) => {
       </div>
     </div>
   );
-};
-
-InfoBlock.propTypes = {
-  address: PropTypes.string.isRequired,
-  employerIdentificationNumber: PropTypes.string.isRequired,
 };
 
 export default InfoBlock;

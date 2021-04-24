@@ -1,3 +1,4 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import ReactModal from "react-modal";
@@ -26,17 +27,28 @@ const navigationItems: NavItem[] = [
 ];
 
 type LayoutProps = {
-  footerAddress: string;
   children: React.ReactNode;
 };
 
-const Layout = ({ footerAddress, children }: LayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
   const pageWrapperID = "page-wrapper";
   const outerContainerID = "outer-container";
   const [burgerMenuIsOpen, setBurgerMenuIsOpen] = useState(false);
   useEffect(() => {
     ReactModal.setAppElement(`#${outerContainerID}`);
   }, []);
+
+  const data = useStaticQuery<GatsbyTypes.LayoutQuery>(graphql`
+    query Layout {
+      prismicFooter {
+        data {
+          address {
+            text
+          }
+        }
+      }
+    }
+  `);
   return (
     <div id={outerContainerID}>
       <Helmet>
@@ -123,7 +135,7 @@ const Layout = ({ footerAddress, children }: LayoutProps) => {
               alt: "GitHub Logo",
             },
           ]}
-          address={footerAddress}
+          address={data.prismicFooter?.data?.address?.text}
           employerIdentificationNumber="EIN: 38-3984099"
         />
       </div>

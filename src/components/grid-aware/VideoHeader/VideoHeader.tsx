@@ -26,13 +26,13 @@ const CTAButtons = ({ buttons }: CTAButtonsProps) => (
 );
 
 type VideoHeaderTextProps = {
-  title: string;
+  title?: string;
   description: string;
 };
 
 const VideoHeaderText = ({ title, description }: VideoHeaderTextProps) => (
   <div className={s.videoHeaderText}>
-    <div className={s.title}>{title}</div>
+    {title && <div className={s.title}>{title}</div>}
     <div className={s.description}>{description}</div>
   </div>
 );
@@ -53,7 +53,7 @@ type VideoHeaderProps = {
   ctaButtons: ButtonProps[];
   image: string;
   playButtonOnClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  title: string;
+  title?: string;
   description: string;
 };
 

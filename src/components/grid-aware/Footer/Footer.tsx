@@ -21,7 +21,7 @@ type FooterProps = {
   shelterTechLogo: ShelterTechLogoProps;
   socialMediaLinks: SocialMediaLinkProps[];
   employerIdentificationNumber: string;
-  address: string;
+  address?: string;
 };
 
 const Footer = ({
@@ -54,7 +54,9 @@ const Footer = ({
       />
       <InfoBlock
         employerIdentificationNumber={employerIdentificationNumber}
-        address={address}
+        /* TODO: Plumb optionality all the way through to InfoBlock after it is
+         * converted to TypeScript instead of force unwrapping the optional. */
+        address={address!}
       />
     </footer>
   );

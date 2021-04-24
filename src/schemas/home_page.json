@@ -1,0 +1,11 @@
+{
+  "Main": {
+    "video_header_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Video Header Title"
+      }
+    }
+  }
+}

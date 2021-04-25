@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import ReactModal from "react-modal";
@@ -14,13 +13,23 @@ import instagramLogo from "./grid-aware/Footer/stories/instagram.svg";
 import twitterLogo from "./grid-aware/Footer/stories/twitter.svg";
 import { BurgerMenu, Navigation } from "./grid-aware/Navigation";
 
-const navigationItems = [
+type NavItem = {
+  text: string;
+  internalLink: string;
+  isButton?: boolean;
+};
+
+const navigationItems: NavItem[] = [
   { text: "Programs", internalLink: "/" },
   { text: "Volunteer", internalLink: "/volunteer" },
   { text: "Donate", internalLink: "/donate", isButton: true },
 ];
 
-const Layout = ({ children }) => {
+type LayoutProps = {
+  children: React.ReactNode;
+};
+
+const Layout = ({ children }: LayoutProps) => {
   const pageWrapperID = "page-wrapper";
   const outerContainerID = "outer-container";
   const [burgerMenuIsOpen, setBurgerMenuIsOpen] = useState(false);
@@ -119,14 +128,6 @@ const Layout = ({ children }) => {
       </div>
     </div>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node,
-};
-
-Layout.defaultProps = {
-  children: null,
 };
 
 export default Layout;

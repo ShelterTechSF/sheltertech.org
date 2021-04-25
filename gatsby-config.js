@@ -1,5 +1,7 @@
 const postcssCustomMedia = require("postcss-custom-media");
 
+const linkResolver = require("./src/utils/linkResolver");
+
 module.exports = {
   siteMetadata: {
     title: "ShelterTech - Technology for the underserved",
@@ -37,6 +39,8 @@ module.exports = {
         // Example: 'gatsby-source-prismic-test-site' if your prismic.io address
         // is 'gatsby-source-prismic-test-site.prismic.io'.
         repositoryName: "sheltertech",
+
+        linkResolver,
 
         // Provide an object of Prismic custom type JSON schemas to load into
         // Gatsby. This is required.

@@ -1,9 +1,17 @@
 import PropTypes from "prop-types";
-import React from "react";
+import * as React from "react";
 import { SubmitButton } from "../../../inline/Button";
 import InputText from "../../../inline/InputText";
 
 import s from "./SubscriptionBlock.module.css";
+
+type SubscriptionBlockProps = {
+  formAction: string;
+  formInputPlaceholder: string;
+  formInputName: string;
+  formAntiBotInputName: string;
+  formDescription: string;
+};
 
 const SubscriptionBlock = ({
   formAction,
@@ -11,7 +19,7 @@ const SubscriptionBlock = ({
   formInputName,
   formAntiBotInputName, // This is displayed as a text field but hidden from humans in order to trick bots into filling it out
   formDescription,
-}) => {
+}: SubscriptionBlockProps) => {
   return (
     <div className={s.bleedWrapper}>
       <div className={s.subscriptionBlock}>
@@ -42,14 +50,6 @@ const SubscriptionBlock = ({
       </div>
     </div>
   );
-};
-
-SubscriptionBlock.propTypes = {
-  formAction: PropTypes.string.isRequired,
-  formInputName: PropTypes.string.isRequired,
-  formInputPlaceholder: PropTypes.string.isRequired,
-  formAntiBotInputName: PropTypes.string.isRequired,
-  formDescription: PropTypes.string.isRequired,
 };
 
 export default SubscriptionBlock;

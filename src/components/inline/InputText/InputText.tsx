@@ -26,7 +26,7 @@ import s from "./InputText.module.css";
 type InputTextProps = {
   name?: string;
   placeholderText?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value?: string;
   type: string;
 };

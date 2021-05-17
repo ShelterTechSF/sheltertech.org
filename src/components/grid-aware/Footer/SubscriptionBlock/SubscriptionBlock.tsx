@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import * as React from "react";
 import { SubmitButton } from "../../../inline/Button";
 import InputText from "../../../inline/InputText";

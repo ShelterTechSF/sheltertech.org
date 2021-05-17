@@ -9,7 +9,7 @@ import s from "./TwoParagraphBlock.module.css";
 type TwoParagraphBlockProps = {
   title: string;
   paragraph1: string;
-  paragraph2: string;
+  paragraph2: React.ReactNode;
   image: { url: string; alt: string };
   ctaButtons: ButtonProps[];
 };

@@ -11,7 +11,7 @@ import ProgramsBlock from "../components/grid-aware/ProgramsBlock";
 import communityDevelopmentImg from "../components/grid-aware/ProgramsBlock/stories/community-development.jpg";
 import sfServiceGuideImg from "../components/grid-aware/ProgramsBlock/stories/sf-service-guide.jpg";
 import shelterConnectImg from "../components/grid-aware/ProgramsBlock/stories/shelter-connect.jpg";
-import Spacer from "../components/grid-aware/Spacer";
+import Spacer from "../components/grid-aware/Spacer/index.js";
 import ThreeParagraphBlock from "../components/grid-aware/ThreeParagraphBlock";
 import teamDesignWorkshopImage from "../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
 import datathonClassroomImage from "../components/grid-aware/ThreeParagraphBlock/stories/image3.png";

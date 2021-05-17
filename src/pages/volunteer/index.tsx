@@ -8,7 +8,7 @@ import classroom from "../../components/grid-aware/ImageHeader/stories/classroom
 import whiteboard from "../../components/grid-aware/ImageHeader/stories/whiteboard-sticky-notes.png";
 import Modal from "../../components/grid-aware/Modal";
 import OneParagraphBlock from "../../components/grid-aware/OneParagraphBlock";
-import Spacer from "../../components/grid-aware/Spacer";
+import Spacer from "../../components/grid-aware/Spacer/index.js";
 import StatsBlock from "../../components/grid-aware/StatsBlock";
 import ThreeParagraphBlock from "../../components/grid-aware/ThreeParagraphBlock";
 import TwoParagraphBlock from "../../components/grid-aware/TwoParagraphBlock";

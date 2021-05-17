@@ -8,7 +8,7 @@ import {
   ShelterTechLogoProps,
   SocialMediaLinkProps,
 } from "./NavigationBlock";
-import SubscriptionBlock from "./SubscriptionBlock";
+import SubscriptionBlock from "./SubscriptionBlock/";
 
 type FooterProps = {
   formAction: string;

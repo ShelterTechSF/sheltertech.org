@@ -8,7 +8,7 @@ type ImageProps = {
 };
 
 type ImageHeaderProps = {
-  title: string;
+  title?: string;
   subtitle: string;
   description: string;
   image1: ImageProps;
@@ -26,7 +26,7 @@ const ImageHeader = ({
 }: ImageHeaderProps) => {
   const GridAreaLeft = () => (
     <div className={s.gridAreaText}>
-      <h1 className={s.title}>{title}</h1>
+      {title && <h1 className={s.title}>{title}</h1>}
       <div className={s.subtitle}>{subtitle}</div>
       <div className={s.description}>{description}</div>
       <div className={s.ctaButtonRow}>

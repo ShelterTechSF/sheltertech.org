@@ -50,6 +50,7 @@ module.exports = {
           // Your custom types mapped to schemas
           footer: require("./src/schemas/footer.json"),
           home_page: require("./src/schemas/home_page.json"),
+          volunteer_page: require("./src/schemas/volunteer_page.json"),
         },
 
         // Add the Prismic Toolbar script to the site. Defaults to false.

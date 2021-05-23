@@ -1,3 +1,4 @@
+import { graphql, PageProps } from "gatsby";
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 
@@ -20,7 +21,19 @@ import pairProgrammingImage from "./image5.png";
 import teamSnackingImage from "./image6.png";
 import articleSpotlightImage from "./laura-barerra-vera.png";
 
-export default () => {
+export const query = graphql`
+  query VolunteerPage {
+    prismicVolunteerPage {
+      data {
+        page_title {
+          text
+        }
+      }
+    }
+  }
+`;
+
+export default ({ data }: PageProps<GatsbyTypes.VolunteerPageQuery>) => {
   const [volunteerFormIsOpen, setVolunteerFormIsOpen] = useState(false);
   return (
     <Layout>
@@ -35,7 +48,7 @@ export default () => {
         <VolunteerSignupForm />
       </Modal>
       <ImageHeader
-        title="Volunteering"
+        title={data.prismicVolunteerPage?.data?.page_title?.text}
         subtitle="We rely on hundreds of volunteers to bridge the digital divide that our most at-risk neighbors face."
         description="If you share our belief that digital equity is a human right, we encourage you to apply and work with us."
         image1={{

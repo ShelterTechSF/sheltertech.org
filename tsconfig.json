@@ -17,6 +17,6 @@
     // Advanced
     "skipLibCheck": true // Don't type check .d.ts files, which mostly come from third party libraries.
   },
-  "include": ["**/*", ".storybook/*", ".eslintrc.js", "src/components/grid-aware/Footer/SubscriptionBlock/.js"],
+  "include": ["**/*", ".storybook/*", ".eslintrc.js"],
   "exclude": ["node_modules"]
 }

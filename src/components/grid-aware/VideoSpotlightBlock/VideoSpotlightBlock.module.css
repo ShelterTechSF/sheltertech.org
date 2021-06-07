@@ -6,7 +6,7 @@
   max-width: var(--bleed-max-width);
   /* Position relative and z-index not with value of auto creates a stacking context. We want this parent div
    * to have its own stacking context to contain the z-index of 1 given to the play button. */
-  position: relative; 
+  position: relative;
   z-index: 0; 
 }
 

@@ -17,7 +17,12 @@ import sfFamiliesLogo from "../components/grid-aware/PartnersAndSponsorsBlock/st
 import uberLogo from "../components/grid-aware/PartnersAndSponsorsBlock/stories/uber-logo.png";
 import weworkLogo from "../components/grid-aware/PartnersAndSponsorsBlock/stories/wework-logo.png";
 
-export default [
+export type LogoType = Readonly<{
+  url: string;
+  alt: string;
+}>;
+
+const partnersAndSponsorsLogos: readonly LogoType[] = [
   {
     url: mohcdLogo,
     alt:
@@ -92,4 +97,6 @@ export default [
     url: gsmaLogo,
     alt: "Logo of GSMA.",
   },
-];
+] as const;
+
+export default partnersAndSponsorsLogos;

@@ -2,14 +2,14 @@ import * as React from "react";
 
 import s from "./PartnersAndSponsorsBlock.module.css";
 
-type LogoPropType = {
+type LogoPropType = Readonly<{
   url: string;
   alt: string;
-};
+}>;
 
 type PartnersAndSponsorsBlockProps = {
   title: string;
-  partnersAndSponsors: LogoPropType[];
+  partnersAndSponsors: readonly LogoPropType[];
 };
 
 const PartnersAndSponsorsBlock = ({

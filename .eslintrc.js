@@ -20,10 +20,7 @@ module.exports = {
   plugins: ["@typescript-eslint", "react", "react-hooks"],
   rules: {
     "import/order": ["error", { alphabetize: { order: "asc" } }],
-    "react/jsx-filename-extension": [
-      "error",
-      { extensions: [".js", ".jsx", ".tsx"] },
-    ],
+    "react/jsx-filename-extension": [1, { extensions: [".ts", ".tsx"] }],
     // Disable prop-types check because they're redundant with TypeScript.
     "react/prop-types": ["off"],
   },

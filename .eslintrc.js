@@ -52,6 +52,13 @@ module.exports = {
       },
     },
     {
+      // Legacy files
+      files: ["src/legacy/**"],
+      rules: {
+        "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+      },
+    },
+    {
       // Storybook configuration files
       files: [".storybook/**"],
       rules: {

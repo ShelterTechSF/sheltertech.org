@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import "./globals.css";
-import s from "./BaseForm.module.css";
+import * as s from "./BaseForm.module.css";
 
 /* eslint-disable react/no-danger */
 // This entire file is just about embedding an external form

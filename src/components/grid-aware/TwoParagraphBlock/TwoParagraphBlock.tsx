@@ -2,7 +2,7 @@ import * as React from "react";
 
 import Button, { ButtonProps } from "../../inline/Button";
 
-import s from "./TwoParagraphBlock.module.css";
+import * as s from "./TwoParagraphBlock.module.css";
 
 /* Main component */
 type TwoParagraphBlockProps = {

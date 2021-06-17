@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import s from "./StatsBlock.module.css";
+import * as s from "./StatsBlock.module.css";
 
 type StatCardProps = {
   number: string;

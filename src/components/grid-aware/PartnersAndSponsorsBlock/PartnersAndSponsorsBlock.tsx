@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import s from "./PartnersAndSponsorsBlock.module.css";
+import * as s from "./PartnersAndSponsorsBlock.module.css";
 
 type LogoPropType = Readonly<{
   url: string;

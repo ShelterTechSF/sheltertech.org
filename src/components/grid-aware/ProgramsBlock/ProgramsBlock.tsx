@@ -2,7 +2,7 @@ import * as React from "react";
 
 import ProgramCard from "../../block/ProgramCard";
 
-import s from "./ProgramsBlock.module.css";
+import * as s from "./ProgramsBlock.module.css";
 
 type ProgramType = {
   theme: string;

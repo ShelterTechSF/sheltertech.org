@@ -1,5 +1,5 @@
 import * as React from "react";
-import s from "./ProgramCard.module.css";
+import * as s from "./ProgramCard.module.css";
 
 type ProgramCardProps = {
   theme: string;

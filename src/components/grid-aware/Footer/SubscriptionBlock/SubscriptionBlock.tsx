@@ -2,7 +2,7 @@ import * as React from "react";
 import { SubmitButton } from "../../../inline/Button";
 import InputText from "../../../inline/InputText";
 
-import s from "./SubscriptionBlock.module.css";
+import * as s from "./SubscriptionBlock.module.css";
 
 type SubscriptionBlockProps = {
   formAction: string;

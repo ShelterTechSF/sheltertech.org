@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import * as React from "react";
 
-import s from "./Button.module.css";
+import * as s from "./Button.module.css";
 
 export type ButtonProps = {
   text: string;

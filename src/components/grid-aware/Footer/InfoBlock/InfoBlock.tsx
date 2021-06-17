@@ -1,5 +1,5 @@
 import * as React from "react";
-import s from "./InfoBlock.module.css";
+import * as s from "./InfoBlock.module.css";
 
 function getYear() {
   return new Date().getFullYear();

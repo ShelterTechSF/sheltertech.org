@@ -1,6 +1,6 @@
 import * as React from "react";
 import Button, { ButtonProps } from "../../inline/Button";
-import s from "./ImageHeader.module.css";
+import * as s from "./ImageHeader.module.css";
 
 type ImageProps = {
   url: string;

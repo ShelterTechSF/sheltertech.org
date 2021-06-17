@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import s from "./InputText.module.css";
+import * as s from "./InputText.module.css";
 
 /*
  * For responsive behavior, the width of the parent element

@@ -1,7 +1,7 @@
 import * as React from "react";
 import ReactModal from "react-modal";
 
-import s from "./Modal.module.css";
+import * as s from "./Modal.module.css";
 import closeIcon from "./close-icon.svg";
 
 type ModalProps = {

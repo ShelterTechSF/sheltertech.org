@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import s from "./DonationBlock.module.css";
+import * as s from "./DonationBlock.module.css";
 
 const rawLGLForm = {
   // There are two manual modifications to this snippet from Little Green Light:

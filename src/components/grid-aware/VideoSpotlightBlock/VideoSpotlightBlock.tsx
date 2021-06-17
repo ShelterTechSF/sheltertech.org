@@ -2,7 +2,7 @@ import * as React from "react";
 import Button, { ButtonProps } from "../../inline/Button";
 
 import playIcon from "./PlayIcon.svg";
-import s from "./VideoSpotlightBlock.module.css";
+import * as s from "./VideoSpotlightBlock.module.css";
 
 type TextCardProps = {
   eyebrowText: string;

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import s from "./COVID19InfoBoxBlock.module.css";
+import * as s from "./COVID19InfoBoxBlock.module.css";
 
 type COVID19InfoBoxBlockProps = {
   title: string;

@@ -1,6 +1,6 @@
 import * as React from "react";
 import Button, { ButtonProps } from "../../inline/Button";
-import s from "./FooterCTACard.module.css";
+import * as s from "./FooterCTACard.module.css";
 
 type FooterCTACardProps = {
   title: string;

@@ -2,7 +2,7 @@ import * as React from "react";
 import Button, { ButtonProps } from "../../inline/Button";
 import playIcon from "./PlayIcon.svg";
 
-import s from "./VideoHeader.module.css";
+import * as s from "./VideoHeader.module.css";
 
 /* Subcomponents */
 

@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import * as React from "react";
 import { push as Menu } from "react-burger-menu";
 
-import s from "./BurgerMenu.module.css";
+import * as s from "./BurgerMenu.module.css";
 import { NavigationItem } from "./types";
 
 /** An internal, external, or button link. */

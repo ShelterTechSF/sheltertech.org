@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import s from "./Spacer.module.css";
+import * as s from "./Spacer.module.css";
 
 type SpacerProps = {
   heightDesktop: string;

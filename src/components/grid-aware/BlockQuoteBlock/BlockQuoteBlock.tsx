@@ -2,7 +2,7 @@ import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel";
 import * as React from "react";
 
 import "pure-react-carousel/dist/react-carousel.es.css";
-import s from "./BlockQuoteBlock.module.css";
+import * as s from "./BlockQuoteBlock.module.css";
 
 type SlideQuoteProps = {
   quote: string;

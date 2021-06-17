@@ -1,5 +1,5 @@
 import * as React from "react";
-import s from "./Footer.module.css";
+import * as s from "./Footer.module.css";
 import InfoBlock from "./InfoBlock";
 import {
   Navigation,

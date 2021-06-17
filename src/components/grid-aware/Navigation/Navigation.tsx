@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import * as React from "react";
 
-import s from "./Navigation.module.css";
+import * as s from "./Navigation.module.css";
 import burgerIcon from "./burger-icon.svg";
 import logo from "./logo.svg";
 import { NavigationItem } from "./types";

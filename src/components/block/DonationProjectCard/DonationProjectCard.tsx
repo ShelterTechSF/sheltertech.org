@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import s from "./DonationProjectCard.module.css";
+import * as s from "./DonationProjectCard.module.css";
 
 type DonationProjectCardProps = {
   title: string;

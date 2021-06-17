@@ -2,7 +2,7 @@ import * as React from "react";
 
 import Button, { ButtonProps } from "../../inline/Button";
 
-import s from "./ArticleSpotlightCard.module.css";
+import * as s from "./ArticleSpotlightCard.module.css";
 
 type TextCardProps = {
   eyebrowText: string;

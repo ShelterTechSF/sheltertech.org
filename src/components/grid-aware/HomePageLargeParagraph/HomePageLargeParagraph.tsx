@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import s from "./HomePageLargeParagraph.module.css";
+import * as s from "./HomePageLargeParagraph.module.css";
 
 type HomePageLargeParagraphProps = {
   title: string;

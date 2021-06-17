@@ -2,7 +2,7 @@ import * as React from "react";
 
 import Button, { ButtonProps } from "../../inline/Button";
 
-import s from "./ThreeParagraphBlock.module.css";
+import * as s from "./ThreeParagraphBlock.module.css";
 
 /* Subcomponents */
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import s from "./TitleBlock.module.css";
+import * as s from "./TitleBlock.module.css";
 
 type TitleBlockProps = {
   title: string;

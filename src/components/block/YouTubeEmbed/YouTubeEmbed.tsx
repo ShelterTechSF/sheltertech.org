@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import s from "./YouTubeEmbed.module.css";
+import * as s from "./YouTubeEmbed.module.css";
 
 type YouTubeEmbedProps = {
   url: string;

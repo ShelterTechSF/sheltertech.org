@@ -55,7 +55,10 @@ module.exports = {
       // Legacy files
       files: ["src/legacy/**"],
       rules: {
-        "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+        "react/jsx-filename-extension": [
+          "error",
+          { extensions: [".js", ".jsx"] },
+        ],
       },
     },
     {

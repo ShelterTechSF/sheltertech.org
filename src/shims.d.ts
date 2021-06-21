@@ -8,9 +8,10 @@
 // the TypeScript compiler itself.
 //
 // https://stackoverflow.com/a/59221178
+// https://stackoverflow.com/a/68063415/7433423
 declare module "*.module.css" {
   const classes: { [key: string]: string };
-  export default classes;
+  export = classes;
 }
 
 // Define the type of imported SVG files, which Webpack's url-loader/file-loader

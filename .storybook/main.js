@@ -4,6 +4,14 @@ const postcssCustomMedia = require("postcss-custom-media");
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  features: {
+    // Explicitly disable Storybook's PostCSS loader, since we already
+    // explicitly use Gatsby's PostCSS loader. This setting can be removed after
+    // upgrading to Storybook 7.0, where the shim for automatically adding
+    // Storybook's PostCSS loader will be removed.
+    // https://github.com/storybookjs/storybook/blob/v6.2.9/MIGRATION.md#deprecated-implicit-postcss-loader
+    postcss: false,
+  },
   webpackFinal: async (config) => {
     // Disable no-param-reassign because this API is designed to mutate the
     // config argument.

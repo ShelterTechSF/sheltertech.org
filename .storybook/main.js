@@ -4,6 +4,9 @@ const postcssCustomMedia = require("postcss-custom-media");
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  core: {
+    builder: "webpack5",
+  },
   features: {
     // Explicitly disable Storybook's PostCSS loader, since we already
     // explicitly use Gatsby's PostCSS loader. This setting can be removed after
@@ -48,20 +51,31 @@ module.exports = {
     config.module.rules.push({
       test: /\.module\.css$/,
       use: [
-        "style-loader",
+        {
+          loader: "style-loader",
+          options: {
+            modules: {
+              namedExport: true,
+            },
+          },
+        },
         {
           loader: "css-loader",
           options: {
             importLoaders: 1,
-            modules: true,
-            localIdentName: "[name]--[local]--[hash:base64:5]",
+            modules: {
+              localIdentName: "[name]--[local]--[hash:base64:5]",
+              namedExport: true,
+            },
           },
         },
         {
           loader: "postcss-loader",
           options: {
-            ident: "css-modules-postcss",
-            plugins: [postcssCustomMedia],
+            postcssOptions: {
+              ident: "css-modules-postcss",
+              plugins: [postcssCustomMedia],
+            },
           },
         },
       ],
@@ -82,8 +96,10 @@ module.exports = {
         {
           loader: "postcss-loader",
           options: {
-            ident: "css-no-modules-postcss",
-            plugins: [postcssCustomMedia],
+            postcssOptions: {
+              ident: "css-no-modules-postcss",
+              plugins: [postcssCustomMedia],
+            },
           },
         },
       ],

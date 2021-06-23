@@ -2,5 +2,6 @@ node_modules/**
 dist/**
 src/index.html
 public/
+storybook-static/
 # Unignore any .js that start with a dot so that we lint config files themselves
 !.*.js

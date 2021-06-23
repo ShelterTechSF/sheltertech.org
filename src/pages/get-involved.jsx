@@ -3,8 +3,10 @@ import GetInvolvedView from "../legacy/components/pages/get-involved/GetInvolved
 import Layout from "../legacy/layouts/Layout";
 
 // Sync route definition
-export default () => (
+const GetInvolvedPage = () => (
   <Layout>
     <GetInvolvedView />
   </Layout>
 );
+
+export default GetInvolvedPage;

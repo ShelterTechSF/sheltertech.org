@@ -12,8 +12,10 @@ const Page = () => (
   </div>
 );
 
-export default () => (
+const NotFoundPage = () => (
   <Layout>
     <Page />
   </Layout>
 );
+
+export default NotFoundPage;

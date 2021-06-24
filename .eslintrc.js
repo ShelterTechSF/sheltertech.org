@@ -23,6 +23,9 @@ module.exports = {
     "react/jsx-filename-extension": ["error", { extensions: [".jsx", ".tsx"] }],
     // Disable prop-types check because they're redundant with TypeScript.
     "react/prop-types": ["off"],
+    // Disable default props checks because TypeScript will enforce proper
+    // null/undefined checks on optional parameters.
+    "react/require-default-props": ["off"],
   },
   overrides: [
     {

@@ -20,7 +20,7 @@ module.exports = {
   plugins: ["@typescript-eslint", "react", "react-hooks"],
   rules: {
     "import/order": ["error", { alphabetize: { order: "asc" } }],
-    "react/jsx-filename-extension": [1, { extensions: [".tsx"] }],
+    "react/jsx-filename-extension": ["error", { extensions: [".tsx"] }],
     // Disable prop-types check because they're redundant with TypeScript.
     "react/prop-types": ["off"],
   },
@@ -78,6 +78,7 @@ module.exports = {
         // Do not require PropTypes to be declared on ad hoc Storybook
         // React components.
         "react/prop-types": ["error", { skipUndeclared: true }],
+        "react/jsx-filename-extension": ["error", { extensions: [".jsx"] }],
       },
     },
     {

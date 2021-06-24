@@ -29,10 +29,8 @@ import articleSpotlightImage from "./mission-hotel.jpeg";
 export default () => {
   const [partnershipFormIsOpen, setPartnershipFormIsOpen] = useState(false);
   const [videoHeaderModalIsOpen, setVideoHeaderModalIsOpen] = useState(false);
-  const [
-    videoSpotlightBlockModalIsOpen,
-    setVideoSpotlightBlockModalIsOpen,
-  ] = useState(false);
+  const [videoSpotlightBlockModalIsOpen, setVideoSpotlightBlockModalIsOpen] =
+    useState(false);
   return (
     <Layout>
       <Modal

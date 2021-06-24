@@ -41,8 +41,7 @@ DefaultImageHeader.args = {
   },
   image2: {
     url: whiteboard,
-    alt:
-      "Team members collaborating together by looking and pointing at whiteboard covered with sticky notes full of ideas.",
+    alt: "Team members collaborating together by looking and pointing at whiteboard covered with sticky notes full of ideas.",
   },
   ctaButtons: [
     {

@@ -570,8 +570,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Tue, Sep 18 5:30PM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-sept-18th-volunteer-opportunity-tickets-49411240350",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-sept-18th-volunteer-opportunity-tickets-49411240350",
     location: "Runway",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -583,8 +582,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Tue, Sep 11 5:30PM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-sep-11th-volunteer-opportunity-tickets-49411220290",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-sep-11th-volunteer-opportunity-tickets-49411220290",
     location: "Intersection for the Arts",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -608,8 +606,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Tue, Aug 21 5:30PM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-aug-21st-volunteer-opportunity-tickets-48321486868?aff=ebdssbdestsearch",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-aug-21st-volunteer-opportunity-tickets-48321486868?aff=ebdssbdestsearch",
     location: "Unity Technologies",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -621,8 +618,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Tue, Aug 7 5:30PM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-aug-7th-volunteer-opportunity-tickets-48310200109?aff=ebdssbdestsearch",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-aug-7th-volunteer-opportunity-tickets-48310200109?aff=ebdssbdestsearch",
     location: "Unity Technologies",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -634,8 +630,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Tue, Jul 24 5:30PM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-july-24th-volunteer-opportunity-tickets-47339944047?aff=efbeventtix",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-july-24th-volunteer-opportunity-tickets-47339944047?aff=efbeventtix",
     location: "Unity Technologies",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -647,8 +642,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Tue, Jul 10 5:30PM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-july-10th-volunteer-opportunity-tickets-47339895903",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-july-10th-volunteer-opportunity-tickets-47339895903",
     location: "Unity Technologies",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -660,8 +654,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Sun, Jul 1 1:00PM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-june-16th-volunteer-opportunity-tickets-46767081600",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-june-16th-volunteer-opportunity-tickets-46767081600",
     location: "Downtown SF",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -673,8 +666,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Sat, Jun 30 1:00PM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-june-30th-volunteer-opportunity-tickets-46773909021",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-june-30th-volunteer-opportunity-tickets-46773909021",
     location: "Noe Valley Branch Library",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -698,8 +690,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Sun, Jun 17 10:30AM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-june-16th-volunteer-opportunity-tickets-46767081600",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-june-16th-volunteer-opportunity-tickets-46767081600",
     location: "Saint Anthony´s Foundation",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -711,8 +702,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Sat, Jun 16 10:30AM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-june-16th-volunteer-opportunity-tickets-46767081600",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-june-16th-volunteer-opportunity-tickets-46767081600",
     location: "Saint Anthony´s Foundation",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -724,8 +714,7 @@ const pastEventsList = [
     title: "Dinner With Your Neighbor",
     date: "Fri, Jun 1 7:00PM",
     cost: "Free",
-    link:
-      "https://eatfeastly.com/meals/d/191475228/dinner-with-your-neighbor-3/",
+    link: "https://eatfeastly.com/meals/d/191475228/dinner-with-your-neighbor-3/",
     location: "SOMA",
     description:
       "Share a table and a meal with housed and unhoused residents of SF",
@@ -737,8 +726,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Sun, May 20 1:00PM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-may-20th-volunteering-opportunity-no-skills-required-tickets-45091072612",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-may-20th-volunteering-opportunity-no-skills-required-tickets-45091072612",
     location: "Downtown San Francisco",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -750,8 +738,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Sat, May 19 1:00PM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-may-19th-volunteering-opportunity-tickets-45091044528",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-may-19th-volunteering-opportunity-tickets-45091044528",
     location: "Downtown San Francisco",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -763,8 +750,7 @@ const pastEventsList = [
     title: "Homelessness and the Mayoral Election",
     date: "Mon, May 7 6:30PM",
     cost: "Free",
-    link:
-      "https://www.eventbrite.com/e/what-would-you-tell-the-next-mayor-about-homelessness-in-sf-tickets-45281357760",
+    link: "https://www.eventbrite.com/e/what-would-you-tell-the-next-mayor-about-homelessness-in-sf-tickets-45281357760",
     location: "FeelGood Enterprises",
     description: "What Would You Tell the Next Mayor about Homelessness?",
     img: ImageMayoralEvent,
@@ -775,8 +761,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Sat, May 5 6:30PM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-may-6th-volunteer-event-tickets-45090922162",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-may-6th-volunteer-event-tickets-45090922162",
     location: "Noe Valley Library",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -800,8 +785,7 @@ const pastEventsList = [
     title: "Homeless Services Workshop",
     date: "Sun, Apr 22 1:00PM",
     cost: "Volunteer Event",
-    link:
-      "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-april-22nd-volunteering-opportunity-tickets-45090816847",
+    link: "https://www.eventbrite.com/e/san-francisco-homelessness-datathon-april-22nd-volunteering-opportunity-tickets-45090816847",
     location: "Runway",
     description:
       "Work with the homeless and improve our program offerings at this volunteer event",
@@ -837,8 +821,7 @@ const pastEventsList = [
     title: "Dinner with Your Neighbor",
     date: "Mon, Feb 19 7:30PM",
     cost: "Free",
-    link:
-      "https://eatfeastly.com/meals/d/191326028/sheltertech-dinner-the-union-2/",
+    link: "https://eatfeastly.com/meals/d/191326028/sheltertech-dinner-the-union-2/",
     location: "Russian Hill",
     description:
       "Share a table and a meal with housed and unhoused residents of SF",

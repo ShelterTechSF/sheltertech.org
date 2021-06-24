@@ -25,13 +25,11 @@ export type LogoType = Readonly<{
 const partnersAndSponsorsLogos: readonly LogoType[] = [
   {
     url: mohcdLogo,
-    alt:
-      "Logo of Mayor's Office of Housing and Community Development organization.",
+    alt: "Logo of Mayor's Office of Housing and Community Development organization.",
   },
   {
     url: justiceAndDiversityCenterLogo,
-    alt:
-      "Logo of Justice and Diversity Center of The Bar Association of San Francisco organization.",
+    alt: "Logo of Justice and Diversity Center of The Bar Association of San Francisco organization.",
   },
   {
     url: sfFamiliesLogo,

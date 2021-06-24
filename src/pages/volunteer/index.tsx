@@ -44,8 +44,7 @@ export default () => {
         }}
         image2={{
           url: whiteboard,
-          alt:
-            "Team members collaborating together by looking and pointing at whiteboard covered with sticky notes full of ideas.",
+          alt: "Team members collaborating together by looking and pointing at whiteboard covered with sticky notes full of ideas.",
         }}
         ctaButtons={[
           {
@@ -137,8 +136,7 @@ export default () => {
         }
         image={{
           url: volunteers,
-          alt:
-            "Five volunteer members surrounding a table of holiday care packages.",
+          alt: "Five volunteer members surrounding a table of holiday care packages.",
         }}
         ctaButtons={[
           {

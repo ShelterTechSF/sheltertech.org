@@ -21,6 +21,7 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-postcss",
       options: {
@@ -37,25 +38,21 @@ module.exports = {
         // is 'gatsby-source-prismic-test-site.prismic.io'.
         repositoryName: "sheltertech",
 
-        // Set a list of links to fetch and be made available in your link
-        // resolver function.
-        // See: https://prismic.io/docs/javascript/query-the-api/fetch-linked-document-fields
-        fetchLinks: [
-          // Your list of links
-        ],
-
         // Provide an object of Prismic custom type JSON schemas to load into
         // Gatsby. This is required.
         schemas: {
           // Your custom types mapped to schemas
           footer: require("./src/schemas/footer.json"),
           home_page: require("./src/schemas/home_page.json"),
+          volunteer_page: {},
+          test: {},
+          team_member: {},
+          team: {},
+          post: {},
+          open_role: {},
+          event: {},
+          blog_home: {},
         },
-
-        // Add the Prismic Toolbar script to the site. Defaults to false.
-        // Set to "legacy" if your repository requires the older toolbar script.
-        // See: https://prismic.io/docs/rest-api/beyond-the-api/the-preview-feature
-        prismicToolbar: true,
       },
     },
     "gatsby-plugin-typegen",

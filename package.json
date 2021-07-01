@@ -29,7 +29,8 @@
   "homepage": "https://github.com/ShelterTechSF/sheltertech.org#readme",
   "dependencies": {
     "gatsby": "^3.7.2",
-    "gatsby-source-prismic": "^3.3.4",
+    "gatsby-plugin-image": "^1.8.0",
+    "gatsby-source-prismic": "^4.0.0-beta.10",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "pure-react-carousel": "^1.27.6",

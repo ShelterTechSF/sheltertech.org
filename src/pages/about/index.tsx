@@ -55,8 +55,8 @@ export default () => (
             </li>
             <li>
               The Community Representative program is designed to bring
-              volunteers and underserved community members together to
-              enhance ShelterTech programs and build awareness
+              volunteers and underserved community members together to enhance
+              ShelterTech programs and build awareness
             </li>
           </ul>
         </>
@@ -81,7 +81,7 @@ export default () => (
             Living on the streets, you spend most of your time just trying to
             survive. It’s hard to know where to start, what services you need,
             how to get training in a new field or search for jobs. I had a
-            smartphone and could find WiFi, but there weren't any apps or
+            smartphone and could find WiFi, but there weren&apos;t any apps or
             websites to help me get off the streets. Now I want to give back and
             help people that become homeless. Darcel founded ShelterTech to help
             bridge this digital divide.

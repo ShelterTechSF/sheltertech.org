@@ -49,7 +49,8 @@ DefaultFooter.args = {
   formAntiBotInputName: "b_c47829732a0bea5c8e8a94604_08f60e42ef",
   formDescription: "Subscribe to get updates",
   footerNavigation: [
-    { text: "Programs", internalLink: "/new" },
+    { text: "About", internalLink: "/new" },
+    { text: "Programs", internalLink: "/new/programs" },
     { text: "Volunteer", internalLink: "/new/volunteer" },
     { text: "Donate", internalLink: "/new/donate" },
   ],

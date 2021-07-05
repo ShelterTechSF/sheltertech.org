@@ -90,19 +90,19 @@
   margin-top: 20px;
 }
 
-.descriptionWrapper :first-child {
+.description :first-child {
   margin: 0;
 }
 
-.descriptionWrapper :not(:first-child):not(li) {
+.description :not(:first-child):not(li) {
   margin-top: 15px;
 }
 
-.descriptionWrapper ul {
+.description ul {
   margin-left: 2em;
 }
 
-.descriptionWrapper ul li {
+.description ul li {
   list-style-position: outside;
   list-style-type: disc;
 }
@@ -126,11 +126,6 @@
   .ctaButtonRowItem:not(:last-child) {
     margin-bottom: 20px;
     margin-right: 0;
-  }
-
-  .descriptionWrapper {
-    font: var(--font-body-medium);
-    margin-top: 40px;
   }
 }
 

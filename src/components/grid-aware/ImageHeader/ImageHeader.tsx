@@ -8,6 +8,7 @@ type ImageProps = {
 };
 
 type ImageHeaderProps = {
+  isAbout?: boolean;
   title: string;
   subtitle: string;
   description: string | React.ReactNode;
@@ -23,7 +24,12 @@ const ImageHeader = ({
   image1,
   image2,
   ctaButtons,
+  isAbout,
 }: ImageHeaderProps) => {
+  const gridAreaImage2ClassName = `${s.gridAreaImage2} ${
+    isAbout ? s.gridAreaImage2About : ""
+  }`;
+
   const GridAreaLeft = () => (
     <div className={s.gridAreaText}>
       <h1 className={s.title}>{title}</h1>
@@ -54,7 +60,7 @@ const ImageHeader = ({
             </div>
           </div>
           <GridAreaLeft />
-          <div className={s.gridAreaImage2}>
+          <div className={gridAreaImage2ClassName}>
             <div className={s.image2Wrapper}>
               <img className={s.image} src={image2.url} alt={image2.alt} />
             </div>

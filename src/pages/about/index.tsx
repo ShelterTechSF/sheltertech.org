@@ -17,6 +17,7 @@ export default () => (
       <title>About Us | ShelterTech</title>
     </Helmet>
     <ImageHeader
+      isAbout
       title="About Us"
       subtitle="Our Mission and History"
       description={

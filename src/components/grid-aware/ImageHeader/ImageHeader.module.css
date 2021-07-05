@@ -70,6 +70,10 @@
   .gridAreaImage2 {
     text-align: right;
   }
+
+  .gridAreaImage2About {
+    display: none;
+  }
 }
 
 

@@ -7,10 +7,10 @@ import * as s from "./TwoParagraphBlock.module.css";
 /* Main component */
 type TwoParagraphBlockProps = {
   title: string;
-  paragraph1: React.ReactNode;
-  paragraph2: React.ReactNode;
+  paragraph1?: React.ReactNode;
+  paragraph2?: React.ReactNode;
   image: { url: string; alt: string };
-  ctaButtons: ButtonProps[];
+  ctaButtons?: ButtonProps[];
 };
 
 const TwoParagraphBlock = ({
@@ -36,7 +36,7 @@ const TwoParagraphBlock = ({
     <div className={s.gridAreaParagraph2}>
       <div className={s.paragraph2Wrapper}>{paragraph2}</div>
       <div className={s.ctaButtonRow}>
-        {ctaButtons.map((button) => (
+        {ctaButtons?.map((button) => (
           <div className={s.ctaButtonItem} key={button.text}>
             <Button
               text={button.text}

@@ -19,7 +19,7 @@ export default () => (
     <ImageHeader
       title="About Us"
       subtitle="Our Mission and History"
-      description={
+      descriptionNode={
         <>
           <p>
             ShelterTech is an award-winning non-profit solving the biggest

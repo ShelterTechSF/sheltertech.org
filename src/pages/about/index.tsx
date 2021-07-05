@@ -2,17 +2,74 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
+import ImageHeader from "../../components/grid-aware/ImageHeader";
 import Spacer from "../../components/grid-aware/Spacer";
+import teamDesignWorkshopImage from "../../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
 import TwoParagraphBlock from "../../components/grid-aware/TwoParagraphBlock";
 import Layout from "../../components/layout";
 import articleSpotlightImage from "../volunteer/laura-barerra-vera.png";
 import darcelJackson from "./darcel-jackson.png";
+import teamImage from "./sheltertech-team.png";
 
 export default () => (
   <Layout>
     <Helmet>
       <title>About Us | ShelterTech</title>
     </Helmet>
+    <ImageHeader
+      title="About Us"
+      subtitle="Our Mission and History"
+      description={
+        <>
+          <p>
+            ShelterTech is an award-winning non-profit solving the biggest
+            technology challenges faced by people experiencing homelessness and
+            are housing insecure in San Francisco. Our unique, all-volunteer
+            organization is committed to bridging the digital divide, inspired
+            by the belief that digital equity and connectivity is a right, not a
+            privilege.
+          </p>
+          <p>
+            With over 9,000 people in San Francisco and over 28,000 in the Bay
+            Area currently unsheltered and tens of thousands more at risk of
+            eviction, the situation has never been more dire. The tech boom in
+            San Francisco has created thousands of jobs and great wealth. It has
+            also widened the digital divide and created an affordable housing
+            crisis, making a bad situation even worse.
+          </p>
+          <p>
+            Working in close collaboration with the City of San Francisco,
+            frontline services organizations, local corporations, and community
+            representatives, ShelterTech is committed to delivering solutions
+            built by the community, for the community. ShelterTech’s programs
+            include:
+          </p>
+          <ul>
+            <li>
+              <a href="https://sfserviceguide.org/">SF Service Guide</a> is an
+              online directory of human services in San Francisco
+            </li>
+            <li>
+              ShelterConnect is a program that installs free WiFi in shelters,
+              community centers, and supportive housing developments
+            </li>
+            <li>
+              The Community Representative program is designed to bring
+              volunteers and underserved community members together to
+              enhance ShelterTech programs and build awareness
+            </li>
+          </ul>
+        </>
+      }
+      image1={{
+        url: teamImage,
+        alt: "Team members posing for a group photo.",
+      }}
+      image2={{
+        url: teamDesignWorkshopImage,
+        alt: "Team posing for a photo after a design workshop.",
+      }}
+    />
     <TwoParagraphBlock
       title="A note from our Founder, Darcel Jackson"
       paragraph2={

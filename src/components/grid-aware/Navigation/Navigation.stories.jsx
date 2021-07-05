@@ -54,7 +54,7 @@ Default.args = {
   homeURL: "/",
   navigationItems: [
     { text: "About", internalLink: "/about" },
-    { text: "Programs", internalLink: "/programs" },
+    { text: "Programs", internalLink: "/" },
     { text: "Work with Us", internalLink: "/volunteer" },
     { text: "News", externalLink: "https://example.com" },
     { text: "Donate", internalLink: "/donate", isButton: true },

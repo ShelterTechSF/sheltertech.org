@@ -20,8 +20,8 @@ type NavItem = {
 };
 
 const navigationItems: NavItem[] = [
-  { text: "About Us", internalLink: "/" },
-  { text: "Programs", internalLink: "/programs" },
+  { text: "About Us", internalLink: "/about" },
+  { text: "Programs", internalLink: "/" },
   { text: "Volunteer", internalLink: "/volunteer" },
   { text: "Donate", internalLink: "/donate", isButton: true },
 ];
@@ -86,8 +86,8 @@ const Layout = ({ children }: LayoutProps) => {
           formAntiBotInputName="b_c47829732a0bea5c8e8a94604_08f60e42ef"
           formDescription="Subscribe to get updates"
           footerNavigation={[
-            { text: "About Us", internalLink: "/" },
-            { text: "Programs", internalLink: "/programs" },
+            { text: "About Us", internalLink: "/about" },
+            { text: "Programs", internalLink: "/" },
             { text: "Volunteer", internalLink: "/volunteer" },
             { text: "Donate", internalLink: "/donate" },
           ]}

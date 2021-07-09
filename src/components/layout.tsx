@@ -45,6 +45,13 @@ const Layout = ({ children }: LayoutProps) => {
           address {
             text
           }
+          sheltertech_logo_link {
+            isBroken
+            link_type
+            target
+            type
+            uid
+          }
         }
       }
     }
@@ -112,6 +119,7 @@ const Layout = ({ children }: LayoutProps) => {
           shelterTechLogo={{
             url: shelterTechLogoWhite,
             alt: "ShelterTech Logo",
+            link: data.prismicFooter?.data?.sheltertech_logo_link,
           }}
           socialMediaLinks={[
             {

@@ -1,11 +1,17 @@
 {
-  "Main": {
-    "address": {
-      "type": "StructuredText",
-      "config": {
-        "single": "paragraph",
-        "label": "Address",
-        "placeholder": "123 Fake St, San Francisco, California 94110"
+  "Main" : {
+    "address" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Address",
+        "placeholder" : "123 Fake St, San Francisco, California 94110"
+      }
+    },
+    "sheltertech_logo_link" : {
+      "type" : "Link",
+      "config" : {
+        "label" : "ShelterTech Logo Link"
       }
     }
   }

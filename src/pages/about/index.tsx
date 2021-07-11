@@ -4,12 +4,12 @@ import { Helmet } from "react-helmet";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import ImageHeader from "../../components/grid-aware/ImageHeader";
 import Spacer from "../../components/grid-aware/Spacer";
-import teamDesignWorkshopImage from "../../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
 import TwoParagraphBlock from "../../components/grid-aware/TwoParagraphBlock";
 import Layout from "../../components/layout";
 import articleSpotlightImage from "../volunteer/laura-barerra-vera.png";
 import darcelJackson from "./darcel-jackson.png";
 import teamImage from "./sheltertech-team.png";
+import teamDesignWorkshopImage from "./team-design-workshop.png";
 
 export default () => (
   <Layout>

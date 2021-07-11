@@ -26,9 +26,14 @@ const ImageHeader = ({
   ctaButtons,
   isAbout,
 }: ImageHeaderProps) => {
-  const gridAreaImage2ClassName = `${s.gridAreaImage2} ${
-    isAbout ? s.gridAreaImage2About : ""
+  const gridAreaImage1 = `${
+    isAbout ? s.gridAreaImage1About : s.gridAreaImage1
   }`;
+  const gridAreaImage2 = `${
+    isAbout ? s.gridAreaImage2About : s.gridAreaImage2
+  }`;
+  const image1Wrapper = `${isAbout ? s.image1WrapperAbout : s.image1Wrapper}`;
+  const image2Wrapper = `${isAbout ? s.image2WrapperAbout : s.image2Wrapper}`;
 
   const GridAreaLeft = () => (
     <div className={s.gridAreaText}>
@@ -54,14 +59,14 @@ const ImageHeader = ({
     <div className={s.bleedWrapper}>
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
-          <div className={s.gridAreaImage1}>
-            <div className={s.image1Wrapper}>
+          <div className={gridAreaImage1}>
+            <div className={image1Wrapper}>
               <img className={s.image} src={image1.url} alt={image1.alt} />
             </div>
           </div>
           <GridAreaLeft />
-          <div className={gridAreaImage2ClassName}>
-            <div className={s.image2Wrapper}>
+          <div className={gridAreaImage2}>
+            <div className={image2Wrapper}>
               <img className={s.image} src={image2.url} alt={image2.alt} />
             </div>
           </div>

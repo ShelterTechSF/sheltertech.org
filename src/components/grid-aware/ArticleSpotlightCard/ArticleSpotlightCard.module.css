@@ -4,6 +4,7 @@
   grid-template-rows: 600px;
   margin: auto;
   max-width: var(--bleed-max-width);
+  margin-bottom: 120px;
 }
 
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */

@@ -20,7 +20,8 @@ type NavItem = {
 };
 
 const navigationItems: NavItem[] = [
-  { text: "Programs", internalLink: "/" },
+  { text: "About Us", internalLink: "/aboutus" },
+  { text: "Our Programs", internalLink: "/programs" },
   { text: "Volunteer", internalLink: "/volunteer" },
   { text: "Donate", internalLink: "/donate", isButton: true },
 ];

@@ -185,4 +185,10 @@
     position: relative;
     right: 40px;
   }
+
+  .image1WrapperAbout {
+    margin-top: 0;
+    position: relative;
+    right: 40px;
+  }
 }

@@ -57,9 +57,14 @@
 }
 
 @media (--tablet-and-down) {
-  .gridParent.gridParentAbout {
+  .gridParent {
     display: block;
     padding: 50px 0 80px;
+  }
+
+  .gridParentAbout {
+    display: block;
+    padding: 50px 0;
   }
 }
 
@@ -104,10 +109,21 @@
     margin-top: 40px;
   }
 
+  .gridAreaParagraph2About {
+    padding-right: 0;
+  }
+
   .gridAreaImage {
     margin-right: -40px;
     margin-top: 40px;
     text-align: right;
+  }
+
+  .gridAreaImageAbout {
+    margin-right: -40px;
+    margin-top: 40px;
+    text-align: right;
+    top: 0;
   }
 }
 
@@ -127,11 +143,19 @@
   font: var(--font-body-medium);
 }
 
-.paragraph2Wrapper.paragraph2WrapperAbout :first-child {
+.paragraph2Wrapper :first-child {
   margin: 0;
 }
 
-.paragraph2Wrapper.paragraph2WrapperAbout :not(:first-child) {
+.paragraph2WrapperAbout :first-child {
+  margin: 0;
+}
+
+.paragraph2Wrapper :not(:first-child) {
+  margin-top: 15px;
+}
+
+.paragraph2WrapperAbout :not(:first-child) {
   margin-top: 15px;
 }
 
@@ -145,7 +169,12 @@
     margin-top: 40px;
   }
 
-  .paragraph2Wrapper.paragraph2WrapperAbout {
+  .paragraph2Wrapper {
+    font: var(--font-body-medium);
+    margin-top: 40px;
+  }
+
+  .paragraph2WrapperAbout {
     font: var(--font-body-medium);
     margin-top: 40px;
   }

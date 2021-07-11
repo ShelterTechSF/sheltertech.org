@@ -53,7 +53,7 @@ export default () => (
               >
                 SF Service Guide
               </a>{" "}
-              online directory of human services in San Francisco
+              is an online directory of human services in San Francisco
             </li>
             <li>
               ShelterConnect is a program that installs free WiFi in shelters,

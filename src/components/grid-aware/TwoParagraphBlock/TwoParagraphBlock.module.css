@@ -44,12 +44,20 @@
   padding-top: 140px;
 }
 
+.gridParentAbout {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  grid-template-rows: auto minmax(492px, auto);
+  padding-top: 140px;
+}
+
 .gridParent > * {
   min-width: 0;
 }
 
 @media (--tablet-and-down) {
-  .gridParent {
+  .gridParent.gridParentAbout {
     display: block;
     padding: 50px 0 80px;
   }
@@ -74,10 +82,21 @@
   margin-top: 70px;
 }
 
+.gridAreaParagraph2About {
+  padding-right: 16px;
+}
+
 .gridAreaImage {
   grid-column: 8 / span 4;
   grid-row: 2;
   margin-top: 15px;
+}
+
+.gridAreaImageAbout {
+  grid-column: 8 / span 4;
+  grid-row: 2;
+  position: relative;
+  top: -48px;
 }
 
 @media (--tablet-and-down) {
@@ -104,16 +123,20 @@
   font: var(--font-body-small);
 }
 
-.paragraph2Wrapper :first-child {
+.paragraph2WrapperAbout {
+  font: var(--font-body-medium);
+}
+
+.paragraph2Wrapper.paragraph2WrapperAbout :first-child {
   margin: 0;
 }
 
-.paragraph2Wrapper :not(:first-child) {
+.paragraph2Wrapper.paragraph2WrapperAbout :not(:first-child) {
   margin-top: 15px;
 }
 
 .image1Wrapper {
-  margin-bottom: -70px;
+  margin-bottom: -142px;
 }
 
 @media (--tablet-and-down) {
@@ -122,7 +145,7 @@
     margin-top: 40px;
   }
 
-  .paragraph2Wrapper {
+  .paragraph2Wrapper.paragraph2WrapperAbout {
     font: var(--font-body-medium);
     margin-top: 40px;
   }

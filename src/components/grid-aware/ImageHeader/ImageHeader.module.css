@@ -108,7 +108,7 @@
   margin: 0;
 }
 
-.description :not(:first-child):not(li) {
+.description > :not(:first-child) {
   margin-top: 15px;
 }
 
@@ -116,7 +116,7 @@
   margin-left: 2em;
 }
 
-.description ul li {
+.description ul > li {
   list-style-position: outside;
   list-style-type: disc;
 }

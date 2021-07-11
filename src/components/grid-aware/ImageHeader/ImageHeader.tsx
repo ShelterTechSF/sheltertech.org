@@ -11,7 +11,7 @@ type ImageHeaderProps = {
   isAbout?: boolean;
   title: string;
   subtitle: string;
-  description: string | React.ReactNode;
+  description: React.ReactNode;
   image1: ImageProps;
   image2: ImageProps;
   ctaButtons?: ButtonProps[];

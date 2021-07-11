@@ -47,7 +47,12 @@ export default () => (
           </p>
           <ul>
             <li>
-              <a href="https://sfserviceguide.org/">SF Service Guide</a> is an
+              <a
+                href="https://sfserviceguide.org/"
+                style={{ textDecoration: "underline" }}
+              >
+                SF Service Guide
+              </a>{" "}
               online directory of human services in San Francisco
             </li>
             <li>
@@ -72,6 +77,7 @@ export default () => (
       }}
     />
     <TwoParagraphBlock
+      isAbout
       title="A note from our Founder, Darcel Jackson"
       paragraph2={
         <>

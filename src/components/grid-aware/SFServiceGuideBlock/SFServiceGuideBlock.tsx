@@ -22,7 +22,7 @@ const SFServiceGuideBlock = ({
   description,
   description2,
   image,
-  ctaButtons,                                                                                                                                                 
+  ctaButtons,
 }: SFServiceGuideBlockProps) => {
   const GridAreaRight = () => (
     <div className={s.gridAreaText}>
@@ -42,7 +42,6 @@ const SFServiceGuideBlock = ({
           </div>
         ))}
       </div>
-      
     </div>
   );
 

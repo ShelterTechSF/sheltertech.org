@@ -24,7 +24,7 @@ const CommunityRepProgramBlock = ({
   bullet1,
   bullet2,
   image,
-  ctaButtons,                                                                                                                                                 
+  ctaButtons,
 }: CommunityRepProgramBlockProps) => {
   const GridAreaRight = () => (
     <div className={s.gridAreaText}>

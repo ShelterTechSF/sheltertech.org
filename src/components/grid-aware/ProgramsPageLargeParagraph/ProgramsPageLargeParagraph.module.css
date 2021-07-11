@@ -62,7 +62,7 @@
   font: var(--font-headline);
   /* grid-column: 1/ span 4;
   grid-row: 1; */
-  text-align:left;
+  text-align: left;
 }
 
 .description {

@@ -84,10 +84,10 @@
 }
 
 .bullet {
-  margin-top: 20px;
-  list-style-type: disc;
   list-style-position: outside;
+  list-style-type: disc;
   margin-left: 1em;
+  margin-top: 20px;
 }
 
 .ctaButtonRow {

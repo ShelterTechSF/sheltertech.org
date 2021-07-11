@@ -5,8 +5,8 @@
   grid-template-columns: var(--bleed-grid-template-columns);
   margin: auto;
   max-width: var(--bleed-max-width);
-  padding-top: 100px;
   padding-bottom: 115px;
+  padding-top: 100px;
 }
 
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */
@@ -85,10 +85,10 @@
 }
 
 .bullet {
-  margin-top: 20px;
-  list-style-type: disc;
   list-style-position: outside;
+  list-style-type: disc;
   margin-left: 1em;
+  margin-top: 20px;
 }
 
 .ctaButtonRow {

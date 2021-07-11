@@ -30,7 +30,7 @@ const ShelterConnectBlock = ({
   bullet3,
   description3,
   image,
-  ctaButtons,                                                                                                                                                 
+  ctaButtons,
 }: ShelterConnectBlockProps) => {
   const GridAreaRight = () => (
     <div className={s.gridAreaText}>

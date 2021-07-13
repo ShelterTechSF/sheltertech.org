@@ -21,6 +21,7 @@
 @media (--tablet-and-down) {
   .bleedWrapper {
     grid-template-columns: 40px 1fr 40px;
+    padding-top: 80px;
   }
 }
 
@@ -39,8 +40,8 @@
 
 @media (--tablet-and-down) {
   .gridParent {
-    display: block;
-    padding-top: 30px;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -59,7 +60,7 @@
 
 @media (--tablet-and-down) {
   .gridAreaText {
-    margin: 30px 0;
+    margin: 30px 0 0;
   }
 
   .gridAreaImage2 {
@@ -104,7 +105,6 @@
 @media (--tablet-and-down) {
   .ctaButtonRow {
     flex-flow: column;
-    margin-bottom: 30px;
   }
 
   .ctaButtonRowItem:not(:last-child) {

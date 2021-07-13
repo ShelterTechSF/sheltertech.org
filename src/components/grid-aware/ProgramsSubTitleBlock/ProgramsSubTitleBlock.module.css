@@ -47,7 +47,7 @@
 @media (--tablet-and-down) {
   .gridParent {
     display: block;
-    padding: 50px 0 80px;
+    padding-bottom: 30px;
   }
 }
 

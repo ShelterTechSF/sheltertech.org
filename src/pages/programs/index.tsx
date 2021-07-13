@@ -6,6 +6,7 @@ import classroom from "../../components/grid-aware/ImageHeader/stories/classroom
 import ProgramsPageLargeParagraph from "../../components/grid-aware/ProgramsPageLargeParagraph";
 import SFServiceGuideBlock from "../../components/grid-aware/SFServiceGuideBlock";
 import ShelterConnectBlock from "../../components/grid-aware/ShelterConnectBlock";
+import ProgramsSubTitleBlock from "../../components/grid-aware/ProgramsSubTitleBlock";
 
 import Layout from "../../components/layout";
 import articleSpotlightImage from "./laura-barerra-vera.png";
@@ -15,6 +16,9 @@ export default () => (
     <ProgramsPageLargeParagraph
       title="Our Programs"
       description="ShelterTech's programs are designed to suppport the underserved community experiencing homelessness and housing insecurity through WiFi connectivity and acccess to online resources."
+    />
+    <ProgramsSubTitleBlock
+      title="ShelterTech offers the following programs:"
     />
     <SFServiceGuideBlock
       title="SF Service Guide"

@@ -1,4 +1,4 @@
-/* Background bleed */
+/* Outer grid */
 
 .bleedWrapper {
   display: grid;
@@ -14,11 +14,16 @@
 
 .bleedMainContent {
   grid-column: 2;
+  grid-row: 1;
 }
 
 @media (--tablet-and-down) {
   .bleedWrapper {
     grid-template-columns: 40px 1fr 40px;
+  }
+
+  .bleedBackground {
+    grid-column: 1 / span 3;
   }
 }
 
@@ -26,63 +31,77 @@
 /* Main grid */
 
 .gridParent {
+  color: var(--color-black);
   column-gap: var(--grid-column-gap);
   display: grid;
+  grid-column-start: 2;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  padding-bottom: 60px;
 }
 
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
 .gridParent > * {
   min-width: 0;
 }
 
 @media (--tablet-and-down) {
   .gridParent {
-    display: flex;
-    flex-direction: column-reverse;
+    display: block;
+    padding: 50px 0 80px;
   }
 }
+
 
 /* Main grid areas */
 
-.gridAreaText {
-  grid-column: 6/ span 6;
-  grid-row: 1;
+.gridAreaLeft {
+  grid-column: 2 / span 7;
 }
 
-@media (--tablet-and-down) {
-  .gridAreaText {
-    padding-top: 16px;
-  }
-}
-
-.gridAreaImage1 {
-  grid-column: 2 / span 4;
-  grid-row: 1;
-}
-
-/* Left grid area */
+/* Title block */
 
 .title {
-  font: var(--font-body-large);
+  font: var(--font-title);
   margin: 0;
 }
 
-.subtitle {
-  font: var(--font-body-medium);
+
+/* Descriptions block */
+
+@media (--tablet-and-down) {
+  .descriptionsWrapper {
+    margin-top: 40px;
+  }
 }
 
-.description {
-  font: var(--font-body-small);
+.descriptions * {
+  font: var(--font-body-medium);
+  margin: 0;
+}
+
+.descriptions >:not(:first-child) {
   margin-top: 20px;
 }
+
+.descriptions h1,
+.descriptions h2,
+.descriptions h3,
+.descriptions h4,
+.descriptions h5,
+.descriptions h6 {
+  font: var(--font-subtitle);
+}
+
+
+/* CTA block */
 
 .ctaButtonRow {
   display: flex;
   flex-flow: row wrap;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
-.ctaButtonRowItem:not(:last-child) {
+.ctaButtonItem:not(:last-child) {
   margin-right: 40px;
 }
 
@@ -91,36 +110,8 @@
     flex-flow: column;
   }
 
-  .ctaButtonRowItem:not(:last-child) {
+  .ctaButtonItem:not(:last-child) {
     margin-bottom: 20px;
     margin-right: 0;
-  }
-}
-
-
-/* Right grid area*/
-
-.image {
-  max-width: 100%;
-}
-
-.image2Wrapper {
-  margin-bottom: 80px;
-  position: relative;
-  right: -40px;
-}
-
-@media (--laptop-and-up) {
-  .image2Wrapper {
-    margin-bottom: 88px;
-    top: 271px;
-  }
-}
-
-@media (--tablet-and-down) {
-  .image1Wrapper {
-    margin-top: 0;
-    position: relative;
-    right: 40px;
   }
 }

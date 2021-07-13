@@ -59,6 +59,7 @@
 
 @media (--tablet-and-down) {
   .gridAreaText {
+    padding-top: 30px;
   }
 
   .gridAreaImage2 {

@@ -6,9 +6,7 @@ type ProgramsSubTitleBlockProps = {
   title: string;
 };
 
-const ProgramsSubTitleBlock = ({
-  title,
-}: ProgramsSubTitleBlockProps) => {
+const ProgramsSubTitleBlock = ({ title }: ProgramsSubTitleBlockProps) => {
   const GridAreaLeft = () => (
     <div className={s.gridAreaLeft}>
       <h1 className={s.title}>{title}</h1>

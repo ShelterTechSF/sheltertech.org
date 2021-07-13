@@ -1,10 +1,7 @@
 import React from "react";
 import ShelterConnectBlock from "./ShelterConnectBlock";
 
-import SFServiceGuideBlock from "./ShelterConnectBlock";
-
 import classroom from "./stories/classroom.png";
-import whiteboard from "./stories/whiteboard-sticky-notes.png";
 
 export default {
   title: "Grid-Aware/ShelterConnectBlock",

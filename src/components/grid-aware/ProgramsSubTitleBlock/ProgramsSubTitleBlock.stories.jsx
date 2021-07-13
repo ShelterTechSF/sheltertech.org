@@ -9,9 +9,7 @@ export default {
 
 const Template = ({ title }) => (
   <div>
-    <ProgramsSubTitleBlock
-      title={title}
-    />
+    <ProgramsSubTitleBlock title={title} />
   </div>
 );
 

@@ -2,7 +2,7 @@ import * as React from "react";
 import Button, { ButtonProps } from "../../inline/Button";
 import * as s from "./CommunityRepProgramBlock.module.css";
 
-type ServiceGuideProps = {
+type CommunityRepProgramProps = {
   url: string;
   alt: string;
 };
@@ -13,7 +13,7 @@ type CommunityRepProgramBlockProps = {
   description: string;
   bullet1: string;
   bullet2: string;
-  image: ServiceGuideProps;
+  image: CommunityRepProgramProps;
   ctaButtons: ButtonProps[];
 };
 
@@ -28,7 +28,7 @@ const CommunityRepProgramBlock = ({
 }: CommunityRepProgramBlockProps) => {
   const GridAreaRight = () => (
     <div className={s.gridAreaText}>
-      <h1 className={s.title}>{title}</h1>
+      <div className={s.title}>{title}</div>
       <div className={s.subtitle}>{subtitle}</div>
       <div className={s.description}>{description}</div>
       <ul className={s.bullet}>
@@ -55,7 +55,7 @@ const CommunityRepProgramBlock = ({
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
           <GridAreaRight />
-          <div className={s.gridAreaImage1}>
+          <div className={s.gridAreaImage}>
             <img className={s.image} src={image.url} alt={image.alt} />
           </div>
         </section>

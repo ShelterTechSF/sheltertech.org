@@ -7,26 +7,23 @@
   max-width: var(--bleed-max-width);
 }
 
+
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+
 .bleedWrapper > * {
   min-width: 0;
-}
-
-.bleedMainContent {
-  grid-column: 2;
-  grid-row: 1;
 }
 
 @media (--tablet-and-down) {
   .bleedWrapper {
     grid-template-columns: 40px 1fr 40px;
   }
-
-  .bleedBackground {
-    grid-column: 1 / span 3;
-  }
 }
 
+.bleedMainContent {
+  grid-column: 2;
+  grid-row: 1;
+}
 
 /* Main grid */
 
@@ -39,7 +36,9 @@
   padding-bottom: 60px;
 }
 
+
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */
+
 .gridParent > * {
   min-width: 0;
 }
@@ -58,60 +57,10 @@
   grid-column: 2 / span 7;
 }
 
+
 /* Title block */
 
 .title {
   font: var(--font-title);
   margin: 0;
-}
-
-
-/* Descriptions block */
-
-@media (--tablet-and-down) {
-  .descriptionsWrapper {
-    margin-top: 40px;
-  }
-}
-
-.descriptions * {
-  font: var(--font-body-medium);
-  margin: 0;
-}
-
-.descriptions >:not(:first-child) {
-  margin-top: 20px;
-}
-
-.descriptions h1,
-.descriptions h2,
-.descriptions h3,
-.descriptions h4,
-.descriptions h5,
-.descriptions h6 {
-  font: var(--font-subtitle);
-}
-
-
-/* CTA block */
-
-.ctaButtonRow {
-  display: flex;
-  flex-flow: row wrap;
-  margin-top: 40px;
-}
-
-.ctaButtonItem:not(:last-child) {
-  margin-right: 40px;
-}
-
-@media (--tablet-and-down) {
-  .ctaButtonRow {
-    flex-flow: column;
-  }
-
-  .ctaButtonItem:not(:last-child) {
-    margin-bottom: 20px;
-    margin-right: 0;
-  }
 }

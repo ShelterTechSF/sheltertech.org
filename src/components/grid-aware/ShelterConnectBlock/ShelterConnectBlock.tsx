@@ -2,7 +2,7 @@ import * as React from "react";
 import Button, { ButtonProps } from "../../inline/Button";
 import * as s from "./ShelterConnectBlock.module.css";
 
-type ServiceGuideProps = {
+type ShelterConnectProps = {
   url: string;
   alt: string;
 };
@@ -16,7 +16,7 @@ type ShelterConnectBlockProps = {
   bullet2: string;
   bullet3: string;
   description3: string;
-  image: ServiceGuideProps;
+  image: ShelterConnectProps;
   ctaButtons: ButtonProps[];
 };
 
@@ -64,7 +64,7 @@ const ShelterConnectBlock = ({
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
           <GridAreaRight />
-          <div className={s.gridAreaImage1}>
+          <div className={s.gridAreaImage}>
             <img className={s.image} src={image.url} alt={image.alt} />
           </div>
         </section>

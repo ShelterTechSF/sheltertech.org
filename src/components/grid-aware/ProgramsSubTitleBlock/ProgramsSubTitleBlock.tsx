@@ -1,7 +1,5 @@
 import * as React from "react";
 
-import Button, { ButtonProps } from "../../inline/Button";
-
 import * as s from "./ProgramsSubTitleBlock.module.css";
 
 type ProgramsSubTitleBlockProps = {

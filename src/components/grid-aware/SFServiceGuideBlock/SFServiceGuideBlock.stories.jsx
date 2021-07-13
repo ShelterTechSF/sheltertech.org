@@ -3,7 +3,6 @@ import React from "react";
 import SFServiceGuideBlock from "./SFServiceGuideBlock";
 
 import classroom from "./stories/classroom.png";
-import whiteboard from "./stories/whiteboard-sticky-notes.png";
 
 export default {
   title: "Grid-Aware/SFServiceGuideBlock",

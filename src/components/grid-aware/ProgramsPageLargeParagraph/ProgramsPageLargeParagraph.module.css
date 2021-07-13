@@ -13,17 +13,18 @@
   min-width: 0;
 }
 
-.bleedMainContent {
-  grid-column: 2;
-  grid-row: 1;
-  text-align: center;
-}
 @media (--tablet-and-down) {
   .bleedWrapper {
     grid-template-columns: 40px 1fr 40px;
     padding-bottom: 40px;
     padding-top: 30px;
   }
+}
+
+.bleedMainContent {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
 }
 
 .gridParent {
@@ -36,6 +37,7 @@
 .gridParent > * {
   min-width: 0;
 }
+
 @media (--tablet-and-down) {
   .gridParent {
     display: block;
@@ -47,21 +49,8 @@
   grid-row: 1;
 }
 
-/* 
-.gridAreaTitle {
-  grid-column: 1/ span 4;
-  grid-row: 1;
-}
-
-.gridAreaDescription {
-  grid-column: 1/ span 6;
-  grid-row: 1;
-} */
-
 .title {
   font: var(--font-headline);
-  /* grid-column: 1/ span 4;
-  grid-row: 1; */
   text-align: left;
 }
 

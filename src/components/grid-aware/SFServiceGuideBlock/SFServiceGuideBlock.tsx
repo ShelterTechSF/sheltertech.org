@@ -50,7 +50,7 @@ const SFServiceGuideBlock = ({
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
           <GridAreaRight />
-          <div className={s.gridAreaImage1}>
+          <div className={s.gridAreaImage}>
             <img className={s.image} src={image.url} alt={image.alt} />
           </div>
         </section>

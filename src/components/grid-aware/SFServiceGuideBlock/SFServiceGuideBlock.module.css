@@ -12,14 +12,14 @@
   min-width: 0;
 }
 
-.bleedMainContent {
-  grid-column: 2;
-}
-
 @media (--tablet-and-down) {
   .bleedWrapper {
     grid-template-columns: 40px 1fr 40px;
   }
+}
+
+.bleedMainContent {
+  grid-column: 2;
 }
 
 
@@ -42,6 +42,7 @@
   }
 }
 
+
 /* Main grid areas */
 
 .gridAreaText {
@@ -55,7 +56,7 @@
   }
 }
 
-.gridAreaImage1 {
+.gridAreaImage {
   grid-column: 2 / span 4;
   grid-row: 1;
 }
@@ -102,25 +103,4 @@
 
 .image {
   max-width: 100%;
-}
-
-.image2Wrapper {
-  margin-bottom: 80px;
-  position: relative;
-  right: -40px;
-}
-
-@media (--laptop-and-up) {
-  .image2Wrapper {
-    margin-bottom: 88px;
-    top: 271px;
-  }
-}
-
-@media (--tablet-and-down) {
-  .image1Wrapper {
-    margin-top: 0;
-    position: relative;
-    right: 40px;
-  }
 }

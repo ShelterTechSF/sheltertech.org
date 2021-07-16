@@ -62,16 +62,6 @@
   grid-row: 1;
 }
 
-.gridAreaImage1About {
-  grid-column: 9 / span 4;
-  grid-row: 1;
-}
-
-.gridAreaImage2About {
-  grid-column: 9 / span 4;
-  grid-row: 1;
-}
-
 @media (--tablet-and-down) {
   .gridAreaText {
     margin: 30px 0;
@@ -79,10 +69,6 @@
 
   .gridAreaImage2 {
     text-align: right;
-  }
-
-  .gridAreaImage2About {
-    display: none;
   }
 }
 
@@ -160,18 +146,6 @@
   right: -40px;
 }
 
-.image1WrapperAbout {
-  margin-top: 50px;
-  position: relative;
-  right: -80px;
-}
-
-.image2WrapperAbout {
-  left: 30px;
-  margin-top: 271px;
-  position: relative;
-}
-
 @media (--laptop-and-up) {
   .image2Wrapper {
     margin-bottom: 88px;
@@ -181,12 +155,6 @@
 
 @media (--tablet-and-down) {
   .image1Wrapper {
-    margin-top: 0;
-    position: relative;
-    right: 40px;
-  }
-
-  .image1WrapperAbout {
     margin-top: 0;
     position: relative;
     right: 40px;

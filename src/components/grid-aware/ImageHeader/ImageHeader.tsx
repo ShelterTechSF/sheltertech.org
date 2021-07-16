@@ -8,12 +8,11 @@ type ImageProps = {
 };
 
 type ImageHeaderProps = {
-  isAbout?: boolean;
   title: string;
   subtitle: string;
   description: React.ReactNode;
   image1: ImageProps;
-  image2: ImageProps;
+  image2?: ImageProps;
   ctaButtons?: ButtonProps[];
 };
 
@@ -24,17 +23,7 @@ const ImageHeader = ({
   image1,
   image2,
   ctaButtons,
-  isAbout,
 }: ImageHeaderProps) => {
-  const gridAreaImage1 = `${
-    isAbout ? s.gridAreaImage1About : s.gridAreaImage1
-  }`;
-  const gridAreaImage2 = `${
-    isAbout ? s.gridAreaImage2About : s.gridAreaImage2
-  }`;
-  const image1Wrapper = `${isAbout ? s.image1WrapperAbout : s.image1Wrapper}`;
-  const image2Wrapper = `${isAbout ? s.image2WrapperAbout : s.image2Wrapper}`;
-
   const GridAreaLeft = () => (
     <div className={s.gridAreaText}>
       <h1 className={s.title}>{title}</h1>
@@ -55,21 +44,25 @@ const ImageHeader = ({
     </div>
   );
 
+  const isImage2 = image2 && (
+    <div className={s.gridAreaImage2}>
+      <div className={s.image2Wrapper}>
+        <img className={s.image} src={image2.url} alt={image2.alt} />
+      </div>
+    </div>
+  );
+
   return (
     <div className={s.bleedWrapper}>
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
-          <div className={gridAreaImage1}>
-            <div className={image1Wrapper}>
+          <div className={s.gridAreaImage1}>
+            <div className={s.image1Wrapper}>
               <img className={s.image} src={image1.url} alt={image1.alt} />
             </div>
           </div>
           <GridAreaLeft />
-          <div className={gridAreaImage2}>
-            <div className={image2Wrapper}>
-              <img className={s.image} src={image2.url} alt={image2.alt} />
-            </div>
-          </div>
+          {isImage2}
         </section>
       </div>
     </div>

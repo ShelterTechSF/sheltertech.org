@@ -18,7 +18,7 @@ import VolunteerSignupForm from "../../components/thirdparty/mailchimp/Volunteer
 import teamActivityImage from "./image4.png";
 import pairProgrammingImage from "./image5.png";
 import teamSnackingImage from "./image6.png";
-import articleSpotlightImage from "./laura-barerra-vera.png";
+import articleSpotlightImage from "./images/laura-barerra-vera-cropped.png";
 
 export default () => {
   const [volunteerFormIsOpen, setVolunteerFormIsOpen] = useState(false);

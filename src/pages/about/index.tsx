@@ -7,7 +7,7 @@ import Spacer from "../../components/grid-aware/Spacer";
 import TwoParagraphBlock from "../../components/grid-aware/TwoParagraphBlock";
 import Layout from "../../components/layout";
 import darcelJackson from "./darcel-jackson.png";
-import articleSpotlightImage from "./laura-barerra-vera-cropped.png";
+import articleSpotlightImage from "./images/laura-barerra-vera-cropped.png";
 import teamImage from "./sheltertech-team.png";
 
 export default () => (

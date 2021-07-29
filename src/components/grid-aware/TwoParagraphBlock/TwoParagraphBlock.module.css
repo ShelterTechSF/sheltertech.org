@@ -44,6 +44,14 @@
   padding-top: 140px;
 }
 
+.gridParentAbout {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+  grid-template-rows: auto minmax(492px, auto);
+  padding-top: 140px;
+}
+
 .gridParent > * {
   min-width: 0;
 }
@@ -52,6 +60,11 @@
   .gridParent {
     display: block;
     padding: 50px 0 80px;
+  }
+
+  .gridParentAbout {
+    display: block;
+    padding: 50px 0;
   }
 }
 
@@ -74,10 +87,21 @@
   margin-top: 70px;
 }
 
+.gridAreaParagraph2About {
+  padding-right: 16px;
+}
+
 .gridAreaImage {
   grid-column: 8 / span 4;
   grid-row: 2;
   margin-top: 15px;
+}
+
+.gridAreaImageAbout {
+  grid-column: 8 / span 4;
+  grid-row: 2;
+  position: relative;
+  top: -48px;
 }
 
 @media (--tablet-and-down) {
@@ -85,10 +109,21 @@
     margin-top: 40px;
   }
 
+  .gridAreaParagraph2About {
+    padding-right: 0;
+  }
+
   .gridAreaImage {
     margin-right: -40px;
     margin-top: 40px;
     text-align: right;
+  }
+
+  .gridAreaImageAbout {
+    margin-right: -40px;
+    margin-top: 40px;
+    text-align: right;
+    top: 0;
   }
 }
 
@@ -104,7 +139,15 @@
   font: var(--font-body-small);
 }
 
+.paragraph2WrapperAbout {
+  font: var(--font-body-medium);
+}
+
 .paragraph2Wrapper :first-child {
+  margin: 0;
+}
+
+.paragraph2WrapperAbout :first-child {
   margin: 0;
 }
 
@@ -112,8 +155,12 @@
   margin-top: 15px;
 }
 
+.paragraph2WrapperAbout :not(:first-child) {
+  margin-top: 15px;
+}
+
 .image1Wrapper {
-  margin-bottom: -70px;
+  margin-bottom: -142px;
 }
 
 @media (--tablet-and-down) {
@@ -123,6 +170,11 @@
   }
 
   .paragraph2Wrapper {
+    font: var(--font-body-medium);
+    margin-top: 40px;
+  }
+
+  .paragraph2WrapperAbout {
     font: var(--font-body-medium);
     margin-top: 40px;
   }

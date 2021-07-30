@@ -1,35 +1,32 @@
 import * as React from "react";
 import Button, { ButtonProps } from "../../inline/Button";
-import * as s from "./SFServiceGuideBlock.module.css";
+import * as s from "./ProgramBlock.module.css";
 
 type ServiceGuideProps = {
   url: string;
   alt: string;
 };
 
-type SFServiceGuideBlockProps = {
+type ProgramBlockProps = {
   title: string;
   subtitle: string;
-  description: string;
-  description2: string;
+  description: React.ReactNode;
   image: ServiceGuideProps;
   ctaButtons: ButtonProps[];
 };
 
-const SFServiceGuideBlock = ({
+const ProgramBlock = ({
   title,
   subtitle,
   description,
-  description2,
   image,
   ctaButtons,
-}: SFServiceGuideBlockProps) => {
+}: ProgramBlockProps) => {
   const GridAreaRight = () => (
     <div className={s.gridAreaText}>
       <h1 className={s.title}>{title}</h1>
       <div className={s.subtitle}>{subtitle}</div>
       <div className={s.description}>{description}</div>
-      <div className={s.description}>{description2}</div>
       <div className={s.ctaButtonRow}>
         {ctaButtons.map((button) => (
           <div className={s.ctaButtonRowItem} key={button.text}>
@@ -59,4 +56,4 @@ const SFServiceGuideBlock = ({
   );
 };
 
-export default SFServiceGuideBlock;
+export default ProgramBlock;

@@ -1,12 +1,12 @@
 import React from "react";
 
-import SFServiceGuideBlock from "./SFServiceGuideBlock";
+import ProgramBlock from "./ProgramBlock";
 
 import classroom from "./stories/classroom.png";
 
 export default {
-  title: "Grid-Aware/SFServiceGuideBlock",
-  component: SFServiceGuideBlock,
+  title: "Grid-Aware/ProgramBlock",
+  component: ProgramBlock,
 };
 
 const Template = ({
@@ -17,7 +17,7 @@ const Template = ({
   image,
   ctaButtons,
 }) => (
-  <SFServiceGuideBlock
+  <ProgramBlock
     title={title}
     subtitle={subtitle}
     description={description}
@@ -27,8 +27,8 @@ const Template = ({
   />
 );
 
-export const DefaultSFServiceGuideBlock = Template.bind({});
-DefaultSFServiceGuideBlock.args = {
+export const DefaultProgramBlock = Template.bind({});
+DefaultProgramBlock.args = {
   title: "SF Service Guide",
   subtitle: "an online directory of human services in San Francisco",
   description:

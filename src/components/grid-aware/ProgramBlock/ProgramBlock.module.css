@@ -5,6 +5,7 @@
   grid-template-columns: var(--bleed-grid-template-columns);
   margin: auto;
   max-width: var(--bleed-max-width);
+  margin-bottom: 100px;
 }
 
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */
@@ -15,6 +16,7 @@
 @media (--tablet-and-down) {
   .bleedWrapper {
     grid-template-columns: 40px 1fr 40px;
+    margin-bottom: 80px;
   }
 }
 
@@ -65,16 +67,39 @@
 
 .title {
   font: var(--font-body-large);
-  margin: 0;
+  margin-bottom: 5px;
+}
+
+@media (--tablet-and-down) {
+  .title {
+    margin-top: 0px;
+  }
 }
 
 .subtitle {
-  font: var(--font-body-medium);
+  font: var(--font-subtitle);
 }
 
 .description {
-  font: var(--font-body-small);
+  font: var(--font-body-medium);
   margin-top: 20px;
+}
+
+.description :first-child {
+  margin: 0;
+}
+
+.description > :not(:first-child) {
+  margin-top: 20px;
+}
+
+.description ul {
+  margin-left: 1.5em;
+}
+
+.description ul > li {
+  list-style-position: outside;
+  list-style-type: disc;
 }
 
 .ctaButtonRow {
@@ -84,7 +109,7 @@
 }
 
 .ctaButtonRowItem:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 30px;
 }
 
 @media (--tablet-and-down) {

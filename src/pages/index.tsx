@@ -23,8 +23,8 @@ import videoSpotlightBlockImage from "../components/grid-aware/VideoSpotlightBlo
 import Layout from "../components/layout";
 import PartnershipSignupForm from "../components/thirdparty/mailchimp/PartnershipSignupForm";
 import partnersAndSponsorsLogos from "../data/partnersAndSponsorsLogos";
-import articleSpotlightImage from "../images/mission-hotel.jpeg";
 import annualReportPDF from "./ShelterTech-Annual-Report-2019-Q1.pdf";
+import articleSpotlightImage from "./images/mission-hotel.jpeg";
 
 export default () => {
   const [partnershipFormIsOpen, setPartnershipFormIsOpen] = useState(false);

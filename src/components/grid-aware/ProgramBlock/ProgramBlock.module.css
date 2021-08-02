@@ -4,8 +4,8 @@
   display: grid;
   grid-template-columns: var(--bleed-grid-template-columns);
   margin: auto;
-  max-width: var(--bleed-max-width);
   margin-bottom: 100px;
+  max-width: var(--bleed-max-width);
 }
 
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */
@@ -73,7 +73,7 @@
 
 @media (--tablet-and-down) {
   .title {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -128,8 +128,8 @@
 /* Right grid area*/
 
 .image {
-  width: 100%;
   height: 250px;
+  width: 100%;
 }
 
 @media (--tablet-and-down) {

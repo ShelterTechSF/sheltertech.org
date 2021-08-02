@@ -1,21 +1,14 @@
 import React from "react";
 
 import ProgramBlock from "./ProgramBlock";
-
-import serviceGuideImg from "../ProgramBlock/stories/sf-service-guide.jpg"''
+import serviceGuideImg from "./stories/sf-service-guide.jpg";
 
 export default {
   title: "Grid-Aware/ProgramBlock",
   component: ProgramBlock,
 };
 
-const Template = ({
-  title,
-  subtitle,
-  description,
-  image,
-  ctaButtons,
-}) => (
+const Template = ({ title, subtitle, description, image, ctaButtons }) => (
   <ProgramBlock
     title={title}
     subtitle={subtitle}

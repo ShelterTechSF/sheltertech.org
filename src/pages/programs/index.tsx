@@ -2,23 +2,22 @@ import * as React from "react";
 import { useState } from "react";
 
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
-import classroom from "../../components/grid-aware/ImageHeader/stories/classroom.png";
+import Modal from "../../components/grid-aware/Modal";
+import ProgramBlock from "../../components/grid-aware/ProgramBlock";
 import ProgramsPageLargeParagraph from "../../components/grid-aware/ProgramsPageLargeParagraph";
 import ProgramsSubTitleBlock from "../../components/grid-aware/ProgramsSubTitleBlock";
-import Modal from "../../components/grid-aware/Modal";
-import PartnershipSignupForm from "../../components/thirdparty/mailchimp/PartnershipSignupForm";
-import ProgramBlock from "../../components/grid-aware/ProgramBlock";
 import Spacer from "../../components/grid-aware/Spacer";
+import Layout from "../../components/layout";
+import PartnershipSignupForm from "../../components/thirdparty/mailchimp/PartnershipSignupForm";
 import communityDevelopmentImg from "./community-development.jpg";
+import articleSpotlightImage from "./laura-barerra-vera.png";
 import serviceGuideImg from "./sf-service-guide.jpg";
 import shelterConnect from "./shelter-connect.jpg";
 
-import Layout from "../../components/layout";
-import articleSpotlightImage from "./laura-barerra-vera.png";
 export default () => {
-    const [partnershipFormIsOpen, setPartnershipFormIsOpen] = useState(false);
+  const [partnershipFormIsOpen, setPartnershipFormIsOpen] = useState(false);
 
-  return(
+  return (
     <Layout>
       <Modal
         isOpen={partnershipFormIsOpen}
@@ -38,10 +37,19 @@ export default () => {
         description={
           <>
             <p>
-              The SF Service Guide is an online directory of human services in San Francisco that launched in November 2019 and currently serves 1,500 unique monthly users. The directory's focus is on homelessness and housing services but also covers a variety of other services, from education and legal aid to senior services and re-entry programs. Our goal is to help anyone with access to smartphone, tablet, or computer find services they need.
+              The SF Service Guide is an online directory of human services in
+              San Francisco that launched in November 2019 and currently serves
+              1,500 unique monthly users. The directory's focus is on
+              homelessness and housing services but also covers a variety of
+              other services, from education and legal aid to senior services
+              and re-entry programs. Our goal is to help anyone with access to
+              smartphone, tablet, or computer find services they need.
             </p>
             <p>
-              SF Service Guide is supported by a grant from the SF Mayor's Office of Housing and Community Development and verified for accuracy by our data partner, the Homeless Advocacy Project of the JDC.
+              SF Service Guide is supported by a grant from the SF Mayor's
+              Office of Housing and Community Development and verified for
+              accuracy by our data partner, the Homeless Advocacy Project of the
+              JDC.
             </p>
           </>
         }
@@ -56,7 +64,7 @@ export default () => {
           },
           {
             text: "Donate",
-            externalLink: "https://www.sheltertech.org/donate/"
+            externalLink: "https://www.sheltertech.org/donate/",
           },
         ]}
       />
@@ -66,24 +74,29 @@ export default () => {
         description={
           <>
             <p>
-              The ShelterConnect program works with partners to deliver a free, turn-key WiFi solution for shelters and transitional housing facilities. ShelterConnect is proud to provide over 4,000 people a year with daily internet access in over 20 local shelters and resource centers.
+              The ShelterConnect program works with partners to deliver a free,
+              turn-key WiFi solution for shelters and transitional housing
+              facilities. ShelterConnect is proud to provide over 4,000 people a
+              year with daily internet access in over 20 local shelters and
+              resource centers.
             </p>
             <p>
-              We focus on identifying strategies to reduce the lifetime program cost for wiring a shelter. The three primary costs are:
+              We focus on identifying strategies to reduce the lifetime program
+              cost for wiring a shelter. The three primary costs are:
             </p>
             <ul>
-              <li>
-                Equipment and licensing
-              </li>
-              <li>
-                Installation labor
-              </li>
-              <li>
-                Ongoing ISP charges
-              </li>
+              <li>Equipment and licensing</li>
+              <li>Installation labor</li>
+              <li>Ongoing ISP charges</li>
             </ul>
             <p>
-              In 2019 we established a partnership with the City of San Francisco Digital Equity team to deliver 1GB fiber/ISP capability to future ShelterConnect locations at no cost.  Working with partners, ShelterConnect has implemented free WiFi solutions at over 20 locations including the Star Hotel, Mission Hotel, MSC-South, and ten locations managed by Larkin Street Youth Services.
+              In 2019 we established a partnership with the City of San
+              Francisco Digital Equity team to deliver 1GB fiber/ISP capability
+              to future ShelterConnect locations at no cost. Working with
+              partners, ShelterConnect has implemented free WiFi solutions at
+              over 20 locations including the Star Hotel, Mission Hotel,
+              MSC-South, and ten locations managed by Larkin Street Youth
+              Services.
             </p>
           </>
         }
@@ -94,7 +107,7 @@ export default () => {
         ctaButtons={[
           {
             text: "DONATE",
-            externalLink: "https://www.sheltertech.org/donate/"
+            externalLink: "https://www.sheltertech.org/donate/",
           },
           {
             text: "PARTNER WITH US",
@@ -106,19 +119,26 @@ export default () => {
         title="Community Representative Program"
         subtitle="providing program insight and engagement with the community"
         description={
-        <>
-          <p>
-            ShelterTech collaborates with Community Representatives who have experienced homelessness to engage with volunteers, help build program awareness, and gain insight to inform our programs and products. Community Representative are key participants in the following events:
-          </p>
-          <ul>
-            <li>
-            Datathons are public events where volunteers from the community help verify data in the SF Service Guide
-            </li>
-            <li>
-            Outreach events in partnership with local frontline service organizations help connect underserved communities with needed resources
-            </li>
-          </ul>
-        </>
+          <>
+            <p>
+              ShelterTech collaborates with Community Representatives who have
+              experienced homelessness to engage with volunteers, help build
+              program awareness, and gain insight to inform our programs and
+              products. Community Representative are key participants in the
+              following events:
+            </p>
+            <ul>
+              <li>
+                Datathons are public events where volunteers from the community
+                help verify data in the SF Service Guide
+              </li>
+              <li>
+                Outreach events in partnership with local frontline service
+                organizations help connect underserved communities with needed
+                resources
+              </li>
+            </ul>
+          </>
         }
         image={{
           url: communityDevelopmentImg,
@@ -127,7 +147,7 @@ export default () => {
         ctaButtons={[
           {
             text: "DONATE",
-            externalLink: "https://www.sheltertech.org/donate/"
+            externalLink: "https://www.sheltertech.org/donate/",
           },
         ]}
       />
@@ -146,5 +166,5 @@ export default () => {
       />
       <Spacer heightDesktop="170px" heightMobile="80px" />
     </Layout>
-  )
+  );
 };

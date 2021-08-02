@@ -68,6 +68,7 @@
 .title {
   font: var(--font-body-large);
   margin-bottom: 5px;
+  margin-top: 0;
 }
 
 @media (--tablet-and-down) {
@@ -127,5 +128,15 @@
 /* Right grid area*/
 
 .image {
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 410px;
+  height: 250px;
+}
+
+
+@media (--tablet-and-down) {
+  .image {
+    width: 295px;
+    height: 179.88px;
+  }
 }

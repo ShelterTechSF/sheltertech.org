@@ -9,7 +9,9 @@ import Modal from "../../components/grid-aware/Modal";
 import PartnershipSignupForm from "../../components/thirdparty/mailchimp/PartnershipSignupForm";
 import ProgramBlock from "../../components/grid-aware/ProgramBlock";
 import Spacer from "../../components/grid-aware/Spacer";
-import hero from "../programs/hero.jpg"
+import communityDevelopmentImg from "./community-development.jpg";
+import serviceGuideImg from "./sf-service-guide.jpg";
+import shelterConnect from "./shelter-connect.jpg";
 
 import Layout from "../../components/layout";
 import articleSpotlightImage from "./laura-barerra-vera.png";
@@ -44,8 +46,8 @@ export default () => {
           </>
         }
         image={{
-          url: hero,
-          alt: "Hero.",
+          url: serviceGuideImg,
+          alt: "SF Service Guide",
         }}
         ctaButtons={[
           {
@@ -86,8 +88,8 @@ export default () => {
           </>
         }
         image={{
-          url: classroom,
-          alt: "Classroom of volunteer members collaborating with one another.",
+          url: shelterConnect,
+          alt: "Shelter Connect",
         }}
         ctaButtons={[
           {
@@ -119,8 +121,8 @@ export default () => {
         </>
         }
         image={{
-          url: hero,
-          alt: "Hero",
+          url: communityDevelopmentImg,
+          alt: "Community Development",
         }}
         ctaButtons={[
           {

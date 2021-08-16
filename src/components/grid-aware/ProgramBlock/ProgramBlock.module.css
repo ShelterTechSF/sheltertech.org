@@ -39,8 +39,7 @@
 
 @media (--tablet-and-down) {
   .gridParent {
-    display: flex;
-    flex-direction: column-reverse;
+    display: block;
   }
 }
 
@@ -48,14 +47,8 @@
 /* Main grid areas */
 
 .gridAreaText {
-  grid-column: 6/ span 6;
+  grid-column: 6 / span 6;
   grid-row: 1;
-}
-
-@media (--tablet-and-down) {
-  .gridAreaText {
-    padding-top: 16px;
-  }
 }
 
 .gridAreaImage {
@@ -63,18 +56,18 @@
   grid-row: 1;
 }
 
-/* Left grid area */
+@media (--tablet-and-down) {
+  .gridAreaImage {
+    margin-bottom: 16px;
+  }
+}
+
+/* Right grid area */
 
 .title {
   font: var(--font-body-large);
   margin-bottom: 5px;
   margin-top: 0;
-}
-
-@media (--tablet-and-down) {
-  .title {
-    margin-top: 0;
-  }
 }
 
 .subtitle {
@@ -86,54 +79,44 @@
   margin-top: 20px;
 }
 
-.description :first-child {
-  margin: 0;
-}
+/* .description :first-child {
+  margin-top: 0px;
+} */
 
 .description > :not(:first-child) {
   margin-top: 20px;
 }
 
 .description ul {
+  list-style: disc;
   margin-left: 1.5em;
 }
 
-.description ul > li {
-  list-style-position: outside;
-  list-style-type: disc;
-}
-
 .ctaButtonRow {
+  column-gap: 30px;
   display: flex;
   flex-flow: row wrap;
   margin-top: 30px;
 }
 
-.ctaButtonRowItem:not(:last-child) {
-  margin-right: 30px;
-}
-
 @media (--tablet-and-down) {
   .ctaButtonRow {
     flex-flow: column;
-  }
-
-  .ctaButtonRowItem:not(:last-child) {
-    margin-bottom: 20px;
-    margin-right: 0;
+    row-gap: 20px;
   }
 }
 
 
-/* Right grid area*/
+/* Left grid area*/
 
 .image {
   height: 250px;
+  object-fit: cover;
   width: 100%;
 }
 
 @media (--tablet-and-down) {
   .image {
-    height: 179.88px;
+    height: 180px;
   }
 }

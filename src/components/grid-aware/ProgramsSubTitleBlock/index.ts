@@ -1,1 +1,1 @@
-export { default } from "./ProgramsSubTitleBlock";
+export { default } from "./ProgramsSubtitleBlock";

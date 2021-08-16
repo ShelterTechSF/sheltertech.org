@@ -24,15 +24,14 @@
 .bleedMainContent {
   grid-column: 2;
   grid-row: 1;
-  text-align: center;
 }
 
 .gridParent {
   column-gap: var(--grid-column-gap);
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
-  grid-template-rows: repeat(2, auto);
 }
+
 /* Override grid item default of auto so that item contents cannot stretch the grid itself */
 .gridParent > * {
   min-width: 0;
@@ -45,19 +44,18 @@
 }
 
 .textWrapper {
-  grid-column: 2/ span 6;
+  grid-column: 2 / span 6;
   grid-row: 1;
 }
 
 .title {
   font: var(--font-headline);
-  text-align: left;
+  margin: 0;
 }
 
 .description {
   font: var(--font-body-medium);
   margin-top: 30px;
-  text-align: left;
 }
 
 @media (--tablet-and-down) {

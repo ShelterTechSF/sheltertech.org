@@ -4,9 +4,9 @@ import { useState } from "react";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import Modal from "../../components/grid-aware/Modal";
 import ProgramBlock from "../../components/grid-aware/ProgramBlock";
-import ProgramsPageLargeParagraph from "../../components/grid-aware/ProgramsPageLargeParagraph";
-import ProgramsSubTitleBlock from "../../components/grid-aware/ProgramsSubTitleBlock";
+import ProgramsSubtitleBlock from "../../components/grid-aware/ProgramsSubtitleBlock";
 import Spacer from "../../components/grid-aware/Spacer";
+import TextHeader from "../../components/grid-aware/TextHeader";
 import Layout from "../../components/layout";
 import PartnershipSignupForm from "../../components/thirdparty/mailchimp/PartnershipSignupForm";
 import communityDevelopmentImg from "./community-development.jpg";
@@ -26,11 +26,11 @@ export default () => {
       >
         <PartnershipSignupForm />
       </Modal>
-      <ProgramsPageLargeParagraph
+      <TextHeader
         title="Our Programs"
-        description="ShelterTech's programs are designed to suppport the underserved community experiencing homelessness and housing insecurity through WiFi connectivity and acccess to online resources."
+        description="ShelterTech's programs are designed to support the underserved community experiencing homelessness and housing insecurity through WiFi connectivity and access to online resources."
       />
-      <ProgramsSubTitleBlock title="ShelterTech offers the following programs:" />
+      <ProgramsSubtitleBlock title="ShelterTech offers the following programs:" />
       <ProgramBlock
         title="SF Service Guide"
         subtitle="an online directory of human services in San Francisco"
@@ -42,8 +42,8 @@ export default () => {
               1,500 unique monthly users. The directory&apos;s focus is on
               homelessness and housing services but also covers a variety of
               other services, from education and legal aid to senior services
-              and re-entry programs. Our goal is to help anyone with access to
-              smartphone, tablet, or computer find services they need.
+              and re-entry programs. Our goal is to help anyone with access to a
+              smartphone, tablet, or computer find the services they need.
             </p>
             <p>
               SF Service Guide is supported by a grant from the SF Mayor&apos;s
@@ -64,7 +64,7 @@ export default () => {
           },
           {
             text: "Donate",
-            externalLink: "https://www.sheltertech.org/donate/",
+            internalLink: "https://www.sheltertech.org/donate/",
           },
         ]}
       />
@@ -107,7 +107,7 @@ export default () => {
         ctaButtons={[
           {
             text: "DONATE",
-            externalLink: "https://www.sheltertech.org/donate/",
+            internalLink: "https://www.sheltertech.org/donate/",
           },
           {
             text: "PARTNER WITH US",
@@ -147,7 +147,7 @@ export default () => {
         ctaButtons={[
           {
             text: "DONATE",
-            externalLink: "https://www.sheltertech.org/donate/",
+            internalLink: "https://www.sheltertech.org/donate/",
           },
         ]}
       />

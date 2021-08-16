@@ -1,19 +1,19 @@
 import React from "react";
 
-import ProgramsSubTitleBlock from "./ProgramsSubTitleBlock";
+import ProgramsSubtitleBlock from "./ProgramsSubtitleBlock";
 
 export default {
-  title: "Grid-Aware/ProgramsSubTitleBlock",
-  component: ProgramsSubTitleBlock,
+  title: "Grid-Aware/ProgramsSubtitleBlock",
+  component: ProgramsSubtitleBlock,
 };
 
 const Template = ({ title }) => (
   <div>
-    <ProgramsSubTitleBlock title={title} />
+    <ProgramsSubtitleBlock title={title} />
   </div>
 );
 
-export const DefaultProgramsSubTitleBlock = Template.bind({});
-DefaultProgramsSubTitleBlock.args = {
+export const DefaultProgramsSubtitleBlock = Template.bind({});
+DefaultProgramsSubtitleBlock.args = {
   title: "ShelterTech offers the following programs:",
 };

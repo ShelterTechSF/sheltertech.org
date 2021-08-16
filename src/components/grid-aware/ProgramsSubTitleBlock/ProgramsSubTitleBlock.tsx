@@ -1,15 +1,15 @@
 import * as React from "react";
 
-import * as s from "./ProgramsSubTitleBlock.module.css";
+import * as s from "./ProgramsSubtitleBlock.module.css";
 
-type ProgramsSubTitleBlockProps = {
+type ProgramsSubtitleBlockProps = {
   title: string;
 };
 
-const ProgramsSubTitleBlock = ({ title }: ProgramsSubTitleBlockProps) => {
+const ProgramsSubtitleBlock = ({ title }: ProgramsSubtitleBlockProps) => {
   const GridAreaLeft = () => (
     <div className={s.gridAreaLeft}>
-      <h1 className={s.title}>{title}</h1>
+      <h2 className={s.title}>{title}</h2>
     </div>
   );
 
@@ -24,4 +24,4 @@ const ProgramsSubTitleBlock = ({ title }: ProgramsSubTitleBlockProps) => {
   );
 };
 
-export default ProgramsSubTitleBlock;
+export default ProgramsSubtitleBlock;

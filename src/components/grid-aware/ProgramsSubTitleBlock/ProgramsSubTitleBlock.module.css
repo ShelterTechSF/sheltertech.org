@@ -33,7 +33,7 @@
   display: grid;
   grid-column-start: 2;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
-  padding-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 
@@ -46,7 +46,7 @@
 @media (--tablet-and-down) {
   .gridParent {
     display: block;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -61,6 +61,6 @@
 /* Title block */
 
 .title {
-  font: var(--font-title);
+  font: var(--font-body-large);
   margin: 0;
 }

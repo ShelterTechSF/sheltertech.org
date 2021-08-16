@@ -2,7 +2,7 @@ import * as React from "react";
 import Button, { ButtonProps } from "../../inline/Button";
 import * as s from "./ProgramBlock.module.css";
 
-type ServiceGuideProps = {
+type ImageProps = {
   url: string;
   alt: string;
 };
@@ -11,7 +11,7 @@ type ProgramBlockProps = {
   title: string;
   subtitle: string;
   description: React.ReactNode;
-  image: ServiceGuideProps;
+  image: ImageProps;
   ctaButtons: ButtonProps[];
 };
 
@@ -46,10 +46,10 @@ const ProgramBlock = ({
     <div className={s.bleedWrapper}>
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
-          <GridAreaRight />
           <div className={s.gridAreaImage}>
             <img className={s.image} src={image.url} alt={image.alt} />
           </div>
+          <GridAreaRight />
         </section>
       </div>
     </div>

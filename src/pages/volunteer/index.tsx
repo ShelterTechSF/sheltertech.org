@@ -77,6 +77,7 @@ export default () => {
               "Worth of work provided by volunteers has been put towards our programs",
           },
         ]}
+        theme="light"
       />
       <ThreeParagraphBlock
         title="Let’s work together"

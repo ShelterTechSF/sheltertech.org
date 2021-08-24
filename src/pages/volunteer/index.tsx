@@ -57,7 +57,6 @@ export default () => {
         title="Volunteering during COVID-19"
         description="Our programs have shifted to remote alternatives. While our means of coming together are different, our research and Datathon events will be conducted online. Simply put, our goal is still the same: to connect this community with resources that can help them address their challenges, become permanently housed, and on track to live happy and productive lives."
       />
-      <Spacer heightDesktop="100px" heightMobile="80px" />
       <StatsBlock
         title="See what our volunteers have accomplished together."
         statCards={[

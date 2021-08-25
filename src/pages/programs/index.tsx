@@ -9,8 +9,8 @@ import Spacer from "../../components/grid-aware/Spacer";
 import TextHeader from "../../components/grid-aware/TextHeader";
 import Layout from "../../components/layout";
 import PartnershipSignupForm from "../../components/thirdparty/mailchimp/PartnershipSignupForm";
+import articleSpotlightImage from "../images/laura-barerra-vera-cropped.png";
 import communityDevelopmentImg from "./community-development.jpg";
-import articleSpotlightImage from "./laura-barerra-vera.png";
 import serviceGuideImg from "./sf-service-guide.jpg";
 import shelterConnect from "./shelter-connect.jpg";
 
@@ -151,7 +151,7 @@ export default () => {
           },
         ]}
       />
-      <Spacer heightDesktop="20px" heightMobile=".37px" />
+      <Spacer heightDesktop="20px" heightMobile="0px" />
       <ArticleSpotlightCard
         eyebrowText="Volunteer Spotlight"
         title="Laura Barrera-Vera"

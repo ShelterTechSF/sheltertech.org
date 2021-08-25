@@ -64,7 +64,7 @@ export default () => {
           },
           {
             text: "Donate",
-            internalLink: "https://www.sheltertech.org/donate/",
+            internalLink: "/donate/",
           },
         ]}
       />
@@ -107,7 +107,7 @@ export default () => {
         ctaButtons={[
           {
             text: "DONATE",
-            internalLink: "https://www.sheltertech.org/donate/",
+            internalLink: "/donate/",
           },
           {
             text: "PARTNER WITH US",
@@ -147,7 +147,7 @@ export default () => {
         ctaButtons={[
           {
             text: "DONATE",
-            internalLink: "https://www.sheltertech.org/donate/",
+            internalLink: "/donate/",
           },
         ]}
       />

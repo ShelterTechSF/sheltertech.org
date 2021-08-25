@@ -79,10 +79,6 @@
   margin-top: 20px;
 }
 
-/* .description :first-child {
-  margin-top: 0px;
-} */
-
 .description > :not(:first-child) {
   margin-top: 20px;
 }

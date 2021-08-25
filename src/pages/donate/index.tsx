@@ -5,7 +5,7 @@ import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCa
 import DonationBlock from "../../components/grid-aware/DonationBlock";
 import Spacer from "../../components/grid-aware/Spacer";
 import Layout from "../../components/layout";
-import articleSpotlightImage from "./mission-hotel.jpeg";
+import articleSpotlightImage from "../images/mission-hotel.jpeg";
 
 export default () => (
   <Layout>

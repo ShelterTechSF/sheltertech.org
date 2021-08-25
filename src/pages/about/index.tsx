@@ -6,10 +6,9 @@ import ImageHeader from "../../components/grid-aware/ImageHeader";
 import Spacer from "../../components/grid-aware/Spacer";
 import TwoParagraphBlock from "../../components/grid-aware/TwoParagraphBlock";
 import Layout from "../../components/layout";
-import articleSpotlightImage from "../volunteer/laura-barerra-vera.png";
+import articleSpotlightImage from "../images/laura-barerra-vera-cropped.png";
 import darcelJackson from "./darcel-jackson.png";
 import teamImage from "./sheltertech-team.png";
-import teamDesignWorkshopImage from "./team-design-workshop.png";
 
 export default () => (
   <Layout>
@@ -17,7 +16,6 @@ export default () => (
       <title>About Us | ShelterTech</title>
     </Helmet>
     <ImageHeader
-      isAbout
       title="About Us"
       subtitle="Our Mission and History"
       description={
@@ -70,10 +68,6 @@ export default () => (
       image1={{
         url: teamImage,
         alt: "Team members posing for a group photo.",
-      }}
-      image2={{
-        url: teamDesignWorkshopImage,
-        alt: "Team posing for a photo after a design workshop.",
       }}
     />
     <TwoParagraphBlock

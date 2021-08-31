@@ -11,7 +11,8 @@
     "sheltertech_logo_link" : {
       "type" : "Link",
       "config" : {
-        "label" : "ShelterTech Logo Link"
+        "label" : "ShelterTech Logo Link",
+        "select" : null
       }
     }
   }

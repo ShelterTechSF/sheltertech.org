@@ -1,0 +1,26 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "title",
+        "placeholder" : "title (e.g. Chief Financial Officer)"
+      }
+    },
+    "description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "description",
+        "placeholder" : "description (e.g. Lead ShelterTech's financial strategy and manage our financial operations)"
+      }
+    },
+    "link" : {
+      "type" : "Link",
+      "config" : {
+        "label" : "link",
+        "placeholder" : "link (e.g. https://docs.google.com/document/d/10PhfYLb28PqIc2Ef6gwhlStujzP8BPBmvnjcf3W2-3U/edit?usp=sharing)",
+        "select" : null
+      }
+    }
+  }
+}

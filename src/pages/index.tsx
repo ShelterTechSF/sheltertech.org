@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
 import { graphql, PageProps } from "gatsby";
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
 import * as React from "react";
 import { useState } from "react";
 
@@ -28,12 +29,14 @@ import videoSpotlightBlockImage from "../components/grid-aware/VideoSpotlightBlo
 import Layout from "../components/layout";
 import PartnershipSignupForm from "../components/thirdparty/mailchimp/PartnershipSignupForm";
 import partnersAndSponsorsLogos from "../data/partnersAndSponsorsLogos";
+import linkResolver from "../utils/linkResolver";
 import annualReportPDF from "./ShelterTech-Annual-Report-2019-Q1.pdf";
 import articleSpotlightImage from "./mission-hotel.jpeg";
 
 export const query = graphql`
   query HomePage {
     prismicHomePage {
+      _previewable
       data {
         video_header_title {
           text
@@ -43,7 +46,7 @@ export const query = graphql`
   }
 `;
 
-export default ({ data }: PageProps<GatsbyTypes.HomePageQuery>) => {
+const IndexPage = ({ data }: PageProps<GatsbyTypes.HomePageQuery>) => {
   const [partnershipFormIsOpen, setPartnershipFormIsOpen] = useState(false);
   const [videoHeaderModalIsOpen, setVideoHeaderModalIsOpen] = useState(false);
   const [videoSpotlightBlockModalIsOpen, setVideoSpotlightBlockModalIsOpen] =
@@ -215,3 +218,10 @@ export default ({ data }: PageProps<GatsbyTypes.HomePageQuery>) => {
     </Layout>
   );
 };
+
+export default withPrismicPreview(IndexPage, [
+  {
+    repositoryName: "sheltertech",
+    linkResolver,
+  },
+]);

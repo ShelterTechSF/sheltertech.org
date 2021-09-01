@@ -31,4 +31,5 @@ DefaultStatsBlock.args = {
         "Worth of work provided by volunteers has been put towards our programs",
     },
   ],
+  theme: "white",
 };

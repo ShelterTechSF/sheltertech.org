@@ -33,7 +33,6 @@ export default () => {
       <ProgramsSubtitleBlock title="ShelterTech offers the following programs:" />
       <ProgramBlock
         title="SF Service Guide"
-        subtitle="an online directory of human services in San Francisco"
         description={
           <>
             <p>
@@ -70,7 +69,6 @@ export default () => {
       />
       <ProgramBlock
         title="ShelterConnect"
-        subtitle="a program that installs free WiFi in overnight shelters, community centers, and supportive housing developments"
         description={
           <>
             <p>
@@ -117,7 +115,6 @@ export default () => {
       />
       <ProgramBlock
         title="Community Representative Program"
-        subtitle="providing program insight and engagement with the community"
         description={
           <>
             <p>

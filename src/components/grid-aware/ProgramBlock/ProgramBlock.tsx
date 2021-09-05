@@ -9,7 +9,7 @@ type ImageProps = {
 
 type ProgramBlockProps = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   description: React.ReactNode;
   image: ImageProps;
   ctaButtons: ButtonProps[];

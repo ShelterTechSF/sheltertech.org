@@ -1,1 +1,1 @@
-export type ThemeColorOptions = "white" | "gray";
+export type ThemeColorOption = "white" | "gray";

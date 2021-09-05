@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ThemeColorOptions } from "../../../types";
+import { ThemeColorOption } from "../../../types";
 
 import * as s from "./StatsBlock.module.css";
 
@@ -18,7 +18,7 @@ const StatCard = ({ number, statement }: StatCardProps) => (
 type StatsBlockProps = {
   title: string;
   statCards: StatCardProps[];
-  theme: ThemeColorOptions;
+  theme: ThemeColorOption;
 };
 
 const StatsBlock = ({ title, statCards, theme }: StatsBlockProps) => (

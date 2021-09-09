@@ -1,1 +1,2 @@
-export { default, ButtonProps, SubmitButton } from "./Button";
+export { default, SubmitButton } from "./Button";
+export type { ButtonProps } from "./Button";

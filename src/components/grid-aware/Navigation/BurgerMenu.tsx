@@ -6,13 +6,7 @@ import * as s from "./BurgerMenu.module.css";
 import { NavigationItem } from "./types";
 
 /** An internal, external, or button link. */
-const NavLink = ({
-  text,
-  internalLink,
-  externalLink,
-  isButton = false,
-}: NavigationItem) => {
-  const className = `${s.navLink} ${isButton ? s.button : ""}`;
+const NavLink = ({ text, internalLink, externalLink }: NavigationItem) => {
   if (internalLink) {
     // Enable the "active" style for any nested pages, except for the home page,
     // which would be a parent page for any page. This is also used to get
@@ -23,7 +17,7 @@ const NavLink = ({
     const isPartiallyActive = internalLink.replace(/\/$/, "") !== "";
     return (
       <Link
-        className={className}
+        className={s.navLink}
         activeClassName={s.currentPage}
         to={internalLink}
         partiallyActive={isPartiallyActive}
@@ -35,7 +29,7 @@ const NavLink = ({
   if (externalLink) {
     return (
       <a
-        className={className}
+        className={s.navLink}
         href={externalLink}
         target="_blank"
         rel="noreferrer"

@@ -1,4 +1,4 @@
-import { Link as GatsbyLink } from "gatsby";
+import { Link as GatsbyLink, graphql } from "gatsby";
 import React from "react";
 
 import linkResolver from "../../utils/linkResolver";
@@ -45,5 +45,16 @@ const PrismicLink = ({ linkData, children }: PrismicLinkProps): JSX.Element => {
       );
   }
 };
+
+export const query = graphql`
+  # The minimum set of data required for the <PrismicLink> component.
+  fragment MinimalPrismicLinkData on PrismicLinkType {
+    isBroken
+    link_type
+    target
+    type
+    uid
+  }
+`;
 
 export default PrismicLink;

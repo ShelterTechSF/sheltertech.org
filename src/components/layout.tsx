@@ -46,11 +46,7 @@ const Layout = ({ children }: LayoutProps) => {
             text
           }
           sheltertech_logo_link {
-            isBroken
-            link_type
-            target
-            type
-            uid
+            ...MinimalPrismicLinkData
           }
         }
       }

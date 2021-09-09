@@ -29,14 +29,13 @@ const ProgramBlock = ({
       <div className={s.description}>{description}</div>
       <div className={s.ctaButtonRow}>
         {ctaButtons.map((button) => (
-          <div className={s.ctaButtonRowItem} key={button.text}>
-            <Button
-              text={button.text}
-              internalLink={button.internalLink}
-              externalLink={button.externalLink}
-              onClick={button.onClick}
-            />
-          </div>
+          <Button
+            key={button.text}
+            text={button.text}
+            internalLink={button.internalLink}
+            externalLink={button.externalLink}
+            onClick={button.onClick}
+          />
         ))}
       </div>
     </div>

@@ -1,18 +1,17 @@
 import { Link as GatsbyLink, graphql } from "gatsby";
 import React from "react";
 
-import linkResolver from "../../utils/linkResolver";
-
 /** A Prismic Link with only the minimal set of properties for link resolving.
  *
- * Most of these fields come from
+ * Most of the fields on PrismicLinkType come from
  * https://prismic.io/docs/technologies/link-resolver-javascript#accessible-attributes,
  * with the exception of link_type, which is one of "Document", "Web", and
- * "Media".
+ * "Media", and url, which is the result of applying our linkResolver function
+ * to a link.
  */
 export type MinimalPrismicLinkType = Pick<
   GatsbyTypes.PrismicLinkType,
-  "isBroken" | "link_type" | "target" | "type" | "uid"
+  "link_type" | "target" | "url"
 >;
 
 type PrismicLinkProps = {
@@ -28,14 +27,14 @@ type PrismicLinkProps = {
  * https://prismic.io/docs/technologies/link-resolver-gatsby
  */
 const PrismicLink = ({ linkData, children }: PrismicLinkProps): JSX.Element => {
-  if (linkData === undefined) return <>{children}</>;
+  if (linkData === undefined || !linkData.url) return <>{children}</>;
   switch (linkData.link_type) {
     case "Document":
-      return <GatsbyLink to={linkResolver(linkData)}>{children}</GatsbyLink>;
+      return <GatsbyLink to={linkData.url}>{children}</GatsbyLink>;
     case "Web":
     case "Media":
       return (
-        <a href={linkResolver(linkData)} target={linkData.target}>
+        <a href={linkData.url} target={linkData.target}>
           {children}
         </a>
       );
@@ -49,11 +48,9 @@ const PrismicLink = ({ linkData, children }: PrismicLinkProps): JSX.Element => {
 export const query = graphql`
   # The minimum set of data required for the <PrismicLink> component.
   fragment MinimalPrismicLinkData on PrismicLinkType {
-    isBroken
     link_type
     target
-    type
-    uid
+    url
   }
 `;
 

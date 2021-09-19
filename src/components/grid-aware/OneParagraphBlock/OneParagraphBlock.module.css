@@ -1,4 +1,7 @@
 /* Outer grid */
+.gray {
+  background-color: var(--color-gray-300);
+}
 
 .bleedWrapper {
   display: grid;
@@ -13,7 +16,6 @@
 }
 
 .bleedBackground {
-  background: var(--color-black);
   grid-column: 2 / span 2;
   grid-row: 1;
 }
@@ -37,7 +39,6 @@
 /* Main grid */
 
 .gridParent {
-  color: var(--color-white);
   column-gap: var(--grid-column-gap);
   display: grid;
   grid-column-start: 2;

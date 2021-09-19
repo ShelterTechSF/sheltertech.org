@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import { ThemeColorOption } from "../../../types";
 import Button, { ButtonProps } from "../../inline/Button";
 
 import * as s from "./OneParagraphBlock.module.css";
@@ -8,12 +9,14 @@ type OneParagraphBlockProps = {
   title: string;
   descriptions: React.ReactNode;
   ctaButtons: ButtonProps[];
+  theme: ThemeColorOption;
 };
 
 const OneParagraphBlock = ({
   title,
   descriptions,
   ctaButtons,
+  theme,
 }: OneParagraphBlockProps) => {
   const GridAreaLeft = () => (
     <div className={s.gridAreaLeft}>
@@ -42,8 +45,8 @@ const OneParagraphBlock = ({
   );
 
   return (
-    <div className={s.bleedWrapper}>
-      <div className={s.bleedBackground} />
+    <div className={`${s.bleedWrapper} ${s[theme]}`}>
+      <div className={`${s.bleedBackground} ${s[theme]}`} />
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
           <GridAreaLeft />

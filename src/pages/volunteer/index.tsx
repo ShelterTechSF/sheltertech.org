@@ -176,6 +176,7 @@ export default () => {
         ctaButtons={[
           { text: "Apply", onClick: () => setVolunteerFormIsOpen(true) },
         ]}
+        theme="gray"
       />
       <Spacer heightDesktop="190px" heightMobile="80px" />
       <ArticleSpotlightCard

@@ -7,12 +7,13 @@ export default {
   component: OneParagraphBlock,
 };
 
-const Template = ({ title, descriptions, ctaButtons }) => (
+const Template = ({ title, descriptions, ctaButtons, theme }) => (
   <div>
     <OneParagraphBlock
       title={title}
       descriptions={descriptions}
       ctaButtons={ctaButtons}
+      theme={theme}
     />
   </div>
 );
@@ -48,4 +49,5 @@ DefaultOneParagraphBlock.args = {
     </>
   ),
   ctaButtons: [{ text: "Apply", internalLink: "/foo" }],
+  theme: "gray",
 };

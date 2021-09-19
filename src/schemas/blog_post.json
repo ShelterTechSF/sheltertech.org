@@ -39,38 +39,29 @@
       "type" : "Slices",
       "fieldset" : "Slice zone",
       "config" : {
-        "labels" : {
-          "stats_block" : [ {
-            "display" : "stats label",
-            "name" : "stats_label"
-          }, {
-            "display" : "stats number",
-            "name" : "stats_number"
-          } ]
-        },
+        "labels" : null,
         "choices" : {
           "stats_block" : {
             "type" : "Slice",
             "fieldset" : "Stats Block",
-            "description" : "Displays some statistics",
+            "description" : "A short text block that highlights a statistic.",
             "icon" : "equalizer",
             "display" : "list",
-            "non-repeat" : { },
-            "repeat" : { }
-          },
-          "text" : {
-            "type" : "Slice",
-            "fieldset" : "Text",
-            "description" : "A rich text section",
-            "icon" : "text_fields",
             "non-repeat" : {
-              "text" : {
+              "statistic" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph,preformatted,heading2,heading3,strong,em,hyperlink,embed,list-item,o-list-item,o-list-item",
-                  "allowTargetBlank" : true,
-                  "label" : "Text",
-                  "placeholder" : "Post text..."
+                  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+                  "label" : "Statistic Highlight",
+                  "placeholder" : "9,000"
+                }
+              },
+              "statistic_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Statistic text",
+                  "placeholder" : "At-risk community members can now access service and ammenities"
                 }
               }
             },
@@ -78,9 +69,10 @@
           },
           "image_with_caption" : {
             "type" : "Slice",
-            "fieldset" : "Image with Caption",
+            "fieldset" : "Image Block",
             "description" : "An image with an optional caption",
             "icon" : "image",
+            "display" : "list",
             "non-repeat" : {
               "image" : {
                 "type" : "Image",
@@ -98,6 +90,128 @@
                   "single" : "heading3",
                   "label" : "Caption",
                   "placeholder" : "Image Caption..."
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "text_block" : {
+            "type" : "Slice",
+            "fieldset" : "Text Block",
+            "description" : "A block of text with an optional header.",
+            "icon" : "text_fields",
+            "display" : "list",
+            "non-repeat" : {
+              "header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+                  "label" : "Header",
+                  "placeholder" : "Header Text (optional)"
+                }
+              },
+              "body_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph,preformatted,heading6,strong,em,hyperlink,embed,list-item,o-list-item,rtl",
+                  "allowTargetBlank" : true,
+                  "label" : "Body Text",
+                  "placeholder" : "Add your rich text here."
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "file_download_block" : {
+            "type" : "Slice",
+            "fieldset" : "Download CTA Block",
+            "description" : "A CTA button block that downloads a file.",
+            "icon" : "file_download",
+            "display" : "list",
+            "non-repeat" : {
+              "file_download_header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+                  "label" : "File Download Header",
+                  "placeholder" : "Download our annual report"
+                }
+              },
+              "file" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "media",
+                  "label" : "File",
+                  "placeholder" : "The file to download on button click."
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "cta_block" : {
+            "type" : "Slice",
+            "fieldset" : "CTA Block",
+            "description" : "A CTA button block that opens a web page.",
+            "icon" : "link",
+            "display" : "list",
+            "non-repeat" : {
+              "header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+                  "label" : "Header",
+                  "placeholder" : "Sign up for our newsletter and community events!"
+                }
+              },
+              "button_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Button Text",
+                  "placeholder" : "Sign Up"
+                }
+              },
+              "button_link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Button LInk",
+                  "select" : null
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "separator" : {
+            "type" : "Slice",
+            "fieldset" : "Separator",
+            "description" : "A horizontal rule for dividing content.",
+            "icon" : "remove",
+            "display" : "list",
+            "non-repeat" : {
+              "separator_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Separator Image"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "quote_block" : {
+            "type" : "Slice",
+            "fieldset" : "Quote Block",
+            "description" : "Displays a quote in its own block.",
+            "icon" : "format_quote",
+            "display" : "list",
+            "non-repeat" : {
+              "quote" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "heading5",
+                  "label" : "Quote",
+                  "placeholder" : "This is a great quote. - Anonymous"
                 }
               }
             },

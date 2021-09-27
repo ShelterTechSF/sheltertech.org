@@ -74,7 +74,7 @@ type ThreeParagraphBlockProps = {
   paragraph2: ParagraphBlockProps;
   paragraph3: ParagraphBlockProps;
   leftBottomImage: ImageProps;
-  rightImage: ImageProps;
+  rightImage?: ImageProps;
   leftTopImage?: ImageProps;
   ctaTitle?: string;
   ctaButtons?: ButtonProps[];
@@ -140,6 +140,13 @@ const ThreeParagraphBlock = ({
           button={paragraph2.button}
         />
       </div>
+      <div className={s.paragraph3Wrapper}>
+        <ParagraphBlock
+          title={paragraph3.title}
+          description={paragraph3.description}
+          button={paragraph3.button}
+        />
+      </div>
     </div>
   );
 
@@ -153,7 +160,7 @@ const ThreeParagraphBlock = ({
         />
       </div>
       <div className={s.rightImageWrapper}>
-        <img className={s.image} src={rightImage.url} alt={rightImage.alt} />
+        <img className={s.image}  />
       </div>
     </div>
   );
@@ -177,7 +184,7 @@ const ThreeParagraphBlock = ({
         <section className={s.gridParent}>
           <GridAreaLeft />
           <GridAreaMiddle />
-          <GridAreaRight />
+          {/* <GridAreaRight /> */}
           <GridAreaBottom />
         </section>
       </div>

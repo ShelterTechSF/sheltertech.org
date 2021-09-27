@@ -13,7 +13,6 @@
 }
 
 .bleedBackground {
-  background: var(--color-gray-300);
   grid-column: 1 / span 2;
   grid-row: 1;
 }

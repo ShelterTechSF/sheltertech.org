@@ -27,7 +27,7 @@
 }
 
 .title {
-  font: var(--font-title);
+  font: var(--font-subtitle);
 }
 
 @media (--tablet-and-down) {

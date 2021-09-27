@@ -9,7 +9,7 @@ type ImageProps = {
 
 type ImageHeaderProps = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   description: React.ReactNode;
   image1: ImageProps;
   image2?: ImageProps;

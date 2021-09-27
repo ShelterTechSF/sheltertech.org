@@ -74,7 +74,6 @@ type ThreeParagraphBlockProps = {
   paragraph2: ParagraphBlockProps;
   paragraph3: ParagraphBlockProps;
   leftBottomImage: ImageProps;
-  rightImage?: ImageProps;
   leftTopImage?: ImageProps;
   ctaTitle?: string;
   ctaButtons?: ButtonProps[];
@@ -87,7 +86,6 @@ const ThreeParagraphBlock = ({
   paragraph3,
   leftTopImage,
   leftBottomImage,
-  rightImage,
   ctaTitle,
   ctaButtons,
 }: ThreeParagraphBlockProps) => {
@@ -146,21 +144,6 @@ const ThreeParagraphBlock = ({
           description={paragraph3.description}
           button={paragraph3.button}
         />
-      </div>
-    </div>
-  );
-
-  const GridAreaRight = () => (
-    <div className={s.gridAreaRight}>
-      <div className={s.paragraph3Wrapper}>
-        <ParagraphBlock
-          title={paragraph3.title}
-          description={paragraph3.description}
-          button={paragraph3.button}
-        />
-      </div>
-      <div className={s.rightImageWrapper}>
-        <img className={s.image}  />
       </div>
     </div>
   );

@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import COVID19infoBoxBlock from "../../components/grid-aware/COVID19InfoBoxBlock";
 import ImageHeader from "../../components/grid-aware/ImageHeader";
-import classroom from "../../components/grid-aware/ImageHeader/stories/classroom.png";
 import whiteboard from "../../components/grid-aware/ImageHeader/stories/whiteboard-sticky-notes.png";
 import Modal from "../../components/grid-aware/Modal";
 import OneParagraphBlock from "../../components/grid-aware/OneParagraphBlock";
@@ -17,7 +16,6 @@ import Layout from "../../components/layout";
 import VolunteerSignupForm from "../../components/thirdparty/mailchimp/VolunteerSignupForm";
 import articleSpotlightImage from "../images/laura-barerra-vera-cropped.png";
 import teamActivityImage from "./image4.png";
-import pairProgrammingImage from "./image5.png";
 import teamSnackingImage from "./image6.png";
 
 export default () => {
@@ -39,10 +37,16 @@ export default () => {
         description={
           <>
             <p>
-              ShelterTech is an all-volunteer organization that relies on volunteers to bridge the digital divide faced by people experiencing homelessness and are housing insecure in San Francisco. Internet access and technology makes it possible for people to find jobs, human services, and contact family and friends.
+              ShelterTech is an all-volunteer organization that relies on
+              volunteers to bridge the digital divide faced by people
+              experiencing homelessness and are housing insecure in San
+              Francisco. Internet access and technology makes it possible for
+              people to find jobs, human services, and contact family and
+              friends.
             </p>
             <p>
-              If you share our belief that digital equity is a human right, we encourage you to apply and work with us.
+              If you share our belief that digital equity is a human right, we
+              encourage you to apply and work with us.
             </p>
           </>
         }
@@ -132,7 +136,8 @@ export default () => {
               a professional and thoughftul manner
             </p>
             <p>
-              &ndash; No matter what role you play, the essential attitude you need is a deep belief in digital equity for all people
+              &ndash; No matter what role you play, the essential attitude you
+              need is a deep belief in digital equity for all people
             </p>
           </>
         }

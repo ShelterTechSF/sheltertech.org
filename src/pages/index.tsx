@@ -14,7 +14,6 @@ import shelterConnectImg from "../components/grid-aware/ProgramsBlock/stories/sh
 import Spacer from "../components/grid-aware/Spacer";
 import ThreeParagraphBlock from "../components/grid-aware/ThreeParagraphBlock";
 import teamDesignWorkshopImage from "../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
-import datathonClassroomImage from "../components/grid-aware/ThreeParagraphBlock/stories/image3.png";
 import TitleBlock from "../components/grid-aware/TitleBlock";
 import VideoHeader from "../components/grid-aware/VideoHeader/VideoHeader";
 import videoHeaderImage from "../components/grid-aware/VideoHeader/stories/VideoHeader.png";
@@ -105,10 +104,6 @@ export default () => {
         leftBottomImage={{
           url: teamDesignWorkshopImage,
           alt: "Team posing for a photo after a design workshop.",
-        }}
-        rightImage={{
-          url: datathonClassroomImage,
-          alt: "Multiple volunteers working at a datathon.",
         }}
       />
       <ProgramsBlock

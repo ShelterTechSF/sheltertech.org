@@ -74,7 +74,6 @@ type ThreeParagraphBlockProps = {
   paragraph2: ParagraphBlockProps;
   paragraph3: ParagraphBlockProps;
   leftBottomImage: ImageProps;
-  rightImage: ImageProps;
   leftTopImage?: ImageProps;
   ctaTitle?: string;
   ctaButtons?: ButtonProps[];
@@ -87,7 +86,6 @@ const ThreeParagraphBlock = ({
   paragraph3,
   leftTopImage,
   leftBottomImage,
-  rightImage,
   ctaTitle,
   ctaButtons,
 }: ThreeParagraphBlockProps) => {
@@ -105,9 +103,9 @@ const ThreeParagraphBlock = ({
       </div>
     );
 
-    leftBottomImageWrapperClassName += ` ${s.solo}`;
-  } else {
     leftBottomImageWrapperClassName += ` ${s.paired}`;
+  } else {
+    leftBottomImageWrapperClassName += ` ${s.solo}`;
   }
 
   const GridAreaLeft = () => (
@@ -124,8 +122,8 @@ const ThreeParagraphBlock = ({
     </div>
   );
 
-  const GridAreaMiddle = () => (
-    <div className={s.gridAreaMiddle}>
+  const GridAreaRight = () => (
+    <div className={s.gridAreaRight}>
       <div className={s.paragraph1Wrapper}>
         <ParagraphBlock
           title={paragraph1.title}
@@ -140,11 +138,6 @@ const ThreeParagraphBlock = ({
           button={paragraph2.button}
         />
       </div>
-    </div>
-  );
-
-  const GridAreaRight = () => (
-    <div className={s.gridAreaRight}>
       <div className={s.paragraph3Wrapper}>
         <ParagraphBlock
           title={paragraph3.title}
@@ -152,23 +145,13 @@ const ThreeParagraphBlock = ({
           button={paragraph3.button}
         />
       </div>
-      <div className={s.rightImageWrapper}>
-        <img className={s.image} src={rightImage.url} alt={rightImage.alt} />
-      </div>
+      {!ctaTitle || !ctaButtons ? null : (
+        <div className={s.gridAreaBottom}>
+          <CTABlock title={ctaTitle} buttons={ctaButtons} />
+        </div>
+      )}
     </div>
   );
-
-  const GridAreaBottom = () => {
-    if (!ctaTitle || !ctaButtons) {
-      return null;
-    }
-
-    return (
-      <div className={s.gridAreaBottom}>
-        <CTABlock title={ctaTitle} buttons={ctaButtons} />
-      </div>
-    );
-  };
 
   return (
     <div className={s.bleedWrapper}>
@@ -176,9 +159,7 @@ const ThreeParagraphBlock = ({
       <div className={s.bleedMainContent}>
         <section className={s.gridParent}>
           <GridAreaLeft />
-          <GridAreaMiddle />
           <GridAreaRight />
-          <GridAreaBottom />
         </section>
       </div>
     </div>

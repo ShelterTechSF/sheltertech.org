@@ -78,7 +78,7 @@
 @media (--tablet-and-down) {
   .gridParent {
     display: block;
-    padding: 50px 0 80px;
+    padding: 50px 0 40px;
   }
 }
 
@@ -86,24 +86,24 @@
 /* Main grid areas */
 
 .gridAreaLeft {
-  grid-column: 1 / span 4;
+  grid-column: 1 / span 3;
   grid-row: 1 / -1;
 }
 
-.gridAreaMiddle {
-  grid-column: 5 / span 3;
-  grid-row: 1;
-}
-
 .gridAreaRight {
-  grid-column: 9 / span 3;
+  grid-column: 5 / span 6;
   grid-row: 1;
 }
 
 .gridAreaBottom {
   grid-column: 5 / span 8;
   grid-row: 2;
-  margin-top: 50px;
+}
+
+@media (--tablet-and-down) {
+  .gridAreaRight {
+    margin-left: 20px;
+  }
 }
 
 
@@ -114,7 +114,7 @@
 }
 
 .paragraph2Wrapper {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .paragraph3Wrapper {
@@ -137,19 +137,16 @@
   position: relative;
 }
 
-.leftBottomImageWrapper.solo {
-  margin-top: 40px;
+.leftBottomImageWrapper.paired {
+  margin-top: -30px;
+  min-width: 100%;
   overflow: hidden;
 }
 
 /* Image wrapper if rendering only one image on the left */
-.leftBottomImageWrapper.paired {
+.leftBottomImageWrapper.solo {
+  left: -75px;
   margin-top: 135px;
-}
-
-.rightImageWrapper {
-  margin-right: -170px;
-  margin-top: 70px;
 }
 
 @media (--tablet-and-down) {
@@ -166,21 +163,17 @@
   }
 
   .ctaTitleBlock {
-    margin-top: 40px;
     max-width: 100%;
   }
 
   .leftTopImageWrapper {
-    display: none;
+    margin-top: 30px;
+    position: relative;
+    right: 0;
   }
 
   .leftBottomImageWrapper {
     display: none;
-  }
-
-  .rightImageWrapper {
-    margin-right: -40px;
-    margin-top: 40px;
   }
 }
 
@@ -222,7 +215,7 @@
 /* Image Block */
 
 .image {
-  max-width: 100%;
+  min-width: 100%;
 }
 
 
@@ -230,6 +223,7 @@
 
 .ctaTitle {
   font: var(--font-title);
+  margin-top: 50px;
 }
 
 .ctaButtonRow {
@@ -243,6 +237,10 @@
 }
 
 @media (--tablet-and-down) {
+  .ctaTitle {
+    margin-top: 40px;
+  }
+
   .ctaButtonRow {
     flex-flow: column;
     margin-top: 20px;

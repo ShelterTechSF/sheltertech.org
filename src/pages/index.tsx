@@ -13,7 +13,6 @@ import sfServiceGuideImg from "../components/grid-aware/ProgramsBlock/stories/sf
 import shelterConnectImg from "../components/grid-aware/ProgramsBlock/stories/shelter-connect.jpg";
 import Spacer from "../components/grid-aware/Spacer";
 import ThreeParagraphBlock from "../components/grid-aware/ThreeParagraphBlock";
-import teamDesignWorkshopImage from "../components/grid-aware/ThreeParagraphBlock/stories/image2.png";
 import datathonClassroomImage from "../components/grid-aware/ThreeParagraphBlock/stories/image3.png";
 import TitleBlock from "../components/grid-aware/TitleBlock";
 import VideoHeader from "../components/grid-aware/VideoHeader/VideoHeader";
@@ -103,10 +102,6 @@ export default () => {
           button: { text: "Donate", internalLink: "/donate" },
         }}
         leftBottomImage={{
-          url: teamDesignWorkshopImage,
-          alt: "Team posing for a photo after a design workshop.",
-        }}
-        rightImage={{
           url: datathonClassroomImage,
           alt: "Multiple volunteers working at a datathon.",
         }}

@@ -3,11 +3,11 @@
 }
 
 .light {
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 .dark {
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 .img {

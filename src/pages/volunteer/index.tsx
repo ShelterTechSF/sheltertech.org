@@ -78,21 +78,21 @@ export default () => {
         theme="white"
       />
       <ThreeParagraphBlock
-        title="How we work"
+        title="Let’s work together"
         paragraph1={{
           title: "Technology",
           description:
-            "Being based out of San Francisco, tech professionals comprise the bulk of our volunteer base and work together to improve the digital infrastructure powering the services designated for underserved residents.",
+            "Being based out of San Francisco, tech professionals comprise the bulk of our volunteer base and work together to improve the digital infrastructure powering the services designated for under-resourced residents.",
         }}
         paragraph2={{
-          title: "Research & Community Development",
-          description:
-            "No two experiences of people facing housing insecurity is the same. We have a dedicated team working alongside individuals who have experienced homelessness learning how best to serve the diverse challenges faced by those facing housing insecurity.",
-        }}
-        paragraph3={{
           title: "Partnerships & Communications",
           description:
             "We work with government agencies, nonprofits, and local businesses to strengthen the city’s social services ecosystem. via discourse and knowledge sharing between organizations that align with our mission.",
+        }}
+        paragraph3={{
+          title: "Research & Community Development",
+          description:
+            "To better understand the specific experiences people have endured with housing insecurity, our research team works alongside Community Representatives to better understand how best to serve these challenges.",
         }}
         leftTopImage={{
           url: teamInClassroom,
@@ -102,10 +102,6 @@ export default () => {
           url: teamActivityImage,
           alt: "Team bonding activity night.",
         }}
-        // rightImage={{
-        //   url: teamInClassroom,
-        //   alt: "Team members in a classroom setting.",
-        // }}
         ctaTitle="We know that digital equity can be achieved with people like you."
         ctaButtons={[
           { text: "Apply", onClick: () => setVolunteerFormIsOpen(true) },

@@ -55,7 +55,7 @@
   }
 
   .bleedBackground {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 4;
   }
 }
 
@@ -121,14 +121,12 @@
   margin-top: 50px;
 }
 
-.ctaTitleBlock {
+/* .ctaTitleBlock {
   max-width: 425px;
-}
+} */
 
 .leftTopImageWrapper {
   margin-top: 70px;
-  position: relative;
-  right: 75px;
 }
 
 .leftBottomImageWrapper {
@@ -139,7 +137,6 @@
 
 .leftBottomImageWrapper.paired {
   margin-top: -30px;
-  min-width: 100%;
   overflow: hidden;
 }
 
@@ -147,6 +144,13 @@
 .leftBottomImageWrapper.solo {
   left: -75px;
   margin-top: 135px;
+}
+
+@media (--laptop-and-up) {
+  .leftTopImageWrapper {
+    position: relative;
+    right: 75px;
+  }
 }
 
 @media (--tablet-and-down) {

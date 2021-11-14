@@ -120,8 +120,7 @@ export default () => {
           <>
             <p>We ask that you consider these three things before joining:</p>
             <p>
-              &bull; You are willing to volunteer at least three hours each
-              week
+              &bull; You are willing to volunteer at least three hours each week
             </p>
             <p>
               &bull; You will be kind, considerate, and ethical towards other
@@ -133,7 +132,8 @@ export default () => {
               a professional and thoughftul manner.
             </p>
             <p>
-              &bull; No matter what role you play, the essential attitude you need is a deep belief in digital equity for all people
+              &bull; No matter what role you play, the essential attitude you
+              need is a deep belief in digital equity for all people
             </p>
           </>
         }

@@ -1,17 +1,18 @@
-import { graphql, PageProps } from "gatsby";
+import { graphql, Link, PageProps } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
-import Spacer from "../../components/grid-aware/Spacer";
-import TextHeader from "../../components/grid-aware/TextHeader";
-import Layout from "../../components/layout";
-import articleSpotlightImage from "../images/laura-barerra-vera-cropped.png";
+import ArticleSpotlightCard from "../../../components/grid-aware/ArticleSpotlightCard";
+import Spacer from "../../../components/grid-aware/Spacer";
+import TextHeader from "../../../components/grid-aware/TextHeader";
+import Layout from "../../../components/layout";
+import articleSpotlightImage from "../../images/laura-barerra-vera-cropped.png";
 
 export const query = graphql`
-  query BlogIndexPage {
+  query BlogIndexPage($limit: Int!, $skip: Int!) {
     allPrismicBlogPost(
-      limit: 5
+      limit: $limit
+      skip: $skip
       sort: { order: DESC, fields: data___publish_date }
     ) {
       nodes {
@@ -115,7 +116,45 @@ const BlogPostSummaryCard = ({
   );
 };
 
-export default ({ data }: PageProps<GatsbyTypes.BlogIndexPageQuery>) => {
+type PageNavigationProps = {
+  baseURL: string;
+  currentPage: number;
+  totalPages: number;
+};
+const PageNavigation = ({
+  baseURL,
+  currentPage,
+  totalPages,
+}: PageNavigationProps) => {
+  const urlForPage = (pageNumber: number) =>
+    pageNumber === 0 ? baseURL : `${baseURL}/${pageNumber + 1}`;
+  return (
+    <ul>
+      {Array.from({ length: totalPages }).map((_, pageNumber) => (
+        <li>
+          {pageNumber === currentPage ? (
+            pageNumber + 1
+          ) : (
+            <Link to={urlForPage(pageNumber)}>{pageNumber + 1}</Link>
+          )}
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+type BlogIndexPageContext = {
+  limit: number; // Number of posts to display on the page
+  skip: number; // Number of posts to skip before the first post on this page
+  currentPage: number; // Current page number (0-indexed)
+  totalPages: number; // Total number of pages
+  basePageURL: string; // Base URL for pages; can append "/<pageNumber>" to construct full URL
+};
+
+export default ({
+  data,
+  pageContext,
+}: PageProps<GatsbyTypes.BlogIndexPageQuery, BlogIndexPageContext>) => {
   const topics = data.allPrismicBlogPostTopic.nodes.map(
     (topic) => topic.data?.name?.text
   );
@@ -147,6 +186,11 @@ export default ({ data }: PageProps<GatsbyTypes.BlogIndexPageQuery>) => {
           image={post.image}
         />
       ))}
+      <PageNavigation
+        baseURL={pageContext.basePageURL}
+        currentPage={pageContext.currentPage}
+        totalPages={pageContext.totalPages}
+      />
       <ArticleSpotlightCard
         eyebrowText="Volunteer Spotlight"
         title="Laura Barrera-Vera"

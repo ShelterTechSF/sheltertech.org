@@ -56,6 +56,7 @@ module.exports = {
           open_role: require("./src/schemas/open_role.json"),
           blog_home: require("./src/schemas/blog_home.json"),
           blog_post: require("./src/schemas/blog_post.json"),
+          blog_post_topic: require("./src/schemas/blog_post_topic.json"),
           event: {},
         },
       },

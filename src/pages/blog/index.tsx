@@ -27,6 +27,17 @@ export const query = graphql`
             alt
             url
           }
+          topic {
+            document {
+              ... on PrismicBlogPostTopic {
+                data {
+                  name {
+                    text
+                  }
+                }
+              }
+            }
+          }
           body {
             ... on PrismicBlogPostDataBodyTextBlock {
               id
@@ -40,11 +51,20 @@ export const query = graphql`
         }
       }
     }
+    allPrismicBlogPostTopic {
+      nodes {
+        data {
+          name {
+            text
+          }
+        }
+      }
+    }
   }
 `;
 
 type TopicFilterMenuProps = {
-  topics: string[];
+  topics: (string | undefined)[];
 };
 const TopicFilterMenu = ({ topics }: TopicFilterMenuProps) => {
   return (
@@ -96,15 +116,12 @@ const BlogPostSummaryCard = ({
 };
 
 export default ({ data }: PageProps<GatsbyTypes.BlogIndexPageQuery>) => {
-  const topics = [
-    "ShelterConnect",
-    "SF Service Guide",
-    "Volunteer Spotlights",
-    "Community Stories",
-  ];
+  const topics = data.allPrismicBlogPostTopic.nodes.map(
+    (topic) => topic.data?.name?.text
+  );
   const posts = data.allPrismicBlogPost.nodes.map((post) => ({
     title: post.data?.title?.text,
-    topic: "PLACEHOLDER TOPIC",
+    topic: post.data?.topic?.document?.data?.name?.text,
     body: post.data?.body?.[0]?.primary?.body_text?.text,
     date: post.data?.publish_date,
     author: post.data?.author?.text,

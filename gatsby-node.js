@@ -34,7 +34,7 @@ const createBlogIndexPagesForTopic = async ({ topic, graphql, actions }) => {
       path: url,
       component: path.resolve(
         __dirname,
-        "src/pages/blog/BlogIndexTemplate/blogIndexTemplate.tsx"
+        "src/templates/BlogIndexTemplate/blogIndexTemplate.tsx"
       ),
       context: {
         limit: POSTS_PER_PAGE,

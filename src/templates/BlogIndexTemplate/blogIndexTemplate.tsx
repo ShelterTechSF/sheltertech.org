@@ -2,11 +2,11 @@ import { graphql, Link, PageProps } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import ArticleSpotlightCard from "../../../components/grid-aware/ArticleSpotlightCard";
-import Spacer from "../../../components/grid-aware/Spacer";
-import TextHeader from "../../../components/grid-aware/TextHeader";
-import Layout from "../../../components/layout";
-import articleSpotlightImage from "../../images/laura-barerra-vera-cropped.png";
+import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
+import Spacer from "../../components/grid-aware/Spacer";
+import TextHeader from "../../components/grid-aware/TextHeader";
+import Layout from "../../components/layout";
+import articleSpotlightImage from "../../pages/images/laura-barerra-vera-cropped.png";
 
 export const query = graphql`
   query BlogIndexPage(

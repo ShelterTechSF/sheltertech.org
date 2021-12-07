@@ -9,11 +9,16 @@ import Layout from "../../../components/layout";
 import articleSpotlightImage from "../../images/laura-barerra-vera-cropped.png";
 
 export const query = graphql`
-  query BlogIndexPage($limit: Int!, $skip: Int!) {
+  query BlogIndexPage(
+    $limit: Int!
+    $skip: Int!
+    $filter: PrismicBlogPostFilterInput
+  ) {
     allPrismicBlogPost(
       limit: $limit
       skip: $skip
       sort: { order: DESC, fields: data___publish_date }
+      filter: $filter
     ) {
       nodes {
         data {
@@ -59,20 +64,33 @@ export const query = graphql`
             text
           }
         }
+        uid
       }
     }
   }
 `;
 
 type TopicFilterMenuProps = {
-  topics: (string | undefined)[];
+  activeTopic: string | null;
+  topics: {
+    name?: string;
+    uid: string;
+  }[];
 };
-const TopicFilterMenu = ({ topics }: TopicFilterMenuProps) => {
+const TopicFilterMenu = ({ activeTopic, topics }: TopicFilterMenuProps) => {
+  const items = [{ name: "All Topics", uid: null }, ...topics];
   return (
     <ul>
-      <li>All Topics</li>
-      {topics.map((topic) => (
-        <li>{topic}</li>
+      {items.map((topic) => (
+        <li>
+          {topic.uid === activeTopic ? (
+            topic.name
+          ) : (
+            <Link to={topic.uid ? `/blog/${topic.uid}` : "/blog"}>
+              {topic.name}
+            </Link>
+          )}
+        </li>
       ))}
     </ul>
   );
@@ -149,15 +167,18 @@ type BlogIndexPageContext = {
   currentPage: number; // Current page number (0-indexed)
   totalPages: number; // Total number of pages
   basePageURL: string; // Base URL for pages; can append "/<pageNumber>" to construct full URL
+  filter: GatsbyTypes.PrismicBlogPostTopicFilterInput | null;
+  topic: string | null; // Active topic, or null when all topics are shown
 };
 
 export default ({
   data,
   pageContext,
 }: PageProps<GatsbyTypes.BlogIndexPageQuery, BlogIndexPageContext>) => {
-  const topics = data.allPrismicBlogPostTopic.nodes.map(
-    (topic) => topic.data?.name?.text
-  );
+  const topics = data.allPrismicBlogPostTopic.nodes.map((topic) => ({
+    name: topic.data?.name?.text,
+    uid: topic.uid,
+  }));
   const posts = data.allPrismicBlogPost.nodes.map((post) => ({
     title: post.data?.title?.text,
     topic: post.data?.topic?.document?.data?.name?.text,
@@ -175,7 +196,7 @@ export default ({
         title="ShelterTech Stories"
         description="The official blog of ShelterTech, an all-volunteer non-profit creating technology for people experiencing homelessness. Made with love in SF."
       />
-      <TopicFilterMenu topics={topics} />
+      <TopicFilterMenu topics={topics} activeTopic={pageContext.topic} />
       {posts.map((post) => (
         <BlogPostSummaryCard
           title={post.title}

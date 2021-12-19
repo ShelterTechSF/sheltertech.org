@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import COVID19infoBoxBlock from "../../components/grid-aware/COVID19InfoBoxBlock";
 import ImageHeader from "../../components/grid-aware/ImageHeader";
-import classroom from "../../components/grid-aware/ImageHeader/stories/classroom.png";
 import whiteboard from "../../components/grid-aware/ImageHeader/stories/whiteboard-sticky-notes.png";
 import Modal from "../../components/grid-aware/Modal";
 import OneParagraphBlock from "../../components/grid-aware/OneParagraphBlock";
@@ -38,10 +37,6 @@ export default () => {
         subtitle="ShelterTech is an all-volunteer organization that relies on volunteers to bridge the digital divide faced by people experiencing homelessness and are housing insecure in San Francisco. Internet access and technology makes it possible for people to find jobs, human services, and contact family and friends."
         description="If you share our belief that digital equity is a human right, we encourage you to apply and work with us."
         image1={{
-          url: classroom,
-          alt: "Classroom of volunteer members collaborating with one another.",
-        }}
-        image2={{
           url: whiteboard,
           alt: "Team members collaborating together by looking and pointing at whiteboard covered with sticky notes full of ideas.",
         }}
@@ -85,14 +80,14 @@ export default () => {
             "Being based out of San Francisco, tech professionals comprise the bulk of our volunteer base and work together to improve the digital infrastructure powering the services designated for underserved residents.",
         }}
         paragraph2={{
-          title: "Partnerships & Communications",
-          description:
-            "We work with government agencies, nonprofits, and local businesses to strengthen the city’s social services ecosystem. via discourse and knowledge sharing between organizations that align with our mission.",
-        }}
-        paragraph3={{
           title: "Research & Community Development",
           description:
             "No two experiences of people facing housing insecurity is the same. We have a dedicated team working alongside individuals who have experienced homelessness learning how best to serve the diverse challenges faced by those facing housing insecurity.",
+        }}
+        paragraph3={{
+          title: "Partnerships & Communications",
+          description:
+            "We work with government agencies, nonprofits, and local businesses to strengthen the city’s social services ecosystem. via discourse and knowledge sharing between organizations that align with our mission.",
         }}
         leftTopImage={{
           url: teamInClassroom,
@@ -114,22 +109,24 @@ export default () => {
         paragraph2={
           <>
             <p>We ask that you consider these three things before joining:</p>
-            <p>
-              &bull; You are willing to volunteer at least three hours each week
-            </p>
-            <p>
-              &bull; You will be kind, considerate, and ethical towards other
-              volunteers and the communities we serve
-            </p>
-            <p>
-              &bull; You understand that ShelterTech is an all-volunteer team,
-              and that you will try your best to always represent ShelterTech in
-              a professional and thoughftul manner.
-            </p>
-            <p>
-              &bull; No matter what role you play, the essential attitude you
-              need is a deep belief in digital equity for all people
-            </p>
+            <ul>
+              <li>
+                You are willing to volunteer at least three hours each week
+              </li>
+              <li>
+                You will be kind, considerate, and ethical towards other
+                volunteers and the communities we serve
+              </li>
+              <li>
+                You understand that ShelterTech is an all-volunteer team, and
+                that you will try your best to always represent ShelterTech in a
+                professional and thoughftul manner
+              </li>
+              <li>
+                No matter what role you play, the essential attitude you need is
+                a deep belief in digital equity for all people
+              </li>
+            </ul>
           </>
         }
         image={{

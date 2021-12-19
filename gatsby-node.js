@@ -4,6 +4,8 @@ const path = require("path");
  *
  * `topic` should be a BlogPostTopic uid, or null for the case where we list all
  * posts regardless of topic.
+ *
+ * See: https://prismic.io/docs/technologies/paginate-results-gatsby
  */
 const createBlogIndexPagesForTopic = async ({ topic, graphql, actions }) => {
   const { createPage } = actions;

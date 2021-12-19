@@ -2,14 +2,6 @@
   max-width: 410px;
 }
 
-.light {
-  color: var(--color-white);
-}
-
-.dark {
-  color: var(--color-black);
-}
-
 .img {
   height: 250px;
   object-fit: cover;

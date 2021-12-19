@@ -1,6 +1,9 @@
-/* Outter Grid */
+/* Outer Grid */
+.gray {
+  background-color: var(--color-gray-300);
+}
+
 .bleedWrapper {
-  background: var(--color-white);
   display: grid;
   grid-template-columns: var(--bleed-grid-template-columns);
   margin: auto;
@@ -58,7 +61,6 @@
 /* Programs block */
 
 .title {
-  color: var(--color-black);
   font: var(--font-headline);
   margin: 0;
 }

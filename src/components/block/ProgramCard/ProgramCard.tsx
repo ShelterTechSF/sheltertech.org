@@ -1,8 +1,7 @@
 import * as React from "react";
 import * as s from "./ProgramCard.module.css";
 
-type ProgramCardProps = {
-  theme: string;
+export type ProgramCardProps = {
   image: string;
   imageAlt: string;
   title: string;
@@ -10,16 +9,12 @@ type ProgramCardProps = {
 };
 
 const ProgramCard = ({
-  theme,
   image,
   imageAlt,
   title,
   description,
 }: ProgramCardProps) => (
-  <div
-    className={`${s.programCardContainer} 
-    ${theme === "light" ? s.light : s.dark}`}
-  >
+  <div className={s.programCardContainer}>
     <div>
       <img className={s.img} src={image} alt={imageAlt} />
     </div>

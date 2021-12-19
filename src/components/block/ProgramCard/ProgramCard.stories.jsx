@@ -7,9 +7,8 @@ export default {
   component: ProgramCard,
 };
 
-const Template = ({ theme, image, imageAlt, title, description }) => (
+const Template = ({ image, imageAlt, title, description }) => (
   <ProgramCard
-    theme={theme}
     image={image}
     imageAlt={imageAlt}
     title={title}
@@ -19,7 +18,6 @@ const Template = ({ theme, image, imageAlt, title, description }) => (
 
 export const DefaultProgramCard = Template.bind({});
 DefaultProgramCard.args = {
-  theme: "light",
   image: img,
   imageAlt: "Image of ShelterTech booth with 4 volunteers smiling.",
   title: "ShelterConnect",

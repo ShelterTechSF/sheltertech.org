@@ -110,7 +110,6 @@ export default () => {
         title="Our programs"
         programs={[
           {
-            theme: "dark",
             image: shelterConnectImg,
             imageAlt: "Image of ShelterTech booth with 4 volunteers smiling.",
             title: "ShelterConnect",
@@ -118,7 +117,6 @@ export default () => {
               "Through partnerships with the City of San Francisco and Cisco, residents can use free wifi and hardware at shelters and transitional housing facilities.",
           },
           {
-            theme: "dark",
             image: sfServiceGuideImg,
             imageAlt:
               "Image of the back of two people sitting where the woman on the left is pointing to the monitor of a Macbook as the man observes.",
@@ -127,7 +125,6 @@ export default () => {
               "Anyone with access to a smartphone, tablet, or computer can utilize this online directory of human services provided in San Francisco.",
           },
           {
-            theme: "dark",
             image: communityDevelopmentImg,
             imageAlt: "Image of ShelterTech community member smiling.",
             title: "Community Development",
@@ -135,6 +132,7 @@ export default () => {
               "We depend on Community Representatives to inform our work from their lived experiences and rely on volunteers to continuously updated the resources we develop.",
           },
         ]}
+        theme="white"
       />
       <Spacer
         heightDesktop="91px"

@@ -25,11 +25,29 @@ export const query = graphql`
         title {
           text
         }
+        topic {
+          document {
+            ... on PrismicBlogPostTopic {
+              data {
+                name {
+                  text
+                }
+              }
+            }
+          }
+        }
         publish_date
         body {
           ... on PrismicBlogPostDataBodyStatsBlock {
-            id
             slice_type
+            primary {
+              statistic {
+                text
+              }
+              statistic_text {
+                text
+              }
+            }
           }
           ... on PrismicBlogPostDataBodyImageWithCaption {
             primary {
@@ -38,7 +56,7 @@ export const query = graphql`
                 alt
               }
               caption {
-                raw
+                text
               }
             }
             slice_type
@@ -73,6 +91,9 @@ export const query = graphql`
               quote {
                 text
               }
+              attributee {
+                text
+              }
             }
             slice_type
           }
@@ -80,7 +101,7 @@ export const query = graphql`
             id
             primary {
               body_text {
-                html
+                raw
               }
             }
             slice_type
@@ -92,6 +113,9 @@ export const query = graphql`
                 url
               }
               file_download_header {
+                text
+              }
+              button_text {
                 text
               }
             }

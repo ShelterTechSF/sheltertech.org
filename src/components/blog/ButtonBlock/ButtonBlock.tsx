@@ -1,5 +1,5 @@
 import * as React from "react";
-import Button from "../../../components/inline/Button";
+import Button from "../../inline/Button";
 
 type ButtonBlockProps = {
   header: string;
@@ -16,7 +16,11 @@ const ButtonBlock = ({
 }: ButtonBlockProps) => (
   <div>
     <h3>{header}</h3>
-    {isExternalLink ? <Button text={buttonText} externalLink={url}/> : <Button text={buttonText} internalLink={url}/>}
+    {isExternalLink ? (
+      <Button text={buttonText} externalLink={url} />
+    ) : (
+      <Button text={buttonText} internalLink={url} />
+    )}
   </div>
 );
 

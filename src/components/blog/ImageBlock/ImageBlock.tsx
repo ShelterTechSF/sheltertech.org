@@ -3,14 +3,11 @@ import * as React from "react";
 type ImageBlockProps = {
   caption: string;
   url: string;
+  /* eslint-disable react/no-unused-prop-types */
   fullWidth?: boolean;
 };
 
-const ImageBlock = ({
-  url,
-  caption,
-  fullWidth,
-}: ImageBlockProps) => (
+const ImageBlock = ({ url, caption }: ImageBlockProps) => (
   <div>
     <img src={url} alt={caption} />
     <p>{caption}</p>

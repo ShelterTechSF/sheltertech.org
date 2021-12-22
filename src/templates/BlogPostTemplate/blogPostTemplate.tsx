@@ -4,6 +4,7 @@ import ImageBlock from "../../components/blog/ImageBlock";
 import QuoteBlock from "../../components/blog/QuoteBlock";
 import StatsBlock from "../../components/blog/StatsBlock";
 import TextBlock from "../../components/blog/TextBlock";
+import LogoSeparator from "./LogoSeparator.svg";
 
 type BlogPostTemplateProps = {
   topic?: string;
@@ -100,6 +101,10 @@ const BlogPostTemplate = ({
                   url={slice.primary.button_link.url}
                   buttonText={slice.primary.button_text.text}
                 />
+              );
+            case "separator":
+              return (
+                <img src={LogoSeparator} alt="Divider with ShelterTech logo" />
               );
             default:
               return null;

@@ -77,12 +77,6 @@ export const query = graphql`
             slice_type
           }
           ... on PrismicBlogPostDataBodySeparator {
-            id
-            primary {
-              separator_image {
-                url
-              }
-            }
             slice_type
           }
           ... on PrismicBlogPostDataBodyQuoteBlock {

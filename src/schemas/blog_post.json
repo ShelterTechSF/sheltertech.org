@@ -1,246 +1,235 @@
 {
-  "Main": {
-    "title": {
-      "type": "StructuredText",
-      "config": {
-        "single": "heading1",
-        "label": "Title"
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title"
       }
     },
-    "subtitle": {
-      "type": "StructuredText",
-      "config": {
-        "single": "heading1",
-        "label": "subtitle"
+    "subtitle" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "subtitle"
       }
     },
-    "publish_date": {
-      "type": "Date",
-      "config": {
-        "label": "publish date"
+    "publish_date" : {
+      "type" : "Date",
+      "config" : {
+        "label" : "publish date"
       }
     },
-    "uid": {
-      "type": "UID",
-      "config": {
-        "label": "slug",
-        "placeholder": "Unique slug used in the URL, ie. \"my-cool-blog-post\""
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "slug",
+        "placeholder" : "Unique slug used in the URL, ie. \"my-cool-blog-post\""
       }
     },
-    "topic": {
-      "type": "Link",
-      "config": {
-        "select": "document",
-        "customtypes": [
-          "blog_post_topic"
-        ],
-        "label": "Topic"
+    "topic" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "customtypes" : [ "blog_post_topic" ],
+        "label" : "Topic"
       }
     },
-    "header_image": {
-      "type": "Image",
-      "config": {
-        "constraint": {},
-        "thumbnails": [],
-        "label": "header image"
+    "header_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "header image"
       }
     },
-    "author": {
-      "type": "StructuredText",
-      "config": {
-        "single": "paragraph",
-        "label": "author"
+    "author" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "author"
       }
     },
-    "body": {
-      "type": "Slices",
-      "fieldset": "Slice zone",
-      "config": {
-        "labels": null,
-        "choices": {
-          "stats_block": {
-            "type": "Slice",
-            "fieldset": "Stats Block",
-            "description": "A short text block that highlights a statistic.",
-            "icon": "equalizer",
-            "display": "list",
-            "non-repeat": {
-              "statistic": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading1,heading2,heading3,heading4,heading5,heading6",
-                  "label": "Statistic Highlight",
-                  "placeholder": "9,000"
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : null,
+        "choices" : {
+          "stats_block" : {
+            "type" : "Slice",
+            "fieldset" : "Stats Block",
+            "description" : "A short text block that highlights a statistic.",
+            "icon" : "equalizer",
+            "display" : "list",
+            "non-repeat" : {
+              "statistic" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+                  "label" : "Statistic Highlight",
+                  "placeholder" : "9,000"
                 }
               },
-              "statistic_text": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "paragraph",
-                  "label": "Statistic text",
-                  "placeholder": "At-risk community members can now access service and ammenities"
+              "statistic_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Statistic text",
+                  "placeholder" : "At-risk community members can now access service and ammenities"
                 }
               }
             },
-            "repeat": {}
+            "repeat" : { }
           },
-          "image_with_caption": {
-            "type": "Slice",
-            "fieldset": "Image Block",
-            "description": "An image with an optional caption",
-            "icon": "image",
-            "display": "list",
-            "non-repeat": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "constraint": {
-                    "width": 1200
+          "image_with_caption" : {
+            "type" : "Slice",
+            "fieldset" : "Image Block",
+            "description" : "An image with an optional caption",
+            "icon" : "image",
+            "display" : "list",
+            "non-repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 1200
                   },
-                  "thumbnails": [],
-                  "label": "Image"
+                  "thumbnails" : [ ],
+                  "label" : "Image"
                 }
               },
-              "caption": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading3",
-                  "label": "Caption",
-                  "placeholder": "Image Caption..."
+              "caption" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3",
+                  "label" : "Caption",
+                  "placeholder" : "Image Caption..."
                 }
               }
             },
-            "repeat": {}
+            "repeat" : { }
           },
-          "text_block": {
-            "type": "Slice",
-            "fieldset": "Text Block",
-            "description": "A block of text with an optional header.",
-            "icon": "text_fields",
-            "display": "list",
-            "non-repeat": {
-              "body_text": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,embed,list-item,o-list-item,rtl",
-                  "allowTargetBlank": true,
-                  "label": "Body Text",
-                  "placeholder": "Add your rich text here."
+          "text_block" : {
+            "type" : "Slice",
+            "fieldset" : "Text Block",
+            "description" : "A block of text with an optional header.",
+            "icon" : "text_fields",
+            "display" : "list",
+            "non-repeat" : {
+              "body_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,embed,list-item,o-list-item,rtl",
+                  "allowTargetBlank" : true,
+                  "label" : "Body Text",
+                  "placeholder" : "Add your rich text here."
                 }
               }
             },
-            "repeat": {}
+            "repeat" : { }
           },
-          "file_download_block": {
-            "type": "Slice",
-            "fieldset": "Download CTA Block",
-            "description": "A CTA button block that downloads a file.",
-            "icon": "file_download",
-            "display": "list",
-            "non-repeat": {
-              "file_download_header": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading1,heading2,heading3,heading4,heading5,heading6",
-                  "label": "File Download Header",
-                  "placeholder": "Download our annual report"
+          "file_download_block" : {
+            "type" : "Slice",
+            "fieldset" : "Download CTA Block",
+            "description" : "A CTA button block that downloads a file.",
+            "icon" : "file_download",
+            "display" : "list",
+            "non-repeat" : {
+              "file_download_header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+                  "label" : "File Download Header",
+                  "placeholder" : "Download our annual report"
                 }
               },
-              "file": {
-                "type": "Link",
-                "config": {
-                  "select": "media",
-                  "label": "File",
-                  "placeholder": "The file to download on button click."
+              "file" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "media",
+                  "label" : "File",
+                  "placeholder" : "The file to download on button click."
                 }
               },
-              "button_text": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph",
-                  "label": "Button Text",
-                  "placeholder": "Download - 6.2 MB PDF"
+              "button_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Button Text",
+                  "placeholder" : "Download - 6.2 MB PDF"
                 }
               }
             },
-            "repeat": {}
+            "repeat" : { }
           },
-          "cta_block": {
-            "type": "Slice",
-            "fieldset": "CTA Block",
-            "description": "A CTA button block that opens a web page.",
-            "icon": "link",
-            "display": "list",
-            "non-repeat": {
-              "header": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading1,heading2,heading3,heading4,heading5,heading6",
-                  "label": "Header",
-                  "placeholder": "Sign up for our newsletter and community events!"
+          "cta_block" : {
+            "type" : "Slice",
+            "fieldset" : "CTA Block",
+            "description" : "A CTA button block that opens a web page.",
+            "icon" : "link",
+            "display" : "list",
+            "non-repeat" : {
+              "header" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+                  "label" : "Header",
+                  "placeholder" : "Sign up for our newsletter and community events!"
                 }
               },
-              "button_text": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph",
-                  "label": "Button Text",
-                  "placeholder": "Sign Up"
+              "button_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Button Text",
+                  "placeholder" : "Sign Up"
                 }
               },
-              "button_link": {
-                "type": "Link",
-                "config": {
-                  "label": "Button LInk",
-                  "select": null
+              "button_link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Button LInk",
+                  "select" : null
                 }
               }
             },
-            "repeat": {}
+            "repeat" : { }
           },
-          "separator": {
-            "type": "Slice",
-            "fieldset": "Separator",
-            "description": "A horizontal rule for dividing content.",
-            "icon": "remove",
-            "display": "list",
-            "non-repeat": {
-              "separator_image": {
-                "type": "Image",
-                "config": {
-                  "constraint": {},
-                  "thumbnails": [],
-                  "label": "Separator Image"
-                }
-              }
-            },
-            "repeat": {}
+          "separator" : {
+            "type" : "Slice",
+            "fieldset" : "Separator",
+            "description" : "A horizontal rule for dividing content.",
+            "icon" : "remove",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : { }
           },
-          "quote_block": {
-            "type": "Slice",
-            "fieldset": "Quote Block",
-            "description": "Displays a quote in its own block.",
-            "icon": "format_quote",
-            "display": "list",
-            "non-repeat": {
-              "quote": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "heading5",
-                  "label": "Quote",
-                  "placeholder": "To be, or not to be? That is the question."
+          "quote_block" : {
+            "type" : "Slice",
+            "fieldset" : "Quote Block",
+            "description" : "Displays a quote in its own block.",
+            "icon" : "format_quote",
+            "display" : "list",
+            "non-repeat" : {
+              "quote" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "heading5",
+                  "label" : "Quote",
+                  "placeholder" : "To be, or not to be? That is the question."
                 }
               },
-              "attributee": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading6",
-                  "label": "Attributee",
-                  "placeholder": "Shakespeare"
+              "attributee" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading6",
+                  "label" : "Attributee",
+                  "placeholder" : "Shakespeare"
                 }
               }
             },
-            "repeat": {}
+            "repeat" : { }
           }
         }
       }

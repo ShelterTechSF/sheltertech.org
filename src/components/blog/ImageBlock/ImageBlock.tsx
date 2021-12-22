@@ -4,7 +4,7 @@ type ImageBlockProps = {
   caption: string;
   url: string;
   /* eslint-disable react/no-unused-prop-types */
-  fullWidth?: boolean;
+  isFullWidth?: boolean;
 };
 
 const ImageBlock = ({ url, caption }: ImageBlockProps) => (

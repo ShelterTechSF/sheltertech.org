@@ -1,6 +1,6 @@
 import { graphql, PageProps } from "gatsby";
 import React from "react";
-import BlogPostTemplate from "./BlogPostTemplate";
+import BlogPostTemplate from "../../templates/BlogPostTemplate";
 
 /**
   This is the setup for our dynamically generated blog post pages.

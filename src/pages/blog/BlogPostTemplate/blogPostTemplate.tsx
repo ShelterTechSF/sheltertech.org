@@ -12,7 +12,7 @@ type BlogPostTemplateProps = {
   date?: string;
   headerImgAlt?: string;
   headerImgUrl?: string;
-  slices: readonly any[];
+  slices?: readonly any[];
 };
 
 /** The JSX template we render for each blog post. */
@@ -39,7 +39,7 @@ const BlogPostTemplate = ({ topic, title, author, date, headerImgUrl, headerImgA
         {dateAuthorString && <p>{dateAuthorString}</p>}
       </div>
       {headerImgUrl && headerImgAlt && <ImageBlock url={headerImgUrl} caption={headerImgAlt}/>}
-      {slices.map(slice => {
+      {slices && slices.length > 0 && slices.map(slice => {
         switch(slice.slice_type) {
           case 'text_block':
             return <TextBlock rawText={slice.primary.body_text.raw}/>;

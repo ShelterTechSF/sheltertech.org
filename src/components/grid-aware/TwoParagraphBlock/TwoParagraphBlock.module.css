@@ -13,9 +13,12 @@
 }
 
 .bleedBackground {
-  background: var(--color-gray-300);
   grid-column: 1 / span 2;
   grid-row: 1;
+}
+
+.bleedBackground.gray {
+  background: var(--color-gray-300);
 }
 
 .bleedMainContent {
@@ -40,16 +43,9 @@
   column-gap: var(--grid-column-gap);
   display: grid;
   grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
-  grid-template-rows: auto minmax(590px, auto);
-  padding-top: 140px;
-}
-
-.gridParentAbout {
-  column-gap: var(--grid-column-gap);
-  display: grid;
-  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
-  grid-template-rows: auto minmax(492px, auto);
-  padding-top: 140px;
+  grid-template-rows: auto minmax(0, 1fr);
+  padding-bottom: 120px;
+  padding-top: 120px;
 }
 
 .gridParent > * {
@@ -60,11 +56,6 @@
   .gridParent {
     display: block;
     padding: 50px 0 80px;
-  }
-
-  .gridParentAbout {
-    display: block;
-    padding: 50px 0;
   }
 }
 
@@ -87,14 +78,9 @@
   margin-top: 70px;
 }
 
-.gridAreaParagraph2About {
-  padding-right: 16px;
-}
-
 .gridAreaImage {
   grid-column: 8 / span 4;
-  grid-row: 2;
-  margin-top: 15px;
+  grid-row: 1 / span 2;
 }
 
 .gridAreaImageAbout {
@@ -107,10 +93,6 @@
 @media (--tablet-and-down) {
   .gridAreaParagraph2 {
     margin-top: 40px;
-  }
-
-  .gridAreaParagraph2About {
-    padding-right: 0;
   }
 
   .gridAreaImage {
@@ -139,7 +121,7 @@
   font: var(--font-body-small);
 }
 
-.paragraph2WrapperAbout {
+.paragraph2Wrapper.aboutUsPage {
   font: var(--font-body-medium);
 }
 
@@ -147,20 +129,16 @@
   margin: 0;
 }
 
-.paragraph2WrapperAbout :first-child {
-  margin: 0;
-}
-
 .paragraph2Wrapper :not(:first-child) {
   margin-top: 15px;
 }
 
-.paragraph2WrapperAbout :not(:first-child) {
-  margin-top: 15px;
-}
-
-.image1Wrapper {
-  margin-bottom: -142px;
+@media (--laptop-and-up) {
+  .image1Wrapper.aboutUsPage {
+    /* Allows the image to "hang over" the boundary of the component, since the
+     * image will not contribute to the height of its grid row. */
+    height: 0;
+  }
 }
 
 /* TODO: These styles work around a few global styles from the legacy site.
@@ -182,15 +160,6 @@
   .paragraph2Wrapper {
     font: var(--font-body-medium);
     margin-top: 40px;
-  }
-
-  .paragraph2WrapperAbout {
-    font: var(--font-body-medium);
-    margin-top: 40px;
-  }
-
-  .image1Wrapper {
-    margin-bottom: 0;
   }
 }
 

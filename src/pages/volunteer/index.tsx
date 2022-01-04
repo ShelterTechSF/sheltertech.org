@@ -102,7 +102,6 @@ export default () => {
           { text: "Apply", onClick: () => setVolunteerFormIsOpen(true) },
         ]}
       />
-      <Spacer heightDesktop="120px" heightMobile="0" />
       <TwoParagraphBlock
         title="Volunteering at ShelterTech"
         paragraph1=""
@@ -139,6 +138,7 @@ export default () => {
             onClick: () => setVolunteerFormIsOpen(true),
           },
         ]}
+        theme="white"
       />
       <OneParagraphBlock
         title="We need your expertise"

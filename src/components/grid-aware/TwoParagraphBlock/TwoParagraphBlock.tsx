@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import { ThemeColorOption } from "../../../types";
 import Button, { ButtonProps } from "../../inline/Button";
 
 import * as s from "./TwoParagraphBlock.module.css";
@@ -12,6 +13,7 @@ type TwoParagraphBlockProps = {
   paragraph2?: React.ReactNode;
   image: { url: string; alt: string };
   ctaButtons?: ButtonProps[];
+  theme: ThemeColorOption;
 };
 
 const TwoParagraphBlock = ({
@@ -21,15 +23,10 @@ const TwoParagraphBlock = ({
   paragraph2,
   image,
   ctaButtons,
+  theme,
 }: TwoParagraphBlockProps) => {
-  const gridParent = isAbout ? s.gridParentAbout : s.gridParent;
   const gridAreaImage = isAbout ? s.gridAreaImageAbout : s.gridAreaImage;
-  const paragraph2Wrapper = isAbout
-    ? s.paragraph2WrapperAbout
-    : s.paragraph2Wrapper;
-  const gridAreaParagraph2 = isAbout
-    ? `${s.gridAreaParagraph2} ${s.gridAreaParagraph2About}`
-    : s.gridAreaParagraph2;
+  const aboutUsPageClass = isAbout ? s.aboutUsPage : "";
 
   const GridAreaTitle = () => (
     <div className={s.gridAreaTitle}>
@@ -59,15 +56,17 @@ const TwoParagraphBlock = ({
   );
 
   const GridAreaParagraph2 = () => (
-    <div className={gridAreaParagraph2}>
-      <div className={paragraph2Wrapper}>{paragraph2}</div>
+    <div className={s.gridAreaParagraph2}>
+      <div className={`${s.paragraph2Wrapper} ${aboutUsPageClass}`}>
+        {paragraph2}
+      </div>
       {isCtaButtons}
     </div>
   );
 
   const GridAreaImage = () => (
     <div className={gridAreaImage}>
-      <div className={s.image1Wrapper}>
+      <div className={`${s.image1Wrapper} ${aboutUsPageClass}`}>
         <img className={s.image1} src={image.url} alt={image.alt} />
       </div>
     </div>
@@ -75,11 +74,11 @@ const TwoParagraphBlock = ({
 
   return (
     <div className={s.bleedWrapper}>
-      <div className={s.bleedBackground} />
+      <div className={`${s.bleedBackground} ${s[theme]}`} />
       <div className={s.bleedMainContent}>
-        <section className={gridParent}>
+        <section className={s.gridParent}>
           <GridAreaTitle />
-          <GridAreaParagraph1 />
+          {paragraph1 && <GridAreaParagraph1 />}
           <GridAreaImage />
           <GridAreaParagraph2 />
         </section>

@@ -93,6 +93,7 @@ export default () => (
         url: darcelJackson,
         alt: "Darcel Jackson, founder of ShelterTech.",
       }}
+      theme="gray"
     />
     <Spacer heightDesktop="190px" heightMobile="80px" />
     <ArticleSpotlightCard

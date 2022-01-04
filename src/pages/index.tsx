@@ -134,18 +134,13 @@ export default () => {
         ]}
         theme="white"
       />
-      <Spacer
-        heightDesktop="91px"
-        heightMobile="19px"
-        color="var(--color-black)"
-      />
+      <Spacer heightDesktop="91px" heightMobile="19px" />
       <VideoSpotlightBlock
         eyebrowText="Our Impact"
         description="Over 1,600 people have daily internet access in local shelters and resource centers."
         button={{ text: "View Annual Report", externalLink: annualReportPDF }}
         imageURL={videoSpotlightBlockImage}
         playButtonOnClick={() => setVideoSpotlightBlockModalIsOpen(true)}
-        blackBackground
       />
       <Spacer heightDesktop="42px" heightMobile="0" />
       <TitleBlock title="What Our Partners Say" />

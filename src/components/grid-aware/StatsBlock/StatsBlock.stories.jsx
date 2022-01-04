@@ -19,16 +19,19 @@ DefaultStatsBlock.args = {
   statCards: [
     {
       number: "9,000",
+      yoy: 5,
       statement:
         "At-risk community members can now access services and amenities",
     },
     {
       number: "560",
+      yoy: 5,
       statement:
         "Bay Area volunteers have contributed to our cause since our founding in 2016",
     },
     {
       number: "$2M",
+      yoy: 5,
       statement:
         "Worth of work provided by volunteers has been put towards our programs",
     },

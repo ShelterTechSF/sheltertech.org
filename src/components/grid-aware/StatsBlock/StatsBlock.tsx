@@ -5,12 +5,14 @@ import * as s from "./StatsBlock.module.css";
 
 type StatCardProps = {
   number: string;
+  yoy?: number;
   statement: string;
 };
 
-const StatCard = ({ number, statement }: StatCardProps) => (
+const StatCard = ({ number, yoy, statement }: StatCardProps) => (
   <div className={s.statCard}>
     <div className={s.number}>{number}</div>
+    {yoy && <div className={s.yoy}>+{yoy} YOY</div>}
     <div className={s.statement}>{statement}</div>
   </div>
 );

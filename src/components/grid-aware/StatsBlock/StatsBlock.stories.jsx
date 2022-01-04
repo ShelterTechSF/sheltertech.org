@@ -3,17 +3,19 @@ import StatsBlock from "./StatsBlock";
 
 export default {
   title: "Grid-Aware/StatsBlock",
+  subTitle: "Optional Subtitle",
   component: StatsBlock,
 };
 
-const Template = ({ title, statCards }) => (
-  <StatsBlock title={title} statCards={statCards} />
+const Template = ({ title, subtitle, statCards }) => (
+  <StatsBlock title={title} subtitle={subtitle} statCards={statCards} />
 );
 
 export const DefaultStatsBlock = Template.bind({});
 
 DefaultStatsBlock.args = {
   title: "See what our volunteers have accomplished together.",
+  subtitle: "Optional subtitle.",
   statCards: [
     {
       number: "9,000",

@@ -1,0 +1,76 @@
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: var(--bleed-grid-template-columns);
+  margin: auto;
+  max-width: var(--bleed-max-width);
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.bleedWrapper > * {
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    grid-template-columns: 40px 1fr 40px;
+  }
+}
+
+.gridParent {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.gridParent > * {
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    display: block;
+  }
+}
+
+.topicFilterMenu {
+  column-gap: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  grid-column: 2 / span 10;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  row-gap: 20px;
+}
+
+@media (--tablet-and-down) {
+  .topicFilterMenu {
+    flex-flow: column nowrap;
+  }
+}
+
+.topicFilterItem {
+  font: var(--font-body-medium);
+}
+
+@media (--tablet-and-down) {
+  .topicFilterItem {
+    font-size: 20px;
+  }
+}
+
+.topicFilterItem.active {
+  color: var(--color-sheltertech-blue);
+}
+
+.topicLink {
+  color: var(--color-gray-700);
+  text-decoration: none;
+}
+
+.topicLink:hover,
+.topicLink:focus {
+  color: var(--color-black);
+}

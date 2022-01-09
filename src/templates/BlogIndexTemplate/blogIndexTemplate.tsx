@@ -2,6 +2,7 @@ import { graphql, Link, PageProps } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
 
+import TopicFilterMenu from "../../components/blog/TopicFilterMenu";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import Spacer from "../../components/grid-aware/Spacer";
 import TextHeader from "../../components/grid-aware/TextHeader";
@@ -69,32 +70,6 @@ export const query = graphql`
     }
   }
 `;
-
-type TopicFilterMenuProps = {
-  activeTopic: string | null;
-  topics: {
-    name?: string;
-    uid: string;
-  }[];
-};
-const TopicFilterMenu = ({ activeTopic, topics }: TopicFilterMenuProps) => {
-  const items = [{ name: "All Topics", uid: null }, ...topics];
-  return (
-    <ul>
-      {items.map((topic) => (
-        <li>
-          {topic.uid === activeTopic ? (
-            topic.name
-          ) : (
-            <Link to={topic.uid ? `/blog/${topic.uid}` : "/blog"}>
-              {topic.name}
-            </Link>
-          )}
-        </li>
-      ))}
-    </ul>
-  );
-};
 
 type BlogPostSummaryCardProps = {
   title?: string;

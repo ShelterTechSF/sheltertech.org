@@ -195,6 +195,7 @@ export default ({
       <TextHeader
         title="ShelterTech Stories"
         description="The official blog of ShelterTech, an all-volunteer non-profit creating technology for people experiencing homelessness. Made with love in SF."
+        large
       />
       <TopicFilterMenu topics={topics} activeTopic={pageContext.topic} />
       {posts.map((post) => (

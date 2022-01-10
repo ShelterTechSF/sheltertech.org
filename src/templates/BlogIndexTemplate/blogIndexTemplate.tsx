@@ -111,7 +111,9 @@ export default ({
         description="The official blog of ShelterTech, an all-volunteer non-profit creating technology for people experiencing homelessness. Made with love in SF."
         large
       />
+      <Spacer heightDesktop="50px" heightMobile="20px" />
       <TopicFilterMenu topics={topics} activeTopic={pageContext.topic} />
+      <Spacer heightDesktop="30px" heightMobile="0" />
       {posts.map((post) => (
         <BlogPostSummaryCard
           key={post.url}
@@ -124,11 +126,13 @@ export default ({
           image={post.image}
         />
       ))}
+      <Spacer heightDesktop="80px" heightMobile="50px" />
       <Pagination
         baseURL={pageContext.basePageURL}
         currentPage={pageContext.currentPage}
         totalPages={pageContext.totalPages}
       />
+      <Spacer heightDesktop="175px" heightMobile="50px" />
       <ArticleSpotlightCard
         eyebrowText="Volunteer Spotlight"
         title="Laura Barrera-Vera"

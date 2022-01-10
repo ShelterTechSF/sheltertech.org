@@ -1,0 +1,138 @@
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: var(--bleed-grid-template-columns);
+  margin: auto;
+  max-width: var(--bleed-max-width);
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.bleedWrapper > * {
+  min-width: 0;
+}
+
+.gridParent {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.gridParent > * {
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    display: block;
+  }
+}
+
+/* Grid Areas */
+
+.gridAreaTopSpacing {
+  grid-column: 2 / span 10;
+  grid-row: 1;
+  height: 50px;
+}
+
+.gridAreaImage {
+  grid-column: 8 / span 4;
+  grid-row: 2;
+}
+
+.gridAreaText {
+  grid-column: 2 / span 5;
+  grid-row: 2;
+}
+
+.gridAreaBottomSpacing {
+  border-bottom: 1px solid var(--color-gray-400);
+  grid-column: 2 / span 10;
+  grid-row: 3;
+  height: 50px;
+}
+
+/* Individual Elements */
+
+.imageWrapper {
+  margin-top: 30px;
+}
+
+.image {
+  height: 280px;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (--tablet-and-down) {
+  .imageWrapper {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  .image {
+    height: 200px;
+  }
+}
+
+.topic {
+  color: var(--color-gray-700);
+  font: var(--font-body-small);
+  margin-bottom: 20px;
+}
+
+.title {
+  color: var(--color-black);
+  display: block;
+  font: var(--font-title);
+  margin-bottom: 20px;
+  margin-top: 0;
+  text-decoration: none;
+}
+
+.title:focus,
+.title:hover {
+  color: var(--color-gray-700);
+}
+
+.body {
+  font: var(--font-body-small);
+  margin-bottom: 40px;
+  margin-top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Despite these being -webkit prefixes, non-webkit browsers also support
+   * them, and this is apparently the simplest cross-browser way to truncate
+   * text to a fixed number of lines with an ellipsis at the end. These
+   * _require_ the vendor-prefixed names, even for properties or values that
+   * have been standardized.
+   *
+   * See https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp
+   */
+  /* stylelint-disable property-no-vendor-prefix, value-no-vendor-prefix, order/properties-alphabetical-order */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  /* stylelint-enable property-no-vendor-prefix, value-no-vendor-prefix, order/properties-alphabetical-order */
+}
+
+.authorDate {
+  color: var(--color-gray-700);
+  font: var(--font-body-small);
+}
+
+@media (--tablet-and-down) {
+  .topic {
+    margin-bottom: 10px;
+  }
+
+  .title {
+    margin-bottom: 10px;
+  }
+
+  .body {
+    -webkit-line-clamp: 4;
+    margin-bottom: 30px;
+  }
+}

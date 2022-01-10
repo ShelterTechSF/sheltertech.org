@@ -2,6 +2,7 @@ import { graphql, Link, PageProps } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
 
+import BlogPostSummaryCard from "../../components/blog/BlogPostSummaryCard";
 import TopicFilterMenu from "../../components/blog/TopicFilterMenu";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import Spacer from "../../components/grid-aware/Spacer";
@@ -22,6 +23,7 @@ export const query = graphql`
       filter: $filter
     ) {
       nodes {
+        url
         data {
           publish_date
           title {
@@ -71,44 +73,6 @@ export const query = graphql`
   }
 `;
 
-type BlogPostSummaryCardProps = {
-  title?: string;
-  topic?: string;
-  body?: string;
-  date?: string;
-  author?: string;
-  image?: {
-    url?: string;
-    alt?: string;
-  };
-};
-const BlogPostSummaryCard = ({
-  title,
-  topic,
-  body,
-  date,
-  author,
-  image,
-}: BlogPostSummaryCardProps) => {
-  return (
-    <div>
-      <div>{topic}</div>
-      <h2>{title}</h2>
-      <div>{body}</div>
-      <div>
-        {date} - {author}
-      </div>
-      {/*
-        There's a bug in eslint-plugin-jsx-a11y that causes the ?. syntax to be
-        treated like a string, so we silence this false positive. See
-        https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/755
-      */}
-      {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
-      <div>{image?.url && <img src={image.url} alt={image?.alt} />}</div>
-    </div>
-  );
-};
-
 type PageNavigationProps = {
   baseURL: string;
   currentPage: number;
@@ -155,6 +119,7 @@ export default ({
     uid: topic.uid,
   }));
   const posts = data.allPrismicBlogPost.nodes.map((post) => ({
+    url: post.url,
     title: post.data?.title?.text,
     topic: post.data?.topic?.document?.data?.name?.text,
     body: post.data?.body?.[0]?.primary?.body_text?.text,
@@ -175,6 +140,8 @@ export default ({
       <TopicFilterMenu topics={topics} activeTopic={pageContext.topic} />
       {posts.map((post) => (
         <BlogPostSummaryCard
+          key={post.url}
+          url={post.url}
           title={post.title}
           topic={post.topic}
           body={post.body}

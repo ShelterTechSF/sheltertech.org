@@ -1,8 +1,9 @@
-import { graphql, Link, PageProps } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
 
 import BlogPostSummaryCard from "../../components/blog/BlogPostSummaryCard";
+import Pagination from "../../components/blog/Pagination";
 import TopicFilterMenu from "../../components/blog/TopicFilterMenu";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import Spacer from "../../components/grid-aware/Spacer";
@@ -73,33 +74,6 @@ export const query = graphql`
   }
 `;
 
-type PageNavigationProps = {
-  baseURL: string;
-  currentPage: number;
-  totalPages: number;
-};
-const PageNavigation = ({
-  baseURL,
-  currentPage,
-  totalPages,
-}: PageNavigationProps) => {
-  const urlForPage = (pageNumber: number) =>
-    pageNumber === 0 ? baseURL : `${baseURL}/${pageNumber + 1}`;
-  return (
-    <ul>
-      {Array.from({ length: totalPages }).map((_, pageNumber) => (
-        <li>
-          {pageNumber === currentPage ? (
-            pageNumber + 1
-          ) : (
-            <Link to={urlForPage(pageNumber)}>{pageNumber + 1}</Link>
-          )}
-        </li>
-      ))}
-    </ul>
-  );
-};
-
 type BlogIndexPageContext = {
   limit: number; // Number of posts to display on the page
   skip: number; // Number of posts to skip before the first post on this page
@@ -150,7 +124,7 @@ export default ({
           image={post.image}
         />
       ))}
-      <PageNavigation
+      <Pagination
         baseURL={pageContext.basePageURL}
         currentPage={pageContext.currentPage}
         totalPages={pageContext.totalPages}

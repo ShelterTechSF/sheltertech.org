@@ -23,7 +23,7 @@ export default () => (
           <p>
             ShelterTech is an award-winning non-profit solving the biggest
             technology challenges faced by people experiencing homelessness and
-            are housing insecure in San Francisco. Our unique, all-volunteer
+            are housing insecure in San Francisco. Our unique, volunteer-driven
             organization is committed to bridging the digital divide, inspired
             by the belief that digital equity and connectivity is a right, not a
             privilege.

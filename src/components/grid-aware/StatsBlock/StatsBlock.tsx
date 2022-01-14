@@ -53,8 +53,13 @@ const StatsBlock = ({
         </h1>
         {subtitle && <h2 className={s.subtitle}>{subtitle}</h2>}
         <div className={s.gridAreaBottom}>
-          {statCards.map(({ number, statement }) => (
-            <StatCard key={statement} number={number} statement={statement} />
+          {statCards.map(({ number, secondaryNumber, statement }) => (
+            <StatCard
+              key={statement}
+              number={number}
+              secondaryNumber={secondaryNumber}
+              statement={statement}
+            />
           ))}
         </div>
       </section>

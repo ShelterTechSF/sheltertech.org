@@ -3,7 +3,7 @@ import StatsBlock from "./StatsBlock";
 
 export default {
   title: "Grid-Aware/StatsBlock",
-  subTitle: "Optional Subtitle",
+  subtitle: "Optional Subtitle",
   component: StatsBlock,
 };
 
@@ -19,22 +19,23 @@ DefaultStatsBlock.args = {
   statCards: [
     {
       number: "9,000",
-      yoy: 5,
+      secondaryNumber: "+5 YOY",
       statement:
         "At-risk community members can now access services and amenities",
     },
     {
       number: "560",
-      yoy: 5,
+      secondaryNumber: "+5 YOY",
       statement:
         "Bay Area volunteers have contributed to our cause since our founding in 2016",
     },
     {
       number: "$2M",
-      yoy: 5,
+      secondaryNumber: "+5 YOY",
       statement:
         "Worth of work provided by volunteers has been put towards our programs",
     },
   ],
   theme: "white",
+  titleColor: "blue",
 };

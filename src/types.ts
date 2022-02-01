@@ -1,4 +1,3 @@
-type ThemeColorOption = "white" | "gray" | "blue";
-type TitleColorOption = "blue";
+export type ThemeColorOption = "white" | "gray";
 
-export { ThemeColorOption, TitleColorOption };
+export type TitleColorOption = "blue" | "black";

@@ -32,7 +32,7 @@ const StatsBlock = ({
   subtitle,
   statCards,
   theme,
-  titleColor,
+  titleColor = "black",
 }: StatsBlockProps) => (
   <div
     className={`${s.bleedWrapper} 
@@ -44,13 +44,7 @@ const StatsBlock = ({
     />
     <div className={s.bleedMainContent}>
       <section className={s.gridParent}>
-        <h1
-          className={`${s.title} ${
-            subtitle && titleColor ? s[titleColor] : ""
-          }`}
-        >
-          {title}
-        </h1>
+        <h1 className={`${s.title} ${s[titleColor]}`}>{title}</h1>
         {subtitle && <h2 className={s.subtitle}>{subtitle}</h2>}
         <div className={s.gridAreaBottom}>
           {statCards.map(({ number, secondaryNumber, statement }) => (

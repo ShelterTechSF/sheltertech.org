@@ -8,7 +8,12 @@ export default {
 };
 
 const Template = ({ title, subtitle, statCards }) => (
-  <StatsBlock title={title} subtitle={subtitle} statCards={statCards} />
+  <StatsBlock
+    title={title}
+    subtitle={subtitle}
+    statCards={statCards}
+    titleColor="blue"
+  />
 );
 
 export const DefaultStatsBlock = Template.bind({});

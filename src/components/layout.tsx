@@ -1,4 +1,3 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import ReactModal from "react-modal";
@@ -39,20 +38,6 @@ const Layout = ({ children }: LayoutProps) => {
     ReactModal.setAppElement(`#${outerContainerID}`);
   }, []);
 
-  const data = useStaticQuery<GatsbyTypes.LayoutQuery>(graphql`
-    query Layout {
-      prismicFooter {
-        data {
-          address {
-            text
-          }
-          sheltertech_logo_link {
-            ...MinimalPrismicLinkData
-          }
-        }
-      }
-    }
-  `);
   return (
     <div id={outerContainerID}>
       <Helmet>
@@ -117,7 +102,6 @@ const Layout = ({ children }: LayoutProps) => {
           shelterTechLogo={{
             url: shelterTechLogoWhite,
             alt: "ShelterTech Logo",
-            link: data.prismicFooter?.data?.sheltertech_logo_link,
           }}
           socialMediaLinks={[
             {
@@ -141,7 +125,7 @@ const Layout = ({ children }: LayoutProps) => {
               alt: "GitHub Logo",
             },
           ]}
-          address={data.prismicFooter?.data?.address?.text}
+          address="268 Bush Street #4302, San Francisco CA, 94104 USA"
           employerIdentificationNumber="EIN: 38-3984099"
         />
       </div>

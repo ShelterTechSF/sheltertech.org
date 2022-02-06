@@ -26,23 +26,13 @@ const BlogPostTemplate = ({
   headerImgAlt,
   slices,
 }: BlogPostTemplateProps) => {
-  // returns either date or author, or if both are given "date - author"
-  const getDateAuthorString = (): string | null => {
-    if (!date && !author) {
-      return null;
-    }
-    if (date) {
-      const formattedDate = new Date(date).toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
-      return author ? `${formattedDate} - ${author}` : formattedDate;
-    }
-    return author || null;
-  };
-
-  const dateAuthorString = getDateAuthorString();
+  const formattedDate = date && new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  // date or author, or if both exist, "date - author"
+  const dateAuthorString = [formattedDate, author].filter((x) => x).join(" - ");
 
   return (
     <div>

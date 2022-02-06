@@ -104,7 +104,7 @@ const BlogPostTemplate = ({
               );
             case "separator":
               return (
-                <img src={LogoSeparator} alt="Divider with ShelterTech logo" />
+                <img src={LogoSeparator} />
               );
             default:
               return null;

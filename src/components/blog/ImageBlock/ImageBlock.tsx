@@ -3,7 +3,7 @@ import * as React from "react";
 type ImageBlockProps = {
   caption: string;
   url: string;
-  /* eslint-disable react/no-unused-prop-types */
+  /* eslint-disable-next-line react/no-unused-prop-types */
   isFullWidth?: boolean;
 };
 

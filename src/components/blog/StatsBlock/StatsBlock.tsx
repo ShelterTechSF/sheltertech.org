@@ -2,13 +2,13 @@ import * as React from "react";
 
 type StatsBlockProps = {
   statistic: string;
-  statistic_text: string;
+  statisticText: string;
 };
 
-const StatsBlock = ({ statistic, statistic_text }: StatsBlockProps) => (
+const StatsBlock = ({ statistic, statisticText }: StatsBlockProps) => (
   <div>
     <h1>{statistic}</h1>
-    <p>{statistic_text}</p>
+    <p>{statisticText}</p>
   </div>
 );
 

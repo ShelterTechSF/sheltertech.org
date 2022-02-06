@@ -81,7 +81,7 @@ const BlogPostTemplate = ({
               return (
                 <StatsBlock
                   statistic={slice.primary.statistic.text}
-                  statistic_text={slice.primary.statistic_text.text}
+                  statisticText={slice.primary.statistic_text.text}
                 />
               );
             case "image_with_caption":

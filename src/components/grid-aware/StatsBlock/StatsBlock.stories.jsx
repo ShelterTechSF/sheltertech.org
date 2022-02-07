@@ -7,12 +7,13 @@ export default {
   component: StatsBlock,
 };
 
-const Template = ({ title, subtitle, statCards }) => (
+const Template = ({ title, subtitle, statCards, theme, titleColor }) => (
   <StatsBlock
     title={title}
     subtitle={subtitle}
     statCards={statCards}
-    titleColor="blue"
+    theme={theme}
+    titleColor={titleColor}
   />
 );
 

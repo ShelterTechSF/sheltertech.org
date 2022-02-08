@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as s from "./StatsBlock.module.css";
 
 type StatsBlockProps = {
   statistic: string;
@@ -6,9 +7,9 @@ type StatsBlockProps = {
 };
 
 const StatsBlock = ({ statistic, statisticText }: StatsBlockProps) => (
-  <div>
-    <h1>{statistic}</h1>
-    <p>{statisticText}</p>
+  <div className={s.bleedWrapper}>
+    <div className={s.statistic}>{statistic}</div>
+    <p className={s.statisticText}>{statisticText}</p>
   </div>
 );
 

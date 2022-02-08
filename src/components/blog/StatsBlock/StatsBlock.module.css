@@ -1,0 +1,23 @@
+.bleedWrapper {
+  margin: 50px auto;
+  max-width: 630px;
+}
+
+.statistic {
+  color: var(--color-sheltertech-blue);
+  font-family: var(--font-family-merriweather);
+  font-size: 72px;
+  line-height: 92px;
+  max-width: 296px;
+}
+
+.statisticText {
+  font: var(--font-body-medium);
+  max-width: 296px;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    margin: 50px 40px;
+  }
+}

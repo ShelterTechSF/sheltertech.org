@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as s from "./ImageBlock.module.css";
 
 type ImageBlockProps = {
   caption: string;
@@ -9,8 +10,8 @@ type ImageBlockProps = {
 
 const ImageBlock = ({ url, caption }: ImageBlockProps) => (
   <div>
-    <img src={url} alt={caption} />
-    <p>{caption}</p>
+    <img className={s.image} src={url} alt={caption} />
+    <p className={s.caption}>{caption}</p>
   </div>
 );
 

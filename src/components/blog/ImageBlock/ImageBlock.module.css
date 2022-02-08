@@ -1,0 +1,17 @@
+.image {
+  display: block;
+  margin: 50px auto;
+  max-width: 1070px;
+}
+
+.caption {
+  color: var(--color-gray-700);
+  font: var(--font-body-small);
+  text-align: center;
+}
+
+@media (--tablet-and-down) {
+  .image {
+    max-width: 100vw;
+  }
+}

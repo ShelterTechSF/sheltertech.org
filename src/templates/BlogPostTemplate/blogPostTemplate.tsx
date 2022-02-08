@@ -1,6 +1,7 @@
 import React from "react";
 import ButtonBlock from "../../components/blog/ButtonBlock";
 import ImageBlock from "../../components/blog/ImageBlock";
+import LogoSeparator from "../../components/blog/LogoSeparator";
 import QuoteBlock from "../../components/blog/QuoteBlock";
 import StatsBlock from "../../components/blog/StatsBlock";
 import TextBlock from "../../components/blog/TextBlock";
@@ -95,7 +96,7 @@ const BlogPostTemplate = ({
                 />
               );
             case "separator":
-              return <img src={LogoSeparator} alt="" />;
+              return <LogoSeparator />;
             default:
               return null;
           }

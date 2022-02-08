@@ -1,0 +1,12 @@
+.quote {
+  color: var(--color-gray-800);
+  font: var(--font-title);
+  margin: 50px auto;
+  max-width: 630px;
+}
+
+@media (--phone-and-down) {
+  .quote {
+    padding: 0 40px;
+  }
+}

@@ -33,6 +33,10 @@ ol {
   list-style-type: decimal;
 }
 
+.richText em {
+  font-style: italic;
+}
+
 @media (--tablet-and-down) {
   .bleedWrapper {
     padding: 0 40px;

@@ -1,0 +1,14 @@
+.container {
+  align-items: center;
+  background-color: var(--color-gray-300);
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  max-width: 630px;
+  padding: 50px 15px;
+}
+
+.header {
+  font: var(--font-subtitle);
+  margin: 0 0 20px;
+}

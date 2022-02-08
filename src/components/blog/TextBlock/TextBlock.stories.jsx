@@ -16,44 +16,45 @@ export const DefaultTextBlock = Template.bind({});
 DefaultTextBlock.args = {
   rawText: [
     {
+      type: "heading1",
+      text: "Introduction",
+      spans: [],
+    },
+    {
       type: "paragraph",
-      text: "We recently accomplished a major milestone that will help us to accomplish our goal of providing all Bay Area shelters with WiFi access by 2024. On October 5, 2020, we completed installation of a WiFi network at the Mission Hotel — San Francisco’s largest Single-Room Occupancy (SRO) Hotel. Through incremental funding and partnerships, hundreds of at-risk residents now have free internet access, making it possible to easily communicate with friends and family, utilize crucial resources, and develop technological and vocational skills.",
+      text: "For this project, we partnered with the City of San Francisco’s Digital Equity team to deliver 1GB fiber/ISP capability at no cost to the building. Cisco, which is a new partner of ShelterTech’s, generously donated equipment. Installation was provided by PCS-SF, a San Francisco-based IT support and services company. Funding for this project was partially provided by a grant from PagerDuty, Inc. a provider of global digital management solutions also based in San Francisco.",
+      spans: [],
+    },
+    {
+      type: "o-list-item",
+      text: "This is an ordered list with bold text",
       spans: [
         {
-          start: 216,
-          end: 229,
-          type: "hyperlink",
-          data: {
-            link_type: "Web",
-            url: "https://www.sheltertech.org/",
-            target: "_blank",
-          },
+          start: 29,
+          end: 38,
+          type: "strong",
         },
       ],
     },
     {
-      type: "list-item",
-      text: "Performant (Doesn’t include images)",
+      type: "o-list-item",
+      text: "This list item has italicized text",
+      spans: [
+        {
+          start: 19,
+          end: 34,
+          type: "em",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "The Tenderloin Housing Clinic (THC), a local nonprofit dedicated to low-income tenant’s rights and preserving and expanding San Francisco’s low-cost housing stock, has overseen the location’s operations since 1999 through the SRO/Master Lease Program.",
       spans: [],
     },
     {
-      type: "list-item",
-      text: "Resizable",
-      spans: [],
-    },
-    {
-      type: "list-item",
-      text: "Accessible",
-      spans: [],
-    },
-    {
-      type: "list-item",
-      text: "Partial star (e.g: 3.5 or 3.2) dynamically",
-      spans: [],
-    },
-    {
-      type: "list-item",
-      text: "Easy to maintain with CSS",
+      type: "paragraph",
+      text: "“We are truly grateful to Sheltertech for their partnership with THC and for their commitment to making WiFi accessible to tenants in our largest supportive housing site, the Mission Hotel. Having access to the internet is vital for individuals to stay connected, educated, and able to explore resources, especially during this health crisis that has impacted many of our tenants who suffer from mental health or substance use dependency,” Janet Aguilar, Director of Support Services at THC, said.",
       spans: [],
     },
   ],

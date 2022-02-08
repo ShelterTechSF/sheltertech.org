@@ -1,0 +1,25 @@
+.bleedWrapper {
+  margin: 100px auto 0;
+  max-width: 630px;
+}
+
+.topic {
+  color: var(--color-gray-700);
+  font: var(--font-subtitle);
+}
+
+.title {
+  font: var(--font-headline);
+  margin: 20px 0;
+}
+
+.dateAuthor {
+  color: var(--color-gray-700);
+  font: var(--font-body-medium);
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    margin: 40px 40px 0;
+  }
+}

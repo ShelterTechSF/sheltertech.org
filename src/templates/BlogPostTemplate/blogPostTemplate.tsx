@@ -5,7 +5,8 @@ import LogoSeparator from "../../components/blog/LogoSeparator";
 import QuoteBlock from "../../components/blog/QuoteBlock";
 import StatsBlock from "../../components/blog/StatsBlock";
 import TextBlock from "../../components/blog/TextBlock";
-import LogoSeparator from "./LogoSeparator.svg";
+import TitleBlock from "../../components/blog/TitleBlock";
+import Layout from "../../components/layout";
 
 type BlogPostTemplateProps = {
   topic?: string;
@@ -38,12 +39,12 @@ const BlogPostTemplate = ({
   const dateAuthorString = [formattedDate, author].filter((x) => x).join(" - ");
 
   return (
-    <div>
-      <div>
-        {topic && <p>{topic}</p>}
-        {title && <h1>{title}</h1>}
-        {dateAuthorString && <p>{dateAuthorString}</p>}
-      </div>
+    <Layout>
+      <TitleBlock
+        topic={topic}
+        title={title}
+        dateAuthorString={dateAuthorString}
+      />
       {headerImgUrl && headerImgAlt && (
         <ImageBlock url={headerImgUrl} caption={headerImgAlt} isFullWidth />
       )}
@@ -101,7 +102,7 @@ const BlogPostTemplate = ({
               return null;
           }
         })}
-    </div>
+    </Layout>
   );
 };
 

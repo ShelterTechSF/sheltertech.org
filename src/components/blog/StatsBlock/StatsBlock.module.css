@@ -18,6 +18,6 @@
 
 @media (--tablet-and-down) {
   .bleedWrapper {
-    margin: 50px 40px;
+    padding: 0 40px;
   }
 }

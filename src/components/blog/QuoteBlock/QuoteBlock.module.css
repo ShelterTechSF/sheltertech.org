@@ -5,7 +5,7 @@
   max-width: 630px;
 }
 
-@media (--phone-and-down) {
+@media (--tablet-and-down) {
   .quote {
     padding: 0 40px;
   }

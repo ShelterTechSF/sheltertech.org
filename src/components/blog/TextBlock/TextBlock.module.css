@@ -1,0 +1,40 @@
+.bleedWrapper {
+  margin: auto;
+  max-width: 630px;
+}
+
+.richText h1,
+h2,
+h3,
+h4,
+h5 {
+  font: var(--font-subtitle);
+  margin: 50px 0 20px;
+}
+
+.richText p,
+ul,
+ol {
+  font: var(--font-body-medium);
+  margin-top: 20px;
+}
+
+.richText ul,
+ol {
+  margin-left: 2em;
+}
+
+.richText ul > li {
+  list-style-position: outside;
+  list-style-type: disc;
+}
+
+.richText ol > li {
+  list-style-type: decimal;
+}
+
+@media (--tablet-and-down) {
+  .bleedWrapper {
+    padding: 0 40px;
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import ButtonBlock from "../../components/blog/ButtonBlock";
 import ImageBlock from "../../components/blog/ImageBlock";
 import LogoSeparator from "../../components/blog/LogoSeparator";
@@ -10,6 +11,9 @@ import Spacer from "../../components/grid-aware/Spacer";
 import Layout from "../../components/layout";
 
 type BlogPostTemplateProps = {
+  // The URL to this page, excluding the domain name. Should start with a
+  // leading "/".
+  pageUrl: string;
   topic?: string;
   title?: string;
   author?: string;
@@ -21,6 +25,7 @@ type BlogPostTemplateProps = {
 
 /** The JSX template we render for each blog post. */
 const BlogPostTemplate = ({
+  pageUrl,
   topic,
   title,
   author,
@@ -100,6 +105,17 @@ const BlogPostTemplate = ({
 
   return (
     <Layout>
+      <Helmet>
+        {title && <title>{title} | ShelterTech</title>}
+        {title && <meta property="og:title" content={title} />}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://sheltertech.org${pageUrl}`} />
+        <meta
+          name="twitter:card"
+          content={headerImgUrl ? "summary_large_image" : "summary"}
+        />
+        {headerImgUrl && <meta property="og:image" content={headerImgUrl} />}
+      </Helmet>
       <Spacer heightDesktop="80px" heightMobile="50px" />
       <TitleBlock
         topic={topic}

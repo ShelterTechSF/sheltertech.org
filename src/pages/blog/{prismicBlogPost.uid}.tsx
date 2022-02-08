@@ -123,6 +123,7 @@ export const query = graphql`
 
 const PrismicBlogPostPage = ({
   data,
+  location,
 }: PageProps<GatsbyTypes.PrismicBlogPostQuery>) => {
   if (!data?.prismicBlogPost?.data) return <h1>There was a problem</h1>;
   const blogData = data.prismicBlogPost.data;
@@ -130,6 +131,7 @@ const PrismicBlogPostPage = ({
 
   return (
     <BlogPostTemplate
+      pageUrl={location.pathname}
       title={blogData?.title?.text}
       author={blogData?.author?.text}
       topic={blogData?.topic?.document?.data?.name?.text}

@@ -46,7 +46,7 @@ const BlogPostTemplate = ({
         dateAuthorString={dateAuthorString}
       />
       {headerImgUrl && headerImgAlt && (
-        <ImageBlock url={headerImgUrl} caption={headerImgAlt} isFullWidth />
+        <ImageBlock url={headerImgUrl} caption={headerImgAlt} />
       )}
       {/* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-return */}
       {slices &&

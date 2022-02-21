@@ -7,9 +7,9 @@ export default {
   component: ImageBlock,
 };
 
-const Template = ({ caption, url, isFullWidth }) => (
+const Template = ({ caption, url }) => (
   <div style={{ border: "1px dashed rebeccapurple" }}>
-    <ImageBlock caption={caption} isFullWidth={isFullWidth} url={url} />
+    <ImageBlock caption={caption} url={url} />
   </div>
 );
 

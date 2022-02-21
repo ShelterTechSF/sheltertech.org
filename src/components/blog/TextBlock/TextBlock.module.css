@@ -6,23 +6,23 @@
 }
 
 .richText h1,
-h2,
-h3,
-h4,
-h5 {
+.richText h2,
+.richText h3,
+.richText h4,
+.richText h5 {
   font: var(--font-subtitle);
   margin: 50px 0 20px;
 }
 
 .richText p,
-ul,
-ol {
+.richText ul,
+.richText ol {
   font: var(--font-body-medium);
   margin-top: 16px;
 }
 
 .richText ul,
-ol {
+.richText ol {
   margin-left: 2em;
 }
 
@@ -40,11 +40,11 @@ ol {
 }
 
 .richText h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-p:first-child {
+.richText h2:first-child,
+.richText h3:first-child,
+.richText h4:first-child,
+.richText h5:first-child,
+.richText p:first-child {
   margin-top: 0;
 }
 

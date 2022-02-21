@@ -1,5 +1,6 @@
 .image {
-  display: block;
+  display: flex;
+  justify-content: center;
   margin: 50px auto;
   max-width: 1070px;
 }

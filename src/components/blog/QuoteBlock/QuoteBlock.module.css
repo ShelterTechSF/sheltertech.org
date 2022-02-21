@@ -1,7 +1,7 @@
 .quote {
+  margin: 0 auto;
   color: var(--color-gray-800);
   font: var(--font-title);
-  margin: 50px auto;
   max-width: var(--block-block-width);
 }
 

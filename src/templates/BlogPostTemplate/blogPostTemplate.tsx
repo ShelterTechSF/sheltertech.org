@@ -41,14 +41,18 @@ const BlogPostTemplate = ({
 
   return (
     <Layout>
-      <Spacer heightDesktop="100px" heightMobile="100px"/>
+      <Spacer heightDesktop="80px" heightMobile="80px"/>
       <TitleBlock
         topic={topic}
         title={title}
         dateAuthorString={dateAuthorString}
       />
       {headerImgUrl && headerImgAlt && (
-        <ImageBlock url={headerImgUrl} caption={headerImgAlt} />
+        <>
+          <Spacer heightDesktop="50px" heightMobile="50px" />
+          <ImageBlock url={headerImgUrl} caption={headerImgAlt} />
+          <Spacer heightDesktop="50px" heightMobile="50px" />
+        </>
       )}
       {/* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-return */}
       {slices &&
@@ -68,26 +72,38 @@ const BlogPostTemplate = ({
               );
             case "quote_block":
               return (
-                <QuoteBlock
-                  quote={slice.primary.quote.text}
-                  attributee={slice.primary.attributee.text}
-                />
+                <>
+                  <Spacer heightDesktop="50px" heightMobile="50px" />
+                  <QuoteBlock
+                    quote={slice.primary.quote.text}
+                    attributee={slice.primary.attributee.text}
+                  />
+                  <Spacer heightDesktop="50px" heightMobile="50px" />
+                </>
               );
             case "stats_block":
               return (
-                <StatsBlock
-                  statistic={slice.primary.statistic.text}
-                  statisticText={slice.primary.statistic_text.text}
-                />
+                <>
+                  <Spacer heightDesktop="50px" heightMobile="50px" />
+                  <StatsBlock
+                    statistic={slice.primary.statistic.text}
+                    statisticText={slice.primary.statistic_text.text}
+                  />
+                  <Spacer heightDesktop="50px" heightMobile="50px" />
+                </>
               );
             case "image_with_caption":
               return (
                 slice.primary.image.url &&
                 slice.primary.caption.text && (
-                  <ImageBlock
-                    url={slice.primary.image.url}
-                    caption={slice.primary.caption.text}
-                  />
+                  <>
+                    <Spacer heightDesktop="50px" heightMobile="50px" />
+                    <ImageBlock
+                      url={slice.primary.image.url}
+                      caption={slice.primary.caption.text}
+                    />
+                    <Spacer heightDesktop="50px" heightMobile="50px" />
+                  </>
                 )
               );
             case "cta_block":
@@ -99,7 +115,13 @@ const BlogPostTemplate = ({
                 />
               );
             case "separator":
-              return <LogoSeparator />;
+              return (
+                <>
+                  <Spacer heightDesktop="80px" heightMobile="80px" />
+                  <LogoSeparator />
+                  <Spacer heightDesktop="80px" heightMobile="80px" />
+                </>
+              );
             default:
               return null;
           }

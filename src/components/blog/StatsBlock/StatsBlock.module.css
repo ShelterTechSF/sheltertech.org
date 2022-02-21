@@ -1,6 +1,6 @@
 .wrapper {
-  margin: 50px auto;
   max-width: var(--block-block-width);
+  margin: 0 auto;
 }
 
 .statistic {

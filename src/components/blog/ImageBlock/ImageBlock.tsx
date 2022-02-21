@@ -9,7 +9,7 @@ type ImageBlockProps = {
 const ImageBlock = ({ url, caption }: ImageBlockProps) => (
   <div className={s.container}>
     <img className={s.image} src={url} alt={caption} />
-    <p className={s.caption}>{caption}</p>
+    <div className={s.caption}>{caption}</div>
   </div>
 );
 

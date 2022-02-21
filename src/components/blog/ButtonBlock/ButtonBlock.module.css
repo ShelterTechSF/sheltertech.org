@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   margin: 50px auto;
-  max-width: 630px;
+  max-width: var(--block-block-width);
   padding: 50px 40px;
 }
 

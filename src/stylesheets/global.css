@@ -69,6 +69,9 @@
     minmax(40px, 1fr)
     minmax(0, 1290px)
     minmax(40px, 1fr);
+
+  /* Blog Pages */
+  --block-block-width: 630px;
 }
 
 @media (--phone-and-down) {

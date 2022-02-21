@@ -2,7 +2,7 @@
   color: var(--color-gray-800);
   font: var(--font-title);
   margin: 50px auto;
-  max-width: 630px;
+  max-width: var(--block-block-width);
 }
 
 @media (--tablet-and-down) {

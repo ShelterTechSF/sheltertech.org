@@ -1,6 +1,6 @@
 .bleedWrapper {
   margin: 0 auto;
-  max-width: 630px;
+  max-width: var(--block-block-width);
 }
 
 .topic {

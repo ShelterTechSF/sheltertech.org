@@ -1,6 +1,6 @@
 .bleedWrapper {
   margin: 50px auto;
-  max-width: 630px;
+  max-width: var(--block-block-width);
 }
 
 .statistic {

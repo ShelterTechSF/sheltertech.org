@@ -16,7 +16,7 @@
 }
 
 @media (--tablet-and-down) {
-  .container {
+  .image {
     max-width: 100vw;
   }
 }

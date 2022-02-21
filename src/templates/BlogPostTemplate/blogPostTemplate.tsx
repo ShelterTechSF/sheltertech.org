@@ -1,5 +1,4 @@
 import React from "react";
-import Spacer from "../../components/grid-aware/Spacer";
 import ButtonBlock from "../../components/blog/ButtonBlock";
 import ImageBlock from "../../components/blog/ImageBlock";
 import LogoSeparator from "../../components/blog/LogoSeparator";
@@ -7,6 +6,7 @@ import QuoteBlock from "../../components/blog/QuoteBlock";
 import StatsBlock from "../../components/blog/StatsBlock";
 import TextBlock from "../../components/blog/TextBlock";
 import TitleBlock from "../../components/blog/TitleBlock";
+import Spacer from "../../components/grid-aware/Spacer";
 import Layout from "../../components/layout";
 
 type BlogPostTemplateProps = {
@@ -41,7 +41,7 @@ const BlogPostTemplate = ({
 
   return (
     <Layout>
-      <Spacer heightDesktop="80px" heightMobile="80px"/>
+      <Spacer heightDesktop="80px" heightMobile="80px" />
       <TitleBlock
         topic={topic}
         title={title}

@@ -3,9 +3,9 @@
   max-width: var(--block-block-width);
 }
 
-.quote q:before,
-.quote q:after{
-   content: "";
+.quote q::before,
+.quote q::after {
+  content: '';
 }
 
 .quoteText {

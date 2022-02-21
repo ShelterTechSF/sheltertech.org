@@ -10,7 +10,7 @@ const QuoteBlock = ({ quote, attributee }: QuoteBlockProps) => {
   return (
     <div className={s.quote}>
       <q className={s.quoteText}>{quote}</q>
-      <span className={s.quoteText}>{` - ${attributee}`}</span>
+      {attributee && <span className={s.quoteText}>{` - ${attributee}`}</span>}
     </div>
   );
 };

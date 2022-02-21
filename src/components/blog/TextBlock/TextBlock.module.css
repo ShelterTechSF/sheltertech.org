@@ -1,4 +1,6 @@
 .wrapper {
+  display: flex;
+  flex-direction: column; /* using flex to prevent margin collapse */
   margin: auto;
   max-width: var(--block-block-width);
 }
@@ -16,7 +18,7 @@ h5 {
 ul,
 ol {
   font: var(--font-body-medium);
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 .richText ul,
@@ -35,6 +37,15 @@ ol {
 
 .richText em {
   font-style: italic;
+}
+
+.richText h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+p:first-child {
+  margin-top: 0;
 }
 
 @media (--tablet-and-down) {

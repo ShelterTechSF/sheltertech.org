@@ -1,4 +1,7 @@
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   margin: 0 auto;
   max-width: var(--block-block-width);
 }
@@ -10,7 +13,7 @@
 
 .title {
   font: var(--font-headline);
-  margin: 20px 0;
+  margin: 0;
 }
 
 .dateAuthor {

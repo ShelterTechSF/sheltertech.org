@@ -1,4 +1,5 @@
 import React from "react";
+import Spacer from "../../components/grid-aware/Spacer";
 import ButtonBlock from "../../components/blog/ButtonBlock";
 import ImageBlock from "../../components/blog/ImageBlock";
 import LogoSeparator from "../../components/blog/LogoSeparator";
@@ -40,6 +41,7 @@ const BlogPostTemplate = ({
 
   return (
     <Layout>
+      <Spacer heightDesktop="100px" heightMobile="100px"/>
       <TitleBlock
         topic={topic}
         title={title}

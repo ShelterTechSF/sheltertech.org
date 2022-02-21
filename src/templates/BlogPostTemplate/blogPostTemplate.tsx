@@ -39,6 +39,70 @@ const BlogPostTemplate = ({
   // date or author, or if both exist, "date - author"
   const dateAuthorString = [formattedDate, author].filter((x) => x).join(" - ");
 
+  const getBlockSpacerSize = (sliceType: string): string => {
+    switch (sliceType) {
+      case "separator":
+        return "80px";
+      case "text_block":
+        return "0";
+      default:
+        return "50px";
+    }
+  };
+
+  const getBlockComponent = (slice: any): React.ReactNode => {
+    /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-return */
+    switch (slice.slice_type) {
+      case "text_block":
+        return <TextBlock rawText={slice.primary.body_text.raw} />;
+      case "file_download_block":
+        return (
+          <ButtonBlock
+            header={slice.primary.file_download_header.text}
+            url={slice.primary.file.url}
+            buttonText={slice.primary.button_text.text}
+            isExternalLink
+          />
+        );
+      case "quote_block":
+        return (
+          <QuoteBlock
+            quote={slice.primary.quote.text}
+            attributee={slice.primary.attributee.text}
+          />
+        );
+      case "stats_block":
+        return (
+          <StatsBlock
+            statistic={slice.primary.statistic.text}
+            statisticText={slice.primary.statistic_text.text}
+          />
+        );
+      case "image_with_caption":
+        return (
+          slice.primary.image.url &&
+          slice.primary.caption.text && (
+            <ImageBlock
+              url={slice.primary.image.url}
+              caption={slice.primary.caption.text}
+            />
+          )
+        );
+      case "cta_block":
+        return (
+          <ButtonBlock
+            header={slice.primary.header.text}
+            url={slice.primary.button_link.url}
+            buttonText={slice.primary.button_text.text}
+          />
+        );
+      case "separator":
+        return <LogoSeparator />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <Layout>
       <Spacer heightDesktop="80px" heightMobile="80px" />
@@ -58,73 +122,15 @@ const BlogPostTemplate = ({
       {slices &&
         slices.length > 0 &&
         slices.map((slice) => {
-          switch (slice.slice_type) {
-            case "text_block":
-              return <TextBlock rawText={slice.primary.body_text.raw} />;
-            case "file_download_block":
-              return (
-                <ButtonBlock
-                  header={slice.primary.file_download_header.text}
-                  url={slice.primary.file.url}
-                  buttonText={slice.primary.button_text.text}
-                  isExternalLink
-                />
-              );
-            case "quote_block":
-              return (
-                <>
-                  <Spacer heightDesktop="50px" heightMobile="50px" />
-                  <QuoteBlock
-                    quote={slice.primary.quote.text}
-                    attributee={slice.primary.attributee.text}
-                  />
-                  <Spacer heightDesktop="50px" heightMobile="50px" />
-                </>
-              );
-            case "stats_block":
-              return (
-                <>
-                  <Spacer heightDesktop="50px" heightMobile="50px" />
-                  <StatsBlock
-                    statistic={slice.primary.statistic.text}
-                    statisticText={slice.primary.statistic_text.text}
-                  />
-                  <Spacer heightDesktop="50px" heightMobile="50px" />
-                </>
-              );
-            case "image_with_caption":
-              return (
-                slice.primary.image.url &&
-                slice.primary.caption.text && (
-                  <>
-                    <Spacer heightDesktop="50px" heightMobile="50px" />
-                    <ImageBlock
-                      url={slice.primary.image.url}
-                      caption={slice.primary.caption.text}
-                    />
-                    <Spacer heightDesktop="50px" heightMobile="50px" />
-                  </>
-                )
-              );
-            case "cta_block":
-              return (
-                <ButtonBlock
-                  header={slice.primary.header.text}
-                  url={slice.primary.button_link.url}
-                  buttonText={slice.primary.button_text.text}
-                />
-              );
-            case "separator":
-              return (
-                <>
-                  <Spacer heightDesktop="80px" heightMobile="80px" />
-                  <LogoSeparator />
-                  <Spacer heightDesktop="80px" heightMobile="80px" />
-                </>
-              );
-            default:
-              return null;
-          }
+          const blockComponent = getBlockComponent(slice);
+          const spacerSize = getBlockSpacerSize(slice.slice_type);
+          return (
+            <>
+              <Spacer heightDesktop={spacerSize} heightMobile={spacerSize} />
+              {blockComponent}
+              <Spacer heightDesktop={spacerSize} heightMobile={spacerSize} />
+            </>
+          );
         })}
     </Layout>
   );

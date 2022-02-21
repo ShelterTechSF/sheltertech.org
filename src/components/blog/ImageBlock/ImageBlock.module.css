@@ -1,7 +1,11 @@
-.image {
+.container {
   display: flex;
-  justify-content: center;
-  margin: 50px auto;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.image {
   max-width: 1070px;
 }
 
@@ -12,7 +16,7 @@
 }
 
 @media (--tablet-and-down) {
-  .image {
+  .container {
     max-width: 100vw;
   }
 }

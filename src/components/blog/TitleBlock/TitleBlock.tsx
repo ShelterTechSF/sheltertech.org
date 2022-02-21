@@ -8,7 +8,7 @@ type TitleBlockProps = {
 };
 
 const TitleBlock = ({ topic, title, dateAuthorString }: TitleBlockProps) => (
-  <div className={s.bleedWrapper}>
+  <div className={s.wrapper}>
     {topic && <div className={s.topic}>{topic}</div>}
     {title && <h1 className={s.title}>{title}</h1>}
     {dateAuthorString && <div className={s.dateAuthor}>{dateAuthorString}</div>}

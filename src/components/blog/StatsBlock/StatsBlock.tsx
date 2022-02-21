@@ -7,7 +7,7 @@ type StatsBlockProps = {
 };
 
 const StatsBlock = ({ statistic, statisticText }: StatsBlockProps) => (
-  <div className={s.bleedWrapper}>
+  <div className={s.wrapper}>
     <div className={s.statistic}>{statistic}</div>
     <p className={s.statisticText}>{statisticText}</p>
   </div>

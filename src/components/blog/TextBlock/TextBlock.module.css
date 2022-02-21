@@ -1,4 +1,4 @@
-.bleedWrapper {
+.wrapper {
   margin: auto;
   max-width: var(--block-block-width);
 }
@@ -38,7 +38,7 @@ ol {
 }
 
 @media (--tablet-and-down) {
-  .bleedWrapper {
+  .wrapper {
     padding: 0 40px;
   }
 }

@@ -7,7 +7,7 @@ type TextBlockProps = {
 };
 
 const TextBlock = ({ rawText }: TextBlockProps) => (
-  <div className={`${s.bleedWrapper} ${s.richText}`}>
+  <div className={`${s.wrapper} ${s.richText}`}>
     <RichText render={rawText} />
   </div>
 );

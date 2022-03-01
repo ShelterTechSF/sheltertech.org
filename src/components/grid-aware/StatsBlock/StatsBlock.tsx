@@ -10,7 +10,7 @@ type StatCardProps = {
 };
 
 const StatCard = ({ number, secondaryNumber, statement }: StatCardProps) => (
-  <div className={s.statCard}>
+  <div className={s.card}>
     <div className={s.number}>{number}</div>
     {secondaryNumber && (
       <div className={s.secondaryNumber}>{secondaryNumber}</div>
@@ -19,10 +19,61 @@ const StatCard = ({ number, secondaryNumber, statement }: StatCardProps) => (
   </div>
 );
 
+type AxisProp = {
+  x: string | number;
+  y: number;
+};
+
+type BarStatProps = {
+  axes: AxisProp[];
+  legend: { title: string; subtitle: string };
+  position: string;
+};
+
+const BarStatCard = ({ axes, legend, position }: BarStatProps) => {
+  const isVertical = position === "vertical";
+  const statNumbers = axes.map((axis) => axis.y);
+  const maxNumber = Math.max(...statNumbers);
+  const fillPixels = statNumbers.map(
+    (number) => `${Math.round((number / maxNumber) * 100)}px`
+  );
+
+  return (
+    <div className={s.card}>
+      <div className={`${s.barStat} ${s[position]}`}>
+        {axes.map((axis, i) => {
+          const isYMaxNumber = axis.y === maxNumber;
+          const yAxis = axis.y.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+          return (
+            <div className={`${s.barItem} ${s[position]}`}>
+              <div className={`${s.xAxis} ${s[position]}`}>{axis.x}</div>
+              <div
+                style={{
+                  width: isVertical ? "30px" : fillPixels[i],
+                  height: isVertical ? fillPixels[i] : "30px",
+                  backgroundColor: isYMaxNumber
+                    ? "var(--color-sheltertech-blue)"
+                    : "var(--color-gray-600)",
+                  opacity: isYMaxNumber ? "" : "0.5",
+                }}
+              />
+              <div className={`${s.yAxis} ${s[position]}`}>{yAxis}</div>
+            </div>
+          );
+        })}
+      </div>
+      <div className={`${s.statement} ${s[position]}`}>{legend.title}</div>
+      <div className={s.secondaryNumber}>{legend.subtitle}</div>
+    </div>
+  );
+};
+
 type StatsBlockProps = {
   title: string;
-  subtitle?: string;
-  statCards: StatCardProps[];
+  subtitle?: string | React.ReactNode;
+  statBars?: BarStatProps[];
+  statCards?: StatCardProps[];
   theme: ThemeColorOption;
   titleColor?: TitleColorOption;
 };
@@ -30,6 +81,7 @@ type StatsBlockProps = {
 const StatsBlock = ({
   title,
   subtitle,
+  statBars,
   statCards,
   theme,
   titleColor = "black",
@@ -47,14 +99,24 @@ const StatsBlock = ({
         <h1 className={`${s.title} ${s[titleColor]}`}>{title}</h1>
         {subtitle && <h2 className={s.subtitle}>{subtitle}</h2>}
         <div className={s.gridAreaBottom}>
-          {statCards.map(({ number, secondaryNumber, statement }) => (
-            <StatCard
-              key={statement}
-              number={number}
-              secondaryNumber={secondaryNumber}
-              statement={statement}
-            />
-          ))}
+          {statCards &&
+            statCards.map(({ number, secondaryNumber, statement }) => (
+              <StatCard
+                key={statement}
+                number={number}
+                secondaryNumber={secondaryNumber}
+                statement={statement}
+              />
+            ))}
+          {statBars &&
+            statBars.map(({ axes, legend, position }) => (
+              <BarStatCard
+                key={legend.subtitle}
+                axes={axes}
+                legend={legend}
+                position={position}
+              />
+            ))}
         </div>
       </section>
     </div>

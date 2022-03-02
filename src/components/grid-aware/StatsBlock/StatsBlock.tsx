@@ -41,13 +41,13 @@ const BarStatCard = ({ axes, legend, position }: BarStatProps) => {
   return (
     <div className={s.card}>
       <div className={`${s.barStat} ${s[position]}`}>
-        {axes.map((axis, i) => {
-          const isYMaxNumber = axis.y === maxNumber;
-          const yAxis = axis.y.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        {axes.map(({ x, y }, i) => {
+          const isYMaxNumber = y === maxNumber;
+          const yAxis = y.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
           return (
-            <div className={`${s.barItem} ${s[position]}`}>
-              <div className={`${s.xAxis} ${s[position]}`}>{axis.x}</div>
+            <div key={`${x}-${y}`} className={`${s.barItem} ${s[position]}`}>
+              <div className={`${s.xAxis} ${s[position]}`}>{x}</div>
               <div
                 style={{
                   width: isVertical ? "30px" : fillPixels[i],
@@ -111,7 +111,7 @@ const StatsBlock = ({
           {barStatCards &&
             barStatCards.map(({ axes, legend, position }) => (
               <BarStatCard
-                key={legend.subtitle}
+                key={`${legend.title}-${legend.subtitle}`}
                 axes={axes}
                 legend={legend}
                 position={position}

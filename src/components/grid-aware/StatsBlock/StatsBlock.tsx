@@ -72,7 +72,7 @@ const BarStatCard = ({ axes, legend, position }: BarStatProps) => {
 type StatsBlockProps = {
   title: string;
   subtitle?: string | React.ReactNode;
-  statBars?: BarStatProps[];
+  barStatCards?: BarStatProps[];
   statCards?: StatCardProps[];
   theme: ThemeColorOption;
   titleColor?: TitleColorOption;
@@ -81,7 +81,7 @@ type StatsBlockProps = {
 const StatsBlock = ({
   title,
   subtitle,
-  statBars,
+  barStatCards,
   statCards,
   theme,
   titleColor = "black",
@@ -108,8 +108,8 @@ const StatsBlock = ({
                 statement={statement}
               />
             ))}
-          {statBars &&
-            statBars.map(({ axes, legend, position }) => (
+          {barStatCards &&
+            barStatCards.map(({ axes, legend, position }) => (
               <BarStatCard
                 key={legend.subtitle}
                 axes={axes}

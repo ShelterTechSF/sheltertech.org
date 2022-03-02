@@ -7,11 +7,11 @@ export default {
   component: StatsBlock,
 };
 
-const Template = ({ title, subtitle, statBars, theme, titleColor }) => (
+const Template = ({ title, subtitle, barStatCards, theme, titleColor }) => (
   <StatsBlock
     title={title}
     subtitle={subtitle}
-    statBars={statBars}
+    barStatCards={barStatCards}
     theme={theme}
     titleColor={titleColor}
   />
@@ -33,7 +33,7 @@ DefaultStatsBlock.args = {
       </a>
     </div>
   ),
-  statBars: [
+  barStatCards: [
     {
       axes: [
         { x: 2019, y: 14 },

@@ -71,7 +71,7 @@
     minmax(40px, 1fr);
 
   /* Blog Pages */
-  --block-block-width: 630px;
+  --blog-block-width: 630px;
 }
 
 @media (--phone-and-down) {

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column; /* using flex to prevent margin collapse */
   margin: auto;
-  max-width: var(--block-block-width);
+  max-width: var(--blog-block-width);
 }
 
 .richText h1,

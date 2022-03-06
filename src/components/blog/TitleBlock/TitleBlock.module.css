@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 20px;
   margin: 0 auto;
-  max-width: var(--block-block-width);
+  max-width: var(--blog-block-width);
 }
 
 .topic {

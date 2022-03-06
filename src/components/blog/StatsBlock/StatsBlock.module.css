@@ -1,6 +1,6 @@
 .wrapper {
   margin: 0 auto;
-  max-width: var(--block-block-width);
+  max-width: var(--blog-block-width);
 }
 
 .statistic {

@@ -88,9 +88,9 @@ const BlogPostTemplate = ({
       case "separator":
         return (
           <>
-            <Spacer heightDesktop='30px' heightMobile='30px' />
-              <LogoSeparator />
-            <Spacer heightDesktop='30px' heightMobile='30px' />
+            <Spacer heightDesktop="30px" heightMobile="30px" />
+            <LogoSeparator />
+            <Spacer heightDesktop="30px" heightMobile="30px" />
           </>
         );
       default:
@@ -118,12 +118,12 @@ const BlogPostTemplate = ({
         slices.map((slice) => {
           return (
             <>
-              <Spacer heightDesktop='50px' heightMobile='30px' />
+              <Spacer heightDesktop="50px" heightMobile="30px" />
               {getBlockComponent(slice)}
             </>
           );
         })}
-      <Spacer heightDesktop='50px' heightMobile='30px' />
+      <Spacer heightDesktop="50px" heightMobile="30px" />
     </Layout>
   );
 };

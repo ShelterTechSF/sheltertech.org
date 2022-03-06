@@ -39,17 +39,6 @@ const BlogPostTemplate = ({
   // date or author, or if both exist, "date - author"
   const dateAuthorString = [formattedDate, author].filter((x) => x).join(" - ");
 
-  const getBlockSpacerSize = (sliceType: string): string => {
-    switch (sliceType) {
-      case "separator":
-        return "80px";
-      case "text_block":
-        return "0";
-      default:
-        return "50px";
-    }
-  };
-
   const getBlockComponent = (slice: any): React.ReactNode => {
     /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-return */
     switch (slice.slice_type) {
@@ -97,7 +86,13 @@ const BlogPostTemplate = ({
           />
         );
       case "separator":
-        return <LogoSeparator />;
+        return (
+          <>
+            <Spacer heightDesktop='30px' heightMobile='30px' />
+              <LogoSeparator />
+            <Spacer heightDesktop='30px' heightMobile='30px' />
+          </>
+        );
       default:
         return null;
     }
@@ -105,7 +100,7 @@ const BlogPostTemplate = ({
 
   return (
     <Layout>
-      <Spacer heightDesktop="80px" heightMobile="80px" />
+      <Spacer heightDesktop="80px" heightMobile="50px" />
       <TitleBlock
         topic={topic}
         title={title}
@@ -113,25 +108,22 @@ const BlogPostTemplate = ({
       />
       {headerImgUrl && headerImgAlt && (
         <>
-          <Spacer heightDesktop="50px" heightMobile="50px" />
+          <Spacer heightDesktop="50px" heightMobile="30px" />
           <ImageBlock url={headerImgUrl} caption={headerImgAlt} />
-          <Spacer heightDesktop="50px" heightMobile="50px" />
         </>
       )}
       {/* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-return */}
       {slices &&
         slices.length > 0 &&
         slices.map((slice) => {
-          const blockComponent = getBlockComponent(slice);
-          const spacerSize = getBlockSpacerSize(slice.slice_type);
           return (
             <>
-              <Spacer heightDesktop={spacerSize} heightMobile={spacerSize} />
-              {blockComponent}
-              <Spacer heightDesktop={spacerSize} heightMobile={spacerSize} />
+              <Spacer heightDesktop='50px' heightMobile='30px' />
+              {getBlockComponent(slice)}
             </>
           );
         })}
+      <Spacer heightDesktop='50px' heightMobile='30px' />
     </Layout>
   );
 };

@@ -3,6 +3,8 @@ import { ThemeColorOption, TitleColorOption } from "../../../types";
 
 import * as s from "./StatsBarBlock.module.css";
 
+const { Fragment } = React;
+
 type BarProps = {
   label: string | number;
   statistic: string | number;
@@ -36,7 +38,7 @@ const BarStatCard = ({ bars, title, subtitle, orientation }: BarStatProps) => (
         }
 
         return (
-          <>
+          <Fragment key={`${label} ${statistic}`}>
             <div className={`${s.label} ${s[orientation]}`}>{label}</div>
             <div className={`${s.barStatisticWrapper} ${s[orientation]}`}>
               <div className={`${s.bar} ${s[barSize]} ${s[orientation]}`} />
@@ -44,7 +46,7 @@ const BarStatCard = ({ bars, title, subtitle, orientation }: BarStatProps) => (
                 {statistic}
               </div>
             </div>
-          </>
+          </Fragment>
         );
       })}
     </div>
@@ -83,7 +85,7 @@ const StatsBlock = ({
         <div className={s.gridAreaBottom}>
           {barStatCards.map((card) => (
             <BarStatCard
-              key={card.title}
+              key={`${card.title} ${card.subtitle}`}
               bars={card.bars}
               title={card.title}
               subtitle={card.subtitle}

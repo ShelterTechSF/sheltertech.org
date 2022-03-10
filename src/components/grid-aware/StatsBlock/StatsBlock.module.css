@@ -83,22 +83,22 @@
   margin-top: 20px;
 }
 
-.card {
+.statCard {
   flex: 1 1 0;
   margin-right: 110px;
   width: 250px;
 }
 
-.card:last-child {
+.statCard:last-child {
   margin-right: 0;
 }
 
 @media (--tablet-and-down) {
-  .card {
+  .statCard {
     margin-bottom: 40px;
   }
 
-  .card:first-child {
+  .statCard:first-child {
     margin-top: 40px;
   }
 }
@@ -131,66 +131,4 @@
     font-size: 50px;
     line-height: 1.3;
   }
-}
-
-.barStat {
-  display: flex;
-}
-
-.barStat.vertical {
-  flex-direction: row;
-  gap: 26px;
-}
-
-.barStat.horizontal {
-  flex-direction: column;
-  gap: 24px;
-}
-
-.barItem {
-  align-items: center;
-  display: flex;
-}
-
-.barItem.vertical {
-  flex-direction: column-reverse;
-}
-
-.barItem.horizontal {
-  flex-direction: row;
-}
-
-.xAxis {
-  color: var(--color-gray-700);
-  font: var(--font-action);
-  font-weight: 800;
-}
-
-.xAxis.vertical {
-  margin-top: 5px;
-}
-
-.xAxis.horizontal {
-  margin-right: 10px;
-  width: 60px;
-}
-
-.yAxis {
-  font: var(--font-title);
-}
-
-.yAxis.vertical {
-  margin-bottom: 5px;
-}
-
-.yAxis.horizontal {
-  margin-left: 15px;
-}
-
-.statement.vertical {
-  margin-top: 15px;
-}
-
-.statement.horizontal {
-  margin-top: 20px;
 }

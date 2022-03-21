@@ -1,6 +1,8 @@
 import { graphql, PageProps } from "gatsby";
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
 import React from "react";
 import BlogPostTemplate from "../../templates/BlogPostTemplate";
+import linkResolver from "../../utils/linkResolver";
 
 /**
   This is the setup for our dynamically generated blog post pages.
@@ -13,6 +15,7 @@ import BlogPostTemplate from "../../templates/BlogPostTemplate";
 export const query = graphql`
   query PrismicBlogPost($uid: String!) {
     prismicBlogPost(uid: { eq: $uid }) {
+      _previewable
       data {
         author {
           text
@@ -121,7 +124,7 @@ export const query = graphql`
   }
 `;
 
-const PrismicBlogPostPage = ({
+export const PrismicBlogPostPage = ({
   data,
   location,
 }: PageProps<GatsbyTypes.PrismicBlogPostQuery>) => {
@@ -143,4 +146,9 @@ const PrismicBlogPostPage = ({
   );
 };
 
-export default PrismicBlogPostPage;
+export default withPrismicPreview(PrismicBlogPostPage, [
+  {
+    repositoryName: "sheltertech",
+    linkResolver,
+  },
+]);

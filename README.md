@@ -11,12 +11,14 @@ For more specific documentation, visit one of the pages below:
 - [Component Design System][]
 - [How To Deploy][]
 - [How To Add A Prismic Type][]
+- [Frequently Asked Questions][]
 
 [Getting Started Guide]: ./docs/getting-started.md
 [Command-Line Quick Reference]: ./docs/command-line-quick-reference.md
 [Component Design System]: ./docs/component-design-system.md
 [How To Deploy]: ./docs/how-to-deploy.md
 [How To Add A Prismic Type]: ./docs/how-to-add-a-prismic-type.md
+[Frequently Asked Questions]: ./docs/faq.md
 
 ## Staging website
 

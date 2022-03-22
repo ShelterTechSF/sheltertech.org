@@ -70,14 +70,8 @@ const StatsBlock = ({
   theme,
   titleColor = "black",
 }: StatsBarBlockProps) => (
-  <div
-    className={`${s.bleedWrapper} 
-      ${s[theme]}`}
-  >
-    <div
-      className={`${s.bleedBackground} 
-        ${s[theme]}`}
-    />
+  <div className={`${s.bleedWrapper} ${s[theme]}`}>
+    <div className={`${s.bleedBackground} ${s[theme]}`}/>
     <div className={s.bleedMainContent}>
       <section className={s.gridParent}>
         <h1 className={`${s.title} ${s[titleColor]}`}>{title}</h1>

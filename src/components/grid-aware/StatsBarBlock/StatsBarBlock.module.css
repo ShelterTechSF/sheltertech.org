@@ -56,7 +56,7 @@
   flex-direction: row;
   grid-column: 2 / span 10;
   grid-row: 3;
-  margin-top: 54px;
+  margin-top: 50px;
 }
 
 @media (--tablet-and-down) {

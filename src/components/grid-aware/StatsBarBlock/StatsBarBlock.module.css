@@ -54,6 +54,7 @@
 .gridAreaBottom {
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
   grid-column: 2 / span 10;
   grid-row: 3;
   margin-top: 50px;

@@ -138,6 +138,7 @@
 .barStatisticWrapper.vertical {
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
 }
 
 .barStatisticWrapper.horizontal {

@@ -121,7 +121,7 @@
 }
 
 .barsContainer.vertical {
-  column-gap: 26px;
+  column-gap: 20px;
   grid-auto-flow: column dense;
   grid-template-rows: auto auto;
   justify-content: start;

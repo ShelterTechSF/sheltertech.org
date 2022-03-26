@@ -82,6 +82,7 @@
   font: var(--font-body-medium);
   grid-column: 2 / span 8;
   margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .card {

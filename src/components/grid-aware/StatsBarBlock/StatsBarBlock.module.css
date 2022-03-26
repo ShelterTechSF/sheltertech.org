@@ -52,9 +52,9 @@
 }
 
 .gridAreaBottom {
+  align-items: flex-end;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
   grid-column: 2 / span 10;
   grid-row: 3;
   margin-top: 50px;
@@ -81,8 +81,8 @@
 .subtitle {
   font: var(--font-body-medium);
   grid-column: 2 / span 8;
-  margin-top: 20px;
   margin-bottom: 0;
+  margin-top: 20px;
 }
 
 .card {
@@ -136,9 +136,9 @@
 }
 
 .barStatisticWrapper.vertical {
+  align-items: center;
   display: flex;
   flex-direction: column-reverse;
-  align-items: center;
 }
 
 .barStatisticWrapper.horizontal {

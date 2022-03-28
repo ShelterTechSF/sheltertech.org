@@ -19,12 +19,12 @@ export default () => (
       statCards={[
         {
           number: "3k",
-          secondaryNumber: "+6 Y0Y",
+          secondaryNumber: 6,
           statement: "Monthly users",
         },
         {
           number: "13.4k",
-          secondaryNumber: "+6 Y0Y",
+          secondaryNumber: 6,
           statement: "Annual users",
         },
         {
@@ -105,17 +105,17 @@ export default () => (
       statCards={[
         {
           number: "107",
-          secondaryNumber: "+6 Y0Y",
+          secondaryNumber: 6,
           statement: "Active volunteers",
         },
         {
           number: "13",
-          secondaryNumber: "+6 Y0Y",
+          secondaryNumber: 6,
           statement: "Community Representatives",
         },
         {
           number: "20",
-          secondaryNumber: "+6 Y0Y",
+          secondaryNumber: 6,
           statement: "Corporate volunteer organizations",
         },
       ]}
@@ -127,12 +127,12 @@ export default () => (
       statCards={[
         {
           number: "$79k",
-          secondaryNumber: "+6 Y0Y",
+          secondaryNumber: 6,
           statement: "Annual funding",
         },
         {
           number: "$2m",
-          secondaryNumber: "+6 Y0Y",
+          secondaryNumber: 6,
           statement: "in in-kind contributions",
         },
       ]}

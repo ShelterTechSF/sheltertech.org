@@ -5,7 +5,7 @@ import * as s from "./StatsBlock.module.css";
 
 type StatCardProps = {
   number: string;
-  secondaryNumber?: number;
+  secondaryNumber?: string | number;
   statement: string;
 };
 

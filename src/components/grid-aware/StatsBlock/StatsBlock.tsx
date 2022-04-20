@@ -21,7 +21,7 @@ const StatCard = ({ number, secondaryNumber, statement }: StatCardProps) => (
 
 type StatsBlockProps = {
   title: string;
-  subtitle?: string;
+  subtitle?: React.ReactNode;
   statCards: StatCardProps[];
   theme: ThemeColorOption;
   titleColor?: TitleColorOption;

@@ -13,7 +13,7 @@ type BarProps = {
 type BarStatProps = {
   bars: BarProps[];
   title: string;
-  subtitle: string;
+  subtitle?: string;
   orientation: "vertical" | "horizontal";
 };
 
@@ -51,7 +51,7 @@ const BarStatCard = ({ bars, title, subtitle, orientation }: BarStatProps) => (
       })}
     </div>
     <div className={`${s.cardTitle} ${s[orientation]}`}>{title}</div>
-    <div className={s.cardSubtitle}>{subtitle}</div>
+    {subtitle && <div className={s.cardSubtitle}>{subtitle}</div>}
   </div>
 );
 
@@ -77,9 +77,9 @@ const StatsBlock = ({
         <h1 className={`${s.title} ${s[titleColor]}`}>{title}</h1>
         {subtitle && <h2 className={s.subtitle}>{subtitle}</h2>}
         <div className={s.gridAreaBottom}>
-          {barStatCards.map((card) => (
+          {barStatCards.map((card, i) => (
             <BarStatCard
-              key={`${card.title} ${card.subtitle}`}
+              key={`${card.title + i.toString()}`}
               bars={card.bars}
               title={card.title}
               subtitle={card.subtitle}

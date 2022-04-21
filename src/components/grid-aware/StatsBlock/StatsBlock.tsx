@@ -4,9 +4,9 @@ import { ThemeColorOption, TitleColorOption } from "../../../types";
 import * as s from "./StatsBlock.module.css";
 
 type StatCardProps = {
-  number: string;
+  number: React.ReactNode;
   secondaryNumber?: string | number;
-  statement: string;
+  statement?: string;
 };
 
 const StatCard = ({ number, secondaryNumber, statement }: StatCardProps) => (
@@ -15,7 +15,7 @@ const StatCard = ({ number, secondaryNumber, statement }: StatCardProps) => (
     {secondaryNumber && (
       <div className={s.secondaryNumber}>{secondaryNumber}</div>
     )}
-    <div className={s.statement}>{statement}</div>
+    {statement && <div className={s.statement}>{statement}</div>}
   </div>
 );
 

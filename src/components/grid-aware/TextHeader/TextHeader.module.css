@@ -4,7 +4,6 @@
   justify-items: center;
   margin: auto;
   max-width: var(--bleed-max-width);
-  padding-bottom: 100px;
   padding-top: 100px;
 }
 
@@ -13,17 +12,25 @@
   min-width: 0;
 }
 
+.bleedWrappers.hasBottomPadding {
+  padding-bottom: 100px;
+}
+
 @media (--tablet-and-down) {
   .bleedWrapper {
     grid-template-columns: 40px 1fr 40px;
-    padding-bottom: 40px;
     padding-top: 30px;
+  }
+
+  .bleedWrappers.hasBottomPadding {
+    padding-bottom: 40px;
   }
 }
 
 .bleedMainContent {
   grid-column: 2;
   grid-row: 1;
+  width: 100%;
 }
 
 .gridParent {

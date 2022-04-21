@@ -6,14 +6,18 @@ import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCa
 import Spacer from "../../components/grid-aware/Spacer";
 import StatsBarBlock from "../../components/grid-aware/StatsBarBlock";
 import StatsBlock from "../../components/grid-aware/StatsBlock";
+import TextHeader from "../../components/grid-aware/TextHeader";
 import Layout from "../../components/layout";
 import articleSpotlightImage from "../images/mission-hotel.jpeg";
+import linkSFLogo from "./link-sf.png";
+import sfFamiliesLogo from "./sf-families.svg";
 
 export default () => (
   <Layout>
     <Helmet>
       <title>Making an Impact</title>
     </Helmet>
+    <TextHeader title="Making an Impact" />
     <StatsBlock
       title="SF Service Guide"
       subtitle={
@@ -84,7 +88,6 @@ export default () => (
             { label: 2021, statistic: 1848 },
           ],
           title: "People serviced nightly",
-          subtitle: "",
           orientation: "horizontal",
         },
       ]}
@@ -143,8 +146,7 @@ export default () => (
       statCards={[
         {
           number: "$230k",
-          statement:
-            "Total funding in 2021 (grants, corporate donations, individual donations)",
+          statement: "Total funding in 2021 (grants and donations)",
         },
         {
           number: "$150k",
@@ -152,6 +154,20 @@ export default () => (
         },
       ]}
       theme="gray"
+      titleColor="blue"
+    />
+    <StatsBlock
+      title="Hosted Partners"
+      subtitle="ShelterTech is proud to provide the data on the SF Service Guide platform for other organizations to use on their own websites. We have worked closely with SF Families and Link-SF to provide a custom experience catered to their users’ needs, leveraging our data curation pipeline to keep that information accurate and up to date."
+      statCards={[
+        {
+          number: <img src={linkSFLogo} alt="Link-SF Logo." />,
+        },
+        {
+          number: <img src={sfFamiliesLogo} alt="SF Families Logo." />,
+        },
+      ]}
+      theme="white"
       titleColor="blue"
     />
     <Spacer heightDesktop="190px" heightMobile="80px" />

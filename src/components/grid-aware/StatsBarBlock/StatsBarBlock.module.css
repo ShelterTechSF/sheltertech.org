@@ -52,7 +52,7 @@
 }
 
 .gridAreaBottom {
-  align-items: flex-end;
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
   grid-column: 2 / span 10;
@@ -86,9 +86,8 @@
 }
 
 .card {
-  flex: 1 1 0;
+  flex: 0 1 250px;
   margin-right: 110px;
-  width: 250px;
 }
 
 .card:last-child {
@@ -118,6 +117,7 @@
 
 .barsContainer {
   display: grid;
+  height: 170px;
 }
 
 .barsContainer.vertical {
@@ -129,6 +129,7 @@
 }
 
 .barsContainer.horizontal {
+  align-content: end;
   align-items: center;
   column-gap: 10px;
   grid-template-columns: auto auto;
@@ -218,5 +219,5 @@
 }
 
 .cardTitle.horizontal {
-  margin-top: 20px;
+  margin-top: 15px;
 }

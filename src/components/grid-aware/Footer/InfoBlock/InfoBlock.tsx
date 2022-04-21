@@ -6,7 +6,7 @@ function getYear() {
 }
 
 type InfoBlockProps = {
-  address: string;
+  address?: string;
   employerIdentificationNumber: string;
 };
 

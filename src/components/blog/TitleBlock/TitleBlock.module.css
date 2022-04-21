@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: var(--blog-block-width);
+}
+
+.topic {
+  color: var(--color-gray-700);
+  font: var(--font-subtitle);
+}
+
+.title {
+  font: var(--font-headline);
+  margin: 0;
+}
+
+.dateAuthor {
+  color: var(--color-gray-700);
+  font: var(--font-body-medium);
+}
+
+@media (--tablet-and-down) {
+  .wrapper {
+    margin: 0 40px;
+  }
+}

@@ -1,5 +1,7 @@
 const postcssCustomMedia = require("postcss-custom-media");
 
+const linkResolver = require("./src/utils/linkResolver");
+
 module.exports = {
   siteMetadata: {
     title: "ShelterTech - Technology for the underserved",
@@ -21,14 +23,50 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-postcss",
       options: {
         postCssPlugins: [postcssCustomMedia],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    {
+      // See https://github.com/angeloashmore/gatsby-source-prismic for the full
+      // list of options.
+      resolve: "gatsby-source-prismic",
+      options: {
+        // The name of your prismic.io repository. This is required.
+        // Example: 'gatsby-source-prismic-test-site' if your prismic.io address
+        // is 'gatsby-source-prismic-test-site.prismic.io'.
+        repositoryName: "sheltertech",
+
+        linkResolver,
+
+        // Provide an object of Prismic custom type JSON schemas to load into
+        // Gatsby. This is required.
+        schemas: {
+          // Your custom types mapped to schemas
+          footer: require("./src/schemas/footer.json"),
+          home_page: require("./src/schemas/home_page.json"),
+          volunteer_page: require("./src/schemas/volunteer_page.json"),
+          test: require("./src/schemas/test.json"),
+          team_member: require("./src/schemas/team_member.json"),
+          team: require("./src/schemas/team.json"),
+          post: require("./src/schemas/post.json"),
+          open_role: require("./src/schemas/open_role.json"),
+          blog_home: require("./src/schemas/blog_home.json"),
+          blog_post: require("./src/schemas/blog_post.json"),
+          blog_post_topic: require("./src/schemas/blog_post_topic.json"),
+          event: {},
+        },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-prismic-previews",
+      options: {
+        repositoryName: "sheltertech",
+      },
+    },
+    "gatsby-plugin-typegen",
   ],
 };

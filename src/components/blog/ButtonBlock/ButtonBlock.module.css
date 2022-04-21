@@ -1,0 +1,14 @@
+.container {
+  align-items: center;
+  background-color: var(--color-gray-300);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: var(--blog-block-width);
+  padding: 50px 40px;
+}
+
+.header {
+  font: var(--font-subtitle);
+}

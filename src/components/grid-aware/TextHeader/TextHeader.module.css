@@ -58,6 +58,11 @@
   margin-top: 30px;
 }
 
+.description.large {
+  font: var(--font-body-large);
+  margin-top: 15px;
+}
+
 @media (--tablet-and-down) {
   .description {
     margin-top: 20px;

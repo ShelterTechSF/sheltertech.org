@@ -21,7 +21,7 @@ type FooterProps = {
   shelterTechLogo: ShelterTechLogoProps;
   socialMediaLinks: SocialMediaLinkProps[];
   employerIdentificationNumber: string;
-  address: string;
+  address?: string;
 };
 
 const Footer = ({

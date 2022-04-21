@@ -1,0 +1,64 @@
+.bleedWrapper {
+  display: grid;
+  grid-template-columns: var(--bleed-grid-template-columns);
+  margin: auto;
+  max-width: var(--bleed-max-width);
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.bleedWrapper > * {
+  min-width: 0;
+}
+
+.gridParent {
+  column-gap: var(--grid-column-gap);
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+}
+
+/* Override grid item default of auto so that item contents cannot stretch the grid itself */
+.gridParent > * {
+  min-width: 0;
+}
+
+@media (--tablet-and-down) {
+  .gridParent {
+    display: block;
+  }
+}
+
+.paginationContainer {
+  color: var(--color-gray-700);
+  column-gap: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  font: var(--font-body-small);
+  grid-column: 2 / span 10;
+  justify-content: center;
+}
+
+@media (--tablet-and-down) {
+  .paginationContainer {
+    column-gap: 5px;
+    justify-content: space-between;
+  }
+}
+
+.disabledLink {
+  color: var(--color-gray-400);
+}
+
+.activeLink {
+  color: var(--color-sheltertech-blue);
+}
+
+.link {
+  color: var(--color-gray-700);
+  text-decoration: none;
+}
+
+.link:focus,
+.link:hover {
+  color: var(--color-black);
+}

@@ -38,6 +38,7 @@ const Layout = ({ children }: LayoutProps) => {
   useEffect(() => {
     ReactModal.setAppElement(`#${outerContainerID}`);
   }, []);
+
   return (
     <div id={outerContainerID}>
       <Helmet>
@@ -52,6 +53,7 @@ const Layout = ({ children }: LayoutProps) => {
           name="description"
           content="ShelterTech is solving the biggest technology challenges faced by those experiencing homelessness"
         />
+        <meta name="twitter:site" content="@sheltertechorg" />
         <link rel="icon" href={favicon} />
         {/* Global site tag (gtag.js) - Google Analytics */}
         <script

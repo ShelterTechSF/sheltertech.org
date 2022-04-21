@@ -1,5 +1,8 @@
 import { Link } from "gatsby";
 import * as React from "react";
+
+import PrismicLink from "../../../inline/PrimsicLink";
+import type { MinimalPrismicLinkType } from "../../../inline/PrimsicLink";
 import * as s from "./NavigationBlock.module.css";
 
 /* PropType shapes */
@@ -19,6 +22,7 @@ export type SealProps = {
 export type ShelterTechLogoProps = {
   url: string;
   alt: string;
+  link?: MinimalPrismicLinkType;
 };
 
 export type SocialMediaLinkProps = {
@@ -37,7 +41,9 @@ const NavigationLeftArea = ({
   socialMediaLinks,
 }: NavigationLeftAreaProps) => (
   <div>
-    <img src={shelterTechLogo.url} alt={shelterTechLogo.alt} />
+    <PrismicLink linkData={shelterTechLogo.link}>
+      <img src={shelterTechLogo.url} alt={shelterTechLogo.alt} />
+    </PrismicLink>
     <div className={s.socialMediaLinks}>
       {socialMediaLinks.map((socialMediaLink) => (
         <a

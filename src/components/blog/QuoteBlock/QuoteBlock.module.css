@@ -1,0 +1,20 @@
+.quote {
+  margin: 0 auto;
+  max-width: var(--blog-block-width);
+}
+
+.quote q::before,
+.quote q::after {
+  content: '';
+}
+
+.quoteText {
+  color: var(--color-gray-800);
+  font: var(--font-title);
+}
+
+@media (--tablet-and-down) {
+  .quote {
+    padding: 0 40px;
+  }
+}

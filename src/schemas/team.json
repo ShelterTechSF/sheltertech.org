@@ -1,0 +1,34 @@
+{
+  "Main" : {
+    "name" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Name",
+        "placeholder" : "name (e.g. Sheltertech Leadership)"
+      }
+    },
+    "members" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "team_member" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "customtypes" : [ "team_member" ],
+              "label" : "Team Member"
+            }
+          },
+          "role" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "role",
+              "placeholder" : "role (e.g. Treasurer)"
+            }
+          }
+        },
+        "label" : "members"
+      }
+    }
+  }
+}

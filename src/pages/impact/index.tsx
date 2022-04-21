@@ -17,7 +17,7 @@ export default () => (
     <Helmet>
       <title>Making an Impact</title>
     </Helmet>
-    <TextHeader title="Making an Impact" />
+    <TextHeader title="Making an Impact" hasBottomPadding={false} />
     <StatsBlock
       title="SF Service Guide"
       subtitle={

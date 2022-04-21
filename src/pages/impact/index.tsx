@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import * as React from "react";
 import { Helmet } from "react-helmet";
 
@@ -11,89 +12,80 @@ import articleSpotlightImage from "../images/mission-hotel.jpeg";
 export default () => (
   <Layout>
     <Helmet>
-      <title>Making an impact</title>
+      <title>Making an Impact</title>
     </Helmet>
     <StatsBlock
       title="SF Service Guide"
-      subtitle="A platform designed to connect at-risk and homeless individuals to critical human services in San Francisco. Learn more about this program."
+      subtitle={
+        <>
+          A platform designed to connect people who are experiencing
+          homelessness or housing insecurity to needed services in San
+          Francisco.{" "}
+          <Link
+            style={{
+              color: "var(--color-sheltertech-blue)",
+              textDecoration: "underline",
+            }}
+            to="/programs"
+          >
+            Learn more about this program.
+          </Link>
+        </>
+      }
       statCards={[
         {
-          number: "3k",
-          secondaryNumber: 6,
-          statement: "Monthly users",
+          number: "6.0K",
+          statement: "Average monthly users in 2021",
         },
         {
-          number: "13.4k",
-          secondaryNumber: 6,
-          statement: "Annual users",
+          number: "72K",
+          statement: "Total users in 2021",
         },
         {
-          number: "111",
-          statement: "New resources",
+          number: "463",
+          statement: "Organizations represented",
         },
       ]}
       theme="white"
+      titleColor="blue"
     />
     <StatsBarBlock
       title="ShelterConnect"
-      subtitle="Delivering free, turn-key WiFi solutions to shelters and transitional housing facilities with key partners. Learn more about this program."
+      subtitle={
+        <>
+          Delivering free, turn-key WiFi solutions to shelters and transitional
+          housing facilities with key partners.{" "}
+          <Link
+            style={{
+              color: "var(--color-sheltertech-blue)",
+              textDecoration: "underline",
+            }}
+            to="/programs"
+          >
+            Learn more about this program.
+          </Link>
+        </>
+      }
       barStatCards={[
         {
           bars: [
-            {
-              label: 2019,
-              statistic: 14,
-            },
-            {
-              label: 2020,
-              statistic: 17,
-            },
-            {
-              label: 2021,
-              statistic: 21,
-            },
+            { label: 2019, statistic: 17 },
+            { label: 2020, statistic: 18 },
+            { label: 2021, statistic: 21 },
           ],
-          title: "Shelters Wired",
-          subtitle: "+4 Y0Y",
+          title: "Shelters wired",
+          subtitle: "Cumulative total",
           orientation: "vertical",
         },
         {
           bars: [
-            {
-              label: "PEAK",
-              statistic: 14,
-            },
-            {
-              label: "TARGET",
-              statistic: 17,
-            },
-            {
-              label: 2020,
-              statistic: 21,
-            },
+            { label: 2019, statistic: 1265 },
+            { label: 2020, statistic: 1605 },
+            { label: 2021, statistic: 1848 },
           ],
-          title: "People serviced daily",
-          subtitle: "Daytime",
+          title: "People serviced nightly",
+          subtitle: "",
           orientation: "horizontal",
-        },
-        {
-          bars: [
-            {
-              label: "PEAK",
-              statistic: 14,
-            },
-            {
-              label: "TARGET",
-              statistic: 17,
-            },
-            {
-              label: 2020,
-              statistic: 21,
-            },
-          ],
-          title: "People serviced daily",
-          subtitle: "Nighttime",
-          orientation: "vertical",
         },
       ]}
       theme="gray"
@@ -101,42 +93,66 @@ export default () => (
     />
     <StatsBlock
       title="Volunteers"
-      subtitle="As an all-volunteer organization ShelterTech relies on volunteers to support digital equity. Learn more about volunteering."
+      subtitle={
+        <>
+          As an all-volunteer organization ShelterTech relies on volunteers to
+          support digital equity.{" "}
+          <Link
+            style={{
+              color: "var(--color-sheltertech-blue)",
+              textDecoration: "underline",
+            }}
+            to="/volunteer"
+          >
+            Learn more about volunteering.
+          </Link>
+        </>
+      }
       statCards={[
         {
-          number: "107",
-          secondaryNumber: 6,
+          number: "40",
           statement: "Active volunteers",
         },
         {
-          number: "13",
-          secondaryNumber: 6,
-          statement: "Community Representatives",
-        },
-        {
-          number: "20",
-          secondaryNumber: 6,
+          number: "15",
           statement: "Corporate volunteer organizations",
         },
       ]}
       theme="white"
+      titleColor="blue"
     />
     <StatsBlock
       title="Funding"
-      subtitle="As an all-volunteer organization ShelterTech relies on volunteers to support digital equity. Help us reach our next funding goal."
+      subtitle={
+        <>
+          As a non-profit organization that does not focus on fundraising events
+          or similar methods to fund our work, we depend on grants from the City
+          of San Francisco and other organizations, as well as donations from
+          corporations and individuals.{" "}
+          <Link
+            style={{
+              color: "var(--color-sheltertech-blue)",
+              textDecoration: "underline",
+            }}
+            to="/donate"
+          >
+            Help us reach our next funding goal.
+          </Link>
+        </>
+      }
       statCards={[
         {
-          number: "$79k",
-          secondaryNumber: 6,
-          statement: "Annual funding",
+          number: "$230k",
+          statement:
+            "Total funding in 2021 (grants, corporate donations, individual donations)",
         },
         {
-          number: "$2m",
-          secondaryNumber: 6,
-          statement: "in in-kind contributions",
+          number: "$150k",
+          statement: "In-kind contributions in 2021",
         },
       ]}
       theme="gray"
+      titleColor="blue"
     />
     <Spacer heightDesktop="190px" heightMobile="80px" />
     <ArticleSpotlightCard

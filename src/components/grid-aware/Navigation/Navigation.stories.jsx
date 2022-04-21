@@ -53,9 +53,10 @@ export const Default = Template.bind({});
 Default.args = {
   homeURL: "/",
   navigationItems: [
-    { text: "About", internalLink: "/about" },
-    { text: "Programs", internalLink: "/programs" },
-    { text: "Work with Us", internalLink: "/volunteer" },
+    { text: "About Us", internalLink: "/about" },
+    { text: "Our Programs", internalLink: "/programs" },
+    { text: "Our Impact", internalLink: "/impact" },
+    { text: "Volunteer", internalLink: "/volunteer" },
     { text: "News", externalLink: "https://example.com" },
     { text: "Donate", internalLink: "/donate", isButton: true },
   ],

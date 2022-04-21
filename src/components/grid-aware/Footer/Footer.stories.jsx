@@ -50,6 +50,7 @@ DefaultFooter.args = {
   formDescription: "Subscribe to get updates",
   footerNavigation: [
     { text: "Programs", internalLink: "/new" },
+    { text: "Impact", internalLink: "/new/impact" },
     { text: "Volunteer", internalLink: "/new/volunteer" },
     { text: "Donate", internalLink: "/new/donate" },
   ],

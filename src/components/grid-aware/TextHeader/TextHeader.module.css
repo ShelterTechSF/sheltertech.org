@@ -1,7 +1,6 @@
 .bleedWrapper {
   display: grid;
   grid-template-columns: var(--bleed-grid-template-columns);
-  justify-items: center;
   margin: auto;
   max-width: var(--bleed-max-width);
   padding-top: 100px;
@@ -30,7 +29,6 @@
 .bleedMainContent {
   grid-column: 2;
   grid-row: 1;
-  width: 100%;
 }
 
 .gridParent {

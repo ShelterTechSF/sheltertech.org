@@ -161,10 +161,10 @@ export default () => (
       subtitle="ShelterTech is proud to provide the data on the SF Service Guide platform for other organizations to use on their own websites. We have worked closely with SF Families and Link-SF to provide a custom experience catered to their users’ needs, leveraging our data curation pipeline to keep that information accurate and up to date."
       statCards={[
         {
-          number: <img src={linkSFLogo} alt="Link-SF Logo." />,
+          number: <img src={sfFamiliesLogo} alt="SF Families Logo." />,
         },
         {
-          number: <img src={sfFamiliesLogo} alt="SF Families Logo." />,
+          number: <img src={linkSFLogo} alt="Link-SF Logo." />,
         },
       ]}
       theme="white"

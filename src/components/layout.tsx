@@ -24,6 +24,7 @@ const navigationItems: NavItem[] = [
   { text: "Our Programs", internalLink: "/programs" },
   { text: "Our Impact", internalLink: "/impact" },
   { text: "Volunteer", internalLink: "/volunteer" },
+  { text: "Stories", internalLink: "/blog" },
   { text: "Donate", internalLink: "/donate", isButton: true },
 ];
 
@@ -93,6 +94,7 @@ const Layout = ({ children }: LayoutProps) => {
             { text: "Our Programs", internalLink: "/programs" },
             { text: "Our Impact", internalLink: "/impact" },
             { text: "Volunteer", internalLink: "/volunteer" },
+            { text: "Stories", internalLink: "/blog" },
             { text: "Donate", internalLink: "/donate" },
           ]}
           seals={[

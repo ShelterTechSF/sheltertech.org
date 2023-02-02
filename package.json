@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/ShelterTechSF/sheltertech.org#readme",
   "dependencies": {
-    "gatsby": "^3.7.2",
+    "gatsby": "^3.15.0",
     "gatsby-plugin-image": "^1.8.0",
     "gatsby-plugin-prismic-previews": "^4.0.3",
     "gatsby-source-prismic": "^4.1.2",
@@ -74,7 +74,7 @@
     "gatsby-plugin-postcss": "^4.7.1",
     "gatsby-plugin-react-helmet": "^4.7.1",
     "gatsby-plugin-sass": "^4.7.1",
-    "gatsby-plugin-sharp": "^3.7.1",
+    "gatsby-plugin-sharp": "^3.15.0",
     "gatsby-plugin-ts-checker": "^1.1.0",
     "gatsby-plugin-typegen": "^2.2.4",
     "gatsby-source-filesystem": "^3.7.1",

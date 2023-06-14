@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import Modal from "../../components/grid-aware/Modal";
@@ -19,6 +20,9 @@ export default () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Our Programs | ShelterTech</title>
+      </Helmet>
       <Modal
         isOpen={partnershipFormIsOpen}
         setIsOpen={setPartnershipFormIsOpen}

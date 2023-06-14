@@ -15,7 +15,7 @@ import sfFamiliesLogo from "./sf-families.svg";
 export default () => (
   <Layout>
     <Helmet>
-      <title>Making an Impact</title>
+      <title>Our Impact | ShelterTech</title>
     </Helmet>
     <TextHeader title="Making an Impact" hasBottomPadding={false} />
     <StatsBlock

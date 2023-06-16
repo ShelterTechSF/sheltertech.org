@@ -63,10 +63,13 @@
 
 .logoContainer {
   height: auto;
+  max-height: 97px;
   padding: 21px 5px;
+  text-align: center;
 }
 
 .logo {
+  max-height: 100%;
   max-width: 100%;
 }
 

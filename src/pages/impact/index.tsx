@@ -10,7 +10,7 @@ import TextHeader from "../../components/grid-aware/TextHeader";
 import Layout from "../../components/layout";
 import articleSpotlightImage from "../images/mission-hotel.jpeg";
 import linkSFLogo from "./link-sf.png";
-import sfFamiliesLogo from "./sf-families.svg";
+import our415Logo from "./our-415-logo.svg";
 
 export default () => (
   <Layout>
@@ -158,10 +158,10 @@ export default () => (
     />
     <StatsBlock
       title="Hosted Partners"
-      subtitle="ShelterTech is proud to provide the data on the SF Service Guide platform for other organizations to use on their own websites. We have worked closely with SF Families and Link-SF to provide a custom experience catered to their users’ needs, leveraging our data curation pipeline to keep that information accurate and up to date."
+      subtitle="ShelterTech is proud to provide the data on the SF Service Guide platform for other organizations to use on their own websites. We have worked closely with Our 415 and Link-SF to provide a custom experience catered to their users’ needs, leveraging our data curation pipeline to keep that information accurate and up to date."
       statCards={[
         {
-          number: <img src={sfFamiliesLogo} alt="SF Families Logo." />,
+          number: <img src={our415Logo} alt="Our 415 Logo." />,
         },
         {
           number: <img src={linkSFLogo} alt="Link-SF Logo." />,

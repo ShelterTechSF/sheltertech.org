@@ -11,9 +11,9 @@ import justiceAndDiversityCenterLogo from "../components/grid-aware/PartnersAndS
 import larkinStreetLogo from "../components/grid-aware/PartnersAndSponsorsBlock/stories/larkin-street-logo.png";
 import mohcdLogo from "../components/grid-aware/PartnersAndSponsorsBlock/stories/mohcd-logo.png";
 import monkeybrainsLogo from "../components/grid-aware/PartnersAndSponsorsBlock/stories/monkeybrains-logo.png";
+import our415Logo from "../components/grid-aware/PartnersAndSponsorsBlock/stories/our-415-logo.svg";
 import pagerdutyLogo from "../components/grid-aware/PartnersAndSponsorsBlock/stories/pagerduty-logo.png";
 import pcsLogo from "../components/grid-aware/PartnersAndSponsorsBlock/stories/pcs-logo.png";
-import sfFamiliesLogo from "../components/grid-aware/PartnersAndSponsorsBlock/stories/sf-families-logo.png";
 import uberLogo from "../components/grid-aware/PartnersAndSponsorsBlock/stories/uber-logo.png";
 import weworkLogo from "../components/grid-aware/PartnersAndSponsorsBlock/stories/wework-logo.png";
 
@@ -32,8 +32,8 @@ const partnersAndSponsorsLogos: readonly LogoType[] = [
     alt: "Logo of Justice and Diversity Center of The Bar Association of San Francisco organization.",
   },
   {
-    url: sfFamiliesLogo,
-    alt: "Logo of SF Families online public service directory organization.",
+    url: our415Logo,
+    alt: "Logo of Our 415 online public service directory organization.",
   },
   {
     url: compassFamilyServicesLogo,

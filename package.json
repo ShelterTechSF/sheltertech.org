@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/ShelterTechSF/sheltertech.org#readme",
   "dependencies": {
-    "gatsby": "^3.7.2",
+    "gatsby": "^3.15.0",
     "gatsby-plugin-image": "^1.8.0",
     "gatsby-plugin-prismic-previews": "^4.0.3",
     "gatsby-source-prismic": "^4.1.2",
@@ -42,7 +42,7 @@
     "react-modal": "^3.11.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
+    "@babel/core": "^7.22.10",
     "@storybook/addon-actions": "^6.3.0",
     "@storybook/addon-essentials": "^6.3.0",
     "@storybook/addon-links": "^6.3.0",

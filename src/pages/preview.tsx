@@ -1,6 +1,5 @@
 import { withPrismicPreviewResolver } from "gatsby-plugin-prismic-previews";
 import * as React from "react";
-import linkResolver from "../utils/linkResolver";
 
 const PreviewPage = () => {
   return (
@@ -10,9 +9,4 @@ const PreviewPage = () => {
   );
 };
 
-export default withPrismicPreviewResolver(PreviewPage, [
-  {
-    repositoryName: "sheltertech",
-    linkResolver,
-  },
-]);
+export default withPrismicPreviewResolver(PreviewPage);

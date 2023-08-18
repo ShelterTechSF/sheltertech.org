@@ -1,12 +1,7 @@
-import {
-  componentResolverFromMap,
-  withPrismicUnpublishedPreview,
-} from "gatsby-plugin-prismic-previews";
+import { withPrismicUnpublishedPreview } from "gatsby-plugin-prismic-previews";
 import React from "react";
 
 import Layout from "../legacy/layouts/Layout";
-import linkResolver from "../utils/linkResolver";
-import { PrismicBlogPostPage } from "./blog/{prismicBlogPost.uid}";
 
 const Page = () => (
   <div className="content">
@@ -24,12 +19,4 @@ const NotFoundPage = () => (
   </Layout>
 );
 
-export default withPrismicUnpublishedPreview(NotFoundPage, [
-  {
-    repositoryName: "sheltertech",
-    linkResolver,
-    componentResolver: componentResolverFromMap({
-      blog_post: PrismicBlogPostPage,
-    }),
-  },
-]);
+export default withPrismicUnpublishedPreview(NotFoundPage);

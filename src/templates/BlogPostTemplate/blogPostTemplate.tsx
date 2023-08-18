@@ -48,7 +48,7 @@ const BlogPostTemplate = ({
     /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-return */
     switch (slice.slice_type) {
       case "text_block":
-        return <TextBlock rawText={slice.primary.body_text.raw} />;
+        return <TextBlock rawText={slice.primary.body_text.richText} />;
       case "file_download_block":
         return (
           <ButtonBlock

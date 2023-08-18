@@ -2,7 +2,6 @@ import { graphql, PageProps } from "gatsby";
 import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
 import React from "react";
 import BlogPostTemplate from "../../templates/BlogPostTemplate";
-import linkResolver from "../../utils/linkResolver";
 
 /**
   This is the setup for our dynamically generated blog post pages.
@@ -98,7 +97,7 @@ export const query = graphql`
             id
             primary {
               body_text {
-                raw
+                richText
               }
             }
             slice_type
@@ -146,9 +145,4 @@ export const PrismicBlogPostPage = ({
   );
 };
 
-export default withPrismicPreview(PrismicBlogPostPage, [
-  {
-    repositoryName: "sheltertech",
-    linkResolver,
-  },
-]);
+export default withPrismicPreview(PrismicBlogPostPage);

@@ -1,5 +1,6 @@
 const path = require("path");
 const postcssCustomMedia = require("postcss-custom-media");
+const React = require("react");
 
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
@@ -19,6 +20,11 @@ module.exports = {
     // Disable no-param-reassign because this API is designed to mutate the
     // config argument.
     /* eslint-disable no-param-reassign */
+
+    // Use correct react-dom depending on React version.
+    if (parseInt(React.version, 10) <= 18) {
+      config.externals = ["react-dom/client"];
+    }
 
     // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
     config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/];

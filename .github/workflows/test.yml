@@ -32,3 +32,6 @@ jobs:
 
       - name: Run tests
         run: npm run test
+
+      - name: Check build-storybook
+        run: npm run build-storybook

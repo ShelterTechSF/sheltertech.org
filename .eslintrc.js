@@ -7,6 +7,7 @@ module.exports = {
     "prettier",
     "prettier/@typescript-eslint",
     "prettier/react",
+    "plugin:storybook/recommended",
   ],
   env: {
     node: true,

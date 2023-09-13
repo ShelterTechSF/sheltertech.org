@@ -5,17 +5,7 @@ const React = require("react");
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
-  core: {
-    builder: "webpack5",
-  },
-  features: {
-    // Explicitly disable Storybook's PostCSS loader, since we already
-    // explicitly use Gatsby's PostCSS loader. This setting can be removed after
-    // upgrading to Storybook 7.0, where the shim for automatically adding
-    // Storybook's PostCSS loader will be removed.
-    // https://github.com/storybookjs/storybook/blob/v6.2.9/MIGRATION.md#deprecated-implicit-postcss-loader
-    postcss: false,
-  },
+
   webpackFinal: async (config) => {
     // Disable no-param-reassign because this API is designed to mutate the
     // config argument.
@@ -27,19 +17,19 @@ module.exports = {
     }
 
     // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
-    config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/];
+    config.module.rules[2].exclude = [/node_modules\/(?!(gatsby)\/)/];
 
     // use installed babel-loader which is v8.0-beta (which is meant to work with @babel/core@7)
-    config.module.rules[0].use[0].loader = require.resolve("babel-loader");
+    config.module.rules[2].use[0].loader = require.resolve("babel-loader");
 
     // use @babel/preset-react for JSX and env (instead of staged presets)
-    config.module.rules[0].use[0].options.presets = [
+    config.module.rules[2].use[0].options.presets = [
       require.resolve("@babel/preset-typescript"),
       require.resolve("@babel/preset-react"),
       require.resolve("@babel/preset-env"),
     ];
 
-    config.module.rules[0].use[0].options.plugins = [
+    config.module.rules[2].use[0].options.plugins = [
       // use @babel/plugin-proposal-class-properties for class arrow functions
       require.resolve("@babel/plugin-proposal-class-properties"),
       // use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
@@ -52,7 +42,7 @@ module.exports = {
     // configured for CSS Modules and one without.
     // https://github.com/webpack-contrib/css-loader/issues/362#issuecomment-648895096
     config.module.rules = config.module.rules.filter(
-      (r) => r.test.test && !r.test.test("file.css")
+      (r) => r.test?.test && !r.test.test("file.css")
     );
     config.module.rules.push({
       test: /\.module\.css$/,
@@ -117,5 +107,10 @@ module.exports = {
 
     return config;
     /* eslint-enable no-param-reassign */
+  },
+
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
   },
 };

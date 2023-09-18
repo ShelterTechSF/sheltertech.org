@@ -22,7 +22,7 @@ jspm_packages/
 # gatsby files
 .cache/
 public
-src/__generated__/
+src/gatsby-types.d.ts
 
 # Storybook files
 /storybook-static

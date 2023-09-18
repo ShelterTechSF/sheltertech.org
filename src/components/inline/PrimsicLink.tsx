@@ -10,7 +10,7 @@ import React from "react";
  * to a link.
  */
 export type MinimalPrismicLinkType = Pick<
-  GatsbyTypes.PrismicLinkType,
+  Queries.PrismicLinkType,
   "link_type" | "target" | "url"
 >;
 
@@ -34,7 +34,7 @@ const PrismicLink = ({ linkData, children }: PrismicLinkProps): JSX.Element => {
     case "Web":
     case "Media":
       return (
-        <a href={linkData.url} target={linkData.target}>
+        <a href={linkData.url} target={linkData.target ?? undefined}>
           {children}
         </a>
       );

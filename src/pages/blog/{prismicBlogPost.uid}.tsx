@@ -126,20 +126,25 @@ export const query = graphql`
 export const PrismicBlogPostPage = ({
   data,
   location,
-}: PageProps<GatsbyTypes.PrismicBlogPostQuery>) => {
+}: PageProps<Queries.PrismicBlogPostQuery>) => {
   if (!data?.prismicBlogPost?.data) return <h1>There was a problem</h1>;
   const blogData = data.prismicBlogPost.data;
   const slices = blogData?.body ?? [];
+  const topicDocument = blogData?.topic?.document;
 
   return (
     <BlogPostTemplate
       pageUrl={location.pathname}
-      title={blogData?.title?.text}
-      author={blogData?.author?.text}
-      topic={blogData?.topic?.document?.data?.name?.text}
-      date={blogData?.publish_date}
-      headerImgAlt={blogData?.header_image?.alt}
-      headerImgUrl={blogData?.header_image?.url}
+      title={blogData?.title?.text ?? undefined}
+      author={blogData?.author?.text ?? undefined}
+      topic={
+        topicDocument && "data" in topicDocument
+          ? topicDocument.data?.name?.text ?? undefined
+          : undefined
+      }
+      date={blogData?.publish_date ?? undefined}
+      headerImgAlt={blogData?.header_image?.alt ?? undefined}
+      headerImgUrl={blogData?.header_image?.url ?? undefined}
       slices={slices}
     />
   );

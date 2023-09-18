@@ -80,27 +80,43 @@ type BlogIndexPageContext = {
   currentPage: number; // Current page number (0-indexed)
   totalPages: number; // Total number of pages
   basePageURL: string; // Base URL for pages; can append "/<pageNumber>" to construct full URL
-  filter: GatsbyTypes.PrismicBlogPostTopicFilterInput | null;
+  filter: Queries.PrismicBlogPostTopicFilterInput | null;
   topic: string | null; // Active topic, or null when all topics are shown
 };
 
 export default ({
   data,
   pageContext,
-}: PageProps<GatsbyTypes.BlogIndexPageQuery, BlogIndexPageContext>) => {
+}: PageProps<Queries.BlogIndexPageQuery, BlogIndexPageContext>) => {
   const topics = data.allPrismicBlogPostTopic.nodes.map((topic) => ({
-    name: topic.data?.name?.text,
+    name: topic.data?.name?.text ?? undefined,
     uid: topic.uid,
   }));
-  const posts = data.allPrismicBlogPost.nodes.map((post) => ({
-    url: post.url,
-    title: post.data?.title?.text,
-    topic: post.data?.topic?.document?.data?.name?.text,
-    body: post.data?.body?.[0]?.primary?.body_text?.text,
-    date: post.data?.publish_date,
-    author: post.data?.author?.text,
-    image: post.data?.header_image,
-  }));
+  const posts = data.allPrismicBlogPost.nodes.map((post) => {
+    const topicDocument = post.data?.topic?.document;
+    const rawBody = post.data?.body?.[0];
+    const headerImage = post.data?.header_image;
+    return {
+      url: post.url ?? undefined,
+      title: post.data?.title?.text ?? undefined,
+      topic:
+        topicDocument && "data" in topicDocument
+          ? topicDocument.data.name?.text ?? undefined
+          : undefined,
+      body:
+        rawBody && "primary" in rawBody
+          ? rawBody.primary?.body_text?.text ?? undefined
+          : undefined,
+      date: post.data?.publish_date ?? undefined,
+      author: post.data?.author?.text ?? undefined,
+      image: headerImage
+        ? {
+            url: headerImage.url ?? undefined,
+            alt: headerImage.alt ?? undefined,
+          }
+        : undefined,
+    };
+  });
   return (
     <Layout>
       <Helmet>

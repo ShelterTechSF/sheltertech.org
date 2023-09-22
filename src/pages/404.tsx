@@ -1,21 +1,21 @@
 import { withPrismicUnpublishedPreview } from "gatsby-plugin-prismic-previews";
 import React from "react";
 
-import Layout from "../legacy/layouts/Layout";
-
-const Page = () => (
-  <div className="content">
-    <div className="content-bg" />
-    <div className="content--header">
-      <h2>Page not found</h2>
-      <h3>Sorry, we couldn&apos;t find the page you were looking&nbsp;for.</h3>
-    </div>
-  </div>
-);
+import OneParagraphBlock from "../components/grid-aware/OneParagraphBlock";
+import Spacer from "../components/grid-aware/Spacer";
+import Layout from "../components/layout";
 
 const NotFoundPage = () => (
   <Layout>
-    <Page />
+    <OneParagraphBlock
+      title="Page not found"
+      descriptions={
+        <p>Sorry, we couldn&apos;t find the page you were looking for.</p>
+      }
+      ctaButtons={[]}
+      theme="white"
+    />
+    <Spacer heightDesktop="190px" heightMobile="80px" />
   </Layout>
 );
 

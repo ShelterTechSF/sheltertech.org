@@ -20,7 +20,6 @@ module.exports = {
         delay_timeout: 1000,
       },
     },
-    "gatsby-plugin-sass",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",

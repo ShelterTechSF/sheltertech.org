@@ -45,13 +45,8 @@ export default () => (
           </p>
           <ul>
             <li>
-              <a
-                href="https://sfserviceguide.org/"
-                style={{ textDecoration: "underline" }}
-              >
-                SF Service Guide
-              </a>{" "}
-              is an online directory of human services in San Francisco
+              <a href="https://sfserviceguide.org/">SF Service Guide</a> is an
+              online directory of human services in San Francisco
             </li>
             <li>
               ShelterConnect is a program that installs free WiFi in shelters,

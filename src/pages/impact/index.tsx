@@ -24,16 +24,7 @@ export default () => (
         <>
           A platform designed to connect people who are experiencing
           homelessness or housing insecurity to needed services in San
-          Francisco.{" "}
-          <Link
-            style={{
-              color: "var(--color-sheltertech-blue)",
-              textDecoration: "underline",
-            }}
-            to="/programs"
-          >
-            Learn more about this program.
-          </Link>
+          Francisco. <Link to="/programs">Learn more about this program.</Link>
         </>
       }
       statCards={[
@@ -59,15 +50,7 @@ export default () => (
         <>
           Delivering free, turn-key WiFi solutions to shelters and transitional
           housing facilities with key partners.{" "}
-          <Link
-            style={{
-              color: "var(--color-sheltertech-blue)",
-              textDecoration: "underline",
-            }}
-            to="/programs"
-          >
-            Learn more about this program.
-          </Link>
+          <Link to="/programs">Learn more about this program.</Link>
         </>
       }
       barStatCards={[
@@ -100,15 +83,7 @@ export default () => (
         <>
           As an all-volunteer organization ShelterTech relies on volunteers to
           support digital equity.{" "}
-          <Link
-            style={{
-              color: "var(--color-sheltertech-blue)",
-              textDecoration: "underline",
-            }}
-            to="/volunteer"
-          >
-            Learn more about volunteering.
-          </Link>
+          <Link to="/volunteer">Learn more about volunteering.</Link>
         </>
       }
       statCards={[
@@ -132,15 +107,7 @@ export default () => (
           or similar methods to fund our work, we depend on grants from the City
           of San Francisco and other organizations, as well as donations from
           corporations and individuals.{" "}
-          <Link
-            style={{
-              color: "var(--color-sheltertech-blue)",
-              textDecoration: "underline",
-            }}
-            to="/donate"
-          >
-            Help us reach our next funding goal.
-          </Link>
+          <Link to="/donate">Help us reach our next funding goal.</Link>
         </>
       }
       statCards={[

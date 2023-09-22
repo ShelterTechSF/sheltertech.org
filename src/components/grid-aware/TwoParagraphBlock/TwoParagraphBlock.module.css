@@ -141,16 +141,6 @@
   }
 }
 
-/* TODO: These styles work around a few global styles from the legacy site.
- * We may need to revisit how these are styled after removing the legacy site's
- * CSS reset.
- */
-.paragraph1Wrapper ul,
-.paragraph2Wrapper ul {
-  list-style: disc;
-  padding-left: 1.5em;
-}
-
 @media (--tablet-and-down) {
   .paragraph1Wrapper {
     font: var(--font-body-medium);

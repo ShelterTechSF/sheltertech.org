@@ -26,11 +26,6 @@
   margin-left: 2em;
 }
 
-.richText ul > li {
-  list-style-position: outside;
-  list-style-type: disc;
-}
-
 .richText ol > li {
   list-style-type: decimal;
 }

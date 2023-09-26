@@ -1,7 +1,7 @@
 import { graphql, PageProps } from "gatsby";
 import React from "react";
-import { Helmet } from "react-helmet";
 
+import BaseHead from "../../components/BaseHead";
 import BlogPostSummaryCard from "../../components/blog/BlogPostSummaryCard";
 import Pagination from "../../components/blog/Pagination";
 import TopicFilterMenu from "../../components/blog/TopicFilterMenu";
@@ -119,9 +119,6 @@ export default ({
   });
   return (
     <Layout>
-      <Helmet>
-        <title>Stories | ShelterTech</title>
-      </Helmet>
       <TextHeader
         title="ShelterTech Stories"
         description="The official blog of ShelterTech, an all-volunteer non-profit creating technology for people experiencing homelessness. Made with love in SF."
@@ -165,3 +162,5 @@ export default ({
     </Layout>
   );
 };
+
+export const Head = () => <BaseHead title="Stories | ShelterTech" />;

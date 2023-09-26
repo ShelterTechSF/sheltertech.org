@@ -1,6 +1,7 @@
 import { withPrismicUnpublishedPreview } from "gatsby-plugin-prismic-previews";
 import React from "react";
 
+import BaseHead from "../components/BaseHead";
 import OneParagraphBlock from "../components/grid-aware/OneParagraphBlock";
 import Spacer from "../components/grid-aware/Spacer";
 import Layout from "../components/layout";
@@ -20,3 +21,5 @@ const NotFoundPage = () => (
 );
 
 export default withPrismicUnpublishedPreview(NotFoundPage);
+
+export const Head = () => <BaseHead title="Page Not Found | ShelterTech" />;

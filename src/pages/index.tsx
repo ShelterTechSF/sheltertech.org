@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 
+import BaseHead from "../components/BaseHead";
 import YouTubeEmbed from "../components/block/YouTubeEmbed";
 import ArticleSpotlightCard from "../components/grid-aware/ArticleSpotlightCard";
 import BlockQuoteBlock from "../components/grid-aware/BlockQuoteBlock/BlockQuoteBlock";
@@ -186,3 +187,7 @@ export default () => {
     </Layout>
   );
 };
+
+export const Head = () => (
+  <BaseHead title="ShelterTech - Technology for the under-resourced" />
+);

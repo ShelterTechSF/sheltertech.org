@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet";
 
+import BaseHead from "../../components/BaseHead";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import COVID19infoBoxBlock from "../../components/grid-aware/COVID19InfoBoxBlock";
 import ImageHeader from "../../components/grid-aware/ImageHeader";
@@ -22,9 +22,6 @@ export default () => {
   const [volunteerFormIsOpen, setVolunteerFormIsOpen] = useState(false);
   return (
     <Layout>
-      <Helmet>
-        <title>Volunteer | ShelterTech</title>
-      </Helmet>
       <Modal
         isOpen={volunteerFormIsOpen}
         setIsOpen={setVolunteerFormIsOpen}
@@ -192,3 +189,5 @@ export default () => {
     </Layout>
   );
 };
+
+export const Head = () => <BaseHead title="Volunteer | ShelterTech" />;

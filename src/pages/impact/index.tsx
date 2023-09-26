@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import * as React from "react";
-import { Helmet } from "react-helmet";
 
+import BaseHead from "../../components/BaseHead";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import Spacer from "../../components/grid-aware/Spacer";
 import StatsBarBlock from "../../components/grid-aware/StatsBarBlock";
@@ -14,9 +14,6 @@ import our415Logo from "./our-415-logo.svg";
 
 export default () => (
   <Layout>
-    <Helmet>
-      <title>Making an Impact</title>
-    </Helmet>
     <TextHeader title="Making an Impact" hasBottomPadding={false} />
     <StatsBlock
       title="SF Service Guide"
@@ -152,3 +149,5 @@ export default () => (
     <Spacer heightDesktop="170px" heightMobile="80px" />
   </Layout>
 );
+
+export const Head = () => <BaseHead title="Making an Impact | ShelterTech" />;

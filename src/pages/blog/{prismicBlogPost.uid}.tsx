@@ -1,6 +1,7 @@
 import { graphql, PageProps } from "gatsby";
 import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
 import React from "react";
+import BaseHead from "../../components/BaseHead";
 import BlogPostTemplate from "../../templates/BlogPostTemplate";
 
 /**
@@ -125,7 +126,6 @@ export const query = graphql`
 
 export const PrismicBlogPostPage = ({
   data,
-  location,
 }: PageProps<Queries.PrismicBlogPostQuery>) => {
   if (!data?.prismicBlogPost?.data) return <h1>There was a problem</h1>;
   const blogData = data.prismicBlogPost.data;
@@ -134,7 +134,6 @@ export const PrismicBlogPostPage = ({
 
   return (
     <BlogPostTemplate
-      pageUrl={location.pathname}
       title={blogData?.title?.text ?? undefined}
       author={blogData?.author?.text ?? undefined}
       topic={
@@ -151,3 +150,30 @@ export const PrismicBlogPostPage = ({
 };
 
 export default withPrismicPreview(PrismicBlogPostPage);
+
+export const Head = ({
+  data,
+  location,
+}: PageProps<Queries.PrismicBlogPostQuery>) => {
+  if (!data?.prismicBlogPost?.data)
+    return <BaseHead title="There was a problem | ShelterTech" />;
+  const blogData = data.prismicBlogPost.data;
+  const title = blogData?.title?.text ?? undefined;
+  const headerImgUrl = blogData?.header_image?.url ?? undefined;
+  return (
+    <>
+      <BaseHead title={title ? `${title} | ShelterTech` : null} />
+      {title && <meta property="og:title" content={title} />}
+      <meta property="og:type" content="article" />
+      <meta
+        property="og:url"
+        content={`https://sheltertech.org${location.pathname}`}
+      />
+      <meta
+        name="twitter:card"
+        content={headerImgUrl ? "summary_large_image" : "summary"}
+      />
+      {headerImgUrl && <meta property="og:image" content={headerImgUrl} />}
+    </>
+  );
+};

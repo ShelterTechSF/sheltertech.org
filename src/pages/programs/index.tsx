@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 
+import BaseHead from "../../components/BaseHead";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import Modal from "../../components/grid-aware/Modal";
 import ProgramBlock from "../../components/grid-aware/ProgramBlock";
@@ -165,3 +166,5 @@ export default () => {
     </Layout>
   );
 };
+
+export const Head = () => <BaseHead title="Our Programs | ShelterTech" />;

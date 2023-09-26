@@ -10,7 +10,6 @@ module.exports = {
     author: "ShelterTech",
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-ts-checker",
     {
       resolve: "gatsby-plugin-intercom-spa",

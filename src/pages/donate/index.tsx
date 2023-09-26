@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Helmet } from "react-helmet";
 
+import BaseHead from "../../components/BaseHead";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import DonationBlock from "../../components/grid-aware/DonationBlock";
 import Spacer from "../../components/grid-aware/Spacer";
@@ -9,9 +9,6 @@ import articleSpotlightImage from "../images/mission-hotel.jpeg";
 
 export default () => (
   <Layout>
-    <Helmet>
-      <title>Donate | ShelterTech</title>
-    </Helmet>
     <DonationBlock
       mainTitle="Donate today"
       mainDescription="Your support will address digital inequity for an under-resourced community that does not have access to the internet and essential digital services."
@@ -45,3 +42,5 @@ export default () => (
     <Spacer heightDesktop="170px" heightMobile="80px" />
   </Layout>
 );
+
+export const Head = () => <BaseHead title="Donate | ShelterTech" />;

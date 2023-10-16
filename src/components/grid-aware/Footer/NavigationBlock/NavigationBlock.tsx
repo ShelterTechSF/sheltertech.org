@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import * as React from "react";
 
 import PrismicLink from "../../../inline/PrimsicLink";
-import type { MinimalPrismicLinkType } from "../../../inline/PrimsicLink";
+import type { MinimalPrismicLinkField } from "../../../inline/PrimsicLink";
 import * as s from "./NavigationBlock.module.css";
 
 /* PropType shapes */
@@ -22,7 +22,7 @@ export type SealProps = {
 export type ShelterTechLogoProps = {
   url: string;
   alt: string;
-  link?: MinimalPrismicLinkType;
+  link?: MinimalPrismicLinkField;
 };
 
 export type SocialMediaLinkProps = {

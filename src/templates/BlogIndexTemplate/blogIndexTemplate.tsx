@@ -20,7 +20,7 @@ export const query = graphql`
     allPrismicBlogPost(
       limit: $limit
       skip: $skip
-      sort: { order: DESC, fields: data___publish_date }
+      sort: { data: { publish_date: DESC } }
       filter: $filter
     ) {
       nodes {

@@ -7,7 +7,7 @@ export type LogoPropType = Readonly<{
   url: string;
   /// Alternative text for the image
   alt: string;
-  /// An link for a URL to go to when clicking on the logo
+  /// A link for a URL to go to when clicking on the logo
   link?: string;
 }>;
 

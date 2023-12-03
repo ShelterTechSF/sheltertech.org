@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactModal from "react-modal";
 
 import "../stylesheets/global.css";
+import * as s from "./Layout.module.css";
 import Footer from "./grid-aware/Footer";
 import shelterTechLogoWhite from "./grid-aware/Footer/sheltertech-logo-white.svg";
 import facebookLogo from "./grid-aware/Footer/stories/facebook.svg";
@@ -10,7 +11,6 @@ import sealOfTransparency from "./grid-aware/Footer/stories/guidestar-seal-of-tr
 import instagramLogo from "./grid-aware/Footer/stories/instagram.svg";
 import twitterLogo from "./grid-aware/Footer/stories/twitter.svg";
 import { BurgerMenu, Navigation } from "./grid-aware/Navigation";
-import * as s from "./Layout.module.css";
 
 type NavItem = {
   text: string;
@@ -50,13 +50,15 @@ const Layout = ({ children }: LayoutProps) => {
         outerContainerID={outerContainerID}
       />
       <div id={pageWrapperID}>
-        <a className={s.skipToMainContentLink} href={`#${mainContentID}`}>Skip to Main Content</a>
+        <a className={s.skipToMainContentLink} href={`#${mainContentID}`}>
+          Skip to Main Content
+        </a>
         <Navigation
           homeURL="/"
           navigationItems={navigationItems}
           toggleBurgerMenu={() => setBurgerMenuIsOpen(!burgerMenuIsOpen)}
         />
-        <a id={mainContentID}></a>
+        <a id={mainContentID} />
         {children}
         <Footer
           formAction="https://sheltertech.us19.list-manage.com/subscribe/post?u=c47829732a0bea5c8e8a94604&amp;id=08f60e42ef"

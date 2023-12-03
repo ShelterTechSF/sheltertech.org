@@ -1,13 +1,14 @@
-// @reach/router is used by Gatsby, but we're only importing it here in order
-// to mock out the router. We don't really want to add this to this project's
-// dependencies because if Gatsby switches away from it, we shouldn't use it
-// here, either. Therefore, we're waiving this lint error.
+// @gatsbyjs/reach-router is a fork of reach-router used by Gatsby, but we're
+// only importing it here in order to mock out the router. We don't really want
+// to add this to this project's dependencies because if Gatsby switches away
+// from it, we shouldn't use it here, either. Therefore, we're waiving this
+// lint error.
 // eslint-disable-next-line import/no-extraneous-dependencies
 import {
   createMemorySource,
   createHistory,
   LocationProvider,
-} from "@reach/router";
+} from "@gatsbyjs/reach-router";
 import React, { useState } from "react";
 
 import BurgerMenu from "./BurgerMenu";

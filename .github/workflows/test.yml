@@ -7,9 +7,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v2-beta
+      - uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version-file: .nvmrc
 
       - uses: actions/cache@v2
         with:
@@ -32,3 +32,6 @@ jobs:
 
       - name: Run tests
         run: npm run test
+
+      - name: Check build-storybook
+        run: npm run build-storybook

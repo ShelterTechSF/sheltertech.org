@@ -3,19 +3,19 @@ import React from "react";
 
 /** A Prismic Link with only the minimal set of properties for link resolving.
  *
- * Most of the fields on PrismicLinkType come from
+ * Most of the fields on PrismicLinkField come from
  * https://prismic.io/docs/technologies/link-resolver-javascript#accessible-attributes,
  * with the exception of link_type, which is one of "Document", "Web", and
  * "Media", and url, which is the result of applying our linkResolver function
  * to a link.
  */
-export type MinimalPrismicLinkType = Pick<
-  GatsbyTypes.PrismicLinkType,
+export type MinimalPrismicLinkField = Pick<
+  Queries.PrismicLinkField,
   "link_type" | "target" | "url"
 >;
 
 type PrismicLinkProps = {
-  linkData?: MinimalPrismicLinkType;
+  linkData?: MinimalPrismicLinkField;
   children: React.ReactNode;
 };
 
@@ -34,7 +34,7 @@ const PrismicLink = ({ linkData, children }: PrismicLinkProps): JSX.Element => {
     case "Web":
     case "Media":
       return (
-        <a href={linkData.url} target={linkData.target}>
+        <a href={linkData.url} target={linkData.target ?? undefined}>
           {children}
         </a>
       );
@@ -47,7 +47,7 @@ const PrismicLink = ({ linkData, children }: PrismicLinkProps): JSX.Element => {
 
 export const query = graphql`
   # The minimum set of data required for the <PrismicLink> component.
-  fragment MinimalPrismicLinkData on PrismicLinkType {
+  fragment MinimalPrismicLinkData on PrismicLinkField {
     link_type
     target
     url

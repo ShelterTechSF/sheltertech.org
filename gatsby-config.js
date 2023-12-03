@@ -10,7 +10,6 @@ module.exports = {
     author: "ShelterTech",
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-ts-checker",
     {
       resolve: "gatsby-plugin-intercom-spa",
@@ -20,7 +19,6 @@ module.exports = {
         delay_timeout: 1000,
       },
     },
-    "gatsby-plugin-sass",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",
@@ -67,6 +65,12 @@ module.exports = {
         repositoryName: "sheltertech",
       },
     },
-    "gatsby-plugin-typegen",
   ],
+  graphqlTypegen: {
+    // Needed for CI so that the type stubs are available for type checking.
+    // They are otherwise only generated when running a development server, but
+    // it's difficult to start and stop the development server in a CI
+    // environment (hard to know when to send a Ctrl-C to the process in CI).
+    generateOnBuild: true,
+  },
 };

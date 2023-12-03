@@ -98,15 +98,6 @@
   margin-top: 15px;
 }
 
-.description ul {
-  margin-left: 2em;
-}
-
-.description ul > li {
-  list-style-position: outside;
-  list-style-type: disc;
-}
-
 .ctaButtonRow {
   display: flex;
   flex-flow: row wrap;

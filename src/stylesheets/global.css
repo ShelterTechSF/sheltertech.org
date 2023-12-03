@@ -87,3 +87,44 @@
     --font-size-body-small: 14px;
   }
 }
+
+
+/* Reset styles applied after normalize.css */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  margin: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ol,
+ul {
+  list-style-position: outside;
+  padding-left: 1.5em;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}

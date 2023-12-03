@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import * as React from "react";
-import { Helmet } from "react-helmet";
 
+import BaseHead from "../../components/BaseHead";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import Spacer from "../../components/grid-aware/Spacer";
 import StatsBarBlock from "../../components/grid-aware/StatsBarBlock";
@@ -10,13 +10,11 @@ import TextHeader from "../../components/grid-aware/TextHeader";
 import Layout from "../../components/layout";
 import articleSpotlightImage from "../images/mission-hotel.jpeg";
 import linkSFLogo from "./link-sf.png";
-import sfFamiliesLogo from "./sf-families.svg";
+import our415Logo from "./our-415-logo.svg";
+import ucsfAcuteCareInnovationCenterLogo from "./ucsf-acute-care-innovation-center-logo.png";
 
 export default () => (
   <Layout>
-    <Helmet>
-      <title>Our Impact | ShelterTech</title>
-    </Helmet>
     <TextHeader title="Making an Impact" hasBottomPadding={false} />
     <StatsBlock
       title="SF Service Guide"
@@ -24,16 +22,7 @@ export default () => (
         <>
           A platform designed to connect people who are experiencing
           homelessness or housing insecurity to needed services in San
-          Francisco.{" "}
-          <Link
-            style={{
-              color: "var(--color-sheltertech-blue)",
-              textDecoration: "underline",
-            }}
-            to="/programs"
-          >
-            Learn more about this program.
-          </Link>
+          Francisco. <Link to="/programs">Learn more about this program.</Link>
         </>
       }
       statCards={[
@@ -59,15 +48,7 @@ export default () => (
         <>
           Delivering free, turn-key WiFi solutions to shelters and transitional
           housing facilities with key partners.{" "}
-          <Link
-            style={{
-              color: "var(--color-sheltertech-blue)",
-              textDecoration: "underline",
-            }}
-            to="/programs"
-          >
-            Learn more about this program.
-          </Link>
+          <Link to="/programs">Learn more about this program.</Link>
         </>
       }
       barStatCards={[
@@ -100,15 +81,7 @@ export default () => (
         <>
           As an all-volunteer organization ShelterTech relies on volunteers to
           support digital equity.{" "}
-          <Link
-            style={{
-              color: "var(--color-sheltertech-blue)",
-              textDecoration: "underline",
-            }}
-            to="/volunteer"
-          >
-            Learn more about volunteering.
-          </Link>
+          <Link to="/volunteer">Learn more about volunteering.</Link>
         </>
       }
       statCards={[
@@ -132,15 +105,7 @@ export default () => (
           or similar methods to fund our work, we depend on grants from the City
           of San Francisco and other organizations, as well as donations from
           corporations and individuals.{" "}
-          <Link
-            style={{
-              color: "var(--color-sheltertech-blue)",
-              textDecoration: "underline",
-            }}
-            to="/donate"
-          >
-            Help us reach our next funding goal.
-          </Link>
+          <Link to="/donate">Help us reach our next funding goal.</Link>
         </>
       }
       statCards={[
@@ -158,13 +123,27 @@ export default () => (
     />
     <StatsBlock
       title="Hosted Partners"
-      subtitle="ShelterTech is proud to provide the data on the SF Service Guide platform for other organizations to use on their own websites. We have worked closely with SF Families and Link-SF to provide a custom experience catered to their users’ needs, leveraging our data curation pipeline to keep that information accurate and up to date."
+      subtitle="ShelterTech is proud to provide the data on the SF Service Guide platform for other organizations to use on their own websites. We have worked closely with Our 415, Link-SF, and UCSF Acute Care Innovation Center to provide a custom experience catered to their users’ needs, leveraging our data curation pipeline to keep that information accurate and up to date."
       statCards={[
         {
-          number: <img src={sfFamiliesLogo} alt="SF Families Logo." />,
+          number: <img src={our415Logo} alt="Our 415 Logo." />,
         },
         {
           number: <img src={linkSFLogo} alt="Link-SF Logo." />,
+        },
+        {
+          number: (
+            <a
+              href="https://acutecare.ucsf.edu/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={ucsfAcuteCareInnovationCenterLogo}
+                alt="UCSF Acute Care Innovation Center Logo."
+              />
+            </a>
+          ),
         },
       ]}
       theme="white"
@@ -185,3 +164,5 @@ export default () => (
     <Spacer heightDesktop="170px" heightMobile="80px" />
   </Layout>
 );
+
+export const Head = () => <BaseHead title="Our Impact | ShelterTech" />;

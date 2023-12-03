@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Helmet } from "react-helmet";
 
+import BaseHead from "../../components/BaseHead";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import ImageHeader from "../../components/grid-aware/ImageHeader";
 import Spacer from "../../components/grid-aware/Spacer";
@@ -12,9 +12,6 @@ import teamImage from "./sheltertech-team.png";
 
 export default () => (
   <Layout>
-    <Helmet>
-      <title>About Us | ShelterTech</title>
-    </Helmet>
     <ImageHeader
       title="About Us"
       subtitle="Our Mission and History"
@@ -45,13 +42,8 @@ export default () => (
           </p>
           <ul>
             <li>
-              <a
-                href="https://sfserviceguide.org/"
-                style={{ textDecoration: "underline" }}
-              >
-                SF Service Guide
-              </a>{" "}
-              is an online directory of human services in San Francisco
+              <a href="https://sfserviceguide.org/">SF Service Guide</a> is an
+              online directory of human services in San Francisco
             </li>
             <li>
               ShelterConnect is a program that installs free WiFi in shelters,
@@ -111,3 +103,5 @@ export default () => (
     <Spacer heightDesktop="170px" heightMobile="80px" />
   </Layout>
 );
+
+export const Head = () => <BaseHead title="About Us | ShelterTech" />;

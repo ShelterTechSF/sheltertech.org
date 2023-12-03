@@ -4,8 +4,21 @@
 
 import { PrismicPreviewProvider } from "gatsby-plugin-prismic-previews";
 import * as React from "react";
-import "gatsby-plugin-prismic-previews/dist/styles.css";
+import { PrismicBlogPostPage } from "./src/pages/blog/{prismicBlogPost.uid}";
+import linkResolver from "./src/utils/linkResolver";
 
 export const wrapRootElement = ({ element }) => (
-  <PrismicPreviewProvider>{element}</PrismicPreviewProvider>
-)
+  <PrismicPreviewProvider
+    repositoryConfigs={[
+      {
+        repositoryName: "sheltertech",
+        linkResolver,
+        componentResolver: {
+          blog_post: PrismicBlogPostPage,
+        },
+      },
+    ]}
+  >
+    {element}
+  </PrismicPreviewProvider>
+);

@@ -15,7 +15,7 @@ import ucsfAcuteCareInnovationCenterLogo from "./ucsf-acute-care-innovation-cent
 
 export default () => (
   <Layout>
-    <TextHeader title="Making an Impact" hasBottomPadding={false} />
+    <TextHeader title="Our Impact" hasBottomPadding={false} />
     <StatsBlock
       title="SF Service Guide"
       subtitle={

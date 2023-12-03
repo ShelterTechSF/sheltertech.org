@@ -120,7 +120,7 @@ export default ({
   return (
     <Layout>
       <TextHeader
-        title="ShelterTech Stories"
+        title="Stories"
         description="The official blog of ShelterTech, an all-volunteer non-profit creating technology for people experiencing homelessness. Made with love in SF."
         large
       />

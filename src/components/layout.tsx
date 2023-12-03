@@ -10,6 +10,7 @@ import sealOfTransparency from "./grid-aware/Footer/stories/guidestar-seal-of-tr
 import instagramLogo from "./grid-aware/Footer/stories/instagram.svg";
 import twitterLogo from "./grid-aware/Footer/stories/twitter.svg";
 import { BurgerMenu, Navigation } from "./grid-aware/Navigation";
+import * as s from "./Layout.module.css";
 
 type NavItem = {
   text: string;
@@ -33,6 +34,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   const pageWrapperID = "page-wrapper";
   const outerContainerID = "outer-container";
+  const mainContentID = "main-content";
   const [burgerMenuIsOpen, setBurgerMenuIsOpen] = useState(false);
   useEffect(() => {
     ReactModal.setAppElement(`#${outerContainerID}`);
@@ -48,11 +50,13 @@ const Layout = ({ children }: LayoutProps) => {
         outerContainerID={outerContainerID}
       />
       <div id={pageWrapperID}>
+        <a className={s.skipToMainContentLink} href={`#${mainContentID}`}>Skip to Main Content</a>
         <Navigation
           homeURL="/"
           navigationItems={navigationItems}
           toggleBurgerMenu={() => setBurgerMenuIsOpen(!burgerMenuIsOpen)}
         />
+        <a id={mainContentID}></a>
         {children}
         <Footer
           formAction="https://sheltertech.us19.list-manage.com/subscribe/post?u=c47829732a0bea5c8e8a94604&amp;id=08f60e42ef"

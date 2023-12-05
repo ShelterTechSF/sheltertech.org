@@ -1,3 +1,4 @@
+const postcssGlobalData = require("@csstools/postcss-global-data");
 const postcssCustomMedia = require("postcss-custom-media");
 
 const linkResolver = require("./src/utils/linkResolver");
@@ -25,7 +26,15 @@ module.exports = {
     {
       resolve: "gatsby-plugin-postcss",
       options: {
-        postCssPlugins: [postcssCustomMedia],
+        postCssPlugins: [
+          // This is needed to allow the custom media definitions to be
+          // accessible in all CSS modules. See
+          // https://github.com/csstools/postcss-plugins/blob/768449ddc7e226e735b9e507fd4fbd4c89c8de6c/plugins/postcss-custom-media/README.md#modular-css-processing
+          postcssGlobalData({
+            files: ["src/stylesheets/global.css"],
+          }),
+          postcssCustomMedia,
+        ],
       },
     },
     {

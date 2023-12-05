@@ -1,0 +1,11 @@
+.skipToMainContentLink {
+  background-color: var(--color-sheltertech-blue);
+  color: var(--color-white);
+  font: var(--font-caption);
+  margin: 30px;
+  padding: 1em;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  z-index: 999;
+}

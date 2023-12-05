@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactModal from "react-modal";
 
 import "../stylesheets/global.css";
+import * as s from "./Layout.module.css";
 import Footer from "./grid-aware/Footer";
 import shelterTechLogoWhite from "./grid-aware/Footer/sheltertech-logo-white.svg";
 import facebookLogo from "./grid-aware/Footer/stories/facebook.svg";
@@ -33,6 +34,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   const pageWrapperID = "page-wrapper";
   const outerContainerID = "outer-container";
+  const mainContentID = "main-content";
   const [burgerMenuIsOpen, setBurgerMenuIsOpen] = useState(false);
   useEffect(() => {
     ReactModal.setAppElement(`#${outerContainerID}`);
@@ -48,11 +50,15 @@ const Layout = ({ children }: LayoutProps) => {
         outerContainerID={outerContainerID}
       />
       <div id={pageWrapperID}>
+        <a className={s.skipToMainContentLink} href={`#${mainContentID}`}>
+          Skip to Main Content
+        </a>
         <Navigation
           homeURL="/"
           navigationItems={navigationItems}
           toggleBurgerMenu={() => setBurgerMenuIsOpen(!burgerMenuIsOpen)}
         />
+        <a id={mainContentID} />
         {children}
         <Footer
           formAction="https://sheltertech.us19.list-manage.com/subscribe/post?u=c47829732a0bea5c8e8a94604&amp;id=08f60e42ef"

@@ -3,7 +3,7 @@
 > Created with [Gatsby](https://www.gatsbyjs.org/) with content managed in [Prismic](https://prismic.io)
 
 This repository contains the source code to the sheltertech.org website. To get
-the code running for the first team, please see the [Getting Started Guide][].
+the code running for the first time, please see the [Getting Started Guide][].
 For more specific documentation, visit one of the pages below:
 
 - [Getting Started Guide][]

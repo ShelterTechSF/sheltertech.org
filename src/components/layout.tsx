@@ -6,7 +6,6 @@ import Footer from "./grid-aware/Footer";
 import shelterTechLogoWhite from "./grid-aware/Footer/sheltertech-logo-white.svg";
 import facebookLogo from "./grid-aware/Footer/stories/facebook.svg";
 import githubLogo from "./grid-aware/Footer/stories/github.svg";
-import sealOfTransparency from "./grid-aware/Footer/stories/guidestar-seal-of-transparency.svg";
 import instagramLogo from "./grid-aware/Footer/stories/instagram.svg";
 import twitterLogo from "./grid-aware/Footer/stories/twitter.svg";
 import { BurgerMenu, Navigation } from "./grid-aware/Navigation";
@@ -70,8 +69,8 @@ const Layout = ({ children }: LayoutProps) => {
           ]}
           seals={[
             {
-              link: "https://www.guidestar.org/profile/38-3984099",
-              logo: sealOfTransparency,
+              link: "https://www.guidestar.org/profile/shared/e23fc5a4-2f66-4562-8c4e-e3d813e732b5",
+              logo: "https://widgets.guidestar.org/TransparencySeal/9546530",
               alt: "GuideStar Seal of Transparency",
             },
           ]}

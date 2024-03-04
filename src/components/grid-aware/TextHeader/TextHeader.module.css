@@ -68,6 +68,20 @@
   margin-top: 15px;
 }
 
+.description > :not(:first-child) {
+  margin-top: 15px;
+}
+
+/* We want this to have higher specificity than the :not(:first-child) selector
+ * above, so we attach the pseudoclass to the element name. */
+.description > br:not(:first-child) {
+  margin-top: 0;
+}
+
+.description > h2 {
+  font: var(--font-body-large);
+}
+
 @media (--tablet-and-down) {
   .description {
     margin-top: 20px;

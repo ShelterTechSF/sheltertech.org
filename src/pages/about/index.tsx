@@ -4,10 +4,12 @@ import BaseHead from "../../components/BaseHead";
 import ArticleSpotlightCard from "../../components/grid-aware/ArticleSpotlightCard";
 import ImageHeader from "../../components/grid-aware/ImageHeader";
 import Spacer from "../../components/grid-aware/Spacer";
+import TextHeader from "../../components/grid-aware/TextHeader";
 import TwoParagraphBlock from "../../components/grid-aware/TwoParagraphBlock";
 import Layout from "../../components/layout";
 import articleSpotlightImage from "../images/laura-barerra-vera-cropped.png";
 import darcelJackson from "./darcel-jackson.png";
+import form990_2022 from "./form-990-2022.pdf";
 import teamImage from "./sheltertech-team.png";
 
 export default () => (
@@ -62,6 +64,27 @@ export default () => (
         alt: "Team members posing for a group photo.",
       }}
     />
+    <TextHeader
+      title="Financials"
+      description={
+        <>
+          <h2>2022</h2>
+          <ul>
+            <li>
+              <a href={form990_2022}>2022 Form 990</a>
+            </li>
+          </ul>
+          <br />
+          <p>
+            ShelterTech is a 501(c)(3) tax-exempt organization. All donations to
+            ShelterTech are tax-exempt to the extent allowed by law. For more
+            information about our financial statements, please contact{" "}
+            <a href="mailto:help@sheltertech.org">help@sheltertech.org</a>
+          </p>
+        </>
+      }
+    />
+    <Spacer heightDesktop="40px" heightMobile="20px" />
     <TwoParagraphBlock
       isAbout
       title="A note from our Founder, Darcel Jackson"

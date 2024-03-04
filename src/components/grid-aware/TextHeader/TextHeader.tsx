@@ -4,7 +4,7 @@ import * as s from "./TextHeader.module.css";
 
 type TextHeaderProps = {
   title: string;
-  description?: string;
+  description?: React.ReactNode;
   large?: boolean;
   hasBottomPadding?: boolean;
 };

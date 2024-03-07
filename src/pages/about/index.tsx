@@ -79,7 +79,7 @@ export default () => (
             ShelterTech is a 501(c)(3) tax-exempt organization. All donations to
             ShelterTech are tax-exempt to the extent allowed by law. For more
             information about our financial statements, please contact{" "}
-            <a href="mailto:help@sheltertech.org">help@sheltertech.org</a>
+            <a href="mailto:info@sheltertech.org">info@sheltertech.org</a>
           </p>
         </>
       }

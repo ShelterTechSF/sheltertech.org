@@ -63,7 +63,7 @@ export default () => {
         />
       </Modal>
       <VideoHeader
-        title="Less than half of the nearly 28,000 people experiencing homelessness in the Bay Area have reliable access to the internet."
+        title="Less than half of the nearly 28,000 people experiencing homelessness in the Bay Area have reliable access to the internet, making it harder for them to find and access the services they need."
         description="ShelterTech is a technology-focused nonprofit organization making it easier for this community to connect with  resources that can help them address their challenges."
         image={videoHeaderImage}
         ctaButtons={[
@@ -72,10 +72,7 @@ export default () => {
         ]}
         playButtonOnClick={() => setVideoHeaderModalIsOpen(true)}
       />
-      <HomePageLargeParagraph
-        title="We believe connectivity is a human right."
-        description="Access to the internet and technology makes it possible for people to find a job, human services, and contact family and friends."
-      />
+      <HomePageLargeParagraph description="Access to the internet and technology makes it possible for people to find a job, human services, and contact family and friends." />
       <ThreeParagraphBlock
         title="Get involved"
         paragraph1={{

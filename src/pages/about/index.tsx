@@ -16,9 +16,21 @@ export default () => (
   <Layout>
     <ImageHeader
       title="About Us"
-      subtitle="Our Mission and History"
       description={
         <>
+          <h2>ShelterTech Vision Statement</h2>
+          <p>
+            Our vision is a vibrant community where everyone has equitable and
+            effective access to a wide range of human services, regardless of
+            their status, income, or circumstances.
+          </p>
+          <h2>ShelterTech Mission Statement</h2>
+          <p>
+            ShelterTech reduces barriers for those in need by connecting them
+            with human services and opportunities empowering them to live
+            happier, healthier lives.
+          </p>
+          <h2>ShelterTech Overview</h2>
           <p>
             ShelterTech is an award-winning non-profit solving the biggest
             technology challenges faced by people experiencing homelessness and

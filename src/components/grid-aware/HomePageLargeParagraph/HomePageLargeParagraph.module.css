@@ -53,5 +53,8 @@
 
 .description {
   font: var(--font-title);
+}
+
+.description:not(:first-child) {
   margin-top: 40px;
 }

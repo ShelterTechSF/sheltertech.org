@@ -90,12 +90,20 @@
   margin-top: 20px;
 }
 
+.description > h2 {
+  font: var(--font-body-large);
+}
+
 .description :first-child {
   margin: 0;
 }
 
 .description > :not(:first-child) {
   margin-top: 15px;
+}
+
+.description > h2:not(:first-child) {
+  margin-top: 30px;
 }
 
 .ctaButtonRow {

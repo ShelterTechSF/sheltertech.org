@@ -3,7 +3,7 @@ import * as React from "react";
 import * as s from "./HomePageLargeParagraph.module.css";
 
 type HomePageLargeParagraphProps = {
-  title: string;
+  title?: string;
   description: string;
 };
 
@@ -16,7 +16,7 @@ const HomePageLargeParagraph = ({
       <div className={s.bleedMainContent}>
         <div className={s.gridParent}>
           <div className={s.textWrapper}>
-            <div className={s.title}>{title}</div>
+            {title ? <div className={s.title}>{title}</div> : null}
             <div className={s.description}>{description}</div>
           </div>
         </div>

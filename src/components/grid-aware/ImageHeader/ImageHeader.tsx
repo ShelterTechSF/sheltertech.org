@@ -9,7 +9,7 @@ type ImageProps = {
 
 type ImageHeaderProps = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   description: React.ReactNode;
   image1: ImageProps;
   image2?: ImageProps;
@@ -27,7 +27,7 @@ const ImageHeader = ({
   const GridAreaLeft = () => (
     <div className={s.gridAreaText}>
       <h1 className={s.title}>{title}</h1>
-      <div className={s.subtitle}>{subtitle}</div>
+      {subtitle ? <div className={s.subtitle}>{subtitle}</div> : null}
       <div className={s.description}>{description}</div>
       <div className={s.ctaButtonRow}>
         {ctaButtons?.map((button) => (

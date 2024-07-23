@@ -69,6 +69,39 @@ export default () => (
               ShelterTech programs and build awareness
             </li>
           </ul>
+          <h2>ShelterTech Values</h2>
+          <ul>
+            <li>
+              <b>COLLABORATION:</b> We create and embrace partnerships as fuel
+              to propel our own work and innovation, and to drive the best
+              possible outcomes.
+            </li>
+            <li>
+              <b>COMMUNITY:</b> We cultivate and amplify the voices of people
+              and organizations in our community with the experience and
+              expertise to best serve it.
+            </li>
+            <li>
+              <b>HUMANITY:</b> We are committed to upholding the dignity, needs
+              and rights of all.
+            </li>
+            <li>
+              <b>INCLUSIVITY:</b> We champion equity and belonging as
+              fundamental.
+            </li>
+            <li>
+              <b>INNOVATION:</b> We are scrappy. We use people power to meet the
+              most urgent needs of our community.
+            </li>
+            <li>
+              <b>INTEGRITY:</b> We embrace responsibility and accountability in
+              all of our work.
+            </li>
+            <li>
+              <b>RESILIENCY:</b> We champion the resiliency of our community and
+              the individuals who are part of it.
+            </li>
+          </ul>
         </>
       }
       image1={{

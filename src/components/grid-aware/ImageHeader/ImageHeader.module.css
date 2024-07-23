@@ -94,7 +94,7 @@
   font: var(--font-body-large);
 }
 
-.description :first-child {
+.description > :first-child {
   margin: 0;
 }
 
@@ -104,6 +104,10 @@
 
 .description > h2:not(:first-child) {
   margin-top: 30px;
+}
+
+.description li:not(:first-child) {
+  margin-top: 8px;
 }
 
 .ctaButtonRow {

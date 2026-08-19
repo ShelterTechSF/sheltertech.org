@@ -1,6 +1,0 @@
-{
-  "extends": "stylelint-config-sass-guidelines",
-  "rules": {
-    "selector-class-pattern": "[a-z][0-9A-Za-z]*"
-  }
-}
